@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modes>
+  <!-- fin → est --> 
+
+  <mode name="fin-est" install="yes">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t2x"/>
+        <file name="fin-est.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t3x"/>
+        <file name="fin-est.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="fin-est.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-debug" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t2x"/>
+        <file name="fin-est.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t3x"/>
+        <file name="fin-est.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="fin-est.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+ 
+  
+  <mode name="fin-est-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="fin-est-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -t">
+        <file name="fin-est.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="fin-est-transfer" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="fin-est.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="fin-est.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t2x"/>
+        <file name="fin-est.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="fin-est-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="fin-est.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="fin-est.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t2x"/>
+        <file name="fin-est.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t3x"/>
+        <file name="fin-est.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <!-- est → fin -->
+
+  <mode name="est-fin" install="yes">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.est-fin.t1x"/>
+        <file name="est-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.est-fin.t2x"/>
+        <file name="est-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.est-fin.t3x"/>
+        <file name="est-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc $1">
+        <file name="est-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-debug" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.est-fin.t1x"/>
+        <file name="est-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.est-fin.t2x"/>
+        <file name="est-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.est-fin.t3x"/>
+        <file name="est-fin.t3x.bin"/>
+      </program>
+      <program name="hfst-proc -d">
+        <file name="est-fin.autogen.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+  
+  <mode name="est-fin-morph" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-disam" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-conv -a"/>
+      <program name="vislcg3 --trace --grammar">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+  <mode name="est-fin-tagger" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-biltrans" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-lextor" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc">
+        <file name="est-fin.autolex.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-transfer" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.est-fin.t1x"/>
+        <file name="est-fin.t1x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-interchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.est-fin.t1x"/>
+        <file name="est-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.est-fin.t2x"/>
+        <file name="est-fin.t2x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+  <mode name="est-fin-postchunk" install="no">
+    <pipeline>
+      <program name="hfst-proc -w">
+        <file name="est-fin.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -w">
+        <file name="est-fin.rlx.bin"/>
+      </program>
+      <program name="apertium-tagger -g $2">
+        <file name="est-fin.prob"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.est-fin.t1x"/>
+        <file name="est-fin.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.est-fin.t2x"/>
+        <file name="est-fin.t2x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.est-fin.t3x"/>
+        <file name="est-fin.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+
+
+</modes>
+
+

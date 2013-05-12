@@ -1,0 +1,29 @@
+* text=auto !eol
+/AUTHORS -text
+/COPYING -text
+/ChangeLog -text
+/Makefile.am -text
+/NEWS -text
+/README -text
+/apertium-fin-est.est-fin.lrx -text
+/apertium-fin-est.est-fin.rlx -text
+/apertium-fin-est.est-fin.t1x -text
+/apertium-fin-est.est-fin.t2x -text
+/apertium-fin-est.est-fin.t3x -text
+/apertium-fin-est.est.lexc -text
+/apertium-fin-est.est.twol -text
+/apertium-fin-est.fin-est.dix -text
+/apertium-fin-est.fin-est.lrx -text
+/apertium-fin-est.fin-est.rlx -text
+/apertium-fin-est.fin-est.t1x -text
+/apertium-fin-est.fin-est.t2x -text
+/apertium-fin-est.fin-est.t3x -text
+/apertium-fin-est.fin.lexc -text
+/apertium-fin-est.fin.twol -text
+/autogen.sh -text
+/configure.ac -text
+/est-fin.prob -text svneol=unset#unset
+/fin-est.prob -text svneol=unset#unset
+/modes.xml -text
+texts/story.est.txt -text
+texts/story.fin.txt -text
