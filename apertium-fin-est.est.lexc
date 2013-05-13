@@ -1,16 +1,141 @@
 
 Multichar_Symbols
 
-%<n%>   ! Имя существительное · Noun
+%<n%> %<prop%> %<nom%> %<gen%> %<sg%> %<pl%> %<pron%> %<verb%> %<ind%>
+%<pres%> %<1sg%> %<2sg%> %<3sg%> %<1pl%> %<2pl%> %<3pl%> %<neg%> 
+%<conj%> %<adv%> %<part%> %<adj%> %<clit%> %<ade%>
 
 LEXICON Root
 
 Nouns ; 
+Propers ;
+Pronouns ;
+Verbs ;
+Neg ;
+Conj ;
+Adv ;
+Adj ;
+
+LEXICON SG1
+%<sg%>%<nom%>: # ;
+%<sg%>%<ade%>:l # ;
 
 LEXICON N1
 
-%<n%>: # ;
+%<n%>: SG1 ;
+
+LEXICON P1
+
+%<prop%>: SG1 ;
 
 LEXICON Nouns
 
-koer N1 ; ! ""
+koer N1 ; 
+puu N1 ; 
+
+LEXICON Propers
+Mary P1 ; 
+James P1 ;
+
+LEXICON PRONma
+
+%<sg%>%<nom%>:a # ;
+%<sg%>%<gen%>:u # ;
+
+LEXICON PRONta
+
+%<sg%>%<nom%>:a # ;
+%<sg%>%<gen%>:ema # ;
+
+LEXICON PRONme
+
+%<pl%>%<nom%>: # ;
+%<pl%>%<gen%>:ie # ;
+
+LEXICON PRONnad
+
+%<pl%>%<nom%>:ad # ;
+%<pl%>%<gen%>:ende # ;
+
+LEXICON PRONsee
+%<sg%>%<nom%>:e # ;
+%<sg%>%<part%>:da # ;
+
+LEXICON CLIT
+ga%<clit%>:ga # ;
+ki%<clit%>:ki # ;
+
+LEXICON Pronouns
+
+ma%<pron%>:m PRONma ;
+sa%<pron%>:s PRONma ;
+ta%<pron%>:t PRONta ;
+me%<pron%>:me PRONme ;
+te%<pron%>:te PRONme ;
+nad%<pron%>:n PRONnad ;
+see%<pron%>:se PRONsee ;
+kuhu%<pron%>:kuhu CLIT ;
+oma%<pron%>:oma CLIT ;
+mida%<pron%>:mida CLIT ;
+LEXICON VERBolla
+%<ind%>%<pres%>%<3sg%>:n # ;
+%<neg%>%<ind%>%<pres%>%<3sg%>:le # ;
+
+LEXICON VERBvaatama
+%<ind%>%<pres%>%<1sg%>:n # ;
+%<ind%>%<pres%>%<2sg%>:d # ;
+%<ind%>%<pres%>%<3sg%>:b # ;
+%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
+%<ind%>%<pres%>%<1sg%>:me # ;
+%<ind%>%<pres%>%<1sg%>:te # ;
+%<ind%>%<pres%>%<1sg%>:vad # ;
+%<inf%>:ma # ;
+
+LEXICON VERBmängida
+%<ind%>%<pres%>%<1sg%>:n # ;
+%<ind%>%<pres%>%<2sg%>:d # ;
+%<ind%>%<pres%>%<3sg%>:b # ;
+%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
+%<ind%>%<pres%>%<1sg%>:me # ;
+%<ind%>%<pres%>%<1sg%>:te # ;
+%<ind%>%<pres%>%<1sg%>:vad # ;
+%<inf%>:da # ;
+
+LEXICON VERBnäha
+%<ind%>%<pres%>%<1sg%>:n # ;
+%<ind%>%<pres%>%<2sg%>:d # ;
+%<ind%>%<pres%>%<3sg%>:b # ;
+%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
+%<ind%>%<pres%>%<1sg%>:me # ;
+%<ind%>%<pres%>%<1sg%>:te # ;
+%<ind%>%<pres%>%<1sg%>:vad # ;
+%<inf%>: # ;
+
+LEXICON Verbs
+olla%<verb%>:o VERBolla ;
+vaatama%<verb%>:vaata VERBvaatama ;
+saada%<verb%>:saa VERBmängida ;
+otsida%<verb%>:otsi VERBmängida ;
+näha%<verb%>:näe VERBnäha ;
+märkama%<verb%>:märka VERBvaatama ;
+mängida%<verb%>:mängi VERBmängida ;
+kuuletuda%<verb%>:kuuletu VERBmängida ;
+
+LEXICON Neg
+ei%<neg%>:ei # ;
+
+LEXICON Conj
+ja%<conj%>:ja # ;
+aga%<conj%>:aga # ;
+
+LEXICON Adv
+kas%<adv%>:kas # ;
+väga%<adv>:väga # ;
+
+LEXICON ADJsuur
+%<sg%>%<nom%>: # ;
+%<sg%>%<gen%>:e # ;
+%<sg%>%<part%>:t # ;
+
+LEXICON Adj
+suur%<adj%>:suur ADJsuur ;
