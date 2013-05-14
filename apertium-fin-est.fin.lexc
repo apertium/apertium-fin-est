@@ -4,7 +4,7 @@ Multichar_Symbols
 %<n%> %<prop%> %<pron%> %<gen%> %<sg%> %<nom%> %<pl%> %<verb%> %<ind%>
 %<pres%> %<3sg%> %<neg%> %<1sg%> %<2sg%> %<3sg%> %<1pl%> %<2pl%> 
 %<3pl%> %<conj%> %<adv%> %<ko%> %<ada%> %<part%> %<all%> %<px3sg%>
-%{A%} %<ade%>
+%{A%} %{O%} %<ade%> %<ine%> %<ela%>
 
 LEXICON Root
 
@@ -15,15 +15,34 @@ Verbs ;
 Neg ;
 Conj ;
 AdA ;
+Adv ;
+Adj ;
 
-LEXICON SG1
+LEXICON SGkoira
 %<sg%>%<nom%>: POSS ;
 %<sg%>%<gen%>:n CLIT ;
-%<sg%>%<ade%>:lla CLIT ;
+%<sg%>%<ade%>:ll%{A%} CLIT ;
+%<sg%>%<ine%>:ss%{A%} CLIT ;
+%<sg%>%<part%>:%{A%} CLIT ;
 
-LEXICON N1
+LEXICON Nkoira
+%<n%>: SGkoira ;
 
-%<n%>: SG1 ;
+LEXICON SGsää
+%<sg%>%<nom%>: POSS ;
+%<sg%>%<gen%>:n CLIT ;
+%<sg%>%<ade%>:llä CLIT ;
+%<sg%>%<ine%>:ssä CLIT ;
+
+LEXICON Nsää
+%<n%>: SGsää ;
+
+LEXICON Nleikkiminen
+%<noun%>%<sg%>%<nom%>:nen POSS ;
+%<noun%>%<sg%>%<gen%>:sen CLIT ;
+%<noun%>%<sg%>%<ade%>:sellä CLIT ;
+%<noun%>%<sg%>%<ine%>:sessä CLIT ;
+%<noun%>%<sg%>%<ela%>:sestä CLIT ;
 
 LEXICON P1
 
@@ -31,8 +50,13 @@ LEXICON P1
 
 LEXICON Nouns
 
-koira N1 ;
-puu N1 ;
+koira Nkoira ;
+talo Nkoira ;
+puu Nkoira ;
+sää Nsää ;
+puutarha Nkoira ;
+leikkiminen:leikkimi Nleikkiminen ;
+leikki:leikki Nkoira ;
 
 LEXICON Propers
 
@@ -46,28 +70,28 @@ LEXICON PRONminä
 
 LEXICON PRONhän
 
-%<sg%>%<nom%>: # ;
-%<sg%>%<nom%>:en # ;
+%<sg%>%<nom%>: CLIT ;
+%<sg%>%<nom%>:en CLIT ;
 
 LEXICON PRONme
 
-%<pl%>%<nom%>: # ;
-%<pl%>%<nom%>:idän # ;
+%<pl%>%<nom%>: CLIT ;
+%<pl%>%<nom%>:idän CLIT ;
 
 LEXICON PRONse
-%<sg%>%<nom%>:e # ;
-%<sg%>%<part%>:itä # ;
+%<sg%>%<nom%>:e CLIT ;
+%<sg%>%<part%>:itä CLIT ;
 
 LEXICON PRONjoka
-%<sg%>%<nom%>:ka # ;
-%<sg%>%<all%>:nne # ;
+%<sg%>%<nom%>:ka CLIT ;
+%<sg%>%<all%>:nne CLIT ;
 
 LEXICON PRONmikä
-%<sg%>%<nom%>:kä # ;
-%<sg%>%<all%>:nne # ;
+%<sg%>%<nom%>:kä CLIT ;
+%<sg%>%<all%>:nne CLIT ;
+%<sg%>%<ine%>:ssä CLIT ;
 
 LEXICON Pronouns 
-
 minä%<pron%>:min PRONminä ;
 sinä%<pron%>:sin PRONminä ;
 hän%<pron%>:hän PRONhän ;
@@ -80,15 +104,30 @@ mikä%<pron%>:mi PRONmikä ;
 
 LEXICON CLIT
 : # ;
-%<ko%>:ko # ;
+%<ko%>:k%{O%} # ;
+%<kin%>:kin # ;
+%<kaan%>:k%{A%}%{A%}n # ;
+%<han%>:h%{A%}n # ;
 
 LEXICON POSS
 : CLIT ;
-%<px3sg%>:ns‰{A%} CLIT;
+%<px3sg%>:ns%{A%} CLIT;
 
 LEXICON VERBolla
 %<ind%>%<pres%>%<3sg%>:n POSS ;
-%<neg%>%<ind%>%<pres%>%<3sg%>:le POSS ;
+%<ind%>%<pres%>%<1sg%>:len POSS ;
+%<ind%>%<pres%>%<2sg%>:let POSS ;
+%<ind%>%<pres%>%<3pl%>:vat POSS ;
+%<ind%>%<pres%>%<1pl%>:lemme POSS ;
+%<ind%>%<pres%>%<2pl%>:lette POSS ;
+%<neg%>%<ind%>%<past%>%<3sg%>:le POSS ;
+%<ind%>%<past%>%<3sg%>:li POSS ;
+%<ind%>%<past%>%<1sg%>:lin POSS ;
+%<ind%>%<past%>%<2sg%>:lit POSS ;
+%<ind%>%<past%>%<3pl%>:ivat POSS ;
+%<ind%>%<past%>%<1pl%>:limme POSS ;
+%<ind%>%<past%>%<2pl%>:litte POSS ;
+%<neg%>%<ind%>%<past%>%<3sg%>:llut POSS ;
 
 LEXICON VERBsaada
 %<ind%>%<pres%>%<1sg%>:n CLIT ;
@@ -97,6 +136,8 @@ LEXICON VERBsaada
 %<ind%>%<pres%>%<1pl%>:mme CLIT ;
 %<ind%>%<pres%>%<2pl%>:tte CLIT ;
 %<ind%>%<pres%>%<3pl%>:vat CLIT ;
+%<ind%>%<pres%>%<3pl%>:vat CLIT ;
+%<ind%>%<perf%>%<3pl%>:neet CLIT ;
 
 LEXICON VERBetsiä
 %<ind%>%<pres%>%<1sg%>:n CLIT ;
@@ -105,11 +146,24 @@ LEXICON VERBetsiä
 %<ind%>%<pres%>%<1pl%>:mme CLIT ;
 %<ind%>%<pres%>%<2pl%>:tte CLIT ;
 %<ind%>%<pres%>%<3pl%>:vät CLIT ;
+%<inf%>:ä CLIT ;
+
+LEXICON VERBpitää 
+%<ind%>%<pres%>%<1sg%>:dän CLIT ;
+%<ind%>%<pres%>%<2sg%>:dät CLIT ;
+%<ind%>%<pres%>%<3sg%>:tää CLIT ;
+%<ind%>%<pres%>%<1pl%>:dämme CLIT ;
+%<ind%>%<pres%>%<2pl%>:dätte CLIT ;
+%<ind%>%<pres%>%<3pl%>:tävät CLIT ;
+%<inf%>:tää CLIT ;
 
 LEXICON Verbs
 olla%<verb%>:o VERBolla ;
 saada%<verb%>:saa VERBsaada ;
 etsiä%<verb%>:etsi VERBetsiä ;
+leikkiä%<verb%>:leikki VERBetsiä ;
+voida%<verb%>:voi VERBsaada ;
+pitää%<verb%>:pi VERBpitää ;
 
 Lexicon Neg
 ei%<neg%>%<1sg%>:en # ;
@@ -131,5 +185,38 @@ LEXICON ADJsuur
 %<sg%>%<gen%>:en # ;
 %<sg%>%<part%>:ta # ;
 
+LEXICON ADJiso
+%<sg%>%<nom%>: # ;
+%<sg%>%<gen%>:n # ;
+%<sg%>%<part%>:a # ;
+
+LEXICON ADJhyvä
+%<sg%>%<nom%>: # ;
+%<sg%>%<gen%>:n # ;
+%<sg%>%<part%>:ä # ;
+
+LEXICON ADJlämmin
+%<sg%>%<nom%>:min # ;
+%<sg%>%<gen%>:pimän # ;
+%<sg%>%<part%>:mintä # ;
+
 LEXICON Adj
 suuri%<adj%>:suur ADJsuur ;
+iso%<adj%>:iso ADJiso ;
+hyvä%<adj%>:hyvä ADJhyvä ;
+kylmä%<adj%>:kylmä ADJhyvä ;
+lämmin%<adj%>:läm ADJlämmin ;
+
+LEXICON ADVtänään
+%<adv%>: # ;
+
+LEXICON Adv
+tänään ADVtänään ;
+eilen ADVtänään ;
+ulkona ADVtänään ;
+edessä ADVtänään ;
+silloin ADVtänään ;
+kovasti ADVtänään ;
+aina ADVtänään ;
+yhdessä ADVtänään ;
+edessä ADVtänään ;

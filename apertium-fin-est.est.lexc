@@ -3,7 +3,8 @@ Multichar_Symbols
 
 %<n%> %<prop%> %<nom%> %<gen%> %<sg%> %<pl%> %<pron%> %<verb%> %<ind%>
 %<pres%> %<1sg%> %<2sg%> %<3sg%> %<1pl%> %<2pl%> %<3pl%> %<neg%> 
-%<conj%> %<adv%> %<part%> %<adj%> %<clit%> %<ade%>
+%<conj%> %<adv%> %<part%> %<adj%> %<clit%> %<ade%> %<all%> %<ine%> 
+%<pcle%> %<punct%>
 
 LEXICON Root
 
@@ -15,27 +16,72 @@ Neg ;
 Conj ;
 Adv ;
 Adj ;
+Pcle ;
+Punct ;
 
-LEXICON SG1
-%<sg%>%<nom%>: # ;
+LEXICON SGkoer
+%<sg%>%<nom%>: CLIT ;
+%<sg%>%<ade%>:ale # ;
+%<sg%>%<ine%>:as # ;
+%<sg%>%<part%>:a # ;
+
+LEXICON SGMary
+%<sg%>%<nom%>: CLIT ;
+%<sg%>%<all%>:le # ;
+%<sg%>%<ine%>:s # ;
 %<sg%>%<ade%>:l # ;
 
-LEXICON N1
+LEXICON SGpoiss
+%<sg%>%<nom%>: CLIT ;
+%<sg%>%<ade%>:ile # ;
+%<sg%>%<ine%>:is # ;
 
-%<n%>: SG1 ;
+LEXICON Nkoer
+%<n%>: SGkoer ;
 
-LEXICON P1
+LEXICON Npuu
+%<n%>: SGMary ;
 
-%<prop%>: SG1 ;
+LEXICON Npoiss
+%<n%>: SGpoiss ;
+
+LEXICON PMary
+%<prop%>: SGMary ;
+
+LEXICON PJames
+%<prop%>%<nom%>: CLIT ;
+%<prop%>%<sg%>%<ade%>:il # ;
+%<prop%>%<sg%>%<ine%>:is # ;
+
+LEXICON Naed
+%<noun%>%<sg%>%<nom%>:ed CLIT ;
+%<noun%>%<sg%>%<ade%>:ial # ;
+%<noun%>%<sg%>%<ine%>:ias # ;
+
+LEXICON Nilm
+%<noun%>%<sg%>%<nom%>: CLIT ;
+%<noun%>%<sg%>%<ade%>:al # ;
+%<noun%>%<sg%>%<ine%>:as # ;
+
+LEXICON Nlaps
+%<noun%>%<sg%>%<nom%>:ps CLIT ;
+%<noun%>%<pl%>%<part%>:ste CLIT ;
 
 LEXICON Nouns
-
-koer N1 ; 
-puu N1 ; 
+koer Nkoer ; 
+puu Npuu ; 
+aed:a Naed ;
+ilm Nilm ;
+maja Npuu ;
+poiss Npoiss ;
+kass Nkass ;
+tüdruk Npoiss ;
+õde Npuu ;
+laps:la Nlaps ;
 
 LEXICON Propers
-Mary P1 ; 
-James P1 ;
+Mary PMary ; 
+James PJames ;
 
 LEXICON PRONma
 
@@ -46,6 +92,7 @@ LEXICON PRONta
 
 %<sg%>%<nom%>:a # ;
 %<sg%>%<gen%>:ema # ;
+%<sg%>%<all%>:al # ;
 
 LEXICON PRONme
 
@@ -64,6 +111,7 @@ LEXICON PRONsee
 LEXICON CLIT
 ga%<clit%>:ga # ;
 ki%<clit%>:ki # ;
+# ;
 
 LEXICON Pronouns
 
@@ -75,10 +123,14 @@ te%<pron%>:te PRONme ;
 nad%<pron%>:n PRONnad ;
 see%<pron%>:se PRONsee ;
 kuhu%<pron%>:kuhu CLIT ;
+kus%<pron%>:kus CLIT ;
 oma%<pron%>:oma CLIT ;
 mida%<pron%>:mida CLIT ;
+mis%<pron%>:mis CLIT ;
+
 LEXICON VERBolla
 %<ind%>%<pres%>%<3sg%>:n # ;
+%<ind%>%<past%>%<3sg%>:li # ;
 %<neg%>%<ind%>%<pres%>%<3sg%>:le # ;
 
 LEXICON VERBvaatama
@@ -92,14 +144,46 @@ LEXICON VERBvaatama
 %<inf%>:ma # ;
 
 LEXICON VERBmängida
-%<ind%>%<pres%>%<1sg%>:n # ;
-%<ind%>%<pres%>%<2sg%>:d # ;
-%<ind%>%<pres%>%<3sg%>:b # ;
-%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
-%<ind%>%<pres%>%<1sg%>:me # ;
-%<ind%>%<pres%>%<1sg%>:te # ;
-%<ind%>%<pres%>%<1sg%>:vad # ;
+%<ind%>%<pres%>: VERBmängidaPRES ;
+%<perf%>:nud # ;
+
+LEXICON VERBmängidaPRES
+%<1sg%>:n # ;
+%<2sg%>:d # ;
+%<3sg%>:b # ;
+%<3sg%>: # ;
+%<1pl%>:me # ;
+%<2pl%>:te # ;
+%<3pl%>:vad # ;
 %<inf%>:da # ;
+
+LEXICON VERBasutada
+%<ind%>%<pres%>: VERBasutadaPRES ;
+%<perf%>:tanud # ;
+
+LEXICON VERBasutadaPRES
+%<1sg%>:n # ;
+%<2sg%>:d # ;
+%<3sg%>:b # ;
+%<3sg%>: # ;
+%<1pl%>:me # ;
+%<2pl%>:te # ;
+%<3pl%>:vad # ;
+%<inf%>:da # ;
+
+LEXICON VERBarmastuda
+%<ind%>%<pres%>: VERBarmastudaPRES ;
+%<perf%>:anud # ;
+
+LEXICON VERBarmastudaPRES
+%<1sg%>:an # ;
+%<2sg%>:ad # ;
+%<3sg%>:ab # ;
+%<3sg%>:a # ;
+%<1pl%>:ame # ;
+%<2pl%>:ate # ;
+%<3pl%>:avad # ;
+%<inf%>:uda # ;
 
 LEXICON VERBnäha
 %<ind%>%<pres%>%<1sg%>:n # ;
@@ -116,10 +200,14 @@ olla%<verb%>:o VERBolla ;
 vaatama%<verb%>:vaata VERBvaatama ;
 saada%<verb%>:saa VERBmängida ;
 otsida%<verb%>:otsi VERBmängida ;
+magada%<verb%>:maga VERBmängida ;
 näha%<verb%>:näe VERBnäha ;
 märkama%<verb%>:märka VERBvaatama ;
 mängida%<verb%>:mängi VERBmängida ;
 kuuletuda%<verb%>:kuuletu VERBmängida ;
+armastuda%<verb%>:armast VERBarmastuda ;
+asutada%<verb%>:asu VERBasutada ;
+meeldida%<verb%>:meeldi VERBmängida ;
 
 LEXICON Neg
 ei%<neg%>:ei # ;
@@ -128,14 +216,51 @@ LEXICON Conj
 ja%<conj%>:ja # ;
 aga%<conj%>:aga # ;
 
+LEXICON ADVkas
+%<adv%>: # ;
+
 LEXICON Adv
-kas%<adv%>:kas # ;
-väga%<adv>:väga # ;
+kas ADVkas ;
+väga ADVkas ;
+täna ADVkas ;
+eile ADVkas ;
+väljas ADVkas ;
+alati ADVkas ;
+koos ADVkas ;
+ees ADVkas ;
+praegu ADVkas;
 
 LEXICON ADJsuur
-%<sg%>%<nom%>: # ;
-%<sg%>%<gen%>:e # ;
-%<sg%>%<part%>:t # ;
+%<adj%>%<sg%>%<nom%>: # ;
+%<adj%>%<sg%>%<gen%>:e # ;
+%<adj%>%<sg%>%<part%>:t # ;
+
+LEXICON ADJsoe
+%<adj%>%<sg%>%<nom%>: # ;
 
 LEXICON Adj
-suur%<adj%>:suur ADJsuur ;
+suur ADJsuur ;
+ilus ADJsuur ;
+soe  ADJsoe ;
+külm ADJsoe ;
+väike ADJsoe ;
+pisike ADJsoe ;
+õnnelik ADJsoe ;
+kuue-aastane ADJsoe ;
+viie-aastane ADJsoe ;
+
+LEXICON PCLEsiis
+%<pcle%>: # ;
+
+LEXICON Pcle
+siis PCLEsiis ;
+ka PCLEsiis ;
+
+LEXICON PUNCTstop
+%<punct%>: # ;
+
+LEXICON Punct
+. PUNCTstop ;
+, PUNCTstop ;
+%! PUNCTstop ;
+? PUNCTstop ;
