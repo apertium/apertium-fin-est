@@ -2,11 +2,75 @@
   <alphabet/>
   <sdefs>
     <sdef n="n"  c="Имя существительное"/>
+    <sdef n="adv"  c="Наречие"/>
+    <sdef n="adj"  c="Имя прилагательное"/>
+    <sdef n="v"  c="Глагол"/>
+    <sdef n="prt"  c="Частица"/>
+    <sdef n="pron"  c="Местоимение"/>
+    <sdef n="postp"  c="Послелог"/>
   </sdefs>
   <section id="main" type="standard">
     <!-- Раздел: Имя Существительное -->
 
     <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
+    <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
+	<e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
+	<e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
+	<e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
+	<e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
+	<e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
+	<e><p><l>kissa<s n="n"/></l><r>kass<s n="n"/></r></p></e>
+	<e><p><l>ikkuna<s n="n"/></l><r>aken<s n="n"/></r></p></e>
+	<e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
+	<e><p><l>numero<s n="n"/></l><r>number<s n="n"/></r></p></e>
+	<e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
+	<e><p><l>laskemise<s n="n"/></l><r>loetlemine<s n="n"/></r></p></e>
+	<e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
+	<e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
+	<e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
+	<e><p><l>pöytä<s n="n"/></l><r>laud<s n="n"/></r></p></e>
+	<e><p><l>äänen<s n="n"/></l><r>krabin<s n="n"/></r></p></e>
+	<e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
+	<e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
+	<e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
+	<e><p><l>huone<s n="n"/></l><r>tuba<s n="n"/></r></p></e>
+	<e><p><l>puutarha<s n="n"/></l><r>aed<s n="n"/></r></p></e>
 
+	<e><p><l>tänään<s n="adv"/></l><r>täna<s n="adv"/></r></p></e>
+	<e><p><l>erittäin<s n="adv"/></l><r>väga<s n="adv"/></r></p></e>
+	<e><p><l>eilen<s n="adv"/></l><r>eile<s n="adv"/></r></p></e>
+	<e><p><l>yhdessä<s n="adv"/></l><r>koos<s n="adv"/></r></p></e>
+	<e><p><l>silloin<s n="adv"/></l><r>siis<s n="adv"/></r></p></e>
+	<e><p><l>ulkona<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
+	<e><p><l>aina<s n="adv"/></l><r>alati<s n="adv"/></r></p></e>
+
+	<e><p><l>hyvä<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
+	<e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
+	<e><p><l>kylmä<s n="adj"/></l><r>külm<s n="adj"/></r></p></e>
+	<e><p><l>iso<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
+
+	<e><p><l>olla<s n="v"/></l><r>olema<s n="v"/></r></p></e>
+
+	<e><p><l>ja<s n="prt"/></l><r>ja<s n="prt"/></r></p></e>
+	<e><p><l>ei<s n="prt"/></l><r>ei<s n="prt"/></r></p></e>
+	<e><p><l>mutta<s n="prt"/></l><r>aga<s n="prt"/></r></p></e>
+	<e><p><l>myös<s n="prt"/></l><r>ka<s n="prt"/></r></p></e>
+
+	<e><p><l>minä<s n="pron"/></l><r>ma<s n="pron"/></r></p></e>
+	<e><p><l>sinä<s n="pron"/></l><r>sa<s n="pron"/></r></p></e>
+	<e><p><l>hän<s n="pron"/></l><r>ta<s n="pron"/></r></p></e>
+	<e><p><l>me<s n="pron"/></l><r>me<s n="pron"/></r></p></e>
+	<e><p><l>te<s n="pron"/></l><r>te<s n="pron"/></r></p></e>
+	<e><p><l>he<s n="pron"/></l><r>nad<s n="pron"/></r></p></e>
+
+	<e><p><l>rakastaa<s n="v"/></l><r>armastama<s n="v"/></r></p></e>
+	<e><p><l>leikkiä<s n="v"/></l><r>mängima<s n="v"/></r></p></e>
+	<e><p><l>pitää<s n="v"/></l><r>meeldima<s n="v"/></r></p></e>
+	<e><p><l>nukkua<s n="v"/></l><r>magama<s n="v"/></r></p></e>
+	<e><p><l>katsoa<s n="v"/></l><r>vaatama<s n="v"/></r></p></e>
+	<e><p><l>juoksia<s n="v"/></l><r>jooksma<s n="v"/></r></p></e>
+	<e><p><l>sijaitaa<s n="v"/></l><r>asuma<s n="v"/></r></p></e>
+
+	<e><p><l>edessä<s n="postp"/></l><r>ees<s n="postp"/></r></p></e>
   </section>
 </dictionary>
