@@ -99,7 +99,7 @@ LIST Kvm = Z ;
 LIST Koma = Com ;
 LIST KuiEtKas = "kui" "et" "kas" ;
 LIST FinV = <FinV> ("ole" neg) ("ole" partic);
-LIST FinVPart = <FinV> ("ei" V) partic inf ;
+LIST FinVPart = <FinV> ("ei" vblex) partic inf ;
 LIST EgaVõi = "ega" "või" ;
 LIST OLAlgus = "kui" "siis" "kas" "kes" "mis" "ehk" ;
 LIST DaInf = inf ;
@@ -211,6 +211,7 @@ SELECT (V ps2 pl)(-1C (P ps2 pl nom));
 REMOVE (P pers gen)(1 (P dem part));
 "<või>" SELECT (J)(-1 (<->));
 SELECT (n sg el) (1 (J crd))(2C (n sg el));
+"<ei>" SELECT (vblex) ; # FMT
 
 
 "<issand>" SELECT (n prop) ;

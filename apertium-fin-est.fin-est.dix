@@ -8,12 +8,17 @@
     <sdef n="det"  c=""/>
     <sdef n="np"  c=""/>
     <sdef n="cnjcoo"  c="Союз"/>
+    <sdef n="cnjsub"  c="Союз"/>
     <sdef n="vblex"  c="Глагол"/>
     <sdef n="part"  c="Частица"/>
     <sdef n="prn"  c="Местоимение"/>
     <sdef n="post"  c="Послелог"/>
 
     <sdef n="itg"  c=""/>
+    <sdef n="dem"  c=""/>
+    <sdef n="ref"  c=""/>
+    <sdef n="pos"  c=""/>
+    <sdef n="neg"  c=""/>
     <sdef n="pers"  c=""/>
     <sdef n="card"  c=""/>
 
@@ -25,6 +30,7 @@
     <sdef n="pl"  c=""/>
 
     <sdef n="ine"  c=""/>
+    <sdef n="par"  c=""/>
 
     <sdef n="sent"  c=""/>
     <sdef n="guio"  c=""/>
@@ -99,16 +105,20 @@
     <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>ta<s n="prn"/><s n="pl"/></r></p></e>
 
     <e><p><l>jokainen<s n="prn"/></l><r>iga<s n="prn"/></r></p></e>
-    <e><p><l>itse<s n="prn"/></l><r>ise<s n="prn"/></r></p></e>
-    <e><p><l>kuka<s n="prn"/></l><r>kes<s n="prn"/></r></p></e>
-    <e><p><l>mikä<s n="prn"/></l><r>mis<s n="prn"/></r></p></e>
-    <e><p><l>eräs<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
-    <e><p><l>molempi<s n="prn"/></l><r>mõlema<s n="prn"/></r></p></e>
-    <e><p><l>muu<s n="prn"/></l><r>muu<s n="prn"/></r></p></e>
-    <e><p><l>oma<s n="prn"/></l><r>oma<s n="prn"/></r></p></e>
-    <e><p><l>se<s n="prn"/></l><r>see<s n="prn"/></r></p></e>
-    <e><p><l>hänen<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
+    <e><p><l>kuka<s n="prn"/><s n="itg"/></l><r>kes<s n="prn"/></r></p></e>
+    <e><p><l>mikä<s n="prn"/><s n="itg"/></l><r>mis<s n="prn"/></r></p></e>
+    <e><p><l>mitä<s n="prn"/><s n="itg"/><s n="sg"/><s n="par"/></l><r>mis<s n="prn"/><s n="sg"/><s n="par"/></r></p></e>
+    <e><p><l>se<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>tema<s n="prn"/><s n="pl"/></r></p></e>
+
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
+
+    <e><p><l>itse<s n="prn"/></l><r>ise<s n="prn"/></r></p></e>
+    <e><p><l>eräs<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
+    <e><p><l>molempi<s n="n"/></l><r>mõlema<s n="prn"/></r></p></e>
+    <e><p><l>muu<s n="prn"/><s n="ref"/></l><r>muu<s n="prn"/></r></p></e>
+    <e><p><l>oma<s n="adj"/><s n="pos"/></l><r>oma<s n="prn"/></r></p></e>
 
     <!-- Раздел: Имя Существительное -->
 
@@ -125,7 +135,7 @@
     <e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
     <e><p><l>numero<s n="n"/></l><r>number<s n="n"/></r></p></e>
     <e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
-    <e><p><l>laskemise<s n="n"/></l><r>loetlemine<s n="n"/></r></p></e>
+    <e><p><l>laskeminen<s n="n"/></l><r>loetlemine<s n="n"/></r></p></e>
     <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
     <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
     <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
@@ -200,7 +210,7 @@
 
     <e><p><l>olla<s n="vblex"/></l><r>olema<s n="vblex"/></r></p></e>
     <e><p><l>alkaa<s n="vblex"/></l><r>algama<s n="vblex"/></r></p></e>
-    <e><p><l>ei<s n="vblex"/></l><r>ei<s n="vblex"/></r></p></e>
+    <e><p><l>ei<s n="vblex"/><s n="neg"/></l><r>ei<s n="vblex"/><s n="neg"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>otsima<s n="vblex"/></r></p></e>
     <e><p><l>haluta<s n="vblex"/></l><r>tahtma<s n="vblex"/></r></p></e>
     <e><p><l>huomata<s n="vblex"/></l><r>märkama<s n="vblex"/></r></p></e>
@@ -277,10 +287,10 @@
     <e><p><l>jälleen<s n="adv"/></l><r>jälle<s n="adv"/></r></p></e>
     <e><p><l>juoda<s n="vblex"/></l><r>joima<s n="vblex"/></r></p></e>
     <e><p><l>juuri<s n="n"/></l><r>juur<s n="n"/></r></p></e>
-    <e><p><l/><r>kas<s n="adv"/></r></p></e>
+    <e r="RL"><p><l/><r>kas<s n="adv"/></r></p></e>
     <e><p><l>kaikkialta<s n="adv"/></l><r>kõikjalt<s n="adv"/></r></p></e>
     <e><p><l>johon<s n="adv"/></l><r>kuhu<s n="adv"/></r></p></e>
-    <e><p><l>kun<s n="adv"/></l><r>kuna<s n="adv"/></r></p></e>
+    <e><p><l>kun<s n="cnjsub"/></l><r>kuna<s n="adv"/></r></p></e>
     <e><p><l>läpi<s n="adv"/></l><r>läbi<s n="adv"/></r></p></e>
     <e><p><l>lähde<s n="n"/></l><r>lähe<s n="n"/></r></p></e>
     <e><p><l>luetella<s n="vblex"/></l><r>loetlema<s n="vblex"/></r></p></e>
@@ -306,7 +316,7 @@
     <e><p><l>lintu<s n="n"/></l><r>lind<s n="n"/></r></p></e>
     <e><p><l>ja<s n="cnjcoo"/></l><r>ning<s n="cnjcoo"/></r></p></e>
     <e><p><l>nyt<s n="adv"/></l><r>praegu<s n="adv"/></r></p></e>
-    <e><p><l>koska<s n="cnjcoo"/></l><r>sest<s n="cnjcoo"/></r></p></e>
+    <e><p><l>koska<s n="cnjsub"/></l><r>sest<s n="cnjcoo"/></r></p></e>
     <e><p><l>myös<s n="adv"/></l><r>ka<s n="adv"/></r></p></e>
     <e><p><l>missä<s n="adv"/></l><r>kuidas<s n="adv"/></r></p></e>
     <!--

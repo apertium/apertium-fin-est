@@ -2,11 +2,23 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="ei">
+      <cat-item tags="vblex.neg"/>
+    </def-cat>
+    <def-cat n="pres-neg">
+      <cat-item tags="vblex.ind.pres.neg"/>
+    </def-cat>
     <def-cat n="adjec">
       <cat-item tags="adj.*"/>
     </def-cat>
+    <def-cat n="impf">
+      <cat-item tags="vblex.ind.impf.*"/>
+    </def-cat>
     <def-cat n="pres">
       <cat-item tags="vblex.ind.pres.*"/>
+    </def-cat>
+    <def-cat n="infa">
+      <cat-item tags="vblex.infa"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -29,6 +41,7 @@
     </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
+      <attr-item tags="vblex.neg"/>
     </def-attr>
     <def-attr n="a_mood">
       <attr-item tags="ind"/>
@@ -36,6 +49,7 @@
     </def-attr>
     <def-attr n="a_tens">
       <attr-item tags="pres"/>
+      <attr-item tags="impf"/>
       <attr-item tags="past"/>
     </def-attr>
     <def-attr n="a_neg">
@@ -109,6 +123,50 @@
     </rule>
 
 
+    <rule comment="REGLA: impf">
+      <pattern>
+        <pattern-item n="impf"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_tens"/><lit-tag v="past"/></let>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
+                              <lit-tag v="aff"/>
+                      </equal></test>
+                <let><clip pos="1" side="tl" part="a_neg"/><lit v=""/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><not><equal><clip pos="1" side="sl" part="a_pers"/> 
+                              <lit-tag v="impers"/>
+                      </equal></not></test>
+                <let><var n="voice"/><lit-tag v="actv"/></let>
+          </when>
+        </choose>
+
+
+        <out>
+          <chunk name="fin" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.IMPF"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <var n="voice"/>
+              <!--<clip pos="1" side="tl" part="a_mood"/>-->
+              <clip pos="1" side="tl" part="a_tens"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+        <let><var n="voice"/><lit v=""/></let>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: pres">
       <pattern>
         <pattern-item n="pres"/>
@@ -150,6 +208,63 @@
         <let><var n="voice"/><lit v=""/></let>
       </action>
     </rule>
+
+    <rule comment="REGLA: infa">
+      <pattern>
+        <pattern-item n="infa"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <lit-tag v="actv.infa.sg"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: ei pres-neg">
+      <pattern>
+        <pattern-item n="ei"/>
+        <pattern-item n="pres-neg"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk name="ei" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG.PRES"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <lit-tag v="actv.p3.sg"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+            <b pos="1"/>
+          <chunk name="conneg" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.CONNEG.PRES"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <lit-tag v="actv.pres.conneg"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: SENT">
       <pattern>
