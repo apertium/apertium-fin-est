@@ -251,6 +251,73 @@
     <e><re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e> 
     <e><re>[0-9]+([.,][0-9]+)?</re><i>-</i><re>[0-9]+([.,][0-9]+)?%?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 
+    <!-- TESTING -->
+
+    <e><p><l>@aga<s n="n"/></l><r>aga<s n="n"/></r></p></e>
+    <e><p><l>@äkitselt<s n="adv"/></l><r>äkitselt<s n="adv"/></r></p></e>
+    <e><p><l>@alla<s n="adv"/></l><r>alla<s n="adv"/></r></p></e>
+    <e><p><l>@armastav<s n="n"/></l><r>armastav<s n="n"/></r></p></e>
+    <e><p><l>@arvatavasti<s n="adv"/></l><r>arvatavasti<s n="adv"/></r></p></e>
+    <e><p><l>@ees<s n="adv"/></l><r>ees<s n="adv"/></r></p></e>
+    <e><p><l>@eest<s n="adv"/></l><r>eest<s n="adv"/></r></p></e>
+    <e><p><l>@ega<s n="adv"/></l><r>ega<s n="adv"/></r></p></e>
+    <e><p><l>@ei<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
+    <e><p><l>@et<s n="cnjcoo"/></l><r>et<s n="cnjcoo"/></r></p></e>
+    <e><p><l>@hästi<s n="adv"/></l><r>hästi<s n="adv"/></r></p></e>
+    <e><p><l>@inimene<s n="n"/></l><r>inimene<s n="n"/></r></p></e>
+    <e><p><l>@jälle<s n="adv"/></l><r>jälle<s n="adv"/></r></p></e>
+    <e><p><l>@jalutama<s n="vblex"/></l><r>jalutama<s n="vblex"/></r></p></e>
+    <e><p><l>@joima<s n="vblex"/></l><r>joima<s n="vblex"/></r></p></e>
+    <e><p><l>@juur<s n="n"/></l><r>juur<s n="n"/></r></p></e>
+    <e><p><l>@ka<s n="adv"/></l><r>ka<s n="adv"/></r></p></e>
+    <e><p><l>@kas<s n="adv"/></l><r>kas<s n="adv"/></r></p></e>
+    <e><p><l>@kiir<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
+    <e><p><l>@koer<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>
+    <e><p><l>@kõikjalt<s n="adv"/></l><r>kõikjalt<s n="adv"/></r></p></e>
+    <e><p><l>@kuhu<s n="adv"/></l><r>kuhu<s n="adv"/></r></p></e>
+    <e><p><l>@kuidas<s n="adv"/></l><r>kuidas<s n="adv"/></r></p></e>
+    <e><p><l>@kuna<s n="adv"/></l><r>kuna<s n="adv"/></r></p></e>
+    <e><p><l>@kuul<s n="n"/></l><r>kuul<s n="n"/></r></p></e>
+    <e><p><l>@läbi<s n="adv"/></l><r>läbi<s n="adv"/></r></p></e>
+    <e><p><l>@lähe<s n="n"/></l><r>lähe<s n="n"/></r></p></e>
+    <e><p><l>@lind<s n="n"/></l><r>lind<s n="n"/></r></p></e>
+    <e><p><l>@loetlema<s n="vblex"/></l><r>loetlema<s n="vblex"/></r></p></e>
+    <e><p><l>@loomulik<s n="adj"/></l><r>loomulik<s n="adj"/></r></p></e>
+    <e><p><l>@lõpetanu<s n="n"/></l><r>lõpetanu<s n="n"/></r></p></e>
+    <e><p><l>@mängiv<s n="n"/></l><r>mängiv<s n="n"/></r></p></e>
+    <e><p><l>@mi<s n="n"/></l><r>mi<s n="n"/></r></p></e>
+    <e><p><l>@mull<s n="n"/></l><r>mull<s n="n"/></r></p></e>
+    <e><p><l>@muu<s n="n"/></l><r>muu<s n="n"/></r></p></e>
+    <e><p><l>@natuke<s n="n"/></l><r>natuke<s n="n"/></r></p></e>
+    <e><p><l>@ning<s n="cnjcoo"/></l><r>ning<s n="cnjcoo"/></r></p></e>
+    <e><p><l>@nüü<s n="n"/></l><r>nüü<s n="n"/></r></p></e>
+    <e><p><l>@õdu<s n="n"/></l><r>õdu<s n="n"/></r></p></e>
+    <e><p><l>@olu<s n="n"/></l><r>olu<s n="n"/></r></p></e>
+    <e><p><l>@õnnelik<s n="adj"/></l><r>õnnelik<s n="adj"/></r></p></e>
+    <e><p><l>@päris<s n="adj"/></l><r>päris<s n="adj"/></r></p></e>
+    <e><p><l>@peitma<s n="vblex"/></l><r>peitma<s n="vblex"/></r></p></e>
+    <e><p><l>@pisike<s n="adj"/></l><r>pisike<s n="adj"/></r></p></e>
+    <e><p><l>@praegu<s n="adv"/></l><r>praegu<s n="adv"/></r></p></e>
+    <e><p><l>@rääk<s n="n"/></l><r>rääk<s n="n"/></r></p></e>
+    <e><p><l>@ring<s n="n"/></l><r>ring<s n="n"/></r></p></e>
+    <e><p><l>@saanu<s n="n"/></l><r>saanu<s n="n"/></r></p></e>
+    <e><p><l>@seal<s n="adv"/></l><r>seal<s n="adv"/></r></p></e>
+    <e><p><l>@seega<s n="adv"/></l><r>seega<s n="adv"/></r></p></e>
+    <e><p><l>@sest<s n="cnjcoo"/></l><r>sest<s n="cnjcoo"/></r></p></e>
+    <e><p><l>@söima<s n="vblex"/></l><r>söima<s n="vblex"/></r></p></e>
+    <e><p><l>@sugu<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
+    <e><p><l>@taga<s n="adv"/></l><r>taga<s n="adv"/></r></p></e>
+    <e><p><l>@tagant<s n="adv"/></l><r>tagant<s n="adv"/></r></p></e>
+    <e><p><l>@taha<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
+    <e><p><l>@täht<s n="n"/></l><r>täht<s n="n"/></r></p></e>
+    <e><p><l>@tead<s n="n"/></l><r>tead<s n="n"/></r></p></e>
+    <e><p><l>@tool<s n="n"/></l><r>tool<s n="n"/></r></p></e>
+    <e><p><l>@ühe<s n="n"/></l><r>ühe<s n="n"/></r></p></e>
+    <e><p><l>@üritama<s n="vblex"/></l><r>üritama<s n="vblex"/></r></p></e>
+    <e><p><l>@va<s n="adj"/></l><r>va<s n="adj"/></r></p></e>
+    <e><p><l>@väike<s n="n"/></l><r>väike<s n="n"/></r></p></e>
+    <e><p><l>@väli<s n="n"/></l><r>väli<s n="n"/></r></p></e>
+    <e><p><l>@veel<s n="adv"/></l><r>veel<s n="adv"/></r></p></e>
 
 
   </section>
