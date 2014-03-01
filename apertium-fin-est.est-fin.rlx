@@ -4,8 +4,16 @@ SOFT-DELIMITERS = "<,>" ;
 SETS
 
 LIST N = n ; 
+LIST A = adj ; 
+LIST Adv = adv ; 
 
 SECTION
 
+SELECT A IF (1C N);
+
+SELECT A IF (-1C Adv);
+
 SELECT N ;
   ## 
+
+

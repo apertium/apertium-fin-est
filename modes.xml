@@ -130,7 +130,7 @@
   </mode>
 
 
-  <mode name="fin-est-transfer" install="no">
+  <mode name="fin-est-chunker" install="no">
     <pipeline>
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
@@ -215,11 +215,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -245,14 +242,11 @@
 
   <mode name="est-fin-debug" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
+      <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -302,11 +296,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
     </pipeline>
@@ -317,11 +308,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -335,11 +323,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -351,16 +336,13 @@
     </pipeline>
   </mode>
 
-  <mode name="est-fin-transfer" install="no">
+  <mode name="est-fin-chunker" install="no">
     <pipeline>
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -381,11 +363,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -410,11 +389,8 @@
       <program name="lt-proc -w">
         <file name="est-fin.automorf.bin"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="est-fin.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="est-fin.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">

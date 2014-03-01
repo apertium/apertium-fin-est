@@ -6,12 +6,16 @@
     <sdef n="adj"  c="Имя прилагательное"/>
     <sdef n="num"  c="Число"/>
     <sdef n="det"  c=""/>
-    <sdef n="v"  c="Глагол"/>
+    <sdef n="np"  c=""/>
+    <sdef n="cnjcoo"  c="Союз"/>
+    <sdef n="vblex"  c="Глагол"/>
     <sdef n="part"  c="Частица"/>
     <sdef n="prn"  c="Местоимение"/>
     <sdef n="post"  c="Послелог"/>
 
+    <sdef n="itg"  c=""/>
 
+    <sdef n="ine"  c=""/>
 
     <sdef n="sent"  c=""/>
     <sdef n="guio"  c=""/>
@@ -26,6 +30,7 @@
   <section id="main" type="standard">
 
 
+    <e><p><l>ja<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>ja<s n="part"/></l><r>ja<s n="part"/></r></p></e>
     <e><p><l>ei<s n="part"/></l><r>ei<s n="part"/></r></p></e>
     <e><p><l>mutta<s n="part"/></l><r>aga<s n="part"/></r></p></e>
@@ -102,6 +107,7 @@
     <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
     <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
+    <e><p><l>puutarha<s n="n"/></l><r>ai<s n="n"/></r></p></e>
     <e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
     <e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
     <e><p><l>kissa<s n="n"/></l><r>kass<s n="n"/></r></p></e>
@@ -115,6 +121,7 @@
     <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
     <e><p><l>pöytä<s n="n"/></l><r>laud<s n="n"/></r></p></e>
     <e><p><l>äänen<s n="n"/></l><r>krabin<s n="n"/></r></p></e>
+    <e><p><l>hyvä<s n="n"/></l><r>ilu<s n="n"/></r></p></e>
     <e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
     <e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
     <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
@@ -148,6 +155,28 @@
     <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
     <e><p><l>voi<s n="n"/></l><r>või<s n="n"/></r></p></e>
 
+    <!-- SECTION: Proper nouns -->
+
+    <e><p><l>James<s n="np"/></l><r>James<s n="np"/></r></p></e>
+    <e><p><l>Mary<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
+
+    <!-- SECTION: Adjective -->
+
+    <e><p><l>hyvä<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
+    <e><p><l>iso<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
+    <e><p><l>kaunis<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/></l><r>ilu<s n="adj"/></r></p></e>
+    <e><p><l>kylmä<s n="adj"/></l><r>külm<s n="adj"/></r></p></e>
+    <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
+    <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
+    <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
+    <e><p><l>pieni<s n="adj"/></l><r>väike<s n="adj"/></r></p></e>
+    <e><p><l>suuri<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
+
+
+    <!-- SECTION: Adverbs -->
+
+    <e><p><l>missä<s n="adv"/><s n="itg"/><s n="ine"/></l><r>kus<s n="adv"/></r></p></e>
 
     <e><p><l>tänään<s n="adv"/></l><r>täna<s n="adv"/></r></p></e>
     <e><p><l>erittäin<s n="adv"/></l><r>väga<s n="adv"/></r></p></e>
@@ -157,59 +186,50 @@
     <e><p><l>ulkona<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
     <e><p><l>aina<s n="adv"/></l><r>alati<s n="adv"/></r></p></e>
 
-    <e><p><l>hyvä<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
-    <e><p><l>iso<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
-    <e><p><l>kaunis<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
-    <e><p><l>kylmä<s n="adj"/></l><r>külm<s n="adj"/></r></p></e>
-    <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
-    <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
-    <e><p><l>pieni<s n="adj"/></l><r>väike<s n="adj"/></r></p></e>
-    <e><p><l>suuri<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
-    <e><p><l>olla<s n="v"/></l><r>olema<s n="v"/></r></p></e>
-
     <!-- SECTION: Verbs -->
 
-    <e><p><l>alkaa<s n="v"/></l><r>algama<s n="v"/></r></p></e>
-    <e><p><l>ei<s n="v"/></l><r>ei<s n="v"/></r></p></e>
-    <e><p><l>etsiä<s n="v"/></l><r>otsima<s n="v"/></r></p></e>
-    <e><p><l>haluta<s n="v"/></l><r>tahtma<s n="v"/></r></p></e>
-    <e><p><l>huomata<s n="v"/></l><r>märkama<s n="v"/></r></p></e>
-    <e><p><l>istua<s n="v"/></l><r>istuma<s n="v"/></r></p></e>
-    <e><p><l>juoksia<s n="v"/></l><r>jooksma<s n="v"/></r></p></e>
-    <e><p><l>juosta<s n="v"/></l><r>jooksma<s n="v"/></r></p></e>
-    <e><p><l>katsoa<s n="v"/></l><r>vaatama<s n="v"/></r></p></e>
-    <e><p><l>kuten<s n="v"/></l><r>meeldima<s n="v"/></r></p></e>
-    <e><p><l>kuulla<s n="v"/></l><r>kuulma<s n="v"/></r></p></e>
-    <e><p><l>kysyä<s n="v"/></l><r>küsima<s n="v"/></r></p></e>
-    <e><p><l>lausua<s n="v"/></l><r>lausuma<s n="v"/></r></p></e>
-    <e><p><l>leikkiä<s n="v"/></l><r>mängima<s n="v"/></r></p></e>
-    <e><p><l>levätä<s n="v"/></l><r>magama<s n="v"/></r></p></e>
-    <e><p><l>lopettaa<s n="v"/></l><r>lõpetama<s n="v"/></r></p></e>
-    <e><p><l>luulla<s n="v"/></l><r>arvama<s n="v"/></r></p></e>
-    <e><p><l>löytää<s n="v"/></l><r>leidma<s n="v"/></r></p></e>
-    <e><p><l>mennä<s n="v"/></l><r>minema<s n="v"/></r></p></e>
-    <e><p><l>nauraa<s n="v"/></l><r>naerma<s n="v"/></r></p></e>
-    <e><p><l>nukkua<s n="v"/></l><r>magama<s n="v"/></r></p></e>
-    <e><p><l>nähdä<s n="v"/></l><r>nägema<s n="v"/></r></p></e>
-    <e><p><l>olettaa<s n="v"/></l><r>arvama<s n="v"/></r></p></e>
-    <e><p><l>olla<s n="v"/></l><r>olema<s n="v"/></r></p></e>
-    <e><p><l>pelata<s n="v"/></l><r>mängima<s n="v"/></r></p></e>
-    <e><p><l>pitää<s n="v"/></l><r>meeldima<s n="v"/></r></p></e>
-    <e><p><l>pitää<s n="v"/></l><r>pidama<s n="v"/></r></p></e>
-    <e><p><l>puhua<s n="v"/></l><r>rääkima<s n="v"/></r></p></e>
-    <e><p><l>pystyä<s n="v"/></l><r>võima<s n="v"/></r></p></e>
-    <e><p><l>rakastaa<s n="v"/></l><r>armastama<s n="v"/></r></p></e>
-    <e><p><l>saada<s n="v"/></l><r>saama<s n="v"/></r></p></e>
-    <e><p><l>sanoa<s n="v"/></l><r>ütlema<s n="v"/></r></p></e>
-    <e><p><l>sijaita<s n="v"/></l><r>asuma<s n="v"/></r></p></e>
-    <e><p><l>sijaitaa<s n="v"/></l><r>asuma<s n="v"/></r></p></e>
-    <e><p><l>tehdä<s n="v"/></l><r>tegema<s n="v"/></r></p></e>
-    <e><p><l>tietää<s n="v"/></l><r>oskama<s n="v"/></r></p></e>
-    <e><p><l>tietää<s n="v"/></l><r>teadma<s n="v"/></r></p></e>
-    <e><p><l>tulla<s n="v"/></l><r>tulema<s n="v"/></r></p></e>
-    <e><p><l>tuntea<s n="v"/></l><r>tundma<s n="v"/></r></p></e>
-    <e><p><l>tuntea<s n="v"/></l><r>tunduma<s n="v"/></r></p></e>
-    <e><p><l>vastata<s n="v"/></l><r>vastama<s n="v"/></r></p></e>
+    <e><p><l>olla<s n="vblex"/></l><r>olema<s n="vblex"/></r></p></e>
+    <e><p><l>alkaa<s n="vblex"/></l><r>algama<s n="vblex"/></r></p></e>
+    <e><p><l>ei<s n="vblex"/></l><r>ei<s n="vblex"/></r></p></e>
+    <e><p><l>etsiä<s n="vblex"/></l><r>otsima<s n="vblex"/></r></p></e>
+    <e><p><l>haluta<s n="vblex"/></l><r>tahtma<s n="vblex"/></r></p></e>
+    <e><p><l>huomata<s n="vblex"/></l><r>märkama<s n="vblex"/></r></p></e>
+    <e><p><l>istua<s n="vblex"/></l><r>istuma<s n="vblex"/></r></p></e>
+    <e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
+    <e><p><l>juosta<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
+    <e><p><l>katsoa<s n="vblex"/></l><r>vaatama<s n="vblex"/></r></p></e>
+    <e><p><l>kuten<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
+    <e><p><l>kuulla<s n="vblex"/></l><r>kuulma<s n="vblex"/></r></p></e>
+    <e><p><l>kysyä<s n="vblex"/></l><r>küsima<s n="vblex"/></r></p></e>
+    <e><p><l>lausua<s n="vblex"/></l><r>lausuma<s n="vblex"/></r></p></e>
+    <e><p><l>leikkiä<s n="vblex"/></l><r>mängima<s n="vblex"/></r></p></e>
+    <e><p><l>levätä<s n="vblex"/></l><r>magama<s n="vblex"/></r></p></e>
+    <e><p><l>lopettaa<s n="vblex"/></l><r>lõpetama<s n="vblex"/></r></p></e>
+    <e><p><l>luulla<s n="vblex"/></l><r>arvama<s n="vblex"/></r></p></e>
+    <e><p><l>löytää<s n="vblex"/></l><r>leidma<s n="vblex"/></r></p></e>
+    <e><p><l>mennä<s n="vblex"/></l><r>minema<s n="vblex"/></r></p></e>
+    <e><p><l>nauraa<s n="vblex"/></l><r>naerma<s n="vblex"/></r></p></e>
+    <e><p><l>nukkua<s n="vblex"/></l><r>magama<s n="vblex"/></r></p></e>
+    <e><p><l>nähdä<s n="vblex"/></l><r>nägema<s n="vblex"/></r></p></e>
+    <e><p><l>olettaa<s n="vblex"/></l><r>arvama<s n="vblex"/></r></p></e>
+    <e><p><l>olla<s n="vblex"/></l><r>olema<s n="vblex"/></r></p></e>
+    <e><p><l>pelata<s n="vblex"/></l><r>mängima<s n="vblex"/></r></p></e>
+    <e><p><l>pitää<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
+    <e><p><l>pitää<s n="vblex"/></l><r>pidama<s n="vblex"/></r></p></e>
+    <e><p><l>puhua<s n="vblex"/></l><r>rääkima<s n="vblex"/></r></p></e>
+    <e><p><l>pystyä<s n="vblex"/></l><r>võima<s n="vblex"/></r></p></e>
+    <e><p><l>rakastaa<s n="vblex"/></l><r>armastama<s n="vblex"/></r></p></e>
+    <e><p><l>saada<s n="vblex"/></l><r>saama<s n="vblex"/></r></p></e>
+    <e><p><l>sanoa<s n="vblex"/></l><r>ütlema<s n="vblex"/></r></p></e>
+    <e><p><l>sijaita<s n="vblex"/></l><r>asuma<s n="vblex"/></r></p></e>
+    <e><p><l>sijaitaa<s n="vblex"/></l><r>asuma<s n="vblex"/></r></p></e>
+    <e><p><l>tehdä<s n="vblex"/></l><r>tegema<s n="vblex"/></r></p></e>
+    <e><p><l>tietää<s n="vblex"/></l><r>oskama<s n="vblex"/></r></p></e>
+    <e><p><l>tietää<s n="vblex"/></l><r>teadma<s n="vblex"/></r></p></e>
+    <e><p><l>tulla<s n="vblex"/></l><r>tulema<s n="vblex"/></r></p></e>
+    <e><p><l>tuntea<s n="vblex"/></l><r>tundma<s n="vblex"/></r></p></e>
+    <e><p><l>tuntea<s n="vblex"/></l><r>tunduma<s n="vblex"/></r></p></e>
+    <e><p><l>vastata<s n="vblex"/></l><r>vastama<s n="vblex"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
 

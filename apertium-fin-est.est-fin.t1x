@@ -2,6 +2,12 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="adjec">
+      <cat-item tags="adj.*"/>
+    </def-cat>
+    <def-cat n="pres">
+      <cat-item tags="vblex.ind.pres.*"/>
+    </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
@@ -10,6 +16,44 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_adjec">
+      <attr-item tags="adj"/>
+      <attr-item tags="adj.pos"/>
+      <attr-item tags="adj.sup"/>
+      <attr-item tags="adj.comp"/>
+    </def-attr>
+    <def-attr n="a_grau">
+      <attr-item tags="sup"/>
+      <attr-item tags="pos"/>
+      <attr-item tags="comp"/>
+    </def-attr>
+    <def-attr n="a_verb">
+      <attr-item tags="vblex"/>
+    </def-attr>
+    <def-attr n="a_mood">
+      <attr-item tags="ind"/>
+      <attr-item tags="cond"/>
+    </def-attr>
+    <def-attr n="a_tens">
+      <attr-item tags="pres"/>
+      <attr-item tags="past"/>
+    </def-attr>
+    <def-attr n="a_neg">
+      <attr-item tags="aff"/>
+      <attr-item tags="neg"/>
+    </def-attr>
+    <def-attr n="a_pers">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+      <attr-item tags="impers"/>
+      <attr-item tags="PD"/>
+    </def-attr>
+    <def-attr n="a_nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="ND"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
@@ -26,6 +70,7 @@
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
+    <def-var n="voice"/>
     <def-var n="current_verb"/>
   </section-def-vars>
   <section-def-macros>
@@ -37,6 +82,74 @@
     </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: adjec">
+      <pattern>
+        <pattern-item n="adjec"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_adjec"/> 
+                              <lit-tag v="adj"/>
+                      </equal></test>
+                <let><clip pos="1" side="tl" part="a_adjec"/><lit-tag v="adj.pos"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="j" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: pres">
+      <pattern>
+        <pattern-item n="pres"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
+                              <lit-tag v="aff"/>
+                      </equal></test>
+                <let><clip pos="1" side="tl" part="a_neg"/><lit v=""/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><not><equal><clip pos="1" side="sl" part="a_pers"/> 
+                              <lit-tag v="impers"/>
+                      </equal></not></test>
+                <let><var n="voice"/><lit-tag v="actv"/></let>
+          </when>
+        </choose>
+
+
+        <out>
+          <chunk name="fin" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.PRES"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_verb"/>
+              <var n="voice"/>
+              <!--<clip pos="1" side="tl" part="a_mood"/>-->
+              <clip pos="1" side="tl" part="a_tens"/>
+              <clip pos="1" side="tl" part="a_pers"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+        <let><var n="voice"/><lit v=""/></let>
+      </action>
+    </rule>
 
     <rule comment="REGLA: SENT">
       <pattern>
