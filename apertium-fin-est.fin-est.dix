@@ -14,6 +14,15 @@
     <sdef n="post"  c="Послелог"/>
 
     <sdef n="itg"  c=""/>
+    <sdef n="pers"  c=""/>
+    <sdef n="card"  c=""/>
+
+    <sdef n="p1"  c=""/>
+    <sdef n="p2"  c=""/>
+    <sdef n="p3"  c=""/>
+
+    <sdef n="sg"  c=""/>
+    <sdef n="pl"  c=""/>
 
     <sdef n="ine"  c=""/>
 
@@ -33,7 +42,7 @@
     <e><p><l>ja<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>ja<s n="part"/></l><r>ja<s n="part"/></r></p></e>
     <e><p><l>ei<s n="part"/></l><r>ei<s n="part"/></r></p></e>
-    <e><p><l>mutta<s n="part"/></l><r>aga<s n="part"/></r></p></e>
+    <e><p><l>mutta<s n="cnjcoo"/></l><r>aga<s n="adv"/></r></p></e>
     <e><p><l>myös<s n="part"/></l><r>ka<s n="part"/></r></p></e>
 
     <e><p><l>edessä<s n="post"/></l><r>ees<s n="post"/></r></p></e>
@@ -82,12 +91,13 @@
     <e><p><l>vielä<s n="det"/></l><r>veel<s n="det"/></r></p></e>
     <e><p><l>tai<s n="det"/></l><r>või<s n="det"/></r></p></e>
  
-    <e><p><l>minä<s n="prn"/></l><r>ma<s n="prn"/></r></p></e>
-    <e><p><l>sinä<s n="prn"/></l><r>sa<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>ta<s n="prn"/></r></p></e>
-    <e><p><l>me<s n="prn"/></l><r>me<s n="prn"/></r></p></e>
-    <e><p><l>te<s n="prn"/></l><r>te<s n="prn"/></r></p></e>
-    <e><p><l>he<s n="prn"/></l><r>nad<s n="prn"/></r></p></e>
+    <e><p><l>minä<s n="prn"/><s n="pers"/><s n="p1"/></l><r>ma<s n="prn"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l><r>sa<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>ta<s n="prn"/><s n="sg"/></r></p></e>
+    <e><p><l>me<s n="prn"/><s n="pers"/><s n="p1"/></l><r>me<s n="prn"/></r></p></e>
+    <e><p><l>te<s n="prn"/><s n="pers"/><s n="p2"/></l><r>te<s n="prn"/></r></p></e>
+    <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>ta<s n="prn"/><s n="pl"/></r></p></e>
+
     <e><p><l>jokainen<s n="prn"/></l><r>iga<s n="prn"/></r></p></e>
     <e><p><l>itse<s n="prn"/></l><r>ise<s n="prn"/></r></p></e>
     <e><p><l>kuka<s n="prn"/></l><r>kes<s n="prn"/></r></p></e>
@@ -248,7 +258,7 @@
     <e><p><l>—<s n="guio"/></l><r>—<s n="guio"/></r></p></e>
     <e><p><l>'<s n="apos"/></l><r>'<s n="apos"/></r></p></e>
     <e><re>[.\?;:!"…]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
-    <e><re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e> 
+    <e><re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/><s n="card"/></l><r><s n="num"/></r></p></e> 
     <e><re>[0-9]+([.,][0-9]+)?</re><i>-</i><re>[0-9]+([.,][0-9]+)?%?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
 
     <!-- TESTING -->
@@ -281,7 +291,7 @@
     <e><p><l>kanssa<s n="adv"/></l><r>seega<s n="adv"/></r></p></e>
     <e><p><l>syödä<s n="vblex"/></l><r>söima<s n="vblex"/></r></p></e>
     <e><p><l>suku<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
-    <e><p><l>takana<s n="adv"/></sl><r>taga<s n="adv"/></r></p></e>
+    <e><p><l>takana<s n="adv"/></l><r>taga<s n="adv"/></r></p></e>
     <e><p><l>takaa<s n="adv"/></l><r>tagant<s n="adv"/></r></p></e>
     <e><p><l>tähän<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
     <e><p><l>tähti<s n="n"/></l><r>täht<s n="n"/></r></p></e>
@@ -290,7 +300,7 @@
     <e><p><l>väli<s n="n"/></l><r>väli<s n="n"/></r></p></e>
     <e><p><l>vielä<s n="adv"/></l><r>veel<s n="adv"/></r></p></e>
 
-    <e><p><l>ei<s n="vblex"/>+kä<s n="enc">/</l><r>ega<s n="adv"/></r></p></e>
+    <e><p><l>eikä<s n="adv"/></l><r>ega<s n="adv"/></r></p></e>
     <e><p><l>koiranleuka<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>
     <e><p><l>pallo<s n="n"/></l><r>kuul<s n="n"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>lind<s n="n"/></r></p></e>
