@@ -22,6 +22,7 @@
 /apertium-fin-est.fin.twol -text
 /autogen.sh -text
 /configure.ac -text
+dev/est-fin.tsv -text
 /est-fin.prob -text svneol=unset#unset
 /fin-est.prob -text svneol=unset#unset
 /modes.xml -text
