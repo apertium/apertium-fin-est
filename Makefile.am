@@ -29,11 +29,11 @@ TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 .PRECIOUS: .deps/.d
 
 ###############################################################################
-## Avar→Russian monolingual transducers
+## Finnish→Estonian monolingual transducers
 ###############################################################################
 
 # fin->est mor
-$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
+$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/.d
 	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 

@@ -212,8 +212,8 @@
 
   <mode name="est-fin" install="yes">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -246,7 +246,7 @@
   <mode name="est-fin-debug" install="no">
     <pipeline>
       <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -278,16 +278,16 @@
   
   <mode name="est-fin-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
     </pipeline>
   </mode>
 
   <mode name="est-fin-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-conv -a"/>
       <program name="vislcg3 --trace --grammar">
@@ -299,8 +299,8 @@
 
   <mode name="est-fin-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -314,8 +314,8 @@
 
   <mode name="est-fin-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -332,8 +332,8 @@
 
   <mode name="est-fin-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -353,8 +353,8 @@
 
   <mode name="est-fin-transfer" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -378,8 +378,8 @@
 
   <mode name="est-fin-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
@@ -407,8 +407,8 @@
 
   <mode name="est-fin-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -w">
-        <file name="est-fin.automorf.hfst"/>
+      <program name="lt-proc -w">
+        <file name="est-fin.automorf.bin"/>
       </program>
       <program name="cg-proc -w">
         <file name="est-fin.rlx.bin"/>
