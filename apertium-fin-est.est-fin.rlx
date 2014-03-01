@@ -1,19 +1,3336 @@
-DELIMITERS = "<.>" "<!>" "<?>" "<...>" "<¶>" ;
-SOFT-DELIMITERS = "<,>" ;
+###
+### 2011/morfuhest050411.rle
+############################
 
-SETS
+#DELIMITERS = "<.>" ;
 
-LIST N = n ; 
-LIST A = adj ; 
-LIST Adv = adv ; 
+DELIMITERS = "<s>" "</s>" "<p>" "</p>";
+
+SECTION
+LIST POS = A D G I J K N P S V X Y Z ;
+LIST Eraldajad = <<< >>> Col Scl Dsh Com Opr Cpr Quo Oqu Cqu "ja" "ning" ("või" J) "ega" "ehk" ;
+LIST VoimCLB = "ja" "ning" "või" "aga" "ega" "ehk" "kes" "mis" "see" ;
+LIST OnCLB = "kes" "mis" "milline" "missugune" "et" "kui" "kuni" "sest" "siis" "siiski" "kuna" "nagu" "justkui"
+ "otsekui"  "kus" "kust" "kuhu" "kustkaudu" "kuidas" "muidu" "mil" "millal" "miks" "mispärast"  "mistõttu" "mismoodi"
+ "misjaoks"  "mistarvis" "seepärast" "sellepärast" "sest" "seetõttu" "selletõttu" "kas" "kuidas" ;
+LIST On2CLB = "kes" "mis" "milline" "missugune" "kus" "kust" "kuhu" ;
+LIST NaguCLB = "nii" "nõnda" "just" "justkui" "otsekui" "niisamuti" "niisama" ;
+LIST EtCLB = "ilma" "olgugi" "selleks" "nii" "nõnda" "just" "niisamuti" "niisama" ;
+LIST KuiCLB = "enne" "niipea" "niivõrd" "seni" "senikaua" "sestsaadik" "sestpeale" "parajasti" "sellal" "nii" "nõnda"
+ "just" "niisamuti" "niisama" ;
+LIST KoolTir = Col Scl Dsh Com ;
+LIST Sid|Kvm = J Com Col Scl ;
+LIST CLB = CLB;
+LIST CLBC = CLB CLBC;
+
+#ADD (CLB) (*) (NOT -1 POS OR (CLB)) ;
+ADD (CLB) (Z) (0 (Col) OR (Scl)) ;
+ADD (CLB) (*) (0 KoolTir)(1 OnCLB) ;
+ADD (CLB) (*) (0 Sid|Kvm)(1 OnCLB) ;
+ADD (CLB) (*) (0 KoolTir)(1 NaguCLB)(2 ("nagu")) ;
+ADD (CLB) (*) (0 (Com))(1 KuiCLB)(2 ("kui")) ;
+ADD (CLB) (*) (0 (Com))(1 EtCLB)(2 ("et")) ;
+ADD (CLB) (*) (0 (Com))(1 ("sama") + (ad))(2 ("aeg") + (ad))(3 ("kui")) ;
+ADD (CLB) (*) (0 (Com))(1 ("pärast"))(2 ("see") + (part))(3 ("kui")) ;
+ADD (CLB) (*) (0 (Com))(1 ("seni"))(2 ("kuni")) ;
+ADD (CLB) (*) (0 (Com))(1 ("see") + (el))(2 ("hoolimata")) ;
+ADD (CLB) (*) (0 (Com))(1 ("see") + (all))(2 ("vaatamata")) ;
+ADD (CLB) (*) (0 (Com))(-1 (I)) ;
+ADD (CLB) (Z Com) (1 (<FinV>))(*-1 (<FinV>) BARRIER CLB) ;
+
+ADD (CLB) (*)   (0 On2CLB)(*1C (<FinV>) BARRIER Eraldajad)(*-1C (<FinV>) BARRIER Eraldajad) ;
+ADD (CLB) (*)   (0 VoimCLB)(*1C (<FinV>) BARRIER Eraldajad)(*-1C (<FinV>) BARRIER Eraldajad) ;
+
+ADD (CLB) (*)   (0 (Com))(1 On2CLB OR VoimCLB)(*2C (<FinV>) BARRIER Eraldajad) (*-1C (<FinV>)) 
+                (*-1 (V partic) OR (<FinV>) BARRIER Eraldajad) ;
+
+ADD (CLB) (*)   (0 KoolTir)(*1C (<FinV>) BARRIER Eraldajad)(*-1C (<FinV>) BARRIER Eraldajad) ;     
+ADD (CLB) (*)   (0 KoolTir)(*1C (<FinV>) + ("ole") BARRIER Eraldajad)
+                           (*-1C (<FinV>) OR (V partic) BARRIER Eraldajad) ;     
+ADD (CLB) (*)   (0 KoolTir)(1C (<FinV>))(*-1C (<FinV>) BARRIER Eraldajad) ;     
+
+ADD (CLB) (*)   (0 KoolTir)(1 (<FinV>))(NOT 1 (partic)) 
+                (*-1 ("kui") BARRIER Eraldajad)
+                (*-1 ("ka") BARRIER Eraldajad)
+                (*-1 (<FinV>) BARRIER Eraldajad);     
+
+
+
+ADD (CLB) (Z Opr) (*1 (Cpr) LINK *-1C (<FinV>) BARRIER (Opr)) ;
+#ADD (CLB) (Z Cpr) (*-1 (Opr) LINK *1 (<FinV>) NOT LINK 0 (partic)) ;
+ADD (CLB) (Z Com) (1 (P pers))(2C (<FinV>)) ;
+ADD (CLB) (Z)   (0 (Com))(1 ("kuid"))(*2C (<FinV>) BARRIER Sid|Kvm) ;
+
+ADD (CLB) (Z)   (0 (Quo) OR (Oqu))(*1 (Quo) OR (Cqu) LINK *-1 (<FinV>)) ;
+ADD (CLB) (Z)   (0 (Quo) OR (Oqu))(-1 (Z)) ;
+ADD (CLB) (Z Dsh) (-1 (Quo) OR (Cqu)) ;
+ADD (CLB) (Z)   (0 (Quo) OR (Oqu))(-1 (Col)) ;
+
+ADD (CLBC) (Z Opr) (*1 (Cpr) LINK *-1 (<FinV>) OR (V partic)) (NOT 0 (CLB));
+ADD (CLBC) (Z Cpr) (*-1 (Opr) LINK *1 (<FinV>) OR (V partic)) (NOT 0 (CLB));
+ADD (CLBC) (Z) (*-1 (Cpr) LINK *-1 (Opr) LINK *1 (<FinV>) OR (V partic)) (NOT 0 (CLB));
+
+ADD (CLBC) (Z) (1 (<FinV>))
+             (*-1 (<FinV>) OR (V partic)) (NOT 0 (CLB));
+ADD (CLBC) (*) (1 VoimCLB) (*1 (<FinV>) OR (V partic) BARRIER Eraldajad)
+	     (*-1 (<FinV>) OR (V partic) BARRIER Eraldajad) (NOT 0 (CLB)) ;
+
+ADD (CLB) (Com)(**-1C (<FinV>) BARRIER (J) OR (Z))(**1C (<FinV>) BARRIER (J) OR (Z));
+ADD (CLBC) (Com)(**-1C (<FinV>) BARRIER CLB)(*1 (<FinV>) BARRIER (J) OR (Z));
+ADD (CLB) (Opr)(**1C (<FinV>) BARRIER (J) OR (Z));
+ADD (CLB) (Cpr)(**-1C (<FinV>) BARRIER (J) OR (Z));#(**1C (<FinV>) BARRIER (J) OR (Z));
+ADD (CLB) (J crd)(**-1C (<FinV>) BARRIER (J) OR (Z))(**1C (<FinV>) BARRIER (J) OR (Z));
+ADD (CLBC) (J crd)(*-1 (<FinV>) BARRIER (J) OR (Z))(*1 (<FinV>) BARRIER (J) OR (Z));
+
+SECTION
+# I KONKREETSED SõNAD
+LIST InterRefl = inter refl ;
+LIST Nominal = S P A N (Y nominal);
+LIST Sid|Kvm|Clb = J Z CLB ;
+LIST Ei = "ei" ;
+LIST A = adj ;
+LIST D = det ;
+LIST J = J ;
+LIST S = n ;
+LIST K = K ;
+LIST Arv = N ;
+LIST Verb = vblex ;
+LIST Kvm = Z ;
+LIST Koma = Com ;
+LIST KuiEtKas = "kui" "et" "kas" ;
+LIST FinV = <FinV> ("ole" neg) ("ole" partic);
+LIST FinVPart = <FinV> ("ei" V) partic inf ;
+LIST EgaVõi = "ega" "või" ;
+LIST OLAlgus = "kui" "siis" "kas" "kes" "mis" "ehk" ;
+LIST DaInf = inf ;
+
+LIST Nom = nom ;
+LIST Gen = gen ;
+LIST Part = par ;
+LIST Ill = ill adt ;
+LIST In = ine ;
+LIST El = ela ;
+LIST All = all ;
+LIST Ad = ade ;
+LIST Abl = abl ;
+LIST Tr = tra ;
+LIST Term = ter ;
+LIST Es = ess ;
+LIST Abes = abe ;
+LIST Kom = com ;
+LIST NiNaTaGa = ter ess abe com ;
+LIST NGP = nom gen par ;
+LIST AdvAdjGen = adj adv gen ;
+LIST Pärisnimi = (n prop) np ;
+LIST Quo = Quo Oqu Cqu ;
+
+LIST Verb&Kvm = V Z ;
+LIST LA = "<s>" >>> ;
+LIST KuiAdv = "mitu" "vähe" "palju" "hea" "halb" "hästi" "kaua" "vana" "vägev" "noor" "raske" "kerge" "tihti" "sageli"
+ 		"kiire" "kiiresti" ;
+LIST SPN = S P N ;
+LIST SP = S P ;
+SET NominalSg = Nominal + (sg);
+SET SPNSgNom = SPN + (sg) + Nom ;
+SET SPSgNom = SP + (sg) + Nom ;
+SET SPSgPart = SP + (sg) + Part ;
+SET SPPlNom = SP + (pl) + Nom;
+LIST nppiir = <FinV> ger K Com inf CLB ;
+LIST IlmaVerb = "jät" "jää" "saa" ;
+LIST VastuVerb = "aja" "and" "astu" "hakka" "hauku" "helki" "hõiska" "hääleta"
+	   "hüüd" "jooks" "juhtu" "kaiku" "kaits" "kaja" "kihuta" "kost" 
+           "käla" "käi" "küsi" "lausu" "löö" "lükka" "mine" "mõju" "naerata"
+	   "nähva" "pane" "peegelda" "peegeldu" "pida" "puikle" "punni" 
+	   "põrka" "pööra" "rutta" "rabele" "rääki" "raiu" "ründa" "saa"
+	   "sattu" "sead" "seis" "sihti" "siru" "sudi" "tegutse" "tervita"
+	   "toimi" "torise" "torma" "tule" "tulista" "tõrju" "tõrku"
+	   "tööta" "vaidle" "võt" "väit" "vaata" "vahti" "suru"
+           "sõdi" "sõima" "võitle" "ütle" "kuma" ;
+LIST Ette_verb = "and" "astu" "heit" "kand" "kavatse" "kirjuta" "kujuta" 
+	   "luge" "määra" "näge" "näita" "pane" "teata" "vaata" "valmista" 
+           "võt" ;
+LIST Välja_verb = "aita" ("aja" V) "and" "arva" "astu" "ilmu" "jät" "kannata" 
+            "kasva" "kirjuta" "kooru" "lask" "lülita" "näge" 
+            "mine" "mõtle" "nuhki" "näge" "pist" "pomise" "rebi" "rooki" 
+            "sikuta" "siruta" "tassi" ("too" V) "tule" "viska" "võt" ;
+LIST Sisse_verb = "and" "lülita" "tassi" "too" "vajuta" "võt" ;
+LIST Sirgu_Verb = "aja" "tõus" "jää" ;
+LIST Toime_Verb = "tule" "pane" ;
+LIST Pähe_Verb = "jää" "õppi" "tule" ;
+LIST Pealt_Verb = "vaata" "kuula" "näge" ;
+LIST Aru_Verb = "saa" "and" "võt" "pida" ;
+LIST Kätte_Verb1 = "and" ("jõud" V) "maks" ;
+LIST Kätte_Verb2 = "juhata" "tule" "võt" ;
+LIST Liikumis_Verb = "tule" "roni" "jooks" "kõnd" "mine" ;
+LIST Veel_Verb = "liiku" "sõit" "kõndi" "ole" "asu" "asetse" ;
+LIST Mõõtühik = "kilomeeter" "meeter" "tund" "aasta" ;
+LIST PoleMäärsõna = "nuppu" "silmi" "mahti" ;
+LIST Poordumine = "härra" "proua" "preili" "neiu" "mister" "miss" "missis" 
+	"professor" "dotsent" "kodanik" "kindral" ;
+
+LIST Side = J ;
+LIST Hulk = "hulk" "tükk" "tosin" "kuhi" "pool" "poolteist" "osa" "klaas" "pudel"
+	  "jagu" "mitu" "natuke" "veerand" "rohkesti" "liiter" "kilo" "täis" "rohkem" ;
+LIST Liitadverb = "siitsealt" "aegajalt" "ülesalla" "võibolla" ;
+LIST MitteAdverb = "peas" "pähe" "selga" "seljas" "jalga" "jalule" "kodu" "kodus" "koju" "kodust" ;
+LIST KustKuhu = ill adit el abl all ;
+
+LIST Hulk = "hulk" "tükk" "tosin" "kuhi" "pool" "poolteist" "osa" "klaas" "pudel" "jagu" "mitu" "natuke" "veerand"
+ "rohkesti" "liiter" "kilo" "täis" "rohkem" ;		# hulgasõnad
+LIST Ajamäärus = "aeg" "aasta" "kuu" "nädal" "tund" "hetk" "sekund" "kevad" "talv" "suvi" "sügis" "päev" "öö" "õhtu"
+"hommik" "jaanuar" "veebruar" "märts" "aprill" "maikuu" "juunikuu" "juulikuu" "august" "september" "oktoober"
+ "november"  "detsember" "esmaspäev" "teisipäev" "kolmapäev" "neljapäev" "reede" "laupäev" "pühapäev" "aastakümme"
+ "aastakümme" ;# ajamääratlus
+LIST RohkemVähem = "rohkem" "vähem" "täis";
+LIST Loend = "punkt" "loend" "number" "lisa" "peatükk" ;
+LIST Suuruselt =suuruselt";
+LIST Järel ="järel";
+LIST Seast = "seast" "hulgast" "keskelt";
+LIST Seas = "seas" "hulgas" "keskel" ;
+LIST Ja = "ja" "ning" ;
+
+LIST Jutum1 = Quo Oqu;
+LIST Jutum2 = Quo Cqu;
+LIST NudTud = <nud> <tud> <dud> (partic past); 
+LIST Tegu = ("tegu" sg part) ("tegu" sg nom) ("tege=mine" sg part);
+LIST Vaja ="vaja" "tarvis";
+LIST AditVerb =("kutsu" V) "mine" ("sõit" V) ("jää" V) "torma" "kihuta" "võt" ("vii" V);
+LIST Ole = ("ole");
+LIST NimiAse = S "mina" "sina" "tema" "meie" "teie" "nemad" "kes" "mis" "igaüks" "üksteise" "teineteise" "ise"
+ "iseenese" "see" "too" "sama" "seesama" "toosama" "kõik" "kumbki" "mõlema" "emb-kumb" "miski" 
+"palju" "teine" "üks" "muu";
+
+LIST SPN = S P N;
+
+SET PoleSide = POS - Side ;
+
+SET SPGen = SP + Gen;
+
+"<keegi>" SELECT (P);
+SELECT (V ps2 pl)(-1C (P ps2 pl nom));
+REMOVE (P pers gen)(1 (P dem part));
+"<või>" SELECT (J)(-1 (<->));
+SELECT (S sg el) (1 (J crd))(2C (S sg el));
+
+
+"<issand>" SELECT (S prop) ;
+"<aamen>" SELECT (I) ;
+
+"<tere>" SELECT (I) (1 (prop)) ;
+"<tere>" SELECT (I) (1 (Z)) ;		
+"<tere>" SELECT (I) (1 ("<hommikust>")) ;		
+"<hommikust>" SELECT (part) (-1 ("<tere>")) ;
+
+"<sel>" REMOVE (Y) ;
+"<end>" REMOVE (Y) ;
+"<eks>" REMOVE (Y) ;
+"<kokku>" SELECT D (1 D) ;
+
+"<meie>" SELECT (gen) (1C Nom + S)(NOT 1 InterRefl) ;
+"<teie>" SELECT (gen) (1C Nom + S)(NOT 1 InterRefl) ;
+
+"<meie>" SELECT (gen) (1C Nom)(NOT 1 InterRefl)(NOT *-1 ("ole"))(NOT *1 ("ole")) ;
+"<teie>" SELECT (gen) (1C Nom)(NOT 1 InterRefl)(NOT *-1 ("ole"))(NOT *1 ("ole")) ;
+
+"<mail>" REMOVE ("maa") (-1 Arv) ;			
+"<mais>" REMOVE ("maa") (NOT -1 Nominal) ;
+
+"<suuremalt>" SELECT D (1 ("<osalt>")) ;
+"<osalt>" SELECT D (-1 ("<suuremalt>")) ;
+
+"<kust>" SELECT D (-1 Sid|Kvm|Clb) ; 
+"<kust>" SELECT D (*1 ("<?>")) ;	
+
+SELECT (S gen) (1 ("<sõnul>")) ;
+SELECT (P gen) (1 ("<sõnul>")) ;
+
+REMOVE ("väikene") (0 ("väike")) ;
+REMOVE ("päikene") (0 ("päike")) ;
+REMOVE ("*põli") (0 ("*põlv")) ;     
+REMOVE ("neid") (0 ("neiu")) ;
+REMOVE ("tali") (0 ("talv")) ;
+REMOVE ("mander") (0 ("manner")) ;
+REMOVE ("sigarett") (0 ("sigaret")) ;
+REMOVE ("kaitse") (0 ("kaits")) ;
+SELECT (N ord) (0 ("esimene")) ;
+
+LIST KätteVerb = "juhata" "õpeta" ;
+
+#ÜHENDVERBID
+
+"<kätte>" SELECT S (*-1 KätteVerb BARRIER CLB)(NOT -1 Gen);
+"<kätte>" SELECT S (*1 KätteVerb BARRIER CLB)(NOT -1 Gen);
+"<kätte>" SELECT S (*-1 KätteVerb BARRIER CLB)(*-1 All BARRIER CLB);
+"<kätte>" SELECT S (*1 KätteVerb BARRIER CLB)(*-1 All BARRIER CLB);
+"<kätte>" SELECT S (*-1 KätteVerb BARRIER CLB)(-1 Gen)(NOT *-2 SPN + Gen BARRIER CLB)(NOT *1 SPN + Gen BARRIER CLB);
+"<kätte>" SELECT S (*1 KätteVerb BARRIER CLB)(-1 Gen)(NOT *-2 SPN + Gen BARRIER CLB)(NOT *1 SPN + Gen BARRIER CLB);
+
+
+#juhatas voodi kätte
+#juhatas mu vihma kätte
+
+
+# SIDESÕNAD VRS MÄÄRSÕNAD
+
+"<aga>" SELECT D (-1 (imper)) ;
+"<aga>" SELECT D (-2 Kvm) ;
+"<aga>" SELECT D (-2 ("<s>")) ;
+
+"<aga>" SELECT J (-1 Kvm) ;
+"<Aga>" SELECT J ;
+"<Aga>" SELECT J (-1 LA) ;
+
+"<aga>" SELECT J (-1 KuiEtKas) (*1 (Com)) ;
+
+"<aga>" SELECT D (-1C FinVPart) ;
+"<aga>" SELECT J (*-1 (Com))(NOT 1 FinV)(NOT 1 A) ;
+
+"<ega>" SELECT J (*-1 Ei) ;
+
+SELECT J (0 EgaVõi) (1 OLAlgus) ;
+
+SELECT J (0 EgaVõi) (-1 (partic)) (1 (partic)) ;
+SELECT J (0 EgaVõi) (-1C DaInf) (*1C DaInf BARRIER CLB) ;
+SELECT J (0 EgaVõi) (1 (partic past ps))(*-1C (past) BARRIER Sid|Kvm) ;
+
+SELECT J (0 EgaVõi) (-1 D) (1 D) (NOT -1 ("<kas>")) ;
+
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Nom)(1 Nom) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Gen)(1 Gen) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Part)(1 Part) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Ill)(1 Ill) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 In)(1 In) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 El)(1 El) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 All)(1 All) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Ad)(1 Ad) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Abl)(1 Abl) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Es)(1 Es) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Tr)(1 Tr) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Abes)(1 Abes) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Term)(1 Term) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Kom)(1 Kom) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Gen)(1 NiNaTaGa) ;
+
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Nom)(1C AdvAdjGen)(2 Nom) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Gen)(1C AdvAdjGen)(2 Gen) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Part)(1C AdvAdjGen)(2 Part) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Ill)(1C AdvAdjGen)(2 Ill) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 In)(1C AdvAdjGen)(2 In) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 El)(1C AdvAdjGen)(2 El) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 All)(1C AdvAdjGen)(2 All) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Ad)(1C AdvAdjGen)(2 Ad) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Abl)(1C AdvAdjGen)(2 Abl) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Es)(1C AdvAdjGen)(2 Es) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Tr)(1C AdvAdjGen)(2 Tr) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Term)(1C AdvAdjGen)(2 Term) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Kom)(1C AdvAdjGen)(2 Kom) ;
+SELECT J (0 EgaVõi) (-1 Nominal) (-1 Gen)(1C AdvAdjGen)(2 NiNaTaGa) ;
+
+SELECT J (0 EgaVõi) (-1 Pärisnimi) (1 Pärisnimi) ;
+
+"<ega>" SELECT D (-1 (>>>)) ;
+"<ega>" SELECT D (-1 Quo) ;
+"<ega>" REMOVE D (NOT -1 (Com)) ; 
+
+"<ehk>" REMOVE J (-1 FinV)(NOT *1 FinV BARRIER CLBC) ;
+"<ehk>" REMOVE J (-1 Sid|Kvm|Clb) ;
+"<ehk>" SELECT J (-1 S)(1 S)(NOT 1 Arv) ;
+	
+"<ehk>" SELECT J (-1 S)(1 S)(1 Arv)(*-1 Arv) ;
+"<ehk>" SELECT J (1 Arv)(*-1 Arv BARRIER Verb&Kvm) ;
+"<ehk>" REMOVE J (1 Arv) ;
+"<ehk>" REMOVE J (1 D) ; 			
+
+
+"<kui>" SELECT J (*1 ("<siis>")) ;
+"<kui>" SELECT J (*1 ("<ka>")) ;
+"<kui>" SELECT J (-1 FinV) ; 
+
+"<kui>" SELECT D (1 KuiAdv) ;
+"<kui>" SELECT D (1C A)(NOT -1 A)(NOT 2 S)(NOT *-1 ("niisama") BARRIER CLB) ;
+
+"<kui>" SELECT J (0 CLB)(*1 Verb BARRIER CLB)(NOT 1 KuiAdv)(NOT 1 A) ;
+"<kui>" SELECT J (0 CLB)(*1 Verb BARRIER CLB)(NOT 1 KuiAdv)(1 A)(NOT 2 Verb) ;
+
+"<kui>" REMOVE D (NOT 1 D) (NOT 1 A) ;
+"<kui>" SELECT J (*-1 ("niisama")) ;
+
+"<kui>" SELECT J (-1 ("välja")) ;
+
+"<kui>" SELECT D (1C A)(NOT -1 A)(NOT -1 S)(2 S)(NOT *-1 ("niisama") BARRIER CLB) ;
+"<kui>" SELECT J (-1 Verb) ;
+"<kui>" SELECT J (1 Verb) ; 
+"<kui>" SELECT J (1 ("ka")) ;
+"<kui>" SELECT J (-1 (Com)) (-2 ("siis")) ;
+"<kui>" SELECT J (*1 ("siis") LINK -1 (Com)) ;
+"<kui>" SELECT J (*1 (Com) LINK 1 Verb) ;
+"<kui>" SELECT J (-1 (comp)) ;
+
+"<kui>" SELECT J (-1 S + Nom) (1 S + Nom) ;
+"<kui>" SELECT J (-1 S + Nom) (1 A + Nom) (2 S + Nom) ; 
+"<kui>" SELECT D (1 KuiAdv) ;
+
+"<kuid>" SELECT J (0 CLB) ;
+
+"<kuigi>" SELECT J (0 CLB)(*1 Verb BARRIER CLB) ;
+"<kuigi>" SELECT J (-1 (J))(*1 Verb BARRIER CLB) ;
+"<kuigi>" SELECT D (NOT *1 Verb OR S BARRIER CLB)(NOT 1 Kvm) ;
+"<kuigi>" SELECT D (1 A)(NOT *1 FinV BARRIER CLB) ;
+
+"<nagu>" SELECT J (0 CLB)(NOT -1 LA) ;
+"<nagu>" SELECT J (-1 A) ;
+"<nagu>" SELECT J (-1 (S pl part))(1 (S pl part))
+"<nagu>" SELECT D (-1 (cond)) ;
+"<nagu>" SELECT D (-1 SPN + Nom)(1 (V sg ps3))
+"<nagu>" SELECT J (*1 SPNSgNom BARRIER nppiir)(NOT *-1 ("ole") BARRIER CLB) ;
+"<nagu>" SELECT J (1 SPNSgNom)(*-1 ("ole") BARRIER CLB)(*-1 Nom BARRIER CLB LINK *-1 Nom BARRIER CLB) 
+"<nagu>" SELECT J (-1 SPNSgNom)(*1 S + Ad BARRIER nppiir) ;
+
+"<sest>" SELECT J (-1 (Com))(NOT 1 Verb) ;
+
+"<vaid>" SELECT J (*-2 Ei) ;
+"<vaid>" SELECT J (-2 (Com)) (-1 (N card)) ;
+"<vaid>" IFF J (-1 (Com)) ;
+
+"<või>" REMOVE S (1 Arv) ;
+"<või>" REMOVE Verb (NOT *-1 ("ei") OR ("ega")) ;
+"<või>" REMOVE D (-1 ("kas"))(NOT 1 FinV) ;
+"<või>" SELECT J (*-1 ("kas") LINK *1 FinV)(1 FinV) ;
+"<või>" SELECT J (*-1 CLBC + ("kas"))(NOT -1 Ei OR ("ega")) ;
+"<või>" SELECT J (1 ("mitte")) (NOT -1 Ei OR ("ega")) ;
+
+# Koordinatsiooni korral:
+"<või>" SELECT J (1C (V pl))(*-1 (V pl) BARRIER Sid|Kvm) ;
+"<või>" SELECT J (1C (V sg))(*-1 (V sg) BARRIER Sid|Kvm) ;
+"<või>" SELECT J (-1 SPN + (sg) + Nom)(*1 SPN + (sg) + Nom BARRIER nppiir) ;
+
+# B. KAASSÕNAD CONTRA MUU
+
+"<poole>" SELECT K (-1 ("iga") OR ("teine") + All) ;  			
+"<poole>" SELECT K (-1 A + Gen) ;		
+"<ajal>" REMOVE K (-1 Ad) ;
+
+"<ilma>" SELECT D (-1 El)(NOT 1 Abes) ;
+"<ilma>" SELECT D (*-1 IlmaVerb BARRIER CLB)(NOT *1 Abes BARRIER CLB) ;
+"<ilma>" SELECT D (1 ("et")) ;
+REMOVE K (0 (<kom>))(NOT *-1 Kom BARRIER CLBC)(NOT *1 Kom BARRIER CLBC) ;
+
+"<ligi>" SELECT D (1 (N card)) ;
+SELECT (K pre <part>) (1C SPN + Part) (NOT -1C Gen) ;
+
+
+# C. ÜHEND- JA VÄLJENDVERBID
+# Ühendverbid määrsõnaga vastu
+
+"<vastu>" SELECT D (NOT -1 Gen)(NOT *1 Part BARRIER FinV OR CLB)(*1 VastuVerb BARRIER CLB) ;
+"<vastu>" SELECT D (NOT -1 Gen)(NOT *1 Part BARRIER FinV OR CLB)(*-1 VastuVerb BARRIER CLB) ;
+
+"<vastu>" SELECT (K post) (-1 Gen)(1 ("miski" part))(*-1 ("ole" main) BARRIER CLB);
+
+# Ühendverbid määrsõnaga ette
+
+"<ette>" SELECT D (NOT -1 Gen)(*1 Ette_verb BARRIER CLB) ;
+"<ette>" SELECT D (NOT -1 Gen)(*-1 Ette_verb BARRIER CLB) ;
+
+# Ühendverbid määrsõnaga välja
+
+"<välja>" SELECT D (NOT 1C S)(NOT 1 D)(NOT 1 K)(*1 Välja_verb BARRIER CLB) ;
+"<välja>" SELECT D (NOT 1C S)(NOT 1 D)(NOT 1 K)(*-1 Välja_verb BARRIER CLB) ;
+
+# Ühendverbid sänaga sisse
+
+"<sisse>" SELECT D (1 Sisse_verb) ;
+
+"<heaks>" SELECT D (1 ("kiit")) ;
+"<heaks>" SELECT D (-1 ("kiit")) ;
+"<heaks>" SELECT D (1 ("tege")) ;
+"<heaks>" SELECT D (-1 ("tege")) ;
+
+"<omaks>" SELECT D (*-1 ("võt") BARRIER CLB) ;
+"<omaks>" SELECT D (*1 ("võt") BARRIER CLB) ;
+
+"<alla>" SELECT D (*-1 ("kirjuta") BARRIER CLB) ;
+"<alla>" SELECT D (*1 ("kirjuta") BARRIER  CLB) ;
+"<alt>" SELECT D (*-1 ("veda") BARRIER CLB) ;
+"<alt>" SELECT D (*1 ("veda") BARRIER CLB) ;
+
+"<korda>" SELECT D (*1 ("tege") BARRIER CLBC) ;
+"<korda>" SELECT D (*-1 ("tege") BARRIER CLBC) ;
+"<korda>" SELECT D (*1 ("saa") BARRIER CLBC) ;
+"<korda>" SELECT D (*-1 ("saa") BARRIER CLBC) ;
+"<korda>" SELECT D (*1 ("mine") BARRIER CLBC) ;
+"<korda>" SELECT D (*-1 ("mine") BARRIER CLBC) ;
+
+"<korras>" SELECT (S sg in) (-1C (A sg in)) ;
+"<korras>" SELECT D (*1 ("hoid") BARRIER CLBC) ;
+"<korras>" SELECT D (*-1 ("hoid") BARRIER CLBC) ;
+
+"<korraga>" SELECT D (NOT -1 Arv) ;
+
+"<kord>" SELECT D (1C FinV)(NOT -1 Arv)(NOT -1 (P)) ;
+"<kord>" SELECT D (-1C FinV)(1 Verb) ;
+"<kord>" SELECT D (-1C (P) + (pers) + Nom) ;
+
+"<kohale>" SELECT D (*1 ("tule") BARRIER CLB) (NOT -1 All) ;
+"<kohale>" SELECT D (*-1 ("tule") BARRIER CLB) (NOT -1 All) ;
+
+SELECT (all) (1 ("alla"));
+
+
+# Väljendverbid
+
+"<raha>" SELECT (S part) (*1 ("teeni") OR ("saa") BARRIER CLB) ;
+"<raha>" SELECT (S part) (*-1 ("teeni") OR ("saa") BARRIER CLB) ;
+
+"<liiga>" SELECT (S part) (*1 ("tege") BARRIER CLB) ;
+"<liiga>" SELECT (S part) (*-1 ("tege") BARRIER CLB) ;
+
+"<hinge>" SELECT (S sg part) (*-1 ("tõmba") BARRIER CLBC) ;
+"<hinge>" SELECT (S sg part) (*1 ("tõmba") BARRIER CLBC) ;
+
+"<toime>" SELECT (S adit) (*-1 Toime_Verb BARRIER CLB) ;
+"<toime>" SELECT (S adit) (*1 Toime_Verb BARRIER CLB) ;
+
+"<kasu>" SELECT (S sg part) (*1 ("ole") BARRIER CLBC) ;
+"<kasu>" SELECT (S sg part) (*-1 ("ole") BARRIER CLBC) ;
+
+"<sirgu>" SELECT D (*-1 Sirgu_Verb BARRIER CLBC) ;
+"<sirgu>" SELECT D (*1 Sirgu_Verb BARRIER CLBC) ;
+
+"<tähele>" SELECT (X) (*-1 ("pane") BARRIER CLBC) ;
+"<tähele>" SELECT (X) (*1 ("pane") BARRIER CLBC) ;
+
+"<surma>" SELECT (S adit) (*-1 ("mõist") BARRIER CLBC) ;
+"<surma>" SELECT (S adit) (*1 ("mõist") BARRIER CLBC) ;
+
+"<kirja>" SELECT (S adit) (*-1 ("pane") BARRIER CLBC) ;
+"<kirja>" SELECT (S adit) (*1 ("pane") BARRIER CLBC) ;
+
+"<krampi>" SELECT D (*-1 ("tõmbu") BARRIER CLBC) ;
+"<krampi>" SELECT D (*1 ("tõmbu") BARRIER CLBC) ;
+
+"<pähe>" SELECT D (*1 Pähe_Verb BARRIER CLB) ;
+"<pähe>" SELECT D (*-1 Pähe_Verb BARRIER CLB) ;
+
+"<aru>" SELECT (S com sg part) (*1 Aru_Verb BARRIER CLB) ;
+"<aru>" SELECT (S com sg part) (*-1 Aru_Verb BARRIER CLB) ;
+
+"<pealt>" SELECT D (*1 Pealt_Verb BARRIER CLB) ;
+"<pealt>" SELECT D (*-1 Pealt_Verb BARRIER CLB) ;
+
+"<järele>" SELECT D (*1 Liikumis_Verb BARRIER CLB) ;
+"<järele>" SELECT D (*-1 Liikumis_Verb BARRIER CLB) ;
+"<tähelepanu>" SELECT (S com sg part) (*1 ("pööra") BARRIER CLB) ;
+"<tähelepanu>" SELECT (S com sg part) (*-1 ("pööra") BARRIER CLB) ;
+
+"<üle>" SELECT (K pre) (1 (N card))(1 Gen) ;
+"<üle>" SELECT D (*1 ("ela") BARRIER CLB) ;
+"<üle>" SELECT D (*-1 ("ela") BARRIER CLB) ;
+"<üle>" SELECT D (*1 ("võt") BARRIER CLB) ;
+"<üle>" SELECT D (*-1 ("võt") BARRIER CLB) ;
+
+"<õnge>" SELECT (S adit) (*-1 ("mine") BARRIER CLB) ;
+"<õnge>" SELECT (S adit) (*1 ("mine") BARRIER CLB) ;
+"<õnge>" SELECT (S adit) (*-1 ("võt") BARRIER CLB) ;
+"<õnge>" SELECT (S adit) (*1 ("võt") BARRIER CLB) ;
+
+"<peale>" SELECT D (*1 ("aja") BARRIER CLB) ;
+"<peale>" SELECT D (*-1 ("aja") BARRIER CLB) ;
+
+"<läbi>" SELECT D (*1 ("saagi") BARRIER CLB) ;
+"<läbi>" SELECT D (*-1 ("saagi") BARRIER CLB) ;
+
+"<valmis>" SELECT D (*1 ("saa") BARRIER  CLB) ;
+"<valmis>" SELECT D (*-1 ("saa") BARRIER CLB) ;
+
+"<pihta>" SELECT D (*1 ("saa") BARRIER CLB) ;
+"<pihta>" SELECT D (*-1 ("saa") BARRIER CLB) ;
+"<pihta>" SELECT D (*1 ("hakka") BARRIER CLB) ;
+"<pihta>" SELECT D (*-1 ("hakka") BARRIER CLB) ;
+
+"<vahele>" SELECT D (*1 ("sega") BARRIER CLB) ;
+"<vahele>" SELECT D (*-1 ("sega") BARRIER CLB) ;
+
+"<välja>" SELECT D (*0 ("pressi") BARRIER CLB);
+
+"<kokku>" SELECT D (*1 ("liit") BARRIER CLB) ;
+
+# D. MUUD SåNAD
+
+
+REMOVE (N) (0 ("ükski")) ;
+
+"<kohe>" SELECT D ;
+
+"<edasi>" SELECT D (*-1 ("tagasi"))(NOT 1 El)(NOT -1 El) ;
+"<edasi>" SELECT D (*1 ("tagasi"))(NOT 1 El)(NOT -1 El) ;
+
+"<lõpuks>" SELECT (S sg tr) (-1 ("<lõppude>")) ;
+"<lõpuks>" SELECT D (NOT -1 SPN) ;
+
+"<hommikust>" SELECT (A part) (NOT *1 FinV BARRIER CLBC) (NOT *-1 FinV BARRIER CLBC) ;
+"<õhtust>" SELECT (A part) (NOT *1 FinV BARRIER CLBC) (NOT *-1 FinV BARRIER CLBC) ;
+
+"<õige>" SELECT D (1 ("pea") OR ("varsti")) ;
+"<pea>" SELECT D (-1 ("õige")) ;
+
+SELECT ("alus") (NOT 0 Verb) ;
+
+"<enam>" SELECT D (*-1 (neg) BARRIER CLB) ;
+"<enam>" SELECT D (*1 (neg) BARRIER CLB) ;
+"<enam>" IFF D (1 ("kui")) ;
+
+REMOVE D (0 A + (sg) + Nom)(1 SPN + (sg) + Nom) ;
+
+"<veel>" REMOVE S (NOT *1 Veel_Verb BARRIER CLB) (NOT *-1 Veel_Verb BARRIER CLB) ;
+
+SELECT (sg part) (1 ("viisi") OR ("laadi") OR ("moodi")) (NOT 0 SPN + Gen) ;
+SELECT (S sg part) (0 ("viisi") OR ("laadi") OR ("moodi")) (-1C Part) ;
+
+SELECT (S nom) (0 Poordumine)(1C (prop)) ;
+SELECT (S nom <ja>) (1C (prop)) ;
+SELECT (S gen <ja>) (1C S)(1C NiNaTaGa) ;
+SELECT (S <ja>) (NOT 1C S) ;
+SELECT (A <ja> sg nom) (1C SPN + (sg) + Nom)(NOT 2 SPN + (sg) + Nom);
+SELECT (A <ja> pl nom) (1C SPN + (pl) + Nom) ;
+SELECT (A <ja> sg gen) (1C SPN + (sg) + Gen) ;
+SELECT (A <ja> pl gen) (1C SPN + (pl) + Gen) ;
+SELECT (A <ja> sg part) (1C SPN + (sg) + Part) ;
+SELECT (A <ja> pl part) (1C SPN + (pl) + Part) ;
+
+REMOVE (S <line>) (0 (prop)) ;
+SELECT (S <line>) (NOT 0 D)(NOT 1C S)(NOT 1C Verb) ;
+
+"<ainult>" SELECT D ;
+
+"<ammu>" SELECT D (-1 ("kui") OR ("kunagi") ) ;
+
+"<ette>" REMOVE S ;
+
+"<iga>" SELECT (P sg gen) (1C A + (sg) + Gen) ;
+"<ikka>" REMOVE S (NOT -1 Ill) ;
+
+"<jah>" REMOVE (I) ;
+
+"<kella>" SELECT (S sg gen) (1C (N card)) ;
+
+"<küll>" IFF D (NOT 1 ("küll")) (NOT 1 ("saa")) ;
+
+"<küllalt>" SELECT D (1C D) ;
+
+"<liiga>" SELECT D (1 D) ;
+"<liiga>" SELECT D (1 A)(NOT *1 SPN BARRIER CLB) ;
+"<liigagi>" SELECT D (1 D) ;
+"<liigagi>" SELECT D (1 A)(NOT *1 SPN BARRIER CLB) ;
+
+"<lisa>" SELECT S (-1 (Y)) ;
+"<lisa>" SELECT S (1 (Z)) (NOT *-1 (neg)) ;
+
+"<maha>" SELECT D ;
+
+SELECT (P) (0 ("muu"))(-1 ("kõik")) ;
+"<muud>" SELECT (P) (1 ("kui")) ;
+"<muud>" SELECT (P) (1 (Com))(2 ("kui")) ;
+
+"<nimelt>" SELECT D (-1 ("kes") OR ("mis") OR ("kus")) ;
+
+
+#"<osalt>" SELECT D (NOT *-1 MitteSide) BARRIER CLBC)
+"<osalt>" SELECT D (NOT *-1 PoleSide BARRIER CLBC)
+
+"<otsas>" SELECT (S sg in) (-1 In) ;
+
+"<poole>" SELECT (K post) (-1C All) ;
+"<poole>" REMOVE D (NOT -1 D)(NOT -1 A)(NOT -1 (P)) ;
+
+"<pool>" SELECT (K post) (-1 Ad) ;
+"<poolt>" SELECT (K post) (-1 Abl) ;
+
+"<pool>" SELECT (N) (1 Mõõtühik) ;
+"<poole>" SELECT (N) (1 Mõõtühik) ;
+"<poolt>" SELECT (N) (1 Mõõtühik) ;
+
+"<pool>" SELECT (N) (-2 (N))(-1 ("ja")) ;
+"<pool>" SELECT (N) (*1 El BARRIER Verb) ;
+"<pool>" REMOVE (N) (NOT 1 Part)(NOT 1 (N card)) (NOT *1 El BARRIER CLB) ;
+
+
+"<palju>" SELECT D (1 (comp)) ;
+"<palju>" SELECT D (1C SPN + (pl) + Part) ;
+
+"<paar>" SELECT (N) (1C SPN + (sg) + Part) ;
+
+"<selle>" SELECT (P) (-1 ("kõik")) ;
+
+"<tegu>" SELECT (part) (*1 ("ole") BARRIER CLB) (NOT -1 A) ;
+"<tegu>" SELECT (part) (*-1 ("ole") BARRIER CLB) (NOT -1 A) ;     
+
+SELECT (S part) (NOT 0 A)(NOT 0 (P))(NOT 0 Gen)(-1 ("ole"))(-2C Ad) ;
+SELECT (S part) (NOT 0 A)(NOT 0 (P))(0 Gen) (-1 ("ole")) (-2C Ad + (sg))(NOT 1 (partic past imps)) ;     
+
+"<umbes>" SELECT D (1 Mõõtühik) ;
+"<umbes>" REMOVE S (1 Nom + (N card)) ;
+"<umbes>" SELECT D (1 (N)) ;
+
+"<vaja>" SELECT D (-1 ("mis")) ;
+"<vaja>" SELECT D (-1 ("kui")) ;
+"<vaja>" SELECT D (*-1 ("ole") BARRIER CLBC) ;
+"<vaja>" SELECT D (*1 ("ole") BARRIER CLBC) ;
+"<nüüd>" SELECT D ;  			
+"<mil>" SELECT D ;  			
+"<mis>" REMOVE S ;  			
+"<miks>" REMOVE S ;  			
+"<keegi>" REMOVE S ;  			
+"<meie>" REMOVE S ;  			
+"<sellest>" SELECT (P) ;  			
+"<midagi>" SELECT (P indef) ;
+"<enamasti>" SELECT D ;			
+"<kordagi>" SELECT D ;			
+"<sama>" SELECT (part) (-2 ("üks")) (-2C Part) ;	
+"<kaunis>" SELECT D (1 D) ;
+"<kaunis>" REMOVE D (NOT 1 A) ;   	
+"<parem>" SELECT (A nom) (*-1 ("ole") BARRIER CLBC LINK *-1 Nom) ;
+"<varem>" SELECT D (-1 D) ;   
+"<seal>" SELECT D (-1 D) ;
+"<harvemini>" SELECT D (-1 D) ;
+"<kõige>" SELECT D (1 A) ;
+"<järele>" REMOVE S ;   
+"<samas>" REMOVE (in) (NOT 1 In) ;
+"<aina>" SELECT D ;    
+"<ees>" REMOVE S ;    
+"<seadust>" SELECT (S part) ;
+REMOVE (ad) (0 D) (NOT -1 Ad) ;
+
+"<seas>" REMOVE (S) (-1 Gen) ;
+SELECT (prop) (-1 (Oqu) OR (Quo)) (1 (Cqu) OR (Quo)) ;
+
+"<raske>" REMOVE S ;     
+"<raske>" SELECT (A nom) (*-1 ("ole") BARRIER Nom OR CLBC) ;
+
+"<võimas>" REMOVE (V) ;
+
+"<veel>" SELECT D (*1 Hulk BARRIER CLBC) ;
+"<veel>" SELECT D (*1 (N) BARRIER CLBC) ;  
+
+REMOVE D (0 PoleMäärsõna) ;
+SELECT D (0 ("seal") OR ("sealt"))(*1 ("kus") OR ("kust") LINK -1 (Com) BARRIER (Z)) ;
+
+SELECT D (0 Liitadverb) ;
+SELECT D (-1 El)(0 ("sisse") OR ("välja")) ;
+
+SELECT (gen) (1 ("aeg") + (sg) + Tr) ; 
+SELECT (gen) (1 ("aeg") + (sg) + Ad) ; 
+
+REMOVE (neg) (NOT 0 ("ei"))(NOT -1 ("ei") OR ("ega")) ;
+
+
+REMOVE (D) (0 MitteAdverb) ;
+REMOVE (D) (0 ("käsi")) ;
+"<isegi>" SELECT (D) (NOT -1 (P pers nom))(NOT -2 (P pers nom))(NOT -1 (V ps2)) ;
+"<aasta>" SELECT (gen) (-1 (N)) (1 (S))	;
+SELECT (el) (1 ("tulenevalt"))	;
+SELECT (el) (-1 ("tulenevalt"))	;	
+
+"<mees>" SELECT (S nom) (1 (V sg ps3)) ;
+
+# 1) "tuli" verbi ja nimisõna eristamine
+
+"<tuli>" SELECT (S) (1 ("takk" In)) ;
+"<tuli>" SELECT (S) (0 ("tule"))(0 ("tuli"))(-1C (<FinV));
+"<tuli>" SELECT (S) (0 ("tule"))(0 ("tuli"))(1C (<FinV));
+SELECT (V) (0 ("tule"))(*1 (inf) BARRIER CLB);
+SELECT (V) (0 ("tule"))(*-1 (inf) BARRIER CLB);
+SELECT (V) (0 ("tule"))(*-1C (nom) BARRIER CLB)(NOT *-1 (<FinV>) BARRIER CLB)(NOT *1 (FinV) BARRIER CLB);
+# Hääl _tuli_ piklikust tuhmi peegli moodi metallplaadist.
+# ..., kui(**CLB) Mari koju tuli.
+SELECT (V) (0 ("tule"))(-1 (D));
+#SELECT (V) (0 ("tule"))(1 (Z));
+
+#valmis saama
+
+SELECT (V) (0 ("saa")) (*-1 ("valmis") BARRIER CLB) ;
+SELECT (V) (0 ("saa")) (*1 ("valmis") BARRIER CLB) ;
+# Kana oli just valmis saamas.
+
+# 2) "viis" - arv-, nimisõna või verb
+
+"<viis>" SELECT (N) (1 (part)) ;
+"<viit>" SELECT (N) (1 (part)) ;
+# Karistuseks on surmanuhtlus väi kakskümmend viis aastat sunnitöölaagrit 
+"<viis>" SELECT (N) (-1 (N card));
+"<viit>" SELECT (N) (-1 (N card));
+"<viis>" SELECT (V) (*1 KustKuhu BARRIER CLB)(NOT *1 (<FinV>) BARRIER CLB)(NOT *-1 (<FinV>) BARRIER CLB) ;
+"<viis>" SELECT (V) (*-1 KustKuhu BARRIER CLB) (NOT *1 (<FinV>) BARRIER CLB)(NOT *-1 (<FinV>) BARRIER CLB) ;
+
+# 3) "ise" - ase-, määr- ja omadussõna
+# (koostatud põhiliselt eesti kirjakeele seletussõnaraamatu põhjal)
+
+"<ise>" SELECT (P) (-1 (S) OR (P)) (*-1 (S nom) OR (P nom) BARRIER CLB OR (V)) ;
+"<ise>" REMOVE (A) (NOT *-1 ("iga")) (NOT *-1 (N)) (NOT 1 (S)) (NOT *-1 (pl)) ;
+# Kirjutamine ise saab olema kerge
+"<ise>" SELECT (P) (*1 ("aga"));
+"<ise>" REMOVE (A) (NOT 1 Nominal) ;
+"<ise>" REMOVE (A) (NOT *1 (S sg) OR (P sg)) ;
+"<ise>" REMOVE (pl) (-1C (sg nom)) ;
+# praegune on juba läpp ise
+"<ise>" REMOVE (sg) (*-1C (P pers pl nom)) ;
+
+# 4) "oma" võimalikud tõlgendused on: Pron, Adj, adverb, verb
+
+"<oma>" SELECT (P) (1 (Fst) OR (Exc) OR (Int)) ;
+"<oma>" SELECT (P) (1 (Z)) (1 CLB);
+"<oma>" SELECT (P) (-1 (S) OR (P))(-1 (gen))  ;
+"<oma>" SELECT (P) (1 (V))  ;
+"<oma>" SELECT (P) (1 (D))  ;
+"<oma>" SELECT (P) (1 (K))  ;
+"<oma>" REMOVE (A) (NOT 1 (nom) OR (gen) OR (part)) ; # kui A, siis peaks ühilduma
+# Ta püsis oma praeguses asendis
+"<oma>" SELECT (D) (1 (N card))(1 (nom)) ;
+# Winston oli O'Brienit näinud tosina aasta jooksul oma tosin korda.
+"<oma>" SELECT (D) (1 Hulk) ;
+"<oma>" IFF (D) (1 Ajamäärus);
+"<oma>" SELECT (gen) (1C (gen)) ;  
+"<oma>" SELECT (gen) (1C NiNaTaGa) ;  
+"<oma>" SELECT (gen) (1C (S)) ;  
+
+# 5) "saama"
+
+"<sai>" SELECT (V) (NOT *1 (<FinV> af) BARRIER CLB) (NOT *-1 (<FinV af) BARRIER CLB)(*1 (V partic) BARRIER CLB) ;
+"<sai>" SELECT (V) (NOT *1 (<FinV> af) BARRIER CLB) (NOT *-1 (<FinV af) BARRIER CLB)(*1 (tr) BARRIER CLB) ;
+
+# 6) "üks" - Pron või arvsõna
+
+"<üksi>" SELECT (D) ;      				
+"<ühe>" SELECT (N) (1C (S))(1 (gen)) ;		
+"<ühele>" SELECT (P all) (1 ("poole"));
+"<teist>" SELECT (N) (1 ("kord"))  ;
+"<ühel>" SELECT (P) (1C (S))(1 (ad)) ;		
+"<ühtki>" IFF (N) (1 (S part));	
+SELECT (P) (0 ("üks")) (1 (el))	;
+SELECT (P) (0 ("üks")) (2 (el))	;
+
+SELECT (N) (0 ("üks"))(-1 Loend)  ;
+SELECT (N) (0 ("üks"))(-1 (N))       	;
+SELECT (P pl) (0 ("üks")) ;
+#SELECT (P pl) (0 ("teine"));       	
+SELECT (N) (0 ("üks"))(*1 ("kaks"))       	;
+SELECT (N) (0 ("üks"))(*-1 ("vaid"))       	;
+SELECT (P) (0 ("üks"))(2 ("sama"))       	;
+SELECT (P) (0 ("üks"))(-1 (P))(NOT -1 (pers)) ; #seda ühe sõnaga ei ütle      
+SELECT (P) (0 ("teine"))(-1 (P dem))         	;
+SELECT (P) (0 ("üks"))(0 (pl))       		;
+SELECT (P dem pl) (0 ("teine"))(0 (pl)) ;   		
+
+SELECT (N) (0 ("üks"))(1 Ajamäärus)(NOT 1 (ad))(NOT 1 (in))     ;
+SELECT (N) (0 ("teine"))(-1 Suuruselt)     	;
+SELECT (N) (0 ("teine"))(-1 Järel) ;        	
+
+#kõik see oli ühes teises linnas
+SELECT (P) (0 ("üks"))(1 ("teine"))         	;
+SELECT (P) (0 ("teine"))(-1 ("üks"));
+
+SELECT (N) (0 ("üks"))(1 (N card) ) ;
+SELECT (N) (0 ("üks"))(-1 (N card) ) ;
+SELECT (P) (0 ("üks"))(*1 ("teine")) ;
+# Piibel: meie oleme üks, nad on täielikult üks
+SELECT (P) (0 ("üks"))(-1 ("ole")) (*-2 (P pers)) ;
+SELECT (P) (0 ("üks"))(-2 ("ole")) (*-3 (P pers)) ;
+LIST PlPart = (pl part) ;
+#??? Samal ajal oli temas selge kuju võtnud üks hoopis teist laadi mälestus
+SELECT (N) (0 ("üks"))(-1 Loend);
+SELECT (P) (0 ("üks")) (1C (<FinV> ) ) ;
+SELECT (N) (0 ("üks"))(-1 ("veel") ) ;
+#SELECT (N) (0 ("üks"))(1 Nominal + PlPart) ;
+#SELECT (N) (0 ("üks"))(1 Nominal + (pl el)) ;
+#SELECT (P) (0 ("üks"))(1 Nominal + (pl gen))(2 Seast); 
+#SELECT (P) (0 ("üks"))(1 Nominal + (pl gen))(2 (S pl gen))(3 Seast) ;
+#SELECT (P) (0 ("üks"))(1 Nominal + (pl part))(2 (S pl gen))(3 Seast OR Seas) ; 
+#SELECT (P) (0 ("üks"))(1 (Z))(1 CLB) (-1 ("ole"))(-2 (P pers));
+#SELECT (N) (0 ("üks"))(1 (Z))(1 CLB) ;
+#SELECT (P) (0 ("üks"))(1 Ja) (2 ("sama")) ;
+# üks ja sama
+SELECT (in) (0 ("üks"))(1 (in)) ;
+# selle _ühes_ otsas oli seinale kinnitatud plakat.
+
+# 6) "kes" ja "mis" - valik ainsuse ja mitmuse vahel
+
+SELECT (pl) (0 ("kes")) (-1 (Com))(-2C (S prop pl))(NOT *-3 (N card)) ;
+SELECT (sg) (0 ("kes")) (-1 (Com))(-2C (S prop sg))(NOT *1 (V pl) BARRIER CLB) ;
+
+SELECT (pl) (0 ("kes")) (-1 (Com))(NOT -2 (sg))(-3C (S prop pl) );
+SELECT (sg) (0 ("kes")) (-1 (Com))(NOT -2 (pl))(-3C (S prop sg) );
+
+
+# Enne koma on käändsäna, mille arv on teada:
+SELECT (pl) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S pl) OR (P pl))
+            (NOT 1 (V sg))(NOT -2 (part));
+SELECT (pl) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S pl) OR (P pl))
+            (NOT 1 (V sg))(-2 (part))(NOT *-3 ("üks"));
+# # Korteris luges mahlakas hääl ette mingeid arvusid,
+# # mis käisid ilmselt malmitootmise kohta.
+SELECT (sg) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))
+            (NOT *1 (V pl) BARRIER CLB) (NOT -2 (part));
+SELECT (sg) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))
+            (NOT 1 (V pl))(-2 (part))(NOT *-3 (N card)) ;
+## Selle ühes otsas oli seinale kinnitatud värviline plakat,
+## mis oli siseruumi kohta liiga suur
+
+SELECT (sg) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))
+            (1 ("ole"))(1 (V sg ps3))(NOT -2 (part)) ;
+SELECT (sg) (0 ("kes") OR ("mis")) (NOT 0 (ad))(-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))
+            (1 ("ole"))(1 (V sg ps3))(-2 (part))(NOT *-3 (N card)) ;
+## "on" on ainsuse mitmuse suhtes mitmene:
+## see oli niisugune pilt, mis on tehtud nii, et ...
+
+## Osalauses on verb, mille arv on teada:
+"<kes>" SELECT (pl) (*1C (V pl) BARRIER CLBC)  ;
+"<kes>" SELECT (sg) (*1C (V sg ps3) BARRIER CLBC);
+## kes oli kolmekümne üheks aastane
+"<mis>" SELECT (pl) (1C (V pl));
+## aga mis annavad tagasi kindlustunde
+"<mis>" SELECT (sg) (1C (V sg ps3));
+## mis oli teleekraanist vasakul
+"<mis>" SELECT (pl) (*1C (V pl) BARRIER CLBC) (NOT *1C (pl) BARRIER CLBC)(NOT *1 (J) BARRIER CLBC) ;  
+"<mis>" SELECT (sg) (*1C (V sg ps3) BARRIER CLBC LINK NOT *-1 (S sg nom) OR (P sg nom));    
+"<mis>" SELECT (pl) (-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))(-3 (N card))(NOT -3 ("üks"));
+## kaks tappi, mis ...
+"<mis>" SELECT (sg) (-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))(NOT *1 (V pl) BARRIER CLB);
+"<mis>" SELECT (pl) (-1 CLB)(-1 (Com))(-2C (S pl) OR (P pl));
+"<kes>" SELECT (pl) (-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))(-3 (N card))(NOT -3 ("üks"));
+"<kes>" SELECT (sg) (-1 CLB)(-1 (Com))(-2C (S sg) OR (P sg))(NOT *1 (V pl) BARRIER CLB);
+"<kes>" SELECT (pl) (-1 CLB)(-1 (Com))(-2C (S pl) OR (P pl));
+
+## Piibel
+##kõigest, mis ta tegi
+"<mis>" SELECT (pl) (-1 CLB)(-1 (Com))(-2 ("kõik"))(NOT -2 (gen));
+## seadlused need on $, _mis_ Issand $, meie Jumal 
+"<mis>" SELECT (pl) (-1 CLB)(-1 (Com))(-2C (<FinV>))(-3C (S pl nom) OR (P pl nom));
+
+"<mis>" SELECT (sg) (*1C NominalSg BARRIER CLBC) (NOT *-1 (V pl) BARRIER CLBC)(NOT *1 (V pl) BARRIER CLBC);
+## kui tihti ja mis süsteemi järgi Mättepolitsei iga üksiku kanali sisse
+## lülitab
+"<mis>" SELECT (pl) (-1 CLB) (-2 NimiAse) (-3 (N)) (NOT -3 ("üks"));
+## ... kolm tooli, mis ...
+
+				
+"<midagi>" SELECT (sg) (1 (sg part));
+## midagi seesugust
+SELECT (A sg part) (-1 ("midagi"));
+"<midagi>" SELECT (sg) (*1C (V sg ps3) BARRIER CLBC);
+"<midagi>" SELECT (sg) (*-1C (V sg ps3) BARRIER CLBC);
+
+## 7) Muud kahtlased sänad
+
+"<aega>" REMOVE (adit) (-1 Part) # #EKI
+
+"<kodu>" SELECT (D) (-1 ("ole"))(NOT 1 (post))(NOT 1 (in) OR (ad))(NOT 1 KustKuhu);
+"<kodu>" SELECT (D) (-1 ("mine"))(NOT 1 (post))(NOT 1 (in) OR (ad))(NOT 1 KustKuhu);
+REMOVE (D) (0 ("kodu"));
+
+"<lõpuks>" SELECT (D) (*0 ("jõud" V) BARRIER CLB);
+
+
+"<näol>" SELECT (S) (-1 Pärisnimi);
+
+"<päevast>" SELECT (el) (1 ("päev" part));
+"<päeva>" SELECT (adit) (-1 ("päev" el)) # #3005
+
+
+"<näiteks>" SELECT (D) (-1 CLB)(1 Kvm);
+"<näiteks>" SELECT (D) (-1 Kvm)(1 Kvm);
+"<näiteks>" SELECT (S) (-1 Tr);
+
+"<täis>" SELECT (A) (1 Part);
+"<neil>" REMOVE (prop);
+
+"<mina>" REMOVE (S) (*-1 (V ps1) BARRIER CLB) (*1 (V ps1) BARRIER CLB) ;
+"<mina>" REMOVE (S) (1 Side)(2 SP);
+"<mina>" REMOVE (S) (-1 Side)(-2 SP);
+"<mina>" SELECT (S) (-1 Jutum1)(1 Jutum2);
+"<mina>" SELECT (P) (*-1 Jutum1)(*1 Jutum2);
+"<sina>" REMOVE (S) (*0 (V ps2) BARRIER CLB)
+"<sina>" SELECT (P) (1 Side)(2 SP);
+"<sina>" SELECT (P) (-1 Side)(-2 SP);
+"<sina>" SELECT (P) (-1 Jutum1)(1 Jutum2);
+
+"<kogu>" SELECT (A) (1C Nominal);
+"<kogu>" REMOVE (A) (-1C (A));
+
+"<kõik>" SELECT (P sg) (1 ("kõik") );
+"<kõik>" SELECT (P sg) (-1 ("kõik") );
+
+LIST SgNom = (sg nom) ; 
+LIST PlNom = (pl nom) ; 
+LIST SgEl = (sg el) ; 
+LIST PlEl = (pl el) ;
+
+"<kõik>" SELECT (P sg) (1 (A)) (2C Nominal + SgNom) ;
+"<kõik>" SELECT (P pl) (1 (A))(2C Nominal + PlNom) ;    
+"<kõik>" SELECT (P sg) (1 SPGen)(2C Nominal + SgNom) ; 
+"<kõik>" SELECT (P pl) (1 SPGen)(2 Nominal + PlNom) ;
+"<kõik>" SELECT (P el sg) (1 SP + SgEl);
+"<kõik>" SELECT (P  el pl) (1 SP + PlEl);    
+"<kõik>" SELECT (P pl) (1C Nominal + Gen)(2C SPPlNom);
+"<kõik>" SELECT (P sg) (1C Nominal + (sg nom))(NOT *0 (V pl) BARRIER CLBC);
+"<kõik>" SELECT (P pl nom) (1C Nominal + (pl nom));    
+"<kõik>" SELECT (P sg nom) (-1C Nominal + (sg nom))(NOT *0 (V pl) BARRIER CLBC);
+"<kõik>" SELECT (P pl nom) (-1C Nominal + (pl nom));
+"<kõik>" SELECT (P sg nom) (*1C (V sg ps3) BARRIER CLBC)(NOT *-1 SPSgNom BARRIER CLBC);
+"<kõik>" SELECT (P pl nom) (*1C (V pl) BARRIER CLBC)(NOT *-1 SPPlNom BARRIER CLBC); 
+"<kõik>" SELECT (P sg nom) (*1 (V sg ps3) BARRIER CLBC)(NOT *-1 SPSgNom BARRIER CLBC);
+"<kõik>" SELECT (P pl nom) (*1 (V pl) BARRIER CLBC) (NOT *-1 SPSgNom BARRIER CLBC);
+"<kõik>" SELECT (P sg nom) (*-1C (V sg ps3) BARRIER CLBC)(NOT *-1 SPSgNom BARRIER CLBC);     
+"<kõik>" SELECT (P pl nom) (*-1C (V pl) BARRIER Side OR CLBC);
+
+"<kõige>" SELECT (D) (1 (comp)) ;
+
+## olid Partei käige fanaatilisemad pooldajad
+
+"<kõige>" SELECT (D) (1 (N ord)) ;
+## kõige esimesena asus Eesti ...
+
+"<kõiki>" REMOVE (P adit) (0 Part);
+## et jälgiti kogu aeg Kõiki
+SELECT (P) (0 ("kõik"))(1 ("muu"));
+## erines rabavalt käigest muust
+
+"<mingi>" SELECT (P sg nom) (1C (sg nom));
+## mingi kuri välur
+"<mingi>" SELECT (P sg gen) (1C (sg nom))(NOT *1 (S sg nom) OR (P sg nom) BARRIER CLBC);
+
+"<kurat>" SELECT (I) (-1 Koma);
+"<kurat>" SELECT (I) (1 (Exc));
+
+"<soo>" IFF (I) (-1 (I));
+SELECT (I) (NOT 0 (S))(1 (Z))(*1 (Exc));
+
+"<käis>" SELECT (V) (NOT *0 FinV BARRIER CLB) ;
+"<sai>" SELECT (V) (NOT *0 FinV BARRIER CLB) ;
+
+# 8) "on" puhul on valida ainsuse ja mimtmuse vahel
+
+"<on>" SELECT (main) (-1 (S nom) OR (P nom))(1C (S nom) OR (P nom))(NOT 1 (partic))(NOT -1 (partic)) ## 001105
+"<on>" SELECT (main) (-1 (S nom) OR (P nom))(1 Nom)(2 (S nom) OR (P nom))(NOT 1 (partic))(NOT -1 (partic)) ## 001105
+## Asja]igused on omand (omandi]igus) ja piiratud asja]igused.
+
+## ("kui") aluseks on ainsuslike liikmetega rindühend,
+## siis on öeldis harilikult mitmuses:
+"<on>" SELECT (pl) (-1 ("kes") OR ("mis"))(-1C (pl));
+"<on>" SELECT (sg) (-1 ("kes") OR ("mis"))(-1C (sg));
+"<on>" SELECT (pl) (-1C (S pl nom) OR (P pl nom));
+"<on>" SELECT (sg) (-1C (S sg nom) OR (P sg nom)) (NOT -2 (J crd));
+"<on>" SELECT (sg) (-1 (S sg nom))(-2 CLB) # #2905
+"<on>" SELECT (sg) (-1C (S sg nom) OR (P sg nom))(-2 Side)(-2 CLB)  ;       #2905   
+"<on>" SELECT (pl) (1C (S pl nom) OR (P pl nom));
+"<on>" SELECT (sg) (1C (S sg nom) OR (P sg nom));
+"<on>" SELECT (pl) (*1 Ja BARRIER CLB LINK -1C (S nom) OR (P nom) LINK 2C (S nom) OR (P nom) 
+                                                                        BARRIER Nom OR CLB);        
+"<on>" SELECT (pl) (*-1 Ja LINK 1C (S nom) OR (P nom) 
+                           LINK -2C (S nom) OR (P nom) BARRIER CLB)
+                   (NOT *-1 ("iga") BARRIER CLB);        
+
+
+## ("kui") lauses paikneb mitmuses alus, siis on öeldis mitmuses:
+"<on>" SELECT (pl) (*-1C Nominal + (pl nom) BARRIER Sid|Kvm OR CLBC)
+              (NOT *0 (inf) BARRIER CLBC);
+"<on>" SELECT (sg) (*-1C Nominal + (sg nom) BARRIER Ja OR CLBC)
+              (NOT *1 (pl nom) BARRIER CLBC);
+"<on>" SELECT (pl) (*1C Nominal + (pl nom) BARRIER Sid|Kvm OR CLBC)
+              (NOT *0 (inf) BARRIER CLBC);
+"<on>" SELECT (sg) (*1C Nominal + (sg nom) BARRIER CLBC)(NOT *1 Ja BARRIER CLBC)
+              (NOT *-1 (pl nom) BARRIER CLBC);
+
+"<on>" SELECT (pl) (*-1C Nominal + (pl nom) BARRIER Side OR Kvm OR CLBC)
+              (*1C (S part) OR (P part) BARRIER CLBC);
+## Kuid vähesed on üritanud püstitada hauasammast
+
+## ja seegi vähene on värvitud lapsepälve nostalgiastb
+## Öeldistäitega laused, kus alus puudub:
+"<on>" SELECT (sg) (NOT *0 (S part) OR (P part) BARRIER CLB)
+              (NOT *0 (S nom) OR (P nom) BARRIER CLB)
+              (*1 (A sg) BARRIER CLB) ;
+## siiski on parem, kui
+
+## Lauseis, kus täisalus puudub, on öeldis alati ainsuse 3. pöördes:
+"<on>" SELECT (sg) (*1 (S pl part) OR (P pl part) BARRIER CLBC)
+              (NOT *0 SPSgNom BARRIER CLBC);
+## Eestimaal on teisigi peale matside
+
+## ("kui") osalauses pole mitmuslikke sänu ega sidesänu on öeldis ainsuses:
+"<on>" SELECT (sg) (NOT *0 (pl) BARRIER CLBC) (NOT *0 Side BARRIER CLBC) ;
+
+## Üksikud reeglid:
+"<on>" SELECT (sg) (-1 Koma)(-2C (V sg));
+## kes veel kohut mäista suudab, on päästetud
+"<on>" SELECT (sg) (NOT *0 NGP BARRIER CLBC)(*1C Ad BARRIER CLBC);
+"<on>" SELECT (sg) (NOT *0 NGP BARRIER CLBC)(*-1C Ad BARRIER CLBC);
+## on teil vedanud, 
+
+##Piibel
+## Lauseis, kus alused puuduvad, 'on' on ainsuses:
+"<on>" SELECT (sg) (NOT *0 SPSgPart BARRIER CLBC)(NOT *0 (J) BARRIER CLBC)
+              (NOT *0 SPSgNom BARRIER CLBC);
+## Sinule on küllalt
+
+
+## 9) "ei" - valik verbi vormi kuuluva ja määrsõna vahel
+"<ei>" SELECT (D) (*1 ("ega") BARRIER (neg));
+"<ei>" IFF (V neg) (*1 (neg) BARRIER CLB OR (Z));
+"<Ei>" IFF (V neg) (*1 (neg) BARRIER CLB OR (Z));
+"<ära>" SELECT (V neg) (1 (imper));
+"<ära>" IFF (V neg) (*1 (imper) BARRIER CLB OR (Z))(NOT -1C FinV)(NOT -2C FinV);
+SELECT (V neg) (-1 ("ei")) (-1C (neg));
+
+
+LIST Subst = S;
+LIST Adj = A;
+#LIST Verb = V;
+LIST Pron = P;
+LIST Adv = D;
+
+SELECT (I) (1 (Exc))(0 CLB);
+SELECT (I) (1 (Exc))(-1 (I));
+SELECT (I) (1 (Exc))(2 (I));
+SELECT (I) (1 Kvm)(-1 Jutum1); 
+SELECT (I) (1 Kvm)(-1 Kvm)(-2 (I))(-3 Jutum1);
+SELECT (I) (-1 Kvm)(1 Jutum2); 
+
+SELECT (G) (NOT 0 (<cap>))(1 Subst);
+SELECT (G) (NOT 0 (<cap>))(1 Adj)(2 Subst);
+
+SELECT (S nom) (-1 Jutum1)(1 Jutum2);
+
+
+# 2) Käände määramine hulgamäärsõna järgi
+
+
+SELECT (part) (0 Nominal) (-1 Hulk + (sg nom));
+SELECT (A part) (-1 RohkemVähem) (1 SP + Part);
+SELECT (S part) (-1 RohkemVähem);
+SELECT (S gen) (NOT 0 Adj)(NOT 0 Verb)(1 ("oma"))(NOT 1C Verb)(NOT 2 Subst);
+
+SELECT (part) (-1 (P dem part))(1 Verb);
+## neid kahte vaadates
+
+## ("kui") osalauses leidub "on tegu/tegemist/vaja", siis nom-subjekti olla ei saa
+## Erandid?
+
+REMOVE (nom) (NOT 0 NudTud)(*1 Ole BARRIER CLB) (*1 Tegu BARRIER Koma OR CLB);
+REMOVE (nom) (NOT 0 NudTud)(*-1 Ole BARRIER CLB) (*-1 Tegu BARRIER Koma OR CLB);
+REMOVE (nom) (NOT 0 NudTud)(*1 Ole BARRIER CLB) (*1 Vaja LINK NOT *1 Verb BARRIER CLB);
+REMOVE (nom) (NOT 0 NudTud)(*-1 Ole BARRIER CLB) (*-1 Vaja BARRIER CLB)(NOT *1 Verb BARRIER CLB);
+REMOVE (S nom) (NOT 0 NudTud)(*1 Ole BARRIER CLB) (*1 Tegu BARRIER CLB);
+REMOVE (S nom) (NOT 0 NudTud)(*-1 Ole BARRIER CLB) (*-1 Tegu BARRIER CLB);
+REMOVE (S nom) (NOT 0 NudTud)(*1 Ole BARRIER CLB) (*1 Vaja Link NOT *1 Verb BARRIER CLB); 
+REMOVE (S nom) (NOT 0 NudTud)(*-1 Ole BARRIER CLB) (*-1 Vaja BARRIER CLB)(NOT *1 Verb BARRIER CLB);  
+
+SELECT (S adit) (-1 ("siia")) (NOT 0 Gen);     
+SELECT (S adit) (-1 ("siia")) (*-1 AditVerb BARRIER CLB);
+## tulime siia _randa_ kala püüdma ja lõkse üles seadma
+
+SELECT (S part) (0C Subst)(-1 Ole + (neg)) ;
+#SELECT (S part) (0C Subst)(*-1 Ole + (neg) LINK *1 Part BARRIER CLBC);  
+## õigeusklike seas pole rahu
+
+# 0) Pärisnimi
+
+##Piibel
+SELECT (gen) (0 Pärisnimi) (1 ("poeg" pl part));
+
+LIST Riikjne = "eesti" "saksa" "hansa" "vene" "ukraina" "valgevene" "soome" "rootsi" "norra" "taani" "euroopa" "Eesti"
+ "Saksa" "Hansa" "Vene" "Ukraina" "Valgevene" "Soome" "Rootsi" "Norra" "Taani" "Euroopa";
+
+LIST Liityhing = "liit" "ühing" "maja" "as" "oü" "instituut" "ülikool" "tehnikum" "kool" "gümnaasium" "partei"
+ "aktsiaselts" "osaühing" "klubi";
+
+IFF (G) (0 Riikjne) (NOT 0 (<cap>));   
+
+## kui on v'ikse t'hega, siis _G_, muidu S
+
+SELECT (prop gen) (0 Pärisnimi)(0 Riikjne) (1 Pärisnimi);
+## Eesti Telekomi
+
+SELECT (prop gen) (0 Pärisnimi)(0 Riikjne) (1 (<cap>));    
+## Eesti Telekomi
+
+SELECT (prop gen) (0 Pärisnimi)(0 Riikjne) (1C Subst);  
+## Eesti Telekomi
+
+SELECT (nom) (0C Pärisnimi) (NOT 0 Riikjne) (-1 ("as")) #
+## ASi Wermo suuraktsionar
+
+SELECT (prop nom) (0 Pärisnimi)(NOT 0 Riikjne) (1C Pärisnimi);
+## Selle Matsar
+
+SELECT (prop nom) (0 Pärisnimi)(NOT 0 Riikjne) (1 Pärisnimi)(1C Subst);
+## Jyri Soone
+
+
+SELECT (prop) (0 (<cap>)) (NOT -1 LA)(NOT -1 Jutum1);
+SELECT (gen) (0 Pärisnimi) (1 Pärisnimi)(1 Liityhing) ;  
+SELECT (nom) (0 Pärisnimi) (1 Pärisnimi)   ;
+SELECT (nom) (0 Pärisnimi) (NOT -1 LA)(NOT 1 Nominal) (NOT 1 Side) (NOT *-1C Nom) (NOT 0 Pron);
+SELECT (nom) (0 Pärisnimi) (0 (sg)) (1C (V sg))(NOT 0 Ad)  # #Nietzschel on ...
+SELECT (nom) (0 Pärisnimi) (0 (pl)) (1C (V pl));
+REMOVE (nom) (0 Pärisnimi) (1C Subst) (*-1C Nom BARRIER CLBC)(NOT *-1 Ole BARRIER CLBC);
+SELECT (gen) (0 Pärisnimi) (1 Subst) (*-1 FinV LINK *-1 (S nom) OR (P nom) BARRIER CLBC);
+
+## 001018
+SELECT (gen) (0 (prop <cap>)) (1 (S nom) OR (P nom)) (-1 (prop <cap>));
+SELECT (nom) (0 (prop <cap>)) (-1 (prop <cap>)) (-1C Nom) (NOT -1 ("issand"));
+SELECT (nom) (0 (prop <cap>)) (1 (prop <cap>)) (1C Nom);
+
+#SELECT (S nom) (0C Subst)(1 (prop <cap>)) (1C Nom);
+#SELECT (S nom) (1 (prop <cap>))(2 (prop <cap>)) (2C Nom);	
+
+LIST EksVerb = "leidu" "juhtu" "ole";
+
+REMOVE (part) (-1C FinV + (<Intr>))(NOT -1 EksVerb);
+
+SELECT (gen) (1 Subst)(1 (<mine>))(NOT -1C (A nom));        
+
+# 1) Käände määramine eelmise arvsõna põhjal
+
+SET SPNom = SP + Nom ;
+SET SPPart = SP + Part ;
+
+SELECT (N) (NOT 0 ("üks")) (NOT 0 (ord)) (1 Ajamäärus);
+SELECT (N) (NOT 0 ("üks" <ki>))(NOT 0 (ord)) (-1 (card));
+SELECT (N card nom) (-1 (card))(NOT 0 SPNom)(-1 Nom);    
+SELECT (N card part) (-1 (card))(NOT 0 SPNom)(-1 Part);
+SELECT (N card nom) (1 SPSgPart)(NOT 0 SPNom);
+
+SELECT (part) (0 ("üks")) (1C Part);
+
+SELECT (card nom) (0C (card))(1 SPPart)  # katseline reegel
+SELECT (card part) (0C (card)) (1C SPPart) (NOT 0 Nom);   # valib gen ja part vahel
+## C - nelja silma (gen, part) all
+SELECT (gen) (0C (card)) (1 SPGen);
+
+SELECT (sg gen)  (-1 ("üks" N sg gen));
+SELECT (sg nom) (-1 ("üks" N sg nom))(*1C nppiir BARRIER SP OR CLB) ;
+SELECT (sg part) (-1 ("üks" N sg part))(NOT 0 Gen)(NOT 0 (adit));
+SELECT (sg part)  (-1 ("üks" N sg part)) (0 Gen) (NOT 1 Part);
+
+SELECT (sg part)  (-1 ("mitu" sg nom));
+SELECT (sg gen)  (-1 ("mitu" sg gen));
+SELECT (sg part)  (-1 ("mitu" sg part)) (NOT 0 Gen);
+SELECT (ill)  (-1 ("mitu" ill));     
+SELECT (adit)  (-1 ("mitu" ill));   
+
+LIST Xndik = "pool" "kahendik" "kolmandik" "neljandik" "viiendik" "kuuendik" "kümnendik";
+
+SELECT (gen) (-1 (card)) (-1 Xndik)(1 El); #130201 
+
+SELECT (sg part) (NOT 0 (card)) (-1 (card sg nom)) (NOT -1 ("üks"));
+SELECT (sg part) (NOT 0 (card)) (-2 (card sg nom)) (NOT -2 ("üks"))(-1 (card sg part));
+SELECT (sg part) (NOT 0 (card)) (-2 (card sg nom)) (NOT -2 ("üks"))(-1 Adj);
+SELECT (pl nom) (NOT 0 FinV)(-1 (card pl nom));     
+SELECT (part)  (NOT -1 ("üks"))(-1 (card part)) (NOT 0 Gen);
+
+LIST Kaugus = "kaugus" "pikkus" "laius";
+
+SELECT (part)  (NOT -1 ("üks"))(-1 (card part)) (0 Gen) (NOT 1 Part)(NOT 1 (post))(NOT 1 Kaugus);
+
+SELECT (gen) (-1 (card gen));
+SELECT (ill) (-1 (card ill))(NOT -1 ("üks"));
+SELECT (adit)(-1 (card ill))(NOT -1 ("üks"));
+SELECT (ill) (-1C (card ill));     
+SELECT (adit)(-1C (card ill));
+REMOVE (S adit) (-1C (N))(-1 (nom) OR (gen) OR (part));
+
+SELECT (el)   (-1 (card el));		
+SELECT (N el) (1 (S el));
+
+SET SubstSgCo = Subst + (sg) + NiNaTaGa OR Gen ;
+SET SPSgGen = SP + (sg) + Gen ;
+
+# järgarvsõnade reeglid
+SELECT (N ord sg nom) (NOT 0 Pron)(1 SPNSgNom);
+SELECT (N ord sg gen) (NOT 0 Pron)(1C SPSgGen);
+REMOVE (N ord sg gen) (NOT *1 SubstSgCo BARRIER CLB)
+REMOVE (N ord adit) (NOT *1 Ill BARRIER CLB);
+REMOVE (N ord all) (NOT *1 All BARRIER CLB);
+REMOVE (N ord) (NOT 1 Nominal) (NOT 1 Kvm) (NOT 1 Side)(NOT 1 Verb);
+
+# Kaassõna ühestamine konteksti järgi
+
+LIST Post = post;
+LIST Pre = pre;
+
+LIST Pren = (pre <nom>);
+LIST Preg = (pre <gen>);
+LIST Prep = (pre <part>);
+LIST Pret = (pre <term>);
+LIST Prea = (pre <all>);
+LIST Prek = (pre <kom>);
+LIST Preab = (pre <abes>);
+LIST Postn = (post <nom>);
+LIST Postg = (post <gen>);
+LIST Postp = (post <part>);
+LIST Poste = (post <el>);
+LIST Posta = (post <all>);
+LIST Postk = (post <kom>);
+
+SELECT (pre <gen>)  (NOT 0 Post)(NOT 0 (pre <part>))(1 Nominal + Gen);
+SELECT (pre <gen>)  (NOT 0 Post)(1 Nominal + Gen)(NOT 2 Part);
+SELECT (pre <part>) (NOT 0 Post)(1 Nominal + Part);
+SELECT (pre <term>) (1 Nominal + Term);
+SELECT (pre <kom>)  (1 Nominal + Kom);
+SELECT (pre <abes>) (1 Nominal + Abes);
+SELECT (pre <all>)  (1 Nominal + All);
+
+REMOVE (pre) (NOT 1 (S) OR (P) OR (A) OR (N) OR (D));
+REMOVE (K) (NOT 1 (S) OR (P) OR (A) OR (N) OR (D))(NOT -1 (S) OR (P) OR (A) OR (N) OR (D));
+
+REMOVE (pre <gen>) (NOT *1 SPGen BARRIER CLB);
+REMOVE (pre <gen>) (*1C nppiir BARRIER Gen OR CLB); 
+REMOVE (pre <part>) (NOT *1 (S part) OR (P part) OR (N part) BARRIER CLB);
+REMOVE (pre <part>) (*1C nppiir BARRIER Part OR CLB);
+REMOVE (pre <term>) (NOT *1 Term BARRIER CLB);
+REMOVE (pre <term>) (*1C nppiir BARRIER Term OR CLB);
+REMOVE (pre <kom>) (NOT *1 Kom BARRIER CLB);
+REMOVE (pre <kom>) (*1C nppiir BARRIER Kom OR CLB);
+REMOVE (pre <abes>) (NOT *1 Abes BARRIER CLB);
+REMOVE (pre <abes>) (*1C nppiir BARRIER Abes OR CLB);
+REMOVE (pre <all>) (NOT *1 All BARRIER CLB);
+REMOVE (pre <all>) (*1C nppiir BARRIER All OR CLB);
+
+
+SELECT (post <gen>) (-1C SPGen) (NOT 0 (pre <part>))(NOT 0 ("läbi") OR ("enne"));
+
+
+SELECT (post <nom>) (-1 NimiAse + Nom)(-1 Ajamäärus);
+SELECT (post <nom>) (-1 NimiAse + Part)(-2 (card nom)) # #130201
+IFF (post <nom>) (-1 NimiAse + Part)(-2 (card digit)) # #130201
+SELECT (post <part>) (-1 NimiAse + Part) (NOT 0 FinV);
+SELECT (post <kom>) (-1 NimiAse + Kom);
+SELECT (post <el>) (-1 NimiAse + El);
+
+REMOVE (post) (NOT -1 Nominal)(NOT -1 (Cpar) OR (Dsh));  
+REMOVE (post <nom>) (NOT -1 Nom); 
+REMOVE (post <gen>) (NOT -1 Gen)(NOT -1 ("oma"));
+REMOVE (post <part>) (NOT -1 Part);
+REMOVE (post <el>) (NOT -1 El);
+REMOVE (post <kom>) (NOT -1 Kom);
+
+SELECT (pre <gen>) (1 Gen) (2 Nominal + Gen)(NOT 2 Post);      
+SELECT (pre <part>) (1 Gen) (2 Nominal + Part) (NOT 0 (pre <gen>));
+SELECT (pre <term>) (1 Gen) (2 Nominal + Term);
+SELECT (pre <kom>) (1 Gen) (2 Nominal + Kom);
+SELECT (pre <abes>) (1 Gen) (2 Nominal + Abes);
+SELECT (pre <all>) (1 Gen) (2 Nominal + All);
+
+SELECT (pre <gen>) (1 Gen) (2 Gen) (3 Nominal + Gen);
+SELECT (pre <part>) (1 Gen) (2 Gen) (3 Nominal + Part) (NOT 0 (pre <gen>));
+SELECT (pre <term>) (1 Gen) (2 Gen) (3 Nominal + Term);
+SELECT (pre <kom>) (1 Gen) (2 Gen) (3 Nominal + Kom);
+SELECT (pre <abes>) (1 Gen) (2 Gen) (3 Nominal + Abes);
+SELECT (pre <all>) (1 Gen) (2 Gen) (3 Nominal + All);
+
+SELECT (K) (0 Post)(-1C Gen)(0 (pre <part))(1C Part);
+## pisut heuristiline
+
+# 3) Nimi- väi asesäna käände määramine kaassäna järgi
+LIST SPAND = S P A N D ;
+ 
+
+SELECT (term) (0 NimiAse) (-1C Pret) (NOT -1 Post);
+SELECT (abes) (0 NimiAse) (-1C Preab) (NOT -1 Post);
+SELECT (kom) (0 NimiAse) (-1C Prek) (NOT -1 Post);
+SELECT (all) (0 NimiAse) (-1C Prea) (NOT -1 Post);
+SELECT (gen) (0 NimiAse) (-1C Preg) (NOT -1 Post);
+SELECT (part) (0 NimiAse) (-1C Prep) (NOT -1 Post)(NOT *1 Part BARRIER CLBC);
+SELECT (term) (0 NimiAse) (-1 Gen) (-2C Pret) (NOT -1 Post);
+SELECT (abes) (0 NimiAse) (-1 Gen) (-2C Preab) (NOT -1 Post);
+SELECT (kom) (0 NimiAse) (-1 Gen) (-2C Prek) (NOT -1 Post);
+SELECT (all) (0 NimiAse) (-1 Gen) (-2C Prea) (NOT -1 Post);
+
+SELECT (gen) (0 NimiAse) (-1 Gen)(-1 Adj)(-2C Preg) (NOT -1 Post);
+
+SELECT (part) (0 NimiAse) (NOT 0 Gen) (-1 Gen) (-2 Prep) (NOT -1 Post);
+
+
+SELECT (abes) (0 NimiAse) (-1C Preab) (-1 Post)(NOT -2 SPAND);
+SELECT (term) (0 NimiAse) (-1C Pret) (-1 Post)(NOT -2 SPAND);
+SELECT (kom) (0 NimiAse) (-1C Prek) (-1 Post)(NOT -2 SPAND);
+SELECT (all) (0 NimiAse) (-1C Prea) (-1 Post)(NOT -2 SPAND);
+SELECT (gen) (0 NimiAse) (-1C Preg) (-1 Post)(NOT -2 SPAND);
+SELECT (part) (0 NimiAse) (-1C Prep) (-1 Post)(NOT -2 SPAND);
+
+SELECT (nom) (0 Ajamäärus) (1 Postn) (NOT 1 Pre);
+SELECT (el) (0 NimiAse) (1 Poste) (NOT 1 Pre);
+SELECT (kom) (0 NimiAse) (1 Postk) (NOT 1 Pre);
+SELECT (gen) (0 SP) (1 Postg) (NOT 1 Pre) (NOT 0 Adv)(NOT 0 Verb) (NOT 0 All);
+## Viga tekkis: ronis _talle_ järele
+SELECT (part) (0 NimiAse) (1 Postp) (NOT 1 Pre);
+
+SELECT (el) (0 NimiAse) (1 Poste) (1 Pre) (NOT 2 SPAND);
+SELECT (kom) (0 NimiAse) (1 Postk) (1 Pre) (NOT 2 SPAND);
+SELECT (part) (0 NimiAse) (1 Postp) (1 Pre) (NOT 2 SPAND);
+SELECT (nom) (0 NimiAse) (1 Postn) (1 Pre) (NOT 2 SPAND);
+SELECT (gen) (0 NimiAse) (NOT 0 Verb)(1 Postg) (1 Pre) (NOT 2 SPAND);
+SELECT (gen) (0 NimiAse) (*-1 Verb BARRIER CLB)(1 Postg) (1 Pre) (NOT 2 SPAND);  
+SELECT (gen) (0 NimiAse) (*1 Verb BARRIER CLB)(1 Postg) (1 Pre) (NOT 2 SPAND);
+
+"<algul>" SELECT (D) (NOT -1 Ad)(NOT -1 Subst);
+"<algul>" SELECT (D) (NOT -1 Ad)(-1 (S gen));
+ 
+# 4) Verbidega reeglid
+
+REMOVE (V) (0 (partic pres));
+REMOVE (V <FinV>) (1 Ole);
+REMOVE (V <FinV>) (-1 Ole);
+ 
+# # A. Eituse vormid
+SELECT (neg) (-1 ("ei"));
+SELECT (neg) (-1 ("ega"))(NOT 0 (inf));
+## See tänav ei _kuulunud_ käidavamate hulka
+SELECT (imper neg) (*-1 ("ära") BARRIER CLBC); 
+SELECT (imper neg) (*-1 ("ära") BARRIER CLB) (NOT *-1 (imper) BARRIER CLB);
+REMOVE (imper neg) (NOT 0 ("ära"))(NOT *-1 ("ära") BARRIER CLB);
+## sest _too_ tänav ei olnud ...
+"<ära>" IFF (V neg) (*1C (imper neg) BARRIER CLB);
+
+LIST EiEga = "ei" "ega";
+
+REMOVE (indic neg) (NOT *-1 EiEga BARRIER CLB);
+## Teise preemia _saanud_ töö
+REMOVE (quot neg) (NOT *-1 EiEga BARRIER CLB);
+## Näinuks enda ees pohmeluses _vaevlevat_ meest
+REMOVE (cond neg) (NOT *-1 EiEga BARRIER CLB);
+## kes teda sel ajal _oleks_ kohanud
+REMOVE (neg) (NOT 0 EiEga)(NOT *-1 EiEga BARRIER CLBC);           
+## tahtis teada _saada_
+
+SELECT (V inf) (-1 ("ega"))(-2 (inf)) ; #3005
+##Ei j6udnud jalgida ega m6ista.
+SELECT (indic neg) (*-1 EiEga BARRIER Verb OR CLBC);
+SELECT (imper neg) (*-1 ("ega") BARRIER Verb OR CLBC);
+REMOVE (neg) (*-1 EiEga LINK *1 Verb BARRIER CLBC);
+
+SELECT (A pos nom) (0 (V pl ps3))(1C Subst)(1C Nom)(*1 FinV BARRIER CLBC) ; # 2905
+## Paljud inimestele _kuuluvad_ firmad saavad suurt tulu.
+SELECT (A pos nom) (0 (V pl ps3))(1C Subst)(1C Nom)(*-1 FinV BARRIER CLBC) ; # 2905
+
+## valitsus on lubanud esitada suuremad loteriiseadust _puudutavad_ muudatused
+
+## B. Olema liitaegades
+
+REMOVE ("ole" aux) (0 (partic))(*-1 Ole + FinV BARRIER CLB) ; # olnud
+REMOVE ("ole" aux) (*1 Tegu BARRIER CLB) ;
+REMOVE ("ole" aux) (*-1 Tegu BARRIER CLB) ;
+REMOVE ("ole" aux) (NOT *1 (partic past) BARRIER CLB) (NOT -1 (partic past)) (NOT -1 Ei) ;
+
+
+REMOVE ("ole" aux) (NOT *-1 (partic past) BARRIER CLB)(NOT *1 (partic past) BARRIER CLB);
+## Tänav _oli_ tühi ja vaikne.
+SELECT ("ole" aux) (-2 (partic past)) (-1 Ei) ;
+## Joomine tal keelatud ei olnud.
+REMOVE ("ole" aux) (*1 (partic past)  BARRIER CLBC LINK 1C SPSgNom ) 
+	     (*-1C SPSgNom BARRIER CLBC) ;
+## See _on_ laenatud lause
+
+
+## Sel ööl _oli_ Rasmusel olnud pidutsemiseks pähjust
+## See reegel on kasulik, kuid siiski heuristiline
+## näiteks: tegu oli läunast koju saabunud lindudega
+SELECT ("ole" aux) (*1C (V partic past) BARRIER CLBC) ;
+SELECT ("ole" aux) (0 FinV)(*-1C (V partic past) BARRIER CLBC) ;
+
+## C. Modaalverbid
+
+REMOVE (V mod) (0 (main <inf>)) (NOT *1 DaInf BARRIER CLB) (NOT *-1 DaInf BARRIER CLB);
+## Ma _saan_ muidugi aru, et ...
+REMOVE (V mod) (0 (main <sup>)) (NOT *-1 (sup ill) BARRIER CLB)(NOT *1 (sup ill) BARRIER CLB)  ;    
+REMOVE (V mod) (0 (main <vat>)) (NOT *0 (quot pres ps) BARRIER CLB) ;
+## Seda nägu oli ta _näinud_ mitmeid kordi ennegi
+## (main peab olema selleks, et "tundub roheline" (tundub olevat) - 
+## tundub ainult mod, muidu kaob verbi tälgendus ära)
+
+## nende kolme asemel väiksid olla:
+SELECT (V mod <inf>) (NOT 0 Side) (*1C DaInf BARRIER CLBC) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+## Ta _väis_ nädalate kaupa raamatukogus istuda.
+SELECT (V mod <inf>) (NOT 0 Side) (*-1C DaInf BARRIER CLBC) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+SELECT (V mod <sup>) (*1 (sup ill) BARRIER CLBC) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+## _Peab_ kohe ütlema, et ...
+SELECT (V mod <sup>) (*-1 (sup ill) BARRIER CLBC) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+SELECT (V mod <vat>) (*1C (quot pres ps) BARRIER CLBC) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+SELECT (V mod <vat>) (NOT 0 ("näge")) (*1 (quot pres ps) BARRIER CLBC OR Prep) 
+                 (NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC) ;
+## paistma ja näima on intransitiivsed, seal saab osastav kääne olla
+## ainult kaassänafraasis, samal ajal on vat-vorm väga mitmene
+SELECT (V mod <vat>) (*-1C (quot pres ps))(NOT *-1C FinV BARRIER CLBC)(NOT *1C FinV BARRIER CLBC);
+
+LIST PrVerb = ("ole" main) ("saa" main) "näi" "näge" "paist" "tund" "tundu" "hakka" "püsi" 
+        "juhtu" "kasva" "maits" "seis" "jää" "tasu";
+LIST Modaal = mod "kavatse" "plaani" "tule" "kõlba" "sobi" "tarvitse" "raatsi" ;
+
+## D. Infiniitvormid
+## Kas need pisut kahtlased reeglid pole?
+SELECT (inf) (*-1 PrVerb + (!imper) BARRIER CLB);
+## Koduni oli vaid kiviga _visata_
+SELECT (inf) (*1 PrVerb BARRIER CLB);
+SELECT (inf) (*-1 Modaal + Verb)  ;# C "või" jaoks
+## Siin kavatses ta paremale pöörata
+SELECT (inf) (*1 Modaal + Verb)   ;# C "või" jaoks   
+
+## E. (imper)atiiv
+SELECT (imper) (*-1 ("eks") BARRIER Sid|Kvm OR CLBC)(NOT *-1 (imper) BARRIER CLBC) ;
+##               (NOT *-1 FinV)(NOT *1 FinV) BARRIER CLBC)
+## Eks me _tee_ neid tükke vahel nüüdki.
+REMOVE (imper) (*1C FinV + (!imper) BARRIER CLBC)(NOT 1 Koma) ;
+## ("kui") _keegi_ juhtus jutu sellele teemale viima, ...
+REMOVE (imper) (*-1C FinV + (!imper) BARRIER CLB) ;
+## Rasmus polnud _mingi_ pummeldaja
+REMOVE (V imper ps2) (*-1C DaInf BARRIER CLBC) ;
+## Et takistada liivasegust tolmukeerist endaga _kaasa_ tulemast.
+REMOVE (V imper ps2) (1 (Fst)) ;
+REMOVE (V imper ps2) (*-1 ("et") BARRIER DaInf OR CLBC)(NOT *0 FinV BARRIER CLBC) ;
+## ... et esile tästa tema puusade vormikust, ...
+## ... abstraktne, eesmärgita _tunne_, mida väis ...
+
+## (osa)lauses peab üks verb olema
+SELECT (V <FinV>) (NOT 0 (imper))(NOT *-1 Verb BARRIER CLB) (NOT *1 Verb BARRIER CLB);
+##	(NOT *-1 Jutum1)(NOT *1 Jutum2) CLB);
+
+## Piibel
+#REMOVE (V ps) (0 (imps))(NOT *0 SPNom BARRIER CLB)(NOT 0 ("ära")) ;
+
+SELECT (V ps1) (*-1 (P ps1 nom) BARRIER CLB);
+SELECT (V ps1) (*1 (P ps1 nom) BARRIER CLB);
+## ("kui") osalauses leidub "mina" väi "meie", siis verb on 1. pöördes 
+
+SELECT (V ps2) (NOT 0 Subst)(NOT 0 Adv)(NOT 0 Pron)(*-1 (P ps2 nom) BARRIER CLB);
+SELECT (V ps2) (NOT 0 Subst)(NOT 0 Adv)(NOT 0 Pron)(*1 (P ps2 nom) BARRIER CLB);
+## ("kui") osalauses leidub "sina" väi "teie", siis verb on 2. pöördes 
+
+## F. Partitsiibid
+
+SELECT (V partic past ps) (-2 Ole)(-1 Nom) ;
+
+# Kool oli tarvis ära lõpetada, muidu poleks ma _väärinud_ leiba, mida ema kergelt ei teeninud.
+
+REMOVE (V partic past imps) (-1 Ole)(1 Nom) (*-2 Nom BARRIER CLBC) ;
+
+# See on laenatud lause.
+
+REMOVE (V) (0 NudTud) (*1 FinV BARRIER CLB LINK *1 Ole BARRIER CLB);
+# Seaduses _s'testatud_ juhtudel v]ib eraasi olla m''ratud avalikuks kasutuseks.
+
+
+# 1) Koordinatsioon
+
+# partitsiip omadussõnaga
+
+LIST OmadusAse = A "sama" "kumb" "samane" "mingi" "mingisugune" "mitmes" "samasugune" "niisugune" "niisamasugune"
+ "seesugune" "selline" "säärane" "taoline" "selletaoline" "seesinane" "säherdune"  "missugune" "milline" "iga"
+ "mäherdune" "ükski" "mõni" "mõningane" "mõningas" "misuke" "mihuke" "see" "too" "sama" "seesama" "toosama" "kõik"
+ "kumbki" "mõlema" "emb-kumb" "miski" "palju" "teine" "üks" "muu" ;
+LIST Konj = "ja" "ning" "või" "ega" "kui" "otsekui" Com ;
+
+# kui leidub omadussäna, mis on predikatiiv ja koordineeritud antud
+# partitsiibiga, siis ka partitsiip on predikatiiv
+SELECT (A sg nom) (0 NudTud) (*-1 Ja BARRIER CLB LINK -1C OmadusAse + (sg nom))
+ (*-1 Ole BARRIER CLB LINK *-1 SPSgNom BARRIER CLB);
+SELECT (A sg nom) (0 NudTud) (1 Ja LINK 1C OmadusAse + (sg nom)) (*-1 Ole BARRIER CLB LINK *-1 SPSgNom BARRIER CLB);
+
+SELECT (A pl nom) (0 NudTud) (*-1 Ja BARRIER CLB LINK -1C OmadusAse + (pl nom)) 
+        (*-1 Ole BARRIER CLB LINK *-1 SPPlNom BARRIER CLB);
+SELECT (A pl nom) (0 NudTud) (1 Ja LINK 1C OmadusAse + (pl nom)) (*-1 Ole BARRIER CLB LINK *-1 SPPlNom BARRIER CLB);
+
+
+SELECT (A sg nom) (0 NudTud) (1 Konj) (2C OmadusAse + SgNom BARRIER CLBC);
+SELECT (A sg gen) (0 NudTud) (1 Konj) (2C OmadusAse + (sg gen) BARRIER CLBC); 
+SELECT (A sg part) (0 NudTud) (1 Konj) (2C OmadusAse + (sg part) BARRIER CLBC);
+# siin on eelmised 3 vastupidi 
+SELECT(A sg nom) (0 NudTud) (-1 Konj) (-2C OmadusAse + SgNom BARRIER CLBC);  
+SELECT(A sg gen) (0 NudTud) (-1 Konj) (-2C OmadusAse + (sg gen) BARRIER CLBC); 
+SELECT(A sg part) (0 NudTud) (-1 Konj) (-2C OmadusAse + (sg part) BARRIER CLBC);
+
+SELECT(A pl nom) (0 NudTud) (1 Konj) (2C OmadusAse + PlNom BARRIER CLBC);  
+SELECT(A pl gen) (0 NudTud) (1 Konj) (2C OmadusAse + (pl gen) BARRIER CLBC); 
+SELECT(A pl part) (0 NudTud) (1 Konj) (2C OmadusAse + (pl part) BARRIER CLBC); 
+# siin on eelmised 3 vastupidi 
+SELECT(A pl nom) (0 NudTud) (-1 Konj) (-2C OmadusAse + PlNom BARRIER CLBC) ;
+SELECT(A pl gen) (0 NudTud) (-1 Konj) (-2C OmadusAse + (pl gen) BARRIER CLBC) ;
+SELECT(A pl part) (0 NudTud) (-1 Konj) (-2C OmadusAse + (pl part) BARRIER CLBC);
+
+SELECT(A sg) (0 NudTud) (1 Konj) (2C OmadusAse + (sg) BARRIER CLBC) ; 
+SELECT(A pl) (0 NudTud) (1 Konj) (2C OmadusAse + (pl) BARRIER CLBC) ;
+SELECT(A sg) (0 NudTud) (-1 Konj) (-2C OmadusAse + (sg) BARRIER CLBC) ;  
+SELECT(A pl) (0 NudTud) (-1 Konj) (-2C OmadusAse + (pl) BARRIER CLBC) ;
+
+LIST Koma|Punkt = Com Fst;
+# Piibel Apos-d
+REMOVE (A nom) (0 (partic past)) (NOT *-1 Nom BARRIER CLB);
+REMOVE (A sg nom) (0 (partic past)) (NOT *-1 SPSgNom BARRIER CLB);
+REMOVE (A pl nom) (0 (partic past)) (NOT *-1 SPPlNom BARRIER CLB);
+
+LIST ParticGarbage = S K P N D I Z (V inf) (sup ill) (sup imps af) (V indic) (V imper) (V cond) (V quot);
+                                                   
+#REMOVE (A sg nom) (0 (partic past)) (*-1 SPSgNom BARRIER CLB LINK *2 ParticGarbage OR CLB OR (partic past)); 
+#REMOVE (A pl nom) (0 (partic past)) (*-1 SPPlNom BARRIER CLB LINK *2 ParticGarbage OR CLB OR (partic past)); 
+
+
+#REMOVE (_A_ sg nom) (0 Partic1) (*-1 SPSgNom *R+2)(*R+2 NotPartic1|Adj|Konj) CLB) ;;R+1 koma
+#REMOVE (_A_ pl nom) (0 Partic1) (*-1 SPPlNom *R+2)(*R+2 NotPartic1|Adj|Konj) CLB)
+
+SELECT (A sg nom) (0 (partic past)) (-1 Koma)(-2 SPSgNom)(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A pl nom) (0 (partic past)) (-1 Koma)(-2 SPPlNom)(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A sg nom) (0 (partic past)) (-1 (partic past) OR (A) OR Konj)(-2 (Com))(-3 SPSgNom)
+				(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A pl nom) (0 (partic past)) (-1 (partic past) OR (A) OR Konj)(-2 Koma)(-3 SPPlNom)
+				(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A sg nom) (0 (partic past)) (-1 (partic past) OR (A) OR Konj)(-2 (partic past) OR (A) OR Konj)
+ 				(-3 Koma)(-4 SPSgNom)(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A pl nom) (0 (partic past))(-1 (partic past) OR (A) OR Konj)(-2 (partic past) OR (A) OR Konj)
+				(-3 Koma)(-4 SPPlNom)(*1 Koma|Punkt BARRIER ParticGarbage);
+SELECT (A sg nom) (0 (partic past)) (-1 (partic past) OR (A) OR Konj)(-2 (partic past) OR (A) OR Konj)
+				(-3 (partic past) OR (A) OR Konj)(-4 Koma)(-5 SPSgNom)
+				(*1 Koma|Punkt BARRIER ParticGarbage);SELECT (A pl nom) (0 (partic past)) (-1 (partic past) OR (A) OR Konj)(-2 (partic past) OR (A) OR Konj)
+				(-3 (partic past) OR (A) OR Konj)(-4 Koma)(-5 SPPlNom)
+				(*1 Koma|Punkt BARRIER ParticGarbage); 
+
+REMOVE (pl) (0 (partic past)) (-1C Ole + (V sg))(*-2 SPSgNom BARRIER CLB);
+REMOVE (sg) (0 (partic past)) (-1C Ole + (V pl))(*-2 SPPlNom BARRIER CLB);
+# seinad ja lagi olid _kaetud_ nõega.
+
+REMOVE (pl) (0 (partic past)) (1C SP + (sg))(NOT 1 Gen)(NOT *-1 Ole BARRIER CLB);
+REMOVE (pl) (0 (partic past)) (1C SP + (sg))(1 Gen)(NOT 2 (pl))(NOT 3 (pl))(NOT *-1 Ole BARRIER CLB);
+# teise preemia _saanud_ töö.
+# asutamislepingu s6lmimisel _maaratud_ n6ukogu liikme volitused
+
+REMOVE (sg) (0 (partic past)) (1C SP + (pl))(NOT 1 Gen)(NOT *-1 Ole BARRIER CLB);
+REMOVE (sg) (0 (partic past)) (1C SP + (pl))(1 Gen)(NOT 2 (pl))(NOT 3 (pl))(NOT *-1 Ole BARRIER CLB);
+# hilja peale _jäänud_ pidulised
+
+
+REMOVE (A nom partic) (0 NudTud) (NOT *-1 Koma BARRIER CLB) ;
+REMOVE (S nom partic) (1C Subst BARRIER CLB) ;
+# Seaduses _s'testatud_ juhtudel ...
+
+
+#Piibel
+SELECT (V main) (0 (partic past)) (1C Koma)(2 CLB)(*-1 Ole BARRIER CLBC);
+
+# 2) Muu                                             
+REMOVE (S pl nom) (0 (partic past ps));    # need on rohkem heuristilised reeglid
+REMOVE (S pl nom) (0 (partic past imps));
+
+LIST FinVaf = (<FinV> af) ("ole" neg) ("ole" partic); # Finiitsed verbid + "polnud"
+LIST OleSaa = ("ole" aux) "saa";
+LIST VäsiVerb = "tund" "väsi" "kurna" "närtsi" "lõp" "sure" "ussita";
+        # nende partitsiip on tavaliselt Adji tähenduses
+
+# UUED
+SELECT (V) (0 (partic past)) (0 OleSaa)(NOT 1 PlNom);
+# vs tulu saanud isikud
+
+SELECT (V) (0 (partic past)) (NOT *-1 Ole BARRIER CLBC) (NOT *1 Ole BARRIER CLBC)
+                             (*-1C FinVaf + OleSaa BARRIER CLBC) ;
+# sai tehtud
+
+SELECT (V) (0 (partic past)) (-1 Ole) (-1 (aux))(*-1C FinVaf ^ OleSaa BARRIER CLBC); 
+
+REMOVE (V) (0 (partic past)) (*1C FinVaf ^ OleSaa BARRIER CLBC);
+REMOVE (V) (0 (partic past)) (*-1C FinVaf ^ OleSaa BARRIER CLBC);
+SELECT (V) (0 (partic past)) (*-1C FinV + Ole + (aux) BARRIER CLB) (1 Adv) ;
+SELECT (V) (0 (partic past)) (NOT 1 Ja)(NOT -1 Ja)(*-1C FinV + Ole + (aux) BARRIER CLB) 
+             (NOT *1 (partic past) BARRIER CLB) (NOT *-1 (partic past) BARRIER CLB) (NOT 1C Nom) ;
+SELECT (V) (0 (partic past)) (-1 Ole) (-1 (aux)) (1 (sup ill));
+
+
+REMOVE (V main partic) (*1C FinV ^ Ole BARRIER CLBC);
+# Konverentsile järgnenud banketilt Rasmus praegu tuligi
+
+SELECT:toonud (A pos partic) (1C Subst)(1C Nom)(-2 FinV + Ole) ;
+# Yks neist on tuntud kultuuritegelane  
+# Oleksime paleessegi toonud kitsed
+
+REMOVE (V main partic) (*-1C FinV ^ Ole BARRIER CLBC); 
+# Meeritsa sõnul teenisid suurimat tulu saanud isikud põhiliselt kolmest allikast  
+
+SELECT (V partic past) (1 FinV + Ole);
+REMOVE (V partic past) (NOT 0 ("mine"))(*-1 Vaja BARRIER CLB)(*-1 FinV + Ole BARRIER CLB) ;
+# Eelmise aasta eest polnud vaja deklareerida saadud dividende
+# vs polnud vaja läinud
+
+SELECT:eelistaverbi (partic past) (NOT 0 VäsiVerb) (*0 OleSaa BARRIER (partic past) OR CLBC) (NOT *1 (V partic past) BARRIER CLBC);
+# Sel ööl oli Rasmusel _olnud_ pidutsemiseks pähjust
+# taevas oli hall ja pisut nagu vettinud.
+#mul olid onu tehtud vildid jalas
+
+REMOVE (V main partic) (*1C ("ole" aux) BARRIER CLB LINK *1C (V main partic) BARRIER CLB);
+
+
+#SELECT (partic past) (NOT 0 VäsiVerb) (*-1 OleSaa BARRIER (partic past) OR CLBC); 
+
+REMOVE (partic past ps) (NOT *-1 Ole BARRIER CLBC) 
+			(NOT *1 Ole BARRIER CLBC) (*1C FinV ^ (partic) BARRIER CLBC);
+REMOVE (partic past ps) (NOT *-1 Ole BARRIER CLBC) 
+			(NOT *1 Ole BARRIER CLBC) (*-1C FinV ^ (partic) BARRIER CLBC);
+REMOVE (partic past imps) (NOT *-1 OleSaa BARRIER CLBC) 
+			(NOT *1 OleSaa BARRIER CLBC) (*1C FinV ^ (partic) BARRIER CLBC);
+REMOVE (partic past imps) (NOT *-1 OleSaa BARRIER CLBC)
+			(NOT *1 OleSaa BARRIER CLBC) (*-1C FinV ^ (partic) BARRIER CLBC);
+
+# Konjunktsiooni põhjal:
+SELECT (V partic past ps) (-1 Ja)(-2C (partic past ps))(NOT *1 Subst BARRIER CLB);
+# ta oli põgenema pääsenud ja _kadunud_.
+SELECT (V partic past ps) (1 Ja)(2C (partic past ps)) ;
+SELECT (V partic past imps) (-1 Ja)(-2C (partic past imps))(NOT *1 Subst BARRIER CLB);
+# see oli läbi uuritud ja rännatud
+SELECT (V partic past imps) (1 Ja)(2C (partic past imps));
+
+
+# G. Verbi pöördelised vormid
+
+LIST VatVerb = "ole" "näi" "näge" "paist" "tundu" "aima" "arva" "avasta" "eelda" 
+	 "kaeba" "kart" "kiitle" "kujutle" "kurt" "kuul" "leid" "loot" 
+	 "mõist" "mõtle" "mälesta" "märka" "möön" "nenti" "oleta" "oota" 
+	 "rääki" "taipa" "taju" "tead" "tund" "tunnista" "tõenda" "usku" 
+	 "väit" "ütle";         # nende verbidega on võimalik -vat vorm
+LIST NomGenPart = nom gen part ;
+LIST JaNing = "ja" "ning";
+
+REMOVE (<FinV>) (NOT 0 VatVerb) (NOT 0 (quot pres ps)) (*1C FinV BARRIER Konj OR CLBC);
+# Tõusva päikese _valgus_ andis omapärase helgi.
+REMOVE (<FinV>) (NOT 0 ("või"))(NOT 0 VatVerb)(NOT 0 (quot pres ps))(*-1C FinV BARRIER Konj OR CLBC) ;
+# Ta jäi vähe nagu _alati_
+REMOVE (<FinV>) (0 (quot pres ps)) (*1C FinV ^ VatVerb BARRIER Konj OR CLBC);
+# Aga ühestki midagi päris _usutavat_ välja ei koorunud.
+REMOVE (<FinV>) (0 (quot pres ps)) (*-1C FinV ^ VatVerb BARRIER Konj OR CLBC) ;
+
+REMOVE (<FinV>) (0 VatVerb) (NOT 0 (quot pres ps))(*1C FinV ^ (quot pres ps) BARRIER Konj OR CLBC) ;
+REMOVE (<FinV>) (0 VatVerb) (NOT 0 (quot pres ps))(*-1C FinV ^ (quot pres ps) BARRIER Konj OR CLBC) ;
+
+# Verbi ainsuse väi mitmuse pöörde eristamine:
+REMOVE (V sg) (*-1 SPNom + Pärisnimi LINK -1  Ja LINK -1 SPNom);
+REMOVE (V sg) (*-1 SPNom LINK -1 Ja LINK -1 SPNom + Pärisnimi);
+# Jüri ja Mari _tehku_ hoov korda.
+REMOVE (V sg) (-1C (P pers pl))(-1 NomGenPart)(NOT *1 SPSgNom BARRIER CLBC);
+# Kõik _puhkesid_ naerma.
+REMOVE (V sg) (-1C SPPlNom)(NOT *1 SgNom BARRIER CLB)(NOT *-1 SgNom BARRIER CLB);
+# Kuigi sänad _olid_ endiselt selged.
+REMOVE (V sg) (-2C SPPlNom)(-1 Adv)(NOT *1 SgNom BARRIER CLB)(NOT *-1 SgNom BARRIER CLB);
+# Inimesed lihtsalt kadusid.
+
+
+REMOVE (V sg) (0 (V pl))(*-1 (card) + Nom BARRIER CLB LINK 1C SPSgPart);
+# Kümme poissi meie klassist astusid ülikooli.
+
+REMOVE (V sg) (0 (V pl))(*-1 (card) + Nom)(NOT *1 SgNom BARRIER CLB)(NOT *-1 SgNom BARRIER CLB);
+REMOVE (V sg) (0 (V pl))(*1 (card) + Nom)(NOT *1 SgNom BARRIER CLB)(NOT *-1 SgNom BARRIER CLB);
+
+REMOVE (V sg) (1C SPPlNom)(NOT *1 SgNom BARRIER CLB)(NOT *-1 SgNom BARRIER CLB)
+                (NOT -1 Koma) (NOT -1 Side);
+# Sekundi väi kahe vältel olid nad vahetanud ebamäärase pilgu.
+REMOVE (V sg) (-1 JaNing)(NOT *1 SgNom BARRIER CLB)(*-1C (V pl) BARRIER SgNom OR CLB);
+# Inimesed kargasid kohalt püsti ja _karjusid_ täiest kõrist
+REMOVE (V pl ps3) (NOT *-1 (pl))(NOT *1 (pl))(NOT *-1 (crd))(NOT *1 (crd))(NOT *-1 ("kõik"))(NOT *1 ("kõik"));
+# Seda neelates oli tunne, nagu _oleksid_ kumminuiaga kuklasse saanud.
+
+# X. Esimene isik
+SELECT (V sg ps1) (-1 ("mina"))(-1C Nom);
+# Ma _saan_ muidugi aru ...
+
+# H. Teine isik
+SELECT (V ps2) (-1 ("sina" sg))(-1 SgNom)(NOT 0 ("oma"));
+# igat heli, mida sa _teed_, kuuldakse.
+REMOVE (V ps2) (NOT 0 (imper))(NOT *1 ("sina") BARRIER CLBC) (NOT *-1 ("sina") BARRIER CLBC) 
+                 (*1 Subst + Nom BARRIER FinV OR CLBC);
+# Seadusi _asendasid_ neil hõimutavad.
+    # a) mitmus
+REMOVE (V pl ps2) (-1C (A pl gen));
+# Mida väis ülevoolavate _tunnete_ puhul sageli kuulda
+
+    # b) ainsus
+LIST KesMis = "kes" "mis";
+
+REMOVE (V ps2 sg) (*-1 KesMis BARRIER Sid|Kvm)
+                  (NOT *-1 ("sina" sg) BARRIER CLB) (NOT *1 ("sina" sg) BARRIER CLB);
+# Mis _käisid_ ilmselt malmitootmise kohta
+REMOVE (V ps2 sg) (-1 SPPlNom)(NOT *-1 ("sina" sg) BARRIER CLB) (NOT *1 ("sina" sg) BARRIER CLB);
+# Tema veidrused olid tuntud.
+REMOVE (V pres sg ps2) (0 (A pl nom))(1C SPPlNom)
+                   (NOT *-1 ("sina" sg) BARRIER CLB)(NOT *1 ("sina" sg) BARRIER CLB);
+# mille oli kehv seep, _nürid_ zhiletid ja talve külmad karedaks muutnud.
+
+REMOVE (V pres sg ps2) (0 SPPlNom)(-1C (A pl nom));
+# niisugused _sänad_, mida ...
+
+# 001018
+REMOVE (V ps2 sg) (*-1 SPSgNom BARRIER CLB)(*1 (V sg ps3) BARRIER CLB)
+                  (NOT *-1 ("sina" sg) BARRIER CLB) (NOT *1 ("sina" sg) BARRIER CLB);
+REMOVE (V ps2 sg) (*-1 SPPlNom BARRIER CLB)(*1 (V pl ps3) BARRIER CLB)
+                  (NOT *-1 ("sina" sg) BARRIER CLB) (NOT *1 ("sina" sg) BARRIER CLB);
+# Edgar Valteri _pokud_ elavad ainult Pokumaal.
+
+
+# I. Kolmas isik
+
+SELECT (V impf sg ps3) (0 In)(*-1 (P sg nom) BARRIER CLB)(NOT *-1 FinV BARRIER CLB)(NOT *1 FinV BARRIER CLB);
+# Ta _istus_ vaikselt nagu hiir.
+
+SELECT (V impf sg ps3) (NOT *-1 FinV BARRIER CLB)(NOT *1 FinV BARRIER CLB)(*1C Part BARRIER CLB);
+# Ja ääki tabas teda kõhklus. Pisut heuristiline.
+
+# J. Impersonaal
+SELECT (V impf imps) (*1 (impf imps) BARRIER FinV OR CLB);
+# Su kunagine olemasolu _salati_ maha ja seejärel unustati
+
+# K. Gerundium
+SELECT (V ger) (-1 Koma)(NOT 1 Koma)(*1 Koma BARRIER FinV OR CLB);
+# ..., _lootes_ asjata, et ...
+SELECT (V ger) (0 CLB)(NOT 1 Koma)(*1 Koma BARRIER FinV OR CLB)
+# Lahkudes sel kellaajal ministeeriumist, oli ...
+SELECT (V ger) (-1 Koma)(1 DaInf);
+# ..., _püüdes_ tabada ...vat pilku
+SELECT (V ger) (-1C SPN + (sg in));
+# nishis _istudes_ ...
+
+# L. Vat-vorm
+SELECT (quot) (*-1C (<vat) + FinV ^ (partic) BARRIER CLB);
+
+# M. Mast-vorm
+REMOVE (V sup el) (0 (A sg part))(1C SPSgPart);
+# enne _viimast_ kursust
+
+#N. Tingiv käneviis
+REMOVE  (V main cond) (-1C Tr)(-1C (P dem));
+# selleks _puhuks_
+
+LIST InAdAll = in ad all;
+
+REMOVE (A in) (NOT *1 InAdAll) (NOT *-1 InAdAll); # 001105
+REMOVE (A ad) (NOT *1 InAdAll) (NOT *-1 InAdAll); # 001105
+REMOVE (A all) (NOT *1 InAdAll) (NOT *-1 InAdAll); # 001105
+
+#REMOVE (A nom) (0 Verb) (NOT -1 Konj);
+REMOVE (A nom) (0 Verb)(-1 Konj)(NOT -2 Subst)(NOT -2 Konj);
+# _A_ nom on ainult _j'relt'iendi_  t6lgendus
+
+# NIMI- ja ASESõNA
+LIST SgNom = (sg nom);
+LIST PlNom = (pl nom);
+LIST SgGen = (sg gen);
+LIST PlGen = (pl gen);
+LIST SgPart = (sg part);
+LIST PlPart = (pl part);
+
+
+SELECT (sg part) (NOT 0 Pron)(-1 (P dem)) (-1C SgPart);
+SELECT (pl part) (NOT 0 Pron)(-1 (P dem)) (-1C PlPart);	
+SELECT (sg nom) (NOT 0 Pron)(NOT 0 Verb)(NOT -1 ("üks"))(-1 (P dem)) (-1C SgNom);
+SELECT (pl nom) (NOT 0 Pron)(NOT -1 ("üks"))(-1 (P dem)) (-1C PlNom);
+# aga: Üht _isa_ salapattu tean ma siiski 
+
+SELECT (S gen <->) (1 Side)(2 Subst);
+SELECT (A gen <->) (1 Side)(2 Adj);
+
+SELECT (S sg gen) (1 Side)(2 Subst)(2 NiNaTaGa + (sg));
+SELECT (S gen) (1 Side)(2 Subst)(2 NiNaTaGa);
+
+SELECT (sg nom) (0 Pärisnimi)(1 Pärisnimi)(1C SgNom);
+SELECT (sg gen) (0 Pärisnimi)(1 Pärisnimi)(NOT 1 SgNom);
+REMOVE (sg nom) (-1C PlPart)(1C PlPart);
+# et on teisigi _Partei_ vaenlasi
+
+REMOVE (S com sg nom) (-1C SPPlNom)(NOT -1 (partic));
+
+# Koordinatsioon
+# Nimisonade ja asesonade konjunktsioon
+
+#sinisest _taevast_ $, küpsest kurbusest
+SELECT (el) (1 Konj) (NOT 1 CLB) (2 Adj)(3C NimiAse + El) ;
+SELECT (S el) (-2 Konj)(NOT -2 Konj) (-1 Adj) (-3C NimiAse + El) ;
+
+#jään seetõttu alalõpmata piinlikku _olukorda_
+SELECT (S adit) (*-1 AditVerb BARRIER CLB)(-1 (A adit) OR (A Ill));
+SELECT (S adit) (*-1 AditVerb BARRIER CLB)(-1 (A adit) OR (A Ill));
+
+LIST NotS = V D A N P J K I; 
+LIST NotSP = V K J A N D I;
+LIST Konj&Kvm = Z "ja" "ning" "või" "ega" "kui" "otsekui";
+LIST Part-K = <Part> "alahinda" "austa" "arutle" "eelda" "haist" "himusta" "häbene" 
+        "ihalda" "imetle" "jälesta" "kahetse" "kart" "kujutle" "kuula" "kuul" 
+        "käsitle" "lait" "leina" "maits" "meenuta" "mõtle" "nuusuta" "nauti" 
+        "tead" "tund" "täna" "usalda" "usku" "uuri" "vaata" "vaja" "vihka" 
+        "ülista" "emba" "hammusta" "kallista" "keeruta" "kehita" "kibruta" 
+        "löö" "nooguta" "nõela" "näpista" "peks" "piitsuta" 
+        "pilguta" "puuduta" "riiva" "silita" "suudle" "süga" "tagu" "vanguta" 
+        "hoid" "huvita" "iseloomusta" "oota" 
+        "aita" "alusta" "harrasta" "jätka" "katkesta" "kavatse" "nõud"
+        "takista" "karista" "toeta" 
+        "kasuta" "kohta" "näita" "paranda" "tarvita" ;
+# Verbid, mis nõuavad sihitist partitiivis
+LIST Part-P = <Part-P> <Part> <NGP-P>;  # Verbid, millel on võimalik sihitis partitiivis
+LIST NGP-P = <NGP-P>; # Verbid, millel on võimalik sihitis kõigis kolmes käändes
+LIST LisaNom = "kes" "mis" "ise" "kõik";
+LIST Vordlus = "kui" "nagu" "kus" "mis";
+LIST NotSg3 = (V pl) (V sg ps1) (V sg ps2) (V imps);
+
+#ühe ja sama keskmist _kasvu_, tugeva kehaehitusega
+SELECT (S sg part) (NOT 0 Gen)(NOT 0 NotS)(-1C (A sg part));	
+#veidi väsinud sammul vana _ülikoolilinna_ auklikku asfalti tallas 
+SELECT (S sg part) (NOT 1C Subst)(NOT 1 Adj)(NOT 0 NotS)(-1C (A sg part));	
+SELECT (S sg part) (NOT 1C Subst)(NOT 1 Part)(NOT 0 NotS)(-1C (A sg part));
+
+# peen mees musta kaabu ja valge siidsalliga.
+SELECT (S gen) (NOT 0 Adj)(1 Konj ^ CLBC) (2 (A gen))(3C NimiAse + NiNaTaGa);
+SELECT (S gen) (-1 (A gen))(1 Konj ^ CLBC) (2 (A gen))(3C NimiAse + NiNaTaGa) ;	
+SELECT (A sg gen) (1C SgGen)(2 Konj ^ CLBC) (3 (A gen))(4C NimiAse + NiNaTaGa) ;	
+SELECT (A pl gen) (1C PlGen)(2 Konj ^ CLBC) (3 (A gen))(4C NimiAse + NiNaTaGa) ;	
+SELECT (sg nom) (0 NimiAse)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + SgNom) ; 
+SELECT (sg gen) (0 NimiAse)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + SgGen) 
+                (*3 nppiir BARRIER Subst OR CLB);
+SELECT (sg part) (0 SPPart)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + SgPart) ;
+SELECT (pl nom) (0 NimiAse)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + PlNom) ; 
+SELECT (pl gen) (0 NimiAse)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + PlGen) ; 
+SELECT (pl part) (0 SPPart)(NOT 0 NotS) (1 Konj ^ CLBC)(2C NimiAse + PlPart) ; 
+
+SELECT (adit) (0 NimiAse)(NOT 0 NotS)(1 Konj ^ CLBC)(2C NimiAse + Ill) ;
+
+SELECT (nom) (0 SPNom)(NOT 0 NotS) (1 ("kui"))(2 ("ka")) (3C NimiAse + Nom); 
+SELECT (gen) (0 NimiAse)(NOT 0 NotS) (1 ("kui"))(2 ("ka")) (3C NimiAse + Gen); 
+SELECT (part) (0 SPPart)(NOT 0 NotS) (1 ("kui"))(2 ("ka")) (3C NimiAse + Part);
+SELECT (adit) (0 NimiAse)(NOT 0 NotS) (1 ("kui"))(2 ("ka")) (3C NimiAse + Ill);  
+
+# ja vastupidi:
+SELECT (nom)  (0 SPNom)(NOT 0 NotS) (-1 Konj)(-2C NimiAse + Nom) (NOT 0 Gen);
+SELECT (nom)  (0 SPNom)(NOT 0 NotS) (-1 Konj)(-2C NimiAse + Nom) (NOT 1 Nom);
+
+SELECT (gen)  (0 NimiAse)(NOT 0 NotS) (-1 Konj)(-2C NimiAse + Gen) ; 
+SELECT (part) (0 SPPart)(NOT 0 NotS) (-1 Konj) (-2C NimiAse + Part) (NOT 0 Gen);
+SELECT (part) (0 SPPart)(NOT 0 NotS) (-1 Konj) (-2C NimiAse + Part) (NOT 2 Part)(NOT 3 Part) ; 
+
+SELECT (adit) (0 NimiAse)(NOT 0 NotS) (-1 Konj) (-2C NimiAse + Ill) ;
+
+SELECT (nom) (0 NimiAse)(NOT 0 NotS) (-2 ("kui"))(-1 ("ka")) (-3C NimiAse + Nom); 
+SELECT (gen) (0 NimiAse)(NOT 0 NotS) (-2 ("kui"))(-1 ("ka")) (-3C NimiAse + Gen); 
+SELECT (part) (0 NimiAse)(NOT 0 NotS) (-2 ("kui"))(-1 ("ka")) (-3C NimiAse + Part); 
+SELECT (adit) (0 NimiAse)(NOT 0 NotS) (-2 ("kui"))(-1 ("ka")) (-3C NimiAse + Ill);
+
+SELECT (S sg nom) (-1 Ja)(-2C SPNSgNom)(NOT *1 Subst BARRIER CLB);
+# Goldstein oli renegaat ja _ususalgaja_.
+SELECT (S sg gen) (-1 ("nii"))(1 ("kui"))(2 Gen);
+SELECT (S sg gen) (-1 ("nii"))(1 ("kui"))(2 NiNaTaGa);
+# töötas nii vastuvätja kui saatjana
+
+SELECT (S sg kom) (-1 Ja)(-2C SPSgGen) ;
+
+# Omadussänade konjunktsioon
+SELECT (A sg nom) (1 Ja)(2C (A sg nom));
+# Kõik oli ümberringi _hall_ ja ilmetu, välja arvatud plakatid.
+SELECT (A pl nom) (1 Ja)(2C (A pl nom)) ;
+SELECT (A sg part) (1 Ja)(2C (A sg part)) ;
+SELECT (A pl part) (1 Ja)(2C (A pl part)) ;
+SELECT (A sg gen) (1 Ja)(2C (A sg gen)) ;
+SELECT (A pl gen) (1 Ja)(2C (A pl gen)) ;
+SELECT (A sg gen) (1 Ja)(2 (A sg))(2 NiNaTaGa) ;
+# Umbes kilomeetri kaugusel kõrgus _valge_ ja vägevana ministeerium.
+
+
+
+# 1) Käände määramine eelneva omadussõna järgi
+# OmadusAse = _A_ + asesänad, mis käituvad nagu om sänad jms
+# Eelneva omadussäna kääne on teada ja paremas kontekstis seda
+# käänet ei leidu
+LIST NotNominal = V J K card D Z I;
+LIST SubPron = "mina" "sina" "tema" "ma" "sa" "ta" "kes" "mis" "igaüks" "üksteise" "teineteise" "ise" "iseenese"
+               "keegi";
+LIST Nom-S = P A ord;
+LIST MaVerb = "asu" "hakka";
+LIST Intr = <Intr> "asu" "keerle" "lipsa" "lonki" "muutu" "ole" "tule" "tõmbu" "vaju"  "õheta";
+LIST Laiendamatu = "ise" "see";
+
+SELECT (sg nom) (NOT 0 NotNominal)(NOT -1 NudTud)(-1C OmadusAse + SgNom)(-1 (pos))
+                (NOT *1 SgNom)(NOT 1 Side)(NOT -1 Ole);
+SELECT (pl nom) (NOT 0 NotNominal)(NOT -1 NudTud)(-1C OmadusAse + PlNom)(-1 (pos))
+                (NOT *1 SgNom)(NOT 1 Side)(NOT -1 Ole);
+SELECT (sg nom) (NOT 0 NotNominal)(NOT 0 Gen)(-1C OmadusAse + SgNom)(*1 Nom)(NOT 1 Subst)(NOT 1 Gen)(NOT 1 Side);
+SELECT (pl nom) (NOT 0 NotNominal)(NOT 0 Gen)(-1C OmadusAse + PlNom)(*1 Nom)(NOT 1 Subst)(NOT 1 Gen)(NOT 1 Side);
+SELECT (gen) (NOT 0 NotNominal) (-1C OmadusAse + Gen); 
+SELECT (part) (NOT 0 NotNominal) (NOT 0 Gen)(-1C OmadusAse + Part) (NOT 1 Subst);
+SELECT (part) (NOT 0 NotNominal) (0 Gen) (NOT 1 Part)(-1C OmadusAse)(-1C Part);
+SELECT (ill) (NOT 0 NotNominal) (-1C OmadusAse + Ill);
+SELECT (adit) (NOT 0 NotNominal) (-1C OmadusAse + Ill);
+
+
+SELECT (el)   (NOT 0 NotNominal) (-1C OmadusAse + El);
+SELECT (all)  (NOT 0 NotNominal) (-1C OmadusAse + All);  
+SELECT (ad)   (NOT 0 NotNominal) (-1C OmadusAse + Ad);
+SELECT (abl)  (NOT 0 NotNominal) (-1C OmadusAse + Abl);
+SELECT (in)   (NOT 0 NotNominal) (-1C OmadusAse + In);
+SELECT (es)   (NOT 0 NotNominal) (-1C OmadusAse + Es);
+SELECT (tr)   (NOT 0 NotNominal) (-1C OmadusAse + Tr);  
+
+# Nom-S = _A_ P ord
+SELECT (S sg nom)  (NOT 0 NotS) (NOT 0 Gen)(NOT -1 SubPron) (-1C Nom-S)(-1C SgNom);
+SELECT (S sg gen)  (NOT 0 NotS) (NOT -1 ("oma")) (NOT *1 AditVerb)(NOT -1C SubPron) (-1C Nom-S)(-1C SgGen) ;
+SELECT (S sg part) (NOT 0 NotS) (NOT -1 SubPron) (-1C Nom-S)(-1C SgPart);
+
+REMOVE (S sg nom) ( 1C (A sg nom))(*1C SPNSgNom);
+# oli _külm_ selge aprillipäev
+
+SELECT (sg gen) (-1C Adj)(-1C SgGen)(NOT 0 (adit))(NOT 0 Side);
+# parema _jala_ pahkluu kohal
+
+REMOVE (S sg part) (-1C (A sg nom))(0 SPNSgNom)(NOT 1 (partic));
+
+SELECT (S sg part) (-1C (A sg part))(NOT *-2 ("miski" sg part) BARRIER CLBC)(NOT *1 SPSgPart BARRIER CLBC);
+
+SELECT (S adit) (-1 ("iga" ill));
+
+REMOVE (S sg part) (-1C Adj)(NOT -1 Part)(NOT -1 (partic))(NOT -1 ("oma"))(-1C NomGenPart);
+# ja meile ohutu läbipääsu tagama
+# aga: magas äiglase _und_
+# C Esim3: täis _j6udu_
+
+
+
+# 3) Käände määramine järgneva säna pähjal
+
+REMOVE (S in) (1C Ill);
+REMOVE (S ill) (1C In);		
+# Ei mahu _koos_ kaadrisse
+
+SELECT (gen) (0 OmadusAse) (1C NiNaTaGa);
+REMOVE (S sg part) (0 Adj)(NOT 0 Gen)(1 Subst)(1 Part);
+REMOVE (S pl part) (1C SP + PlPart);
+# Kõik _uurisid_ fotosid hoolega.
+REMOVE (S adit) (*1 El BARRIER Verb OR Adv OR CLB);
+# Tavaliselt on sõnajärg kust kuhu, mitte vastupidi
+# See oli osa vihkamise _nädala_ eelsest kokkuhoiukampaaniast.
+REMOVE (S adit) (1C (S all));
+# Väis redeli älale vätta
+# Aga: läks metsa heinale?
+
+# 5) Pronoomenitega reeglid
+
+# A. Üldised
+SELECT (P) (0 Subst) (NOT 0 NotSP) (1 NimiAse); # _muuta_, ühe!!!
+SELECT (P) (-1 KesMis);
+
+# B. Isikulised asesänad
+REMOVE (P pers nom) (*-1C (S sg nom) BARRIER Konj&Kvm OR CLB Link 1 (part) ^ (N))
+                     (NOT *-1 PrVerb BARRIER CLB)(NOT *1 PrVerb BARRIER CLB);
+REMOVE (P pers gen) (NOT 1 Nominal) (NOT 1 Adv) (NOT 1 Post)(NOT 1 (partic))
+                    (NOT *1 NGP-P BARRIER CLBC) (NOT *-1 NGP-P BARRIER CLBC)(NOT -1 Preg) ;
+REMOVE (P pers nom) (NOT 0 Subst) (NOT *1 Ole BARRIER CLBC) (NOT *-1 Ole BARRIER CLBC) 
+                    (*1C SPSgNom ^ LisaNom BARRIER Konj&Kvm OR CLBC) (NOT *1 Vordlus BARRIER CLBC);
+SELECT (P pers nom) (NOT -2 Sid|Kvm) (NOT -1 CLB)(-1 Verb) (NOT *1 Nom BARRIER CLB)(NOT *-1 Nom BARRIER CLB)
+                    (NOT *1 (imps) BARRIER CLB) (NOT *-1 (imps) BARRIER CLB);
+
+# a) esimene isik
+# mina on millegi pärast ka nimisäna
+SELECT (P pers sg ps1 nom) (*0 (V ps1 sg) BARRIER CLBC);
+SELECT (P pers pl ps1 nom) (NOT 0 Gen)(*-1 (V ps1 pl) BARRIER CLBC);
+SELECT (P pers pl ps1 nom) (NOT 1 Subst)(*-1 (V ps1 pl) BARRIER CLBC);
+SELECT (P pers pl ps1 nom) (*1 (V ps1 pl) BARRIER CLBC);     
+
+REMOVE (P pers pl ps1 nom) (*0C (V sg) ^ (imper) BARRIER CLBC)
+                           (NOT *-1 (V ps1 pl) BARRIER CLBC)(NOT *1 (V ps1 pl) BARRIER CLBC);
+
+# b) teine isik
+SELECT (P pers sg ps2 nom) (*-1 (V ps2 sg) BARRIER CLBC);
+SELECT (P pers sg ps2 nom) (*1 (V ps2 sg) BARRIER CLBC);
+SELECT (P pers sg ps2 nom) (*1C (V ps2 sg));
+# Sina, Teele, oled nüüd selle lapse ainus tugi
+SELECT (P pers pl ps2 nom) (*-1 (V ps2 pl) BARRIER CLBC);
+SELECT (P pers pl ps2 nom) (*1 (V ps2 pl) BARRIER CLBC);
+REMOVE (P pers pl ps2 nom) (*-1C (V sg) ^ (imper) BARRIER CLBC)
+                           (NOT *-1 (V ps2 pl) BARRIER CLBC)(NOT *1 (V ps2 pl) BARRIER CLBC);
+REMOVE (P pers pl ps2 nom) (*1C (V sg) ^ (imper) BARRIER CLBC)
+                           (NOT *-1 (V ps2 pl) BARRIER CLBC)(NOT *1 (V ps2 pl) BARRIER CLBC);
+
+
+LIST ErVerb = inf sup partic;
+
+# c) kolmas isik
+REMOVE (P pers sg ps3 nom) (*-1 (V ps1) ^ Ole BARRIER CLBC) (NOT 0 ("kõik"));
+REMOVE (P pers sg ps3 nom) (*1 (V ps1) ^ Ole BARRIER CLBC) (NOT 0 ("kõik"));
+REMOVE (P pers sg ps3 nom) (*-1C (V ps2 sg) ^ Ole BARRIER CLBC); 
+REMOVE (P pers sg ps3 nom) (*1C (V ps2 sg) ^ Ole BARRIER CLBC);     
+
+SELECT (P pers sg ps3 nom) (*0C (V ps3 sg) BARRIER CLB)
+                           (NOT *1 SPSgNom OR SPPart BARRIER CLB)(NOT *-1 SPSgNom OR SPPart BARRIER CLB);
+SELECT (P pers sg ps3 nom) (*0 (V ps3 sg) ^ Ole BARRIER CLB)
+                           (NOT *1 SPSgNom OR SPPart BARRIER CLB)(NOT *-1 SPSgNom OR SPPart BARRIER CLB);
+
+REMOVE (P pers sg ps3 nom) (*0 FinV + NotSg3 BARRIER Sid|Kvm)
+                          (NOT *-1 (imps) BARRIER CLBC)(NOT *1 (imps) BARRIER CLBC)(NOT *1 Sid|Kvm BARRIER CLBC);      
+# ... veel rähutasid _tema_ kähnust.
+REMOVE (P pers sg ps3 nom) (*0 (V pl) BARRIER CLB)
+                           (*1C SPPlNom BARRIER Sid|Kvm OR CLB);
+# et tema käed kaitsevad last kuulide vastu
+# marssisid tema pea taga teleekraanil läputud kolonnid
+SELECT (P pers sg ps3 nom) (1 Ei);
+# et ta ei ole kaotanud mitte ainult väljendusväimet ...
+REMOVE (P pers sg ps3 nom) (-1 MaVerb)(*1 (sup ill) + Intr BARRIER CLB)(*1 SPNSgNom BARRIER CLB);
+# Jalamaid hakkas ta nägu ähetama
+
+REMOVE (P pers sg ps3 nom) (*-1 (V ger) BARRIER CLB OR Verb ^ (ger))(NOT *1 Verb BARRIER CLB)
+                             (*1C SPSgPart BARRIER Arv OR CLB);
+# muutes inimese vastu tema tahtmist röökivaks nädrameelseks
+SELECT (P pers sg ps3 nom) (*-1 CLB + Part)(*1C (V ps3 sg))
+                             (NOT *-1 SPNSgNom BARRIER CLB)(NOT *1 SPNSgNom BARRIER CLB)
+                             (NOT *-1 ErVerb BARRIER CLB)(NOT *1 ErVerb BARRIER CLB);
+
+REMOVE (P pers sg ps3 nom) (NOT 0 ("iga"))(NOT 1 ("ise")) (NOT 1 KesMis)(NOT 1 ("kord"))(1C SPNSgNom)(0 Gen)
+                             (NOT *-1 FinV BARRIER CLB);
+
+SELECT (P pers sg ps3 nom) (-1C (V past sg ps3))(-2C Koma)(NOT 1 Subst);
+# tegi ta äkki midagi
+SELECT (P pers sg ps3 nom) (-1C FinV ^ (partic))(1 Laiendamatu);
+REMOVE (P pers sg ps3 nom) (*-1 CLB + ("kes" nom)  BARRIER Sid|Kvm OR CLB);
+
+#Algul oli _ta_ krundile aia rajanud $, kapsaid kasvatanud $, aga 
+#Dissertatsiooni oli _ta_ alustanud korda kolm $, aga otsustaval hetkel 
+SELECT (P pers sg ps3 nom) (-1 Ole)(-1 (V ps3 sg))(*1C (partic past ps) ^ Ole BARRIER CLB)
+                             (NOT *1 SPNSgNom BARRIER CLB)(NOT *-1 SPNSgNom BARRIER CLB);
+
+# mis oli jooksnud ta peas aastate kaupa
+REMOVE (P pers sg ps3 nom) (*-1 Ole BARRIER CLB)(*1C (partic past ps) ^ Ole BARRIER CLB)
+                             (*1C SPNSgNom BARRIER CLB);
+
+LIST ElaAsu = "ela" "asu";
+# ainult köögis polnud ta suutnud ...
+SELECT (P pers sg ps3 nom) (-1 Ole)(1C (partic past ps)); # 130201
+
+# pealegi oli ta veenilaiendi haavand hakanud talumatult sügelema
+SELECT (P pers sg ps3 nom) (*-1 CLB + ("kui"))(*1 (V ps3 sg) BARRIER CLB LINK NOT *-1 Verb BARRIER CLB)
+                             (NOT *-1 SPNSgNom BARRIER CLB)(NOT *1 SPNSgNom BARRIER CLB);
+# kui ta pähja vajus
+
+
+# 6) Nimisõnade konjunktsioon
+
+SELECT (S sg nom) (NOT 0 NotS) (1 Konj) (2C Subst + SgNom);
+SELECT (S sg gen) (1 Konj)(NOT 1 CLBC)(2C Subst + SgGen); #kahtlane
+SELECT (S sg part) (1 Konj) (2C Subst + SgPart);
+# siin on eelmised 3 vastupidi 
+SELECT (S sg nom) (NOT 0 NotS) (-1 Konj) (-2C Subst + SgNom);
+SELECT (S sg gen) (NOT 0 NotS) (-1 Konj) (-2C Subst + SgGen);
+SELECT (S sg part) (NOT 0 NotS) (-1 Konj) (-2C Subst + SgPart);
+
+SELECT (S sg nom) (NOT 0 NotS)(NOT 1 SPPart) (-1 Konj) (-2C Subst + SgNom);
+SELECT (S sg gen) (NOT 0 Adj)(NOT 1 SPPart) (-1 Konj) (-2C Subst + SgGen);
+SELECT (S sg part) (NOT 1 SPPart) (-1 Konj) (-2C Subst + SgPart);
+
+SELECT (S pl nom) (NOT 0 Adj) (1 Konj) (2C Subst + PlNom);
+SELECT (S pl gen) (NOT 0 Adj) (1 Konj) (2C Subst + PlGen);
+SELECT (S pl part) (NOT 0 Adj) (1 Konj) (2C Subst + PlPart);
+# siin on eelmised 3 vastupidi 
+SELECT (S pl nom) (NOT 0 Adj) (-1 Konj) (-2C Subst + PlNom) (NOT 1 PlNom);
+SELECT (S pl gen) (NOT 0 Adj) (-1 Konj) (-2C Subst + PlGen) ;
+SELECT (S pl part) (NOT 0 Adj) (-1 Konj) (-2C Subst + PlPart) (*1 nppiir BARRIER PlPart);
+
+
+# 6a) Nimisõna käände määramine verbi järgi
+
+# (osa)lauses peab üks verb olema
+SELECT (V <FinV>) (NOT *1 Verb BARRIER CLB)(NOT *-1 Verb BARRIER CLB)
+                  (NOT *-1 Jutum1 BARRIER CLB)(NOT *1 Jutum2 BARRIER CLB);
+
+LIST >>> = >>>;
+LIST <<< = <<<;
+
+# 001018
+SELECT (S in) (1 CLB) (*-1 ElaAsu);
+SELECT (S ad) (1 CLB) (*-1 ElaAsu);
+SELECT (S all) (1 CLB) (*-1 ElaAsu);   
+SELECT (S in) (2 >>>) (*-1 ElaAsu);
+SELECT (S ad) (2 >>>) (*-1 ElaAsu);
+SELECT (S all) (2 >>>) (*-1 ElaAsu);  
+
+#SELECT (sg part) (0 Subst)(NOT 0 NotSP) (1 FinV&Part)) # 2905
+# 21 / 7
+
+LIST Perfekt = "ära" "välja" "läbi" "maha";
+				# perfektiivsusadverb
+
+REMOVE (sg nom) (0 Subst)(NOT 0 NotSP) (-1 (V ps1)); 
+REMOVE (sg nom) (0 Subst)(NOT 0 NotSP) (*1 (V ps1) BARRIER CLBC OR (Dsh)); 
+REMOVE (sg nom) (0 Subst)(NOT 0 NotSP) (*-1C (V ps2 sg) ^ (imper) BARRIER CLB)(NOT *-1 Vordlus BARRIER CLBC);
+REMOVE (sg nom) (0 Subst)(NOT 0 NotSP) (*1C (V ps2 sg) ^ (imper) BARRIER CLBC);     
+
+
+SELECT (sg nom) (0 Subst) (NOT 0 Adj)(NOT 0 LisaNom)(NOT 1 ("oma")) 
+                (*1C (V ps3 sg) ^ (imps) ^ Ole) (NOT *-1 Konj BARRIER CLB)
+                (NOT *1 SPSgNom BARRIER CLB) (NOT *-1 SPSgNom BARRIER CLB)
+                (NOT *1 SPPart BARRIER CLB) (NOT *-1 SPPart BARRIER CLB);
+
+
+SELECT (sg part) (0 Subst) (NOT 0 NotS) (NOT 1 Subst) (NOT *1 Part BARRIER CLBC)
+                 (*-1 Ei BARRIER CLB)(NOT *-1 Ole OR Nom OR Part BARRIER CLB);   
+SELECT (sg nom) (0 Subst) (NOT 0 NotS) (NOT 1 Subst) (*1 Ole BARRIER CLB) (NOT *1 (neg) BARRIER CLB) 
+                (NOT *-1 (neg) BARRIER CLB) (NOT *1 Nom BARRIER CLB) (NOT *-1 Nom BARRIER CLBC);
+
+# kui eelmine või järgmine on verb, millel on võimalik part sihitis    
+SELECT (part) (0 Subst) (NOT 0 Nom) (NOT 0 NotS) (1C Part-P)(NOT 1 NGP-P) 
+              (NOT *1 Perfekt OR Part BARRIER CLB);     
+SELECT (part) (0 Subst) (NOT 0 Nom) (NOT 0 NotS) (-1C Part-P)(NOT -1 NGP-P) 
+              (NOT *1 Perfekt BARRIER CLB) (NOT *-1 Perfekt BARRIER CLB)(NOT 1C (S part));
+
+
+LIST FinV&Part = <FinV> ("ei" V) partic inf;
+
+# kui on kindlalt part nõudev verb
+# Muutus pisut, vaata vers2.rul eelmist versiooni
+REMOVE (gen) (0 SPPart)(NOT 0 NotSP)(NOT 1 Subst)
+             (*-1C Part-K ^ (partic) LINK NOT *1 FinV) 
+             (NOT *-1 Part BARRIER CLB) (NOT *1 Part BARRIER CLB) ;
+REMOVE (gen) (0 SPPart)(NOT 0 ("oma"))(NOT 0 NotSP)(NOT 1 Subst OR Adj)
+             (*1C Part-K LINK NOT *-1 FinV) 
+             (NOT *-1 Part BARRIER CLB) (NOT *1 Part BARRIER CLB) ;
+
+SELECT (S sg nom) (NOT *-1 SPNSgNom BARRIER CLB)(NOT *1 SPNSgNom BARRIER CLB)
+                    (*1 PrVerb + FinV BARRIER CLBC LINK NOT *-1 Verb BARRIER CLB)
+                    (*1 PrVerb + FinV BARRIER CLB LINK NOT *1 Verb BARRIER CLB)
+                    (*1C (A sg nom) BARRIER CLB LINK NOT *1 Subst BARRIER CLBC);       
+# Lauses on predikatiivi verb ja omadussäna nimetavas ning teisi potensiaalseid
+# nimisänu nimetavas ei ole
+SELECT (S sg nom) (NOT 0 Gen)(NOT 0 Part) 
+                    (*1 Ole BARRIER CLB LINK *1 (partic past imps) BARRIER FinV&Part OR CLB)
+                    (NOT *-1 SPNom BARRIER CLB)(NOT *1 SPNom BARRIER CLB);
+# Vool oli päeva ajaks välja lülitatud
+
+SELECT (S sg nom) (*-1 Ole BARRIER CLB)(*1 (partic past imps) BARRIER FinV&Part OR CLB)
+                    (NOT *-1 SPNom BARRIER CLB)(NOT *1 SPNom BARRIER CLB)
+                    (NOT 0 Gen)(NOT 0 Part)(NOT 0 Adv);
+
+# Eitavas lauses ei saa olla genitiivset objekti:
+REMOVE (S sg gen) (NOT 1 Post)(NOT *-1 Preg BARRIER CLBC)(*-1 Ei BARRIER CLBC)
+                  (*-1C FinV BARRIER CLBC LINK NOT *1 FinV BARRIER CLBC)
+                  (NOT *1 SP BARRIER CLBC)(NOT 0 Ajamäärus) ;
+REMOVE (S sg gen) (NOT 1 Post)(NOT *-1 Preg BARRIER CLB)(*-1 Ei BARRIER Kvm) 
+                    (*-1C FinV BARRIER CLB LINK NOT *1 FinV BARRIER CLB)
+                    (*1C nppiir BARRIER CLB OR SP) (NOT 0 Ajamäärus) ;
+REMOVE (S sg gen) (NOT 1 Post)(NOT *-1 Preg BARRIER CLB)(*1 nppiir BARRIER Subst OR CLB)
+                    (*1 Ei BARRIER CLB OR Sid|Kvm LINK 1C Verb)(NOT 0 Ajamäärus);
+# _Lifti_ ei tasunud proovidagi
+REMOVE (P sg gen) (NOT 1 Post)(NOT *-1 Preg BARRIER CLB)(*-1 Ei BARRIER CLB) 
+                    (*-1C FinV + (sg) BARRIER FinV ^ (sg) OR CLB)
+                    (NOT *1 SP BARRIER CLB);
+#REMOVE (P sg gen) (NOT 1 Post)(NOT *-1 Preg)(*-1 Ei)(*-1C FinV *R+1)\
+#                    (NOT *R+1 FinV)\
+#                    (*1C nppiir *L-1)(NOT *L-1 SP) CLB)
+# D:678  0:1
+REMOVE (P sg gen) (NOT 1 Post)(NOT *-1 Preg BARRIER CLB)(*1 nppiir BARRIER Subst OR CLB)
+                    (*1 Ei BARRIER Sid|Kvm OR CLB LINK 1C Verb);
+
+
+REMOVE (S sg gen) (NOT *1 SP BARRIER CLB)(NOT *1 Verb BARRIER CLB)(*-1 FinV + Intr BARRIER  Preg OR Verb OR CLB)
+                  (NOT 0 Ajamäärus)(NOT 1 Post);
+# kus õhus keerles krohvitolmu.
+# Intransitiivses lauses saab olla ainult subjekt (nimetavas väi osastavas)
+REMOVE (S sg gen) (*1 nppiir BARRIER Subst OR CLB)
+                    (*1 FinV + Intr BARRIER Verb OR CLB)
+                    (*1 FinV + Intr LINK NOT *1 Verb)
+                    (NOT *-1 FinV BARRIER CLB)(NOT *-1 Preg BARRIER CLB)(NOT 1 Post);
+
+REMOVE (S sg gen) (NOT *1 Subst OR Verb BARRIER CLB)(*-1 Ole + FinV BARRIER CLB LINK NOT *1 Verb BARRIER CLB) 
+                    (NOT *-1 Preg BARRIER CLB)(NOT 1 Post)(NOT 1 ("oma")) ;
+# Tähtis oli Mõttepolitsei.
+
+
+
+
+REMOVE (S sg part) (*-1C FinV + Intr BARRIER CLB LINK NOT *1 Verb)(NOT *1 Verb BARRIER CLB)
+                     (*-1C FinV + Intr LINK NOT *-1 Verb)
+                     (*-1C SPNom BARRIER CLB)(NOT 0 Ajamäärus)(NOT *-1 (N) OR Vordlus BARRIER CLB);
+
+REMOVE (sg gen) (1 (quot pres ps))(*-1 (<vat>) BARRIER CLB);  # Kaili
+LIST Sorti = "sort" "liik" "kord" "mitu" "milline" "värv" "puhk" "aeg" 
+	"laad" "viis" "tõug" "mast" "kasv" "kiri";
+# 6b) 010820 mees peeti kinni
+#SELECT (S nom) (1 (imps))) #EKI-s ei sobi
+
+LIST Sid|FinV|Jms = J Z CLB CLB-C <FinV>;
+# 7) Kaks nominatiivi ja partitiivi osalauses
+
+# kahte part (nom) lauses olla ei saa, va kaassõnadega ja konjunkts.
+# ei saa olla ka sorti, liiki, moodi jne
+
+REMOVE (part) (0 NimiAse)(NOT 0 Sorti)(NOT *-1 Prep OR DaInf OR (partic) BARRIER CLB) 
+              (NOT 1 Postp)(NOT -1 Part) 
+              (*2C SPPart ^ Sorti ^ ("mitu") BARRIER Konj&Kvm LINK -2 ("mitu"))
+              (NOT *1 DaInf OR (partic) BARRIER CLB);
+
+
+REMOVE (part) (0 NimiAse)(NOT 0 Sorti)(NOT *-1 Prep OR DaInf OR (partic) BARRIER CLB) 
+              (NOT 1 Postp)(NOT -1 Part) 
+              (*-2C SPPart ^ Sorti ^ ("mitu") BARRIER Konj&Kvm LINK -1 ("mitu") LINK NOT 2 Postp)
+              (NOT *1 DaInf OR (partic) BARRIER CLB);
+
+REMOVE (S sg nom) OR (P sg nom)(*-2C SPNSgNom BARRIER Sid|FinV|Jms)
+                    (*-1C FinV ^ PrVerb BARRIER CLBC)
+                    (NOT *-1 Vordlus BARRIER CLBC)(NOT 0 Arv)(NOT 0 ("aeg"));
+
+#("kui") verb ei ole predikatiivi lubav, siis ei saa osalauses olla kahte 
+#singulaarset nominatiivset substantiivi, teine teisel pool verbi,
+# välja arvatud võrdlused, arvsõnad, ajamäärused.
+# Lisandiga see reegel (veel) ei arvesta
+# ... mis moodustas _osa_ parempoolsest seinast
+REMOVE (S sg nom) OR (P sg nom) (NOT 1 Konj)(*2C SPNSgNom BARRIER Sid|FinV|Jms)
+                    (*1C FinV ^ PrVerb BARRIER CLBC)
+                    (NOT *-1 Vordlus BARRIER CLBC)(NOT 0 Arv)(NOT 0 ("aeg"));
+
+
+# See on eelmise reegliga sümmeetriline
+# Viga: mille tõttu _tubakas_ pudenes Kõik maha.
+
+
+# Ühe verbiga osalauses ei saa olla kahte objekti
+  
+REMOVE (S sg part) OR (P sg part) (*-1C FinV BARRIER CLB LINK -1C SPSgGen LINK NOT *-1 Preg BARRIER CLB)
+                   (*-1C FinV BARRIER ErVerb OR CLB)
+                     (NOT *-1 Post OR (N) OR Prep BARRIER CLB)(NOT 1 (partic))
+                     (NOT *1 DaInf OR (sup ill) BARRIER CLB)
+                     (NOT 1 Postp)(NOT 0 Sorti)(NOT -1 Part) ;
+# mille naha oli äsja läppenud _talve_ külmad karedaks muutnud.
+
+#REMOVE:eisaaru (S sg part) (NOT 1 CLB)(*1C SPSgGen BARRIER CLB)
+#                     (NOT 1 (partic))(NOT *-1 Prep OR (N) BARRIER CLB)
+#                     (NOT *1 DaInf OR (sup ill) OR Preg OR Vordlus OR Post BARRIER CLB)
+#                     (NOT 1 Postp)(NOT 0 Sorti)(NOT -1 Part) ;
+
+
+
+REMOVE:eisaaru (S sg part) (*1C SPSgGen BARRIER CLB)
+                     (NOT 1 (partic))(NOT *-1 Prep OR (N) BARRIER CLB)
+                     (NOT *1 DaInf OR (sup ill) OR Preg OR Vordlus OR Post BARRIER CLB)
+                     (NOT 1 Postp)(NOT 0 Sorti)(NOT -1 Part) ;
+
+REMOVE (P sg part) (*1C SPSgGen BARRIER Subst OR Adj OR CLB OR Post)
+                   (NOT 1 (partic))(NOT *-1 Prep OR (N) BARRIER CLB)
+                   (NOT *1 DaInf OR (sup ill) OR Preg OR Vordlus OR (imps) BARRIER CLB)
+                    (NOT 1 Postp)(NOT 1 Sorti)(NOT 1 (part));
+# See püüdis kinni _iga_ vaiksest sosinast tugevama heli.
+
+
+SELECT (S sg part) (*-1 (ad) LINK *1 (neg) OR ("ole") BARRIER Verb)
+                   (*-1 (ad) BARRIER CLB LINK *-1 (neg) LINK 1 Ole LINK NOT *1 Verb)
+		   (NOT *1 Verb BARRIER CLB)(NOT *1 Part BARRIER CLB)(NOT *-1 Prep BARRIER CLB)
+                   (NOT 1 Postp)(NOT 0 Sorti)(NOT -1 Part) ;
+# Omajalause
+
+SELECT (N sg part) (-1 ("kõik"))(-1C (part));
+REMOVE (S adit) (*-1 ("kus") OR ("kuhu") BARRIER CLBC);
+
+#8) ALALTÜTLEVAS KÄÄNDES NIMISõNA CONTRA MÄÄRSõNA
+
+LIST Üsna = "üsna" "väga" "päris" "küllalt" "igati";
+REMOVE (S sg abl) (-1 Üsna);
+# Ta istus väga sirgelt
+
+REMOVE (S sg abl) (-1C FinV ^ (partic))(-2C SPNSgNom)(NOT *1 SP + NomGenPart BARRIER CLB);
+# Hetke pärast ta võpatas metsikult
+
+
+
+# MUU
+
+REMOVE (D) (0 SPNSgNom)(-1C (A sg nom))(NOT 1 (A));
+# mille olid kehv _seep_, nürid zhiletiterad ... 
+
+# Nimisõna nimetavas contra verbi lihtmineviku ainsuse kolmas pööre
+REMOVE (S sg nom) (-1 ("tema" sg)) (0 Verb)(NOT *-1 FinV BARRIER CLB)(NOT *1 FinV BARRIER CLB);
+# Jah, ta _teadis_, et ..
+
+SELECT (all)  (1C Adv)(1 ("järele"));
+
+
+# OMADUSSõNAD
+LIST InIllAditEl = in ill adit el;
+SET SPPl = (S pl) OR (P pl);
+SET SPPlPart = SPPl + (part);
+SET SPPlIn = SPPl + (in);
+SET SPSgIn = SP + (sg in);
+SET SPEl = SP + (el);
+SET SPAdt = SP + (adit);
+LIST Ter = term;
+LIST Sg = sg;
+LIST Pl = pl;
+
+
+# on juba _lõpp_ ise
+SELECT (S) (0 Adj)(NOT 0 Verb)(1 ("ise"));
+
+# polnud Antti kuigi _agar_ abahakiiridest kõnelema
+SELECT (A) (NOT 0 Adv)(NOT 0 (K) OR (S))(NOT 0 Verb)(NOT 0 SPGen)(NOT 0 InIllAditEl)
+	(-1C Adv)(NOT 1 Adj)(NOT 1 Konj&Kvm);		
+SELECT (A) (NOT 0 (abl))(NOT 1 Adj)(NOT 0 (K) OR (S))(NOT 0 Verb)(NOT 0 SPGen)(NOT 0 InIllAditEl)
+	(-1 Adv)(NOT 1 Konj&Kvm);		
+
+
+REMOVE (A) (1 ("kõik"))(NOT *2 Subst BARRIER CLB);
+SELECT (A nom) (-1 ("tule"))(1 ("ette"));
+REMOVE (A sg) (1 (N card)) (2 SPSgPart);
+
+# Ei ühildu millegagi
+# Pole öeldistäide ega täiend:
+REMOVE (A nom)  (NOT 0 NudTud) (NOT *1 SPNom BARRIER CLB)(*-1 FinV ^ (partic) BARRIER CLB) 
+                (NOT *-1 PrVerb BARRIER CLB)(NOT *1 PrVerb BARRIER CLB) (NOT -1 ("mis")) ;
+# NOT -1 Mis - lääpis mis hull
+
+REMOVE (A sg gen) (NOT *1 SubstSgCo OR Es BARRIER CLB)(NOT *-1 SubstSgCo BARRIER CLB);
+REMOVE (A sg gen) (NOT *1 SubstSgCo OR Es BARRIER CLB)(*-1 nppiir BARRIER CLB OR SubstSgCo) ;
+REMOVE (A pl gen) (NOT *1 SPPl OR Es BARRIER CLB);
+
+REMOVE (A sg part) (NOT *1 SPSgPart BARRIER CLBC)(NOT *-1 ("<midagi>" part) BARRIER CLBC);
+REMOVE (A pl part) (NOT *1 SPPlPart BARRIER CLBC);
+
+# Pole täiend:
+REMOVE (A sg nom) (NOT 0 NudTud) (1 Adj)(NOT *1 Nom BARRIER CLB) (NOT *-1 PrVerb BARRIER CLB);
+# _kuulus_ viimasesse kategooriasse
+REMOVE (A pl in) (NOT *1 SPPlIn BARRIER CLB);
+REMOVE (A sg in) (NOT *1 SPSgIn BARRIER CLB);
+# Ja loomu poolest _jumekas_ nägu
+
+REMOVE (A el) (NOT *1 SPEl BARRIER CLB)(NOT *-1 SPEl BARRIER CLB);
+REMOVE (A abl) (NOT *1 Abl BARRIER CLB);
+# ta astus _aeglaselt_
+REMOVE (A adit) (NOT *1 SPAdt BARRIER CLB);
+# tal oli haavand _parema_ jala pahkluu kohal.
+REMOVE (A all) (NOT *1 All BARRIER CLB);
+REMOVE (A ill) (NOT *1 Ill BARRIER CLB);
+REMOVE (A ad) (NOT *1 Ad BARRIER CLB);
+REMOVE (A term) (NOT *1 Ter BARRIER CLB)(NOT *-1 Ter BARRIER CLB);
+
+REMOVE (A sg gen) (NOT *1 SP BARRIER CLB)(NOT *-1 Gen BARRIER CLB)(NOT *1 Es BARRIER CLB);
+# See töötas parematel aegadel _harva_.
+REMOVE (A sg gen) (*1C nppiir BARRIER SP OR CLB)(NOT *-1 Gen BARRIER CLB);
+
+REMOVE (A sg gen) (1 DaInf)(*-1 FinV BARRIER Subst OR CLB);
+# Tal oli _võimatu_ hoiduda kaasa minemast.
+
+
+REMOVE (A sg nom) (0 SPNSgNom)(-1 ("nagu"))(NOT *1 Subst BARRIER CLBC);
+# Ta istus vaikselt nagu _hiir_.
+
+# Käändumatu omadussäna
+REMOVE (A) (NOT 0 Sg)(NOT 0 Pl)(*1 nppiir BARRIER Subst OR CLB)
+             (NOT *-1 PrVerb BARRIER CLB);
+REMOVE (A) (NOT 0 Pl)(NOT 0 Sg)(1C Adj);
+# päris väimatu
+REMOVE (A) (NOT 0 Pl)(NOT 0 Sg)(1C (P dem));
+# umbes sel kellaajal
+
+
+# MUU
+LIST Omad&Ases = A "sama" "kumb" "samane" "mingi" "mingisugune" 
+	 "mitmes" "samasugune" "niisugune" "niisamasugune" "seesugune" 
+	 "selline" "säärane" "taoline" "selletaoline" "seesinane"
+	 "säherdune" "missugune" "milline" "iga" "mäherdune" 
+	 "ükski" "mõni" "mõningane" "mõningas" "misuke" "mihuke" 
+	 "see" "too" "sama" "seesama" "toosama" "kõik" "kumbki" 
+         "mõlema" "emb-kumb" "miski" "palju" "teine" "üks" "muu";
+
+REMOVE (A pl nom) (NOT *1 SPPlNom BARRIER CLB)
+                    (*-1 SPPlNom BARRIER Sid|Kvm OR CLB)
+                    (NOT *-1 PrVerb BARRIER CLB)(NOT *1 PrVerb BARRIER CLB);
+# silmad _saadavad_ sind igale poole
+
+LIST Oma = "oma";
+LIST Partic = partic;
+LIST Neg = neg ;
+LIST Imper = imper;
+LIST Imps = imps ;
+LIST InAd = in ad;
+LIST Main = main;
+LIST AdjSgGen = (A sg gen);
+LIST AdjSgNom = (A sg nom);
+LIST Adt = adit;
+LIST NotAP = S V D N K "oma" I;
+
+SELECT (A comp) (-1 ("palju"));
+
+SELECT (gen) (0 Omad&Ases) (NOT 0 Oma) (1C NimiAse + NiNaTaGa);
+REMOVE (A) (NOT 0 Tr) (1C Verb) (NOT 1 Partic) (NOT 1 DaInf)
+             (NOT 1 PrVerb) (NOT -1 Subst);    
+REMOVE (A) (NOT 0 Tr) (NOT *1 NimiAse BARRIER CLB) (NOT *-1 NimiAse BARRIER CLB) 
+             (*1 Verb BARRIER CLB) (NOT *-1 PrVerb BARRIER CLB) (NOT *1 PrVerb BARRIER CLB);
+REMOVE (A) (NOT 0 Tr) (NOT *1 NimiAse BARRIER CLB) (NOT *-1 NimiAse BARRIER CLB) 
+             (*-1 Verb BARRIER CLB) (NOT *-1 PrVerb BARRIER CLB) (NOT *1 PrVerb BARRIER CLB);
+
+REMOVE (gen) (0 SubPron) (NOT 1 Nominal) (NOT *1 Nom BARRIER CLBC) (NOT *-1 Nom BARRIER CLBC) 
+             (NOT *-1 Neg BARRIER CLBC) (NOT *1 Imper BARRIER CLBC)(NOT *-1 Imper BARRIER CLBC) 
+             (NOT *1 Ole BARRIER CLBC)(NOT *-1 Ole BARRIER CLBC)  
+             (NOT *1 Imps BARRIER CLBC) (NOT *-1 Imps BARRIER CLBC) ;
+REMOVE (gen) (0 SubPron) (NOT 1 Nominal) (NOT *1 Nom BARRIER CLBC) (NOT *-1 Nom BARRIER CLBC)
+             (NOT *-1 Neg BARRIER CLBC) (NOT *1 Imper BARRIER CLBC)(NOT *-1 Imper BARRIER CLBC) 
+             (*1 Ole BARRIER InAd OR CLBC)  
+             (NOT *1 Imps BARRIER CLBC) (NOT *-1 Imps BARRIER CLBC); 
+
+SELECT (nom) (NOT 0 NotNominal)(NOT 1 Nominal)(NOT 0 InAdAll)
+             (*1 Ole + Main ^ Neg BARRIER CLBC LINK *1C SPNom BARRIER Kvm OR CLBC);
+SELECT (nom) (NOT 0 NotNominal)(NOT 1 Nominal) 
+             (*-1C Ole + Main ^ Neg BARRIER CLBC LINK *-1C SPNom BARRIER Kvm OR CLBC)(NOT *1 Nom BARRIER CLBC); 
+
+SELECT (sg nom) (0 Subst) (NOT 0 NotS) (-1 Ole) (NOT 1 Nominal) 
+                (NOT *-1 Nom BARRIER CLBC) (NOT *1 Nom BARRIER CLBC)
+                (NOT *-1 Neg BARRIER CLBC) (NOT *-1 InAd BARRIER CLBC);
+
+REMOVE (S) (0 AdjSgGen) (1C Subst + SgGen) ;
+REMOVE (S) (0 AdjSgNom) (1C Subst + SgNom)(NOT 1 Pärisnimi);
+
+REMOVE (A adit) (NOT *1 (adit) OR (ill) BARRIER CLBC);          
+REMOVE (A adit) (NOT *1 NimiAse BARRIER CLBC);          
+
+# 20) Omadussõnade konjunktsioon
+
+# viga tekib : ühe ja sama ...
+
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1 Konj) (2 Omad&Ases + SgNom);  
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (1 Konj) (2 Omad&Ases + SgGen);
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (1 Konj) (2 Omad&Ases + SgPart);
+# siin on eelmised 3 vastupidi 
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP)   
+                (-1 Konj) (-2 Omad&Ases + SgNom);   
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (-1 Konj) (-2 Omad&Ases + SgGen);
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (-1 Konj) (-2 Omad&Ases + SgPart);
+
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP)(1 Konj) (2 Partic)
+                (3C Subst + SgNom) ;
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP)(1 Konj) (2 Partic) 
+                (3C Subst + SgGen);
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP)(1 Konj) (2 Partic) 
+                 (3C Subst + SgPart);
+
+# "kui ka" konjunktsiooni asemel
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                (3C Omad&Ases + SgNom) ;
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                (3C Omad&Ases + SgGen) ; 
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                 (3C Omad&Ases + SgPart) ; 
+
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1 ("kui"))(2 ("ka")) (3 Partic) 
+                (4C Subst + SgNom);
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1 ("kui))(2 ("ka")) (3 Partic) 
+                (4C Subst + SgGen); 
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP)
+                 (1 ("kui"))(2 ("ka")) (3 Partic) 
+                 (4C Subst + SgPart) ;
+# eelmised mitmuses
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1 Konj) (2 Omad&Ases + PlNom) ;
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (1 Konj) (2 Omad&Ases + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (1 Konj) (2 Omad&Ases + PlPart) ;
+# siin on eelmised 3 vastupidi 
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP)   
+                (-1 Konj) (-2 Omad&Ases + PlNom) ;  
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (-1 Konj) (-2 Omad&Ases + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (-1 Konj) (-2 Omad&Ases + PlPart) ;
+
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP)   
+                (1 Konj) (2 Partic) 
+                (3C Subst + PlNom) ;
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (1 Konj) (2 Partic)  
+                (3C Subst + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP) 
+                 (1 Konj) (2 Partic) 
+                 (3C Subst + PlPart) ;
+
+# "kui ka" konjunktsiooni asemel
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                (3C Omad&Ases + PlNom) ;
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                (3C Omad&Ases + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP) (1 ("kui"))(2 ("ka")) 
+                 (3C Omad&Ases + PlPart) ;
+
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP)   
+                (1 ("kui"))(2 ("ka")) (3 Partic) 
+                (4C Subst + PlNom) ;
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1 ("kui"))(2 ("ka")) (3 Partic) 
+                (4C Subst + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP) 
+                 (1 ("kui"))(2 ("ka")) (3 Partic) 
+                 (4C Subst + PlPart) ;
+
+
+# 21) Omadussõna määramine järgmise nimisõna järgi
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1C Nominal + SgNom) ;
+SELECT (sg gen) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1C Nominal + SgGen) ;
+SELECT (sg part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (1C Nominal + SgPart) ;
+
+SELECT (pl nom) (0 Omad&Ases) (NOT 0 NotAP) 
+                (1C Nominal + PlNom) ;
+SELECT (pl gen) (0 Omad&Ases) (NOT 0 NotAP)  
+                (1C Nominal + PlGen) ;
+SELECT (pl part) (0 Omad&Ases) (NOT 0 NotAP)  
+                 (1C Nominal + PlPart) ;
+
+SELECT (A sg part) (0 (quot pres ps)) (1C SPSgPart);
+# Naabrinaine olevat oma silmaga näinud _lendavat_ taldrikut.
+
+SELECT (sg nom) (0 Omad&Ases) (NOT 0 NotAP) (NOT 1 SP + Pl) 
+                (*-1 PrVerb BARRIER CLB)(NOT *1 Nom BARRIER CLB) (NOT *-1 Nom BARRIER CLB) ;
+
+
+
+# 23) Verbide konjunktsioon
+SELECT (V inf) (-1 Konj) (-2C Verb + DaInf);
+SELECT (V inf) (1 Konj) (2C Verb + DaInf);
+SELECT (V sg ps3) (-1 Konj) (-2 (V ps3 sg));
+SELECT (V sg ps3) (1 Konj) (2 (V ps3 sg));
+SELECT (V ps1) (-1 Konj) (-2C (V ps1));
+SELECT (V ps1) (1 Konj) (2C (V ps1));   
+SELECT (V ps2) (-1 Konj) (-2C (V ps2));
+SELECT (V ps2) (1 Konj) (2C (V ps2));     
+SELECT (V pl ps3) (-1 Konj) (-2 (V ps3 pl));
+SELECT (V pl ps3) (1 Konj) (2C (V ps3 pl));
+
+
+# 24) Valik nimi- ja omadussõna sõnaliigi vahel     MUUDETUD
+LIST SubstAdj = S A;
+LIST Ab = abes ;
+LIST NotAS = P D V J N K I;
+LIST MuutVerb = "muutu" "saa" "osutu" "muundu" "pane" "mine" "teisendu";
+LIST KuhuMilleks = ill adit term tr all;
+
+REMOVE (S) (0 Omad&Ases) (0 Part) (1 Part) (1C SubstAdj) 
+             (NOT -1 Nominal)(NOT 0 El); 
+REMOVE (S) (0 Omad&Ases) (0 El) (1 El) (1C SubstAdj);
+REMOVE (S) (0 Omad&Ases) (0 Tr) (1 Tr) (1C SubstAdj);
+REMOVE (S) (0 Omad&Ases) (0 Ab) (1 Ab) (1C SubstAdj);
+
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Nom) (NOT -1 Pron)
+             (*1 PrVerb BARRIER CLB LINK NOT *1 Partic BARRIER CLB)(NOT *1 Nom BARRIER CLB)(NOT 1 Subst);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Nom) (NOT -1 Pron)
+             (*-1 PrVerb BARRIER CLB OR Partic)(NOT *1 Partic BARRIER CLB)
+             (NOT *-1 Nom BARRIER CLB)(NOT 1 Subst);
+
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Tr) 
+             (*1 MuutVerb) (NOT 1 KuhuMilleks)(NOT 1 Subst);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Tr) 
+             (*-1 MuutVerb) (NOT 1 KuhuMilleks)(NOT 1 Subst);
+
+# -------------------------------------------------------------
+# selles peavad tegelikult käänded sobima!!!
+SELECT (A sg nom) (0 Subst) (NOT 0 NotAS)(1C SubstAdj) (1C SgNom)
+                    (NOT 1 Pärisnimi);
+SELECT (A sg gen) (0 Subst) (NOT 0 NotAS) (NOT 1 Pärisnimi) 
+                    (1C SubstAdj) (1C SgGen);
+SELECT (A sg part) (0 Subst) (NOT 0 NotAS) (NOT 1 Pärisnimi) 
+                     (1C SubstAdj) (1C SgPart);
+SELECT (A) (0 Subst)(NOT 0 NotAS) (0 Ill)(1C SubstAdj) (1 Ill);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 In)(1C SubstAdj) (1 In);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 El)(1C SubstAdj)(1 El);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 All)(1C SubstAdj)(1 All);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Ad)(1C SubstAdj) (1 Ad);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Abl)(1C SubstAdj) (1 Abl);
+SELECT (A) (0 Subst) (NOT 0 NotAS) (0 Gen)(1C SubstAdj) (1 NiNaTaGa);
+
+SELECT (A pl nom) (0 Subst) (NOT 0 NotAS)(1C SubstAdj) (1 PlNom);
+SELECT (A pl gen) (0 Subst) (NOT 0 NotAS) (NOT 1 Pärisnimi) 
+                    (1C SubstAdj) (1 PlGen);
+SELECT (A pl part) (0 Subst) (NOT 0 NotAS) (NOT 1 Pärisnimi) 
+                     (1C SubstAdj) (1 PlPart);
+# ---------------------------------------------------------
+
+REMOVE (A) (0 Subst)(NOT 0 NotAS)(NOT -1 ("mis" nom) OR ("kui"))(NOT *1 Subst BARRIER CLB) (NOT 0 Tr) 
+             (NOT 0 Partic) (*-1 Verb BARRIER CLB)(NOT *-1 PrVerb BARRIER CLB);
+# VIGA: irvitas ja lõõpis mis _hull_
+REMOVE (I) (NOT -1 <<<)(NOT -1 Kvm) (NOT 1 Kvm) (NOT 1 ("nii")) (NOT 1 ("et"));
+
+
+REMOVE (V) (-1 Adj + PlNom)
+             (0 Subst + PlNom);
+# alandavad _kompleksid_
+
+# Verb contra nimisäna. Uued ja kontrollimata
+REMOVE (S sg in) (0 FinV ^ Partic)(NOT *1 FinV BARRIER CLB)(NOT *-1 FinV BARRIER CLB)
+                   (-1 Part);
+# kes auklikku asfalti _tallas_, kuulus ...
+# Aga: Mitte aega ei otsi ma, vaid iseennast _ajas_
+
+REMOVE (S sg nom) (0 FinV ^ Partic)(NOT *-1 FinV BARRIER CLBC)(NOT *1 FinV BARRIER CLBC)
+                    (*-1C SPNSgNom BARRIER CLBC)(NOT -1 SgNom);
+
+REMOVE  (S) (0 Verb)(NOT 0 Imper)(1 Koma)(2 KesMis)(NOT *3 Koma)
+              (*-1 CLB BARRIER FinV);
+# ta _teadis_, mida oli vaja teada.
+REMOVE  (S) (0 Verb)(NOT 0 Imper)(1 Koma)(NOT *-1 FinV BARRIER CLB)(NOT *1 FinV BARRIER CLB);
+# ta _teadis_, ent vaikis otsustavalt.
+
+LIST Sg3Verb = (V ps3 sg);
+LIST InDefPron = (P indef);
+LIST PersPron = (P pers);
+
+# Heuristilistest välja tästetud:
+SELECT (S nom) (NOT 0 NotS)(NOT 0 Gen)(-1C Omad&Ases + Nom);
+SELECT (S sg nom) (NOT 0 NotS)(*-1 PrVerb + Sg3Verb ^ Ole BARRIER CLB)  
+                 (NOT *-1 Neg BARRIER CLB) (NOT *1 Nom BARRIER CLB) (NOT *-1 Nom BARRIER CLB);
+SELECT (S gen) (NOT 0 NotS)(1C Omad&Ases) (2C Subst) (*-1 Nom BARRIER CLB);
+
+SELECT (A) (-1 ("väga"))(NOT 0 Adv);
+
+REMOVE (adit) (1C In)(NOT *1 Ill BARRIER CLBC);
+REMOVE (A) (-1 InDefPron)(NOT *1 Subst BARRIER CLB);
+# .. polnud mingi pummeldaja
+REMOVE (A) (1C PersPron)(NOT 1 Gen);
+REMOVE (A partic) (0 NudTud) (NOT 0 Tr) 
+                    (NOT *-1 SP BARRIER CLB)(NOT *1 SP BARRIER CLB)(NOT *-1 Verb BARRIER CLB)(NOT *1 Verb BARRIER CLB);
+# kätte jäudnud nii, et ...
+REMOVE (A) (*-1C AdjSgNom BARRIER Ja OR CLB)
+             (NOT *-1 Subst BARRIER CLB)(NOT *1 Subst BARRIER CLB);
+# Aeg-ajalt oli väimalik oma viha ka meelevaldselt sinna väi tänna suunata.
+SELECT (V ps3 sg) (-2 Sg3Verb)(-1 Ja);
+# petus ja kuulis
+SELECT (V ps3 pl) (*-1C PersPron + PlNom BARRIER CLBC);
+# mistättu nad läppude läpuks tungisid ise templisse
+
+SELECT (S pl nom) (1 Ja)(2C SPPlNom);
+# silmad ja kärvad
+SELECT (gen) (1 Ja)(2C Gen)(*3 nppiir BARRIER Subst);
+
+LIST AdjPlNom = (A pl nom);
+LIST AdjPl = (A pl);
+LIST DemPron = (P dem);
+
+SELECT (P dem sg gen) (1C AdjSgGen);
+SELECT (V partic past) (NOT *1 FinV)(NOT *-1 FinV);
+REMOVE (V partic past) (-2 AdjPlNom)(-1 Koma)(1 SPPlNom);
+REMOVE (V partic past) (-2 AdjPl + Ad)(-1 Koma)(1 SPPl + Ad);
+SELECT (V main imper pres sg ps2) (-1 <<<)(1 Koma)(2 ("kas"));
+SELECT (V sg) (0C FinV)(-1 Side)(NOT *1 SPPl)
+                (*-1C FinV + Sg) ;
+REMOVE (S adit) (1C Adj)(1C Ill);
+REMOVE (A <nud>) (1C DemPron);
+REMOVE (A <tud>) (1C DemPron);
+REMOVE (S <v> abl);
+LIST SPSgIll = (_S_ sg ill) (_P_ sg ill) (_S_ sg adit) (_P_ sg adit);
+LIST ühendav = "läbi" "valmis" "üle" "üles" "alla" "ette" "järele";
+LIST GP = gen part;
+LIST Pl3Verb =(V ps3 pl);
+LIST Pps3 = (P ps3) "see";
+LIST NaguKui = "nagu" "kui" "otsekui" "justkui" "nii" "nõnda" "just" "niisamuti" "niisama";
+REMOVE (P dem adit) (NOT *1 SPSgIll BARRIER CLBC)(1C Subst);
+SELECT (S sg nom) (*1C ("ise" sg part) BARRIER CLB)(NOT *-1 SPSgNom BARRIER CLB)(NOT *1 SPSgNom BARRIER CLB);
+SELECT (A sg all) (*1C nppiir BARRIER Subst + Sg + All OR Ja OR CLB);
+SELECT (V) (NOT *-1 Verb BARRIER CLB)(NOT *1 Verb BARRIER CLB)(*1C Adv + ühendav BARRIER CLB);
+SELECT (V) (NOT *-1 Verb BARRIER CLB)(NOT *1 Verb BARRIER CLB)(-1C Adv + ühendav BARRIER CLB);
+
+
+# UUED
+
+# subjekti ja verbi ühildumine:  (peaks lisama, et pole kaassänu jne)
+REMOVE (S sg nom) (0 GP) (*-1C Pl3Verb ^ Imper BARRIER NaguKui OR CLBC) 
+                    (NOT 1 Konj)(NOT -1 Konj);
+REMOVE (S pl nom) (0 GP) (*-1C Sg3Verb BARRIER CLB LINK NOT *-1 Pps3 BARRIER CLB)
+                         (NOT *-1C Pl3Verb BARRIER CLB)(NOT *-1C Pl3Verb BARRIER CLB);
+REMOVE (S sg nom) (0 GP) (*1C Pl3Verb ^ Imper BARRIER CLB)(NOT 1 Konj)(NOT -1 Konj);
+REMOVE (S pl nom) (0 GP) (*1C Sg3Verb BARRIER CLB) (NOT *1 Imps BARRIER CLB) (NOT *-1 Imps BARRIER CLB);
+
+# Sai kõvasti _tööd_ tehtud.
+
+REMOVE (S gen) (1 Kvm) (2 >>>) (*-1C SPPart BARRIER CLB LINK NOT -1 Prep);
+SELECT (S pl nom) (NOT 0 Pron) (*-1C Pl3Verb BARRIER CLB) (NOT *-1 Ei BARRIER CLB) 
+                 (NOT *1 SPNom BARRIER CLB) (NOT *-1 SPNom BARRIER CLB) 
+                 (NOT *1 SPPart BARRIER CLB) (NOT *-1 SPPart BARRIER CLB);
+# (NOT 0 Pron)
+SELECT (S sg nom) (*1C Sg3Verb BARRIER SPPart) 
+                 (NOT *-1 Ei)(NOT *1 SPNom) (NOT *-1 SPNom) (NOT *-1 SPPart);
+SELECT (S pl nom) (*1C Pl3Verb BARRIER SPPart) 
+                 (NOT *-1 Ei)(NOT *1 SPNom) (NOT *-1 SPNom) (NOT *-1 SPPart);
+
+
+#SELECT (S adit) (*-1 AditVerb BARRIER CLB) (NOT *1 Adt + SP BARRIER CLB)(NOT *-1 Adt + SP BARRIER CLB)
+#	(NOT -1 (pre <part>));
+#SELECT (S adit) (*1 AditVerb BARRIER CLB) (NOT *1 Adt + SP BARRIER CLB)(NOT *-1 Adt + SP BARRIER CLB)
+#        (NOT -1 (pre <part>));
+# Ma olen _pulma_ kutsutud.
+
+REMOVE (A pos) (*1 Ole BARRIER SP OR CLB) (NOT *1 SPNom BARRIER CLB)(NOT *-1 SPNom BARRIER CLB);
+
+# _Trammis_ oli palju inimesi. ei kehti, see väib ikkagi olla predikatiiv.
+
+# VERS6
+
+REMOVE (A) (*1 Ole BARRIER CLB)(NOT *1 SPNom BARRIER CLB) (NOT *-1 SPNom BARRIER CLB) (NOT 0 NudTud);
+# _Trammis_ oli palju inimesi.
+
+REMOVE (A <mata>) (NOT *-1 Ole) (NOT *1 SP);
+
+
+REMOVE (A <mata>) (NOT *-1 Ole) (*1 SP BARRIER Partic OR Adj OR Konj);
+#SELECT (A <mata>) (*1 SP BARRIER NotPartic1|Adj|Konj);
+#SELECT (V <mata>);
+
+
+"<poolt>" SELECT (D) (-1 Abl) (NOT 0 Abl);
+# teiselt _poolt_
+
+
+SELECT (S gen) (-1C (ord) + Gen);
+
+#LIST AditVerb = ("kutsu" V) "mine" ("sõit" V) ("jää" V) "torma" "kihuta" "võt" ("vii" V);
+LIST Adit_Verb = "pane" "mine" "kogune" "vii" ("jõud" V) "saat" "võt" "saa";
+
+REMOVE (adit) (0 Nominal) (1C Subst) (NOT 1 Adt) (NOT 1 In) 
+              (NOT *1 Adit_Verb BARRIER CLB) (NOT *-1 Adit_Verb BARRIER CLB);
+# _teise_  preemia saanud töö
+
+
+REMOVE (S nom) (NOT 0 Pärisnimi) (-1C Subst + Nom);
+# Leo _käis_ (S, V) koolis (S, V) aasta ringi ...
+
+SELECT (V ps3) (NOT -1 Kvm)(*1C SPPlNom BARRIER CLBC);
+# ... , lagunevad aiamyyrid igasse kylge vajumas
+
+SELECT (A) (0 NudTud) (*-1C FinV ^ Partic) (NOT *-1 Ole BARRIER CLB) (NOT *1 Ole BARRIER CLB);
+# Regedele, kus ohje hoidsid soojades kasukates, söönud mehed.
+
+SELECT (ps3) (-1 Konj) (*-2C (V past sg p3) BARRIER Kvm);
+# ... tagusid ... väi virutasid ...
+
+SELECT (S gen) (0 Ajamäärus) (1 Ajamäärus);
+# _neljapäeva_ hommikul
+LIST MinePane = "pane" "mine";
+LIST VerbiAdv = "ära" "läbi" "maha";
+"<kokku>" SELECT (D) (*1 MinePane BARRIER CLB);
+"<kokku>" SELECT (D) (*-1 MinePane BARRIER CLB);
+# kokku panema, minema
+
+"<lõpuks>" SELECT (D);
+REMOVE (S tr) (0 Adj);
+
+SELECT (P det sg gen) (1 Gen) (2 SubstSgCo);
+# _iga_ paari tunni takka ...
+
+SELECT (<FinV>) (NOT *-1 FinV BARRIER CLB) (NOT *-1 FinV BARRIER CLB) (*1 VerbiAdv BARRIER CLB);
+SELECT (<FinV>) (NOT *-1 FinV BARRIER CLB) (NOT *-1 FinV BARRIER CLB) (*-1 VerbiAdv BARRIER CLB);
+# ..., aga veri _pressis_ ikka läbi
+# VerbiAdv "ära" "läbi" "maha"
+LIST Sina =("sina" sg);
+LIST Teie =("sina" pl);
+LIST Tema =("tema" sg);
+SELECT (V ps2) (-1 Jutum1) (1 Koma) (2 Sina);
+SELECT (V ps2) (-1 Jutum1) (1 Koma) (3 Sina);
+# "_Kuule_, sa jooksed ...
+
+SELECT (V ps2) (-2 Jutum1) (-1 (I)) (1 Koma);
+SELECT (V ps2) (-2 Jutum1) (-1 (I)) (1 Koma);
+# No, kuule ...
+
+SELECT (V indic impf ps3 sg) (1 Part); #(0 Part-P) (1 Part))
+# kaasaelamistunne _haaras_ Kõiki
+
+SELECT (V indic impf ps3 sg) (NOT *-1 FinV BARRIER CLB) (NOT *-1 FinV BARRIER CLB) (-1 SPSgNom) ;
+# ajakirjanik _haaras_ kellanupust
+
+SELECT (S gen) (NOT 0 NotS)(NOT 0 Nom) (NOT 0 Verb)(NOT 0 Oma) (1C Subst);
+# ... ja tämbas _tualettruumi_ ukse ...
+
+REMOVE (D) (-1 Oma);
+
+# viimane
+"<otsa>" SELECT (D) (-1 ("kõik"));
+SELECT (<FinV>) (-1 KesMis) (-1 CLB);
+
+REMOVE (<FinV>) (NOT 0 (quot) OR (cond))
+                (*-1 FinV ^ Imper BARRIER CLBC LINK NOT *-1 Konj&Kvm);
+# Tema häälest kälas peale _siira_ hoiatuse ka pisukest solvumist.
+
+SELECT (P) (0 ("üks")) (*2 ("teine") BARRIER CLB);
+SELECT (P) (0 ("teine")) (*-2 ("üks") BARRIER CLB);
+"<kord>" SELECT (D) (1 ("üks")) (*2 Koma BARRIER CLB LINK 1 ("kord")) ;
+"<kord>" SELECT (D) (-1 Koma) (*-2 ("üks") BARRIER CLB LINK -1 ("kord"));
+# Sanitar vaatas kord ühe, kord teise poole.
+
+"<korraks>" IFF (D) (NOT -1 Tr) ;
+"<kord>" SELECT (D) (-1 Ole)(1 Adv) ;
+
+# VIIMASED
+
+SELECT (S nom) (-1C Nom) (NOT -1 Subst)(NOT -1 (inter) OR (dem))(NOT 0 Gen) (NOT 0 Adj);
+SELECT (S nom) (NOT 0 Side)(NOT 0 Pron)(NOT 0 Adj)(-1C Nom) (NOT -1 Subst) (NOT 1 Nominal);
+# esimene osa (eelmine on A, P, N nimetavas)
+
+SELECT (A nom) (-1 Konj&Kvm) (1 Konj&Kvm) 
+                 (-2C Adj + Nom)(2 Adj + Nom);
+SELECT (A nom) (-1 Konj&Kvm) (1 Subst + Nom) (-2 Adj + Nom);
+# ... uhked, tugevad(V) ja va"rvitud(V) saanid
+
+"<talle>" REMOVE (S) (NOT *-1 Liikumis_Verb BARRIER CLB) (NOT *1 Liikumis_Verb BARRIER CLB);
+# ... tegime talle kohe tagasi.
+
+"<vahel>" REMOVE (S) (NOT -1 Konj&Kvm);
+# vahel ja"i inimesi kaduma
+
+"<jah>" REMOVE (I) (NOT 1 (Exc) OR (Int));
+
+SELECT (D) (-1 ("kui"));
+# ("kui") palju(S) oli siis r66me!
+
+# ===================================================================
+# PIIBEL
+# ===================================================================
+
+# Piibel
+SELECT (V indic pres ps2 sg ps) (-1 JaNing) 
+		(*-1C (sg ps2 indic pres) BARRIER Verb&Kvm);
+SELECT (V indic pres ps2 sg ps) (*1C (sg indic pres ps2) BARRIER Verb&Kvm LINK -1 JaNing);
+# Piibel
+SELECT (V indic impf ps2 sg ps) (-1 Konj)(*-1C (sg ps2 indic impf) BARRIER Verb&Kvm);
+SELECT (V indic impf ps2 sg ps) (*1C (sg ps2 indic impf) BARRIER Verb&Kvm LINK -1 JaNing);
+SELECT (V indic impf ps3 pl ps) (-1 Konj) (*-1C (pl ps3 indic impf) BARRIER Verb&Kvm);
+SELECT (V indic impf ps3 pl ps) (*1C (pl ps3 indic impf) BARRIER Verb&Kvm LINK -1 JaNing);
+
+# et ta lõpetaks piiramise ja tuleks kiiremas korras _Ptolemaisi_ temaga kohtuma.
+REMOVE:intr (part) (0C SP)(*-1C (FinV + Intr) ^ Partic) 
+			(NOT *1 Intr BARRIER CLB)(NOT *-1 Intr BARRIER CLBC);
+REMOVE (gen) (0C SP)(*-1C (FinV + Intr) ^ Partic)  
+			(NOT *1 Intr BARRIER CLB)(NOT *-1 Intr BARRIER CLBC);
+
+# Piibel
+# läks ja otsekohe tuli Ptolemaisi
+REMOVE (part) (0C SP)(-1C FinV ^ Partic)(-1C Intr);
+
+# siis hakkas Jeesus hirmutama _neid_ lindu
+REMOVE (S com sg nom) (0C SP)(-1C Verb) (-2C SPNom) (NOT 1 Nom);
+
+# et _ta_ lõpetaks piiramise ja tuleks kiiremas korras Ptolemaisi temaga kohtuma.
+SELECT (nom) (0C SP)(1C FinV + NGP-P ^ Partic)(2C SPGen);
+SELECT (nom) (0C SP)(1C FinV + Part-P ^ Partic)(2C SPPart);
+
+
+# ===================================================================
+
+#HEURISTIC-DISAMBIGUATION-CONSTRAINTS
+
+# ===================================================================
+
+#Contra ... mis oli nii ebaloomulik, et lapski oleks sellest aru saanud, aga
+#;       samas küllalt _veenev_, et ...
+REMOVE (A sg nom) (*1 FinV BARRIER SP OR CLB LINK -1 Koma)
+                    (NOT *-1 PrVerb BARRIER CLB)(NOT *-1 Nom BARRIER CLB)
+                    (NOT -1 ("väga"));
+# ..., et _koputaja_, olgu ta ...
+
+"<näiteks>" SELECT (D);
+
+# Teine
+LIST Teine = ("teine");
+LIST Pool = ("pool");
+SELECT (P) (0 Teine)(1 Pool)(1C Subst);
+SELECT (P) (0 Teine)(1 Pool)(NOT 0 Gen);
+SELECT (N sg) (0 Teine)(0C Nom)(1C SgNom);
+SELECT (N sg) (0 Teine)(0C Gen)(1C SgGen);
+SELECT (N sg) (0 Teine)(0C Part)(1C SgPart);
+SELECT (N sg) (0 Teine)(0C Ill)(1C Ill)(1C Sg);
+SELECT (N sg) (0 Teine)(0C In)(1C In)(1C Sg);
+SELECT (N sg) (0 Teine)(0C El)(1C El)(1C Sg);
+SELECT (N sg) (0 Teine)(0C All)(1C All)(1C Sg);
+SELECT (N sg) (0 Teine)(0C Ad)(1C Ad)(1C Sg);
+SELECT (N sg) (0 Teine)(0C Abl)(1C Abl)(1C Sg);
+#SELECT (P) (0 Teine);   # voib olla vigane
+
+# yleval enne 18.10
+
+"<oma>" SELECT (P);
+"<veel>" SELECT (D);
+"<umbes>" SELECT (D);
+"<siin>" SELECT (D);
+"<seal>" SELECT (D);
+"<või>" SELECT (D) (-1 Verb + Imper);
+"<või>" SELECT (J) (NOT 1 Adv) ;
+"<sest>" SELECT (J);
+"<mulle>" SELECT (P);
+"<mina>" SELECT (P);
+"<sina>" SELECT (P);
+"<palju>" REMOVE (P);
+"<neid>" SELECT (P);
+"<peale>" SELECT (D) (NOT -1 SPGen)(NOT *1 SPGen);
+"<kui>" SELECT (D) (1C Adv) (2 FinV ^ Partic);
+"<kui>" SELECT (D) (1C Adj) (2 FinV ^ Partic);
+"<kui>" SELECT (J);
+"<lahti>" SELECT (D);
+"<tuntud>" SELECT (A);
+"<välja>" SELECT (D);
+"<ise>" REMOVE (D);
+
+#Piibel
+LIST Cap = <cap>;
+"<kordagi>" SELECT (D);
+"<kord>" SELECT (D) (-1 CLB)(*1 SPNom);
+"<kord>" SELECT (D) (-1 CLB)(-1 Side)(*1 SPNom);
+"<kord>" SELECT (D) (-1 CLB)(0 Cap)(*1 SPNom);
+"<kord>" SELECT (D) (-2 CLB)(-1 Side)(-1 Cap)(*1 SPNom);
+SELECT (S) (0 ("kord")); # on vigane
+REMOVE (D) (0 ("käsi"));
+"<kohe>" SELECT (D);
+"<talle>" SELECT ("tema");
+"<vist>" SELECT (D);
+REMOVE (S abl) (0 Adv);
+# _vaevalt_ me viisakad välja nägime, kui ... 
+# väibolla see ei ole ikka äige
+
+SELECT (S gen <ja>) (1 Subst)(NOT *-1 PrVerb);
+
+LIST Kriips = (<->);
+SELECT (S gen) (0 Kriips) (1 Side)(2 Subst);
+SELECT (A gen) (0 Kriips) (1 Side)(2 Adj);
+
+LIST Nom&N&D = S P A N D;
+                               
+SELECT (<FinV>) (0 Nom&N&D) (NOT 0 Pärisnimi) (NOT *1 Kvm BARRIER CLB) 
+	(NOT *-1 (<FinV>) OR (partic) BARRIER CLB) (NOT *1 (<FinV>) OR (partic) BARRIER CLB);
+# *1 Kvm aitab pikkade lausete vastu, kus osalaused üksteise sees 
+
+# ===================================================================
+
+# HEURISTIC-DISAMBIGUATION-CONSTRAINTS
+
+# ===================================================================
+
+
+LIST ASPron =  "see" "too" "sama" "seesama" "toosama" 
+	 "kõik" "kumbki" "mõlema" "emb-kumb" "miski" 
+         "palju" "teine" "üks" "muu" ; # Pronid, mis on kord substantiivsed, kord Adjsed   
+# (osa)lauses peab üks verb olema
+SELECT (V <FinV>) (NOT *1 FinV)(NOT *-1 FinV) ;
+
+SELECT (sg nom) (0 Subst) (NOT 0 Adj)(NOT 1 Oma) 
+                (*-1 Sg3Verb ^ (Imps OR Part-K OR Ole) BARRIER CLB)
+                (NOT *1 DaInf BARRIER CLB)(NOT *-1 Konj BARRIER CLB)  
+                (NOT *1 SPSgNom BARRIER CLB) (NOT *-1 SPSgNom BARRIER CLB) ;
+SELECT (S sg gen)(NOT 0 Adj) (1C Subst) (*1C Subst + Nom BARRIER FinV OR CLB) (NOT 1 Pärisnimi) (NOT 1 Cap) ;
+SELECT (S sg gen) (NOT 0 NotS) (1C Subst) (*-1C Subst + Nom BARRIER FinV OR CLB OR (Z)); 
+
+SELECT (nom) (-1C (A nom))(NOT *1 (S nom) BARRIER CLB OR FinV);
+SELECT (S gen) (-1C (A nom))(1C (S nom));
+
+#SELECT (S gen) (1C Subst) (NOT 1 KuhuMilleks) (NOT -1C Subst) 
+#             (NOT *1 Neg BARRIER CLBC)(NOT *-1 Neg BARRIER CLBC)(NOT 1 Pärisnimi) (**-1C Nom BARRIER CLBC);
+
+#SELECT (gen) (0C Subst) (1C Subst) (NOT 1 KuhuMilleks) (NOT -1C Subst) 
+#             (NOT *1 Neg BARRIER CLBC)(NOT *-1 Neg BARRIER CLBC)(NOT 1 Pärisnimi) (*2C Nom BARRIER CLBC);
+
+#REMOVE:kahtlane (part) (0 NimiAse) (NOT 0 ASPron) (NOT *1 Part-P BARRIER CLB)(NOT *-1 Part-P BARRIER CLB) 
+#              (*1C SPNom BARRIER Konj&Kvm OR CLB) 
+#              (NOT *-1 Prep BARRIER CLB)(NOT 1 Partic) ;
+
+# Nominatiivne adjektiiv väib olla predikatiiv
+SELECT (A sg nom) (NOT 0 Subst)(*-1 PrVerb BARRIER CLB LINK -1 SPSgNom)(1 Kvm) ;
+SELECT (A pl nom) (NOT 0 Subst)(*-1 PrVerb BARRIER CLB LINK -1 SPPlNom)(1 Kvm) ;
+SELECT (A pl nom) (NOT 0 Adv)(*-1 PrVerb BARRIER CLB LINK -1 SPPlNom) ;
+
+# Nominatiivne adjektiiv ei saa olla üksi lause lõpus, v.a. erandid
+REMOVE (A sg nom) (*1 CLBC BARRIER SP)(NOT *-1 PrVerb BARRIER CLB)
+                    (*-1 FinV ^ Partic) (NOT -1 ("väga"));
+#Kusjuures _viha_, mida inimesed tundsid ..
+
+
+# nimetava puhul ei tohi veel olla "terve aasta", predikatiivi 
+# ja käskiva kv, tegelikult veel "keegi" ja "miski"
+# *2 selleks, et välistada lisandeid    
+LIST Terve = "terve" "kogu";
+REMOVE (S sg nom) (NOT -1 Terve)(NOT *1 PrVerb BARRIER CLB) (NOT *-1 PrVerb BARRIER CLB) 
+                    (NOT *1 DaInf BARRIER CLB)(NOT *-1 DaInf BARRIER CLB)
+                    (NOT *1 Imper BARRIER CLB) (NOT *-1 Imper BARRIER CLB) 
+                    (*2C SPSgNom ^ (AdjPron OR LisaNom  OR ASPron) BARRIER Konj&Kvm OR CLB 
+                                                                    LINK NOT 1 Postn LINK NOT -2 Terve)
+                    (NOT *1 Vordlus BARRIER CLB)(NOT 1 Ja) ;
+REMOVE (P pers sg nom) (NOT -1 Terve)(NOT *1 PrVerb BARRIER CLB) (NOT *-1 PrVerb BARRIER CLB) 
+                    (NOT *1 DaInf BARRIER CLB)(NOT *-1 DaInf BARRIER CLB)
+                    (NOT *1 Imper BARRIER CLB) (NOT *-1 Imper BARRIER CLB) 
+                    (*2C SPSgNom ^ (AdjPron OR LisaNom  OR ASPron) BARRIER Konj&Kvm OR CLB 
+                                                                    LINK NOT 1 Postn LINK NOT -2 Terve)
+                    (NOT *1 Vordlus BARRIER CLB)(NOT 1 Ja) ;
+
+REMOVE (S) (0 AdjSgNom) (1C Subst + SgNom);
+
+
+# 1) Koordinatsioon
+
+# partitsiip omadussõnaga
+
+SELECT (A sg nom) (0 NudTud) (1 Konj) (2 Omad&Ases + SgNom BARRIER CLB) ;
+SELECT (A sg gen) (0 NudTud) (1 Konj) (2 Omad&Ases + SgGen BARRIER CLB) ;
+SELECT (A sg part) (0 NudTud) (1 Konj) (2 Omad&Ases + SgPart BARRIER CLB) ;
+# siin on eelmised 3 vastupidi 
+SELECT (A sg nom) (0 NudTud) (-1 Konj) (-2 Omad&Ases + SgNom BARRIER CLB)  ;
+SELECT (A sg gen) (0 NudTud) (-1 Konj) (-2 Omad&Ases + SgGen BARRIER CLB) ;
+SELECT (A sg part) (0 NudTud) (-1 Konj) (-2 Omad&Ases + SgPart BARRIER CLB) ;
+
+SELECT (A pl nom) (0 NudTud) (1 Konj) (2 Omad&Ases + PlNom BARRIER CLB) ; 
+SELECT (A pl gen) (0 NudTud) (1 Konj) (2 Omad&Ases + PlGen BARRIER CLB) ;
+SELECT (A pl part) (0 NudTud) (1 Konj) (2 Omad&Ases + PlPart BARRIER CLB) ;
+# siin on eelmised 3 vastupidi 
+SELECT (A pl nom) (0 NudTud) (-1 Konj) (-2 Omad&Ases + PlNom BARRIER CLB) ; 
+SELECT (A pl gen) (0 NudTud) (-1 Konj) (-2 Omad&Ases + PlGen BARRIER CLB) ;
+SELECT (A pl part) (0 NudTud) (-1 Konj) (-2 Omad&Ases + PlPart BARRIER CLB) ;
+
+SELECT (A sg) (0 NudTud) (1 Konj) (2 Omad&Ases + Sg BARRIER CLB)  ;
+SELECT (A pl) (0 NudTud) (1 Konj) (2 Omad&Ases + Pl BARRIER CLB)  ;
+SELECT (A sg) (0 NudTud) (-1 Konj) (-2 Omad&Ases + Sg BARRIER CLB)  ;
+SELECT (A pl) (0 NudTud) (-1 Konj) (-2 Omad&Ases + Pl BARRIER CLB)  ;
+
+# 6) Nimisõnade konjunktsioon
+
+SELECT (S sg nom) (1 Konj)(NOT 1 CLBC) (2C Subst + SgNom BARRIER CLB) (NOT 3 Subst)(NOT 0 NotS);
+#77SELECT (_S_ sg nom) (1 Konj) (2C Subst W)(W SgNom R+1) (R+1 Verb3) CLB)
+SELECT (S sg gen) (1 Konj)(NOT 1 CLBC) (2C Subst + SgGen) (3 Subst BARRIER CLB) ;
+SELECT (S sg part) (1 Konj)(NOT 1 CLBC) (2C Subst + SgPart BARRIER CLB) ;
+# siin on eelmised 3 vastupidi 
+SELECT (S sg nom) (-1 Konj) (-2C Subst + SgNom BARRIER CLB)(NOT 1 Subst)(NOT 0 NotS);
+SELECT (S sg gen) (-1 Konj) (-2C Subst + SgGen BARRIER CLB) (NOT 0 ("Või"));
+SELECT (S sg part) (-1 Konj) (-2C Subst + SgPart BARRIER CLB);
+
+SELECT (S pl nom) (1 Konj) (2C Subst + PlNom BARRIER CLB)  ;
+SELECT (S pl gen) (1 Konj) (2C Subst + PlGen BARRIER CLB) ;
+SELECT (S pl part) (1 Konj) (2C Subst + PlPart BARRIER CLB) ;
+# siin on eelmised 3 vastupidi 
+SELECT (S pl nom) (-1 Konj) (-2C Subst + PlNom BARRIER CLB);
+SELECT (S pl gen) (-1 Konj) (-2C Subst + PlGen BARRIER CLB)  ;
+SELECT (S pl part) (-1 Konj) (-2C Subst + PlPart) (NOT *1C SPPlPart BARRIER CLB);
+
+
+# 89 --
+SELECT (post <gen>) (-1 SPGen) (0 Prep)(NOT 1 Part);
+SELECT (pre <gen>)  (1 Nominal + Gen);
+SELECT (gen) (0 NimiAse) (-1C Preg) ;
+SELECT (pre <part>) (1 Nominal + Part);
+REMOVE (S gen) (NOT 1 Subst)(0 Part)(*-1 Part-P BARRIER CLB) 
+		(NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB) (NOT -1 Preg) (NOT 1 Post);
+REMOVE (S sg nom) (0 Part)(*-1 Part-P BARRIER CLB) 
+		(NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB) (*-1 SPNom BARRIER Konj OR CLB);
+SELECT (V sup ill) (*-1 (<sup> <FinV>) ^ (partic) BARRIER CLB);
+SELECT (V sup ill) (*1 (<sup> <FinV>) ^ (partic) BARRIER CLB);
+SELECT (V inf) (*-1 (<inf> <FinV>) ^ (partic) BARRIER CLB);
+SELECT (V inf) (*1 (<inf> <FinV>) ^ (partic) BARRIER CLB);
+
+SELECT (<FinV>) (NOT 0 ("või")) (0 Nom&N&D) (NOT 0 Pärisnimi) 
+		(NOT *1 Koma OR FinV BARRIER CLB) (NOT *-1 FinV BARRIER CLB);
+SELECT (S sg part) (NOT 0 El) (NOT -1 SgGen) (NOT 0 Adv) (NOT 1 Kvm)
+	(NOT 1 SubstAdj)(*-1 Part-P CBARRIER (part) OR (pl nom) OR CLB) 
+	(NOT *1 (part) OR (pl nom) BARRIER CLB) (NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB);
+SELECT (sg gen) (0 Subst) (NOT 0 NotS) (1C Omad&Ases) (2C Subst) (*1 Nom BARRIER CLB);
+#SELECT (D) (NOT 0 Omad&Ases) (NOT 0 Side) (NOT 1 Arv) (-1 Verb);
+SELECT (S nom) (1 Koma) (2 ("kes")) (2C Nom);
+
+# ===================================================================
+
+# HEURISTIC-DISAMBIGUATION-CONSTRAINTS
+
+# ===================================================================
+LIST On = ("ole" indic pres ps3 ps af);
+"<on>" SELECT (sg) (*-1C On + Sg);
+"<on>" SELECT (pl) (*-1C On + Pl);
+
+# 2) Kaassõnadega reeglid
+
+# Kaassäna ühestamine konteksti järgi
+SELECT (post <gen>) (-1 SPGen) (NOT 0 Prep);
+SELECT (post <gen>) (-1 Oma); 
+
+SELECT (post <part>) (-1 NimiAse + Part);
+IFF (post <nom>) (-1 NimiAse + Nom)(-1 Ajamäärus);
+SELECT (post <kom>) (-1 NimiAse + Kom);
+
+SELECT (pre <gen>)  (1 Nominal + Gen)(NOT 2 Part);
+SELECT (pre <term>) (1 Nominal + Ter);
+SELECT (pre <kom>)  (1 Nominal + Kom);
+SELECT (pre <abes>) (1 Nominal + Ab);
+SELECT (pre <all>)  (1 Nominal + All);
+
+REMOVE:test (pre) (NOT 1 SPN OR Adj OR Adv);# (NOT 1 Nom&N&D);
+REMOVE (K) (NOT 1 Nom&N&D) (NOT -1 Nom&N&D);
+
+REMOVE (pre <gen>) (NOT *1 SPGen BARRIER CLB);
+REMOVE (pre <gen>) (*1C nppiir BARRIER  Gen OR CLB);   
+REMOVE (pre <part>) (NOT *1 SPN + Part BARRIER CLB);
+REMOVE (pre <part>) (*1C nppiir BARRIER Part OR CLB);   
+REMOVE (pre <term>) (NOT *1 Ter BARRIER CLB);
+REMOVE (pre <term>) (*1C nppiir BARRIER Ter OR CLB);
+REMOVE (pre <kom>) (NOT *1 Kom BARRIER CLB);
+REMOVE (pre <kom>) (*1C nppiir BARRIER Kom OR CLB);
+REMOVE (pre <abes>) (NOT *1 Ab BARRIER CLB);
+REMOVE (pre <abes>) (*1C nppiir BARRIER Ab OR CLB);   
+REMOVE (pre <all>) (NOT *1 All BARRIER CLB);
+REMOVE (pre <all>) (*1C nppiir BARRIER All OR CLB);   
+
+LIST CParDash = Cpr Dsh);
+
+REMOVE (post) (NOT -1 SPN)(NOT -1 CParDash); 
+REMOVE (post <nom>) (NOT -1 Nom);  
+REMOVE (post <gen>) (NOT -1 Gen)(NOT -1 Oma);
+REMOVE (post <part>) (NOT -1 Part);  
+REMOVE (post <el>) (NOT -1 El);  
+REMOVE (post <kom>) (NOT -1 Kom);  
+
+SELECT (pre <gen>) (1 Gen) (2 Nominal + Gen);      
+SELECT (pre <part>) (1 Gen) (2 Nominal + Part);
+SELECT (pre <term>) (1 Gen) (2 Nominal + Ter);
+SELECT (pre <kom>) (1 Gen) (2 Nominal + Kom);
+SELECT (pre <abes>) (1 Gen) (2 Nominal + Ab);
+SELECT (pre <all>) (1 Gen) (2 Nominal + All);
+
+SELECT (pre <gen>) (1 Gen) (2 Gen) (3 Nominal + Gen);
+SELECT (pre <part>) (1 Gen) (2 Gen) (3 Nominal + Part);
+SELECT (pre <term>) (1 Gen) (2 Gen) (3 Nominal + Ter);
+SELECT (pre <kom>) (1 Gen) (2 Gen) (3 Nominal + Kom);
+SELECT (pre <abes>) (1 Gen) (2 Gen) (3 Nominal + Ab);
+SELECT (pre <all>) (1 Gen) (2 Gen) (3 Nominal + All);
+
+
+
+# 3) Nimi- väi asesäna käände määramine kaassäna järgi
+SELECT (term) (0 NimiAse) (-1C (pre <term>));
+SELECT (abes) (0 NimiAse) (-1C (pre <abes>));
+SELECT (kom) (0 NimiAse) (-1C (pre <kom>));
+SELECT (all) (0 NimiAse) (-1C (pre <all>));
+SELECT (gen) (0 NimiAse) (-1C (pre <gen>)) ;
+SELECT (part) (0 NimiAse) (-1C (pre <part>));
+
+SELECT (term) (0 NimiAse) (-1 Gen) (-2 (pre <term>));
+SELECT (abes) (0 NimiAse) (-1 Gen) (-2 (pre <abes>));
+SELECT (kom) (0 NimiAse) (-1 Gen) (-2 (pre <kom>));
+SELECT (all) (0 NimiAse) (-1 Gen) (-2 (pre <all>));
+
+SELECT (gen) (0 NimiAse) (-1 Gen)(-1 Adj)(-2 (pre <gen>));
+
+SELECT (part) (0 NimiAse) (NOT 0 Gen) (-1 Gen) (-2 (pre <part>));
+SELECT (part) (0 NimiAse) (0 Gen) (NOT 1 Part) (-1 Gen) (-2 (pre <part>));
+
+SELECT (abes) (0 NimiAse) (-1 (pre <abes>));
+SELECT (term) (0 NimiAse) (-1 (pre <term>));
+SELECT (kom) (0 NimiAse) (-1 (pre <kom>));
+SELECT (all) (0 NimiAse) (-1 (pre <all>));
+SELECT (gen) (0 NimiAse) (-1 (pre <gen>));
+SELECT (part) (0 NimiAse) (-1 (pre <part>));
+
+SELECT (nom) (0 Ajamäärus) (1 (post <nom>));
+SELECT (el) (0 NimiAse) (1 (post <el>));
+SELECT (kom) (0 NimiAse) (1 (post <kom>));
+SELECT (gen) (0 SP) (1 (post <gen>));
+# Viga tekkis: ronis _talle_ järele
+SELECT (part) (0 NimiAse) (1 (post <part>));
+
+SELECT (nom) (0 NimiAse) (1 (post <nom>));
+SELECT (el) (0 NimiAse) (1 (post <el>));
+SELECT (kom) (0 NimiAse) (1 (post <kom>));
+SELECT (part) (0 NimiAse) (1 (post <part>));
+SELECT (gen) (0 NimiAse) (1 (post <gen>));
+
+REMOVE (el) (1 SPSgNom);
+# _Muist_ segu
+
+# UUED
+
+REMOVE (S part) (-1 Adj ^ Part) (NOT -1 NudTud) (NOT -1 Adv);
+
+REMOVE (S gen) (NOT 1 Subst)(0 Part)(*-1 Part-P BARRIER CLB) 
+                 (NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB) 
+                 (NOT -1 Preg) (NOT 1 Post) ;
+REMOVE (S  sg nom) (0 Part)(*-1 Part-P BARRIER CLB) (NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB) 
+                    (*-1 SPNom BARRIER Konj OR CLB);
+# nimisäna ei ole genitiivis ega nominatiivis, kui osaluses vasakul leidub
+# verb, millel on väimalik sihitis partitiiivis ja osalauses pole adverbe
+
+SELECT (V sup ill) (*0 (<sup>  <FinV>) ^ (partic) BARRIER CLB);
+SELECT (V inf) (*0 (<inf> <FinV>) ^ (partic) BARRIER CLB);
+
+SELECT (<FinV>) (NOT 0 ("või")) (0 Nom&N&D) (NOT 0 Pärisnimi) (NOT *1 Koma BARRIER CLB) 
+    (NOT *-1 FinV BARRIER CLB) (NOT *1 FinV BARRIER CLB);
+
+SELECT (S sg part) (NOT 0 El) (NOT -1 SgGen)(NOT 0 Adv) (NOT 1 Subst)
+                  (*-1 Part-P CBARRIER (part) OR (pl nom) OR CLB)
+                  (NOT *1 (part) OR (pl nom) BARRIER CLB) 
+                  (NOT *-1 Adv BARRIER CLB) (NOT *1 Adv BARRIER CLB);
+# nimisäna on partitiivis, kui osaluses vasakul leidub verb,
+# millel on väimalik sihitis partitiiivis ja osalauses pole adverbe ning
+# verbist paremal ei ole rohkem sänu partitiivis ega mitmuse nominatiivis.
+# Üliäpilane kirjutab _väitekirja_(adit, gen, part).
+# not 0 el  -  v6ttis pakist
+# not -1 gen  - v6ttis sydame rindu
+                                  
+SELECT (sg gen) (0 Subst) (NOT 0 NotS) (1C Omad&Ases) (2C Subst) (*1 Nom BARRIER CLB)  ;
+
+SELECT (D) (NOT 0 Omad&Ases) (NOT 0 Side) (NOT 1 Arv)(-1C Adv);
+SELECT (D) (NOT 0 Omad&Ases) (NOT 0 Side)(NOT 1 Arv) (-1 Verb);
+
+REMOVE (A pos) (*-1 Ole BARRIER CLB) (NOT *1 SP BARRIER CLB) (NOT *-1 SPNom BARRIER CLB);
+
+
+
+
+#SYNTACTIC
+
+
+LIST AspAdv ="ära" "valmis";
+
+SELECT (S gen) (*-1 NGP-P BARRIER CLBC) (*1 AspAdv BARRIER CLBC);
+# nimisäna on genitiivis ega nominatiivis, kui osaluses vasakul leidub
+# verb, millel on väimalik sihitis nom, gen, part paremal leidub adverb
+# (mäeldud nt "ära", "valmis")
+# Poiss kirjutas _kirja_ valmis.
+
+SELECT (S sg nom) (NOT 0 Pron) (*-1C Sg3Verb BARRIER CLB) (NOT *-1 Ei BARRIER CLB) 
+                 (NOT *1 SPNom OR Part-P OR SPPart BARRIER CLB) 
+                 (NOT *-1 SPNom OR Part-P OR SPPart BARRIER CLB) 
+                 (NOT 0 ("või")) ;
+
+
+SELECT (S sg nom) (*-1C Sg3Verb BARRIER CLB) (NOT *-1 SPSgNom BARRIER CLB) (NOT *1 SPSgNom BARRIER CLB);
+# kui verb on ps, siis vali välja nom
+# Moosile kulus _kilo_ suhkrut.
+# Mind tabas isa.
+
+SELECT (sg nom) (0C Subst)(NOT *1 Neg OR Nom OR Part-K BARRIER CLB)
+		(NOT *-1 Neg OR Nom OR Part-K BARRIER CLB) 
+                (NOT 1 Subst)
+		(*1C (imps) ^ (partic) BARRIER CLB) ;
+
+SELECT (sg nom) (0C Subst) (NOT *1 Neg OR Nom BARRIER CLB)(NOT *-1 Neg OR Nom BARRIER CLB)(NOT 1 Subst)
+                (*-1C (imps) ^ (partic) BARRIER CLB); 
+SELECT (S sg nom) (0C (S)) (NOT *1 Neg OR Nom BARRIER CLB)(NOT *-1 Neg OR Nom BARRIER CLB) 
+          (NOT 1 Subst)(*-1C (imper) ^ (partic) BARRIER CLB) ;
+
+SELECT (S sg gen) (0C (S)) (-1C NimiAse + SgGen) 
+          (1 Subst) (-2C Omad&Ases + SgGen);
+
+# PUUS
+SELECT (S nom) (1 Koma) (2 ("kes" nom));
+
+# (osa)lauses peab üks verb olema
+SELECT (V <FinV>) (NOT *1 FinV BARRIER CLB)(NOT *-1 FinV BARRIER CLB);
+
 
 SECTION
 
-SELECT A IF (1C N);
+LIST Case = nom gen part adit ill in el ad all abl tr ess abes kom;
+#Kaili täiendused
+"<oma>" REMOVE (S) ;
+"<oma>" REMOVE (imper af) ;
+SELECT (N card) (0 (N card) + $$Case)(1C (S) + $$Case);
 
-SELECT A IF (-1C Adv);
-
-SELECT N ;
-  ## 
-
+END
 
