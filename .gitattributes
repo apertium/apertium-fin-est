@@ -14,12 +14,9 @@
 /apertium-fin-est.est.twol -text
 /apertium-fin-est.fin-est.dix -text
 /apertium-fin-est.fin-est.lrx -text
-/apertium-fin-est.fin-est.rlx -text
 /apertium-fin-est.fin-est.t1x -text
 /apertium-fin-est.fin-est.t2x -text
 /apertium-fin-est.fin-est.t3x -text
-/apertium-fin-est.fin.lexc -text
-/apertium-fin-est.fin.twol -text
 /autogen.sh -text
 /configure.ac -text
 dev/est-fin.tsv -text
