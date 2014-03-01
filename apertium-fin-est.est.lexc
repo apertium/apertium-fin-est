@@ -1,8 +1,8 @@
 
 Multichar_Symbols
 
-%<n%> %<prop%> %<nom%> %<gen%> %<sg%> %<pl%> %<pron%> %<verb%> %<ind%>
-%<pres%> %<1sg%> %<2sg%> %<3sg%> %<1pl%> %<2pl%> %<3pl%> %<neg%> 
+%<n%> %<prop%> %<nom%> %<gen%> %<sg%> %<pl%> %<prn%> %<v%> %<ind%>
+%<pres%> %<sg1%> %<sg2%> %<sg3%> %<pl1%> %<pl2%> %<pl3%> %<neg%> 
 %<conj%> %<adv%> %<part%> %<adj%> %<clit%> %<ade%> %<all%> %<ine%> 
 %<pcle%> %<punct%>
 
@@ -115,32 +115,32 @@ ki%<clit%>:ki # ;
 
 LEXICON Pronouns
 
-ma%<pron%>:m PRONma ;
-sa%<pron%>:s PRONma ;
-ta%<pron%>:t PRONta ;
-me%<pron%>:me PRONme ;
-te%<pron%>:te PRONme ;
-nad%<pron%>:n PRONnad ;
-see%<pron%>:se PRONsee ;
-kuhu%<pron%>:kuhu CLIT ;
-kus%<pron%>:kus CLIT ;
-oma%<pron%>:oma CLIT ;
-mida%<pron%>:mida CLIT ;
-mis%<pron%>:mis CLIT ;
+ma%<prn%>:m PRONma ;
+sa%<prn%>:s PRONma ;
+ta%<prn%>:t PRONta ;
+me%<prn%>:me PRONme ;
+te%<prn%>:te PRONme ;
+nad%<prn%>:n PRONnad ;
+see%<prn%>:se PRONsee ;
+kuhu%<prn%>:kuhu CLIT ;
+kus%<prn%>:kus CLIT ;
+oma%<prn%>:oma CLIT ;
+mida%<prn%>:mida CLIT ;
+mis%<prn%>:mis CLIT ;
 
 LEXICON VERBolla
-%<ind%>%<pres%>%<3sg%>:n # ;
-%<ind%>%<past%>%<3sg%>:li # ;
-%<neg%>%<ind%>%<pres%>%<3sg%>:le # ;
+%<ind%>%<pres%>%<sg3%>:n # ;
+%<ind%>%<past%>%<sg3%>:li # ;
+%<neg%>%<ind%>%<pres%>%<sg3%>:le # ;
 
 LEXICON VERBvaatama
-%<ind%>%<pres%>%<1sg%>:n # ;
-%<ind%>%<pres%>%<2sg%>:d # ;
-%<ind%>%<pres%>%<3sg%>:b # ;
-%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
-%<ind%>%<pres%>%<1sg%>:me # ;
-%<ind%>%<pres%>%<1sg%>:te # ;
-%<ind%>%<pres%>%<1sg%>:vad # ;
+%<ind%>%<pres%>%<sg1%>:n # ;
+%<ind%>%<pres%>%<sg2%>:d # ;
+%<ind%>%<pres%>%<sg3%>:b # ;
+%<neg%>%<ind%>%<pres%>%<sg3%>: # ;
+%<ind%>%<pres%>%<sg1%>:me # ;
+%<ind%>%<pres%>%<sg1%>:te # ;
+%<ind%>%<pres%>%<sg1%>:vad # ;
 %<inf%>:ma # ;
 
 LEXICON VERBmängida
@@ -148,13 +148,13 @@ LEXICON VERBmängida
 %<perf%>:nud # ;
 
 LEXICON VERBmängidaPRES
-%<1sg%>:n # ;
-%<2sg%>:d # ;
-%<3sg%>:b # ;
-%<3sg%>: # ;
-%<1pl%>:me # ;
-%<2pl%>:te # ;
-%<3pl%>:vad # ;
+%<sg1%>:n # ;
+%<sg2%>:d # ;
+%<sg3%>:b # ;
+%<sg3%>: # ;
+%<pl1%>:me # ;
+%<pl2%>:te # ;
+%<pl3%>:vad # ;
 %<inf%>:da # ;
 
 LEXICON VERBasutada
@@ -162,13 +162,13 @@ LEXICON VERBasutada
 %<perf%>:tanud # ;
 
 LEXICON VERBasutadaPRES
-%<1sg%>:n # ;
-%<2sg%>:d # ;
-%<3sg%>:b # ;
-%<3sg%>: # ;
-%<1pl%>:me # ;
-%<2pl%>:te # ;
-%<3pl%>:vad # ;
+%<sg1%>:n # ;
+%<sg2%>:d # ;
+%<sg3%>:b # ;
+%<sg3%>: # ;
+%<pl1%>:me # ;
+%<pl2%>:te # ;
+%<pl3%>:vad # ;
 %<inf%>:da # ;
 
 LEXICON VERBarmastuda
@@ -176,38 +176,38 @@ LEXICON VERBarmastuda
 %<perf%>:anud # ;
 
 LEXICON VERBarmastudaPRES
-%<1sg%>:an # ;
-%<2sg%>:ad # ;
-%<3sg%>:ab # ;
-%<3sg%>:a # ;
-%<1pl%>:ame # ;
-%<2pl%>:ate # ;
-%<3pl%>:avad # ;
+%<sg1%>:an # ;
+%<sg2%>:ad # ;
+%<sg3%>:ab # ;
+%<sg3%>:a # ;
+%<pl1%>:ame # ;
+%<pl2%>:ate # ;
+%<pl3%>:avad # ;
 %<inf%>:uda # ;
 
 LEXICON VERBnäha
-%<ind%>%<pres%>%<1sg%>:n # ;
-%<ind%>%<pres%>%<2sg%>:d # ;
-%<ind%>%<pres%>%<3sg%>:b # ;
-%<neg%>%<ind%>%<pres%>%<3sg%>: # ;
-%<ind%>%<pres%>%<1sg%>:me # ;
-%<ind%>%<pres%>%<1sg%>:te # ;
-%<ind%>%<pres%>%<1sg%>:vad # ;
+%<ind%>%<pres%>%<sg1%>:n # ;
+%<ind%>%<pres%>%<sg2%>:d # ;
+%<ind%>%<pres%>%<sg3%>:b # ;
+%<neg%>%<ind%>%<pres%>%<sg3%>: # ;
+%<ind%>%<pres%>%<sg1%>:me # ;
+%<ind%>%<pres%>%<sg1%>:te # ;
+%<ind%>%<pres%>%<sg1%>:vad # ;
 %<inf%>: # ;
 
 LEXICON Verbs
-olla%<verb%>:o VERBolla ;
-vaatama%<verb%>:vaata VERBvaatama ;
-saada%<verb%>:saa VERBmängida ;
-otsida%<verb%>:otsi VERBmängida ;
-magada%<verb%>:maga VERBmängida ;
-näha%<verb%>:näe VERBnäha ;
-märkama%<verb%>:märka VERBvaatama ;
-mängida%<verb%>:mängi VERBmängida ;
-kuuletuda%<verb%>:kuuletu VERBmängida ;
-armastuda%<verb%>:armast VERBarmastuda ;
-asutada%<verb%>:asu VERBasutada ;
-meeldida%<verb%>:meeldi VERBmängida ;
+olla%<v%>:o VERBolla ;
+vaatama%<v%>:vaata VERBvaatama ;
+saada%<v%>:saa VERBmängida ;
+otsida%<v%>:otsi VERBmängida ;
+magada%<v%>:maga VERBmängida ;
+näha%<v%>:näe VERBnäha ;
+märkama%<v%>:märka VERBvaatama ;
+mängida%<v%>:mängi VERBmängida ;
+kuuletuda%<v%>:kuuletu VERBmängida ;
+armastuda%<v%>:armast VERBarmastuda ;
+asutada%<v%>:asu VERBasutada ;
+meeldida%<v%>:meeldi VERBmängida ;
 
 LEXICON Neg
 ei%<neg%>:ei # ;
@@ -256,11 +256,8 @@ LEXICON Pcle
 siis PCLEsiis ;
 ka PCLEsiis ;
 
-LEXICON PUNCTstop
-%<punct%>: # ;
-
 LEXICON Punct
-. PUNCTstop ;
-, PUNCTstop ;
-%! PUNCTstop ;
-? PUNCTstop ;
+,%<cm%>:, # ;
+.%<sent%>:. # ;
+?%<sent%>:? # ;
+%!%<sent%>:%! # ;

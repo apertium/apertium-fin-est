@@ -4,10 +4,23 @@
     <sdef n="n"  c="Имя существительное"/>
     <sdef n="adv"  c="Наречие"/>
     <sdef n="adj"  c="Имя прилагательное"/>
+    <sdef n="num"  c="Число"/>
     <sdef n="v"  c="Глагол"/>
     <sdef n="part"  c="Частица"/>
     <sdef n="prn"  c="Местоимение"/>
     <sdef n="post"  c="Послелог"/>
+
+
+
+    <sdef n="sent"  c=""/>
+    <sdef n="guio"  c=""/>
+    <sdef n="cm"  c=""/>
+    <sdef n="apos"  c=""/>
+    <sdef n="rquot"  c=""/>
+    <sdef n="lquot"  c=""/>
+    <sdef n="rpar"  c=""/>
+    <sdef n="lpar"  c=""/>
+
   </sdefs>
   <section id="main" type="standard">
 
@@ -75,6 +88,28 @@
     <e><p><l>katsoa<s n="v"/></l><r>vaatama<s n="v"/></r></p></e>
     <e><p><l>juoksia<s n="v"/></l><r>jooksma<s n="v"/></r></p></e>
     <e><p><l>sijaitaa<s n="v"/></l><r>asuma<s n="v"/></r></p></e>
+
+    <!-- SECTION: Punctuation -->
+
+
+    <e><p><l>,<s n="cm"/></l><r>,<s n="cm"/></r></p></e>
+    <e><p><l>(<s n="lpar"/></l><r>(<s n="lpar"/></r></p></e>
+    <e><p><l>)<s n="rpar"/></l><r>)<s n="rpar"/></r></p></e>
+    <e><p><l>[<s n="lpar"/></l><r>[<s n="lpar"/></r></p></e>
+    <e><p><l>]<s n="rpar"/></l><r>]<s n="rpar"/></r></p></e>
+    <e><p><l>«<s n="lquot"/></l><r>«<s n="lquot"/></r></p></e>
+    <e><p><l>»<s n="rquot"/></l><r>»<s n="rquot"/></r></p></e>
+    <e><p><l>“<s n="lquot"/></l><r>“<s n="lquot"/></r></p></e>
+    <e><p><l>”<s n="rquot"/></l><r>”<s n="rquot"/></r></p></e>
+    <e><p><l>-<s n="guio"/></l><r>-<s n="guio"/></r></p></e>
+    <e><p><l>–<s n="guio"/></l><r>–<s n="guio"/></r></p></e>
+    <e><p><l>—<s n="guio"/></l><r>—<s n="guio"/></r></p></e>
+    <e><p><l>'<s n="apos"/></l><r>'<s n="apos"/></r></p></e>
+    <e><re>[.\?;:!"…]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
+    <e><re>[№%]?[0-9]+([.,][0-9]+)*[.,]*</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e> 
+    <e><re>[0-9]+([.,][0-9]+)?</re><i>-</i><re>[0-9]+([.,][0-9]+)?%?</re><p><l><s n="num"/></l><r><s n="num"/></r></p></e>
+
+
 
   </section>
 </dictionary>
