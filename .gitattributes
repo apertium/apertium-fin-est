@@ -19,6 +19,7 @@
 /apertium-fin-est.fin-est.t3x -text
 /autogen.sh -text
 /configure.ac -text
+dev/est-fin.awk -text
 dev/est-fin.tsv -text
 /est-fin.prob -text svneol=unset#unset
 /fin-est.prob -text svneol=unset#unset
