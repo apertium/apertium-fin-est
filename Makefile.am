@@ -11,8 +11,8 @@ PREFIX2=$(LANG2)-$(LANG1)
 BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
-	$(PREFIX1).automorf.hfst $(PREFIX1).autogen.hfst $(PREFIX1).t1x.bin  \
-	$(PREFIX2).automorf.hfst $(PREFIX2).autogen.hfst $(PREFIX2).t1x.bin  \
+	$(PREFIX1).automorf.hfst $(PREFIX1).autogen.bin $(PREFIX1).t1x.bin  \
+	$(PREFIX2).automorf.bin $(PREFIX2).autogen.hfst $(PREFIX2).t1x.bin  \
         $(PREFIX1).t2x.bin $(PREFIX1).t3x.bin \
         $(PREFIX2).t2x.bin $(PREFIX2).t3x.bin \
         $(PREFIX1).rlx.bin $(PREFIX2).rlx.bin \
@@ -32,44 +32,26 @@ TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
 ## Avar→Russian monolingual transducers
 ###############################################################################
 
-.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
-	lt-print $(PREFIX1).autobil.bin | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
-	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
-	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
-	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
-	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
+# fin->est mor
+$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
+	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
+	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 
-#$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
-#	$(ZCAT) $< | hfst-txt2fst > .deps/$(LANG1).automorf.hfst
-#	hfst-compose-intersect -1 .deps/$(LANG1).automorf.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
-#	hfst-fst2txt -i .deps/$(PREFIX1).automorf.trimmed -o .deps/$(PREFIX1).automorf.trimmed.att
-#	lt-comp lr .deps/$(PREFIX1).automorf.trimmed.att $@
+# est->fin mor
+$(PREFIX2).automorf.bin: $(BASENAME).$(PREFIX2).LR.att.gz 
+	$(ZCAT) $< > .deps/$(PREFIX2).automorf.LR.att
+	lt-comp lr .deps/$(PREFIX2).automorf.LR.att $@
 
+# fin->est gen
+$(PREFIX1).autogen.bin: $(BASENAME).$(PREFIX2).RL.att.gz 
+	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
+	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
 
-$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
-	$(ZCAT) $< > .deps/$(PREFIX1).automorf.att
-	lt-comp lr .deps/$(PREFIX1).automorf.att $@
-
-# $(PREFIX1).autogen.hfst: $(AP_LIB2)/$(LANG2).autogen.hfst
-# 	cp $< $@
-
-$(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
+# est->fin gen
+$(PREFIX2).autogen.hfst: $(AP_LIB1)/$(LANG1).autogen.hfst
 	cp $< $@
 
 
-$(PREFIX2).automorf.hfst: $(BASENAME).$(PREFIX2).LR.att.gz 
-	$(ZCAT) $< | hfst-txt2fst > .deps/$(PREFIX2).automorf.hfst
-	hfst-fst2fst -O -i .deps/$(PREFIX2).automorf.hfst -o $@
-
-###############################################################################
-## Debugging transducers (for testvoc)
-###############################################################################
-
-.deps/$(LANG2).LR-debug.hfst: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG2).LR-debug.lexc
-	hfst-lexc --format foma .deps/$(LANG2).LR-debug.lexc -o .deps/$(LANG2).LR-debug.lexc.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).LR-debug.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
 
 ###############################################################################
 ## Prob files for tagger
@@ -170,8 +152,6 @@ modes/$(PREFIX2).mode: modes.xml
 ## Installation stuff
 ###############################################################################
 
-debug: .deps/$(LANG1).LR-debug.hfst .deps/$(LANG2).LR-debug.hfst
-
 EXTRA_DIST=$(PREFIX1).prob $(PREFIX2).prob \
            $(BASENAME).$(PREFIX1).t1x $(BASENAME).$(PREFIX1).t2x $(BASENAME).$(PREFIX1).t3x \
            $(BASENAME).$(PREFIX2).t1x $(BASENAME).$(PREFIX2).t2x $(BASENAME).$(PREFIX2).t3x \
@@ -182,8 +162,8 @@ apertium_fin_estdir=$(prefix)/share/apertium/$(BASENAME)/
 
 apertium_fin_est_DATA=$(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
                     $(PREFIX1).prob $(PREFIX2).prob \
-		    $(PREFIX1).autogen.hfst $(PREFIX2).autogen.hfst \
-		    $(PREFIX1).automorf.hfst $(PREFIX2).automorf.hfst \
+		    $(PREFIX1).autogen.bin $(PREFIX2).autogen.hfst \
+		    $(PREFIX1).automorf.hfst $(PREFIX2).automorf.bin \
 		    $(PREFIX1).t1x.bin $(PREFIX2).t1x.bin \
 		    $(PREFIX1).t2x.bin $(PREFIX2).t2x.bin \
 		    $(PREFIX1).t3x.bin $(PREFIX2).t3x.bin \
