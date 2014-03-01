@@ -57,40 +57,9 @@ $(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
 	cp $< $@
 
 
-
-###############################################################################
-## est transducer
-###############################################################################
-
-.deps/$(LANG2).twol.hfst: $(BASENAME).$(LANG2).twol
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc $< -o $@
- 
-.deps/$(LANG2).RL.lexc: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/LR' > $@
- 
-.deps/$(LANG2).LR.lexc: $(BASENAME).$(LANG2).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' > $@
-
-.deps/$(LANG2).RL.lexc.hfst: .deps/$(LANG2).RL.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).LR.lexc.hfst: .deps/$(LANG2).LR.lexc
-	hfst-lexc --format foma $< -o $@
-
-.deps/$(LANG2).RL.hfst: .deps/$(LANG2).RL.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).RL.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-.deps/$(LANG2).LR.hfst: .deps/$(LANG2).LR.lexc.hfst .deps/$(LANG2).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG2).LR.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
-
-$(PREFIX1).autogen.hfst: .deps/$(LANG2).RL.hfst
-	hfst-fst2fst -O $< -o $@
-
-$(PREFIX2).automorf.hfst: .deps/$(LANG2).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+$(PREFIX2).automorf.hfst: $(BASENAME).$(PREFIX2).LR.att.gz 
+	$(ZCAT) $< | hfst-txt2fst > .deps/$(PREFIX2).automorf.hfst
+	hfst-fst2fst -O -i .deps/$(PREFIX2).automorf.hfst -o $@
 
 ###############################################################################
 ## Debugging transducers (for testvoc)
