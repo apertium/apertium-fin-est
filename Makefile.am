@@ -19,39 +19,44 @@ TARGETS_COMMON = $(PREFIX1).autobil.bin $(PREFIX2).autobil.bin \
         $(PREFIX1).autolex.bin $(PREFIX2).autolex.bin \
 	$(PREFIX1).mode $(PREFIX2).mode modes 
 
+
+# Use this goal for creating .deps, otherwise make -j2 will give problems:
+.deps/.d:
+	if [ ! -d .deps ]; then mkdir .deps; fi
+	touch $@
+
+# Prevent the .d file from being removed automatically:
+.PRECIOUS: .deps/.d
+
 ###############################################################################
-## fin transducer
+## Avar→Russian monolingual transducers
 ###############################################################################
 
-.deps/$(LANG1).twol.hfst: $(BASENAME).$(LANG1).twol
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	hfst-twolc $< -o $@
- 
-.deps/$(LANG1).RL.lexc: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/LR' > $@
- 
-.deps/$(LANG1).LR.lexc: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' > $@
+.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
+	lt-print $(PREFIX1).autobil.bin | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
+	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
+	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
+	echo " ?* " | hfst-regexp2fst > .deps/any-symbol.hfst
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-symbol.hfst -o .deps/$(PREFIX1).autobil.prefixes
 
-.deps/$(LANG1).RL.lexc.hfst: .deps/$(LANG1).RL.lexc
-	hfst-lexc --format foma $< -o $@
+#$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
+#	$(ZCAT) $< | hfst-txt2fst > .deps/$(LANG1).automorf.hfst
+#	hfst-compose-intersect -1 .deps/$(LANG1).automorf.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.trimmed
+#	hfst-fst2txt -i .deps/$(PREFIX1).automorf.trimmed -o .deps/$(PREFIX1).automorf.trimmed.att
+#	lt-comp lr .deps/$(PREFIX1).automorf.trimmed.att $@
 
-.deps/$(LANG1).LR.lexc.hfst: .deps/$(LANG1).LR.lexc
-	hfst-lexc --format foma $< -o $@
 
-.deps/$(LANG1).RL.hfst: .deps/$(LANG1).RL.lexc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).RL.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+$(PREFIX1).automorf.bin: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
+	$(ZCAT) $< > .deps/$(PREFIX1).automorf.att
+	lt-comp lr .deps/$(PREFIX1).automorf.att $@
 
-.deps/$(LANG1).LR.hfst: .deps/$(LANG1).LR.lexc.hfst .deps/$(LANG1).twol.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
+# $(PREFIX1).autogen.hfst: $(AP_LIB2)/$(LANG2).autogen.hfst
+# 	cp $< $@
 
-$(PREFIX2).autogen.hfst: .deps/$(LANG1).RL.hfst
-	hfst-fst2fst -O $< -o $@
+$(PREFIX1).autogen.bin: $(AP_LIB2)/$(LANG2).autogen.bin
+	cp $< $@
 
-$(PREFIX1).automorf.hfst: .deps/$(LANG1).LR.hfst
-	hfst-invert $< | hfst-fst2fst -O -o $@
+
 
 ###############################################################################
 ## est transducer
@@ -91,17 +96,18 @@ $(PREFIX2).automorf.hfst: .deps/$(LANG2).LR.hfst
 ## Debugging transducers (for testvoc)
 ###############################################################################
 
-.deps/$(LANG1).LR-debug.hfst: $(BASENAME).$(LANG1).lexc
-	if [ ! -d .deps ]; then mkdir .deps; fi
-	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG1).LR-debug.lexc
-	hfst-lexc --format foma .deps/$(LANG1).LR-debug.lexc -o .deps/$(LANG1).LR-debug.lexc.hfst
-	hfst-compose-intersect -1 .deps/$(LANG1).LR-debug.lexc.hfst -2 .deps/$(LANG1).twol.hfst -o $@
-
 .deps/$(LANG2).LR-debug.hfst: $(BASENAME).$(LANG2).lexc
 	if [ ! -d .deps ]; then mkdir .deps; fi
 	cat $< | grep -v 'Dir/RL' | grep -v 'Use/Circ' > .deps/$(LANG2).LR-debug.lexc
 	hfst-lexc --format foma .deps/$(LANG2).LR-debug.lexc -o .deps/$(LANG2).LR-debug.lexc.hfst
 	hfst-compose-intersect -1 .deps/$(LANG2).LR-debug.lexc.hfst -2 .deps/$(LANG2).twol.hfst -o $@
+
+###############################################################################
+## Prob files for tagger
+###############################################################################
+
+#$(PREFIX1).prob: $(AP_LIB1)/$(LANG1).prob
+#	cp $< $@
 
 ###############################################################################
 ## Bilingual dictionaries
@@ -119,7 +125,7 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ## Disambiguation rules 
 ###############################################################################
 
-$(PREFIX1).rlx.bin: $(BASENAME).$(PREFIX1).rlx
+$(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
 	cg-comp $< $@
 
 $(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx

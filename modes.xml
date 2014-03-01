@@ -7,11 +7,8 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -w -1 -n">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -40,11 +37,8 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -95,11 +89,8 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
     </pipeline>
@@ -110,11 +101,8 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
@@ -128,17 +116,14 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-est.autobil.bin"/>
       </program>
-      <program name="lrx-proc -t">
+      <program name="lrx-proc -t -m">
         <file name="fin-est.autolex.bin"/>
       </program>
     </pipeline>
@@ -150,17 +135,14 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-est.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-est.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -175,17 +157,14 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-est.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-est.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -204,17 +183,14 @@
       <program name="hfst-proc -w">
         <file name="fin-est.automorf.hfst"/>
       </program>
-      <program name="cg-proc -w">
+      <program name="cg-proc -1 -n -w">
         <file name="fin-est.rlx.bin"/>
-      </program>
-      <program name="apertium-tagger -g $2">
-        <file name="fin-est.prob"/>
       </program>
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="fin-est.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="fin-est.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
@@ -369,7 +345,7 @@
       <program name="lt-proc -b">
         <file name="est-fin.autobil.bin"/>
       </program>
-      <program name="lrx-proc">
+      <program name="lrx-proc -m">
         <file name="est-fin.autolex.bin"/>
       </program>
     </pipeline>
@@ -389,6 +365,9 @@
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="est-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-fin-est.est-fin.t1x"/>
@@ -411,6 +390,9 @@
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="est-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-fin-est.est-fin.t1x"/>
@@ -437,6 +419,9 @@
       <program name="apertium-pretransfer"/>
       <program name="lt-proc -b">
         <file name="est-fin.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="est-fin.autolex.bin"/>
       </program>
       <program name="apertium-transfer -b">
         <file name="apertium-fin-est.est-fin.t1x"/>
