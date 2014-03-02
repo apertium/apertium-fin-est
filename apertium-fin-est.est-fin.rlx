@@ -84,8 +84,8 @@ ADD (CLBC) (J crd)(*-1 (<FinV>) BARRIER (J) OR (Z))(*1 (<FinV>) BARRIER (J) OR (
 
 SECTION
 # I KONKREETSED SõNAD
-LIST InterRefl = inter refl ;
-LIST Nominal = S P A N (Y nominal);
+LIST InterRefl = inter ref ;
+LIST Nominal = n prn adj num (Y nominal);
 LIST Sid|Kvm|Clb = cnjcoo Z CLB ;
 LIST Ei = "ei" ;
 LIST A = adj ;
@@ -97,7 +97,7 @@ LIST K = post pr ;
 LIST Arv = N ;
 LIST Verb = vblex ;
 LIST Kvm = Z ;
-LIST Koma = Com ;
+LIST Koma = cm ;
 LIST KuiEtKas = "kui" "et" "kas" ;
 LIST FinV = <FinV> ("ole" neg) ("ole" partic);
 LIST FinVPart = <FinV> ("ei" vblex) partic inf ;
@@ -108,7 +108,7 @@ LIST DaInf = inf ;
 LIST Nom = nom ;
 LIST Gen = gen ;
 LIST Part = par ;
-LIST Ill = ill adt ;
+LIST Ill = ill adi ;
 LIST In = ine ;
 LIST El = ela ;
 LIST All = all ;
@@ -129,8 +129,8 @@ LIST Verb&Kvm = V Z ;
 LIST LA = "<s>" >>> ;
 LIST KuiAdv = "mitu" "vähe" "palju" "hea" "halb" "hästi" "kaua" "vana" "vägev" "noor" "raske" "kerge" "tihti" "sageli"
  		"kiire" "kiiresti" ;
-LIST SPN = S P N ;
-LIST SP = S P ;
+LIST SPN = n prn num ;
+LIST SP = n prn ;
 SET NominalSg = Nominal + (sg);
 SET SPNSgNom = SPN + (sg) + Nom ;
 SET SPSgNom = SP + (sg) + Nom ;
@@ -201,7 +201,7 @@ LIST NimiAse = S "mina" "sina" "tema" "meie" "teie" "nemad" "kes" "mis" "igaüks
  "iseenese" "see" "too" "sama" "seesama" "toosama" "kõik" "kumbki" "mõlema" "emb-kumb" "miski" 
 "palju" "teine" "üks" "muu";
 
-LIST SPN = S P N;
+LIST SPN = n prn num ; 
 
 SET PoleSide = POS - Side ;
 
@@ -212,10 +212,12 @@ SELECT (V ps2 pl)(-1C (P ps2 pl nom));
 REMOVE (P pers gen)(1 (P dem part));
 "<või>" SELECT (J)(-1 (<->));
 SELECT (n sg el) (1 (J crd))(2C (n sg el));
-"<ei>" SELECT (vblex) ; # FMT
 
-SELECT Adv IF (0 A + Abl LINK 0 Adv) ; # FMT
-SELECT Adv IF (0 A + All LINK 0 Adv) ; # FMT
+"<ei>" SELECT (vblex) ; # FMT
+SELECT Adv IF (0 A + Abl LINK 0 Adv) (NOT 0 ("[a-zäüöõ]+=[a-zäüöõ]+"r)) ; # FMT
+SELECT Adv IF (0 A + All LINK 0 Adv) (NOT 0 ("[a-zäüöõ]+=[a-zäüöõ]+"r)) ; # FMT
+REMOVE ("[a-zäüöõ]+=[a-zäüöõ]+"r) ;  # FMT
+REMOVE  SUB:1 (*) ; # FMT
 
 
 "<issand>" SELECT (n prop) ;
