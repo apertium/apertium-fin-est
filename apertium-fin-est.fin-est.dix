@@ -309,7 +309,7 @@
     <e><p><l>tähän<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
     <e><p><l>tähti<s n="n"/></l><r>täht<s n="n"/></r></p></e>
     <e><p><l>yrittää<s n="vblex"/></l><r>üritama<s n="vblex"/></r></p></e>
-    <e><p><l>suuri<s n="n"/></l><r>väike<s n="n"/></r></p></e>
+    <e><p><l>pien<s n="n"/></l><r>väike<s n="n"/></r></p></e>
     <e><p><l>väli<s n="n"/></l><r>väli<s n="n"/></r></p></e>
     <e><p><l>vielä<s n="adv"/></l><r>veel<s n="adv"/></r></p></e>
 
@@ -331,9 +331,10 @@
     <e><p><l>tuoli<s n="n"/></l><r>tool<s n="n"/></r></p></e>
     <e><p><l>nyt<s n="adv"/></l><r>nüüd<s n="adv"/></r></p></e>
     <e><p><l>vähän<s n="adv"/></l><r>natuke<s n="adv"/></r></p></e>
+    <e><p><l>kiire<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
+    <e><p><l>ammua<s n="vblex"/></l><r>muuma<s n="vblex"/></p></e>
     <!--
     <e><p><l>@jalutama<s n="vblex"/></l><r>jalutama<s n="vblex"/></r></p></e>
-    <e><p><l>@kiir<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
     <e><p><l>@loomulik<s n="adj"/></l><r>loomulik<s n="adj"/></r></p></e>
     <e><p><l>@miksi<s n="n"/></l><r>mi<s n="n"/></r></p></e>
     <e><p><l>@mull<s n="n"/></l><r>mull<s n="n"/></r></p></e>
