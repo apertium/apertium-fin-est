@@ -150,6 +150,12 @@
     <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
 
+    <!-- Раздел: Число -->
+
+    <e><p><l>yksi<s n="num"/></l><r>üks<s n="num"/></r></p></e>
+    <e><p><l>viisi<s n="num"/></l><r>viis<s n="num"/></r></p></e>
+    <e><p><l>kuusi<s n="num"/></l><r>kuus<s n="num"/></r></p></e>
+
     <!-- Раздел: Имя Существительное -->
 
     <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
@@ -243,7 +249,7 @@
     <e><p><l>iloinen<s n="adj"/></l><r>õnnelik<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>pisike<s n="adj"/></r></p></e>
     <e><p><l>leikkivä<s n="adj"/></l><r>mängiv<s n="n"/></r></p></e>
-    <e><p><l>-vuotias<s n="adj"/></l><r>-aastane<s n="adj"/></r></p></e>
+    <e><p><l>-vuotias<s n="adj"/></l><r>aastane<s n="adj"/></r></p></e>
     <e><p><l>lopettanut<s n="adj"/></l><r>lõpetanud<s n="adj"/></r></p></e>
 
 
@@ -336,8 +342,8 @@
     <e><p><l>luetella<s n="vblex"/></l><r>loetlema<s n="vblex"/></r></p></e>
     <e><p><l>kävellä<s n="vblex"/></l><r>jalutama<s n="vblex"/></r></p></e>
     <e><p><l>yrittää<s n="vblex"/></l><r>üritama<s n="vblex"/></r></p></e>
-    <e><p><l>juoda<s n="vblex"/></l><r>joima<s n="vblex"/></r></p></e>
-    <e><p><l>syödä<s n="vblex"/></l><r>söima<s n="vblex"/></r></p></e>
+    <e><p><l>juoda<s n="vblex"/></l><r>jooma<s n="vblex"/></r></p></e>
+    <e><p><l>syödä<s n="vblex"/></l><r>sööma<s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>kuulatama<s n="vblex"/></r></p></e>
     <e><p><l>ammua<s n="vblex"/></l><r>muuma<s n="vblex"/></r></p></e>
 
