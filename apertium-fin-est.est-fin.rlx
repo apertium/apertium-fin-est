@@ -218,6 +218,7 @@ SELECT Adv IF (0 A + Abl LINK 0 Adv) (NOT 0 ("[a-zäüöõ]+=[a-zäüöõ]+"r)) 
 SELECT Adv IF (0 A + All LINK 0 Adv) (NOT 0 ("[a-zäüöõ]+=[a-zäüöõ]+"r)) ; # FMT
 REMOVE ("[a-zäüöõ]+=[a-zäüöõ]+"r) ;  # FMT
 REMOVE  SUB:1 (*) ; # FMT
+REMOVE (pl) IF (0 ("olema")) (0C (ind pres p3 sg) OR (ind pres p3 pl)); # FMT
 
 
 "<issand>" SELECT (n prop) ;
