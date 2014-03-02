@@ -86,13 +86,14 @@ SECTION
 # I KONKREETSED SõNAD
 LIST InterRefl = inter refl ;
 LIST Nominal = S P A N (Y nominal);
-LIST Sid|Kvm|Clb = J Z CLB ;
+LIST Sid|Kvm|Clb = cnjcoo Z CLB ;
 LIST Ei = "ei" ;
 LIST A = adj ;
 LIST D = det ;
-LIST J = J ;
+LIST J = cnjcoo ;
+LIST Adv = adv ; 
 LIST S = n ;
-LIST K = K ;
+LIST K = post pr ;
 LIST Arv = N ;
 LIST Verb = vblex ;
 LIST Kvm = Z ;
@@ -212,6 +213,9 @@ REMOVE (P pers gen)(1 (P dem part));
 "<või>" SELECT (J)(-1 (<->));
 SELECT (n sg el) (1 (J crd))(2C (n sg el));
 "<ei>" SELECT (vblex) ; # FMT
+
+SELECT Adv IF (0 A + Abl LINK 0 Adv) ; # FMT
+SELECT Adv IF (0 A + All LINK 0 Adv) ; # FMT
 
 
 "<issand>" SELECT (n prop) ;
@@ -1083,11 +1087,11 @@ SELECT (I) (NOT 0 (S))(1 (Z))(*1 (Exc));
 SELECT (V neg) (-1 ("ei")) (-1C (neg));
 
 
-LIST Subst = S;
-LIST Adj = A;
+LIST Subst = n ;
+LIST Adj = adj ;
 #LIST Verb = V;
-LIST Pron = P;
-LIST Adv = D;
+LIST Pron = prn ;
+LIST Adv = adv ;
 
 SELECT (I) (1 (Exc))(0 CLB);
 SELECT (I) (1 (Exc))(-1 (I));
