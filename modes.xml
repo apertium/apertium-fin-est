@@ -26,8 +26,8 @@
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
-        <file name="fin-est.autogen.hfst"/>
+      <program name="lt-proc $1">
+        <file name="fin-est.autogen.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -56,8 +56,8 @@
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
-        <file name="fin-est.autogen.hfst"/>
+      <program name="lt-proc -d">
+        <file name="fin-est.autogen.bin"/>
       </program>
     </pipeline>
   </mode>

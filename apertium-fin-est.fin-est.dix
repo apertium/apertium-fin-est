@@ -231,7 +231,9 @@
     <!-- SECTION: Proper nouns -->
 
     <e><p><l>James<s n="np"/></l><r>James<s n="np"/></r></p></e>
+    <e><p><l>Jaakko<s n="np"/></l><r>Jaakko<s n="np"/></r></p></e>
     <e><p><l>Mary<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
+    <e><p><l>Mari<s n="np"/></l><r>Mari<s n="np"/></r></p></e>
 
     <!-- SECTION: Adjective -->
 
