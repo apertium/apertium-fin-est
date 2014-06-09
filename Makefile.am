@@ -41,7 +41,7 @@ TARGETS_COMMON = \
 ###############################################################################
 
 # fin->est mor
-$(PREFIX1).automorf.hfst: $(AP_LIB1)/$(LANG1).automorf.att.gz .deps/.d
+$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.att.gz .deps/.d
 	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 
@@ -56,7 +56,7 @@ $(PREFIX1).autogen.bin: $(BASENAME).$(PREFIX2).RL.att.gz .deps/.d
 	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
 
 # est->fin gen
-$(PREFIX2).autogen.hfst: $(AP_LIB1)/$(LANG1).autogen.hfst
+$(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
 	cp $< $@
 
 
@@ -65,7 +65,7 @@ $(PREFIX2).autogen.hfst: $(AP_LIB1)/$(LANG1).autogen.hfst
 ## Prob files for tagger
 ###############################################################################
 
-#$(PREFIX1).prob: $(AP_LIB1)/$(LANG1).prob
+#$(PREFIX1).prob: $(AP_SRC1)/$(LANG1).prob
 #	cp $< $@
 
 ###############################################################################
