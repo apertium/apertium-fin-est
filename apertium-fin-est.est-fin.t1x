@@ -545,7 +545,7 @@
         <choose><when><test><equal><clip pos="1" side="tl" part="a_qst"/>
                                    <lit-tag v="qst"/></equal>
                       </test>
-                      <let><var n="sent-qst"/><lit-tag v="qst"/></let>
+                      <let><var n="sent-qst"/><concat><lit v="+ko"/><lit-tag v="qst"/></concat></let>
           </when>
           <otherwise>  
             <out>
