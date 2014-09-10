@@ -158,74 +158,74 @@
 
     <!-- Раздел: Имя Существительное -->
 
-    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
-    <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
-    <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
-    <e><p><l>kiire<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
-    <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
-    <e><p><l>puutarha<s n="n"/></l><r>ai<s n="n"/></r></p></e>
-    <e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
-    <e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
-    <e><p><l>kissa<s n="n"/></l><r>kass<s n="n"/></r></p></e>
-    <e><p><l>ikkuna<s n="n"/></l><r>aken<s n="n"/></r></p></e>
-    <e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
-    <e><p><l>numero<s n="n"/></l><r>number<s n="n"/></r></p></e>
-    <e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
-    <e><p><l>laskeminen<s n="n"/></l><r>loetlemine<s n="n"/></r></p></e>
-    <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
-    <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
-    <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
-    <e><p><l>pöytä<s n="n"/></l><r>laud<s n="n"/></r></p></e>
-    <e><p><l>ääni<s n="n"/></l><r>krabin<s n="n"/></r></p></e>
-    <e><p><l>hyvä<s n="n"/></l><r>ilu<s n="n"/></r></p></e>
-    <e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
-    <e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
-    <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
-    <e><p><l>huone<s n="n"/></l><r>tuba<s n="n"/></r></p></e>
-    <e><p><l>puutarha<s n="n"/></l><r>aed<s n="n"/></r></p></e>
     <e><p><l>aika<s n="n"/></l><r>aeg<s n="n"/></r></p></e>
-    <e><p><l>ikkuna<s n="n"/></l><r>aken<s n="n"/></r></p></e>
-    <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
-    <e><p><l>ikä<s n="n"/></l><r>iga<s n="n"/></r></p></e>
-    <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
-    <e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
-    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
-    <e><p><l>kanssa<s n="n"/></l><r>koos<s n="n"/></r></p></e>
-    <e><p><l>pakkanen<s n="n"/></l><r>külm<s n="n"/></r></p></e>
-    <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
-    <e><p><l>kuukausi<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
-    <e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
     <e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
-    <e><p><l>loppu<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
-    <e><p><l>päätös<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
-    <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
-    <e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
-    <e><p><l>oma<s n="n"/></l><r>oma<s n="n"/></r></p></e>
-    <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
-    <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
-    <e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
-    <e><p><l>silmä<s n="n"/></l><r>silm<s n="n"/></r></p></e>
-    <e><p><l>suu<s n="n"/></l><r>suu<s n="n"/></r></p></e>
+    <e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
     <e><p><l>huone<s n="n"/></l><r>tuba<s n="n"/></r></p></e>
-    <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
-    <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
-    <e><p><l>voi<s n="n"/></l><r>või<s n="n"/></r></p></e>
+    <e><p><l>huone<s n="n"/></l><r>tuba<s n="n"/></r></p></e>
+    <e><p><l>hyvä<s n="n"/></l><r>ilu<s n="n"/></r></p></e>
     <e><p><l>ihminen<s n="n"/></l><r>inimene<s n="n"/></r></p></e>
+    <e><p><l>ikkuna<s n="n"/></l><r>aken<s n="n"/></r></p></e>
+    <e><p><l>ikkuna<s n="n"/></l><r>aken<s n="n"/></r></p></e>
+    <e><p><l>ikä<s n="n"/></l><r>iga<s n="n"/></r></p></e>
     <e><p><l>juuri<s n="n"/></l><r>juur<s n="n"/></r></p></e>
-    <e><p><l>lähde<s n="n"/></l><r>lähe<s n="n"/></r></p></e>
-    <e><p><l>muu<s n="n"/></l><r>muu<s n="n"/></r></p></e>
-    <e><p><l>suku<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
-    <e><p><l>tähti<s n="n"/></l><r>täht<s n="n"/></r></p></e>
-    <e><p><l>suuri<s n="n"/></l><r>väike<s n="n"/></r></p></e>
-    <e><p><l>väli<s n="n"/></l><r>väli<s n="n"/></r></p></e>
-    <e><p><l>pallo<s n="n"/></l><r>kuul<s n="n"/></r></p></e>
+    <e><p><l>kanssa<s n="n"/></l><r>koos<s n="n"/></r></p></e>
+    <e><p><l>kiire<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
+    <e><p><l>kissa<s n="n"/></l><r>kass<s n="n"/></r></p></e>
+    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
+    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
+    <e><p><l>kuukausi<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
+    <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
+    <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
+    <e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
+    <e><p><l>käsi<s n="n"/></l><r>käsi<s n="n"/></r></p></e>
+    <e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
+    <e><p><l>lapsi<s n="n"/></l><r>laps<s n="n"/></r></p></e>
+    <e><p><l>laskeminen<s n="n"/></l><r>loetlemine<s n="n"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>lind<s n="n"/></r></p></e>
     <e><p><l>lopettanut<s n="n"/></l><r>lõpetanu<s n="n"/></r></p></e>
-    <e><p><l>saanut<s n="n"/></l><r>saanu<s n="n"/></r></p></e>
-    <e><p><l>tuoli<s n="n"/></l><r>tool<s n="n"/></r></p></e>
+    <e><p><l>loppu<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
+    <e><p><l>lähde<s n="n"/></l><r>lähe<s n="n"/></r></p></e>
     <e><p><l>mutta<s n="n"/></l><r>aga<s n="n"/></r></p></e>
+    <e><p><l>muu<s n="n"/></l><r>muu<s n="n"/></r></p></e>
+    <e><p><l>numero<s n="n"/></l><r>number<s n="n"/></r></p></e>
+    <e><p><l>oma<s n="n"/></l><r>oma<s n="n"/></r></p></e>
+    <e><p><l>pakkanen<s n="n"/></l><r>külm<s n="n"/></r></p></e>
+    <e><p><l>pallo<s n="n"/></l><r>kuul<s n="n"/></r></p></e>
+    <e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
+    <e><p><l>peli<s n="n"/></l><r>mäng<s n="n"/></r></p></e>
+    <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
+    <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
+    <e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
+    <e><p><l>puu<s n="n"/></l><r>puu<s n="n"/></r></p></e>
+    <e><p><l>puutarha<s n="n"/></l><r>aed<s n="n"/></r></p></e>
+    <e><p><l>puutarha<s n="n"/></l><r>ai<s n="n"/></r></p></e>
+    <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
+    <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
+    <e><p><l>päätös<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
+    <e><p><l>pöytä<s n="n"/></l><r>laud<s n="n"/></r></p></e>
     <e><p><l>rakastava<s n="n"/></l><r>armastav<s n="n"/></r></p></e>
+    <e><p><l>saanut<s n="n"/></l><r>saanu<s n="n"/></r></p></e>
+    <e><p><l>silmä<s n="n"/></l><r>silm<s n="n"/></r></p></e>
+    <e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
+    <e><p><l>suku<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
+    <e><p><l>suu<s n="n"/></l><r>suu<s n="n"/></r></p></e>
+    <e><p><l>suuri<s n="n"/></l><r>väike<s n="n"/></r></p></e>
+    <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
+    <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
+    <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
+    <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
+    <e><p><l>tuoli<s n="n"/></l><r>tool<s n="n"/></r></p></e>
+    <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
+    <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
+    <e><p><l>tähti<s n="n"/></l><r>täht<s n="n"/></r></p></e>
+    <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
+    <e><p><l>vastaus<s n="n"/></l><r>vastus<s n="n"/></r></p></e>
+    <e><p><l>voi<s n="n"/></l><r>või<s n="n"/></r></p></e>
+    <e><p><l>väli<s n="n"/></l><r>väli<s n="n"/></r></p></e>
+    <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
+    <e><p><l>äiti<s n="n"/></l><r>ema<s n="n"/></r></p></e>
+    <e><p><l>ääni<s n="n"/></l><r>krabin<s n="n"/></r></p></e>
 
 
     <!-- SECTION: Proper nouns -->
