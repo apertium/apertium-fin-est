@@ -123,12 +123,12 @@
 
     <!-- SECTION: Pronouns -->
  
-    <e><p><l>minä<s n="prn"/><s n="pers"/><s n="p1"/></l><r>ma<s n="prn"/></r></p></e>
-    <e><p><l>sinä<s n="prn"/><s n="pers"/><s n="p2"/></l><r>sa<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>ta<s n="prn"/><s n="sg"/></r></p></e>
-    <e><p><l>me<s n="prn"/><s n="pers"/><s n="p1"/></l><r>me<s n="prn"/></r></p></e>
-    <e><p><l>te<s n="prn"/><s n="pers"/><s n="p2"/></l><r>te<s n="prn"/></r></p></e>
-    <e><p><l>he<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>ta<s n="prn"/><s n="pl"/></r></p></e>
+    <e><p><l>minä<s n="prn"/><s n="pers"/></l><r>ma<s n="prn"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/><s n="pers"/></l><r>sa<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="sg"/></l><r>ta<s n="prn"/><s n="sg"/></r></p></e>
+    <e><p><l>me<s n="prn"/><s n="pers"/></l><r>me<s n="prn"/></r></p></e>
+    <e><p><l>te<s n="prn"/><s n="pers"/></l><r>te<s n="prn"/></r></p></e>
+    <e><p><l>he<s n="prn"/><s n="pers"/><s n="pl"/></l><r>ta<s n="prn"/><s n="pl"/></r></p></e>
 
     <e><p><l>jokainen<s n="prn"/></l><r>iga<s n="prn"/></r></p></e>
     <e><p><l>kuka<s n="prn"/><s n="itg"/></l><r>kes<s n="prn"/></r></p></e>
@@ -451,6 +451,18 @@
     <e><p><l>syödä<s n="vblex"/></l><r>sööma<s n="vblex"/></r></p></e>
     <e><p><l>kuunnella<s n="vblex"/></l><r>kuulatama<s n="vblex"/></r></p></e>
     <e><p><l>ammua<s n="vblex"/></l><r>muuma<s n="vblex"/></r></p></e>
+
+    <e><p><l>demokratisoitua<s n="vblex"/></l><r>demokratiseerima<s n="vblex"/></r></p></e>
+    <e><p><l>hyödyntää<s n="vblex"/></l><r>rakendama<s n="vblex"/></r></p></e>
+    <e><p><l>kyntää<s n="vblex"/></l><r>kündma<s n="vblex"/></r></p></e>
+    <e><p><l>lisätä<s n="vblex"/></l><r>lisandama<s n="vblex"/></r></p></e>
+    <e><p><l>riepottaa<s n="vblex"/></l><r>vaevama<s n="vblex"/></r></p></e>
+    <e><p><l>siepata<s n="vblex"/></l><r>röövima<s n="vblex"/></r></p></e>
+    <e><p><l>sormittaa<s n="vblex"/></l><r>sõrmitsema<s n="vblex"/></r></p></e>
+    <e><p><l>torjua<s n="vblex"/></l><r>tõrkuma<s n="vblex"/></r></p></e>
+    <e><p><l>uskoa<s n="vblex"/></l><r>uskuma<s n="vblex"/></r></p></e>
+    <e><p><l>valvoa<s n="vblex"/></l><r>valvama<s n="vblex"/></r></p></e>
+
 
     <!-- SECTION: Punctuation -->
 
