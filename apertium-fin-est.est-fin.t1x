@@ -27,7 +27,7 @@
       <cat-item tags="vblex.ind.impf.*"/>
     </def-cat>
     <def-cat n="pres">
-      <cat-item tags="vblex.ind.pres.*"/>
+      <cat-item tags="vblex.pers.prs.*"/>
     </def-cat>
     <def-cat n="infa">
       <cat-item tags="vblex.infa"/>
@@ -63,7 +63,7 @@
       <attr-item tags="cond"/>
     </def-attr>
     <def-attr n="a_tens">
-      <attr-item tags="pres"/>
+      <attr-item tags="prs"/>
       <attr-item tags="impf"/>
       <attr-item tags="past"/>
     </def-attr>
@@ -105,6 +105,10 @@
       <attr-item tags="ade"/>
     </def-attr>
 
+    <def-attr n="a_func">
+      <attr-item tags="@X"/>
+    </def-attr>
+
   </section-def-attrs>
   <section-def-vars>
     <def-var n="number"/>
@@ -129,6 +133,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
                               <lit-tag v="adi"/>
@@ -492,6 +497,7 @@
       </action>
     </rule>
 
+    <!-- ^olla<vblex><pers><prs><ind><sg1><@+FMAINV>$ -->
     <rule comment="REGLA: pres">
       <pattern>
         <pattern-item n="pres"/>

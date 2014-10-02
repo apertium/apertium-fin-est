@@ -12,7 +12,7 @@ BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON = \
 	$(PREFIX1).autobil.bin \
-	$(PREFIX1).autogen.bin \
+	$(PREFIX1).autogen.hfst \
 	$(PREFIX1).autolex.bin \
 	$(PREFIX1).automorf.hfst \
 	$(PREFIX1).prob \
@@ -24,7 +24,7 @@ TARGETS_COMMON = \
 	$(PREFIX2).autobil.bin \
 	$(PREFIX2).autogen.hfst \
 	$(PREFIX2).autolex.bin \
-	$(PREFIX2).automorf.bin \
+	$(PREFIX2).automorf.hfst \
 	$(PREFIX2).prob \
 	$(PREFIX2).rlx.bin \
 	$(PREFIX2).t1x.bin \
@@ -49,19 +49,22 @@ $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/.d
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
 $(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/.d
-	$(ZCAT) $< > .deps/$(PREFIX2).automorf.LR.att
-	lt-comp lr .deps/$(PREFIX2).automorf.LR.att $@
+	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX2).automorf.hfst
+	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 # fin->est gen
 # apertium-est.est.RL.att.gz
-$(PREFIX1).autogen.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
-	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
-	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
+$(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
+	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
+	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
+#	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
+#	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
 
 # est->fin gen
 # apertium-fin.fin.RL.att.gz
 $(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz
-	cp $< $@
+	$(ZCAT) $<  | hfst-txt2fst -o .deps/$(PREFIX2).autogen.hfst
+	hfst-fst2fst -O .deps/$(PREFIX2).autogen.hfst -o $@
 
 
 ###############################################################################
