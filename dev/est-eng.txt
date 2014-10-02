@@ -3270,7 +3270,7 @@ eesti:Estonian
 eesti keel:Estonian
 eestlane:Estonian
 estitsism:Estonianism
-eestistamine:Estonianization
+eestistamine:Estonianisation
 Estremadura:Estremadura
 Extremadura:Estremadura
 Igavene linn:Eternal City
@@ -3330,7 +3330,7 @@ euroopa lehis:European larch
 euroopa:European
 eurooplane:European
 euroopastamine:Europeanisation
-euroopastamine:Europeanization
+euroopastamine:Europeanisation
 euroopastama:Europeanize
 Eurus:Eurus
 Eurydice:Eurydice
@@ -9439,7 +9439,7 @@ sirmjalg:Woodwardia
 sõna:Word
 Kirikute Maailmanõukogu:World Council of Churches
 Maailma Terviseassamblee:World Health Assembly
-Maailma Tervishoiuorganisatsioon:World Health Organization
+Maailma Tervishoiuorganisatsioon:World Health Organisation
 Esimene maailmasõda:World War I
 Teine maailmasõda:World War II
 maailmasõda:World war
@@ -10619,8 +10619,8 @@ kohanemine:acclimation
 aklimatiseerumine:acclimatisation
 kohandama:acclimatise
 kohanema:acclimatise
-aklimatsioon:acclimatization
-kohanemine:acclimatization
+aklimatsioon:acclimatisation
+kohanemine:acclimatisation
 aklimatiseeruma:acclimatize
 tõusev:acclivitous
 ülessuunas:acclivitous
@@ -10871,7 +10871,7 @@ atsetüleenipõleti:acetylene burner
 atsetüleenigeneraator:acetylene generator
 atsetüleen:acetylene
 etüün:acetylene
-atsetüleerimine:acetylization
+atsetüleerimine:acetylisation
 aspiriin:acetylsalicylic acid
 atsetüülsalitsüülhape:acetylsalicylic acid
 oh:ach
@@ -11243,8 +11243,8 @@ tegelikuks muutma:actualise
 aktualism:actualism
 tegelikkus:actuality
 tõsielumaterjal:actuality
-aktualiseerimine:actualization
-reaalseks muutmine:actualization
+aktualiseerimine:actualisation
+reaalseks muutmine:actualisation
 aktualiseerima:actualize
 tegelikuks muutma:actualize
 tegelikult:actually
@@ -13261,7 +13261,7 @@ häälikkiri:alphabetic writing
 alfabeetiline:alphabetical
 tähestikuline:alphabetical
 tähestikuliselt:alphabetically
-tähestikjärjestus:alphabetization
+tähestikjärjestus:alphabetisation
 tähestikuliselt järjestama:alphabetize
 tähestikulises järjekorras:alphabetized
 tärk-:alphanumeric
@@ -13520,7 +13520,7 @@ trahvitav:amerciable
 ameerika:american
 amerikanism:americanism
 amerikanist:americanist
-amerikaniseerimine:americanization
+amerikaniseerimine:americanisation
 amerikaniseerima:americanize
 amerikaniseeritud:americanized
 ameeriklased:americans
@@ -13656,7 +13656,7 @@ põrmu paisatud:amort
 amortisatsioon:amortisation
 amortiseerima:amortise
 osade kaupa võlga tasuma:amortise
-amortisatsioon:amortization
+amortisatsioon:amortisation
 amortiseerima:amortize
 maha kandma:amortize
 osade kaupa võlga tasuma:amortize
@@ -14224,8 +14224,8 @@ anglitsism:anglicism
 inglispärasus:anglicism
 anglitsismid:anglicisms
 anglist:anglicist
-angliseerimine:anglicization
-inglispärastamine:anglicization
+angliseerimine:anglicisation
+inglispärastamine:anglicisation
 inglispärastama:anglicize
 õngepüük:angling
 õngitsemine:angling
@@ -15982,7 +15982,7 @@ aritmeetiline jada:arithmetical progression
 aritmeetiline:arithmetical
 aritmeetik:arithmetician
 aritmeetika:arithmetics
-aritmetiseerimine:arithmetization
+aritmetiseerimine:arithmetisation
 laegas:ark
 arkansaslane:arkansawyer
 arkoos:arkose
@@ -17447,7 +17447,7 @@ imepisike:atomic
 tuuma-:atomic
 pihustama:atomise
 atomism:atomism
-pihustamine:atomization
+pihustamine:atomisation
 pihustama:atomize
 pihusti:atomizer
 luukere:atomy
@@ -17922,8 +17922,8 @@ autoriteet:authority
 institutsioon:authority
 volitus:authority
 võim:authority
-volitamine:authorization
-volitus:authorization
+volitamine:authorisation
+volitus:authorisation
 volitama:authorize
 ametlik:authorized
 volitatud:authorized
@@ -29273,8 +29273,8 @@ kanaliseerimine:canalisation
 suunamine:canalisation
 kanaliseerima:canalise
 suunama:canalise
-kanaliseerimine:canalization
-suunamine:canalization
+kanaliseerimine:canalisation
+suunamine:canalisation
 kanaliseerima:canalize
 suunama:canalize
 kanapee:canape
@@ -29439,7 +29439,7 @@ inimsööja:cannibal
 kannibal:cannibal
 kannibalism:cannibalism
 kannibalistlik:cannibalistic
-osadeks lammutamine:cannibalization
+osadeks lammutamine:cannibalisation
 inimliha sööma:cannibalize
 ühe seadme osadega teist parandama:cannibalize
 konservitoos:cannikin
@@ -29490,8 +29490,8 @@ kanoniseerimine:canonisation
 pühaks tunnistamine:canonisation
 kanoniseerima:canonise
 pühaks kuulutama:canonise
-kanoniseerimine:canonization
-pühaks tunnistamine:canonization
+kanoniseerimine:canonisation
+pühaks tunnistamine:canonisation
 kanoniseerima:canonize
 pühakuks kuulutama:canonize
 kanoniseerima:canonized
@@ -29669,8 +29669,8 @@ kapitalistlik:capitalist
 kapitalistlik majanduskord:capitalistic economy
 kapitalistlik süsteem:capitalistic system
 kapitalistlik:capitalistic
-kapitalisatsioon:capitalization
-suurtähtedega kirjutamine:capitalization
+kapitalisatsioon:capitalisation
+suurtähtedega kirjutamine:capitalisation
 profiiti lõikama:capitalize on
 ära kasutama:capitalize on
 kapitaliseerima:capitalize
@@ -29869,7 +29869,7 @@ süsihape:carbonic acid
 süsi-:carbonic
 süsinik-:carbonic
 karboniajastu:carboniferous
-karboniseerumine:carbonization
+karboniseerumine:carbonisation
 karboniseerima:carbonize
 koksistama:carbonize
 karbonüül:carbonyl
@@ -30889,8 +30889,8 @@ kategooriliselt:categorically
 kategoriseerimine:categorisation
 liigitamine:categorisation
 liigitama:categorise
-kategoriseerimine:categorization
-liigitamine:categorization
+kategoriseerimine:categorisation
+liigitamine:categorisation
 liigitama:categorize
 kategooriate sisaldusvahekord:category inclusion relation
 kategooriate sisaldusreegel:category inclusion rule
@@ -31088,8 +31088,8 @@ kaustiline:caustic
 salvav:caustic
 söövitav:caustic
 salvavalt:caustically
-kaustika:cauterization
-kauteriseerimine:cauterization
+kaustika:cauterisation
+kauteriseerimine:cauterisation
 kauteriseerima:cauterize
 põletama:cauterize
 söövitama:cauterize
@@ -31401,9 +31401,9 @@ tsentraliseerima:centralise
 tsentraliseeritud:centralised
 tsentralislik:centralist
 keskne tähtsus:centrality
-keskendamine:centralization
-koondamine:centralization
-tsentraliseerimine:centralization
+keskendamine:centralisation
+koondamine:centralisation
+tsentraliseerimine:centralisation
 keskendama:centralize
 koondama:centralize
 tsentraliseerima:centralize
@@ -31902,7 +31902,7 @@ kanal:channel
 kanaliseerima:channel
 suunama:channel
 väin:channel
-sängi suunamine:channelization
+sängi suunamine:channelisation
 šansoon:chanson
 poollauldes lugema:chant
 skandeerima:chant
@@ -31995,8 +31995,8 @@ tüüpiline:characteristical
 iseloomulikult:characteristically
 tüüpiliselt:characteristically
 iseloomustatav:characterizable
-iseloomustamine:characterization
-kirjeldus:characterization
+iseloomustamine:characterisation
+kirjeldus:characterisation
 iseloomustama:characterize
 kirjeldama:characterize
 hall:characterless
@@ -32927,7 +32927,7 @@ kloordioksiid:chlorine dioxide
 kloorvesi:chlorine water
 kloor:chlorine
 kloriit:chlorite
-kloriidistumine:chloritization
+kloriidistumine:chloritisation
 kloroform:chloroform
 kloroformiga uinutama:chloroform
 klorofüll:chlorophyll
@@ -33746,7 +33746,7 @@ haritud:civilised
 tsiviliseeritud:civilised
 tsiviliseeritus:civility
 viisakus:civility
-tsivilisatsioon:civilization
+tsivilisatsioon:civilisation
 harima:civilize
 tsiviliseerima:civilize
 haritud:civilized
@@ -35729,7 +35729,7 @@ kollektiivselt:collectively
 ühiselt:collectively
 kollektivism:collectivism
 kollektivist:collectivist
-kollektiviseerimine:collectivization
+kollektiviseerimine:collectivisation
 kollektiviseerima:collectivize
 riigistama:collectivize
 kollektiviseeritud:collectivized
@@ -35843,7 +35843,7 @@ asustama:colonise
 koloniseerima:colonise
 asunik:colonist
 kolonist:colonist
-koloniseerimine:colonization
+koloniseerimine:colonisation
 koloniseerima:colonize
 koloniseeritud:colonized
 kolonisaator:colonizer
@@ -36467,7 +36467,7 @@ kommertsialiseerima:commercialise
 ärile taandama:commercialise
 kaubanduslikkus:commercialism
 kommertsialism:commercialism
-kommertsialiseerimine:commercialization
+kommertsialiseerimine:commercialisation
 kommertsialiseerima:commercialize
 ärile taandama:commercialize
 äriks muudetud:commercialized
@@ -41335,8 +41335,8 @@ ristküsitlus:cross-examining
 kõõrsilmne:cross-eyed
 sissepoole kõõrdi silmad:cross-eyedness
 sissepoole kõõrdi silmad:cross-eyes
-ristamine:cross-fertilization
-risttolmlemine:cross-fertilization
+ristamine:cross-fertilisation
+risttolmlemine:cross-fertilisation
 ristama:cross-fertilize
 mitme partei kandidaadina kirja panema:cross-file
 risttuli:cross-fire
@@ -41744,7 +41744,7 @@ kristallselge:crystalline
 kristalne:crystalline
 kristalliseerumine:crystallisation
 kristalliseeruma:crystallise
-kristalliseerumine:crystallization
+kristalliseerumine:crystallisation
 kristalliseeruma:crystallize
 kuju võtma:crystallize
 kristalliseerunud:crystallized
@@ -43549,7 +43549,7 @@ sündsalt:decently
 detsentralisatsioon:decentralisation
 detsentraliseerima:decentralise
 detsentraliseeritud:decentralised
-detsentralisatsioon:decentralization
+detsentralisatsioon:decentralisation
 detsentraliseerima:decentralize
 detsentraliseeritud:decentralized
 altvedamine:deception
@@ -43600,7 +43600,7 @@ kümnend-:decimal
 kümnendarv:decimal
 kümnendsüsteemile üleminek:decimalisation
 kümnendsüsteemile üle viima:decimalise
-kümnendsüsteemile üleminek:decimalization
+kümnendsüsteemile üleminek:decimalisation
 kümnendsüsteemile üle viima:decimalize
 iga kümnendat tapma:decimate
 kümnist võtma:decimate
@@ -43726,7 +43726,7 @@ dekoltee:decolletage
 dekolteeritud:decollete
 dekoloniseerimine:decolonisation
 dekoloniseeritud:decolonised
-dekoloniseerimine:decolonization
+dekoloniseerimine:decolonisation
 dekoloniseerima:decolonize
 iseseisvust andma:decolonize
 pleegitama:decolor
@@ -44225,7 +44225,7 @@ nuditud sarvedega:dehorned
 heidutama:dehort
 ümber veenma:dehort
 ebainimlikustamine:dehumanisation
-ebainimlikustamine:dehumanization
+ebainimlikustamine:dehumanisation
 ebainimlikuks muutma:dehumanize
 niiskuse kõrvaldamine:dehumidification
 kuivati:dehumidifier
@@ -44468,7 +44468,7 @@ kaevuma:delve
 süvenema:delve
 demagneetimine:demagnetisation
 demagneetima:demagnetise
-demagneetimine:demagnetization
+demagneetimine:demagnetisation
 demagneetima:demagnetize
 demagoog:demagog
 demagoogiline:demagogic
@@ -44503,11 +44503,11 @@ demarkatsioonijoon:demarcation line
 demarkeerima:demarcation
 eraldusjooned:demarcation
 demarš:demarche
-munandite eemaldamine:demasculinization
+munandite eemaldamine:demasculinisation
 munandeid eemaldama:demasculinize
 dematerialiseeruma:dematerialise
 kaduma:dematerialise
-dematerialiseerumine:dematerialization
+dematerialiseerumine:dematerialisation
 dematerialiseeruma:dematerialize
 elektronkujule viima:dematerialize
 kaduma:dematerialize
@@ -44546,7 +44546,7 @@ korvpudel:demijohn
 demilitariseerimine:demilitarisation
 demilitariseerima:demilitarise
 demilitariseeritud:demilitarised
-demilitariseerimine:demilitarization
+demilitariseerimine:demilitarisation
 demilitariseerima:demilitarize
 demilitariseeritud tsoon:demilitarized zone
 demilitariseeritud:demilitarized
@@ -44575,7 +44575,7 @@ demopp:demob
 demobiliseeritud:demobbed
 demobilisatsioon:demobilisation
 demobiliseerima:demobilise
-demobilisatsioon:demobilization
+demobilisatsioon:demobilisation
 demobiliseerima:demobilize
 demotsiid:democide
 demokraatiamaad:democracies
@@ -44587,7 +44587,7 @@ demokraatlikult:democratically
 demokratiseerimine:democratisation
 demokratiseerima:democratise
 demokratism:democratism
-demokratiseerimine:democratization
+demokratiseerimine:democratisation
 demokratiseerima:democratize
 demokratiseeritud:democratized
 moestläinud:demode
@@ -44624,7 +44624,7 @@ deemon:demon
 kuri vaim:demon
 demonetiseerimine:demonetisation
 demonetiseerima:demonetise
-demonetiseerimine:demonetization
+demonetiseerimine:demonetisation
 demonetiseerima:demonetize
 deemonlik:demoniac
 hullunud:demoniac
@@ -44676,7 +44676,7 @@ demoraliseerimine:demoralisation
 demoraliseerima:demoralise
 demoraliseeriv:demoralising
 lootust kaotama panev:demoralising
-demoraliseerimine:demoralization
+demoraliseerimine:demoralisation
 demoraliseerima:demoralize
 demoraliseeritud:demoralized
 demos:demos
@@ -44724,12 +44724,12 @@ teenar:denarius
 kümnend-:denary
 denatsionaliseerimine:denationalisation
 denatsionaliseerima:denationalise
-denatsionaliseerimine:denationalization
+denatsionaliseerimine:denationalisation
 denatsionaliseerima:denationalize
 kodakondsusest ilmajätmine:denaturalisation
 kunstlikumaks muutmine:denaturalisation
-kodakondsusest ilmajätmine:denaturalization
-kunstlikumaks muutmine:denaturalization
+kodakondsusest ilmajätmine:denaturalisation
+kunstlikumaks muutmine:denaturalisation
 kodakondsust ära võtma:denaturalize
 kunstlikumaks muutma:denaturalize
 denaturant:denaturant
@@ -44967,8 +44967,8 @@ vasall-:dependent
 ülalpeetav:dependent
 olenevalt asjaoludest:depending on circumstances
 sõltuv:depending on
-ebaisikustumine:depersonalization
-impersonaliseerumine:depersonalization
+ebaisikustumine:depersonalisation
+impersonaliseerumine:depersonalisation
 ebaisikustama:depersonalize
 kujutama:depict
 pilti andma:depict
@@ -45013,7 +45013,7 @@ sulgi kitkuma:deplume
 ära võtma:deplume
 kitkutud:deplumed
 paljaks tehtud:deplumed
-depolarisatsioon:depolarization
+depolarisatsioon:depolarisation
 depolitiseeritud:depoliticized
 tunnistama:depone
 deponent:deponent
@@ -45174,11 +45174,11 @@ segane:deranged
 segipaisatud:deranged
 meeltesegadus:derangement
 segipaiskamine:derangement
-näriliste hävitamine:deratization
-rotitõrje:deratization
+näriliste hävitamine:deratisation
+rotitõrje:deratisation
 kõvakübar:derby
 võidukihutamine:derby
-derealisatsioon:derealization
+derealisatsioon:derealisation
 piirangute tühistamine:dereg
 vabaks andmine:dereg
 vabaks andma:deregulate
@@ -45337,7 +45337,7 @@ diskrimineerimist lõpetama:desegregate
 kõigile avama:desegregate
 desegregatsioon:desegregation
 taasühendamine:desegregation
-tundetuks muutmine:desensitization
+tundetuks muutmine:desensitisation
 tundetuks muutma:desensitize
 tundetuks tehtud:desensitized
 kõrbesaapad:desert boots
@@ -45546,7 +45546,7 @@ tessatin:dessiatine
 tiin:dessiatine
 kuivama:dessicate
 niiskust kaotama:dessicate
-destabiliseerimine:destabilization
+destabiliseerimine:destabilisation
 destabiliseerima:destabilize
 destabiliseeritud:destabilized
 eesmärk:destination
@@ -45594,7 +45594,7 @@ kasutusest välja langenud:desuete
 hääbumine:desuetude
 jõudeolek:desuetude
 kasutamata seismine:desuetude
-väävli eemaldamine:desulfurization
+väävli eemaldamine:desulfurisation
 desulfureerima:desulphurate
 väävlitustama:desulphurate
 sihitult:desultorily
@@ -45756,7 +45756,7 @@ pisendamine:detraction
 halvustaja:detractor
 mahategija:detractor
 rongilt maha tulema:detrain
-hõimueluviisi lagunemine:detribalization
+hõimueluviisi lagunemine:detribalisation
 kahjustus:detriment
 kaotus:detriment
 kahjulik:detrimental
@@ -45862,7 +45862,7 @@ pärandus:devise
 välja mõtlema:devise
 pärija:devisee
 kavandaja:deviser
-närvutamine:devitalization
+närvutamine:devitalisation
 elutuks muutma:devitalize
 suretama:devitalize
 närvutav:devitalizing
@@ -46185,7 +46185,7 @@ dikloriid:dichloride
 pisargaas:dichlorodiethyl sulfide
 dihhotomiseerimine:dichotomisation
 dihhotomiseerima:dichotomise
-dihhotomiseerimine:dichotomization
+dihhotomiseerimine:dichotomisation
 dihhotomiseerima:dichotomize
 kaheks vastandiks jaotama:dichotomize
 dihhotoomne:dichotomous
@@ -46499,7 +46499,7 @@ numbriliselt:digitally
 sõrmedega:digitally
 sõrmekujuline:digitate
 varvastel kõndiv:digitigrade
-digitaliseerimine:digitization
+digitaliseerimine:digitisation
 digitaliseerima:digitize
 digitaliseerija:digitizer
 digimine:digitizing
@@ -46804,7 +46804,7 @@ sisse kastma:dip
 taskuvaras:dip
 difteeria:diphtheria
 diftong:diphthong
-diftongistumine:diphthongization
+diftongistumine:diphthongisation
 mõlemapoolne halvatus:diplegia
 diplokokid:diplococci
 diplokokk:diplococcus
@@ -47263,10 +47263,10 @@ pleegitamine:discoloration
 ebaühtlast värvi:discolored
 luitunud:discolored
 plekiline:discolored
-pleegitamine:discolorization
+pleegitamine:discolorisation
 ebaühtlast värvi:discoloured
 luitunud:discoloured
-pleegitamine:discolourization
+pleegitamine:discolourisation
 segadusse ajama:discombobulate
 segadusse aetud:discombobulated
 ebamugavustunnet tekitama:discomfit
@@ -47697,8 +47697,8 @@ pärandusest ilmajätmine:disinheritance
 õiguspärase päranduseta jäetud:disinherited
 desinsektsioon:disinsection
 putukatõrje:disinsection
-desinsekteerimine:disinsectization
-putukatõrje:disinsectization
+desinsekteerimine:disinsectisation
+putukatõrje:disinsectisation
 sulatatav:disintegrable
 laengut kaotama:disintegrate
 lagunema:disintegrate
@@ -47849,7 +47849,7 @@ lohakas:disorderly
 korratused:disorders
 rahutused:disorders
 korratu:disorganised
-korralagedus:disorganization
+korralagedus:disorganisation
 korralagedust tekitama:disorganize
 kaootiline:disorganized
 korrapäratu:disorganized
@@ -49118,8 +49118,8 @@ nukuke:doll
 majandushuve järgiv poliitika:dollar diplomacy
 dollarimärk:dollar mark
 dollar:dollar
-dollari kasutamine sisevaluutana:dollarization
-dollarisatsioon:dollarization
+dollari kasutamine sisevaluutana:dollarisation
+dollarisatsioon:dollarisation
 uhkelt riides:dolled up
 ülesmukitud:dolled up
 nukumaja:dollhouse
@@ -49140,7 +49140,7 @@ riisihautis:dolmas
 dolmen:dolmen
 domeriit:dolomite-rich marl
 dolomiit:dolomite
-dolomiidistumine:dolomitization
+dolomiidistumine:dolomitisation
 hingepiin:dolor
 kannatused:dolor
 leinavalu:dolor
@@ -53151,7 +53151,7 @@ väljarändaja:emigrant
 emigreerima:emigrate
 välja rändama:emigrate
 emigratsioon:emigration
-pagulasorganisatsioon:emigre organization
+pagulasorganisatsioon:emigre organisation
 emigrant:emigre
 pagulane:emigre
 emigrant:emigree
@@ -53643,7 +53643,7 @@ pärismaine:endemic
 endeemiliselt:endemically
 endemism:endemism
 pärismaisus:endemism
-kodakondsuse andmine:endenization
+kodakondsuse andmine:endenisation
 naha-:endermic
 lõppmäng:endgame
 lõpp hea kõik hea:ending fine - everything fine
@@ -54197,7 +54197,7 @@ kroonima:enthrone
 troonile asuma:enthrone
 kroonimine:enthronement
 troonile asumine:enthronement
-kroonimistseremoonia:enthronization
+kroonimistseremoonia:enthronisation
 innustama:enthuse
 vaimustunult hüüatama:enthuse
 entusiasm:enthusiasm
@@ -54613,8 +54613,8 @@ viigivärav:equaliser
 võrdõiguslane:equalitarian
 võrdne kohtlemine:equality of treatment
 võrdsus:equality
-võrdsustamine:equalization
-ühtlustamine:equalization
+võrdsustamine:equalisation
+ühtlustamine:equalisation
 viigistama:equalize
 võrdsustama:equalize
 võrdsustatud:equalized
@@ -56696,7 +56696,7 @@ hetke ajel:extempore
 peast:extempore
 improviseeritud esitus:extemporisation
 ettevalmistuseta esinema:extemporise
-improviseeritud esitus:extemporization
+improviseeritud esitus:extemporisation
 ettevalmistuseta esinema:extemporize
 improviseerima:extemporize
 kätt sirutama:extend a hand
@@ -56774,7 +56774,7 @@ välis-:exterior
 välisilme:exterior
 väline pool:exteriority
 välispidisus:exteriority
-väline jäljendamine:exteriorization
+väline jäljendamine:exteriorisation
 välja tooma:exteriorize
 hävitatav:exterminable
 hävitama:exterminate
@@ -57781,8 +57781,8 @@ tutvuma:familiarise
 familiaarsus:familiarity
 lähedus:familiarity
 tuttavlikkus:familiarity
-kurssiviimine:familiarization
-tutvumine:familiarization
+kurssiviimine:familiarisation
+tutvumine:familiarisation
 kurssi viima:familiarize
 tutvuma:familiarize
 kohanenud:familiarized
@@ -58947,8 +58947,8 @@ sündivusindeks:fertility rate
 sündivus:fertility
 viljakus:fertility
 viljastatav:fertilizable
-viljastamine:fertilization
-väetamine:fertilization
+viljastamine:fertilisation
+väetamine:fertilisation
 rasestama:fertilize
 viljastama:fertilize
 väetama:fertilize
@@ -59173,7 +59173,7 @@ ilukirjandus:fiction
 väljamõeldis:fiction
 ilukirjanduslik:fictional
 väljamõeldud:fictional
-ilukirjanduslikku vormi seadmine:fictionalization
+ilukirjanduslikku vormi seadmine:fictionalisation
 ette kujutletult:fictionally
 väljamõeldult:fictionally
 valenimi:fictitious name
@@ -59677,7 +59677,7 @@ lõpetus:finale
 finalist:finalist
 lõplikkus:finality
 otsustavus:finality
-lõpuleviimine:finalization
+lõpuleviimine:finalisation
 lõpetama:finalize
 viimast lihvi andma:finalize
 lõpetatud:finalized
@@ -59910,7 +59910,7 @@ finiitsus:finitude
 piiratus:finitude
 teeklaas:finjan
 vasikas:fink
-finlandiseerumine:finlandization
+finlandiseerumine:finlandisation
 -uimeline:finned
 uimedega:finned
 soome-ugri:finno-ugric
@@ -61574,7 +61574,7 @@ helendav:fluorescent
 kiiskav:fluorescent
 fluorimine:fluoridation
 fluoriid:fluoride
-fluorimine:fluoridization
+fluorimine:fluoridisation
 fluorilisandiga:fluoridized
 fluor:fluorine
 fluoriit:fluorite
@@ -61782,8 +61782,8 @@ koldeline:focal
 kolle-:focal
 fokuseerimine:focalisation
 lokaliseerimine:focalisation
-fokuseerimine:focalization
-lokaliseerimine:focalization
+fokuseerimine:focalisation
+lokaliseerimine:focalisation
 koldeliselt:focally
 fookus:foci
 kolle:foci
@@ -63036,7 +63036,7 @@ fossiilne:fossil
 kivistis:fossil
 kivistisi sisaldav:fossiliferous
 kivististe spetsialist:fossilist
-kivistumine:fossilization
+kivistumine:fossilisation
 ajast maha jääma:fossilize
 kivistuma:fossilize
 iganenud:fossilized
@@ -63394,8 +63394,8 @@ korporatsioon:fraternity
 meesüliõpilasühing:fraternity
 vennaskond:fraternity
 üliõpilasühing:fraternity
-salliv suhtumine:fraternization
-vennastumine:fraternization
+salliv suhtumine:fraternisation
+vennastumine:fraternisation
 vennalikult läbi saama:fraternize
 vennatapja:fratricide
 vennatapp:fratricide
@@ -65085,7 +65085,7 @@ galvaani-:galvanic
 galvaaniline:galvanical
 galvaniseerimine:galvanisation
 elektriravi:galvanism
-galvaniseerimine:galvanization
+galvaniseerimine:galvanisation
 galvaniseerima:galvanize
 laengut andma:galvanize
 tsinkraud:galvanized iron
@@ -65093,7 +65093,7 @@ elektriravi:galvanizing
 galvaanimine:galvanizing
 liikumapanev:galvanizing
 ärgitav:galvanizing
-galvanokaustika:galvanocauterization
+galvanokaustika:galvanocauterisation
 galvanokauter:galvanocautery
 galvanomeeter:galvanometer
 galvanoplastika:galvanoplastics
@@ -65753,8 +65753,8 @@ keskhaigla:general hospital
 kõigile teada:general knowledge
 üldkeeleteadus:general linguistics
 üldmeditsiin:general medicine
-täielik mobilisatsioon:general mobilization
-üldmobilisatsioon:general mobilization
+täielik mobilisatsioon:general mobilisation
+üldmobilisatsioon:general mobilisation
 armeekindral:general of the army
 üldised tegevusjuhised:general orders
 täisühing:general partnership
@@ -65787,8 +65787,8 @@ asjatundja mitmel alal:generalist
 üldistus:generality
 üldkehtivus:generality
 üldistatav:generalizable
-üldistamine:generalization
-üldistus:generalization
+üldistamine:generalisation
+üldistus:generalisation
 üldistama:generalize
 üldine haigushoog:generalized seizure
 üldine:generalized
@@ -67258,8 +67258,8 @@ globaalne:global
 üld-:global
 üldine:global
 ülemaailmne:global
-globaliseerumine:globalization
-üleilmastumine:globalization
+globaliseerumine:globalisation
+üleilmastumine:globalisation
 ülemaailmseks muutma:globalize
 globaalselt:globally
 ülemaailmselt:globally
@@ -68690,7 +68690,7 @@ väljalõigetega illustreerima:grangerize
 marmorpaber:granite paper
 graniit:granite
 kivikõva:granitic
-graniidistumine:granitization
+graniidistumine:granitisation
 granitoid:granitoid
 vanaema:grannie
 kangrusõlm:granny knot
@@ -68734,7 +68734,7 @@ sõmerdi:granulator
 graanul:granule
 graanulid:granules
 granuliit:granulite
-granuliidistumine:granulitization
+granuliidistumine:granulitisation
 granulotsüüt:granulocyte
 granuloom:granuloma
 kasvaja:granuloma
@@ -68777,7 +68777,7 @@ graafiliselt:graphically
 graafika:graphics
 illustratsioonid:graphics
 grafiit:graphite
-grafitisatsioon:graphitization
+grafitisatsioon:graphitisation
 grafoloog:graphologist
 grafoloogia:graphology
 kirjutamiskramp:graphospasm
@@ -71656,9 +71656,9 @@ harmooniline laul:harmonisation
 harmoneerima:harmonise
 kokku sobima:harmonise
 harmoonium:harmonium
-harmooniline laul:harmonization
-kooskõlla viimine:harmonization
-ühtlustamine:harmonization
+harmooniline laul:harmonisation
+kooskõlla viimine:harmonisation
+ühtlustamine:harmonisation
 harmoneerima:harmonize
 harmooniliselt laulma:harmonize
 kokku sobima:harmonize
@@ -72570,7 +72570,7 @@ reflektor:heat lamp
 välgusähvatused:heat lightning
 sulamissoojus:heat of fusion
 tahkumissoojus:heat of solidification
-aurustussoojus:heat of vaporization
+aurustussoojus:heat of vaporisation
 palavusnõrkus:heat prostration
 soojuspump:heat pump
 soojusvaheti:heat pump
@@ -74641,7 +74641,7 @@ homogeenne:homogeneous
 ühtlane:homogeneous
 ühtlik:homogeneous
 ühtlaselt:homogeneously
-homogeniseerimine:homogenization
+homogeniseerimine:homogenisation
 homogeniseerima:homogenize
 ühtlustama:homogenize
 homogeniseeritud:homogenized
@@ -74983,7 +74983,7 @@ lamamootor:horizontal engine
 horisontaalparallaks:horizontal parallax
 pikiparallaks:horizontal parallax
 sügavusrool:horizontal rudder
-reasünkronisatsioon:horizontal synchronization
+reasünkronisatsioon:horizontal synchronisation
 horisontaalne:horizontal
 rõht-:horizontal
 horisontaalsus:horizontality
@@ -75206,8 +75206,8 @@ avariitoitelüliti:hospital switch
 sanitaarrong:hospital train
 haigla:hospital
 külalislahkus:hospitality
-haiglasse paigutamine:hospitalization
-haiglasviibimine:hospitalization
+haiglasse paigutamine:hospitalisation
+haiglasviibimine:hospitalisation
 haiglasse panema:hospitalize
 taevakehad:host of heaven
 taevane vägi:host of heaven
@@ -76138,8 +76138,8 @@ hübriid:hybrid
 hübriidne:hybrid
 ristand:hybrid
 ristsugutis:hybrid
-hübridisatsioon:hybridization
-ristamine:hybridization
+hübridisatsioon:hybridisation
+ristamine:hybridisation
 hübriidi moodustama:hybridize
 ristama:hybridize
 liigne enesekindlus:hybris
@@ -76876,8 +76876,8 @@ idealist:idealist
 idealistlik:idealistic
 idealistlikult:idealistically
 ideaalsus:ideality
-idealisatsioon:idealization
-idealiseerimine:idealization
+idealisatsioon:idealisation
+idealiseerimine:idealisation
 idealiseerima:idealize
 idealiseeriv:idealizing
 ideaalselt:ideally
@@ -77525,8 +77525,8 @@ liikumatu:immobile
 paigalseisev:immobile
 liikumisvõimetuks tegema:immobilise
 liikumatus:immobility
-kinnistamine:immobilization
-liikumisvõimetuks muutmine:immobilization
+kinnistamine:immobilisation
+liikumisvõimetuks muutmine:immobilisation
 liikumisvõimetuks tegema:immobilize
 paigale sundima:immobilize
 seiskama:immobilize
@@ -77575,8 +77575,8 @@ immuniseerima:immunise
 immuniteet:immunity
 immuunsus:immunity
 puutumatus:immunity
-immuniseerimine:immunization
-kaitsesüstimine:immunization
+immuniseerimine:immunisation
+kaitsesüstimine:immunisation
 immuniseerima:immunize
 immuno-:immuno-
 immuun-:immuno-
@@ -79824,8 +79824,8 @@ individualistlikult:individualistically
 individuaalsus:individuality
 isikupära:individuality
 omapära:individuality
-individualiseerimine:individualization
-isikupärastamine:individualization
+individualiseerimine:individualisation
+isikupärastamine:individualisation
 eripäraseks tegema:individualize
 individualiseerima:individualize
 eraldi:individually
@@ -79942,7 +79942,7 @@ industrialiseerimine:industrialisation
 industrialiseerima:industrialise
 industrialism:industrialism
 tööstur:industrialist
-industrialiseerimine:industrialization
+industrialiseerimine:industrialisation
 industrialiseerima:industrialize
 linnastuma:industrialize
 industrialiseeritud:industrialized
@@ -81120,12 +81120,12 @@ rahvusvaheline üldsus:international community
 rahvusvaheline mereõigus:international law of the sea
 rahvusvaheline õigus:international law
 kaubandusliku meresõidu õigus:international maritime law
-rahvusvaheline organisatsioon:international organization
+rahvusvaheline organisatsioon:international organisation
 rahvusvahelised suhted:international relations
 rahvusvahelised veed:international waters
 rahvusvaheline sõna:international word
 rahvusvaheline:international
-internatsionaliseerimine:internationalization
+internatsionaliseerimine:internationalisation
 internatsionaliseerima:internationalize
 rahvusvaheliselt:internationally
 -sisene:internecine
@@ -81546,7 +81546,7 @@ ioon-:ionic
 ionisatsioon:ionisation
 ioniseerimine:ionisation
 ioniseerima:ionise
-ionisatsioon:ionization
+ionisatsioon:ionisation
 ioniseeritud:ionized
 jonoon:ionone
 iontoforees:iontophoresis
@@ -82649,7 +82649,7 @@ känguru:kangaroo
 kaoliin:kaolin
 portselanisavi:kaolin
 kaoliniit:kaolinite
-kaoliinistumine:kaolinization
+kaoliinistumine:kaolinisation
 dirigent:kapellmeister
 koorijuht:kapellmeister
 kapok:kapok
@@ -84707,7 +84707,7 @@ leitmotiiv:leitmotiv
 läbiv teema:leitmotiv
 armuke:leman
 lemma:lemma
-lemmatiseerimine:lemmatization
+lemmatiseerimine:lemmatisation
 lemmatiseerima:lemmatize
 lemming:lemming
 sidrunmeliss:lemon balm
@@ -84970,7 +84970,7 @@ algvorm:lexical word
 leksikaalne sõna:lexical word
 leksikaalne:lexical
 sõnastiku-:lexical
-leksikaliseerumine:lexicalization
+leksikaliseerumine:lexicalisation
 leksikograaf:lexicographer
 leksikograafia:lexicography
 leksikoloogia:lexicology
@@ -85993,8 +85993,8 @@ lokaliseerima:localise
 piiritlema:localise
 lokaalsus:locality
 paikkond:locality
-lokaliseerimine:localization
-paigastamine:localization
+lokaliseerimine:localisation
+paigastamine:localisation
 lokaliseeritud:localized
 koha peal:locally
 kohalikult:locally
@@ -87278,7 +87278,7 @@ kisa tõstma:make a fuss about
 kisa tõstma:make a fuss over
 kisa tõstma:make a fuss
 suurt numbrit tegema:make a fuss
-üldistama:make a generalization
+üldistama:make a generalisation
 edukas olema:make a go of
 tavaks saama:make a habit of
 kõik vussi ajama:make a hash of
@@ -89747,7 +89747,7 @@ mineraalvatt:mineral wool
 anorgaaniline:mineral
 mineraal:mineral
 mineraal-:mineral
-mineraliseerumine:mineralization
+mineraliseerumine:mineralisation
 mineraloogia:mineralogy
 mineroloog:minerologist
 mineroloogia:minerology
@@ -90177,7 +90177,7 @@ sõiduk:mobile
 kokku võtma:mobilise
 mobiliseerima:mobilise
 liikuvus:mobility
-mobilisatsioon:mobilization
+mobilisatsioon:mobilisation
 kokku võtma:mobilize
 mobiliseerima:mobilize
 gängster:mobster
@@ -90198,7 +90198,7 @@ rõhumäärsõna:modal adverb
 modaalloogika:modal logic
 modaalne:modal
 modaalsus:modality
-modalisatsioon:modalization
+modalisatsioon:modalisation
 väljenduslaad:mode of expression
 kõneviis:mode
 moodus:mode
@@ -90241,8 +90241,8 @@ modernistlik:modernist
 modernistlik:modernistic
 kaasaeg:modernity
 tänapäevasus:modernity
-kaasajastamine:modernization
-moderniseerimine:modernization
+kaasajastamine:modernisation
+moderniseerimine:modernisation
 moderniseerima:modernize
 tagasihoidlik:modest
 tagasihoidlikult:modestly
@@ -91918,7 +91918,7 @@ riigitähis:national letters
 rahvuspark:national park
 riiklik poliitika:national politics
 sisepoliitika:national politics
-omaladina:national romanization
+omaladina:national romanisation
 rahvuslik julgeolek:national security
 riiklik julgeolek:national security
 kodanik:national
@@ -92595,7 +92595,7 @@ tasakaalustama:neutralise
 erapooletu:neutralist
 erapooletus:neutrality
 neutraliteet:neutrality
-neutralisatsioon:neutralization
+neutralisatsioon:neutralisation
 kahjutuks tegema:neutralize
 neutraliseerima:neutralize
 neutraliseeritud:neutralized
@@ -93182,7 +93182,7 @@ nimi-:nominal
 nominaal:nominal
 nominaal-:nominal
 nominaalne:nominal
-nominalisatsioon:nominalization
+nominalisatsioon:nominalisation
 nime järgi:nominally
 nominaalselt:nominally
 esitama:nominate
@@ -95728,10 +95728,10 @@ eluvorm:organism
 organism:organism
 orelimängija:organist
 organist:organist
-korraldamine:organization
-organisatsioon:organization
-organisatoorne:organizational
-organisatsiooniline:organizational
+korraldamine:organisation
+organisatsioon:organisation
+organisatoorne:organisational
+organisatsiooniline:organisational
 korraldama:organize
 organiseerima:organize
 organiseeritud kuritegevus:organized crime
@@ -96817,8 +96817,8 @@ kandetool:palanquin
 maitsev:palatable
 vastuvõetav:palatable
 palataalne konsonant:palatal consonant
-palatalisatsioon:palatalization
-peenendus:palatalization
+palatalisatsioon:palatalisation
+peenendus:palatalisation
 palataliseerima:palatalize
 palataliseeritud:palatalized
 maitse:palate
@@ -97750,7 +97750,7 @@ sõrgats:pastern
 pastöriseerimine:pasteurisation
 pastöriseerima:pasteurise
 pastöriseeritud:pasteurised
-pastöriseerimine:pasteurization
+pastöriseerimine:pasteurisation
 pastöriseerima:pasteurize
 pastöriseeritud piim:pasteurized milk
 pastöriseeritud:pasteurized
@@ -97939,8 +97939,8 @@ kehvik:pauper
 pauper:pauper
 vaene:pauper
 pauperism:pauperism
-pauperisatsioon:pauperization
-vaesumine:pauperization
+pauperisatsioon:pauperisation
+vaesumine:pauperisation
 paus:pause
 peatama:pause
 peatuma:pause
@@ -98494,7 +98494,7 @@ kress:pepperwort
 pepsiin:pepsin
 peptiidside:peptide bond
 peptiid:peptide
-peptisatsioon:peptization
+peptisatsioon:peptisation
 peptoon:peptone
 per accidens:per accidens
 aasta kohta:per annum
@@ -99665,7 +99665,7 @@ pitoreskne:picturesque
 lihtsustatud keel:pidgin
 lihtsustatud ärikeel:pidgin
 pidžin:pidgin
-pidžiniseeruma:pidginization
+pidžiniseeruma:pidginisation
 rõngasdiagramm:pie chart
 pirukas:pie
 kokkulapitud:piebald
@@ -101003,7 +101003,7 @@ polariseerima:polarise
 arvamuste lahkuminek:polarity of opinion
 polaarsus:polarity
 vastandlikkus:polarity
-polariseerimine:polarization
+polariseerimine:polarisation
 eristuma:polarize
 polariseerima:polarize
 polariseeritud:polarized
@@ -102814,9 +102814,9 @@ erastamine:privatisation
 privatiseerimine:privatisation
 erastama:privatise
 privatiseerima:privatise
-erastamisagentuur:privatization agency
-erastamine:privatization
-privatiseerimine:privatization
+erastamisagentuur:privatisation agency
+erastamine:privatisation
+privatiseerimine:privatisation
 erastama:privatize
 erastatud:privatized
 liguster:privet
@@ -104767,7 +104767,7 @@ hulk:quantity
 kogus:quantity
 kvantiteet:quantity
 suurus:quantity
-kvantiseerimine:quantization
+kvantiseerimine:quantisation
 kvantima:quantize
 kvantarvuti:quantum computer
 kvantsaagis:quantum efficiency
@@ -106433,9 +106433,9 @@ tõsielusõu:reality show
 reaalsus:reality
 tegelikkus:reality
 tõelisus:reality
-elluviimine:realization
-taipamine:realization
-teostus:realization
+elluviimine:realisation
+taipamine:realisation
+teostus:realisation
 realiseerima:realize
 taipama:realize
 ümber jaotama:reallocate
@@ -106855,7 +106855,7 @@ sõjaväkke võetud:recruited
 värvatud:recruited
 värbamine:recruiting
 värbamine:recruitment
-ümberkristalliseerumine:recrystallization
+ümberkristalliseerumine:recrystallisation
 päraku-:rectal
 pärasoolevalu:rectalgia
 päraku kaudu:rectally
@@ -108591,7 +108591,7 @@ uuesti kasutatav:reusable
 uuesti kasutama:reuse
 pöördeid lisama:rev up
 sidurit libistama:rev up
-taasväärtustamine:revalorization
+taasväärtustamine:revalorisation
 lisaväärtust saama:revalue
 revalveerima:revalue
 ümber hindama:revalue
@@ -109415,7 +109415,7 @@ ajalooline romaan:roman a clef
 rooma number:roman numeral
 perekonnasaaga:roman-fleuve
 romantika:romance
-latinisatsioon:romanization
+latinisatsioon:romanisation
 latiniseerima:romanize
 ajalooline romaan:romans a clef
 roomlased:romans
@@ -112318,7 +112318,7 @@ ilmalik:secular
 ilmik:secular
 kord sajandis esinev:secular
 pikaaegne:secular
-ilmalikustamine:secularization
+ilmalikustamine:secularisation
 sekulariseerima:secularize
 ilmalikustatud:secularized
 sekulariseeritud:secularized
@@ -112666,8 +112666,8 @@ enesestmõistetav:self-evident
 iseenesest selge:self-evident
 iseenesestmõistetav:self-explanatory
 eneseväljendus:self-expression
-isetolmlemine:self-fertilization
-iseviljastumine:self-fertilization
+isetolmlemine:self-fertilisation
+iseviljastumine:self-fertilisation
 iseviljastunud:self-fertilized
 ennastpiitsutav:self-flagellating
 enesepiitsutamine:self-flagellation
@@ -112712,7 +112712,7 @@ autoportree:self-portrait
 enesekiitus:self-praise
 eneseuhkus:self-pride
 enesekaitse:self-protection
-enesetunnetus:self-realization
+enesetunnetus:self-realisation
 enesekohasus:self-reference
 ennastkummutav:self-refuting
 ennast arvestav:self-regarding
@@ -116751,8 +116751,8 @@ pühalik tõotus:solemn vow
 pidulik:solemn
 pühalik:solemn
 pühalikkus:solemnity
-pidulik tähistamine:solemnization
-pühitsemine:solemnization
+pidulik tähistamine:solemnisation
+pühitsemine:solemnisation
 pühalikult:solemnly
 soleno-:soleno-
 torujas:soleno-
@@ -116810,7 +116810,7 @@ pasjanss:solitaire
 üksik:solitary
 soliton:soliton
 üksindus:solitude
-solmisatsioon:solmization
+solmisatsioon:solmisation
 soololend:solo flight
 soolo:solo
 üksik-:solo
@@ -118709,7 +118709,7 @@ standart:standard
 tase:standard
 standardiseerima:standardise
 ühtsustama:standardise
-standardiseerimine:standardization
+standardiseerimine:standardisation
 standardiseeritud:standardized
 standardne:standardized
 asendusnäitleja:standby
@@ -119281,7 +119281,7 @@ viljatu:sterile
 steriliseerima:sterilise
 steriilsus:sterility
 viljatus:sterility
-steriliseerimine:sterilization
+steriliseerimine:sterilisation
 steriliseerima:sterilize
 steriliseeritud:sterilized
 sterilisaator:sterilizer
@@ -120824,7 +120824,7 @@ pettemanööver:subterfuge
 suitsukate:subterfuge
 maa-alune:subterranean
 maa-alune:subterraneous
-lenduvaks muutmine:subtilization
+lenduvaks muutmine:subtilisation
 alapealkiri:subtitle
 subtiiter:subtitle
 alapealkirjad:subtitles
@@ -122199,7 +122199,7 @@ sünkronisaator:synchromesh
 sünkrooniline leksikoloogia:synchronic lexicology
 sünkrooniline:synchronic
 sünkroniseerima:synchronise
-sünkroniseerimine:synchronization
+sünkroniseerimine:synchronisation
 sünkroniseerima:synchronize
 sünkrotronkiirgus:synchrotron radiation
 sünkrotron:synchrotron
@@ -122289,8 +122289,8 @@ süstemaatiliselt:systematically
 süstematiseerima:systematise
 süsteemne:systemic
 süsteemselt:systemically
-korrastamine:systemization
-süstematiseerimine:systemization
+korrastamine:systemisation
+süstematiseerimine:systemisation
 süsteemianalüüs:systems analysis
 süsteemianalüütik:systems analyst
 vastasseisus olev:syzygetic
@@ -124301,8 +124301,8 @@ maakaitsevägi:territorial defense army
 territoriaalveed:territorial waters
 oma territooriumi kaitsev:territorial
 territoriaal-:territorial
-alaga määratlemine:territorialization
-territorialiseerimine:territorialization
+alaga määratlemine:territorialisation
+territorialiseerimine:territorialisation
 ala:territory
 territoorium:territory
 valdkond:territory
@@ -130322,8 +130322,8 @@ linnaplaneerija:urbanist
 linlane:urbanite
 lihvitus:urbanity
 suurlinlikkus:urbanity
-linnastumine:urbanization
-urbaniseerumine:urbanization
+linnastumine:urbanisation
+urbaniseerumine:urbanisation
 urbi et orbi:urbi et orbi
 linnakohanimi:urbonym
 urbonüüm:urbonym
@@ -130499,8 +130499,8 @@ kasu:utility
 vahend:utility
 kasutuskõlbulik:utilizable
 rakendatav:utilizable
-kasutamine:utilization
-kasutus:utilization
+kasutamine:utilisation
+kasutus:utilisation
 kasutama:utilize
 kasutusse võtma:utilize
 rakendama:utilize
@@ -130904,7 +130904,7 @@ neel:valley
 org:valley
 vahvus:valor
 vaprus:valor
-valorisatsioon:valorization
+valorisatsioon:valorisation
 hinda hoidma:valorize
 riiklikult hinda määrama:valorize
 vahva:valorous
@@ -131088,8 +131088,8 @@ veetramm:vaporetto
 aurustuma:vaporise
 kondenseerima:vaporise
 aurusti:vaporiser
-aurustamine:vaporization
-aurustumine:vaporization
+aurustamine:vaporisation
+aurustumine:vaporisation
 aurustama:vaporize
 aurustuma:vaporize
 aurustatud:vaporized
@@ -132212,9 +132212,9 @@ kannatanu:victim
 ohver:victim
 ohvriks langema:victimise
 taga kiusama:victimise
-ohvriks tegemine:victimization
-tagakiusamine:victimization
-ärakasutamine:victimization
+ohvriks tegemine:victimisation
+tagakiusamine:victimisation
+ärakasutamine:victimisation
 kannatada laskma:victimize
 ohvriks tegema:victimize
 tüssama:victimize
@@ -132739,9 +132739,9 @@ visuaalne:visual
 ette kujutama:visualise
 kujutlema:visualise
 vaimusilmas nägema:visualise
-kujutlemine:visualization
-nähtavaks tegemine:visualization
-visualiseerimine:visualization
+kujutlemine:visualisation
+nähtavaks tegemine:visualisation
+visualiseerimine:visualisation
 ette kujutama:visualize
 kujutlema:visualize
 vaimusilmas nägema:visualize
@@ -132763,8 +132763,8 @@ eluhoog:vitality
 elujõud:vitality
 eluvisadus:vitality
 vitaalsus:vitality
-elustamine:vitalization
-elustus:vitalization
+elustamine:vitalisation
+elustus:vitalisation
 elustama:vitalize
 elutähtsad organid:vitals
 olulisim osa:vitals
@@ -132894,8 +132894,8 @@ vokaliis:vocalise
 vokalism:vocalism
 laulja:vocalist
 vokalist:vocalist
-vokaalimärgid:vocalization
-vokaliseerimine:vocalization
+vokaalimärgid:vocalisation
+vokaliseerimine:vocalisation
 heliliselt ütlema:vocalize
 laulma:vocalize
 välja ütlema:vocalize
@@ -133207,7 +133207,7 @@ vulkanism:vulcanism
 eboniit:vulcanite
 kõvakummi:vulcanite
 vulkaniit:vulcanite
-vulkaniseerimine:vulcanization
+vulkaniseerimine:vulcanisation
 vulkaniseerima:vulcanize
 vulkaniseeritud:vulcanized
 vulkanoloogia:vulcanology
@@ -133232,8 +133232,8 @@ vulgaarkeelend:vulgarism
 vulgarism:vulgarism
 labasus:vulgarity
 vulgaarsus:vulgarity
-labastamine:vulgarization
-labastumine:vulgarization
+labastamine:vulgarisation
+labastumine:vulgarisation
 labastama:vulgarize
 vulgaarselt:vulgarly
 vulgaarsus:vulgarness
@@ -134115,8 +134115,8 @@ harjunud:wean on
 rinnast võõrutama:wean
 võõrutama:wean
 relv:weapon
-relvaks muutmine:weaponization
-relvana kasutamine:weaponization
+relvaks muutmine:weaponisation
+relvana kasutamine:weaponisation
 relvitu:weaponless
 ühegi relvata:weaponless
 relvastus:weaponry

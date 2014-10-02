@@ -41,24 +41,27 @@ TARGETS_COMMON = \
 ###############################################################################
 
 # fin->est mor
-$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(LANG1).automorf.att.gz .deps/.d
+# apertium-fin-est.fin-est.LR.att.gz
+$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/.d
 	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 
 # est->fin mor
-$(PREFIX2).automorf.bin: $(BASENAME).$(PREFIX2).LR.att.gz .deps/.d
+# apertium-fin-est.est-fin.LR.att.gz
+$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/.d
 	$(ZCAT) $< > .deps/$(PREFIX2).automorf.LR.att
 	lt-comp lr .deps/$(PREFIX2).automorf.LR.att $@
 
 # fin->est gen
-$(PREFIX1).autogen.bin: $(BASENAME).$(PREFIX2).RL.att.gz .deps/.d
+# apertium-est.est.RL.att.gz
+$(PREFIX1).autogen.bin: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
 	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
 	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
 
 # est->fin gen
-$(PREFIX2).autogen.hfst: $(AP_SRC1)/$(LANG1).autogen.hfst
+# apertium-fin.fin.RL.att.gz
+$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz
 	cp $< $@
-
 
 
 ###############################################################################
@@ -84,11 +87,11 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ## Disambiguation rules 
 ###############################################################################
 
-$(PREFIX1).rlx.bin: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).rlx
-	cg-comp $< $@
+$(PREFIX1).rlx.bin: $(AP_SRC1)/disambiguation-mt-apertium.bin
+	cp $< $@
 
-$(PREFIX2).rlx.bin: $(BASENAME).$(PREFIX2).rlx
-	cg-comp $< $@
+$(PREFIX2).rlx.bin: $(AP_SRC2)/disambiguation-mt-apertium.bin
+	cp $< $@
 
 
 ###############################################################################
