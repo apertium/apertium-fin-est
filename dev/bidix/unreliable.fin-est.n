@@ -3,8 +3,6 @@
 2481493	kaksi<n>	kaks
 2481493	kakkonen<n>	kaks
 1438572	tuore<n>	uus
-1425260	vuosi<n>	aasta
-1425260	vuosikurssi<n>	aasta
 1425260	luokka<n>	aasta
 1425260	ajastaika<n>	aasta
 1328936	kolmonen<n>	kolm

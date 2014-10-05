@@ -8,11 +8,23 @@
     <def-cat n="verb-fin">
       <cat-item tags="vblex.actv.ind.*"/>
     </def-cat>
+    <def-cat n="verb-infa">                      <!-- <vblex><actv><infa><sg><lat> -->
+      <cat-item tags="vblex.actv.infa.*"/>
+    </def-cat>
+    <def-cat n="verb-prc">                      <!-- <vblex><actv><prfprc><pl><nom> -->
+      <cat-item tags="vblex.actv.prfprc.*"/>
+    </def-cat>
     <def-cat n="qst">
       <cat-item tags="qst"/>
     </def-cat>
+    <def-cat n="cnjcoo">
+      <cat-item tags="cnjcoo.*"/>
+    </def-cat>
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub.*"/>
+    </def-cat>
+    <def-cat n="pron">
+      <cat-item tags="prn.*"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -37,8 +49,10 @@
     </def-attr>
     <def-attr n="a_screeve">
       <attr-item tags="ind.prs"/>
+      <attr-item tags="ind.prt"/>
 
       <attr-item tags="prs.ind"/>
+      <attr-item tags="prt.ind"/>
     </def-attr>
     <def-attr n="a_clb">
       <attr-item tags="clb"/>
@@ -104,6 +118,29 @@
 
   </section-def-macros>
   <section-rules>
+    <rule comment="REGLA: PRON">
+      <pattern>
+        <pattern-item n="pron"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="prn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: ei-neg">
       <pattern>
         <pattern-item n="ei-neg"/>
@@ -128,6 +165,55 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: verb-prc">
+      <pattern>
+        <pattern-item n="verb-prc"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.pers.prt.prc"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: verb-infa">
+      <pattern>
+        <pattern-item n="verb-infa"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.inf"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: verb-fin">
       <pattern>
         <pattern-item n="verb-fin"/>
@@ -142,6 +228,10 @@
           <when> 
             <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="ind.prs"/></equal></test>
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.ind"/></let>
+          </when>
+          <when> 
+            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="ind.prt"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prt.ind"/></let>
           </when>
         </choose>
         <out>
@@ -171,6 +261,28 @@
           <chunk name="qst" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="QST"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: CNJCOO">
+      <pattern>
+        <pattern-item n="cnjcoo"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="coord" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="CC"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
