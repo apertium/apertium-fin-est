@@ -23,11 +23,8 @@
     <def-cat n="adjec">
       <cat-item tags="adj.*"/>
     </def-cat>
-    <def-cat n="impf">
-      <cat-item tags="vblex.ind.impf.*"/>
-    </def-cat>
-    <def-cat n="pres">
-      <cat-item tags="vblex.pers.prs.*"/>
+    <def-cat n="fin-verb">
+      <cat-item tags="vblex.pers.prs.ind.*"/>
     </def-cat>
     <def-cat n="infa">
       <cat-item tags="vblex.infa"/>
@@ -64,7 +61,7 @@
     </def-attr>
     <def-attr n="a_tens">
       <attr-item tags="prs"/>
-      <attr-item tags="impf"/>
+      <attr-item tags="pot"/>
       <attr-item tags="past"/>
     </def-attr>
     <def-attr n="a_qst">
@@ -272,12 +269,12 @@
     </rule>
 
 
-    <rule comment="REGLA: impf">
+    <rule comment="REGLA: fin-verb">
       <pattern>
-        <pattern-item n="impf"/>
+        <pattern-item n="fin-verb"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_tens"/><lit-tag v="past"/></let>
+        <!--<let><clip pos="1" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
                               <lit-tag v="aff"/>
@@ -303,7 +300,7 @@
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_verb"/>
               <var n="voice"/>
-              <!--<clip pos="1" side="tl" part="a_mood"/>-->
+              <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tens"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
@@ -494,51 +491,6 @@
             </lu>
           </chunk>
         </out>
-      </action>
-    </rule>
-
-    <!-- ^olla<vblex><pers><prs><ind><sg1><@+FMAINV>$ -->
-    <rule comment="REGLA: pres">
-      <pattern>
-        <pattern-item n="pres"/>
-      </pattern>
-      <action>
-        <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
-                              <lit-tag v="aff"/>
-                      </equal></test>
-                <let><clip pos="1" side="tl" part="a_neg"/><lit v=""/></let>
-          </when>
-        </choose>
-        <choose>
-          <when><test><not><equal><clip pos="1" side="sl" part="a_pers"/> 
-                              <lit-tag v="impers"/>
-                      </equal></not></test>
-                <let><var n="voice"/><lit-tag v="actv"/></let>
-          </when>
-        </choose>
-
-
-        <out>
-          <chunk name="fin" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV.PRES"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <clip pos="1" side="tl" part="a_verb"/>
-              <var n="voice"/>
-              <!--<clip pos="1" side="tl" part="a_mood"/>-->
-              <clip pos="1" side="tl" part="a_tens"/>
-              <clip pos="1" side="tl" part="a_pers"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
-              <var n="sent-qst"/>
-              <clip pos="1" side="tl" part="lemq"/>
-            </lu>
-          </chunk>
-        </out>
-        <let><var n="voice"/><lit v=""/></let>
-        <let><var n="sent-qst"/><lit v=""/></let>
       </action>
     </rule>
 

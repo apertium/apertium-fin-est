@@ -36,20 +36,44 @@ TARGETS_COMMON = \
 # This include defines goals for install-modes, .deps/.d and .mode files:
 @ap_include@
 
+.deps/$(PREFIX1).autobil.prefixes: $(PREFIX1).autobil.bin .deps/.d
+	lt-print $< | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX1).autobil.att
+	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
+	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
+	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX1).autobil.nonplussed 
+	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst
+	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX1).autobil.nonplussed -o .deps/$(PREFIX1).autobil.postplus
+	hfst-repeat -f0 -t1 -i .deps/$(PREFIX1).autobil.postplus -o .deps/$(PREFIX1).autobil.postplus.0,1 
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.nonplussed -2 .deps/$(PREFIX1).autobil.postplus.0,1 -o $@
+
+.deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
+	lt-print $< | sed 's/ /@_SPACE_@/g' > .deps/$(PREFIX2).autobil.att
+	hfst-txt2fst -e ε <  .deps/$(PREFIX2).autobil.att > .deps/$(PREFIX2).autobil.hfst
+	hfst-project -p upper .deps/$(PREFIX2).autobil.hfst > .deps/$(PREFIX2).autobil.upper
+	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst
+	hfst-concatenate -1 .deps/$(PREFIX2).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX2).autobil.nonplussed 
+	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst
+	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX2).autobil.nonplussed -o .deps/$(PREFIX2).autobil.postplus 
+	hfst-repeat -f0 -t1 -i .deps/$(PREFIX2).autobil.postplus -o .deps/$(PREFIX2).autobil.postplus.0,1
+	hfst-concatenate -1 .deps/$(PREFIX2).autobil.nonplussed -2 .deps/$(PREFIX2).autobil.postplus.0,1 -o $@
+
 ###############################################################################
 ## Finnish→Estonian monolingual transducers
 ###############################################################################
 
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
-$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
+$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
+	$(ZCAT) $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz | hfst-txt2fst -o .deps/$(PREFIX1).automorf.untrimmed.hfst
+	hfst-compose-intersect -1 .deps/$(PREFIX1).automorf.untrimmed.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
-$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX2).automorf.hfst
+$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/.d
+	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
+	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst 
 	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 # fin->est gen

@@ -6,6 +6,12 @@
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
     </def-cat>
+    <def-cat n="QST">
+      <cat-item tags="QST"/>
+    </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+    </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
     </def-cat>
@@ -54,6 +60,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: SV QST">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="QST"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <get-case-from pos="1">
+              <clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <get-case-from pos="2">
+              <clip pos="1" part="lem"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
   </section-rules>
 </interchunk>
 
