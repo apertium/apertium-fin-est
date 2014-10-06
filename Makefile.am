@@ -62,6 +62,11 @@ TARGETS_COMMON = \
 ## Finnish→Estonian monolingual transducers
 ###############################################################################
 
+# punctuation
+# This should be removed when punctuation is fixed upstream
+.deps/punctuation.hfst: .deps/.d
+	hfst-lexc dev/punctuation.lexc | hfst-invert -o $@
+
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
 $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
@@ -72,14 +77,14 @@ $(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PR
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
 $(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/.d
-	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
+	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
 	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst 
 	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 # fin->est gen
 # apertium-est.est.RL.att.gz
 $(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst -o .deps/$(PREFIX1).automorf.hfst
+	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.hfst -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 #	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
 #	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@

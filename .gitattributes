@@ -28,6 +28,7 @@ dev/bidix/unreliable.fin-est.vblex -text
 dev/est-eng.txt -text
 dev/est-fin.awk -text
 dev/est-fin.tsv -text
+dev/punctuation.lexc -text
 /est-fin.prob -text svneol=unset#unset
 /fin-est.prob -text svneol=unset#unset
 /modes.xml -text

@@ -1,0 +1,14 @@
+Multichar_Symbols 
+
+%<cm%>
+%<guio%>
+%<sent%>
+
+LEXICON Root
+
+%,%<cm%>:%, # ;
+%-%<guio%>:%- # ;
+%.%<sent%>:%. # ;
+%!%<sent%>:%! # ;
+%:%<sent%>:%: # ;
+%;%<sent%>:%; # ;
