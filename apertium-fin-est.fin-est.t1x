@@ -65,6 +65,8 @@
       <attr-item tags="loc"/>
       <attr-item tags="ins"/>
       <attr-item tags="abl"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="all"/>
     </def-attr>
 
   </section-def-attrs>
@@ -117,6 +119,7 @@
     </def-macro>
 
   </section-def-macros>
+
   <section-rules>
     <rule comment="REGLA: PRON">
       <pattern>
@@ -126,6 +129,12 @@
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+          </when>
+        </choose>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="prn" case="caseFirstWord">
