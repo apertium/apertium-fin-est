@@ -11,6 +11,8 @@ PREFIX2=$(LANG2)-$(LANG1)
 BASENAME=apertium-$(PREFIX1)
 
 TARGETS_COMMON = \
+	.deps/punctuation.LR.hfst \
+	.deps/punctuation.RL.hfst \
 	$(PREFIX1).autobil.bin \
 	$(PREFIX1).autogen.hfst \
 	$(PREFIX1).autolex.bin \
