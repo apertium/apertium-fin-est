@@ -68,6 +68,7 @@
     <!-- SECTION: Conjunctions -->
 
     <e><p><l>ja<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
+    <e><p><l>vaikka<s n="cnjsub"/></l><r>kuigi<s n="cnjcoo"/></r></p></e> <!-- !!! -->
     <e><p><l>mutta<s n="cnjcoo"/></l><r>aga<s n="cnjcoo"/></r></p></e>
     <e><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="cnjcoo"/></r></p></e>
     <e><p><l>että<s n="cnjsub"/></l><r>et<s n="cnjcoo"/></r></p></e>
@@ -1832,6 +1833,9 @@
 
     <e><p><l>nyt<s n="part"/></l><r>nüüd<s n="adv"/></r></p></e> <!-- !!! -->
     <e><p><l>nyt<s n="part"/></l><r>praegu<s n="adv"/></r></p></e> <!-- !!! -->
+    <e><p><l>taas<s n="part"/></l><r>jälle<s n="adv"/></r></p></e> <!-- !!! -->
+    <e><p><l>tietenkään<s n="part"/></l><r>ilmselt<s n="adv"/></r></p></e> <!-- !!! -->
+
     <e><p><l>kovasti<s n="adv"/></l><r>päriselt<s n="adv"/></r></p></e>
     <e><p><l>sisällä<s n="adv"/></l><r>sees<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>hoolikalt<s n="adv"/></r></p></e>
