@@ -165,6 +165,7 @@
     <!-- Раздел: Имя Существительное -->
 
     <e><p><l>aika<s n="n"/></l><r>aeg<s n="n"/></r></p></e>
+    <e><p><l>vesi<s n="n"/></l><r>vesi<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
     <e><p><l>vuosi<s n="n"/></l><r>aasta<s n="n"/></r></p></e>
     <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
@@ -758,6 +759,7 @@
 
     <!-- SECTION: Adverbs -->
 
+    <e><p><l>minne<s n="adv"/><s n="itg"/><s n="ill"/></l><r>kus<s n="adv"/></r></p></e>
     <e><p><l>missä<s n="adv"/><s n="itg"/><s n="ine"/></l><r>kus<s n="adv"/></r></p></e>
     <e><p><l>missä<s n="adv"/><s n="itg"/><s n="ine"/></l><r>kuidas<s n="adv"/></r></p></e>
     <e r="RL"><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="adv"/></r></p></e>
@@ -769,6 +771,8 @@
     <e><p><l>kovasti<s n="adv"/></l><r>päriselt<s n="adv"/></r></p></e>
     <e><p><l>sisällä<s n="adv"/></l><r>sees<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>hoolikalt<s n="adv"/></r></p></e>
+    <e><p><l>todennäköisesti<s n="adv"/></l><r>tõenäoliselt<s n="adv"/></r></p></e>
+    <e><p><l>kaikkialle<s n="adv"/></l><r>kõikjal<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>väledalt<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
     <e><p><l>lähemmäksi<s n="adv"/></l><r>lähemale<s n="adv"/></r></p></e>
@@ -807,6 +811,7 @@
 
     <e><p><l>olla<s n="vblex"/></l><r>olema<s n="vblex"/></r></p></e>
     <e><p><l>voida<s n="vblex"/></l><r>väljama<s n="vblex"/></r></p></e>
+    <e><p><l>täytyä<s n="vblex"/></l><r>pidama<s n="vblex"/></r></p></e>
 
     <e><p><l>alkaa<s n="vblex"/></l><r>algama<s n="vblex"/></r></p></e>
     <e><p><l>etsiä<s n="vblex"/></l><r>otsima<s n="vblex"/></r></p></e>
@@ -1003,6 +1008,8 @@
     <e><p><l>koristella<s n="vblex"/></l><r>kaunistama<s n="vblex"/></r></p></e>
     <e><p><l>demonetisoida<s n="vblex"/></l><r>demonetiseerima<s n="vblex"/></r></p></e>
 
+    <e><p><l>osata<s n="vblex"/></l><r>oskama<s n="vblex"/></r></p></e>
+    <e><p><l>ajatella<s n="vblex"/></l><r>mõtlema<s n="vblex"/></r></p></e>
 
     <!-- SECTION: Punctuation -->
 
