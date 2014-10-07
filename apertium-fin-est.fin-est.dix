@@ -146,7 +146,7 @@
     <e><p><l>itse<s n="prn"/><s n="ref"/></l><r>ise<s n="prn"/></r></p></e>
     <e><p><l>eräs<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
     <e><p><l>molempi<s n="n"/></l><r>mõlema<s n="prn"/></r></p></e>
-    <e><p><l>muu<s n="prn"/><s n="ref"/></l><r>muu<s n="prn"/></r></p></e>
+    <e><p><l>muu<s n="prn"/></l><r>muu<s n="prn"/></r></p></e>
     <e><p><l>oma<s n="adj"/><s n="pos"/></l><r>oma<s n="prn"/></r></p></e>
     <e><p><l>se<s n="prn"/></l><r>see<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
@@ -768,6 +768,7 @@
     <e><p><l>nyt<s n="part"/></l><r>praegu<s n="adv"/></r></p></e> <!-- !!! -->
     <e><p><l>kovasti<s n="adv"/></l><r>päriselt<s n="adv"/></r></p></e>
     <e><p><l>sisällä<s n="adv"/></l><r>sees<s n="adv"/></r></p></e>
+    <e><p><l>huolellisesti<s n="adv"/></l><r>hoolikalt<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>väledalt<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
     <e><p><l>lähemmäksi<s n="adv"/></l><r>lähemale<s n="adv"/></r></p></e>
