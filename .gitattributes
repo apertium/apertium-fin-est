@@ -18,7 +18,9 @@
 /autogen.sh -text
 /configure.ac -text
 dev/bidix/reliable.fin-est.adj -text
+dev/bidix/reliable.fin-est.adj.checked -text
 dev/bidix/reliable.fin-est.adv -text
+dev/bidix/reliable.fin-est.adv.checked -text
 dev/bidix/reliable.fin-est.n -text
 dev/bidix/reliable.fin-est.vblex -text
 dev/bidix/reliable.fin-est.vblex.checked -text
