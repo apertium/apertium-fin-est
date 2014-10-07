@@ -109,7 +109,6 @@
     <e><p><l>vaan<s n="det"/></l><r>kuid<s n="det"/></r></p></e>
     <e><p><l>kuinka<s n="det"/></l><r>kuidas<s n="det"/></r></p></e>
     <e><p><l>koska<s n="det"/></l><r>kuna<s n="det"/></r></p></e>
-    <e><p><l>koskaan<s n="det"/></l><r>kunagi<s n="det"/></r></p></e>
     <e><p><l>missä<s n="det"/></l><r>kus<s n="det"/></r></p></e>
     <e><p><l>läpi<s n="det"/></l><r>läbi<s n="det"/></r></p></e>
     <e><p><l>miksi<s n="det"/></l><r>miks<s n="det"/></r></p></e>
@@ -1836,11 +1835,12 @@
     <e><p><l>taas<s n="part"/></l><r>jälle<s n="adv"/></r></p></e> <!-- !!! -->
     <e><p><l>tietenkään<s n="part"/></l><r>ilmselt<s n="adv"/></r></p></e> <!-- !!! -->
 
+    <e><p><l>koskaan<s n="adv"/></l><r>kunagi<s n="adv"/></r></p></e>
     <e><p><l>kovasti<s n="adv"/></l><r>päriselt<s n="adv"/></r></p></e>
     <e><p><l>sisällä<s n="adv"/></l><r>sees<s n="adv"/></r></p></e>
     <e><p><l>huolellisesti<s n="adv"/></l><r>hoolikalt<s n="adv"/></r></p></e>
     <e><p><l>todennäköisesti<s n="adv"/></l><r>tõenäoliselt<s n="adv"/></r></p></e>
-    <e><p><l>kaikkialle<s n="adv"/></l><r>kõikjal<s n="adv"/></r></p></e>
+    <e><p><l>kaikkialle<s n="adv"/></l><r>kõikjalt<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>väledalt<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
     <e><p><l>lähemmäksi<s n="adv"/></l><r>lähemale<s n="adv"/></r></p></e>

@@ -136,6 +136,7 @@
 
   <section-rules>
 
+
     <rule comment="REGLA: NOM">
       <pattern>
         <pattern-item n="nom"/>
