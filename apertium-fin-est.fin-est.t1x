@@ -396,6 +396,7 @@
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <let><var n="EOS"/><lit v="true"/></let>
 <!--        <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>-->
         <out>
           <chunk name="sent" case="caseFirstWord">
