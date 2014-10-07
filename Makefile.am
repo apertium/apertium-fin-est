@@ -15,7 +15,6 @@ TARGETS_COMMON = \
 	$(PREFIX1).autogen.hfst \
 	$(PREFIX1).autolex.bin \
 	$(PREFIX1).automorf.hfst \
-	$(PREFIX1).prob \
 	$(PREFIX1).rlx.bin \
 	$(PREFIX1).t1x.bin  \
 	$(PREFIX1).t1x.bin \
@@ -25,7 +24,6 @@ TARGETS_COMMON = \
 	$(PREFIX2).autogen.hfst \
 	$(PREFIX2).autolex.bin \
 	$(PREFIX2).automorf.hfst \
-	$(PREFIX2).prob \
 	$(PREFIX2).rlx.bin \
 	$(PREFIX2).t1x.bin \
 	$(PREFIX2).t1x.bin \
@@ -64,36 +62,39 @@ TARGETS_COMMON = \
 
 # punctuation
 # This should be removed when punctuation is fixed upstream
-.deps/punctuation.hfst: .deps/.d
+.deps/punctuation.LR.hfst: .deps/.d
 	hfst-lexc dev/punctuation.lexc | hfst-invert -o $@
+
+.deps/punctuation.RL.hfst: .deps/.d
+	hfst-lexc dev/punctuation.lexc -o $@
 
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
-$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d
-	$(ZCAT) $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz | hfst-txt2fst -o .deps/$(PREFIX1).automorf.untrimmed.hfst
+$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d 
+	$(ZCAT) $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX1).automorf.untrimmed.hfst
 	hfst-compose-intersect -1 .deps/$(PREFIX1).automorf.untrimmed.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
 $(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/.d
-	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
+	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
 	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst 
 	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 # fin->est gen
 # apertium-est.est.RL.att.gz
 $(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.hfst -o .deps/$(PREFIX1).automorf.hfst
+	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o .deps/$(PREFIX1).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
 #	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
 #	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
 
 # est->fin gen
 # apertium-fin.fin.RL.att.gz
-$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz
-	$(ZCAT) $<  | hfst-txt2fst -o .deps/$(PREFIX2).autogen.hfst
-	hfst-fst2fst -O .deps/$(PREFIX2).autogen.hfst -o $@
+$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz .deps/.d
+	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o .deps/$(PREFIX2).automorf.hfst
+	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 
 ###############################################################################

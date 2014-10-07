@@ -5,6 +5,9 @@
     <def-cat n="ei-neg">
       <cat-item tags="vblex.neg.*"/>
     </def-cat>
+    <def-cat n="verb-imprt">
+      <cat-item tags="vblex.actv.imprt.*"/>
+    </def-cat>
     <def-cat n="verb-fin">
       <cat-item tags="vblex.actv.ind.*"/>
     </def-cat>
@@ -48,9 +51,12 @@
       <attr-item tags="pers"/>
     </def-attr>
     <def-attr n="a_screeve">
+      <attr-item tags="imprt"/>
+
       <attr-item tags="ind.prs"/>
       <attr-item tags="ind.prt"/>
 
+      <attr-item tags="prs.imprt"/>
       <attr-item tags="prs.ind"/>
       <attr-item tags="prt.ind"/>
     </def-attr>
@@ -257,6 +263,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: verb-imprt">
+      <pattern>
+        <pattern-item n="verb-imprt"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
+        <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.imprt"/></let>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: verb-fin">
       <pattern>
