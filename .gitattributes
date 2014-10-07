@@ -21,6 +21,7 @@ dev/bidix/reliable.fin-est.adj -text
 dev/bidix/reliable.fin-est.adv -text
 dev/bidix/reliable.fin-est.n -text
 dev/bidix/reliable.fin-est.vblex -text
+dev/bidix/reliable.fin-est.vblex.checked -text
 dev/bidix/unreliable.fin-est.adj -text
 dev/bidix/unreliable.fin-est.adv -text
 dev/bidix/unreliable.fin-est.n -text
