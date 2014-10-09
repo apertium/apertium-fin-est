@@ -203,8 +203,6 @@
     <e><p><l>kanssa<s n="n"/></l><r>koos<s n="n"/></r></p></e>
     <e><p><l>kiire<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
     <e><p><l>kissa<s n="n"/></l><r>kass<s n="n"/></r></p></e>
-    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
-    <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
     <e><p><l>kuukausi<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
     <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
     <e><p><l>kysymys<s n="n"/></l><r>küsimus<s n="n"/></r></p></e>
@@ -748,7 +746,7 @@
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>väike<s n="adj"/></r></p></e>
     <e><p><l>suuri<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
-    <e><p><l>koiranleuka<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>
+    <!--<e><p><l>koiranleuka<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>-->
     <e><p><l>iloinen<s n="adj"/></l><r>õnnelik<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>pisike<s n="adj"/></r></p></e>
     <e><p><l>leikkivä<s n="adj"/></l><r>mängiv<s n="n"/></r></p></e>
