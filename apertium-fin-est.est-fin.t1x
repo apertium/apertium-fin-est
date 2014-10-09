@@ -5,11 +5,17 @@
     <def-cat n="ei">
       <cat-item tags="vblex.neg"/>
     </def-cat>
+    <def-cat n="prt-prc"> <!-- saada<vblex><pers><prt><prc><@+FMAINV>-->
+      <cat-item tags="vblex.pers.prt.prc.*"/>
+    </def-cat>
     <def-cat n="imp-neg">
       <cat-item tags="vblex.imp.pres.*"/>
     </def-cat>
     <def-cat n="pres-neg">
       <cat-item tags="vblex.ind.pres.neg"/>
+    </def-cat>
+    <def-cat n="imprt">
+      <cat-item tags="vblex.*.imprt.*"/>
     </def-cat>
     <def-cat n="impf-neg">
       <cat-item tags="vblex.ind.impf.neg"/>
@@ -19,12 +25,16 @@
     </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
     </def-cat>
     <def-cat n="adjec">
       <cat-item tags="adj.*"/>
     </def-cat>
     <def-cat n="fin-verb">
-      <cat-item tags="vblex.pers.prs.ind.*"/>
+      <cat-item tags="vblex.pers.*.ind.*"/>
     </def-cat>
     <def-cat n="infa">
       <cat-item tags="vblex.infa"/>
@@ -37,6 +47,7 @@
     </def-cat>
     <def-cat n="sent">
       <cat-item tags="sent"/>
+      <cat-item tags="sent.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -61,6 +72,7 @@
     </def-attr>
     <def-attr n="a_tens">
       <attr-item tags="prs"/>
+      <attr-item tags="prt"/>
       <attr-item tags="pot"/>
       <attr-item tags="past"/>
     </def-attr>
@@ -104,6 +116,12 @@
 
     <def-attr n="a_func">
       <attr-item tags="@X"/>
+      <attr-item tags="@HNOUN"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@N←"/>
+      <attr-item tags="@\+FMAINV"/>
+      <attr-item tags="@ADVL→"/>
+      <attr-item tags="@←ADVL"/>
     </def-attr>
 
   </section-def-attrs>
@@ -189,6 +207,7 @@
         <pattern-item n="pron"/>
       </pattern>
       <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
                               <lit-tag v="adi"/>
@@ -243,11 +262,32 @@
     </rule>
 
 
+    <rule comment="REGLA: num">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="z" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SNum"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
     <rule comment="REGLA: adjec">
       <pattern>
         <pattern-item n="adjec"/>
       </pattern>
       <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_adjec"/> 
                               <lit-tag v="adj"/>
@@ -267,6 +307,46 @@
         </out>
       </action>
     </rule>
+
+
+    <rule comment="REGLA: prt-prc">
+      <pattern>
+        <pattern-item n="prt-prc"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="prc" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: imprt">
+      <pattern>
+        <pattern-item n="imprt"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="fin" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.IMPRT"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
 
     <rule comment="REGLA: fin-verb">
@@ -500,6 +580,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose><when><test><equal><clip pos="1" side="tl" part="a_qst"/>
                                    <lit-tag v="qst"/></equal>
                       </test>
@@ -526,6 +607,7 @@
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="sent" case="caseFirstWord">
             <tags>
