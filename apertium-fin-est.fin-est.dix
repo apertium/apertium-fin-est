@@ -151,6 +151,7 @@
     <e><p><l>se<s n="prn"/></l><r>see<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
+    <e><p><l>kaikki<s n="prn"/></l><r>kõik<s n="prn"/></r></p></e>
 
     <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>ta<s n="prn"/></r></p></e>
     <e><p><l>nämä<s n="prn"/><s n="dem"/></l><r>ta<s n="prn"/></r></p></e>
@@ -165,6 +166,9 @@
 
     <!-- Раздел: Имя Существительное -->
 
+    <e><p><l>komissio<s n="n"/></l><r>komisjon<s n="n"/></r></p></e>
+    <e><p><l>parlamentti<s n="n"/></l><r>parlament<s n="n"/></r></p></e>
+    <e><p><l>unioni<s n="n"/></l><r>liit<s n="n"/></r></p></e>
     <e><p><l>aika<s n="n"/></l><r>aeg<s n="n"/></r></p></e>
     <e><p><l>vesi<s n="n"/></l><r>vesi<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
@@ -4513,7 +4517,7 @@
     <!--<e><p><l>koiranleuka<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>-->
     <e><p><l>iloinen<s n="adj"/></l><r>õnnelik<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>pisike<s n="adj"/></r></p></e>
-    <e><p><l>leikkivä<s n="adj"/></l><r>mängiv<s n="n"/></r></p></e>
+    <!--<e><p><l>leikkivä<s n="adj"/></l><r>mängiv<s n="n"/></r></p></e>-->
     <e><p><l>-vuotias<s n="adj"/></l><r>aastane<s n="adj"/></r></p></e>
     <e><p><l>lopettanut<s n="adj"/></l><r>lõpetanud<s n="adj"/></r></p></e>
 
@@ -5597,6 +5601,7 @@
     <e><p><l>taas<s n="part"/></l><r>jälle<s n="adv"/></r></p></e> <!-- !!! -->
     <e><p><l>tietenkään<s n="part"/></l><r>ilmselt<s n="adv"/></r></p></e> <!-- !!! -->
 
+    <e><p><l>paljon<s n="adv"/></l><r>palju<s n="adv"/></r></p></e>
     <e><p><l>koskaan<s n="adv"/></l><r>kunagi<s n="adv"/></r></p></e>
     <e><p><l>kovasti<s n="adv"/></l><r>päriselt<s n="adv"/></r></p></e>
     <e><p><l>sisällä<s n="adv"/></l><r>sees<s n="adv"/></r></p></e>
