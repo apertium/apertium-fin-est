@@ -50,7 +50,9 @@
     <def-attr n="a_func">
       <attr-item tags="@X"/>
       <attr-item tags="@CVP"/>
+      <attr-item tags="@SUBJ→"/>
       <attr-item tags="@\+FAUXV"/>
+      <attr-item tags="@\+FMAINV"/>
     </def-attr>
     <def-attr n="a_voice">
       <attr-item tags="actv"/>
