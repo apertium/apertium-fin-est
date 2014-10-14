@@ -8,6 +8,6 @@ then
     GREP='WORKS'
 fi
 
-sh wiki-tests.sh Pending fin est update | grep -C $C "$GREP"
+bash wiki-tests.sh Pending fin est update | grep -C $C "$GREP"
 
-sh wiki-tests.sh Pending est fin update | grep -C $C "$GREP"
+bash wiki-tests.sh Pending est fin update | grep -C $C "$GREP"
