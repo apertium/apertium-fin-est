@@ -29,7 +29,9 @@ dev/bidix/reliable.fin-est.vblex.checked -text
 dev/bidix/unreliable.fin-est.adj -text
 dev/bidix/unreliable.fin-est.adv -text
 dev/bidix/unreliable.fin-est.n -text
+dev/bidix/unreliable.fin-est.n.checked -text
 dev/bidix/unreliable.fin-est.vblex -text
+dev/bidix/unreliable.fin-est.vblex.checked -text
 dev/est-eng.txt -text
 dev/est-fin.awk -text
 dev/est-fin.tsv -text
