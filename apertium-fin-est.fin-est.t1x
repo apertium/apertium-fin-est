@@ -22,6 +22,7 @@
     </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
       <cat-item tags="part"/>
     </def-cat>
     <def-cat n="qst">
@@ -50,6 +51,7 @@
     <def-attr n="a_func">
       <attr-item tags="@X"/>
       <attr-item tags="@CVP"/>
+      <attr-item tags="@ADVL"/>
       <attr-item tags="@SUBJ→"/>
       <attr-item tags="@\+FAUXV"/>
       <attr-item tags="@\+FMAINV"/>
