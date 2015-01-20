@@ -73,6 +73,7 @@
       <attr-item tags="@OBJ→"/>
       <attr-item tags="@\+FAUXV"/>
       <attr-item tags="@\+FMAINV"/>
+      <attr-item tags="@-FMAINV"/>
     </def-attr>
     <def-attr n="a_voice">
       <attr-item tags="actv"/>
