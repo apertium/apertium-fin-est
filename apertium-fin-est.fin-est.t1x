@@ -5,6 +5,9 @@
     <def-cat n="ei-neg">
       <cat-item tags="vblex.neg.*"/>
     </def-cat>
+    <def-cat n="der-minen">
+      <cat-item tags="vblex.der_minen.*"/>
+    </def-cat>
     <def-cat n="verb-imprt">
       <cat-item tags="vblex.actv.imprt.*"/>
     </def-cat>
@@ -78,6 +81,10 @@
       <attr-item tags="pxpl1"/>
       <attr-item tags="pxpl2"/>
       <attr-item tags="pxpl3"/>
+    </def-attr>
+    <def-attr n="a_der">
+      <attr-item tags="der_minen"/>
+      <attr-item tags="der_mine.n"/>
     </def-attr>
     <def-attr n="a_clb">
       <attr-item tags="clb"/>
@@ -439,6 +446,30 @@
           <chunk name="a" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: DER-MINEN">
+      <pattern>
+        <pattern-item n="der-minen"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_mine.n"/></let>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="sl" part="a_case"/></tag>
+              <tag><clip pos="1" side="sl" part="a_poss"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
