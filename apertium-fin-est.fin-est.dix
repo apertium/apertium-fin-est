@@ -168,8 +168,8 @@
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
     <e><p><l>kaikki<s n="prn"/></l><r>kõik<s n="prn"/></r></p></e>
 
-    <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>ta<s n="prn"/></r></p></e>
-    <e><p><l>nämä<s n="prn"/><s n="dem"/></l><r>ta<s n="prn"/></r></p></e>
+    <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
+    <e><p><l>nämä<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
     <e><p><l>jokin<s n="prn"/><s n="qnt"/><s n="indef"/></l><r>miski<s n="prn"/></r></p></e>
 
     <!-- Раздел: Число -->
