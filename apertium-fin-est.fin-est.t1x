@@ -23,6 +23,10 @@
     <def-cat n="verb-prc">                      <!-- <vblex><actv><prfprc><pl><nom> -->
       <cat-item tags="vblex.actv.prfprc.*"/>
     </def-cat>
+    <def-cat n="verb-conneg">
+      <cat-item tags="vblex.*.prs.conneg.*"/>
+      <cat-item tags="vblex.*.prs.conneg"/>
+    </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
@@ -42,6 +46,9 @@
     </def-cat>
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
+    </def-cat>
+    <def-cat n="prop">
+      <cat-item tags="np.*"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -161,6 +168,32 @@
   </section-def-macros>
 
   <section-rules>
+
+
+    <rule comment="REGLA: PROP">
+      <pattern>
+        <pattern-item n="prop"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><clip pos="1" side="sl" part="a_case"/></tag>
+              <tag><clip pos="1" side="sl" part="a_poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
 
     <rule comment="REGLA: NOM">
@@ -288,6 +321,29 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: verb-conneg">
+      <pattern>
+        <pattern-item n="verb-conneg"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.CONNEG"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.pers.prs.ind.neg"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: verb-prc">
       <pattern>
