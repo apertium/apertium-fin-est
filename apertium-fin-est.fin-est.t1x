@@ -20,6 +20,9 @@
     <def-cat n="verb-agprc">                      <!-- <vblex><actv><agprc> -->
       <cat-item tags="vblex.actv.agprc.*"/>
     </def-cat>
+    <def-cat n="verb-prsprc">                      <!-- <vblex><actv><prsprc><pl><nom> -->
+      <cat-item tags="vblex.actv.prsprc.*"/>
+    </def-cat>
     <def-cat n="verb-prc">                      <!-- <vblex><actv><prfprc><pl><nom> -->
       <cat-item tags="vblex.actv.prfprc.*"/>
     </def-cat>
@@ -345,6 +348,31 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: verb-prsprc">
+      <pattern>
+        <pattern-item n="verb-prsprc"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
+        <out>
+          <chunk name="prsprc" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.PRSPRC"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.pers.prs.prc"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: verb-prc">
       <pattern>

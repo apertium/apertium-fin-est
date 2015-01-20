@@ -141,7 +141,7 @@
     <e><p><l>moni<s n="prn"/></l><r>palju<s n="prn"/></r></p></e>
     <e><p><l>usea<s n="prn"/></l><r>mitu<s n="prn"/></r></p></e>
     <e><p><l>tuo<s n="prn"/></l><r>too<s n="prn"/></r></p></e>
-    <e><p><l>mikään<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
+    <e><p><l>mikään<s n="prn"/><s n="qnt"/></l><r>miski<s n="prn"/></r></p></e>
     <e><p><l>sama<s n="prn"/></l><r>sama<s n="prn"/><s n="nom"/></r></p></e>
 
     <e><p><l>jokainen<s n="prn"/></l><r>iga<s n="prn"/></r></p></e>
