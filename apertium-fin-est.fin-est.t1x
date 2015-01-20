@@ -37,6 +37,9 @@
     <def-cat n="cnjsub">
       <cat-item tags="cnjsub.*"/>
     </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
     </def-cat>
@@ -55,7 +58,12 @@
       <attr-item tags="@X"/>
       <attr-item tags="@CVP"/>
       <attr-item tags="@ADVL"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@NUM←"/>
       <attr-item tags="@SUBJ→"/>
+      <attr-item tags="@←OBJ"/>
+      <attr-item tags="@←SPRED"/>
+      <attr-item tags="@OBJ→"/>
       <attr-item tags="@\+FAUXV"/>
       <attr-item tags="@\+FMAINV"/>
     </def-attr>
@@ -180,6 +188,28 @@
       </action>
     </rule>
 
+
+    <rule comment="REGLA: NUM">
+      <pattern>
+        <pattern-item n="num"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="num" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="NUM"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
     <rule comment="REGLA: PRON">
       <pattern>
