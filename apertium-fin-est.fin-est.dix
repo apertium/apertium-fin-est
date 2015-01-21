@@ -65,6 +65,7 @@
     <e><p><l>ja<s n="part"/></l><r>ja<s n="part"/></r></p></e>
     <e><p><l>ko<s n="qst"/></l><r>kas<s n="adv"/></r></p></e>
     <e><p><l>ei<s n="part"/></l><r>ei<s n="part"/></r></p></e>
+    <e><p><l>niinpä<s n="part"/></l><r>nõnda<s n="adv"/></r></p></e>
 
     <!-- SECTION: Conjunctions -->
 
@@ -141,7 +142,7 @@
     <e><p><l>te<s n="prn"/><s n="pers"/></l><r>teiä<s n="prn"/></r></p></e>
     <e><p><l>he<s n="prn"/><s n="pers"/><s n="pl"/></l><r>nemad<s n="prn"/><s n="pl"/></r></p></e>
 
-    <e><p><l>ne<s n="prn"/></l><r>need<s n="prn"/></r></p></e>
+    <e><p><l>ne<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
     <e><p><l>moni<s n="prn"/></l><r>palju<s n="prn"/></r></p></e>
     <e><p><l>usea<s n="prn"/></l><r>mitu<s n="prn"/></r></p></e>
     <e><p><l>tuo<s n="prn"/></l><r>too<s n="prn"/></r></p></e>
