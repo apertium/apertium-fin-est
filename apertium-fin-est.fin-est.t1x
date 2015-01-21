@@ -14,6 +14,9 @@
     <def-cat n="verb-fin">
       <cat-item tags="vblex.actv.ind.*"/>
     </def-cat>
+    <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
+      <cat-item tags="vblex.actv.infma.*"/>
+    </def-cat>
     <def-cat n="verb-infa">                      <!-- <vblex><actv><infa><sg><lat> -->
       <cat-item tags="vblex.actv.infa.*"/>
     </def-cat>
@@ -355,7 +358,7 @@
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
-          <chunk name="infa" case="caseFirstWord">
+          <chunk name="conneg" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.CONNEG"/></tag>
             </tags>
@@ -404,13 +407,38 @@
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
         <out>
-          <chunk name="infa" case="caseFirstWord">
+          <chunk name="prtprc" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.INFA"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <lit-tag v="vblex.pers.prt.prc"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: verb-infma">
+      <pattern>
+        <pattern-item n="verb-infma"/>
+      </pattern>
+     <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
+        <out>
+          <chunk name="infma" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFMA"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.pers.sup.ine"/>
             </lu>
           </chunk>
         </out>
