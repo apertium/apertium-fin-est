@@ -9,7 +9,7 @@
       <cat-item tags="vblex.der_minen.*"/>
     </def-cat>
     <def-cat n="verb-imprt">
-      <cat-item tags="vblex.actv.imprt.*"/>
+      <cat-item tags="vblex.actv.imp.*"/>
     </def-cat>
     <def-cat n="verb-fin">
       <cat-item tags="vblex.actv.ind.*"/>
@@ -84,7 +84,7 @@
       <attr-item tags="pers"/>
     </def-attr>
     <def-attr n="a_screeve">
-      <attr-item tags="imprt"/>
+      <attr-item tags="imp"/>
 
       <attr-item tags="ind.prs"/>
       <attr-item tags="ind.prt"/>

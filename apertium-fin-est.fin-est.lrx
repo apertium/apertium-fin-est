@@ -1,5 +1,10 @@
 <rules>
   <rule>
-    <match lemma="koira" tags="n.*"><select lemma="koer" tags="n.*"/></match>
+    <match lemma="hitaasti" tags="adv"><select lemma="aeglaselt" tags="adv"/></match>
+  </rule>
+  <rule>
+    <match lemma="ei" tags="vblex.*"/>
+    <match lemma="saada" tags="vblex.*"><select lemma="tohtima" tags="vblex.*"/></match>
+    <match tags="vblex.*"/>
   </rule>
 </rules>
