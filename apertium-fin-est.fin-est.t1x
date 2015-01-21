@@ -149,6 +149,10 @@
           <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_kin"/></equal></test>
           <let><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_gi"/></let>
         </when>
+        <when> <!-- Delete this for now -->
+          <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_pa"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+        </when>
       </choose>
     </def-macro>
 
