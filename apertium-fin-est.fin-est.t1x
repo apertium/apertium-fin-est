@@ -29,7 +29,9 @@
     <def-cat n="verb-prc">                      <!-- <vblex><actv><prfprc><pl><nom> -->
       <cat-item tags="vblex.actv.prfprc.*"/>
     </def-cat>
-    <def-cat n="verb-conneg">
+    <def-cat n="verb-conneg">                   <!-- <vblex><actv><ind><prt><conneg> -->
+      <cat-item tags="vblex.*.prt.conneg.*"/>
+      <cat-item tags="vblex.*.prt.conneg"/>
       <cat-item tags="vblex.*.prs.conneg.*"/>
       <cat-item tags="vblex.*.prs.conneg"/>
     </def-cat>
@@ -85,6 +87,10 @@
       <attr-item tags="actv"/>
       <attr-item tags="pasv"/>
       <attr-item tags="pers"/>
+    </def-attr>
+    <def-attr n="a_temps">
+      <attr-item tags="prt"/>
+      <attr-item tags="prs"/>
     </def-attr>
     <def-attr n="a_screeve">
       <attr-item tags="imp"/>
@@ -364,7 +370,9 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="vblex.pers.prs.ind.neg"/>
+              <lit-tag v="vblex.pers"/>
+              <clip pos="1" side="tl" part="a_temps"/>
+              <lit-tag v="ind.neg"/>
             </lu>
           </chunk>
         </out>
