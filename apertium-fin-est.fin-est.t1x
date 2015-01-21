@@ -108,6 +108,11 @@
     <def-attr n="a_clb">
       <attr-item tags="clb"/>
     </def-attr>
+    <def-attr n="a_foc">
+      <attr-item tags="foc_kin"/>
+      <attr-item tags="foc_gi"/>
+      <attr-item tags="foc_pa"/>
+    </def-attr>
     <def-attr n="a_case">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
@@ -129,11 +134,13 @@
 
   </section-def-vars>
   <section-def-macros>
-    <def-macro n="test" npar="1">
-          <let>
-            <var n="number"/>
-            <lit v=""/>
-          </let>
+    <def-macro n="replace-foc1" npar="1">
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_kin"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_gi"/></let>
+        </when>
+      </choose>
     </def-macro>
 
     <def-macro n="firstWord" npar="1" c="modified by mginesti 11/nov/10">
@@ -182,6 +189,9 @@
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="replace-foc1">
+          <with-param pos="1"/>
+        </call-macro>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
@@ -206,6 +216,9 @@
       </pattern>
       <action>
         <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="replace-foc1">
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
@@ -234,6 +247,9 @@
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
+        <call-macro n="replace-foc1">
+          <with-param pos="1"/>
+        </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="num" case="caseFirstWord">
@@ -254,6 +270,9 @@
       </pattern>
       <action>
         <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="replace-foc1">
           <with-param pos="1"/>
         </call-macro>
         <choose>

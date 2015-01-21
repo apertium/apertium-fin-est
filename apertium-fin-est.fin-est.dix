@@ -7,6 +7,7 @@
     <sdef n="num"  c="Число"/>
     <sdef n="det"  c=""/>
     <sdef n="adp"  c=""/>
+    <sdef n="ij"  c=""/>
     <sdef n="np"  c=""/>
     <sdef n="qst"  c=""/>
     <sdef n="cnjcoo"  c="Союз"/>
@@ -87,6 +88,7 @@
 
     <e><p><l>edessä<s n="adv"/></l><r>ees<s n="adv"/></r></p></e>
     <e><p><l>kanssa<s n="post"/></l><r>seega<s n="adv"/></r></p></e>
+    <e><p><l>ylitse<s n="post"/></l><r>üle<s n="adv"/></r></p></e>
     <e><p><l>luokse<s n="post"/></l><r>juurde<s n="adv"/></r></p></e>
 
     <e><p><l>varten<s n="post"/></l><r>jaoks<s n="adp"/></r></p></e>
@@ -131,6 +133,7 @@
     <!-- SECTION: Pronouns -->
  
     <e><p><l>minä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
+    <e r="LR"><p><l>mä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
     <e><p><l>sinä<s n="prn"/><s n="pers"/></l><r>sina<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
     <e><p><l>me<s n="prn"/><s n="pers"/></l><r>meiä<s n="prn"/></r></p></e>
@@ -169,7 +172,9 @@
     <e><p><l>kaikki<s n="prn"/></l><r>kõik<s n="prn"/></r></p></e>
 
     <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
+    <e r="LR"><p><l>tää<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
     <e><p><l>nämä<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
+    <e r="LR"><p><l>nää<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
     <e><p><l>jokin<s n="prn"/><s n="qnt"/><s n="indef"/></l><r>miski<s n="prn"/></r></p></e>
 
     <!-- Раздел: Число -->
@@ -185,6 +190,11 @@
 
     <!-- Раздел: Имя Существительное -->
 
+    <e><p><l>hartaus<s n="n"/></l><r>vaga<s n="n"/></r></p></e>
+    <e><p><l>temppeli<s n="n"/></l><r>tempel<s n="n"/></r></p></e>
+    <e><p><l>holvi<s n="n"/></l><r>võlv<s n="n"/></r></p></e>
+    <e><p><l>valhe<s n="n"/></l><r>vale<s n="n"/></r></p></e>
+    <e><p><l>ikiaika<s n="n"/></l><r>igavik<s n="n"/></r></p></e>
     <e><p><l>syy<s n="n"/></l><r>põhjus<s n="n"/></r></p></e>
     <e><p><l>tulos<s n="n"/></l><r>tulemus<s n="n"/></r></p></e>
     <e><p><l>tie<s n="n"/></l><r>tee<s n="n"/></r></p></e>
@@ -8831,7 +8841,6 @@
     <e><p><l>radiogrammi<s n="n"/></l><r>radiogramm<s n="n"/></r></p></e>
     <e><p><l>lyhytnäköisyys<s n="n"/></l><r>lühinägelikkus<s n="n"/></r></p></e>
     <e><p><l>kivettyminen<s n="n"/></l><r>kivistumine<s n="n"/></r></p></e>
-    <e><p><l>kivettyminen<s n="n"/></l><r>kivistumine<s n="n"/></r></p></e>
     <e><p><l>perifraasi<s n="n"/></l><r>perifraas<s n="n"/></r></p></e>
     <e><p><l>pelokkuus<s n="n"/></l><r>pelglikkus<s n="n"/></r></p></e>
     <e><p><l>linja-autollinen<s n="n"/></l><r>bussitäis<s n="n"/></r></p></e>
@@ -11324,13 +11333,14 @@
     <e><p><l>sellainen<s n="adj"/></l><r>selline<s n="prn"/></r></p></e>
     <e><p><l>mahdollinen<s n="adj"/></l><r>võimalik<s n="adj"/></r></p></e>
 
+    <e><p><l>kivinen<s n="adj"/></l><r>kivine<s n="adj"/></r></p></e>
+    <e><p><l>ääretön<s n="adj"/></l><r>lõpmatus<s n="adj"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
     <e><p><l>vanha<s n="adj"/></l><r>vana<s n="adj"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
     <e><p><l>kaunis<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>ilu<s n="adj"/></r></p></e>
     <e><p><l>kylmä<s n="adj"/></l><r>külm<s n="adj"/></r></p></e>
-    <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
     <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>väike<s n="adj"/></r></p></e>
@@ -16745,7 +16755,6 @@
 <e><p><l>kukin<s n="prn"/></l><r>igaüks<s n="prn"/></r></p></e>
 <e><p><l>kukaan<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
 <e><p><l>nuo<s n="prn"/></l><r>need<s n="prn"/></r></p></e>
-<e><p><l>mä<s n="prn"/></l><r>ma<s n="prn"/></r></p></e>
 <e><p><l>harva<s n="prn"/></l><r>harv<s n="prn"/></r></p></e>
 <e><p><l>koko<s n="prn"/></l><r>kogu<s n="prn"/></r></p></e>
 <e><p><l>mikään<s n="prn"/></l><r>mingi<s n="prn"/></r></p></e>
@@ -18250,6 +18259,10 @@
 <e><p><l>tavoitella<s n="vblex"/></l><r>taotlema<s n="vblex"/></r></p></e>
 <e><p><l>turvautua<s n="vblex"/></l><r>kaitset<b/>otsima<s n="vblex"/></r></p></e>
 <e><p><l>varttua<s n="vblex"/></l><r>kasvama<s n="vblex"/></r></p></e>
+
+  <!-- SECTION: Interjections -->
+
+<e><p><l>oi<s n="ij"/></l><r>oi<s n="ij"/></r></p></e>
   </section>
 </dictionary>
 <!-- vim: set ft=xml: -->
