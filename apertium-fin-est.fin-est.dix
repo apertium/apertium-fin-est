@@ -135,6 +135,7 @@
     <e><p><l>minä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
     <e r="LR"><p><l>mä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
     <e><p><l>sinä<s n="prn"/><s n="pers"/></l><r>sina<s n="prn"/></r></p></e>
+    <e r="LR"><p><l>sä<s n="prn"/><s n="pers"/></l><r>sina<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
     <e><p><l>me<s n="prn"/><s n="pers"/></l><r>meiä<s n="prn"/></r></p></e>
     <e><p><l>te<s n="prn"/><s n="pers"/></l><r>teiä<s n="prn"/></r></p></e>
@@ -169,7 +170,7 @@
     <e><p><l>se<s n="prn"/></l><r>see<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
-    <e><p><l>kaikki<s n="prn"/></l><r>kõik<s n="prn"/></r></p></e>
+    <e><p><l>kaikki<s n="prn"/><s n="qnt"/></l><r>kõik<s n="prn"/></r></p></e>
 
     <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
     <e r="LR"><p><l>tää<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
