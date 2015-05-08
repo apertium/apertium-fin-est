@@ -35,6 +35,8 @@
     </def-cat>
     <def-cat n="fin-verb">
       <cat-item tags="vblex.pers.*.ind.*"/>
+      <cat-item tags="vblex.impers.*.ind.*"/>
+      <cat-item tags="vblex.impers.*.ind"/>
     </def-cat>
     <def-cat n="infa">
       <cat-item tags="vblex.infa"/>
@@ -48,6 +50,10 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
       <cat-item tags="sent.*"/>
+    </def-cat>
+    <def-cat n="adds">
+      <cat-item tags="vblex.*.pe4"/>
+      <cat-item tags="vblex.*.pe4.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -123,6 +129,9 @@
       <attr-item tags="@ADVL→"/>
       <attr-item tags="@←ADVL"/>
     </def-attr>
+    <def-attr n="a_adds">
+      <attr-item tags="pe4"/>
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -132,6 +141,7 @@
     <def-var n="sent-qst"/>
     <def-var n="sn-chunk-name"/>
     <def-var n="current_verb"/>
+    <def-var n="addp"/>
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test" npar="1">
@@ -369,7 +379,13 @@
                               <lit-tag v="impers"/>
                       </equal></not></test>
                 <let><var n="voice"/><lit-tag v="actv"/></let>
+        	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
           </when>
+          <otherwise>  
+                <let><var n="voice"/><lit-tag v="pasv"/></let>
+        	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
+        	<let><var n="addp"/><lit-tag v="pe4"/></let>
+          </otherwise>  
         </choose>
 
 
@@ -386,6 +402,7 @@
               <clip pos="1" side="tl" part="a_tens"/>
               <clip pos="1" side="tl" part="a_pers"/>
               <clip pos="1" side="tl" part="a_nbr"/>
+              <var n="addp"/>
               <var n="sent-qst"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>

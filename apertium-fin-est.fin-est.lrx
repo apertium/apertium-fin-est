@@ -1,10 +1,7 @@
 <rules>
   <rule>
-    <match lemma="hitaasti" tags="adv"><select lemma="aeglaselt" tags="adv"/></match>
-  </rule>
-  <rule>
-    <match lemma="ei" tags="vblex.*"/>
-    <match lemma="saada" tags="vblex.*"><select lemma="tohtima" tags="vblex.*"/></match>
+    <match lemma="ei"/>
+    <match lemma="voida"><select lemma="tohtima"/></match>
     <match tags="vblex.*"/>
   </rule>
 </rules>
