@@ -1,7 +1,7 @@
 <dictionary>
   <alphabet/>
   <sdefs>
-    <sdef n="n"  c="Имя существительное"/>
+    <sdef n="n"  c="nimisõna"/>
     <sdef n="adv"  c="Наречие"/>
     <sdef n="adj"  c="Имя прилагательное"/>
     <sdef n="num"  c="Число"/>
