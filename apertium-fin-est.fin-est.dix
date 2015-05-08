@@ -57,6 +57,12 @@
     <sdef n="rpar"  c=""/>
     <sdef n="lpar"  c=""/>
 
+    <sdef n="arg1_nom"  c=""/>
+    <sdef n="arg2_nom"  c=""/>
+    <sdef n="arg2_ela"  c=""/>
+    <sdef n="arg1_all"  c=""/>
+
+
   </sdefs>
   <section id="main" type="standard">
 
@@ -16127,7 +16133,8 @@
     <!--<e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>-->
     <e><p><l>juosta<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>vaatama<s n="vblex"/></r></p></e>
-    <e><p><l>kuten<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
+    <e r="LR"><p><l>tykätä<s n="vblex"/></l><r>meeldima<s n="vblex"/><s n="arg1_all"/><s n="arg2_nom"/></r></p></e>
+    <e r="RL"><p><l>tykätä<s n="vblex"/><s n="arg1_nom"/><s n="arg2_ela"/></l><r>meeldima<s n="vblex"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>kuulma<s n="vblex"/></r></p></e>
     <e><p><l>kysyä<s n="vblex"/></l><r>küsima<s n="vblex"/></r></p></e>
     <e><p><l>lausua<s n="vblex"/></l><r>lausuma<s n="vblex"/></r></p></e>

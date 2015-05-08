@@ -11,6 +11,7 @@
     </def-cat>
     <def-cat n="SV">
       <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
     </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
@@ -23,9 +24,13 @@
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
+    <def-attr n="a_arg2">
+      <attr-item tags="arg2_nom"/>
+    </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
       <attr-item tags="acc"/>
+      <attr-item tags="ela"/>
       <attr-item tags="dat"/>
       <attr-item tags="gen"/>
       <attr-item tags="ins"/>
@@ -84,6 +89,41 @@
         </out>
       </action>
     </rule>
+
+
+    <rule comment="REGLA: SV QST SN">
+      <pattern>
+        <pattern-item n="SV"/>
+        <pattern-item n="QST"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <choose><when><test><equal><clip pos="1" part="a_arg2"/><lit-tag v="arg2_nom"/></equal></test>
+                      <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let></when></choose>
+        <out>
+          <chunk>
+            <get-case-from pos="1">
+              <clip pos="2" part="lem"/></get-case-from>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <get-case-from pos="2">
+              <clip pos="1" part="lem"/></get-case-from>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+          <b pos="2"/>
+          <chunk>
+              <clip pos="3" part="lem"/>
+            <clip pos="3" part="tags"/>
+            <clip pos="3" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
   </section-rules>
 </interchunk>
