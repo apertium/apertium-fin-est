@@ -81,16 +81,11 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_pos">
+      <attr-item tags="adv"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
-    </def-attr>
-    <def-attr n="a_arg2">
-      <attr-item tags="arg2_nom"/>
-      <attr-item tags="arg2_ela"/>
-    </def-attr>
-    <def-attr n="a_arg1">
-      <attr-item tags="arg1_nom"/>
-      <attr-item tags="arg1_all"/>
     </def-attr>
     <def-attr n="a_func">
       <attr-item tags="@X"/>
@@ -146,6 +141,10 @@
       <attr-item tags="foc_gi"/>
       <attr-item tags="foc_pa"/>
     </def-attr>
+    <def-attr n="a_comp">
+      <attr-item tags="comp"/>
+      <attr-item tags="sup"/>
+    </def-attr>
     <def-attr n="a_sgpl">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
@@ -173,8 +172,6 @@
 
   </section-def-attrs>
   <section-def-vars>
-    <def-var n="arg1"/>
-    <def-var n="arg2"/>
     <def-var n="number"/>
     <def-var n="current_verb"/>
     <def-var n="EOS" v="true"/>
@@ -182,7 +179,6 @@
 
   </section-def-vars>
   <section-def-macros>
-
     <def-macro n="replace-foc1" npar="1">
       <choose>
         <when>
@@ -476,7 +472,10 @@
               <tag><lit-tag v="PRN"/></tag>
             </tags>
             <lu>
-              <lit v="nemad"/><lit-tag v="prn.pl.gen"/>
+              <lit v="nemad"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pl"/>
+              <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
@@ -485,7 +484,6 @@
         </choose>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="2"/></let>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
@@ -911,10 +909,6 @@
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <let><var n="arg1"/><clip pos="1" side="tl" part="a_arg1"/></let>
-        <let><var n="arg2"/><clip pos="1" side="tl" part="a_arg2"/></let>
-        <let><clip pos="1" side="tl" part="a_arg1"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_arg2"/><lit v=""/></let>
         <!-- <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let> -->
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_voice"/> 
@@ -940,8 +934,6 @@
           <chunk name="v" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
-              <tag><var n="arg1"/></tag>
-              <tag><var n="arg2"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -950,6 +942,7 @@
         </out>
       </action>
     </rule>
+
 
 
     <rule comment="REGLA: QST">
@@ -1028,10 +1021,45 @@
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
         <out>
           <chunk name="a" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: ADJ">
+      <pattern>
+        <pattern-item n="adj"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <choose>
+          <when><test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/>
+                      </equal></test>
+                <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="a" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="ADJ"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>

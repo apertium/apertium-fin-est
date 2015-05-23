@@ -28,10 +28,10 @@ PARENTHESES = ("<(>" "<)>") ("<[>" "<]>") ("<{>" "<}>") ("<“>" "<”>");
 
 SETS
 
-LIST BOS = →→→ ">>>" "<$START-P>" "<$start-p>" ; # look at BOS/EOS
-LIST EOS = ←←← "<<<" "<$END-P>" "<$end-p>" ; 
-LIST ←←← = ←←← ; 
-LIST →→→ = →→→ ; 
+LIST BOS = →→→ >>> ">>>" "<$START-P>" "<$start-p>" ; # look at BOS/EOS
+LIST EOS = ←←← <<< "<<<" "<$END-P>" "<$end-p>" ; 
+LIST ←←← = ←←← <<< ; 
+LIST →→→ = →→→ >>> ; 
 
 
 # Parts of speech
@@ -68,6 +68,7 @@ LIST Acro = acro ;
 # Clitics
 LIST Qst = qst ; # -ko_-kö
 LIST Foc_ka = foc_ka foc_ka ; 
+LIST Foc_kaan = foc_kaan foc_kaan ; 
 
 # POS sub-categories
 # ------------------
@@ -264,7 +265,7 @@ LIST PrsPrc_InfMa_InfE_REF_TEMP = prsprc (prfprc gen) (prfprc par) infma infe ;
 LIST Imprt = imp ;
 LIST ImprtActSg2 = (imp actv p2 sg) ;
 
-LIST Ind = indic ;
+LIST Ind = indic ind ;
 LIST Cond = cond ;
 LIST Pot = pot ;
 
@@ -325,7 +326,7 @@ LIST A_Q_Pron = adj qnt prn ; # removed a_n
 LIST A_PCP = adj prfprc prsprc ;
 
 LIST C_Adv = cnjsub cnjcoo adv ; 
-LIST C-Adv-ETC = cnjsub cnjcoo adv →→→ "←,→" "olla" ; 
+LIST C-Adv-ETC = cnjsub cnjcoo adv →→→ >>> "," "olla" ; 
 
 LIST N_Pron = n prn ; # 1 with "toimia"
 LIST N_Pron_Q = n prn qnt ; 
@@ -373,7 +374,7 @@ LIST Gen-PREP = "yli" "läpi" ;
 LIST Gen-WORD = "metri" "milli_metri" "kilo_metri" "vuosi" "päivä" "kuu_kausi" "minuutti" "sekunti" "tunti" "vuoro_kausi" "maa" "prosentti" "paras" "markka" "penni" "dollari" "kruunu" "henkilö" "kierros" "maa" "maisema" "uutinen" "tienoo" ;
 LIST HARVA = "harva" "kumpikin" "suora" "enin" ; # "enin" added 19.01.2015 -fmt+km
 LIST HARVA-SET = "asua" "tahti" "hammas" "verkko" "pensaikko" "asutus" ; 
-LIST HITTO = ij "hitto" "herra_jumala" "kuinka" "sinä" "te" "←\!→" "hellanlettas" "saatana" "perkele" "vittu" "voi" ; 
+LIST HITTO = ij "hitto" "herra_jumala" "kuinka" "sinä" "te" "\!" "hellanlettas" "saatana" "perkele" "vittu" "voi" ; 
 LIST HYVA = "hyvä" ; 
 LIST HYVA_HUONO = "hyvä" "huono" "ikävä" "kiva" "mukava" "hauska" "järkevä" "vaikea" "helppo" "mahdollinen" "mahdoton" "tärkeä" "hankala" "aiheellinen" "tarpeellinen" "välttämätön" ; 
 LIST HYVANSA = "hyvänsä" ; 
@@ -642,7 +643,7 @@ LIST VAIKKA_KUIN_JOS = "vaikka" "kuin" "jos" "ties" ;
 LIST JOS_VAIKKA = "jos" "vaikka" ; 
 LIST JOS_KUN_KOSKA_VAIKKA = "jos" "kun" "koska" "vaikka" ; 
 
-LIST Compl = cnjsub cnjcoo "←,→" punct "joten" "jotta" "että" "jos" "kun" "koska" "vaikka" "kuin" ; 
+LIST Compl = cnjsub cnjcoo "," punct "joten" "jotta" "että" "jos" "kun" "koska" "vaikka" "kuin" ; 
 
 # Question Words
 # --------------
@@ -658,13 +659,13 @@ LIST KUINKA-MITEN-MIllOIN = "kuinka" "miten" "milloin" ;
 # Punctuation 
 # -----------
 
-LIST COLON = "←:→" ; 
-LIST COMMA = "←,→" ;
-LIST ComMA = "←,→" punct ; 
-LIST ComMA_N_Pron_Q = "←,→" n prn qnt ; 
-LIST ComMA_N_Pron_Q_V_SUP_BOS = "←,→" n prn qnt vblex sup →→→ "kuin" ; 
+LIST COLON = ":" ; 
+LIST COMMA = "," ;
+LIST ComMA = "," punct ; 
+LIST ComMA_N_Pron_Q = "," n prn qnt ; 
+LIST ComMA_N_Pron_Q_V_SUP_BOS = "," n prn qnt vblex sup →→→ >>> "kuin" ; 
 
-LIST OM = →→→ """ ;
+LIST OM = →→→ >>> """ ;
 
 
 LIST TERMINATIVEPO = "asti" 
@@ -747,24 +748,24 @@ LIST ParRight = "edelle" "edellä" "ennen" "ilman" "keskelle" "keskellä" "keske
 LIST Nec-V = "tulla" "pitää" "täytyä" ; # was ←nec-v→; added tulla, pitää, täytyä
 
 
-LIST QMARK = "←?→" ; 
-LIST ?! = "←?→" "←!→" ; 
+LIST QMARK = "?" ; 
+LIST ?! = "?" "!" ; 
 
-LIST CLB = cm ;
-LIST CLB? = →→→ ←←← "←:→" "←#→" "←(→" "←) →" "←'→" "←"→" "←,→" rel "←-→" "kuinka" "miten" "milloin" "-" cnjsub cnjcoo qst punct ; 
-LIST CLB?-C = →→→ ←←← "←:→" "←#→" "←(→" "←) →" "←'→" "←"→" "←,→" "←-→" ; 
-LIST CLB?_Neg = →→→ ←←← "←:→" "←#→" "←(→" "←) →" "←'→" "←"→" "←,→" cnjsub cnjcoo neg ; 
+LIST CLB = CLB ;
+LIST CLB? = →→→ >>> ←←← <<< ":" "#" "(" ") " "'" """ "," rel "-" "kuinka" "miten" "milloin" "-" cnjsub cnjcoo qst punct ; 
+LIST CLB?-C = →→→ >>> ←←← <<< ":" "#" "(" ") " "'" """ "," "-" ; 
+LIST CLB?_Neg = →→→ >>> ←←← <<< ":" "#" "(" ") " "'" """ "," cnjsub cnjcoo neg ; 
 LIST CMP-ENNEN = comp "ennen" ; 
 
 
 LIST MAINV = prs prt imp ; 
-#LIST MAINV_CLB? = Prs Prt Imprt  →→→ ←←← "<:>" "<#>" "<(>" "<>" "<'>" "<">" "<,>" CS CC ; not used
+#LIST MAINV_CLB? = Prs Prt Imprt  →→→ >>> ←←← <<< "<:>" "<#>" "<(>" "<>" "<'>" "<">" "<,>" CS CC ; not used
 
-LIST Punct = punct "←,→" "←:→" ; # ?? now punct is for all punctuation marks
+LIST Punct = punct "," ":" ; # ?? now punct is for all punctuation marks
 
 #LIST MAN = MAN ; # erityisesti hyvinkin; -mmin, -kin, -sti A / ADV; Inf2 katsoen, pitäen, luovien -- don't have this special tag (only Foc/kin), removed!
 
-LIST Num_C_HETI_CLB = num "heti" →→→ ←←← "←:→" "←#→" "←(→" "←→" "←'→" "←"→" "←,→" rel "←-→" "kuinka" "miten" "milloin" "-" cnjsub cnjcoo qst punct ; 
+LIST Num_C_HETI_CLB = num "heti" →→→ >>> ←←← <<< ":" "#" "(" "" "'" """ "," rel "-" "kuinka" "miten" "milloin" "-" cnjsub cnjcoo qst punct ; 
 LIST Num-Q-Ill = num qnt ill ; 
 
 #LIST Prop_HEUR = Prop <MORPH-HEUR!> ; not used
@@ -1557,6 +1558,7 @@ SELECT ("tarpeen") + Adv (*-1 OLLA LINK NOT *1 CLB?) (NOT -1 Gen) (1 CLB?) # XX
 SELECT ("tietenkin") + Adv ;
 SELECT ("tietenkään") + Adv ;
 SELECT ("←todellakaan→") + Adv ;
+SELECT ("todella") + Foc_kaan + Adv ;
 SELECT ("toisin") + Adv (1 VFIN) # TOISIN ON SIllOIN ...
 SELECT ("toisin") + Adv (1 Conj) ;
 SELECT ("toisin") + Adv (-1 AIVAN-IHAN) 
@@ -2295,7 +2297,7 @@ SELECT Act + Sg3 (NOT *-1 NEGV BARRIER CLB) (-1C Nom) (-1 N_Pron_Q) (NOT -1 DV-U
 ## *** IMPERATIVES ***
 SELECT Imprt (-1 BOS) (NOT *1C VFIN) (NOT 0 VOI) (NOT 0 KO) 
 # NB "kysy voiko..."
-SELECT Imprt ; # (-2 CLB?) (-1 Conj) (*1 CLB? LINK NOT *-1 VFIN) 
+#SELECT Imprt ; # (-2 CLB?) (-1 Conj) (*1 CLB? LINK NOT *-1 VFIN) 
 REMOVE Imprt (*1C VFIN LINK NOT *-1 CLB?) (NOT 1 CLB?) 
 REMOVE Imprt (*-1C VFIN LINK NOT *1 CLB?) (NOT -1 CLB?) 
 REMOVE Imprt (0 ("myös")) ;
@@ -2517,9 +2519,9 @@ REMOVE PrfPrc (NOT -1 NOUN+InfA) (-3 CLB?) (-2 Gen) (-1 Nom)
 REMOVE PrsPrc (NOT -1 NOUN+InfA) (-3 CLB?) (-2 Gen) (-1 Nom) 
   # "asennusohjelman ajo kestaa ..." . HEURISTIIKKA (KL).
 # TIDIGARE HETTE DENNA (@w REMOVE InfV ...
-REMOVE Prs (*-1C MAINV LINK NOT *1 CLB?) (NOT -1 CLB?) 
-REMOVE Prt (*-1C MAINV LINK NOT *1 CLB?) (NOT -1 CLB?) 
-REMOVE Imprt (*-1C MAINV LINK NOT *1 CLB?) (NOT -1 CLB?) 
+REMOVE Prs (*-1C MAINV BARRIER CLB?) (NOT -1 CLB?) 
+REMOVE Prt (*-1C MAINV BARRIER CLB?) (NOT -1 CLB?) 
+REMOVE Imprt (*-1C MAINV BARRIER CLB?) (NOT -1 CLB?) 
   # UP FOR MORPHOLOGY! LEFT SIDE.
 
   # commented out  Mon Jan 19 16:01:05 CET 2015 -FMT+KM
@@ -2539,10 +2541,10 @@ SELECT N + Sg IF (0 V) (1C* VSg3 BARRIER CLB) (NEGATE 0 WORD LINK *-1 NNom BARRI
   # 1) Todista henkilöllisyytesi vaalivirkailijalle eli näytä passi ...
 
 # added '(NOT -1* VFIN BARRIER CLB) (NOT 1* VFIN BARRIER CLB) ;' - 20.01.2015 - FMT+KM
-SELECT VSg3 IF (0 N) (*-1 THIRD_PersON_SG_Noun BARRIER REALCLB) (NOT -1* VFIN BARRIER REALCLB) (NOT 1* VFIN BARRIER REALCLB) ;
+SELECT VSg3 IF (0 N) (*-1 THIRD_PersON_SG_Noun BARRIER REALCLB) (NOT -1* VFIN BARRIER CLB) (NOT 1* VFIN BARRIER CLB) ;
 
 # added '(NOT -1C* VFIN BARRIER REALCLB) (NOT 1C* VFIN BARRIER REALCLB) ;' - 20.01.2015 - FMT+KM
-SELECT VPl3 IF (0 N) (*-1 THIRD_PersON_PL_Noun BARRIER REALCLB) (NOT -1* VFIN BARRIER REALCLB) (NOT 1* VFIN BARRIER REALCLB) ;
+SELECT VPl3 IF (0 N) (*-1 THIRD_PersON_PL_Noun BARRIER REALCLB) (NOT -1* VFIN BARRIER CLB) (NOT 1* VFIN BARRIER CLB) ;
 
     # Tuli raivosi alueella, jossa... 
     # Problem: Mikko laski luotansa kyyhkysen nähdäksensä.
