@@ -169,8 +169,8 @@ LIST ASgAbe = (adj sg abe) ;
 LIST ASgCmt = (adj sg cmt) ;
 
 LIST APlNom = (adj pl nom) ; 
-LIST APlAde = (adj pl ade) ; 
 LIST APlGen = (adj pl gen) ; 
+LIST APlAde = (adj pl ade) ; 
 LIST APlEla = (adj pl ela) ; 
 LIST APlEss = (adj pl ess) ; 
 LIST APlIll = (adj pl ill) ; 
@@ -1331,7 +1331,7 @@ SELECT ("vapaa") + ASgGen (1 Gen)
 SELECT ("vapaa") + ASgGen (-1 Gen) 
 SELECT ("vieras") + A ;
 REMOVE ("voinen") + A ;
-SELECT ("vähä") + A + Gen ;# (1 Gen) (1 N) # VäHäN AJAN KULUTTUA
+SELECT ("vähä") + A + Gen (1 N + Gen) ; # VäHäN AJAN KULUTTUA
 SELECT A (-1C Adv OR Pcle) (NOT 0 LIIAN) (NOT 0 PALJON) (NOT 0 Adv) (NOT 0 HARVA) 
 SELECT ASgNom (NOT 0 Adv) (1C Nom) (1 A_N) (1 Sg) (NOT 0 HARVA) (NOT 0 TOSI) (NOT 0 PCP) # XXXX
 # EI "nykyisin", NOT "tosi"
@@ -3703,3 +3703,24 @@ SUBSTITUTE CLB (*) CLB ;
 
 #SUBSTITUTE (+ei V Neg Act Sg3) (+ei V Neg Act Sg3 @+FAUXV) ;
 SUBSTITUTE (cmpnd @+FAUXV) (cmpnd) (cnjsub cmpnd @+FAUXV) ; # ???
+
+
+# for fin-est only
+
+LIST Kieli = "amhara" "aramea" "englanti" "espanja" "flaami" "gaeli" "heprea" "islanni" "italia" "japani" "kerkeä" "kiina" "kolta" "kopti" "kreika" "kreikka" "lapi" "latina" "liivi" "mongoli" "norja" "persia" "puola" "ranska" "romani" "ruotsi" "saame" "saksa" "suomi" "tanska" "turki" "unkari" "venäjä" "viro" ;
+LIST KieliV = "puhua" "oppia" "opiskella" "harrastaa" "lukea" "osata" "kääntää" ;
+LIST KieliVy = "ymmärtää" ;
+LIST KieliVk = "kääntää" "käännos" ;
+LIST KieliN = "opiskelu" "osaaminen" "ymmärtäminen" "taito" "kurssi" "keskustelukurssi" ;
+# Käänsin englannista viroksi ja päinvastoin (ks->adit)
+
+ADDCOHORT ("<kieli>" "kieli" n sg ela) AFTER Kieli + Ela (NOT 1 ("kieli")) (NOT 2 Kieli + Ela OR ("kieli")) (*0 KieliVk BARRIER CLB OR Punct OR V) ;
+ADDCOHORT ("<kieli>" "kieli" n sg ill) AFTER Kieli + Tra (NOT 1 ("kieli")) (NOT 2 Kieli + Tra OR ("kieli")) (*0 KieliVk BARRIER CLB OR Punct OR V) ;
+ADDCOHORT ("<kieli>" "kieli" n sg par) AFTER Kieli (NOT 1 ("kieli")) (NOT 2 Kieli OR ("kieli")) (NOT 3 Kieli OR ("kieli"))(*0 KieliV BARRIER CLB OR Punct OR V) ; #  + Par?
+ADDCOHORT ("<kieli>" "kieli" n sg ela) AFTER Kieli (NOT 1 ("kieli")) (NOT 2 Kieli OR ("kieli")) (NOT 3 Kieli OR ("kieli"))(*0 KieliVy BARRIER CLB OR Punct OR V) ; #  + Par?
+ADDCOHORT ("<kieli>" "kieli" n sg par) AFTER Kieli + Par (NOT 1 ("kieli")) (NOT 2 Kieli OR ("kieli")) (NOT 3 Kieli OR ("kieli"))(*-1 ("kieli") BARRIER V LINK *-1 KieliV BARRIER CLB OR Punct) ;
+ADDCOHORT ("<kieli>" "kieli" n sg gen) AFTER Kieli (NOT 1 ("kieli")) (NOT 2 Kieli OR ("kieli")) (NOT 3 Kieli OR ("kieli"))(*1 KieliN BARRIER CLB OR Punct OR V) ; #  + Gen?
+
+SUBSTITUTE (par) (gen) Kieli + Par (*1 ("kieli") BARRIER CLB OR V) ;
+SUBSTITUTE (tra) (gen) Kieli + Par (*1 ("kieli") BARRIER CLB OR V) ;
+
