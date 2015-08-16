@@ -18,6 +18,15 @@
 /apertium-fin-est.fin-est.t2x -text
 /apertium-fin-est.fin-est.t3x -text
 /autogen.sh -text
+comp/comp.py -text
+comp/eesti.mrf -text
+comp/eesti.txt -text
+comp/soome.biltr -text
+comp/soome.dix -text
+comp/soome.mrf -text
+comp/soome.pchnk -text
+comp/soome.tolge -text
+comp/soome.txt -text
 /configure.ac -text
 dev/bidix/reliable.fin-est.adj -text
 dev/bidix/reliable.fin-est.adj.checked -text
