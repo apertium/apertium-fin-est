@@ -379,15 +379,18 @@
                               <lit-tag v="impers"/>
                       </equal></not></test>
                 <let><var n="voice"/><lit-tag v="actv"/></let>
+<!--
         	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
+-->
           </when>
           <otherwise>  
                 <let><var n="voice"/><lit-tag v="pasv"/></let>
+<!--
         	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
+-->
         	<let><var n="addp"/><lit-tag v="pe4"/></let>
           </otherwise>  
         </choose>
-
 
         <out>
           <chunk name="fin" case="caseFirstWord">
