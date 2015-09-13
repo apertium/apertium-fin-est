@@ -23,6 +23,10 @@
     <def-cat n="verb-fin">
       <cat-item tags="vblex.actv.ind.*"/>
       <cat-item tags="vblex.pasv.ind.*"/>
+      <cat-item tags="vblex.actv.cond.*"/>
+      <cat-item tags="vblex.pasv.cond.*"/>
+      <cat-item tags="vblex.actv.quot.*"/>
+      <cat-item tags="vblex.pasv.quot.*"/>
       <cat-item tags="vblex.*.ind.*"/>
     </def-cat>
     <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
@@ -112,14 +116,28 @@
       <attr-item tags="prs"/>
     </def-attr>
     <def-attr n="a_screeve">
+      <attr-item tags="ind"/>
+      <attr-item tags="cond"/>
+      <attr-item tags="quot"/>
+      <attr-item tags="imprt"/>
       <attr-item tags="imp"/>
 
       <attr-item tags="ind.prs"/>
       <attr-item tags="ind.prt"/>
 
-      <attr-item tags="prs.imprt"/>
       <attr-item tags="prs.ind"/>
       <attr-item tags="prt.ind"/>
+      <attr-item tags="prs.cond"/>
+      <attr-item tags="prt.cond"/>
+      <attr-item tags="prs.quot"/>
+      <attr-item tags="prt.quot"/>
+      <attr-item tags="prs.imprt"/>
+      <attr-item tags="prt.imprt"/>
+      <attr-item tags="prs.imp"/>
+      <attr-item tags="prt.imp"/>
+    </def-attr>
+    <def-attr n="a_p3sg">
+      <attr-item tags="p3.sg"/>
     </def-attr>
     <def-attr n="a_poss">
       <attr-item tags="pxsg1"/>
@@ -241,6 +259,8 @@
           <test>
             <and>
               <or>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="mina"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="Mina"/></equal>
               </or>
@@ -255,6 +275,8 @@
           <test>
             <and>
               <or>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="sina"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="Sina"/></equal>
               </or>
@@ -269,6 +291,8 @@
           <test>
             <and>
               <or>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
+                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="tema"/></equal>
                 <equal><clip pos="1" side="tl" part="lem"/><lit v="Tema"/></equal>
               </or>
@@ -843,7 +867,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="vblex.pers.sup.ine"/>
+              <lit-tag v="vblex.pers.sup.ill"/>
             </lu>
           </chunk>
         </out>
@@ -919,6 +943,46 @@
           <otherwise>  
                 <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="impers"/></let>
           </otherwise>  
+        </choose>
+        <choose>
+          <when><test><and><or>
+                      <equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="cond"/>
+                      </equal>
+                      <equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="quot"/>
+                      </equal>
+                      </or>
+                      <equal><clip pos="1" side="sl" part="a_p3sg"/> 
+                              <lit-tag v="p3.sg"/>
+                      </equal>
+                      </and>
+                </test>
+                <let><clip pos="1" side="tl" part="a_p3sg"/><lit v=""/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="cond"/>
+                      </equal></test>
+                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.cond"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="quot"/>
+                      </equal>
+                      </test>
+                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.quot"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="imp"/>
+                      </equal>
+                      </test>
+                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.imp"/></let>
+          </when>
         </choose>
         <choose> 
           <when> 
