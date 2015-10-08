@@ -51,6 +51,9 @@ dev/punctuation.lexc -text
 /modes.xml -text
 /mult.py -text
 /pending-tests.sh -text
+texts/opik.est.txt -text
+texts/opik.fin.txt -text
+texts/opik_vead_käbilt.xlsx -text
 texts/story.est.txt -text
 texts/story.fin.txt -text
 /wiki-tests.sh -text
