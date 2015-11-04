@@ -91,7 +91,7 @@
     <e><p><l>tai<s n="cnjcoo"/></l><r>või<s n="cnjcoo"/></r></p></e>
     <e><p><l>vai<s n="cnjcoo"/></l><r>või<s n="cnjcoo"/></r></p></e>
     <e><p><l>sekä<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
-    <e><p><l>sekä<s n="cnjcoo"/></l><r>kui__ka<s n="cnjcoo"/></r></p></e>
+    <e><p><l>sekä<s n="cnjcoo"/></l><r>kui<b/>ka<s n="cnjcoo"/></r></p></e>
     <e><p><l>jos<s n="cnjcoo"/></l><r>kui<s n="cnjcoo"/></r></p></e>
     <e><p><l>jos<s n="cnjsub"/></l><r>kui<s n="cnjsub"/></r></p></e>
     <e><p><l>vaan<s n="cnjcoo"/></l><r>vaid<s n="cnjcoo"/></r></p></e>
@@ -102,7 +102,7 @@
     <e><p><l>taikka<s n="cnjcoo"/></l><r>või<s n="cnjcoo"/></r></p></e>
     <e><p><l>joskin<s n="cnjcoo"/></l><r>olgugi et<s n="cnjcoo"/></r></p></e>
     <e><p><l>tahi<s n="cnjcoo"/></l><r>või<s n="cnjcoo"/></r></p></e>
-    <e><p><l>mikäli<s n="cnjsub"/></l><r>juhul__kui<s n="cnjsub"/></r></p></e>
+    <e><p><l>mikäli<s n="cnjsub"/></l><r>juhul<b/>kui<s n="cnjsub"/></r></p></e>
     <e><p><l>joskin<s n="cnjsub"/></l><r>kuigi<s n="cnjsub"/></r></p></e>
     <e><p><l>kunnes<s n="cnjsub"/></l><r>kuni<s n="cnjsub"/></r></p></e>
     <e><p><l>entä<s n="part"/></l><r>aga<s n="cnjcoo"/></r></p></e>
@@ -10121,6 +10121,8 @@
   
     <!-- SECTION: Proper nouns -->
 
+    <e><p><l>Riho<s n="np"/></l><r>Riho<s n="np"/></r></p></e>
+    <e><p><l>Volmer<s n="np"/></l><r>Volmer<s n="np"/></r></p></e>
     <e><p><l>James<s n="np"/></l><r>James<s n="np"/></r></p></e>
     <e><p><l>Jaakko<s n="np"/></l><r>Jaakko<s n="np"/></r></p></e>
     <e><p><l>Mary<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
@@ -10128,8 +10130,8 @@
     <e><p><l>Maria<s n="np"/></l><r>Maria<s n="np"/></r></p></e>
     <e><p><l>Aadam<s n="np"/></l><r>Aadam<s n="np"/></r></p></e>
     <e><p><l>Aasia<s n="np"/></l><r>Aasia<s n="np"/></r></p></e>
-    <e><p><l>Adrianmeri<s n="np"/></l><r>Aadria__meri<s n="np"/></r></p></e>
-    <e><p><l>Aeginanlahti<s n="np"/></l><r>Saroni__laht<s n="np"/></r></p></e>
+    <e><p><l>Adrianmeri<s n="np"/></l><r>Aadria<b/>meri<s n="np"/></r></p></e>
+    <e><p><l>Aeginanlahti<s n="np"/></l><r>Saroni<b/>laht<s n="np"/></r></p></e>
     <e><p><l>Afrikka<s n="np"/></l><r>Aafrika<s n="np"/></r></p></e>
     <e><p><l>Tartu<s n="np"/></l><r>Tartu<s n="np"/></r></p></e>
     <e><p><l>Tartto<s n="np"/></l><r>Tartu<s n="np"/></r></p></e>
@@ -10143,12 +10145,12 @@
     <e><p><l>Alger<s n="np"/></l><r>Alžiir<s n="np"/></r></p></e>
     <e><p><l>Amerikka<s n="np"/></l><r>Ameerika<s n="np"/></r></p></e>
     <e><p><l>Amiraliteettisaaret<s n="np"/></l><r>Admiraliteedisaared<s n="np"/></r></p></e>
-    <e><p><l>Andamaanienmeri<s n="np"/></l><r>Andamani__meri<s n="np"/></r></p></e>
+    <e><p><l>Andamaanienmeri<s n="np"/></l><r>Andamani<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Andit<s n="np"/></l><r>Andid<s n="np"/></r></p></e>
     <e><p><l>Antikristus<s n="np"/></l><r>Antikristus<s n="np"/></r></p></e>
     <e><p><l>Apenniinit<s n="np"/></l><r>Apenniinid<s n="np"/></r></p></e>
-    <e><p><l>Apostoli__Paavali<s n="np"/></l><r>apostel__Paulus<s n="np"/></r></p></e>
-    <e><p><l>Arabianmeri<s n="np"/></l><r>Araabia__meri<s n="np"/></r></p></e>
+    <e><p><l>Apostoli<b/>Paavali<s n="np"/></l><r>apostel<b/>Paulus<s n="np"/></r></p></e>
+    <e><p><l>Arabianmeri<s n="np"/></l><r>Araabia<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Argentiina<s n="np"/></l><r>Argentina<s n="np"/></r></p></e>
     <e><p><l>Aristoteles<s n="np"/></l><r>Aristoteles<s n="np"/></r></p></e>
     <e><p><l>Arkhimedes<s n="np"/></l><r>Arhimedes<s n="np"/></r></p></e>
@@ -10159,14 +10161,14 @@
     <e><p><l>Bach<s n="np"/></l><r>Bach<s n="np"/></r></p></e>
     <e><p><l>Bahrain<s n="np"/></l><r>Bahrein<s n="np"/></r></p></e>
     <e><p><l>Bali<s n="np"/></l><r>Bali<s n="np"/></r></p></e>
-    <e><p><l>Barentsinmeri<s n="np"/></l><r>Barentsi__meri<s n="np"/></r></p></e>
+    <e><p><l>Barentsinmeri<s n="np"/></l><r>Barentsi<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Basel<s n="np"/></l><r>Basel<s n="np"/></r></p></e>
     <e><p><l>Bastilji<s n="np"/></l><r>Bastille<s n="np"/></r></p></e>
     <e><p><l>Belgia<s n="np"/></l><r>Belgia<s n="np"/></r></p></e>
     <e><p><l>Belgrad<s n="np"/></l><r>Belgrad<s n="np"/></r></p></e>
     <e><p><l>Benedictus<s n="np"/></l><r>Benedictus<s n="np"/></r></p></e>
-    <e><p><l>Beringinmeri<s n="np"/></l><r>Beringi__meri<s n="np"/></r></p></e>
-    <e><p><l>Beringinsalmi<s n="np"/></l><r>Beringi__väin<s n="np"/></r></p></e>
+    <e><p><l>Beringinmeri<s n="np"/></l><r>Beringi<b/>meri<s n="np"/></r></p></e>
+    <e><p><l>Beringinsalmi<s n="np"/></l><r>Beringi<b/>väin<s n="np"/></r></p></e>
     <e><p><l>Berliini<s n="np"/></l><r>Berliin<s n="np"/></r></p></e>
     <e><p><l>Betelgeuze<s n="np"/></l><r>Betelgeuse<s n="np"/></r></p></e>
     <e><p><l>Betlehem<s n="np"/></l><r>Petlemm<s n="np"/></r></p></e>
@@ -10175,7 +10177,7 @@
     <e><p><l>Böömi<s n="np"/></l><r>Böömimaa<s n="np"/></r></p></e>
     <e><p><l>Brasilia<s n="np"/></l><r>Brasiilia<s n="np"/></r></p></e>
     <e><p><l>Brasilia<s n="np"/></l><r>Brasília<s n="np"/></r></p></e>
-    <e><p><l>Britteinsaaret<s n="np"/></l><r>Briti__saared<s n="np"/></r></p></e>
+    <e><p><l>Britteinsaaret<s n="np"/></l><r>Briti<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Buddha<s n="np"/></l><r>Buddha<s n="np"/></r></p></e>
     <e><p><l>Bukarest<s n="np"/></l><r>Bukarest<s n="np"/></r></p></e>
     <e><p><l>Caesar<s n="np"/></l><r>Caesar<s n="np"/></r></p></e>
@@ -10191,7 +10193,7 @@
     <e><p><l>Dnepr<s n="np"/></l><r>Dnepr<s n="np"/></r></p></e>
     <e><p><l>Dostojevski<s n="np"/></l><r>Dostojevski<s n="np"/></r></p></e>
     <e><p><l>Edvard<s n="np"/></l><r>Edward<s n="np"/></r></p></e>
-    <e><p><l>Edwardjärvi<s n="np"/></l><r>Rutanzige__järv<s n="np"/></r></p></e>
+    <e><p><l>Edwardjärvi<s n="np"/></l><r>Rutanzige<b/>järv<s n="np"/></r></p></e>
     <e><p><l>Eeva<s n="np"/></l><r>Eeva<s n="np"/></r></p></e>
     <e><p><l>Elia<s n="np"/></l><r>Eelija<s n="np"/></r></p></e>
     <e><p><l>Elisabet<s n="np"/></l><r>Elizabeth<s n="np"/></r></p></e>
@@ -10199,22 +10201,22 @@
     <e><p><l>Etelä-Amerikka<s n="np"/></l><r>Lõuna-Ameerika<s n="np"/></r></p></e>
     <e><p><l>Etelä-Australia<s n="np"/></l><r>Lõuna-Austraalia<s n="np"/></r></p></e>
     <e><p><l>Etelä-Carolina<s n="np"/></l><r>Lõuna-Carolina<s n="np"/></r></p></e>
-    <e><p><l>Etelän__risti<s n="np"/></l><r>Lõunarist<s n="np"/></r></p></e>
+    <e><p><l>Etelän<b/>risti<s n="np"/></l><r>Lõunarist<s n="np"/></r></p></e>
     <e><p><l>Eteläsaari<s n="np"/></l><r>Lõunasaar<s n="np"/></r></p></e>
     <e><p><l>Etiopia<s n="np"/></l><r>Etioopia<s n="np"/></r></p></e>
     <e><p><l>Eufrat<s n="np"/></l><r>Eufrat<s n="np"/></r></p></e>
     <e><p><l>Eukleides<s n="np"/></l><r>Eukleides<s n="np"/></r></p></e>
     <e><p><l>Euraasia<s n="np"/></l><r>Euraasia<s n="np"/></r></p></e>
-    <e><p><l>Euroopan__unioni<s n="np"/></l><r>Euroopa__Liit<s n="np"/></r></p></e>
+    <e><p><l>Euroopan<b/>unioni<s n="np"/></l><r>Euroopa<b/>Liit<s n="np"/></r></p></e>
     <e><p><l>Eurooppa<s n="np"/></l><r>Euroopa<s n="np"/></r></p></e>
-    <e><p><l>Falklandinsaaret<s n="np"/></l><r>Falklandi__saared<s n="np"/></r></p></e>
-    <e><p><l>Färsaaret<s n="np"/></l><r>Fääri__saared<s n="np"/></r></p></e>
+    <e><p><l>Falklandinsaaret<s n="np"/></l><r>Falklandi<b/>saared<s n="np"/></r></p></e>
+    <e><p><l>Färsaaret<s n="np"/></l><r>Fääri<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Färsaaret<s n="np"/></l><r>Fäärid<s n="np"/></r></p></e>
     <e><p><l>Fidži<s n="np"/></l><r>Fidži<s n="np"/></r></p></e>
     <e><p><l>Flanderi<s n="np"/></l><r>Flandria<s n="np"/></r></p></e>
     <e><p><l>Foinikia<s n="np"/></l><r>Foiniikia<s n="np"/></r></p></e>
     <e><p><l>Freija<s n="np"/></l><r>Freya<s n="np"/></r></p></e>
-    <e><p><l>Friisein__saaret<s n="np"/></l><r>Friisi__saared<s n="np"/></r></p></e>
+    <e><p><l>Friisein<b/>saaret<s n="np"/></l><r>Friisi<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Friisinmaa<s n="np"/></l><r>Friisimaa<s n="np"/></r></p></e>
     <e><p><l>Gabon<s n="np"/></l><r>Gabon<s n="np"/></r></p></e>
     <e><p><l>Gaia<s n="np"/></l><r>Gaia<s n="np"/></r></p></e>
@@ -10222,16 +10224,16 @@
     <e><p><l>Galápagos<s n="np"/></l><r>Galápagos<s n="np"/></r></p></e>
     <e><p><l>Gallia<s n="np"/></l><r>Gallia<s n="np"/></r></p></e>
     <e><p><l>Gascogne<s n="np"/></l><r>Gascogne<s n="np"/></r></p></e>
-    <e><p><l>Geneven__sopimus<s n="np"/></l><r>Genfi__konventsioon<s n="np"/></r></p></e>
-    <e><p><l>Gilbertsaaret<s n="np"/></l><r>Gilberti__saared<s n="np"/></r></p></e>
+    <e><p><l>Geneven<b/>sopimus<s n="np"/></l><r>Genfi<b/>konventsioon<s n="np"/></r></p></e>
+    <e><p><l>Gilbertsaaret<s n="np"/></l><r>Gilberti<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Göring<s n="np"/></l><r>Göring<s n="np"/></r></p></e>
     <e><p><l>Göteborg<s n="np"/></l><r>Göteborg<s n="np"/></r></p></e>
     <e><p><l>Gregorius<s n="np"/></l><r>Gregorius<s n="np"/></r></p></e>
-    <e><p><l>Grönlanninmeri<s n="np"/></l><r>Grööni__meri<s n="np"/></r></p></e>
+    <e><p><l>Grönlanninmeri<s n="np"/></l><r>Grööni<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Groznyi<s n="np"/></l><r>Groznõi<s n="np"/></r></p></e>
     <e><p><l>Hadrianus<s n="np"/></l><r>Hadrianus<s n="np"/></r></p></e>
     <e><p><l>Halikarnassos<s n="np"/></l><r>Halikarnassos<s n="np"/></r></p></e>
-    <e><p><l>Hansaliitto<s n="np"/></l><r>Hansa__Liit<s n="np"/></r></p></e>
+    <e><p><l>Hansaliitto<s n="np"/></l><r>Hansa<b/>Liit<s n="np"/></r></p></e>
     <e><p><l>Hefaistos<s n="np"/></l><r>Hephaistos<s n="np"/></r></p></e>
     <e><p><l>Hektor<s n="np"/></l><r>Hektor<s n="np"/></r></p></e>
     <e><p><l>helsinki<s n="np"/></l><r>helsingi<s n="np"/></r></p></e>
@@ -10239,7 +10241,7 @@
     <e><p><l>Herodes<s n="np"/></l><r>Herodes<s n="np"/></r></p></e>
     <e><p><l>Herodotos<s n="np"/></l><r>Herodotos<s n="np"/></r></p></e>
     <e><p><l>Hesekiel<s n="np"/></l><r>Hesekiel<s n="np"/></r></p></e>
-    <e><p><l>Himalaja<s n="np"/></l><r>Himaalaja__mäestik<s n="np"/></r></p></e>
+    <e><p><l>Himalaja<s n="np"/></l><r>Himaalaja<b/>mäestik<s n="np"/></r></p></e>
     <e><p><l>Himalaja<s n="np"/></l><r>Himaalaja<s n="np"/></r></p></e>
     <e><p><l>Hindukuš<s n="np"/></l><r>Hindukuš<s n="np"/></r></p></e>
     <e><p><l>Hippokrates<s n="np"/></l><r>Hippokrates<s n="np"/></r></p></e>
@@ -10251,12 +10253,12 @@
     <e><p><l>Ilias<s n="np"/></l><r>Ilias<s n="np"/></r></p></e>
     <e><p><l>Intia<s n="np"/></l><r>India<s n="np"/></r></p></e>
     <e><p><l>Irak<s n="np"/></l><r>Iraak<s n="np"/></r></p></e>
-    <e><p><l>Irlanninmeri<s n="np"/></l><r>Iiri__meri<s n="np"/></r></p></e>
+    <e><p><l>Irlanninmeri<s n="np"/></l><r>Iiri<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Irlanti<s n="np"/></l><r>Iirimaa<s n="np"/></r></p></e>
     <e><p><l>Islanti<s n="np"/></l><r>Island<s n="np"/></r></p></e>
-    <e><p><l>Iso__karhu<s n="np"/></l><r>Suur__Vanker<s n="np"/></r></p></e>
+    <e><p><l>Iso<b/>karhu<s n="np"/></l><r>Suur<b/>Vanker<s n="np"/></r></p></e>
     <e><p><l>Iso-Britannia<s n="np"/></l><r>Suurbritannia<s n="np"/></r></p></e>
-    <e><p><l>Isot__Sundasaaret<s n="np"/></l><r>Suured__Sunda__saared<s n="np"/></r></p></e>
+    <e><p><l>Isot<b/>Sundasaaret<s n="np"/></l><r>Suured<b/>Sunda<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Itä-Afrikka<s n="np"/></l><r>Ida-Aafrika<s n="np"/></r></p></e>
     <e><p><l>Italia<s n="np"/></l><r>Itaalia<s n="np"/></r></p></e>
     <e><p><l>Itävalta<s n="np"/></l><r>Austria<s n="np"/></r></p></e>
@@ -10265,12 +10267,12 @@
     <e><p><l>Jago<s n="np"/></l><r>Jago<s n="np"/></r></p></e>
     <e><p><l>Jalta<s n="np"/></l><r>Jalta<s n="np"/></r></p></e>
     <e><p><l>Japani<s n="np"/></l><r>Jaapan<s n="np"/></r></p></e>
-    <e><p><l>Jeanne__d'Arc<s n="np"/></l><r>Jeanne__d'Arc<s n="np"/></r></p></e>
+    <e><p><l>Jeanne<b/>d'Arc<s n="np"/></l><r>Jeanne<b/>d'Arc<s n="np"/></r></p></e>
     <e><p><l>Jemen<s n="np"/></l><r>Jeemen<s n="np"/></r></p></e>
     <e><p><l>Jerevan<s n="np"/></l><r>Jerevan<s n="np"/></r></p></e>
     <e><p><l>Jesaja<s n="np"/></l><r>Jesaja<s n="np"/></r></p></e>
     <e><p><l>Jooel<s n="np"/></l><r>Joel<s n="np"/></r></p></e>
-    <e><p><l>Joonianmeri<s n="np"/></l><r>Joonia__meri<s n="np"/></r></p></e>
+    <e><p><l>Joonianmeri<s n="np"/></l><r>Joonia<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Joonia<s n="np"/></l><r>Joonia<s n="np"/></r></p></e>
     <e><p><l>Joosua<s n="np"/></l><r>Joosua<s n="np"/></r></p></e>
     <e><p><l>Jousimies<s n="np"/></l><r>Ambur<s n="np"/></r></p></e>
@@ -10285,28 +10287,28 @@
     <e><p><l>Kalifornia<s n="np"/></l><r>California<s n="np"/></r></p></e>
     <e><p><l>Kalliovuoret<s n="np"/></l><r>Kaljumäestik<s n="np"/></r></p></e>
     <e><p><l>Kamerun<s n="np"/></l><r>Kamerun<s n="np"/></r></p></e>
-    <e><p><l>Kanariansaaret<s n="np"/></l><r>Kanaari__saared<s n="np"/></r></p></e>
+    <e><p><l>Kanariansaaret<s n="np"/></l><r>Kanaari<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Kapkaupunki<s n="np"/></l><r>Kaplinn<s n="np"/></r></p></e>
     <e><p><l>Kapmaa<s n="np"/></l><r>Kapimaa<s n="np"/></r></p></e>
     <e><p><l>Karhunvartija<s n="np"/></l><r>Karjane<s n="np"/></r></p></e>
-    <e><p><l>Karibianmeri<s n="np"/></l><r>Kariibi__meri<s n="np"/></r></p></e>
-    <e><p><l>Karjalankannas<s n="np"/></l><r>Karjala__kannas<s n="np"/></r></p></e>
+    <e><p><l>Karibianmeri<s n="np"/></l><r>Kariibi<b/>meri<s n="np"/></r></p></e>
+    <e><p><l>Karjalankannas<s n="np"/></l><r>Karjala<b/>kannas<s n="np"/></r></p></e>
     <e><p><l>Karpaatit<s n="np"/></l><r>Karpaadid<s n="np"/></r></p></e>
     <e><p><l>Karthago<s n="np"/></l><r>Kartaago<s n="np"/></r></p></e>
     <e><p><l>Kaskadivuoret<s n="np"/></l><r>Kaskaadid<s n="np"/></r></p></e>
     <e><p><l>Katalonia<s n="np"/></l><r>Kataloonia<s n="np"/></r></p></e>
-    <e><p><l>Katariina__Suuri<s n="np"/></l><r>Katariina__Suur<s n="np"/></r></p></e>
+    <e><p><l>Katariina<b/>Suuri<s n="np"/></l><r>Katariina<b/>Suur<s n="np"/></r></p></e>
     <e><p><l>Katariina<s n="np"/></l><r>Catherine<s n="np"/></r></p></e>
     <e><p><l>Kaukasia<s n="np"/></l><r>Kaukaasia<s n="np"/></r></p></e>
     <e><p><l>Kaukasus-vuoristo<s n="np"/></l><r>Kaukasus<s n="np"/></r></p></e>
     <e><p><l>Kaukoitä<s n="np"/></l><r>Kaug-Ida<s n="np"/></r></p></e>
-    <e><p><l>Keisarinkanava<s n="np"/></l><r>Suur__Hiina__kanal<s n="np"/></r></p></e>
+    <e><p><l>Keisarinkanava<s n="np"/></l><r>Suur<b/>Hiina<b/>kanal<s n="np"/></r></p></e>
     <e><p><l>Kenia<s n="np"/></l><r>Keenia<s n="np"/></r></p></e>
     <e><p><l>Keski-Amerikka<s n="np"/></l><r>Kesk-Ameerika<s n="np"/></r></p></e>
     <e><p><l>Keskilänsi<s n="np"/></l><r>Kesk-Lääs<s n="np"/></r></p></e>
     <e><p><l>Khalkedon<s n="np"/></l><r>Kalchedon<s n="np"/></r></p></e>
     <e><p><l>Kharon<s n="np"/></l><r>Charon<s n="np"/></r></p></e>
-    <e><p><l>Kiinan__muuri<s n="np"/></l><r>Suur__Hiina__müür<s n="np"/></r></p></e>
+    <e><p><l>Kiinan<b/>muuri<s n="np"/></l><r>Suur<b/>Hiina<b/>müür<s n="np"/></r></p></e>
     <e><p><l>Kiova<s n="np"/></l><r>Kiiev<s n="np"/></r></p></e>
     <e><p><l>Kirke<s n="np"/></l><r>Kirke<s n="np"/></r></p></e>
     <e><p><l>Kleopatra<s n="np"/></l><r>Kleopatra<s n="np"/></r></p></e>
@@ -10327,7 +10329,7 @@
     <e><p><l>Kroatia<s n="np"/></l><r>Horvaatia<s n="np"/></r></p></e>
     <e><p><l>Kronos<s n="np"/></l><r>Kronos<s n="np"/></r></p></e>
     <e><p><l>Kublai-kaani<s n="np"/></l><r>Kublai-khaan<s n="np"/></r></p></e>
-    <e><p><l>Kuningatar__Maudin__maa<s n="np"/></l><r>Kuninganna__Maudi__maa<s n="np"/></r></p></e>
+    <e><p><l>Kuningatar<b/>Maudin<b/>maa<s n="np"/></l><r>Kuninganna<b/>Maudi<b/>maa<s n="np"/></r></p></e>
     <e><p><l>Kuollutmeri<s n="np"/></l><r>Surnumeri<s n="np"/></r></p></e>
     <e><p><l>Kuuba<s n="np"/></l><r>Kuuba<s n="np"/></r></p></e>
     <e><p><l>Kypros<s n="np"/></l><r>Küpros<s n="np"/></r></p></e>
@@ -10339,7 +10341,7 @@
     <e><p><l>Länsi-Saksa<s n="np"/></l><r>Lääne-Saksamaa<s n="np"/></r></p></e>
     <e><p><l>Lappi<s n="np"/></l><r>Lapimaa<s n="np"/></r></p></e>
     <e><p><l>Libanon<s n="np"/></l><r>Liibanon<s n="np"/></r></p></e>
-    <e><p><l>Liberaalipuolue<s n="np"/></l><r>Liberaalne__partei<s n="np"/></r></p></e>
+    <e><p><l>Liberaalipuolue<s n="np"/></l><r>Liberaalne<b/>partei<s n="np"/></r></p></e>
     <e><p><l>Liettua<s n="np"/></l><r>Leedu<s n="np"/></r></p></e>
     <e><p><l>Liivinmaa<s n="np"/></l><r>Liivimaa<s n="np"/></r></p></e>
     <e><p><l>Linnunrata<s n="np"/></l><r>Linnutee<s n="np"/></r></p></e>
@@ -10356,7 +10358,7 @@
     <e><p><l>Mantšuria<s n="np"/></l><r>Mandžuuria<s n="np"/></r></p></e>
     <e><p><l>Marokko<s n="np"/></l><r>Maroko<s n="np"/></r></p></e>
     <e><p><l>Marquesassaaret<s n="np"/></l><r>Markiisaared<s n="np"/></r></p></e>
-    <e><p><l>Marshallinsaaret<s n="np"/></l><r>Marshalli__Saared<s n="np"/></r></p></e>
+    <e><p><l>Marshallinsaaret<s n="np"/></l><r>Marshalli<b/>Saared<s n="np"/></r></p></e>
     <e><p><l>Matara<s n="np"/></l><r>madar<s n="np"/></r></p></e>
     <e><p><l>Maustesaaret<s n="np"/></l><r>Vürtsisaared<s n="np"/></r></p></e>
     <e><p><l>Mekka<s n="np"/></l><r>Meka<s n="np"/></r></p></e>
@@ -10375,13 +10377,13 @@
     <e><p><l>Napoli<s n="np"/></l><r>Napoli<s n="np"/></r></p></e>
     <e><p><l>Nebukadnesar<s n="np"/></l><r>Nebukadneetsar<s n="np"/></r></p></e>
     <e><p><l>Neitsytsaaret<s n="np"/></l><r>Neitsisaared<s n="np"/></r></p></e>
-    <e><p><l>Neuvostoliitto<s n="np"/></l><r>Nõukogude__Liit<s n="np"/></r></p></e>
-    <e><p><l>Neuvosto-Venäjä<s n="np"/></l><r>Nõukogude__Venemaa<s n="np"/></r></p></e>
+    <e><p><l>Neuvostoliitto<s n="np"/></l><r>Nõukogude<b/>Liit<s n="np"/></r></p></e>
+    <e><p><l>Neuvosto-Venäjä<s n="np"/></l><r>Nõukogude<b/>Venemaa<s n="np"/></r></p></e>
     <e><p><l>Niili<s n="np"/></l><r>Niilus<s n="np"/></r></p></e>
     <e><p><l>Nikea<s n="np"/></l><r>Nikaia<s n="np"/></r></p></e>
     <e><p><l>Nizza<s n="np"/></l><r>Iznik<s n="np"/></r></p></e>
     <e><p><l>Nooa<s n="np"/></l><r>Noa<s n="np"/></r></p></e>
-    <e><p><l>Norjanmeri<s n="np"/></l><r>Norra__meri<s n="np"/></r></p></e>
+    <e><p><l>Norjanmeri<s n="np"/></l><r>Norra<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Norja<s n="np"/></l><r>Norra<s n="np"/></r></p></e>
     <e><p><l>Normandia<s n="np"/></l><r>Normandia<s n="np"/></r></p></e>
     <e><p><l>Nürnberg<s n="np"/></l><r>Nürnberg<s n="np"/></r></p></e>
@@ -10391,12 +10393,12 @@
     <e><p><l>Olympos<s n="np"/></l><r>Olümpos<s n="np"/></r></p></e>
     <e><p><l>Oseania<s n="np"/></l><r>Okeaania<s n="np"/></r></p></e>
     <e><p><l>Otava<s n="np"/></l><r>Sõel<s n="np"/></r></p></e>
-    <e><p><l>Otava<s n="np"/></l><r>Suur__Vanker<s n="np"/></r></p></e>
+    <e><p><l>Otava<s n="np"/></l><r>Suur<b/>Vanker<s n="np"/></r></p></e>
     <e><p><l>Ovidius<s n="np"/></l><r>Ovidius<s n="np"/></r></p></e>
     <e><p><l>Padova<s n="np"/></l><r>Padova<s n="np"/></r></p></e>
     <e><p><l>Palestiina<s n="np"/></l><r>Palestiina<s n="np"/></r></p></e>
     <e><p><l>Panamá<s n="np"/></l><r>Panamá<s n="np"/></r></p></e>
-    <e><p><l>Papua-Uusi-Guinea<s n="np"/></l><r>Paapua__Uus-Guinea<s n="np"/></r></p></e>
+    <e><p><l>Papua-Uusi-Guinea<s n="np"/></l><r>Paapua<b/>Uus-Guinea<s n="np"/></r></p></e>
     <e><p><l>Parnassos<s n="np"/></l><r>Parnassós<s n="np"/></r></p></e>
     <e><p><l>Pegasos<s n="np"/></l><r>Pegasus<s n="np"/></r></p></e>
     <e><p><l>Peking<s n="np"/></l><r>Peking<s n="np"/></r></p></e>
@@ -10404,7 +10406,7 @@
     <e><p><l>Peloponnesos<s n="np"/></l><r>Peloponnesos<s n="np"/></r></p></e>
     <e><p><l>Persefone<s n="np"/></l><r>Persephone<s n="np"/></r></p></e>
     <e><p><l>Piilaakso<s n="np"/></l><r>Räniorg<s n="np"/></r></p></e>
-    <e><p><l>Pikku-Otava<s n="np"/></l><r>Väike__Vanker<s n="np"/></r></p></e>
+    <e><p><l>Pikku-Otava<s n="np"/></l><r>Väike<b/>Vanker<s n="np"/></r></p></e>
     <e><p><l>Plutarkhos<s n="np"/></l><r>Plutarchos<s n="np"/></r></p></e>
     <e><p><l>Pohjanmeri<s n="np"/></l><r>Põhjameri<s n="np"/></r></p></e>
     <e><p><l>Pohjois-Afrikka<s n="np"/></l><r>Põhja-Aafrika<s n="np"/></r></p></e>
@@ -10414,14 +10416,14 @@
     <e><p><l>Pohjois-Irlanti<s n="np"/></l><r>Põhja-Iirimaa<s n="np"/></r></p></e>
     <e><p><l>Pohjois-Korea<s n="np"/></l><r>Põhja-Korea<s n="np"/></r></p></e>
     <e><p><l>Pohjoisnapa<s n="np"/></l><r>põhjapoolus<s n="np"/></r></p></e>
-    <e><p><l>Pohjolan__Risti<s n="np"/></l><r>Põhjarist<s n="np"/></r></p></e>
+    <e><p><l>Pohjolan<b/>Risti<s n="np"/></l><r>Põhjarist<s n="np"/></r></p></e>
     <e><p><l>Portugali<s n="np"/></l><r>Portugal<s n="np"/></r></p></e>
     <e><p><l>Praha<s n="np"/></l><r>Praha<s n="np"/></r></p></e>
-    <e><p><l>Preeria<s n="np"/></l><r>Suur__tasandik<s n="np"/></r></p></e>
+    <e><p><l>Preeria<s n="np"/></l><r>Suur<b/>tasandik<s n="np"/></r></p></e>
     <e><p><l>Preussi<s n="np"/></l><r>Preisimaa<s n="np"/></r></p></e>
     <e><p><l>Prokofjev<s n="np"/></l><r>Prokofjev<s n="np"/></r></p></e>
     <e><p><l>Ptolemaios<s n="np"/></l><r>Ptolemaios<s n="np"/></r></p></e>
-    <e><p><l>Punainenmeri<s n="np"/></l><r>Punane__meri<s n="np"/></r></p></e>
+    <e><p><l>Punainenmeri<s n="np"/></l><r>Punane<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Puola<s n="np"/></l><r>Poola<s n="np"/></r></p></e>
     <e><p><l>Pyreneet<s n="np"/></l><r>Püreneed<s n="np"/></r></p></e>
     <e><p><l>Québec<s n="np"/></l><r>Québec<s n="np"/></r></p></e>
@@ -10429,16 +10431,16 @@
     <e><p><l>Ranska<s n="np"/></l><r>Prantsusmaa<s n="np"/></r></p></e>
     <e><p><l>Reininmaa<s n="np"/></l><r>Reinimaa<s n="np"/></r></p></e>
     <e><p><l>Rein<s n="np"/></l><r>Rein<s n="np"/></r></p></e>
-    <e><p><l>Riianlahti<s n="np"/></l><r>Liivi__laht<s n="np"/></r></p></e>
+    <e><p><l>Riianlahti<s n="np"/></l><r>Liivi<b/>laht<s n="np"/></r></p></e>
     <e><p><l>Riika<s n="np"/></l><r>Riia<s n="np"/></r></p></e>
     <e><p><l>Rooma<s n="np"/></l><r>Rooma<s n="np"/></r></p></e>
     <e><p><l>Ruanda<s n="np"/></l><r>Ruanda<s n="np"/></r></p></e>
     <e><p><l>Saksa<s n="np"/></l><r>Saksamaa<s n="np"/></r></p></e>
-    <e><p><l>Salomonsaaret<s n="np"/></l><r>Saalomoni__saared<s n="np"/></r></p></e>
+    <e><p><l>Salomonsaaret<s n="np"/></l><r>Saalomoni<b/>saared<s n="np"/></r></p></e>
     <e><p><l>Salomo<s n="np"/></l><r>Saalomon<s n="np"/></r></p></e>
     <e><p><l>Sambia<s n="np"/></l><r>Sambia<s n="np"/></r></p></e>
     <e><p><l>Sansibar<s n="np"/></l><r>Sansibar<s n="np"/></r></p></e>
-    <e><p><l>Saudi-Arabia<s n="np"/></l><r>Saudi__Araabia<s n="np"/></r></p></e>
+    <e><p><l>Saudi-Arabia<s n="np"/></l><r>Saudi<b/>Araabia<s n="np"/></r></p></e>
     <e><p><l>Seurasaaret<s n="np"/></l><r>Seltsisaared<s n="np"/></r></p></e>
     <e><p><l>Siinai<s n="np"/></l><r>Siinai<s n="np"/></r></p></e>
     <e><p><l>Siion<s n="np"/></l><r>Siion<s n="np"/></r></p></e>
@@ -10453,7 +10455,7 @@
     <e><p><l>Sofokles<s n="np"/></l><r>Sophokles<s n="np"/></r></p></e>
     <e><p><l>Sokrates<s n="np"/></l><r>Sokrates<s n="np"/></r></p></e>
     <e><p><l>Solženitsyn<s n="np"/></l><r>Solženitsõn<s n="np"/></r></p></e>
-    <e><p><l>Suomenlahti<s n="np"/></l><r>Soome__laht<s n="np"/></r></p></e>
+    <e><p><l>Suomenlahti<s n="np"/></l><r>Soome<b/>laht<s n="np"/></r></p></e>
     <e><p><l>Suomi<s n="np"/></l><r>Soome<s n="np"/></r></p></e>
     <e><p><l>Sveitsi<s n="np"/></l><r>Šveits<s n="np"/></r></p></e>
     <e><p><l>Syyria<s n="np"/></l><r>Süüria<s n="np"/></r></p></e>
@@ -10482,10 +10484,10 @@
     <e><p><l>Tšeljabinsk<s n="np"/></l><r>Tšeljabinsk<s n="np"/></r></p></e>
     <e><p><l>Tsetsenia<s n="np"/></l><r>Tšetšeenia<s n="np"/></r></p></e>
     <e><p><l>Tšingis-kaani<s n="np"/></l><r>Tšingis-khaan<s n="np"/></r></p></e>
-    <e><p><l>Tšuktšien__niemimaa<s n="np"/></l><r>Tšukotka<s n="np"/></r></p></e>
+    <e><p><l>Tšuktšien<b/>niemimaa<s n="np"/></l><r>Tšukotka<s n="np"/></r></p></e>
     <e><p><l>Tulimaa<s n="np"/></l><r>Tulemaa<s n="np"/></r></p></e>
     <e><p><l>Turkki<s n="np"/></l><r>Türgi<s n="np"/></r></p></e>
-    <e><p><l>Tyynimeri<s n="np"/></l><r>Vaikne__ookean<s n="np"/></r></p></e>
+    <e><p><l>Tyynimeri<s n="np"/></l><r>Vaikne<b/>ookean<s n="np"/></r></p></e>
     <e><p><l>Ukraina<s n="np"/></l><r>Ukraina<s n="np"/></r></p></e>
     <e><p><l>Unkari<s n="np"/></l><r>Ungari<s n="np"/></r></p></e>
     <e><p><l>Uusi-Britannia<s n="np"/></l><r>Uus-Britannia<s n="np"/></r></p></e>
@@ -10503,14 +10505,14 @@
     <e><p><l>Vatikaanivaltio<s n="np"/></l><r>Vatikan<s n="np"/></r></p></e>
     <e><p><l>Venäjä<s n="np"/></l><r>Venemaa<s n="np"/></r></p></e>
     <e><p><l>Vergilius<s n="np"/></l><r>Vergilius<s n="np"/></r></p></e>
-    <e><p><l>Victorianmaa<s n="np"/></l><r>Victoria__maa<s n="np"/></r></p></e>
-    <e><p><l>Vienanmeri<s n="np"/></l><r>Valge__meri<s n="np"/></r></p></e>
+    <e><p><l>Victorianmaa<s n="np"/></l><r>Victoria<b/>maa<s n="np"/></r></p></e>
+    <e><p><l>Vienanmeri<s n="np"/></l><r>Valge<b/>meri<s n="np"/></r></p></e>
     <e><p><l>Vietnam<s n="np"/></l><r>Vietnam<s n="np"/></r></p></e>
     <e><p><l>Vilna<s n="np"/></l><r>Vilnius<s n="np"/></r></p></e>
     <e><p><l>Viro<s n="np"/></l><r>Eesti<s n="np"/></r></p></e>
     <e><p><l>Wien<s n="np"/></l><r>Viin<s n="np"/></r></p></e>
-    <e><p><l>Yhdistyneet__Kansakunnat<s n="np"/></l><r>Ühinenud__Rahvaste__Organisatsioon<s n="np"/></r></p></e>
-    <e><p><l>Yrjö__I<s n="np"/></l><r>George__I<s n="np"/></r></p></e>
+    <e><p><l>Yhdistyneet<b/>Kansakunnat<s n="np"/></l><r>Ühinenud<b/>Rahvaste<b/>Organisatsioon<s n="np"/></r></p></e>
+    <e><p><l>Yrjö<b/>I<s n="np"/></l><r>George<b/>I<s n="np"/></r></p></e>
     <e><p><l>Zürich<s n="np"/></l><r>Zürich<s n="np"/></r></p></e>
   
     <!-- SECTION: Adjectives -->
@@ -15257,11 +15259,11 @@
   
     <!-- SECTION: eksitusverbid -->
 
-    <e><p><l>aidata<s n="vblex"/></l><r>ajaga__piirama<s n="vblex"/></r></p></e>
+    <e><p><l>aidata<s n="vblex"/></l><r>ajaga<b/>piirama<s n="vblex"/></r></p></e>
     <e><p><l>auttaa<s n="vblex"/></l><r>aitama<s n="vblex"/></r></p></e>
     <e><p><l>avustaa<s n="vblex"/></l><r>aitama<s n="vblex"/></r></p></e>
     <e><p><l>arvostaa<s n="vblex"/></l><r>hindama<s n="vblex"/></r></p></e>
-    <e><p><l>arvostaa<s n="vblex"/></l><r>lugu__pidama<s n="vblex"/></r></p></e>
+    <e><p><l>arvostaa<s n="vblex"/></l><r>lugu<b/>pidama<s n="vblex"/></r></p></e>
     <e><p><l>arvostella<s n="vblex"/></l><r>arvustama<s n="vblex"/></r></p></e>
     <e><p><l>kritisoida<s n="vblex"/></l><r>arvustama<s n="vblex"/></r></p></e>
     <e><p><l>perustaa<s n="vblex"/></l><r>rahvastama<s n="vblex"/></r></p></e>
@@ -15271,13 +15273,13 @@
     <e><p><l>koristaa<s n="vblex"/></l><r>ehtima<s n="vblex"/></r></p></e>
     <e><p><l>jäätää<s n="vblex"/></l><r>külmutada<s n="vblex"/></r></p></e>
     <e><p><l>kallistaa<s n="vblex"/></l><r>kallutama<s n="vblex"/></r></p></e>
-    <e><p><l>kallistaa<s n="vblex"/></l><r>hinda__tõstma<s n="vblex"/></r></p></e>
+    <e><p><l>kallistaa<s n="vblex"/></l><r>hinda<b/>tõstma<s n="vblex"/></r></p></e>
     <e><p><l>syleillä<s n="vblex"/></l><r>kallistama<s n="vblex"/></r></p></e>
     <e><p><l>halata<s n="vblex"/></l><r>kallistama<s n="vblex"/></r></p></e>
     <e><p><l>karistaa<s n="vblex"/></l><r>puistama<s n="vblex"/></r></p></e>
     <e><p><l>koskea<s n="vblex"/></l><r>katsuma<s n="vblex"/></r></p></e>
     <e><p><l>katua<s n="vblex"/></l><r>kahetsema<s n="vblex"/></r></p></e>
-    <e><p><l>kehittää<s n="vblex"/></l><r>üles__harutama<s n="vblex"/></r></p></e>
+    <e><p><l>kehittää<s n="vblex"/></l><r>üles<b/>harutama<s n="vblex"/></r></p></e>
     <e><p><l>kehittää<s n="vblex"/></l><r>arendama<s n="vblex"/></r></p></e>
     <e><p><l>kohauttaa<s n="vblex"/></l><r>kehitama<s n="vblex"/></r></p></e>
     <e><p><l>keritä<s n="vblex"/></l><r>jõudma<s n="vblex"/></r></p></e>
@@ -15290,7 +15292,7 @@
     <e><p><l>koota<s n="vblex"/></l><r>korjama<s n="vblex"/></r></p></e>
     <e><p><l>kerätä<s n="vblex"/></l><r>korjama<s n="vblex"/></r></p></e>
     <e><p><l>kostaa<s n="vblex"/></l><r>tasuma<s n="vblex"/></r></p></e>
-    <e><p><l>kostaa<s n="vblex"/></l><r>kätte__maksma<s n="vblex"/></r></p></e>
+    <e><p><l>kostaa<s n="vblex"/></l><r>kätte<b/>maksma<s n="vblex"/></r></p></e>
     <e><p><l>vastata<s n="vblex"/></l><r>kostma<s n="vblex"/></r></p></e>
     <e><p><l>kuulua<s n="vblex"/></l><r>kostma<s n="vblex"/></r></p></e>
     <e><p><l>kuristaa<s n="vblex"/></l><r>pigistama<s n="vblex"/></r></p></e>
@@ -15314,8 +15316,8 @@
     <e><p><l>laittaa<s n="vblex"/></l><r>valmistama<s n="vblex"/></r></p></e>
     <e><p><l>moittia<s n="vblex"/></l><r>laitma<s n="vblex"/></r></p></e>
     <e><p><l>soimata<s n="vblex"/></l><r>laitma<s n="vblex"/></r></p></e>
-    <e><p><l>lamata<s n="vblex"/></l><r>kokku__suruma<s n="vblex"/></r></p></e>
-    <e><p><l>lamata<s n="vblex"/></l><r>maha__suruma<s n="vblex"/></r></p></e>
+    <e><p><l>lamata<s n="vblex"/></l><r>kokku<b/>suruma<s n="vblex"/></r></p></e>
+    <e><p><l>lamata<s n="vblex"/></l><r>maha<b/>suruma<s n="vblex"/></r></p></e>
     <e><p><l>lamata<s n="vblex"/></l><r>halvama<s n="vblex"/></r></p></e>
     <e><p><l>maata<s n="vblex"/></l><r>lamama<s n="vblex"/></r></p></e>
     <e><p><l>loikoa<s n="vblex"/></l><r>lamama<s n="vblex"/></r></p></e>
@@ -15342,14 +15344,14 @@
     <e><p><l>pudistaa<s n="vblex"/></l><r>raputama<s n="vblex"/></r></p></e>
     <e><p><l>sopertaa<s n="vblex"/></l><r>pudistama<s n="vblex"/></r></p></e>
     <e><p><l>murentaa<s n="vblex"/></l><r>pudistama<s n="vblex"/></r></p></e>
-    <e><p><l>pudottaa<s n="vblex"/></l><r>maha__pillama<s n="vblex"/></r></p></e>
+    <e><p><l>pudottaa<s n="vblex"/></l><r>maha<b/>pillama<s n="vblex"/></r></p></e>
     <e><p><l>koskettaa<s n="vblex"/></l><r>puudutama<s n="vblex"/></r></p></e>
     <e><p><l>puhua<s n="vblex"/></l><r>kõnelema<s n="vblex"/></r></p></e>
     <e><p><l>puhaltaa<s n="vblex"/></l><r>puhuma<s n="vblex"/></r></p></e>
     <e><p><l>pukea<s n="vblex"/></l><r>riietama<s n="vblex"/></r></p></e>
     <e><p><l>tunkeutua<s n="vblex"/></l><r>pugema<s n="vblex"/></r></p></e>
     <e><p><l>liehitellä<s n="vblex"/></l><r>pugema<s n="vblex"/></r></p></e>
-    <e><p><l>riisua<s n="vblex"/></l><r>lahti__riietama<s n="vblex"/></r></p></e>
+    <e><p><l>riisua<s n="vblex"/></l><r>lahti<b/>riietama<s n="vblex"/></r></p></e>
     <e><p><l>haravoida<s n="vblex"/></l><r>riisuma<s n="vblex"/></r></p></e>
     <e><p><l>kuoria<s n="vblex"/></l><r>riisuma<s n="vblex"/></r></p></e>
     <e><p><l>puhdistaa<s n="vblex"/></l><r>rookima<s n="vblex"/></r></p></e>
@@ -15359,7 +15361,7 @@
     <e><p><l>salvata<s n="vblex"/></l><r>tõkestama<s n="vblex"/></r></p></e>
     <e><p><l>pistää<s n="vblex"/></l><r>salvama<s n="vblex"/></r></p></e>
     <e><p><l>sammua<s n="vblex"/></l><r>kustua<s n="vblex"/></r></p></e>
-    <e><p><l>sammua<s n="vblex"/></l><r>ära__väsima<s n="vblex"/></r></p></e>
+    <e><p><l>sammua<s n="vblex"/></l><r>ära<b/>väsima<s n="vblex"/></r></p></e>
     <e><p><l>astua<s n="vblex"/></l><r>sammuma<s n="vblex"/></r></p></e>
     <e><p><l>astella<s n="vblex"/></l><r>sammuma<s n="vblex"/></r></p></e>
     <e><p><l>sattua<s n="vblex"/></l><r>juhtuma<s n="vblex"/></r></p></e>
@@ -15399,7 +15401,7 @@
     <e><p><l>uinua<s n="vblex"/></l><r>tukkuma<s n="vblex"/></r></p></e>
     <e><p><l>uinua<s n="vblex"/></l><r>suikuma<s n="vblex"/></r></p></e>
     <e><p><l>nukahtaa<s n="vblex"/></l><r>uinuma<s n="vblex"/></r></p></e>
-    <e><p><l>vaipua__uneen<s n="vblex"/></l><r>uinuma<s n="vblex"/></r></p></e>
+    <e><p><l>vaipua<b/>uneen<s n="vblex"/></l><r>uinuma<s n="vblex"/></r></p></e>
     <e><p><l>usuttaa<s n="vblex"/></l><r>ässitama<s n="vblex"/></r></p></e>
     <e><p><l>haastatella<s n="vblex"/></l><r>usutama<s n="vblex"/></r></p></e>
     <e><p><l>uudista<s n="vblex"/></l><r>uuendama<s n="vblex"/></r></p></e>
@@ -15407,14 +15409,14 @@
     <e><p><l>udella<s n="vblex"/></l><r>uudistama<s n="vblex"/></r></p></e>
     <e><p><l>vaalia<s n="vblex"/></l><r>hoidma<s n="vblex"/></r></p></e>
     <e><p><l>vaalia<s n="vblex"/></l><r>austama<s n="vblex"/></r></p></e>
-    <e><p><l>vaalia<s n="vblex"/></l><r>kalliks__pidama<s n="vblex"/></r></p></e>
+    <e><p><l>vaalia<s n="vblex"/></l><r>kalliks<b/>pidama<s n="vblex"/></r></p></e>
     <e><p><l>kaulata<s n="vblex"/></l><r>vaalima<s n="vblex"/></r></p></e>
-    <e><p><l>valuttaa<s n="vblex"/></l><r>voolata__laskma<s n="vblex"/></r></p></e>
+    <e><p><l>valuttaa<s n="vblex"/></l><r>voolata<b/>laskma<s n="vblex"/></r></p></e>
     <e><p><l>valuttaa<s n="vblex"/></l><r>nõrutama<s n="vblex"/></r></p></e>
     <e><p><l>pakottaa<s n="vblex"/></l><r>valutama<s n="vblex"/></r></p></e>
     <e><p><l>särkeä<s n="vblex"/></l><r>valutama<s n="vblex"/></r></p></e>
     <e><p><l>varoa<s n="vblex"/></l><r>hoiduma<s n="vblex"/></r></p></e>
-    <e><p><l>varoa<s n="vblex"/></l><r>ettevaatlik__olema<s n="vblex"/></r></p></e>
+    <e><p><l>varoa<s n="vblex"/></l><r>ettevaatlik<b/>olema<s n="vblex"/></r></p></e>
     <e><p><l>varata<s n="vblex"/></l><r>varuma<s n="vblex"/></r></p></e>
     <e><p><l>viheltää<s n="vblex"/></l><r>vilistama<s n="vblex"/></r></p></e>
     <e><p><l>vihtoa<s n="vblex"/></l><r>vihtlema<s n="vblex"/></r></p></e>
@@ -15427,7 +15429,7 @@
   
     <!-- SECTION: eksitussõnad -->
 
-    <e><p><l>aasat<s n="n"/></l><r>muistsed__põhjamaade__jumalad<s n="n"/></r></p></e>
+    <e><p><l>aasat<s n="n"/></l><r>muistsed<b/>põhjamaade<b/>jumalad<s n="n"/></r></p></e>
     <e><p><l>niitty<s n="n"/></l><r>aas<s n="n"/></r></p></e>
     <e><p><l>adressi<s n="n"/></l><r>auaadress<s n="n"/></r></p></e>
     <e><p><l>osoite<s n="n"/></l><r>aadress<s n="n"/></r></p></e>
@@ -15435,7 +15437,7 @@
     <e><p><l>uuni<s n="n"/></l><r>ahi<s n="n"/></r></p></e>
     <e><p><l>aita<s n="n"/></l><r>aed<s n="n"/></r></p></e>
     <e><p><l>aitta<s n="n"/></l><r>ait<s n="n"/></r></p></e>
-    <e><p><l>ale<s n="n"/></l><r>odav__väljamüük<s n="n"/></r></p></e>
+    <e><p><l>ale<s n="n"/></l><r>odav<b/>väljamüük<s n="n"/></r></p></e>
     <e><p><l>kaski<s n="n"/></l><r>ale<s n="n"/></r></p></e>
     <e><p><l>amme<s n="n"/></l><r>vann<s n="n"/></r></p></e>
     <e><p><l>imettäjä<s n="n"/></l><r>amm<s n="n"/></r></p></e>
@@ -15449,12 +15451,12 @@
     <e><p><l>luku<s n="n"/></l><r>arv<s n="n"/></r></p></e>
     <e><p><l>arvokas<s n="adj"/></l><r>väärtuslik<s n="adj"/></r></p></e>
     <e><p><l>sija<s n="n"/></l><r>ase<s n="n"/></r></p></e>
-    <e><p><l>aseaine<s n="n"/></l><r>relva__lähteaine<s n="n"/></r></p></e>
+    <e><p><l>aseaine<s n="n"/></l><r>relva<b/>lähteaine<s n="n"/></r></p></e>
     <e><p><l>korvike<s n="n"/></l><r>aseaine<s n="n"/></r></p></e>
     <e><p><l>asentaja<s n="n"/></l><r>montöör<s n="n"/></r></p></e>
     <e><p><l>sijanen<s n="n"/></l><r>asendaja<s n="n"/></r></p></e>
     <e><p><l>astiat<s n="n"/></l><r>nõud<s n="n"/></r></p></e>
-    <e><p><l>iso__puuastia<s n="n"/></l><r>astja<s n="n"/></r></p></e>
+    <e><p><l>iso<b/>puuastia<s n="n"/></l><r>astja<s n="n"/></r></p></e>
     <e><p><l>avio<s n="n"/></l><r>abielu<s n="n"/></r></p></e>
     <e><p><l>lento-<s n="n"/></l><r>avio-<s n="n"/></r></p></e>
     <e><p><l>emakko<s n="n"/></l><r>emis<s n="n"/></r></p></e>
@@ -15466,7 +15468,7 @@
     <e><p><l>humalainen<s n="adj"/></l><r>ebakaine<s n="adj"/></r></p></e>
     <e><p><l>erilainen<s n="adj"/></l><r>erisugune<s n="adj"/></r></p></e>
     <e><p><l>ampiainen<s n="n"/></l><r>herilane<s n="n"/></r></p></e>
-    <e><p><l>erillinen<s n="adj"/></l><r>eraldi__asetsev<s n="adj"/></r></p></e>
+    <e><p><l>erillinen<s n="adj"/></l><r>eraldi<b/>asetsev<s n="adj"/></r></p></e>
     <e><p><l>ero<s n="n"/></l><r>lahkuminek<s n="n"/></r></p></e>
     <e><p><l>reservi-<s n="n"/></l><r>eru-<s n="n"/></r></p></e>
     <e><p><l>erä<s n="n"/></l><r>portsjon<s n="n"/></r></p></e>
@@ -15474,7 +15476,7 @@
     <e><p><l>erämaa<s n="n"/></l><r>kõrb<s n="n"/></r></p></e>
     <e><p><l>yksityisalue<s n="n"/></l><r>eramaa<s n="n"/></r></p></e>
     <e><p><l>esine<s n="n"/></l><r>ese<s n="n"/></r></p></e>
-    <e><p><l>edessa__oleva<s n="n"/></l><r>esine<s n="n"/></r></p></e>
+    <e><p><l>edessa<b/>oleva<s n="n"/></l><r>esine<s n="n"/></r></p></e>
     <e><p><l>etelä<s n="n"/></l><r>lõuna<s n="n"/></r></p></e>
     <e><p><l>etevä<s n="adj"/></l><r>suurepärane<s n="adj"/></r></p></e>
     <e><p><l>turhamainen<s n="adj"/></l><r>edev<s n="adj"/></r></p></e>
@@ -15506,7 +15508,7 @@
     <e><p><l>häät<s n="n"/></l><r>pulm<s n="n"/></r></p></e>
     <e><p><l>iho<s n="n"/></l><r>nahk<s n="n"/></r></p></e>
     <e><p><l>ruumis<s n="n"/></l><r>ihu<s n="n"/></r></p></e>
-    <e><p><l>ihopesu<s n="n"/></l><r>naha__pesemine<s n="n"/></r></p></e>
+    <e><p><l>ihopesu<s n="n"/></l><r>naha<b/>pesemine<s n="n"/></r></p></e>
     <e><p><l>alusvaatteet<s n="n"/></l><r>ihupesu<s n="n"/></r></p></e>
     <e><p><l>ilmatiede<s n="n"/></l><r>meteoroloogia<s n="n"/></r></p></e>
     <e><p><l>säätiedotus<s n="n"/></l><r>ilmateade<s n="n"/></r></p></e>
@@ -15525,7 +15527,7 @@
     <e><p><l>lörpötys<s n="n"/></l><r>jama<s n="n"/></r></p></e>
     <e><p><l>julkea<s n="adj"/></l><r>häbematu<s n="adj"/></r></p></e>
     <e><p><l>rohkea<s n="adj"/></l><r>julge<s n="adj"/></r></p></e>
-    <e><p><l>julkkis<s n="n"/></l><r>avaliku__elu__tegelane<s n="n"/></r></p></e>
+    <e><p><l>julkkis<s n="n"/></l><r>avaliku<b/>elu<b/>tegelane<s n="n"/></r></p></e>
     <e><p><l>kakkara<s n="n"/></l><r>julk<s n="n"/></r></p></e>
     <e><p><l>juoni<s n="n"/></l><r>intriig<s n="n"/></r></p></e>
     <e><p><l>viiva<s n="n"/></l><r>joon<s n="n"/></r></p></e>
@@ -15588,13 +15590,13 @@
     <e><p><l>karhu<s n="n"/></l><r>karu<s n="n"/></r></p></e>
     <e><p><l>karvas<s n="adj"/></l><r>mõru<s n="adj"/></r></p></e>
     <e><p><l>karva<s n="n"/></l><r>karv<s n="n"/></r></p></e>
-    <e><p><l>kas__niin<s n="adv"/></l><r>vaat__nõnda<s n="adv"/></r></p></e>
-    <e><p><l>näinkö<s n="adv"/></l><r>kas__nii<s n="adv"/></r></p></e>
+    <e><p><l>kas<b/>niin<s n="adv"/></l><r>vaat<b/>nõnda<s n="adv"/></r></p></e>
+    <e><p><l>näinkö<s n="adv"/></l><r>kas<b/>nii<s n="adv"/></r></p></e>
     <e><p><l>kaske<s n="n"/></l><r>ale<s n="n"/></r></p></e>
     <e><p><l>koivu<s n="n"/></l><r>kask<s n="n"/></r></p></e>
     <e><p><l>kassi<s n="n"/></l><r>kandekott<s n="n"/></r></p></e>
     <e><p><l>kastike<s n="n"/></l><r>soust<s n="n"/></r></p></e>
-    <e><p><l>pieni__laatikko<s n="n"/></l><r>kastike<s n="n"/></r></p></e>
+    <e><p><l>pieni<b/>laatikko<s n="n"/></l><r>kastike<s n="n"/></r></p></e>
     <e><p><l>kasukka<s n="n"/></l><r>missarüü<s n="n"/></r></p></e>
     <e><p><l>turkki<s n="n"/></l><r>kasukas<s n="n"/></r></p></e>
     <e><p><l>veso<s n="n"/></l><r>kasv<s n="n"/></r></p></e>
@@ -15650,7 +15652,7 @@
     <e><p><l>kolea<s n="n"/></l><r>vilu<s n="n"/></r></p></e>
     <e><p><l>kauhea<s n="n"/></l><r>kole<s n="n"/></r></p></e>
     <e><p><l>kolli<s n="n"/></l><r>kõuts<s n="n"/></r></p></e>
-    <e><p><l>kolu<s n="n"/></l><r>kivine__paik<s n="n"/></r></p></e>
+    <e><p><l>kolu<s n="n"/></l><r>kivine<b/>paik<s n="n"/></r></p></e>
     <e><p><l>kama<s n="n"/></l><r>kolu<s n="n"/></r></p></e>
     <e><p><l>konepistooli<s n="n"/></l><r>kone<s n="n"/></r></p></e>
     <e><p><l>koni<s n="n"/></l><r>hobusekronu<s n="n"/></r></p></e>
@@ -15661,7 +15663,7 @@
     <e><p><l>luu<s n="n"/></l><r>kont<s n="n"/></r></p></e>
     <e><p><l>korppi<s n="n"/></l><r>kaaren<s n="n"/></r></p></e>
     <e><p><l>rahkapiirakka<s n="n"/></l><r>korp<s n="n"/></r></p></e>
-    <e><p><l>pieni__kori<s n="n"/></l><r>korvike<s n="n"/></r></p></e>
+    <e><p><l>pieni<b/>kori<s n="n"/></l><r>korvike<s n="n"/></r></p></e>
     <e><p><l>kukistaja<s n="n"/></l><r>kukutaja<s n="n"/></r></p></e>
     <e><p><l>nielaisija<s n="n"/></l><r>kugistaja<s n="n"/></r></p></e>
     <e><p><l>kulli<s n="n"/></l><r>türa<s n="n"/></r></p></e>
@@ -15688,14 +15690,14 @@
     <e><p><l>hattu<s n="n"/></l><r>kübar<s n="n"/></r></p></e>
     <e><p><l>kyynel<s n="n"/></l><r>pisar<s n="n"/></r></p></e>
     <e><p><l>kynttilä<s n="n"/></l><r>küünal<s n="n"/></r></p></e>
-    <e><p><l>kärki<s n="n"/></l><r>terav__ots<s n="n"/></r></p></e>
+    <e><p><l>kärki<s n="n"/></l><r>terav<b/>ots<s n="n"/></r></p></e>
     <e><p><l>kenno<s n="n"/></l><r>kärg<s n="n"/></r></p></e>
     <e><p><l>käry<s n="n"/></l><r>kõrbehais<s n="n"/></r></p></e>
     <e><p><l>kärryt<s n="n"/></l><r>käru<s n="n"/></r></p></e>
-    <e><p><l>käteismaksu<s n="n"/></l><r>maks__sularahaga<s n="n"/></r></p></e>
+    <e><p><l>käteismaksu<s n="n"/></l><r>maks<b/>sularahaga<s n="n"/></r></p></e>
     <e><p><l>kääry<s n="n"/></l><r>pakk<s n="n"/></r></p></e>
     <e><p><l>viipale<s n="n"/></l><r>käär<s n="n"/></r></p></e>
-    <e><p><l>körtti<s n="n"/></l><r>mantli__hõlm<s n="n"/></r></p></e>
+    <e><p><l>körtti<s n="n"/></l><r>mantli<b/>hõlm<s n="n"/></r></p></e>
     <e><p><l>velli<s n="n"/></l><r>kört<s n="n"/></r></p></e>
     <e><p><l>laari<s n="n"/></l><r>kast<s n="n"/></r></p></e>
     <e><p><l>panos<s n="n"/></l><r>laar<s n="n"/></r></p></e>
@@ -15738,7 +15740,7 @@
     <e><p><l>lehteri<s n="n"/></l><r>rõdu<s n="n"/></r></p></e>
     <e><p><l>leili<s n="n"/></l><r>lähker<s n="n"/></r></p></e>
     <e><p><l>löyly<s n="n"/></l><r>leil<s n="n"/></r></p></e>
-    <e><p><l>lelli<s n="n"/></l><r>hellitatud__laps<s n="n"/></r></p></e>
+    <e><p><l>lelli<s n="n"/></l><r>hellitatud<b/>laps<s n="n"/></r></p></e>
     <e><p><l>setä<s n="n"/></l><r>lell<s n="n"/></r></p></e>
     <e><p><l>lellipoika<s n="n"/></l><r>memmepoeg<s n="n"/></r></p></e>
     <e><p><l>serkku<s n="n"/></l><r>lellepoeg<s n="n"/></r></p></e>
@@ -15752,7 +15754,7 @@
     <e><p><l>jäsen<s n="n"/></l><r>liige<s n="n"/></r></p></e>
     <e><p><l>liiteri<s n="n"/></l><r>kuur<s n="n"/></r></p></e>
     <e><p><l>johtaja<s n="n"/></l><r>liider<s n="n"/></r></p></e>
-    <e><p><l>eräs__laatikkomainen<s n="n"/></l><r>liiv<s n="n"/></r></p></e>
+    <e><p><l>eräs<b/>laatikkomainen<s n="n"/></l><r>liiv<s n="n"/></r></p></e>
     <e><p><l>Linnunrata<s n="n"/></l><r>Linnutee<s n="n"/></r></p></e>
     <e><p><l>lipeä<s n="n"/></l><r>leelis<s n="n"/></r></p></e>
     <e><p><l>liukas<s n="adj"/></l><r>libe<s n="adj"/></r></p></e>
@@ -15781,8 +15783,8 @@
     <e><p><l>äitelä<s n="n"/></l><r>lääge<s n="n"/></r></p></e>
     <e><p><l>maali<s n="n"/></l><r>värv<s n="n"/></r></p></e>
     <e><p><l>maalaus<s n="n"/></l><r>maal<s n="n"/></r></p></e>
-    <e><p><l>maavara<s n="n"/></l><r>kõrgus__maast<s n="n"/></r></p></e>
-    <e><p><l>maan__rikkaudet<s n="n"/></l><r>maavara<s n="n"/></r></p></e>
+    <e><p><l>maavara<s n="n"/></l><r>kõrgus<b/>maast<s n="n"/></r></p></e>
+    <e><p><l>maan<b/>rikkaudet<s n="n"/></l><r>maavara<s n="n"/></r></p></e>
     <e><p><l>maha<s n="n"/></l><r>kõht<s n="n"/></r></p></e>
     <e><p><l>mahaan<s n="adv"/></l><r>maha<s n="adv"/></r></p></e>
     <e><p><l>mahla<s n="n"/></l><r>puumahl<s n="n"/></r></p></e>
@@ -15811,7 +15813,7 @@
     <e><p><l>multa<s n="n"/></l><r>muld<s n="n"/></r></p></e>
     <e><p><l>mukulakivi<s n="n"/></l><r>munakas<s n="n"/></r></p></e>
     <e><p><l>muru<s n="n"/></l><r>puru<s n="n"/></r></p></e>
-    <e><p><l>mustaus<s n="n"/></l><r>mustaks__tegemine<s n="n"/></r></p></e>
+    <e><p><l>mustaus<s n="n"/></l><r>mustaks<b/>tegemine<s n="n"/></r></p></e>
     <e><p><l>lika<s n="n"/></l><r>mustus<s n="n"/></r></p></e>
     <e><p><l>ammus<s n="n"/></l><r>mürsk<s n="n"/></r></p></e>
     <e><p><l>mäyrä<s n="n"/></l><r>mäger<s n="n"/></r></p></e>
@@ -15845,7 +15847,7 @@
     <e><p><l>osake<s n="n"/></l><r>osatäht<s n="n"/></r></p></e>
     <e><p><l>osannen<s n="n"/></l><r>osake<s n="n"/></r></p></e>
     <e><p><l>ota<s n="n"/></l><r>astel<s n="n"/></r></p></e>
-    <e><p><l>Iso__Otava<s n="n"/></l><r>Suur__Vanker<s n="n"/></r></p></e>
+    <e><p><l>Iso<b/>Otava<s n="n"/></l><r>Suur<b/>Vanker<s n="n"/></r></p></e>
     <e><p><l>loppu<s n="n"/></l><r>ots<s n="n"/></r></p></e>
     <e><p><l>paarit<s n="n"/></l><r>kanderaam<s n="n"/></r></p></e>
     <e><p><l>pahna<s n="n"/></l><r>sealaut<s n="n"/></r></p></e>
@@ -15876,7 +15878,7 @@
     <e><p><l>parrki<s n="n"/></l><r>puukoor<s n="n"/></r></p></e>
     <e><p><l>puisto<s n="n"/></l><r>park<s n="n"/></r></p></e>
     <e><p><l>parveke<s n="n"/></l><r>palkon<s n="n"/></r></p></e>
-    <e><p><l>pieni__lautta<s n="n"/></l><r>parveke<s n="n"/></r></p></e>
+    <e><p><l>pieni<b/>lautta<s n="n"/></l><r>parveke<s n="n"/></r></p></e>
     <e><p><l>tyyny<s n="n"/></l><r>padi<s n="n"/></r></p></e>
     <e><p><l>perämies<s n="n"/></l><r>tüürimes<s n="n"/></r></p></e>
     <e><p><l>pettu<s n="n"/></l><r>männikoor<s n="n"/></r></p></e>
@@ -15931,7 +15933,7 @@
     <e><p><l>puntari<s n="n"/></l><r>margapuu<s n="n"/></r></p></e>
     <e><p><l>nyytti<s n="n"/></l><r>pundar<s n="n"/></r></p></e>
     <e><p><l>rikka<s n="n"/></l><r>puru<s n="n"/></r></p></e>
-    <e><p><l>puru<s n="n"/></l><r>mälutav__toit<s n="n"/></r></p></e>
+    <e><p><l>puru<s n="n"/></l><r>mälutav<b/>toit<s n="n"/></r></p></e>
     <e><p><l>pussi<s n="n"/></l><r>kott<s n="n"/></r></p></e>
     <e><p><l>puukko<s n="n"/></l><r>puss<s n="n"/></r></p></e>
     <e><p><l>punkki<s n="n"/></l><r>puuk<s n="n"/></r></p></e>
@@ -15961,7 +15963,7 @@
     <e><p><l>ravi<s n="n"/></l><r>kraav<s n="n"/></r></p></e>
     <e><p><l>hoito<s n="n"/></l><r>ravi<s n="n"/></r></p></e>
     <e><p><l>riihimies<s n="n"/></l><r>reheline<s n="n"/></r></p></e>
-    <e><p><l>rekilaulu<s n="n"/></l><r>riimiline__nelikvärss<s n="n"/></r></p></e>
+    <e><p><l>rekilaulu<s n="n"/></l><r>riimiline<b/>nelikvärss<s n="n"/></r></p></e>
     <e><p><l>kansanruno<s n="n"/></l><r>regilaul<s n="n"/></r></p></e>
     <e><p><l>rihma<s n="n"/></l><r>niit<s n="n"/></r></p></e>
     <e><p><l>hihna<s n="n"/></l><r>rihm<s n="n"/></r></p></e>
@@ -15984,8 +15986,8 @@
     <e><p><l>kiire<s n="n"/></l><r>rutt<s n="n"/></r></p></e>
     <e><p><l>ruttuun<s n="adv"/></l><r>kortsu<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>ruttu<s n="adv"/></r></p></e>
-    <e><p><l>ruumiin__koristaja<s n="n"/></l><r>laibaehitaja<s n="n"/></r></p></e>
-    <e><p><l>huoneen__siivooja<s n="n"/></l><r>ruumi__koristaja<s n="n"/></r></p></e>
+    <e><p><l>ruumiin<b/>koristaja<s n="n"/></l><r>laibaehitaja<s n="n"/></r></p></e>
+    <e><p><l>huoneen<b/>siivooja<s n="n"/></l><r>ruumi<b/>koristaja<s n="n"/></r></p></e>
     <e><p><l>huone<s n="n"/></l><r>ruum<s n="n"/></r></p></e>
     <e><p><l>räme<s n="n"/></l><r>soo<s n="n"/></r></p></e>
     <e><p><l>rämeä<s n="n"/></l><r>räme<s n="n"/></r></p></e>
@@ -15999,7 +16001,7 @@
     <e><p><l>sade<s n="n"/></l><r>vihm<s n="n"/></r></p></e>
     <e><p><l>saha<s n="n"/></l><r>saag<s n="n"/></r></p></e>
     <e><p><l>sahra<s n="n"/></l><r>sahk<s n="n"/></r></p></e>
-    <e><p><l>usein__tapahtuva<s n="adj"/></l><r>sage<s n="adj"/></r></p></e>
+    <e><p><l>usein<b/>tapahtuva<s n="adj"/></l><r>sage<s n="adj"/></r></p></e>
     <e><p><l>salkku<s n="n"/></l><r>portfell<s n="n"/></r></p></e>
     <e><p><l>tukko<s n="n"/></l><r>salk<s n="n"/></r></p></e>
     <e><p><l>salmi<s n="n"/></l><r>väin<s n="n"/></r></p></e>
@@ -16035,10 +16037,10 @@
     <e><p><l>savu<s n="n"/></l><r>suits<s n="n"/></r></p></e>
     <e><p><l>renki<s n="n"/></l><r>sulane<s n="n"/></r></p></e>
     <e><p><l>suojus<s n="n"/></l><r>kaitse<s n="n"/></r></p></e>
-    <e><p><l>surve<s n="n"/></l><r>peenendatud__aine<s n="n"/></r></p></e>
+    <e><p><l>surve<s n="n"/></l><r>peenendatud<b/>aine<s n="n"/></r></p></e>
     <e><p><l>paine<s n="n"/></l><r>surve<s n="n"/></r></p></e>
     <e><p><l>syltti<s n="n"/></l><r>moos<s n="n"/></r></p></e>
-    <e><p><l>synnin__maa<s n="n"/></l><r>patu__maa<s n="n"/></r></p></e>
+    <e><p><l>synnin<b/>maa<s n="n"/></l><r>patu<b/>maa<s n="n"/></r></p></e>
     <e><p><l>synnyinmaa<s n="n"/></l><r>sünnimaa<s n="n"/></r></p></e>
     <e><p><l>synti<s n="n"/></l><r>patt<s n="n"/></r></p></e>
     <e><p><l>synty<s n="n"/></l><r>sünd<s n="n"/></r></p></e>
@@ -16053,7 +16055,7 @@
     <e><p><l>noki<s n="n"/></l><r>tahm<s n="n"/></r></p></e>
     <e><p><l>tahti<s n="n"/></l><r>takt<s n="n"/></r></p></e>
     <e><p><l>sydän<s n="n"/></l><r>taht<s n="n"/></r></p></e>
-    <e><p><l>rasvaton__liha<s n="n"/></l><r>tailiha<s n="n"/></r></p></e>
+    <e><p><l>rasvaton<b/>liha<s n="n"/></l><r>tailiha<s n="n"/></r></p></e>
     <e><p><l>takka<s n="n"/></l><r>kolle<s n="n"/></r></p></e>
     <e><p><l>takaa<s n="adv"/></l><r>takka<s n="adv"/></r></p></e>
     <e><p><l>takku<s n="n"/></l><r>pulst<s n="n"/></r></p></e>
@@ -16073,7 +16075,7 @@
     <e><p><l>taso<s n="n"/></l><r>tasapind<s n="n"/></r></p></e>
     <e><p><l>maksu<s n="n"/></l><r>tasu<s n="n"/></r></p></e>
     <e><p><l>tatti<s n="n"/></l><r>tatikas<s n="n"/></r></p></e>
-    <e><p><l>tere<s n="n"/></l><r>õmbluse__tugevdusriba<s n="n"/></r></p></e>
+    <e><p><l>tere<s n="n"/></l><r>õmbluse<b/>tugevdusriba<s n="n"/></r></p></e>
     <e><p><l>terve<s n="n"/></l><r>tere<s n="n"/></r></p></e>
     <e><p><l>tila<s n="n"/></l><r>koht<s n="n"/></r></p></e>
     <e><p><l>nokka<s n="n"/></l><r>tila<s n="n"/></r></p></e>
@@ -16123,8 +16125,8 @@
     <e><p><l>vaippa<s n="n"/></l><r>keep<s n="n"/></r></p></e>
     <e><p><l>tarpeen<s n="adv"/></l><r>vaja<s n="adv"/></r></p></e>
     <e><p><l>kaataa<s n="vblex"/></l><r>valama<s n="vblex"/></r></p></e>
-    <e><p><l>vallasnainen<s n="n"/></l><r>kõrgklassi__daam<s n="n"/></r></p></e>
-    <e><p><l>avioton__nainen<s n="n"/></l><r>vallaline__naine<s n="n"/></r></p></e>
+    <e><p><l>vallasnainen<s n="n"/></l><r>kõrgklassi<b/>daam<s n="n"/></r></p></e>
+    <e><p><l>avioton<b/>nainen<s n="n"/></l><r>vallaline<b/>naine<s n="n"/></r></p></e>
     <e><p><l>valo<s n="n"/></l><r>valgus<s n="n"/></r></p></e>
     <e><p><l>valta<s n="n"/></l><r>võim<s n="n"/></r></p></e>
     <e><p><l>kunta<s n="n"/></l><r>vald<s n="n"/></r></p></e>
@@ -16179,7 +16181,7 @@
     <e><p><l>väliseinä<s n="n"/></l><r>vahesein<s n="n"/></r></p></e>
     <e><p><l>ulkoseinä<s n="n"/></l><r>välissein<s n="n"/></r></p></e>
     <e><p><l>välistä<s n="adv"/></l><r>vahelt<s n="adv"/></r></p></e>
-    <e><p><l>jättää__pois<s n="vblex"/></l><r>välistama<s n="vblex"/></r></p></e>
+    <e><p><l>jättää<b/>pois<s n="vblex"/></l><r>välistama<s n="vblex"/></r></p></e>
     <e><p><l>väljä<s n="adj"/></l><r>avar<s n="adj"/></r></p></e>
     <e><p><l>ulos<s n="adv"/></l><r>välja<s n="adv"/></r></p></e>
     <e><p><l>yksin<s n="adv"/></l><r>üksi<s n="adv"/></r></p></e>
@@ -16466,7 +16468,7 @@
     <e><p><l>maatalous<s n="n"/></l><r>põllumajandus<s n="n"/></r></p></e>
     <e><p><l>suoritus<s n="n"/></l><r>sooritus<s n="n"/></r></p></e>
     <e><p><l>vauhti<s n="n"/></l><r>hoog<s n="n"/></r></p></e>
-    <e><p><l>ylioppilas<s n="n"/></l><r>gümnaasiumi__lõpetanu<s n="n"/></r></p></e>
+    <e><p><l>ylioppilas<s n="n"/></l><r>gümnaasiumi<b/>lõpetanu<s n="n"/></r></p></e>
     <e><p><l>lääni<s n="n"/></l><r>lään<s n="n"/></r></p></e>
     <e><p><l>pakko<s n="n"/></l><r>sund<s n="n"/></r></p></e>
     <e><p><l>rata<s n="n"/></l><r>rada<s n="n"/></r></p></e>
@@ -16764,7 +16766,7 @@
     <e><p><l>keltainen<s n="n"/></l><r>kollane<s n="n"/></r></p></e>
     <e><p><l>koivisto<s n="n"/></l><r>kaasik<s n="n"/></r></p></e>
     <e><p><l>kosketus<s n="n"/></l><r>puudutus<s n="n"/></r></p></e>
-    <e><p><l>kuntainliitto<s n="n"/></l><r>omavalitsuste__liit<s n="n"/></r></p></e>
+    <e><p><l>kuntainliitto<s n="n"/></l><r>omavalitsuste<b/>liit<s n="n"/></r></p></e>
     <e><p><l>nuorisotyö<s n="n"/></l><r>noorsootöö<s n="n"/></r></p></e>
     <e><p><l>nurkka<s n="n"/></l><r>nurk<s n="n"/></r></p></e>
     <e><p><l>perustelu<s n="n"/></l><r>põhjendus<s n="n"/></r></p></e>
@@ -17038,7 +17040,7 @@
     <e><p><l>kunnallinen<s n="adj"/></l><r>valla<s n="adj"/></r></p></e>
     <e><p><l>tilapäinen<s n="adj"/></l><r>ajutine<s n="adj"/></r></p></e>
     <e><p><l>vihollinen<s n="adj"/></l><r>vastane<s n="adj"/></r></p></e>
-    <e><p><l>erillinen<s n="adj"/></l><r>eraldi__olev<s n="adj"/></r></p></e>
+    <e><p><l>erillinen<s n="adj"/></l><r>eraldi<b/>olev<s n="adj"/></r></p></e>
     <e><p><l>monipuolinen<s n="adj"/></l><r>mitmekülgne<s n="adj"/></r></p></e>
     <e><p><l>suuruinen<s n="adj"/></l><r>suurune<s n="adj"/></r></p></e>
     <e><p><l>ylimääräinen<s n="adj"/></l><r>ülemäärane<s n="adj"/></r></p></e>
@@ -17101,7 +17103,7 @@
     <e><p><l>ahdas<s n="adj"/></l><r>kitsas<s n="adj"/></r></p></e>
     <e><p><l>eilinen<s n="adj"/></l><r>eilne<s n="adj"/></r></p></e>
     <e><p><l>jollainen<s n="adj"/></l><r>missugune<s n="adj"/></r></p></e>
-    <e><p><l>meikäläinen<s n="adj"/></l><r>meie__inimene<s n="adj"/></r></p></e>
+    <e><p><l>meikäläinen<s n="adj"/></l><r>meie<b/>inimene<s n="adj"/></r></p></e>
     <e><p><l>tuntuva<s n="adj"/></l><r>tunduv<s n="adj"/></r></p></e>
     <e><p><l>velvollinen<s n="adj"/></l><r>kohustatud<s n="adj"/></r></p></e>
     <e><p><l>akateeminen<s n="adj"/></l><r>akadeemiline<s n="adj"/></r></p></e>
@@ -17133,12 +17135,12 @@
     <e><p><l>todella<s n="adv"/></l><r>tõepoolest<s n="adv"/></r></p></e>
     <e><p><l>joten<s n="adv"/></l><r>mistõttu<s n="adv"/></r></p></e>
     <e><p><l>toisaalla<s n="adv"/></l><r>teisal<s n="adv"/></r></p></e>
-    <e><p><l>lähinnä<s n="adv"/></l><r>kõige__lähemal<s n="adv"/></r></p></e>
+    <e><p><l>lähinnä<s n="adv"/></l><r>kõige<b/>lähemal<s n="adv"/></r></p></e>
     <e><p><l>tietysti<s n="adv"/></l><r>teadagi<s n="adv"/></r></p></e>
     <e><p><l>muuten<s n="adv"/></l><r>muidu<s n="adv"/></r></p></e>
     <e><p><l>varmasti<s n="adv"/></l><r>kindlalt<s n="adv"/></r></p></e>
     <e><p><l>kauan<s n="adv"/></l><r>kaua<s n="adv"/></r></p></e>
-    <e><p><l>paitsi<s n="adv"/></l><r>välja__arvatud<s n="adv"/></r></p></e>
+    <e><p><l>paitsi<s n="adv"/></l><r>välja<b/>arvatud<s n="adv"/></r></p></e>
     <e><p><l>ensin<s n="adv"/></l><r>kõigepealt<s n="adv"/></r></p></e>
     <e><p><l>kiinni<s n="adv"/></l><r>kinni<s n="adv"/></r></p></e>
     <e><p><l>kokonaan<s n="adv"/></l><r>koguni<s n="adv"/></r></p></e>
@@ -17168,7 +17170,7 @@
     <e><p><l>ohella<s n="adv"/></l><r>kõrval<s n="adv"/></r></p></e>
     <e><p><l>keskimäärin<s n="adv"/></l><r>keskmiselt<s n="adv"/></r></p></e>
     <e><p><l>paikallaan<s n="adv"/></l><r>paigas<s n="adv"/></r></p></e>
-    <e><p><l>vuosittain<s n="adv"/></l><r>igal__aastal<s n="adv"/></r></p></e>
+    <e><p><l>vuosittain<s n="adv"/></l><r>igal<b/>aastal<s n="adv"/></r></p></e>
     <e><p><l>vähitellen<s n="adv"/></l><r>vähehaaval<s n="adv"/></r></p></e>
     <e><p><l>muutoin<s n="adv"/></l><r>muidu<s n="adv"/></r></p></e>
     <e><p><l>useimmiten<s n="adv"/></l><r>enamasti<s n="adv"/></r></p></e>
@@ -17224,7 +17226,7 @@
     <e><p><l>naimisissa<s n="adv"/></l><r>abielus<s n="adv"/></r></p></e>
     <e><p><l>saattaa<s n="vblex"/></l><r>saatma<s n="vblex"/></r></p></e>
     <e><p><l>joutua<s n="vblex"/></l><r>sattuma<s n="vblex"/></r></p></e>
-    <e><p><l>lähteä<s n="vblex"/></l><r>ära__minema<s n="vblex"/></r></p></e>
+    <e><p><l>lähteä<s n="vblex"/></l><r>ära<b/>minema<s n="vblex"/></r></p></e>
     <e><p><l>todeta<s n="vblex"/></l><r>konstateerima<s n="vblex"/></r></p></e>
     <e><p><l>vaikuttaa<s n="vblex"/></l><r>mõjuma<s n="vblex"/></r></p></e>
     <e><p><l>toimia<s n="vblex"/></l><r>toimima<s n="vblex"/></r></p></e>
@@ -17251,20 +17253,20 @@
     <e><p><l>valmistaa<s n="vblex"/></l><r>valmistama<s n="vblex"/></r></p></e>
     <e><p><l>tuoda<s n="vblex"/></l><r>tooma<s n="vblex"/></r></p></e>
     <e><p><l>siirtyä<s n="vblex"/></l><r>siirduma<s n="vblex"/></r></p></e>
-    <e><p><l>muuttaa<s n="vblex"/></l><r>ümber__paigutama<s n="vblex"/></r></p></e>
+    <e><p><l>muuttaa<s n="vblex"/></l><r>ümber<b/>paigutama<s n="vblex"/></r></p></e>
     <e><p><l>muuttaa<s n="vblex"/></l><r>kolima<s n="vblex"/></r></p></e>
     <e><p><l>järjestää<s n="vblex"/></l><r>korraldama<s n="vblex"/></r></p></e>
     <e><p><l>muuttua<s n="vblex"/></l><r>muutuma<s n="vblex"/></r></p></e>
     <e><p><l>elää<s n="vblex"/></l><r>elama<s n="vblex"/></r></p></e>
-    <e><p><l>kiinnittää<s n="vblex"/></l><r>kinni__panema<s n="vblex"/></r></p></e>
+    <e><p><l>kiinnittää<s n="vblex"/></l><r>kinni<b/>panema<s n="vblex"/></r></p></e>
     <e><p><l>hoitaa<s n="vblex"/></l><r>hoolitsema<s n="vblex"/></r></p></e>
-    <e><p><l>ymmärtää<s n="vblex"/></l><r>aru__saama<s n="vblex"/></r></p></e>
+    <e><p><l>ymmärtää<s n="vblex"/></l><r>aru<b/>saama<s n="vblex"/></r></p></e>
     <e><p><l>havaita<s n="vblex"/></l><r>märkama<s n="vblex"/></r></p></e>
     <e><p><l>ratkaista<s n="vblex"/></l><r>otsustama<s n="vblex"/></r></p></e>
     <e><p><l>ratkaista<s n="vblex"/></l><r>lahendama<s n="vblex"/></r></p></e>
     <e><p><l>aloittaa<s n="vblex"/></l><r>alustama<s n="vblex"/></r></p></e>
     <e><p><l>panna<s n="vblex"/></l><r>panema<s n="vblex"/></r></p></e>
-    <e><p><l>hyväksyä<s n="vblex"/></l><r>heaks__kiitma<s n="vblex"/></r></p></e>
+    <e><p><l>hyväksyä<s n="vblex"/></l><r>heaks<b/>kiitma<s n="vblex"/></r></p></e>
     <e><p><l>hankkia<s n="vblex"/></l><r>hankima<s n="vblex"/></r></p></e>
     <e><p><l>muodostua<s n="vblex"/></l><r>moodustuma<s n="vblex"/></r></p></e>
     <e><p><l>näkyä<s n="vblex"/></l><r>paistma<s n="vblex"/></r></p></e>
@@ -17314,13 +17316,13 @@
     <e><p><l>hakea<s n="vblex"/></l><r>viima<s n="vblex"/></r></p></e>
     <e><p><l>hakea<s n="vblex"/></l><r>tooma<s n="vblex"/></r></p></e>
     <e><p><l>hakea<s n="vblex"/></l><r>otsima<s n="vblex"/></r></p></e>
-    <e><p><l>hakea<s n="vblex"/></l><r>üles__otsima<s n="vblex"/></r></p></e>
-    <e><p><l>hakea<s n="vblex"/></l><r>järel__käima<s n="vblex"/></r></p></e>
+    <e><p><l>hakea<s n="vblex"/></l><r>üles<b/>otsima<s n="vblex"/></r></p></e>
+    <e><p><l>hakea<s n="vblex"/></l><r>järel<b/>käima<s n="vblex"/></r></p></e>
     <e><p><l>hakea<s n="vblex"/></l><r>taotlema<s n="vblex"/></r></p></e>
     <e><p><l>laatia<s n="vblex"/></l><r>koostama<s n="vblex"/></r></p></e>
     <e><p><l>estää<s n="vblex"/></l><r>takistama<s n="vblex"/></r></p></e>
     <e><p><l>onnistua<s n="vblex"/></l><r>õnnestuma<s n="vblex"/></r></p></e>
-    <e><p><l>siirtää<s n="vblex"/></l><r>ümber__paigutama<s n="vblex"/></r></p></e>
+    <e><p><l>siirtää<s n="vblex"/></l><r>ümber<b/>paigutama<s n="vblex"/></r></p></e>
     <e><p><l>vetää<s n="vblex"/></l><r>vedama<s n="vblex"/></r></p></e>
     <e><p><l>kannattaa<s n="vblex"/></l><r>kandma<s n="vblex"/></r></p></e>
     <e><p><l>kannattaa<s n="vblex"/></l><r>tasuma<s n="vblex"/></r></p></e>
@@ -17336,7 +17338,7 @@
     <e><p><l>kehittyä<s n="vblex"/></l><r>arenema<s n="vblex"/></r></p></e>
     <e><p><l>kerätä<s n="vblex"/></l><r>koguma<s n="vblex"/></r></p></e>
     <e><p><l>viettää<s n="vblex"/></l><r>veetma<s n="vblex"/></r></p></e>
-    <e><p><l>ehdottaa<s n="vblex"/></l><r>ettepanekut__tegema<s n="vblex"/></r></p></e>
+    <e><p><l>ehdottaa<s n="vblex"/></l><r>ettepanekut<b/>tegema<s n="vblex"/></r></p></e>
     <e><p><l>kuljettaa<s n="vblex"/></l><r>sõidutama<s n="vblex"/></r></p></e>
     <e><p><l>pelätä<s n="vblex"/></l><r>kartma<s n="vblex"/></r></p></e>
     <e><p><l>sisältyä<s n="vblex"/></l><r>sisalduma<s n="vblex"/></r></p></e>
@@ -17359,13 +17361,13 @@
     <e><p><l>peittää<s n="vblex"/></l><r>peitma<s n="vblex"/></r></p></e>
     <e><p><l>parantaa<s n="vblex"/></l><r>parandama<s n="vblex"/></r></p></e>
     <e><p><l>keskustella<s n="vblex"/></l><r>vestlema<s n="vblex"/></r></p></e>
-    <e><p><l>tuomita<s n="vblex"/></l><r>kohut__mõistma<s n="vblex"/></r></p></e>
+    <e><p><l>tuomita<s n="vblex"/></l><r>kohut<b/>mõistma<s n="vblex"/></r></p></e>
     <e><p><l>huolehtia<s n="vblex"/></l><r>hoolitsema<s n="vblex"/></r></p></e>
     <e><p><l>sulkea<s n="vblex"/></l><r>sulgema<s n="vblex"/></r></p></e>
     <e><p><l>taitaa<s n="vblex"/></l><r>oskama<s n="vblex"/></r></p></e>
     <e><p><l>sallia<s n="vblex"/></l><r>lubama<s n="vblex"/></r></p></e>
     <e><p><l>väittää<s n="vblex"/></l><r>väitma<s n="vblex"/></r></p></e>
-    <e><p><l>herättää<s n="vblex"/></l><r>üles__äratama<s n="vblex"/></r></p></e>
+    <e><p><l>herättää<s n="vblex"/></l><r>üles<b/>äratama<s n="vblex"/></r></p></e>
     <e><p><l>omistaa<s n="vblex"/></l><r>omama<s n="vblex"/></r></p></e>
     <e><p><l>selittää<s n="vblex"/></l><r>selgitama<s n="vblex"/></r></p></e>
     <e><p><l>unohtaa<s n="vblex"/></l><r>unustama<s n="vblex"/></r></p></e>
@@ -17381,14 +17383,14 @@
     <e><p><l>vaihtaa<s n="vblex"/></l><r>vahetama<s n="vblex"/></r></p></e>
     <e><p><l>hylätä<s n="vblex"/></l><r>hülgama<s n="vblex"/></r></p></e>
     <e><p><l>kohdistua<s n="vblex"/></l><r>suunduma<s n="vblex"/></r></p></e>
-    <e><p><l>aikaansaada<s n="vblex"/></l><r>korda__saatma<s n="vblex"/></r></p></e>
+    <e><p><l>aikaansaada<s n="vblex"/></l><r>korda<b/>saatma<s n="vblex"/></r></p></e>
     <e><p><l>kohdata<s n="vblex"/></l><r>kohtama<s n="vblex"/></r></p></e>
-    <e><p><l>tunnustaa<s n="vblex"/></l><r>üles__tunnistama<s n="vblex"/></r></p></e>
-    <e><p><l>harkita<s n="vblex"/></l><r>järele__mõtlema<s n="vblex"/></r></p></e>
+    <e><p><l>tunnustaa<s n="vblex"/></l><r>üles<b/>tunnistama<s n="vblex"/></r></p></e>
+    <e><p><l>harkita<s n="vblex"/></l><r>järele<b/>mõtlema<s n="vblex"/></r></p></e>
     <e><p><l>luvata<s n="vblex"/></l><r>lubama<s n="vblex"/></r></p></e>
     <e><p><l>pysähtyä<s n="vblex"/></l><r>peatuma<s n="vblex"/></r></p></e>
     <e><p><l>pysähtyä<s n="vblex"/></l><r>streikima<s n="vblex"/></r></p></e>
-    <e><p><l>tarttua<s n="vblex"/></l><r>kinni__haarama<s n="vblex"/></r></p></e>
+    <e><p><l>tarttua<s n="vblex"/></l><r>kinni<b/>haarama<s n="vblex"/></r></p></e>
     <e><p><l>julistaa<s n="vblex"/></l><r>teatama<s n="vblex"/></r></p></e>
     <e><p><l>palaa<s n="vblex"/></l><r>põlema<s n="vblex"/></r></p></e>
     <e><p><l>sitoa<s n="vblex"/></l><r>siduma<s n="vblex"/></r></p></e>
@@ -17422,7 +17424,7 @@
     <e><p><l>alentaa<s n="vblex"/></l><r>alandama<s n="vblex"/></r></p></e>
     <e><p><l>keskittyä<s n="vblex"/></l><r>keskenduma<s n="vblex"/></r></p></e>
     <e><p><l>kyetä<s n="vblex"/></l><r>suutma<s n="vblex"/></r></p></e>
-    <e><p><l>määrittää<s n="vblex"/></l><r>kindlaks__määrama<s n="vblex"/></r></p></e>
+    <e><p><l>määrittää<s n="vblex"/></l><r>kindlaks<b/>määrama<s n="vblex"/></r></p></e>
     <e><p><l>ulottua<s n="vblex"/></l><r>ulatuma<s n="vblex"/></r></p></e>
     <e><p><l>tajuta<s n="vblex"/></l><r>tajuma<s n="vblex"/></r></p></e>
     <e><p><l>kuivua<s n="vblex"/></l><r>kuivama<s n="vblex"/></r></p></e>
@@ -17432,7 +17434,7 @@
     <e><p><l>uskaltaa<s n="vblex"/></l><r>julgema<s n="vblex"/></r></p></e>
     <e><p><l>tilata<s n="vblex"/></l><r>tellima<s n="vblex"/></r></p></e>
     <e><p><l>turvata<s n="vblex"/></l><r>turvama<s n="vblex"/></r></p></e>
-    <e><p><l>edetä<s n="vblex"/></l><r>edasi__minema<s n="vblex"/></r></p></e>
+    <e><p><l>edetä<s n="vblex"/></l><r>edasi<b/>minema<s n="vblex"/></r></p></e>
     <e><p><l>leikata<s n="vblex"/></l><r>lõikama<s n="vblex"/></r></p></e>
     <e><p><l>päätellä<s n="vblex"/></l><r>järeldama<s n="vblex"/></r></p></e>
     <e><p><l>päätellä<s n="vblex"/></l><r>otsustama<s n="vblex"/></r></p></e>
@@ -17442,14 +17444,14 @@
     <e><p><l>piirtää<s n="vblex"/></l><r>joonestama<s n="vblex"/></r></p></e>
     <e><p><l>poistua<s n="vblex"/></l><r>lahkuma<s n="vblex"/></r></p></e>
     <e><p><l>taistella<s n="vblex"/></l><r>võitlema<s n="vblex"/></r></p></e>
-    <e><p><l>irrottaa<s n="vblex"/></l><r>lahti__võtma<s n="vblex"/></r></p></e>
+    <e><p><l>irrottaa<s n="vblex"/></l><r>lahti<b/>võtma<s n="vblex"/></r></p></e>
     <e><p><l>katketa<s n="vblex"/></l><r>katkema<s n="vblex"/></r></p></e>
     <e><p><l>korottaa<s n="vblex"/></l><r>kõrgendama<s n="vblex"/></r></p></e>
     <e><p><l>lähestyä<s n="vblex"/></l><r>lähenema<s n="vblex"/></r></p></e>
     <e><p><l>tarkastaa<s n="vblex"/></l><r>kontrollima<s n="vblex"/></r></p></e>
     <e><p><l>vaihtua<s n="vblex"/></l><r>vahetuma<s n="vblex"/></r></p></e>
     <e><p><l>avautua<s n="vblex"/></l><r>avanema<s n="vblex"/></r></p></e>
-    <e><p><l>kaataa<s n="vblex"/></l><r>ümber__ajama<s n="vblex"/></r></p></e>
+    <e><p><l>kaataa<s n="vblex"/></l><r>ümber<b/>ajama<s n="vblex"/></r></p></e>
     <e><p><l>kehottaa<s n="vblex"/></l><r>õhutama<s n="vblex"/></r></p></e>
     <e><p><l>kohottaa<s n="vblex"/></l><r>kergitama<s n="vblex"/></r></p></e>
     <e><p><l>menetellä<s n="vblex"/></l><r>menetlema<s n="vblex"/></r></p></e>
@@ -17468,14 +17470,14 @@
     <e><p><l>perustella<s n="vblex"/></l><r>põhjendama<s n="vblex"/></r></p></e>
     <e><p><l>perustella<s n="vblex"/></l><r>motiveerima<s n="vblex"/></r></p></e>
     <e><p><l>viihtyä<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
-    <!-- <e><p><l>viihtyä<s n="vblex"/></l><r>end__mõnusalt__tundma<s n="vblex"/></r></p></e>-->
+    <!-- <e><p><l>viihtyä<s n="vblex"/></l><r>end<b/>mõnusalt<b/>tundma<s n="vblex"/></r></p></e>-->
     <e><p><l>viipyä<s n="vblex"/></l><r>viibima<s n="vblex"/></r></p></e>
     <e><p><l>arvata<s n="vblex"/></l><r>arvama<s n="vblex"/></r></p></e>
     <e><p><l>kiinnostua<s n="vblex"/></l><r>huvituma<s n="vblex"/></r></p></e>
     <e><p><l>kiivetä<s n="vblex"/></l><r>ronima<s n="vblex"/></r></p></e>
     <e><p><l>tanssia<s n="vblex"/></l><r>tantsima<s n="vblex"/></r></p></e>
     <e><p><l>tavoittaa<s n="vblex"/></l><r>saavutama<s n="vblex"/></r></p></e>
-    <e><p><l>tavoittaa<s n="vblex"/></l><r>järele__jõudma<s n="vblex"/></r></p></e>
+    <e><p><l>tavoittaa<s n="vblex"/></l><r>järele<b/>jõudma<s n="vblex"/></r></p></e>
     <e><p><l>huomauttaa<s n="vblex"/></l><r>märkima<s n="vblex"/></r></p></e>
     <e><p><l>kiinnostaa<s n="vblex"/></l><r>huvitama<s n="vblex"/></r></p></e>
     <e><p><l>suuntautua<s n="vblex"/></l><r>suunduma<s n="vblex"/></r></p></e>
@@ -17483,7 +17485,7 @@
     <e><p><l>tunkeutua<s n="vblex"/></l><r>tungima<s n="vblex"/></r></p></e>
     <e><p><l>työntää<s n="vblex"/></l><r>lükkama<s n="vblex"/></r></p></e>
     <e><p><l>täydentää<s n="vblex"/></l><r>täiendama<s n="vblex"/></r></p></e>
-    <e><p><l>kaatua<s n="vblex"/></l><r>ümber__minema<s n="vblex"/></r></p></e>
+    <e><p><l>kaatua<s n="vblex"/></l><r>ümber<b/>minema<s n="vblex"/></r></p></e>
     <e><p><l>tähdätä<s n="vblex"/></l><r>sihtima<s n="vblex"/></r></p></e>
     <e><p><l>tähdätä<s n="vblex"/></l><r>silmitsema<s n="vblex"/></r></p></e>
     <e><p><l>virrata<s n="vblex"/></l><r>voolama<s n="vblex"/></r></p></e>
@@ -17491,8 +17493,8 @@
     <e><p><l>tehostaa<s n="vblex"/></l><r>tugevdama<s n="vblex"/></r></p></e>
     <e><p><l>uudistaa<s n="vblex"/></l><r>uuendama<s n="vblex"/></r></p></e>
     <e><p><l>kouluttaa<s n="vblex"/></l><r>koolitama<s n="vblex"/></r></p></e>
-    <e><p><l>menestyä<s n="vblex"/></l><r>edu__saavutama<s n="vblex"/></r></p></e>
-    <e><p><l>omaksua<s n="vblex"/></l><r>omaks__võtma<s n="vblex"/></r></p></e>
+    <e><p><l>menestyä<s n="vblex"/></l><r>edu<b/>saavutama<s n="vblex"/></r></p></e>
+    <e><p><l>omaksua<s n="vblex"/></l><r>omaks<b/>võtma<s n="vblex"/></r></p></e>
     <e><p><l>sujua<s n="vblex"/></l><r>sujuma<s n="vblex"/></r></p></e>
     <e><p><l>suoda<s n="vblex"/></l><r>lubama<s n="vblex"/></r></p></e>
     <e><p><l>suostua<s n="vblex"/></l><r>nõustuma<s n="vblex"/></r></p></e>
@@ -17542,17 +17544,17 @@
     <e><p><l>varmistaa<s n="vblex"/></l><r>kinnitama<s n="vblex"/></r></p></e>
     <e><p><l>aueta<s n="vblex"/></l><r>avanema<s n="vblex"/></r></p></e>
     <e><p><l>iskeä<s n="vblex"/></l><r>lööma<s n="vblex"/></r></p></e>
-    <e><p><l>istuttaa<s n="vblex"/></l><r>istuma__panema<s n="vblex"/></r></p></e>
+    <e><p><l>istuttaa<s n="vblex"/></l><r>istuma<b/>panema<s n="vblex"/></r></p></e>
     <e><p><l>istuttaa<s n="vblex"/></l><r>istutama<s n="vblex"/></r></p></e>
     <e><p><l>kätkeä<s n="vblex"/></l><r>kätkema<s n="vblex"/></r></p></e>
     <e><p><l>parata<s n="vblex"/></l><r>paranema<s n="vblex"/></r></p></e>
     <e><p><l>päätyä<s n="vblex"/></l><r>jõudma<s n="vblex"/></r></p></e>
-    <e><p><l>selviytyä<s n="vblex"/></l><r>hakkama__saama<s n="vblex"/></r></p></e>
-    <e><p><l>sivuuttaa<s n="vblex"/></l><r>mööda__minema<s n="vblex"/></r></p></e>
+    <e><p><l>selviytyä<s n="vblex"/></l><r>hakkama<b/>saama<s n="vblex"/></r></p></e>
+    <e><p><l>sivuuttaa<s n="vblex"/></l><r>mööda<b/>minema<s n="vblex"/></r></p></e>
     <e><p><l>valmistella<s n="vblex"/></l><r>valmistuma<s n="vblex"/></r></p></e>
     <e><p><l>vastaanottaa<s n="vblex"/></l><r>vastuvõtt<s n="vblex"/></r></p></e>
     <e><p><l>viljellä<s n="vblex"/></l><r>kasvatama<s n="vblex"/></r></p></e>
-    <e><p><l>allekirjoittaa<s n="vblex"/></l><r>alla__kirjutama<s n="vblex"/></r></p></e>
+    <e><p><l>allekirjoittaa<s n="vblex"/></l><r>alla<b/>kirjutama<s n="vblex"/></r></p></e>
     <e><p><l>jakaantua<s n="vblex"/></l><r>jagunema<s n="vblex"/></r></p></e>
     <e><p><l>kytkeä<s n="vblex"/></l><r>siduma<s n="vblex"/></r></p></e>
     <e><p><l>lahjoittaa<s n="vblex"/></l><r>kinkima<s n="vblex"/></r></p></e>
@@ -17565,7 +17567,7 @@
     <e><p><l>valmistautua<s n="vblex"/></l><r>valmistuma<s n="vblex"/></r></p></e>
     <e><p><l>velvoittaa<s n="vblex"/></l><r>kohustama<s n="vblex"/></r></p></e>
     <e><p><l>verottaa<s n="vblex"/></l><r>maksustama<s n="vblex"/></r></p></e>
-    <e><p><l>asentaa<s n="vblex"/></l><r>kokku__panema<s n="vblex"/></r></p></e>
+    <e><p><l>asentaa<s n="vblex"/></l><r>kokku<b/>panema<s n="vblex"/></r></p></e>
     <e><p><l>heijastua<s n="vblex"/></l><r>peegelduma<s n="vblex"/></r></p></e>
     <e><p><l>hymyillä<s n="vblex"/></l><r>naeratama<s n="vblex"/></r></p></e>
     <e><p><l>kiintyä<s n="vblex"/></l><r>kiinduma<s n="vblex"/></r></p></e>
@@ -17579,17 +17581,17 @@
     <e><p><l>varoittaa<s n="vblex"/></l><r>hoiatama<s n="vblex"/></r></p></e>
     <e><p><l>aavistaa<s n="vblex"/></l><r>aimama<s n="vblex"/></r></p></e>
     <e><p><l>ennustaa<s n="vblex"/></l><r>ennustama<s n="vblex"/></r></p></e>
-    <e><p><l>haavoittua<s n="vblex"/></l><r>haavata__saama<s n="vblex"/></r></p></e>
+    <e><p><l>haavoittua<s n="vblex"/></l><r>haavata<b/>saama<s n="vblex"/></r></p></e>
     <e><p><l>koitua<s n="vblex"/></l><r>tekkima<s n="vblex"/></r></p></e>
     <e><p><l>langeta<s n="vblex"/></l><r>langema<s n="vblex"/></r></p></e>
     <e><p><l>määräytyä<s n="vblex"/></l><r>tulenema<s n="vblex"/></r></p></e>
     <e><p><l>oikeuttaa<s n="vblex"/></l><r>õigustama<s n="vblex"/></r></p></e>
-    <e><p><l>sitoutua<s n="vblex"/></l><r>end__siduma<s n="vblex"/></r></p></e>
+    <e><p><l>sitoutua<s n="vblex"/></l><r>end<b/>siduma<s n="vblex"/></r></p></e>
     <e><p><l>sovittaa<s n="vblex"/></l><r>sobitama<s n="vblex"/></r></p></e>
     <e><p><l>supistua<s n="vblex"/></l><r>vähenema<s n="vblex"/></r></p></e>
     <e><p><l>syttyä<s n="vblex"/></l><r>süttima<s n="vblex"/></r></p></e>
     <e><p><l>tavoitella<s n="vblex"/></l><r>taotlema<s n="vblex"/></r></p></e>
-    <e><p><l>turvautua<s n="vblex"/></l><r>kaitset__otsima<s n="vblex"/></r></p></e>
+    <e><p><l>turvautua<s n="vblex"/></l><r>kaitset<b/>otsima<s n="vblex"/></r></p></e>
     <e><p><l>varttua<s n="vblex"/></l><r>kasvama<s n="vblex"/></r></p></e>
 
     <!-- SECTION: Interjections -->
