@@ -83,6 +83,9 @@
       <cat-item tags="vblex.*.pe4"/>
       <cat-item tags="vblex.*.pe4.*"/>
     </def-cat>
+    <def-cat n="kanssa">
+      <cat-item lemma="kanssa" tags="post"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_pos">
@@ -1187,6 +1190,26 @@
      <action>
         <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let>
+      </action>
+    </rule>
+
+    <rule comment="nom + kanssa nom + ga">
+      <pattern>
+        <pattern-item n="nom"/>
+        <pattern-item n="kanssa"/>
+      </pattern>
+     <action>
+        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
       </action>
     </rule>
 

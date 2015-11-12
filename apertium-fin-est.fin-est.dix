@@ -31,6 +31,7 @@
     <sdef n="neg"  c=""/>
     <sdef n="pers"  c=""/>
     <sdef n="card"  c=""/>
+    <sdef n="ord"  c=""/>
     <sdef n="rel"  c=""/>
 
     <sdef n="nom"  c=""/>
@@ -63,12 +64,15 @@
     <sdef n="arg2_ela"  c=""/>
     <sdef n="arg1_all"  c=""/>
 
+    <sdef n="foc"  c=""/>
+
 
   </sdefs>
   <section id="main" type="standard">
 
     <!-- SECTION: Miscellaneous -->
 
+    <e r="LR"><p><l>pa<s n="foc"/></l><r></r></p></e>
     <e><p><l>ja<s n="part"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>eikä<s n="adv"/></l><r>ega<s n="cnjcoo"/></r></p></e>
     <e><p><l>ei<s n="part"/></l><r>ei<s n="adv"/></r></p></e>
@@ -109,21 +113,20 @@
   
     <!-- SECTION: Adpositions -->
 
-    <e><p><l>edessä<s n="adv"/></l><r>ees<s n="post"/></r></p></e>
-    <e><p><l>kanssa<s n="post"/></l><r>koos<s n="post"/></r></p></e>
-    <e><p><l>ylitse<s n="post"/></l><r>üle<s n="post"/></r></p></e>
-    <e><p><l>luokse<s n="post"/></l><r>juurde<s n="post"/></r></p></e>
+    <e><p><l>kanssa<s n="post"/></l><r>koos<s n="adp"/></r></p></e>
+    <e><p><l>ylitse<s n="post"/></l><r>üle<s n="adp"/></r></p></e>
+    <e><p><l>luokse<s n="post"/></l><r>juurde<s n="adp"/></r></p></e>
     <e><p><l>varten<s n="post"/></l><r>jaoks<s n="adv"/></r></p></e>
-    <e><p><l>edessä<s n="post"/></l><r>ees<s n="post"/></r></p></e>
-    <e><p><l>edestä<s n="post"/></l><r>eest<s n="post"/></r></p></e>
-    <e><p><l>taka<s n="post"/></l><r>taga<s n="post"/></r></p></e>
-    <e><p><l>takaa<s n="post"/></l><r>tagant<s n="post"/></r></p></e>
-    <e><p><l>taakse<s n="post"/></l><r>taha<s n="post"/></r></p></e>
-    <e><p><l>jälkeen<s n="post"/></l><r>pärast<s n="post"/></r></p></e>
-    <e><p><l>yli<s n="post"/></l><r>üle<s n="post"/></r></p></e>
-    <e><p><l>yli<s n="pr"/></l><r>üle<s n="pr"/></r></p></e>
-    <e><p><l>vaille<s n="pr"/></l><r>enne<s n="pr"/></r></p></e>
-    <e><p><l>vailla<s n="pr"/></l><r>enne<s n="pr"/></r></p></e>
+    <e><p><l>edessä<s n="post"/></l><r>ees<s n="adp"/></r></p></e>
+    <e><p><l>edestä<s n="post"/></l><r>eest<s n="adp"/></r></p></e>
+    <e><p><l>taka<s n="post"/></l><r>taga<s n="adp"/></r></p></e>
+    <e><p><l>takaa<s n="post"/></l><r>tagant<s n="adp"/></r></p></e>
+    <e><p><l>taakse<s n="post"/></l><r>taha<s n="adp"/></r></p></e>
+    <e><p><l>jälkeen<s n="post"/></l><r>pärast<s n="adp"/></r></p></e>
+    <e><p><l>yli<s n="post"/></l><r>üle<s n="adp"/></r></p></e>
+    <e><p><l>yli<s n="pr"/></l><r>üle<s n="adp"/></r></p></e>
+    <e><p><l>vaille<s n="pr"/></l><r>enne<s n="adp"/></r></p></e>
+    <e><p><l>vailla<s n="pr"/></l><r>enne<s n="adp"/></r></p></e>
   
     <!-- SECTION: Determiners -->
 
@@ -141,7 +144,7 @@
     <e><p><l>lisäksi<s n="part"/></l><r>juurde<s n="adv"/></r></p></e>
     <e><p><l>yhdessä<s n="adv"/></l><r>koos<s n="adv"/></r></p></e>
     <e><p><l>mihin<s n="adv"/></l><r>kuhu<s n="adv"/></r></p></e>
-    <e><p><l>minne<s n="adv"/></l><r>kuhu<s n="adv"/></r></p></e>
+    <e><p><l>minne<s n="adv"/><s n="itg"/></l><r>kuhu<s n="adv"/></r></p></e>
     <e><p><l>vaan<s n="cnjsub"/></l><r>kuid<s n="cnjsub"/></r></p></e>
     <e><p><l>kuinka<s n="adv"/></l><r>kuidas<s n="adv"/></r></p></e>
     <e><p><l>koska<s n="cnjsub"/></l><r>kuna<s n="cnjsub"/></r></p></e>
@@ -210,26 +213,26 @@
   
     <!-- SECTION: Numbers -->
 
-    <e><p><l>yksi<s n="num"/></l><r>üks<s n="num"/></r></p></e>
-    <e><p><l>kaksi<s n="num"/></l><r>kaks<s n="num"/></r></p></e>
-    <e><p><l>kolme<s n="num"/></l><r>kolm<s n="num"/></r></p></e>
-    <e><p><l>neljä<s n="num"/></l><r>neli<s n="num"/></r></p></e>
-    <e><p><l>viisi<s n="num"/></l><r>viis<s n="num"/></r></p></e>
-    <e><p><l>kuusi<s n="num"/></l><r>kuus<s n="num"/></r></p></e>
-    <e><p><l>seitsemän<s n="num"/></l><r>seitse<s n="num"/></r></p></e>
-    <e><p><l>kahdeksan<s n="num"/></l><r>kaheksa<s n="num"/></r></p></e>
-    <e><p><l>yhdeksän<s n="num"/></l><r>üheksa<s n="num"/></r></p></e>
-    <e><p><l>kymmenen<s n="num"/></l><r>kümme<s n="num"/></r></p></e>
-    <e><p><l>ensimmäinen<s n="num"/></l><r>esimene<s n="num"/></r></p></e>
-    <e><p><l>toinen<s n="num"/></l><r>teine<s n="num"/></r></p></e>
-    <e><p><l>kolmas<s n="num"/></l><r>kolmas<s n="num"/></r></p></e>
-    <e><p><l>neljäs<s n="num"/></l><r>neljas<s n="num"/></r></p></e>
-    <e><p><l>viides<s n="num"/></l><r>viies<s n="num"/></r></p></e>
-    <e><p><l>kuudes<s n="num"/></l><r>kuues<s n="num"/></r></p></e>
-    <e><p><l>seitsemäs<s n="num"/></l><r>seitsmes<s n="num"/></r></p></e>
-    <e><p><l>kahdeksas<s n="num"/></l><r>kaheksas<s n="num"/></r></p></e>
-    <e><p><l>yhdeksäs<s n="num"/></l><r>üheksas<s n="num"/></r></p></e>
-    <e><p><l>kymmenes<s n="num"/></l><r>kümnes<s n="num"/></r></p></e>
+    <e><p><l>yksi<s n="num"/></l><r>üks<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>kaksi<s n="num"/></l><r>kaks<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>kolme<s n="num"/></l><r>kolm<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>neljä<s n="num"/></l><r>neli<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>viisi<s n="num"/></l><r>viis<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>kuusi<s n="num"/></l><r>kuus<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>seitsemän<s n="num"/></l><r>seitse<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>kahdeksan<s n="num"/></l><r>kaheksa<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>yhdeksän<s n="num"/></l><r>üheksa<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>kymmenen<s n="num"/></l><r>kümme<s n="num"/><s n="card"/></r></p></e>
+    <e><p><l>ensimmäinen<s n="num"/></l><r>esimene<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>toinen<s n="num"/></l><r>teine<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>kolmas<s n="num"/></l><r>kolmas<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>neljäs<s n="num"/></l><r>neljas<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>viides<s n="num"/></l><r>viies<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>kuudes<s n="num"/></l><r>kuues<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>seitsemäs<s n="num"/></l><r>seitsmes<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>kahdeksas<s n="num"/></l><r>kaheksas<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>yhdeksäs<s n="num"/></l><r>üheksas<s n="num"/><s n="ord"/></r></p></e>
+    <e><p><l>kymmenes<s n="num"/></l><r>kümnes<s n="num"/><s n="ord"/></r></p></e>
   
     <!-- SECTION: Nouns -->
 
@@ -3970,7 +3973,6 @@
     <e><p><l>bioklimatologia<s n="n"/></l><r>bioklimatoloogia<s n="n"/></r></p></e>
     <e><p><l>autonkuljettaja<s n="n"/></l><r>autojuht<s n="n"/></r></p></e>
     <e><p><l>asidimetria<s n="n"/></l><r>atsidimeetria<s n="n"/></r></p></e>
-    <e><p><l>kaksi<s n="n"/></l><r>kaks<s n="n"/></r></p></e>
     <e><p><l>kakkonen<s n="n"/></l><r>kaks<s n="n"/></r></p></e>
     <e><p><l>kolmonen<s n="n"/></l><r>kolm<s n="n"/></r></p></e>
     <e><p><l>kolme<s n="n"/></l><r>kolm<s n="n"/></r></p></e>
@@ -4007,7 +4009,7 @@
     <e><p><l>palvelut<s n="n"/></l><r>teenused<s n="n"/></r></p></e>
     <e><p><l>nähdä<s n="n"/></l><r>nägema<s n="n"/></r></p></e>
     <e><p><l>taito<s n="n"/></l><r>kunst<s n="n"/></r></p></e>
-    <e><p><l>taide<s n="n"/></l><r>kunst<s n="n"/></r></p></e>
+    <!-- e><p><l>taide<s n="n"/></l><r>kunst<s n="n"/></r></p></e -->
     <e><p><l>tytär<s n="n"/></l><r>tütar<s n="n"/></r></p></e>
     <e><p><l>radio<s n="n"/></l><r>raadio<s n="n"/></r></p></e>
     <e><p><l>seitsemän<s n="n"/></l><r>seitse<s n="n"/></r></p></e>
@@ -14074,7 +14076,7 @@
     <e><p><l>epäluotettavasti<s n="adv"/></l><r>reetlikult<s n="adv"/></r></p></e>
     <e><p><l>anteeksiantavasti<s n="adv"/></l><r>andestavalt<s n="adv"/></r></p></e>
     <e><p><l>mukana<s n="adv"/></l><r>koos<s n="adv"/></r></p></e>
-    <e><p><l>missä<s n="adv"/></l><r>kus<s n="adv"/></r></p></e>
+    <e><p><l>missä<s n="adv"/><s n="rel"/></l><r>kus<s n="adv"/></r></p></e>
     <e><p><l>sitten<s n="adv"/></l><r>siis<s n="adv"/></r></p></e>
     <e><p><l>myöhemmin<s n="adv"/></l><r>hiljem<s n="adv"/></r></p></e>
     <e><p><l>usein<s n="adv"/></l><r>sageli<s n="adv"/></r></p></e>
@@ -15483,7 +15485,7 @@
     <e><p><l>etevä<s n="adj"/></l><r>suurepärane<s n="adj"/></r></p></e>
     <e><p><l>turhamainen<s n="adj"/></l><r>edev<s n="adj"/></r></p></e>
     <e><p><l>ette<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
-    <e><p><l>eteen<s n="post"/></l><r>ette<s n="post"/></r></p></e>
+    <e><p><l>eteen<s n="post"/></l><r>ette<s n="adp"/></r></p></e>
     <e><p><l>etu<s n="n"/></l><r>eelis<s n="n"/></r></p></e>
     <e><p><l>edistys<s n="n"/></l><r>edu<s n="n"/></r></p></e>
     <e><p><l>haikea<s n="adj"/></l><r>nukker<s n="adj"/></r></p></e>
@@ -15537,7 +15539,7 @@
     <e><p><l>juurakko<s n="n"/></l><r>juurikas<s n="n"/></r></p></e>
     <e><p><l>juutti<s n="n"/></l><r>dzuut<s n="n"/></r></p></e>
     <e><p><l>järki<s n="n"/></l><r>mõistus<s n="n"/></r></p></e>
-    <e><p><l>mukaan<s n="post"/></l><r>järgi<s n="post"/></r></p></e>
+    <e><p><l>mukaan<s n="post"/></l><r>järgi<s n="adp"/></r></p></e>
     <e><p><l>kaakki<s n="n"/></l><r>hobusekronu<s n="n"/></r></p></e>
     <e><p><l>hirsipuu<s n="n"/></l><r>kaak<s n="n"/></r></p></e>
     <e><p><l>kaakki<s n="n"/></l><r>võllas<s n="n"/></r></p></e>
@@ -15614,7 +15616,7 @@
     <e><p><l>ruumis<s n="n"/></l><r>keha<s n="n"/></r></p></e>
     <e><p><l>keksijä<s n="n"/></l><r>leidur<s n="n"/></r></p></e>
     <e><p><l>hyppelijä<s n="n"/></l><r>keksija<s n="n"/></r></p></e>
-    <e><p><l>kera<s n="post"/></l><r>koos<s n="post"/></r></p></e>
+    <e><p><l>kera<s n="post"/></l><r>koos<s n="adp"/></r></p></e>
     <e><p><l>kerä<s n="n"/></l><r>kera<s n="n"/></r></p></e>
     <e><p><l>kerkeä<s n="adj"/></l><r>kärmas<s n="adj"/></r></p></e>
     <e><p><l>kesanto<s n="n"/></l><r>kesa<s n="n"/></r></p></e>
@@ -15776,7 +15778,7 @@
     <e><p><l>luokki<s n="n"/></l><r>look<s n="n"/></r></p></e>
     <e><p><l>luoma<s n="n"/></l><r>looming<s n="n"/></r></p></e>
     <e><p><l>luomi<s n="n"/></l><r>silmalaug<s n="n"/></r></p></e>
-    <e><p><l>eläin<s n="n"/></l><r>loom<s n="n"/></r></p></e>
+    <e><p><l>eläin<s n="n"/></l><r>loom¹<s n="n"/></r></p></e>
     <e><p><l>lutti<s n="n"/></l><r>pööning<s n="n"/></r></p></e>
     <e><p><l>tutti<s n="n"/></l><r>lutt<s n="n"/></r></p></e>
     <e><p><l>lätti<s n="n"/></l><r>sealaut<s n="n"/></r></p></e>
@@ -16142,7 +16144,7 @@
     <e><p><l>varhain<s n="adv"/></l><r>vara<s n="adv"/></r></p></e>
     <e><p><l>vari<s n="adj"/></l><r>kuum<s n="adj"/></r></p></e>
     <e><p><l>varju<s n="n"/></l><r>vari<s n="n"/></r></p></e>
-    <e><p><l>varrelle<s n="post"/></l><r>äärde<s n="post"/></r></p></e>
+    <e><p><l>varrelle<s n="post"/></l><r>äärde<s n="adp"/></r></p></e>
     <e><p><l>varsi<s n="n"/></l><r>vars<s n="n"/></r></p></e>
     <e><p><l>vastus<s n="n"/></l><r>tüli<s n="n"/></r></p></e>
     <e><p><l>vehkeilijä<s n="n"/></l><r>intrigant<s n="n"/></r></p></e>
@@ -16533,7 +16535,7 @@
     <e><p><l>juna<s n="n"/></l><r>rong<s n="n"/></r></p></e>
     <e><p><l>kiekko<s n="n"/></l><r>ketas<s n="n"/></r></p></e>
     <e><p><l>laskelma<s n="n"/></l><r>arvutus<s n="n"/></r></p></e>
-    <e><p><l>luo<s n="n"/></l><r>juurde<s n="n"/></r></p></e>
+    <e><p><l>luo<s n="n"/></l><r>juurde<s n="adp"/></r></p></e>
     <e><p><l>pelko<s n="n"/></l><r>hirm<s n="n"/></r></p></e>
     <e><p><l>pelto<s n="n"/></l><r>põld<s n="n"/></r></p></e>
     <e><p><l>pääministeri<s n="n"/></l><r>peaminister<s n="n"/></r></p></e>
