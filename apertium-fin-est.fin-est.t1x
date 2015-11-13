@@ -21,13 +21,17 @@
       <cat-item tags="vblex.actv.imp.*"/>
     </def-cat>
     <def-cat n="verb-fin">
-      <cat-item tags="vblex.actv.ind.*"/>
-      <cat-item tags="vblex.pasv.ind.*"/>
       <cat-item tags="vblex.actv.cond.*"/>
       <cat-item tags="vblex.pasv.cond.*"/>
       <cat-item tags="vblex.actv.quot.*"/>
       <cat-item tags="vblex.pasv.quot.*"/>
       <cat-item tags="vblex.*.ind.*"/>
+    </def-cat>
+    <def-cat n="verb-finate">
+      <cat-item tags="vblex.*.ind.*"/>
+      <cat-item tags="vblex.*.imp.*"/>
+      <cat-item tags="vblex.*.cond.*"/>
+      <cat-item tags="vblex.*.quot.*"/>
     </def-cat>
     <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
       <cat-item tags="vblex.actv.infma.*"/>
@@ -1207,6 +1211,42 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="ei + adv + verb -- ei + verb + adv">
+      <pattern>
+        <pattern-item n="ei-neg"/>
+        <pattern-item n="adv"/>
+        <pattern-item n="verb-finate"/>
+      </pattern>
+     <action>
+        <choose>
+          <when><test><equal><clip pos="3" side="sl" part="a_screeve"/> 
+                              <lit-tag v="imp"/>
+                      </equal></test>
+                <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="prs"/></let>
+          </when>
+        </choose>
+        <out>
+          <chunk name="neg" case="yyy"> <tags> <tag> <lit-tag v="SV"/> </tag> </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.neg"/>
+            </lu>
+           <b />
+            <lu>
+              <clip pos="3" side="tl" part="lemh"/>
+              <lit-tag v="vblex.pers"/>
+              <clip pos="3" side="tl" part="a_temps"/>
+              <lit-tag v="ind.neg"/>
+            </lu>
+           <b />
+            <lu>
+              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
