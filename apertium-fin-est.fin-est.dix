@@ -20,6 +20,9 @@
     <sdef n="rr"  c=""/>
 
     <sdef n="actv"  c=""/>
+    <sdef n="attr"  c=""/>
+    <sdef n="ND"  c=""/>
+    <sdef n="CD"  c=""/>
 
 
     <sdef n="itg"  c=""/>
@@ -68,6 +71,17 @@
 
 
   </sdefs>
+
+  <pardefs>
+    <pardef n="nut_nud">
+      <!-- adjectives with nut in finnish inflect for number and case, but in estonian do not
+           so when we translate LR (fin-est) we mark that this adjective does not have any inflection
+           using the 'attr' tag. However, when translating RL (est-fin) we leave placeholders for 
+           the missing number and case tags (ND... number to be determined, CD... case to be determined). -->
+      <e r="LR"><p><l></l><r><s n="attr"/></r></p></e>
+      <e r="RL"><p><l><s n="ND"/><s n="CD"/></l><r></r></p></e>
+    </pardef>
+  </pardefs>
   <section id="main" type="standard">
 
     <!-- SECTION: Miscellaneous -->
@@ -10548,36 +10562,36 @@
         <!--<e><p><l>leikkivä<s n="adj"/></l><r>mängiv<s n="n"/></r></p></e>-->
 
     <e><p><l>-vuotias<s n="adj"/></l><r>aastane<s n="adj"/></r></p></e>
-    <e><p><l>lopettanut<s n="adj"/></l><r>lõpetanud<s n="adj"/></r></p></e>
-    <e><p><l>avattu<s n="adj"/></l><r>avatud<s n="adj"/></r></p></e>
-    <e><p><l>julistettu<s n="adj"/></l><r>väljakuulutatud<s n="adj"/></r></p></e>
-    <e><p><l>kuvattu<s n="adj"/></l><r>kirjeldatud<s n="adj"/></r></p></e>
+    <e><p><l>lopettanut<s n="adj"/></l><r>lõpetanud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>avattu<s n="adj"/></l><r>avatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>julistettu<s n="adj"/></l><r>väljakuulutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kuvattu<s n="adj"/></l><r>kirjeldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kuuluisa<s n="adj"/></l><r>kuulus<s n="adj"/></r></p></e>
-    <e><p><l>esitetty<s n="adj"/></l><r>näidatud<s n="adj"/></r></p></e>
+    <e><p><l>esitetty<s n="adj"/></l><r>näidatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>alueellinen<s n="adj"/></l><r>piirkondlik<s n="adj"/></r></p></e>
-    <e><p><l>hankittu<s n="adj"/></l><r>omandatud<s n="adj"/></r></p></e>
+    <e><p><l>hankittu<s n="adj"/></l><r>omandatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pienempi<s n="adj"/></l><r>väiksem<s n="adj"/></r></p></e>
     <e><p><l>suurempi<s n="adj"/></l><r>suurem<s n="adj"/></r></p></e>
     <e><p><l>ympäröivä<s n="adj"/></l><r>ümbritsev<s n="adj"/></r></p></e>
-    <e><p><l>identifioitu<s n="adj"/></l><r>tuvastatud<s n="adj"/></r></p></e>
+    <e><p><l>identifioitu<s n="adj"/></l><r>tuvastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>nuorempi<s n="adj"/></l><r>noorem<s n="adj"/></r></p></e>
     <e><p><l>nerokas<s n="adj"/></l><r>taevalik<s n="adj"/></r></p></e>
-    <e><p><l>todistettu<s n="adj"/></l><r>tõestatud<s n="adj"/></r></p></e>
+    <e><p><l>todistettu<s n="adj"/></l><r>tõestatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>klassinen<s n="adj"/></l><r>klassikaline<s n="adj"/></r></p></e>
-    <e><p><l>koulutettu<s n="adj"/></l><r>haritud<s n="adj"/></r></p></e>
+    <e><p><l>koulutettu<s n="adj"/></l><r>haritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>trooppinen<s n="adj"/></l><r>troopiline<s n="adj"/></r></p></e>
     <e><p><l>maataloudellinen<s n="adj"/></l><r>põllumajanduslik<s n="adj"/></r></p></e>
-    <e><p><l>haavoitettu<s n="adj"/></l><r>vigastatud<s n="adj"/></r></p></e>
+    <e><p><l>haavoitettu<s n="adj"/></l><r>vigastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>presidentillinen<s n="adj"/></l><r>presidendi-<s n="adj"/></r></p></e>
-    <e><p><l>haavoittunut<s n="adj"/></l><r>haavatud<s n="adj"/></r></p></e>
-    <e><p><l>kiinnostunut<s n="adj"/></l><r>huvitatud<s n="adj"/></r></p></e>
-    <e><p><l>uhanalainen<s n="adj"/></l><r>ohustatud<s n="adj"/></r></p></e>
+    <e><p><l>haavoittunut<s n="adj"/></l><r>haavatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kiinnostunut<s n="adj"/></l><r>huvitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>uhanalainen<s n="adj"/></l><r>ohustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>keskiaikainen<s n="adj"/></l><r>keskaegne<s n="adj"/></r></p></e>
-    <e><p><l>filmattu<s n="adj"/></l><r>filmitud<s n="adj"/></r></p></e>
+    <e><p><l>filmattu<s n="adj"/></l><r>filmitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>jatkuva<s n="adj"/></l><r>jätkuv<s n="adj"/></r></p></e>
     <e><p><l>taiteellinen<s n="adj"/></l><r>kunstipärane<s n="adj"/></r></p></e>
-    <e><p><l>eloonjäänyt<s n="adj"/></l><r>allesjäänud<s n="adj"/></r></p></e>
-    <e><p><l>rahoitettu<s n="adj"/></l><r>rahastatud<s n="adj"/></r></p></e>
+    <e><p><l>eloonjäänyt<s n="adj"/></l><r>allesjäänud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>rahoitettu<s n="adj"/></l><r>rahastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>yleinen<s n="adj"/></l><r>laialdane<s n="adj"/></r></p></e>
     <e><p><l>parlamentaarinen<s n="adj"/></l><r>parlamentaarne<s n="adj"/></r></p></e>
     <e><p><l>strateginen<s n="adj"/></l><r>strateegiline<s n="adj"/></r></p></e>
@@ -10588,12 +10602,12 @@
     <e><p><l>mahdoton<s n="adj"/></l><r>võimatu<s n="adj"/></r></p></e>
     <e><p><l>biologinen<s n="adj"/></l><r>bioloogiline<s n="adj"/></r></p></e>
     <e><p><l>saapuva<s n="adj"/></l><r>saabuv<s n="adj"/></r></p></e>
-    <e><p><l>heijastunut<s n="adj"/></l><r>peegeldunud<s n="adj"/></r></p></e>
+    <e><p><l>heijastunut<s n="adj"/></l><r>peegeldunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kunnioitettava<s n="adj"/></l><r>auväärne<s n="adj"/></r></p></e>
     <e><p><l>subtrooppinen<s n="adj"/></l><r>lähistroopiline<s n="adj"/></r></p></e>
     <e><p><l>psykologinen<s n="adj"/></l><r>psühholoogiline<s n="adj"/></r></p></e>
-    <e><p><l>asuttu<s n="adj"/></l><r>asustatud<s n="adj"/></r></p></e>
-    <e><p><l>eronnut<s n="adj"/></l><r>lahutatud<s n="adj"/></r></p></e>
+    <e><p><l>asuttu<s n="adj"/></l><r>asustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>eronnut<s n="adj"/></l><r>lahutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>teoreettinen<s n="adj"/></l><r>teoreetiline<s n="adj"/></r></p></e>
     <e><p><l>tilastollinen<s n="adj"/></l><r>statistiline<s n="adj"/></r></p></e>
     <e><p><l>epäselvä<s n="adj"/></l><r>ebaselge<s n="adj"/></r></p></e>
@@ -10602,12 +10616,12 @@
     <e><p><l>filosofinen<s n="adj"/></l><r>filosoofiline<s n="adj"/></r></p></e>
     <e><p><l>edeltävä<s n="adj"/></l><r>eelnev<s n="adj"/></r></p></e>
     <e><p><l>kostea<s n="adj"/></l><r>niiske<s n="adj"/></r></p></e>
-    <e><p><l>lyhennetty<s n="adj"/></l><r>lühendatud<s n="adj"/></r></p></e>
+    <e><p><l>lyhennetty<s n="adj"/></l><r>lühendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>isompi<s n="adj"/></l><r>suurem<s n="adj"/></r></p></e>
     <e><p><l>uhkaava<s n="adj"/></l><r>ähvardav<s n="adj"/></r></p></e>
     <e><p><l>lupaava<s n="adj"/></l><r>paljutõotav<s n="adj"/></r></p></e>
     <e><p><l>maantieteellinen<s n="adj"/></l><r>geograafiline<s n="adj"/></r></p></e>
-    <e><p><l>saavutettu<s n="adj"/></l><r>saavutatud<s n="adj"/></r></p></e>
+    <e><p><l>saavutettu<s n="adj"/></l><r>saavutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>teknologinen<s n="adj"/></l><r>tehnoloogiline<s n="adj"/></r></p></e>
     <e><p><l>epävirallinen<s n="adj"/></l><r>mitteametlik<s n="adj"/></r></p></e>
     <e><p><l>taktinen<s n="adj"/></l><r>taktikaline<s n="adj"/></r></p></e>
@@ -10623,7 +10637,7 @@
     <e><p><l>tietämätön<s n="adj"/></l><r>teadmatuses<s n="adj"/></r></p></e>
     <e><p><l>yksimielinen<s n="adj"/></l><r>üksmeelne<s n="adj"/></r></p></e>
     <e><p><l>eettinen<s n="adj"/></l><r>eetiline<s n="adj"/></r></p></e>
-    <e><p><l>ryhmitelty<s n="adj"/></l><r>rühmitatud<s n="adj"/></r></p></e>
+    <e><p><l>ryhmitelty<s n="adj"/></l><r>rühmitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>voittamaton<s n="adj"/></l><r>võitmatu<s n="adj"/></r></p></e>
     <e><p><l>kunniaton<s n="adj"/></l><r>kurikuulus<s n="adj"/></r></p></e>
     <e><p><l>voittoisa<s n="adj"/></l><r>võidukas<s n="adj"/></r></p></e>
@@ -10631,14 +10645,14 @@
     <e><p><l>spatiaalinen<s n="adj"/></l><r>ruumiline<s n="adj"/></r></p></e>
     <e><p><l>geologinen<s n="adj"/></l><r>geoloogiline<s n="adj"/></r></p></e>
     <e><p><l>yliluonnollinen<s n="adj"/></l><r>üleloomulik<s n="adj"/></r></p></e>
-    <e><p><l>miehitetty<s n="adj"/></l><r>mehitatud<s n="adj"/></r></p></e>
+    <e><p><l>miehitetty<s n="adj"/></l><r>mehitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>eksoottinen<s n="adj"/></l><r>eksootiline<s n="adj"/></r></p></e>
-    <e><p><l>kehystetty<s n="adj"/></l><r>raamitud<s n="adj"/></r></p></e>
+    <e><p><l>kehystetty<s n="adj"/></l><r>raamitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>muuttumaton<s n="adj"/></l><r>muutusteta<s n="adj"/></r></p></e>
     <e><p><l>geometrinen<s n="adj"/></l><r>geomeetriline<s n="adj"/></r></p></e>
     <e><p><l>psykiatrinen<s n="adj"/></l><r>psühhiaatriline<s n="adj"/></r></p></e>
-    <e><p><l>ihailtu<s n="adj"/></l><r>imetletud<s n="adj"/></r></p></e>
-    <e><p><l>patentoitu<s n="adj"/></l><r>patenteeritud<s n="adj"/></r></p></e>
+    <e><p><l>ihailtu<s n="adj"/></l><r>imetletud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>patentoitu<s n="adj"/></l><r>patenteeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>optimaalinen<s n="adj"/></l><r>optimaalne<s n="adj"/></r></p></e>
     <e><p><l>feodaalinen<s n="adj"/></l><r>feodaalne<s n="adj"/></r></p></e>
     <e><p><l>satiirinen<s n="adj"/></l><r>satiiriline<s n="adj"/></r></p></e>
@@ -10650,7 +10664,7 @@
     <e><p><l>ideologinen<s n="adj"/></l><r>ideoloogiline<s n="adj"/></r></p></e>
     <e><p><l>hämmästyttävä<s n="adj"/></l><r>hämmastav<s n="adj"/></r></p></e>
     <e><p><l>viihdyttävä<s n="adj"/></l><r>meelelahutuslik<s n="adj"/></r></p></e>
-    <e><p><l>kaiverrettu<s n="adj"/></l><r>graveeritud<s n="adj"/></r></p></e>
+    <e><p><l>kaiverrettu<s n="adj"/></l><r>graveeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epäsuosittu<s n="adj"/></l><r>ebapopulaarne<s n="adj"/></r></p></e>
     <e><p><l>vahingollinen<s n="adj"/></l><r>kahjulik<s n="adj"/></r></p></e>
     <e><p><l>radioaktiivinen<s n="adj"/></l><r>radioaktiivne<s n="adj"/></r></p></e>
@@ -10663,12 +10677,12 @@
     <e><p><l>painovoimainen<s n="adj"/></l><r>gravitatsiooniline<s n="adj"/></r></p></e>
     <e><p><l>graafinen<s n="adj"/></l><r>graafiline<s n="adj"/></r></p></e>
     <e><p><l>kosminen<s n="adj"/></l><r>kosmiline<s n="adj"/></r></p></e>
-    <e><p><l>paistettu<s n="adj"/></l><r>praetud<s n="adj"/></r></p></e>
+    <e><p><l>paistettu<s n="adj"/></l><r>praetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kuviteltu<s n="adj"/></l><r>kujuteldav<s n="adj"/></r></p></e>
-    <e><p><l>kastettu<s n="adj"/></l><r>ristitud<s n="adj"/></r></p></e>
+    <e><p><l>kastettu<s n="adj"/></l><r>ristitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>syyttävä<s n="adj"/></l><r>süüdistav<s n="adj"/></r></p></e>
     <e><p><l>sateinen<s n="adj"/></l><r>vihmane<s n="adj"/></r></p></e>
-    <e><p><l>improvisoitu<s n="adj"/></l><r>improviseeritud<s n="adj"/></r></p></e>
+    <e><p><l>improvisoitu<s n="adj"/></l><r>improviseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>fysiologinen<s n="adj"/></l><r>füsioloogiline<s n="adj"/></r></p></e>
     <e><p><l>analyyttinen<s n="adj"/></l><r>analüütiline<s n="adj"/></r></p></e>
     <e><p><l>modulaarinen<s n="adj"/></l><r>modulaarne<s n="adj"/></r></p></e>
@@ -10680,7 +10694,7 @@
     <e><p><l>aineenvaihdunnallinen<s n="adj"/></l><r>ainevahetus-<s n="adj"/></r></p></e>
     <e><p><l>ballistinen<s n="adj"/></l><r>ballistiline<s n="adj"/></r></p></e>
     <e><p><l>harhaanjohtava<s n="adj"/></l><r>eksitav<s n="adj"/></r></p></e>
-    <e><p><l>vihattu<s n="adj"/></l><r>vihatud<s n="adj"/></r></p></e>
+    <e><p><l>vihattu<s n="adj"/></l><r>vihatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kunnianhimoinen<s n="adj"/></l><r>edasipüüdlik<s n="adj"/></r></p></e>
     <e><p><l>tuntematon<s n="adj"/></l><r>tundmatu<s n="adj"/></r></p></e>
     <e><p><l>topologinen<s n="adj"/></l><r>topoloogiline<s n="adj"/></r></p></e>
@@ -10688,8 +10702,8 @@
     <e><p><l>asumaton<s n="adj"/></l><r>asustamata<s n="adj"/></r></p></e>
     <e><p><l>traumaattinen<s n="adj"/></l><r>traumaatiline<s n="adj"/></r></p></e>
     <e><p><l>houkutteleva<s n="adj"/></l><r>kutsuv<s n="adj"/></r></p></e>
-    <e><p><l>koristeltu<s n="adj"/></l><r>ehitud<s n="adj"/></r></p></e>
-    <e><p><l>keitetty<s n="adj"/></l><r>keedetud<s n="adj"/></r></p></e>
+    <e><p><l>koristeltu<s n="adj"/></l><r>ehitud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>keitetty<s n="adj"/></l><r>keedetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tekstuaalinen<s n="adj"/></l><r>teksti-<s n="adj"/></r></p></e>
     <e><p><l>systeeminen<s n="adj"/></l><r>süsteemne<s n="adj"/></r></p></e>
     <e><p><l>hapan<s n="adj"/></l><r>happeline<s n="adj"/></r></p></e>
@@ -10706,7 +10720,7 @@
     <e><p><l>lapseton<s n="adj"/></l><r>lastetu<s n="adj"/></r></p></e>
     <e><p><l>raidallinen<s n="adj"/></l><r>vöödiline<s n="adj"/></r></p></e>
     <e><p><l>katalyyttinen<s n="adj"/></l><r>katalüütiline<s n="adj"/></r></p></e>
-    <e><p><l>odotettu<s n="adj"/></l><r>oodatud<s n="adj"/></r></p></e>
+    <e><p><l>odotettu<s n="adj"/></l><r>oodatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>fylogeneettinen<s n="adj"/></l><r>fülogeneetiline<s n="adj"/></r></p></e>
     <e><p><l>asiaankuulumaton<s n="adj"/></l><r>ebaoluline<s n="adj"/></r></p></e>
     <e><p><l>kuolematon<s n="adj"/></l><r>surematu<s n="adj"/></r></p></e>
@@ -10718,7 +10732,7 @@
     <e><p><l>avara<s n="adj"/></l><r>ruumikas<s n="adj"/></r></p></e>
     <e><p><l>auditiivinen<s n="adj"/></l><r>kuulmis-<s n="adj"/></r></p></e>
     <e><p><l>logistinen<s n="adj"/></l><r>logistiline<s n="adj"/></r></p></e>
-    <e><p><l>harjoitettu<s n="adj"/></l><r>väljadrillitud<s n="adj"/></r></p></e>
+    <e><p><l>harjoitettu<s n="adj"/></l><r>väljadrillitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epämiellyttävä<s n="adj"/></l><r>ebameeldiv<s n="adj"/></r></p></e>
     <e><p><l>kokematon<s n="adj"/></l><r>kogenematu<s n="adj"/></r></p></e>
     <e><p><l>kuviollinen<s n="adj"/></l><r>mustriga<s n="adj"/></r></p></e>
@@ -10731,7 +10745,7 @@
     <e><p><l>maksimaalinen<s n="adj"/></l><r>maksimaalne<s n="adj"/></r></p></e>
     <e><p><l>epäkäytännöllinen<s n="adj"/></l><r>ebapraktiline<s n="adj"/></r></p></e>
     <e><p><l>vaihdettava<s n="adj"/></l><r>vahetatav<s n="adj"/></r></p></e>
-    <e><p><l>sytytetty<s n="adj"/></l><r>süüdatud<s n="adj"/></r></p></e>
+    <e><p><l>sytytetty<s n="adj"/></l><r>süüdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sisäänvedettävä<s n="adj"/></l><r>sissetõmmatav<s n="adj"/></r></p></e>
     <e><p><l>transatlanttinen<s n="adj"/></l><r>transatlantiline<s n="adj"/></r></p></e>
     <e><p><l>pitkäaikainen<s n="adj"/></l><r>pikaajaline<s n="adj"/></r></p></e>
@@ -10747,12 +10761,12 @@
     <e><p><l>solunulkoinen<s n="adj"/></l><r>rakuväline<s n="adj"/></r></p></e>
     <e><p><l>holistinen<s n="adj"/></l><r>holistlik<s n="adj"/></r></p></e>
     <e><p><l>monikulttuurinen<s n="adj"/></l><r>mitmekultuuriline<s n="adj"/></r></p></e>
-    <e><p><l>halvaantunut<s n="adj"/></l><r>halvatud<s n="adj"/></r></p></e>
+    <e><p><l>halvaantunut<s n="adj"/></l><r>halvatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kovera<s n="adj"/></l><r>nõgus<s n="adj"/></r></p></e>
     <e><p><l>stokastinen<s n="adj"/></l><r>stohhastiline<s n="adj"/></r></p></e>
     <e><p><l>riippuvainen<s n="adj"/></l><r>sõltuv<s n="adj"/></r></p></e>
     <e><p><l>ihmistenvälinen<s n="adj"/></l><r>isikutevaheline<s n="adj"/></r></p></e>
-    <e><p><l>julkistettu<s n="adj"/></l><r>teadustatud<s n="adj"/></r></p></e>
+    <e><p><l>julkistettu<s n="adj"/></l><r>teadustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>biokemiallinen<s n="adj"/></l><r>biokeemiline<s n="adj"/></r></p></e>
     <e><p><l>kyyninen<s n="adj"/></l><r>küüniline<s n="adj"/></r></p></e>
     <e><p><l>allegorinen<s n="adj"/></l><r>allegooriline<s n="adj"/></r></p></e>
@@ -10768,7 +10782,7 @@
     <e><p><l>rekursiivinen<s n="adj"/></l><r>rekursiivne<s n="adj"/></r></p></e>
     <e><p><l>sinertävä<s n="adj"/></l><r>sinakas<s n="adj"/></r></p></e>
     <e><p><l>luettava<s n="adj"/></l><r>loetav<s n="adj"/></r></p></e>
-    <e><p><l>asutettu<s n="adj"/></l><r>koloniseeritud<s n="adj"/></r></p></e>
+    <e><p><l>asutettu<s n="adj"/></l><r>koloniseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hohtava<s n="adj"/></l><r>helendav<s n="adj"/></r></p></e>
     <e><p><l>eksistentiaalinen<s n="adj"/></l><r>eksistentsiaalne<s n="adj"/></r></p></e>
     <e><p><l>avuton<s n="adj"/></l><r>abitu<s n="adj"/></r></p></e>
@@ -10787,7 +10801,7 @@
     <e><p><l>säteittäinen<s n="adj"/></l><r>kiirgav<s n="adj"/></r></p></e>
     <e><p><l>anaerobinen<s n="adj"/></l><r>anaeroobne<s n="adj"/></r></p></e>
     <e><p><l>ratkaisematon<s n="adj"/></l><r>lahendamata<s n="adj"/></r></p></e>
-    <e><p><l>hajautettu<s n="adj"/></l><r>detsentraliseeritud<s n="adj"/></r></p></e>
+    <e><p><l>hajautettu<s n="adj"/></l><r>detsentraliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>syntymätön<s n="adj"/></l><r>sündimata<s n="adj"/></r></p></e>
     <e><p><l>sarkastinen<s n="adj"/></l><r>sarkastiline<s n="adj"/></r></p></e>
     <e><p><l>häiriintymätön<s n="adj"/></l><r>segamatu<s n="adj"/></r></p></e>
@@ -10796,12 +10810,12 @@
     <e><p><l>keskustalainen<s n="adj"/></l><r>tsentrist<s n="adj"/></r></p></e>
     <e><p><l>nostalginen<s n="adj"/></l><r>nostalgiline<s n="adj"/></r></p></e>
     <e><p><l>kaasumainen<s n="adj"/></l><r>gaasiline<s n="adj"/></r></p></e>
-    <e><p><l>helpotettu<s n="adj"/></l><r>leevendatud<s n="adj"/></r></p></e>
-    <e><p><l>värjätty<s n="adj"/></l><r>värvitud<s n="adj"/></r></p></e>
+    <e><p><l>helpotettu<s n="adj"/></l><r>leevendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>värjätty<s n="adj"/></l><r>värvitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>metodologinen<s n="adj"/></l><r>metodoloogiline<s n="adj"/></r></p></e>
     <e><p><l>herttuallinen<s n="adj"/></l><r>hertsogi-<s n="adj"/></r></p></e>
     <e><p><l>verotettava<s n="adj"/></l><r>maksustatav<s n="adj"/></r></p></e>
-    <e><p><l>halveksittu<s n="adj"/></l><r>põlatud<s n="adj"/></r></p></e>
+    <e><p><l>halveksittu<s n="adj"/></l><r>põlatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rakastava<s n="adj"/></l><r>südamlik<s n="adj"/></r></p></e>
     <e><p><l>kosmologinen<s n="adj"/></l><r>kosmoloogiline<s n="adj"/></r></p></e>
     <e><p><l>parabolinen<s n="adj"/></l><r>parabool-<s n="adj"/></r></p></e>
@@ -10814,14 +10828,14 @@
     <e><p><l>metamorfinen<s n="adj"/></l><r>moonde-<s n="adj"/></r></p></e>
     <e><p><l>telepaattinen<s n="adj"/></l><r>telepaatiline<s n="adj"/></r></p></e>
     <e><p><l>sadistinen<s n="adj"/></l><r>sadistlik<s n="adj"/></r></p></e>
-    <e><p><l>grillattu<s n="adj"/></l><r>grillitud<s n="adj"/></r></p></e>
+    <e><p><l>grillattu<s n="adj"/></l><r>grillitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>monikielinen<s n="adj"/></l><r>mitmekeelne<s n="adj"/></r></p></e>
     <e><p><l>pöyristyttävä<s n="adj"/></l><r>skandaalne<s n="adj"/></r></p></e>
     <e><p><l>symbioottinen<s n="adj"/></l><r>sümbiootiline<s n="adj"/></r></p></e>
     <e><p><l>kokemusperäinen<s n="adj"/></l><r>kogemuslik<s n="adj"/></r></p></e>
     <e><p><l>kovalenttinen<s n="adj"/></l><r>kovalentne<s n="adj"/></r></p></e>
     <e><p><l>astrologinen<s n="adj"/></l><r>astroloogiline<s n="adj"/></r></p></e>
-    <e><p><l>kulunut<s n="adj"/></l><r>möödunud<s n="adj"/></r></p></e>
+    <e><p><l>kulunut<s n="adj"/></l><r>möödunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyypillinen<s n="adj"/></l><r>arhetüüpiline<s n="adj"/></r></p></e>
     <e><p><l>hyvämaineinen<s n="adj"/></l><r>mainekas<s n="adj"/></r></p></e>
     <e><p><l>pinnanalainen<s n="adj"/></l><r>pinnaalune<s n="adj"/></r></p></e>
@@ -10859,7 +10873,7 @@
     <e><p><l>pölyinen<s n="adj"/></l><r>tolmune<s n="adj"/></r></p></e>
     <e><p><l>audiovisuaalinen<s n="adj"/></l><r>audiovisuaalne<s n="adj"/></r></p></e>
     <e><p><l>sotaisa<s n="adj"/></l><r>sõjakas<s n="adj"/></r></p></e>
-    <e><p><l>teroitettu<s n="adj"/></l><r>teritatud<s n="adj"/></r></p></e>
+    <e><p><l>teroitettu<s n="adj"/></l><r>teritatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>mietiskelevä<s n="adj"/></l><r>meditatiivne<s n="adj"/></r></p></e>
     <e><p><l>taikauskoinen<s n="adj"/></l><r>ebausklik<s n="adj"/></r></p></e>
     <e><p><l>myyttinen<s n="adj"/></l><r>müütiline<s n="adj"/></r></p></e>
@@ -10882,11 +10896,11 @@
     <e><p><l>algoritminen<s n="adj"/></l><r>algoritmiline<s n="adj"/></r></p></e>
     <e><p><l>sakraalinen<s n="adj"/></l><r>sakraalne<s n="adj"/></r></p></e>
     <e><p><l>epidemiologinen<s n="adj"/></l><r>epidemioloogiline<s n="adj"/></r></p></e>
-    <e><p><l>neutralisoitu<s n="adj"/></l><r>neutraliseeritud<s n="adj"/></r></p></e>
+    <e><p><l>neutralisoitu<s n="adj"/></l><r>neutraliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>yksipuolinen<s n="adj"/></l><r>vastamata<s n="adj"/></r></p></e>
     <e><p><l>ensyklopedinen<s n="adj"/></l><r>entsüklopeediline<s n="adj"/></r></p></e>
     <e><p><l>myymätön<s n="adj"/></l><r>müümata<s n="adj"/></r></p></e>
-    <e><p><l>jauhettu<s n="adj"/></l><r>jahvatatud<s n="adj"/></r></p></e>
+    <e><p><l>jauhettu<s n="adj"/></l><r>jahvatatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>stereoskooppinen<s n="adj"/></l><r>stereoskoopiline<s n="adj"/></r></p></e>
     <e><p><l>hydrostaattinen<s n="adj"/></l><r>hüdrostaatiline<s n="adj"/></r></p></e>
     <e><p><l>sähkömekaaninen<s n="adj"/></l><r>elektromehaaniline<s n="adj"/></r></p></e>
@@ -10910,7 +10924,7 @@
     <e><p><l>anabolinen<s n="adj"/></l><r>anaboolne<s n="adj"/></r></p></e>
     <e><p><l>hetkellinen<s n="adj"/></l><r>hetkeline<s n="adj"/></r></p></e>
     <e><p><l>kaksisuuntainen<s n="adj"/></l><r>kahesuunaline<s n="adj"/></r></p></e>
-    <e><p><l>neulottu<s n="adj"/></l><r>kootud<s n="adj"/></r></p></e>
+    <e><p><l>neulottu<s n="adj"/></l><r>kootud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>idiopaattinen<s n="adj"/></l><r>idiopaatiline<s n="adj"/></r></p></e>
     <e><p><l>hallusinogeeninen<s n="adj"/></l><r>hallutsinogeenne<s n="adj"/></r></p></e>
     <e><p><l>deduktiivinen<s n="adj"/></l><r>deduktiivne<s n="adj"/></r></p></e>
@@ -10939,9 +10953,9 @@
     <e><p><l>aineeton<s n="adj"/></l><r>kehatu<s n="adj"/></r></p></e>
     <e><p><l>jauhemainen<s n="adj"/></l><r>pulbriline<s n="adj"/></r></p></e>
     <e><p><l>raskauttava<s n="adj"/></l><r>raskendav<s n="adj"/></r></p></e>
-    <e><p><l>kastroitu<s n="adj"/></l><r>kastreeritud<s n="adj"/></r></p></e>
+    <e><p><l>kastroitu<s n="adj"/></l><r>kastreeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kaikkivoipa<s n="adj"/></l><r>kõikvõimas<s n="adj"/></r></p></e>
-    <e><p><l>viimemainittu<s n="adj"/></l><r>eelnimetatud<s n="adj"/></r></p></e>
+    <e><p><l>viimemainittu<s n="adj"/></l><r>eelnimetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>inflatorinen<s n="adj"/></l><r>inflatsiooniline<s n="adj"/></r></p></e>
     <e><p><l>idiomaattinen<s n="adj"/></l><r>idiomaatiline<s n="adj"/></r></p></e>
     <e><p><l>saatanallinen<s n="adj"/></l><r>saatanlik<s n="adj"/></r></p></e>
@@ -10949,9 +10963,9 @@
     <e><p><l>tulenkestävä<s n="adj"/></l><r>tulekindel<s n="adj"/></r></p></e>
     <e><p><l>epädemokraattinen<s n="adj"/></l><r>ebademokraatlik<s n="adj"/></r></p></e>
     <e><p><l>tahaton<s n="adj"/></l><r>tahtmatu<s n="adj"/></r></p></e>
-    <e><p><l>steriloitu<s n="adj"/></l><r>steriliseeritud<s n="adj"/></r></p></e>
-    <e><p><l>inhottu<s n="adj"/></l><r>põlatud<s n="adj"/></r></p></e>
-    <e><p><l>kuviteltu<s n="adj"/></l><r>väljamõeldud<s n="adj"/></r></p></e>
+    <e><p><l>steriloitu<s n="adj"/></l><r>steriliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>inhottu<s n="adj"/></l><r>põlatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kuviteltu<s n="adj"/></l><r>väljamõeldud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>adjektiivinen<s n="adj"/></l><r>omadussõnaline<s n="adj"/></r></p></e>
     <e><p><l>silkkimäinen<s n="adj"/></l><r>siid-<s n="adj"/></r></p></e>
     <e><p><l>anisotrooppinen<s n="adj"/></l><r>anisotroopne<s n="adj"/></r></p></e>
@@ -10967,10 +10981,10 @@
     <e><p><l>epäilevä<s n="adj"/></l><r>kahtlev<s n="adj"/></r></p></e>
     <e><p><l>anarkistinen<s n="adj"/></l><r>anarhiline<s n="adj"/></r></p></e>
     <e><p><l>ateistinen<s n="adj"/></l><r>ateistlik<s n="adj"/></r></p></e>
-    <e><p><l>vaiennettu<s n="adj"/></l><r>allasurutud<s n="adj"/></r></p></e>
+    <e><p><l>vaiennettu<s n="adj"/></l><r>allasurutud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>varoittava<s n="adj"/></l><r>hoiatav<s n="adj"/></r></p></e>
     <e><p><l>suonikas<s n="adj"/></l><r>sooneline<s n="adj"/></r></p></e>
-    <e><p><l>denaturoitu<s n="adj"/></l><r>denatureeritud<s n="adj"/></r></p></e>
+    <e><p><l>denaturoitu<s n="adj"/></l><r>denatureeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>asyklinen<s n="adj"/></l><r>atsükliline<s n="adj"/></r></p></e>
     <e><p><l>typografinen<s n="adj"/></l><r>tüpograafiline<s n="adj"/></r></p></e>
     <e><p><l>muskuloskeletaalinen<s n="adj"/></l><r>lihasluukonna<s n="adj"/></r></p></e>
@@ -10988,7 +11002,7 @@
     <e><p><l>merikelpoinen<s n="adj"/></l><r>merekõlblik<s n="adj"/></r></p></e>
     <e><p><l>hyperaktiivinen<s n="adj"/></l><r>hüperaktiivne<s n="adj"/></r></p></e>
     <e><p><l>ergonominen<s n="adj"/></l><r>ergonoomiline<s n="adj"/></r></p></e>
-    <e><p><l>mahtipontinen<s n="adj"/></l><r>ülespuhutud<s n="adj"/></r></p></e>
+    <e><p><l>mahtipontinen<s n="adj"/></l><r>ülespuhutud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>verenhimoinen<s n="adj"/></l><r>verejanuline<s n="adj"/></r></p></e>
     <e><p><l>kasvitieteellinen<s n="adj"/></l><r>botaanika-<s n="adj"/></r></p></e>
     <e><p><l>eksoterminen<s n="adj"/></l><r>eksotermiline<s n="adj"/></r></p></e>
@@ -11012,12 +11026,12 @@
     <e><p><l>työtön<s n="adj"/></l><r>töötu<s n="adj"/></r></p></e>
     <e><p><l>kannibalistinen<s n="adj"/></l><r>kannibalistlik<s n="adj"/></r></p></e>
     <e><p><l>atonaalinen<s n="adj"/></l><r>atonaalne<s n="adj"/></r></p></e>
-    <e><p><l>ylikuumentunut<s n="adj"/></l><r>ülekuumenenud<s n="adj"/></r></p></e>
-    <e><p><l>ihannoitu<s n="adj"/></l><r>jumaldatud<s n="adj"/></r></p></e>
+    <e><p><l>ylikuumentunut<s n="adj"/></l><r>ülekuumenenud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>ihannoitu<s n="adj"/></l><r>jumaldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epätieteellinen<s n="adj"/></l><r>ebateaduslik<s n="adj"/></r></p></e>
     <e><p><l>toistettava<s n="adj"/></l><r>korratav<s n="adj"/></r></p></e>
     <e><p><l>etnologinen<s n="adj"/></l><r>etnoloogiline<s n="adj"/></r></p></e>
-    <e><p><l>aliravittu<s n="adj"/></l><r>alatoidetud<s n="adj"/></r></p></e>
+    <e><p><l>aliravittu<s n="adj"/></l><r>alatoidetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>halveksittava<s n="adj"/></l><r>põlastusväärne<s n="adj"/></r></p></e>
     <e><p><l>matriarkaalinen<s n="adj"/></l><r>matriarhaalne<s n="adj"/></r></p></e>
     <e><p><l>puhelias<s n="adj"/></l><r>jutukas<s n="adj"/></r></p></e>
@@ -11038,11 +11052,11 @@
     <e><p><l>euforinen<s n="adj"/></l><r>eufooriline<s n="adj"/></r></p></e>
     <e><p><l>väsymätön<s n="adj"/></l><r>väsimatu<s n="adj"/></r></p></e>
     <e><p><l>alakuloinen<s n="adj"/></l><r>nukker<s n="adj"/></r></p></e>
-    <e><p><l>palataalinen<s n="adj"/></l><r>palataliseeritud<s n="adj"/></r></p></e>
+    <e><p><l>palataalinen<s n="adj"/></l><r>palataliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>nihilistinen<s n="adj"/></l><r>nihilistlik<s n="adj"/></r></p></e>
     <e><p><l>rasittava<s n="adj"/></l><r>kurnav<s n="adj"/></r></p></e>
-    <e><p><l>väsynyt<s n="adj"/></l><r>kurnatud<s n="adj"/></r></p></e>
-    <e><p><l>kammattu<s n="adj"/></l><r>kammitud<s n="adj"/></r></p></e>
+    <e><p><l>väsynyt<s n="adj"/></l><r>kurnatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kammattu<s n="adj"/></l><r>kammitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>bibliografinen<s n="adj"/></l><r>bibliograafiline<s n="adj"/></r></p></e>
     <e><p><l>uskomaton<s n="adj"/></l><r>kujuteldamatu<s n="adj"/></r></p></e>
     <e><p><l>haitallinen<s n="adj"/></l><r>ebasoodus<s n="adj"/></r></p></e>
@@ -11056,8 +11070,8 @@
     <e><p><l>gnostinen<s n="adj"/></l><r>gnostiline<s n="adj"/></r></p></e>
     <e><p><l>ikosaedrinen<s n="adj"/></l><r>kahekümnetahuline<s n="adj"/></r></p></e>
     <e><p><l>bioninen<s n="adj"/></l><r>biooniline<s n="adj"/></r></p></e>
-    <e><p><l>synnynnäinen<s n="adj"/></l><r>kaasasündinud<s n="adj"/></r></p></e>
-    <e><p><l>syöpynyt<s n="adj"/></l><r>roostetanud<s n="adj"/></r></p></e>
+    <e><p><l>synnynnäinen<s n="adj"/></l><r>kaasasündinud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>syöpynyt<s n="adj"/></l><r>roostetanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pahentava<s n="adj"/></l><r>halvendav<s n="adj"/></r></p></e>
     <e><p><l>psykosomaattinen<s n="adj"/></l><r>psühhosomaatiline<s n="adj"/></r></p></e>
     <e><p><l>diastolinen<s n="adj"/></l><r>diastoolne<s n="adj"/></r></p></e>
@@ -11081,7 +11095,7 @@
     <e><p><l>päivättävä<s n="adj"/></l><r>dateeritav<s n="adj"/></r></p></e>
     <e><p><l>antigeeninen<s n="adj"/></l><r>antigeeniline<s n="adj"/></r></p></e>
     <e><p><l>muuttumaton<s n="adj"/></l><r>muutumatu<s n="adj"/></r></p></e>
-    <e><p><l>kuorittu<s n="adj"/></l><r>kooritud<s n="adj"/></r></p></e>
+    <e><p><l>kuorittu<s n="adj"/></l><r>kooritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>eksegeettinen<s n="adj"/></l><r>eksegeetiline<s n="adj"/></r></p></e>
     <e><p><l>ylistävä<s n="adj"/></l><r>ülistav<s n="adj"/></r></p></e>
     <e><p><l>alkusoinnullinen<s n="adj"/></l><r>alliteratsiooniline<s n="adj"/></r></p></e>
@@ -11098,12 +11112,12 @@
     <e><p><l>perinataalinen<s n="adj"/></l><r>vastsündinute<s n="adj"/></r></p></e>
     <e><p><l>lauseopillinen<s n="adj"/></l><r>süntaktiline<s n="adj"/></r></p></e>
     <e><p><l>epätyydyttävä<s n="adj"/></l><r>mitterahuldav<s n="adj"/></r></p></e>
-    <e><p><l>kiiltävä<s n="adj"/></l><r>poleeritud<s n="adj"/></r></p></e>
-    <e><p><l>korni<s n="adj"/></l><r>kulunud<s n="adj"/></r></p></e>
+    <e><p><l>kiiltävä<s n="adj"/></l><r>poleeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>korni<s n="adj"/></l><r>kulunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>endoterminen<s n="adj"/></l><r>endotermiline<s n="adj"/></r></p></e>
     <e><p><l>isällinen<s n="adj"/></l><r>isalik<s n="adj"/></r></p></e>
     <e><p><l>vastanainut<s n="adj"/></l><r>äsjaabiellunu<s n="adj"/></r></p></e>
-    <e><p><l>kulunut<s n="adj"/></l><r>kulunud<s n="adj"/></r></p></e>
+    <e><p><l>kulunut<s n="adj"/></l><r>kulunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sieluton<s n="adj"/></l><r>hingetu<s n="adj"/></r></p></e>
     <e><p><l>vaahtoava<s n="adj"/></l><r>vahutav<s n="adj"/></r></p></e>
     <e><p><l>ekspressionistinen<s n="adj"/></l><r>ekspressionistlik<s n="adj"/></r></p></e>
@@ -11118,18 +11132,18 @@
     <e><p><l>käheä<s n="adj"/></l><r>kähe<s n="adj"/></r></p></e>
     <e><p><l>syksyinen<s n="adj"/></l><r>sügisene<s n="adj"/></r></p></e>
     <e><p><l>korviasärkevä<s n="adj"/></l><r>kõrvulukustav<s n="adj"/></r></p></e>
-    <e><p><l>pastöroitu<s n="adj"/></l><r>pastöriseeritud<s n="adj"/></r></p></e>
+    <e><p><l>pastöroitu<s n="adj"/></l><r>pastöriseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sferoidinen<s n="adj"/></l><r>kerakujuline<s n="adj"/></r></p></e>
     <e><p><l>heijastava<s n="adj"/></l><r>peegel-<s n="adj"/></r></p></e>
     <e><p><l>arkkityyppinen<s n="adj"/></l><r>arhetüüpiline<s n="adj"/></r></p></e>
     <e><p><l>loputon<s n="adj"/></l><r>lakkamatu<s n="adj"/></r></p></e>
     <e><p><l>imperialistinen<s n="adj"/></l><r>imperialistlik<s n="adj"/></r></p></e>
-    <e><p><l>pehmustettu<s n="adj"/></l><r>polsterdatud<s n="adj"/></r></p></e>
+    <e><p><l>pehmustettu<s n="adj"/></l><r>polsterdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>paljas<s n="adj"/></l><r>paljas<s n="adj"/></r></p></e>
     <e><p><l>kaksijakoinen<s n="adj"/></l><r>dihhotoomne<s n="adj"/></r></p></e>
     <e><p><l>ruumiiton<s n="adj"/></l><r>kehatu<s n="adj"/></r></p></e>
     <e><p><l>kaksinapainen<s n="adj"/></l><r>kahepooluseline<s n="adj"/></r></p></e>
-    <e><p><l>haluttu<s n="adj"/></l><r>ihaldatud<s n="adj"/></r></p></e>
+    <e><p><l>haluttu<s n="adj"/></l><r>ihaldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>analoginen<s n="adj"/></l><r>analoogiline<s n="adj"/></r></p></e>
     <e><p><l>atsimutaalinen<s n="adj"/></l><r>asimuut-<s n="adj"/></r></p></e>
     <e><p><l>riitaisa<s n="adj"/></l><r>riiakas<s n="adj"/></r></p></e>
@@ -11139,7 +11153,7 @@
     <e><p><l>isätön<s n="adj"/></l><r>isatu<s n="adj"/></r></p></e>
     <e><p><l>luokaton<s n="adj"/></l><r>klassideta<s n="adj"/></r></p></e>
     <e><p><l>pienehkö<s n="adj"/></l><r>väikesevõitu<s n="adj"/></r></p></e>
-    <e><p><l>lumottu<s n="adj"/></l><r>lummatud<s n="adj"/></r></p></e>
+    <e><p><l>lumottu<s n="adj"/></l><r>lummatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kiemurainen<s n="adj"/></l><r>käänuline<s n="adj"/></r></p></e>
     <e><p><l>nelikanavainen<s n="adj"/></l><r>kvardofooniline<s n="adj"/></r></p></e>
     <e><p><l>toksikologinen<s n="adj"/></l><r>toksikoloogiline<s n="adj"/></r></p></e>
@@ -11155,7 +11169,7 @@
     <e><p><l>painoton<s n="adj"/></l><r>kaalutu<s n="adj"/></r></p></e>
     <e><p><l>sekoittuva<s n="adj"/></l><r>segunev<s n="adj"/></r></p></e>
     <e><p><l>halventava<s n="adj"/></l><r>mustav<s n="adj"/></r></p></e>
-    <e><p><l>vastakuoriutunut<s n="adj"/></l><r>vastkoorunud<s n="adj"/></r></p></e>
+    <e><p><l>vastakuoriutunut<s n="adj"/></l><r>vastkoorunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>onomatopoeettinen<s n="adj"/></l><r>onomatopoeetiline<s n="adj"/></r></p></e>
     <e><p><l>anarkistinen<s n="adj"/></l><r>anarhistlik<s n="adj"/></r></p></e>
     <e><p><l>šovinistinen<s n="adj"/></l><r>šovinistlik<s n="adj"/></r></p></e>
@@ -11169,10 +11183,10 @@
     <e><p><l>hermostunut<s n="adj"/></l><r>pabinas<s n="adj"/></r></p></e>
     <e><p><l>antrooppinen<s n="adj"/></l><r>antroopsus-<s n="adj"/></r></p></e>
     <e><p><l>monivärinen<s n="adj"/></l><r>mitmevärviline<s n="adj"/></r></p></e>
-    <e><p><l>sopeutunut<s n="adj"/></l><r>kohanenud<s n="adj"/></r></p></e>
+    <e><p><l>sopeutunut<s n="adj"/></l><r>kohanenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>vedetön<s n="adj"/></l><r>veetu<s n="adj"/></r></p></e>
     <e><p><l>katekeettinen<s n="adj"/></l><r>katehheetiline<s n="adj"/></r></p></e>
-    <e><p><l>homogenisoitu<s n="adj"/></l><r>homogeniseeritud<s n="adj"/></r></p></e>
+    <e><p><l>homogenisoitu<s n="adj"/></l><r>homogeniseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>anteeksiantamaton<s n="adj"/></l><r>andestamatu<s n="adj"/></r></p></e>
     <e><p><l>bakterisidinen<s n="adj"/></l><r>bakteritsiid-<s n="adj"/></r></p></e>
     <e><p><l>loppumaton<s n="adj"/></l><r>lõputu<s n="adj"/></r></p></e>
@@ -11219,24 +11233,24 @@
     <e><p><l>synkroninen<s n="adj"/></l><r>sünkrooniline<s n="adj"/></r></p></e>
     <e><p><l>mielistelevä<s n="adj"/></l><r>lipitsev<s n="adj"/></r></p></e>
     <e><p><l>katabolinen<s n="adj"/></l><r>katabolistlik<s n="adj"/></r></p></e>
-    <e><p><l>vulkanoitu<s n="adj"/></l><r>vulkaniseeritud<s n="adj"/></r></p></e>
+    <e><p><l>vulkanoitu<s n="adj"/></l><r>vulkaniseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>genitourinaalinen<s n="adj"/></l><r>kuse-suguelundite<s n="adj"/></r></p></e>
     <e><p><l>sähkömotorinen<s n="adj"/></l><r>elektromotoor-<s n="adj"/></r></p></e>
     <e><p><l>kitiinimäinen<s n="adj"/></l><r>kitiin-<s n="adj"/></r></p></e>
     <e><p><l>käsittämätön<s n="adj"/></l><r>seletamatu<s n="adj"/></r></p></e>
     <e><p><l>antroposentrinen<s n="adj"/></l><r>antropotsentriline<s n="adj"/></r></p></e>
-    <e><p><l>ylikyllästetty<s n="adj"/></l><r>üleküllastunud<s n="adj"/></r></p></e>
+    <e><p><l>ylikyllästetty<s n="adj"/></l><r>üleküllastunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>yliaistillinen<s n="adj"/></l><r>meelteväline<s n="adj"/></r></p></e>
-    <e><p><l>kuohittu<s n="adj"/></l><r>kohitsetud<s n="adj"/></r></p></e>
+    <e><p><l>kuohittu<s n="adj"/></l><r>kohitsetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>deklamatorinen<s n="adj"/></l><r>ilukõneline<s n="adj"/></r></p></e>
     <e><p><l>erogeeninen<s n="adj"/></l><r>erogeenne<s n="adj"/></r></p></e>
     <e><p><l>punatukkainen<s n="adj"/></l><r>punapäine<s n="adj"/></r></p></e>
     <e><p><l>sylinterimäinen<s n="adj"/></l><r>silindriline<s n="adj"/></r></p></e>
     <e><p><l>seismologinen<s n="adj"/></l><r>seismoloogiline<s n="adj"/></r></p></e>
-    <e><p><l>huolestunut<s n="adj"/></l><r>äraehmatatud<s n="adj"/></r></p></e>
+    <e><p><l>huolestunut<s n="adj"/></l><r>äraehmatatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>armoton<s n="adj"/></l><r>halastamatu<s n="adj"/></r></p></e>
     <e><p><l>amfoteerinen<s n="adj"/></l><r>amfoteerne<s n="adj"/></r></p></e>
-    <e><p><l>jakautunut<s n="adj"/></l><r>killustunud<s n="adj"/></r></p></e>
+    <e><p><l>jakautunut<s n="adj"/></l><r>killustunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>euklidinen<s n="adj"/></l><r>Eukleidese<s n="adj"/></r></p></e>
     <e><p><l>kaksihampainen<s n="adj"/></l><r>kahehambaline<s n="adj"/></r></p></e>
     <e><p><l>uppoamaton<s n="adj"/></l><r>uppumatu<s n="adj"/></r></p></e>
@@ -11349,13 +11363,13 @@
     <e><p><l>idiografinen<s n="adj"/></l><r>idiograafiline<s n="adj"/></r></p></e>
     <e><p><l>lohduttava<s n="adj"/></l><r>lohutav<s n="adj"/></r></p></e>
     <e><p><l>kaksisivuinen<s n="adj"/></l><r>kähenäoline<s n="adj"/></r></p></e>
-    <e><p><l>ylensyönyt<s n="adj"/></l><r>ületoidetud<s n="adj"/></r></p></e>
+    <e><p><l>ylensyönyt<s n="adj"/></l><r>ületoidetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>levoton<s n="adj"/></l><r>rahutu<s n="adj"/></r></p></e>
-    <e><p><l>masentunut<s n="adj"/></l><r>muserdatud<s n="adj"/></r></p></e>
+    <e><p><l>masentunut<s n="adj"/></l><r>muserdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>laatikkomainen<s n="adj"/></l><r>karbikujuline<s n="adj"/></r></p></e>
     <e><p><l>ammoniakaalinen<s n="adj"/></l><r>ammoniaagi-<s n="adj"/></r></p></e>
     <e><p><l>allotrooppinen<s n="adj"/></l><r>allotroone<s n="adj"/></r></p></e>
-    <e><p><l>veistetty<s n="adj"/></l><r>nikerdatud<s n="adj"/></r></p></e>
+    <e><p><l>veistetty<s n="adj"/></l><r>nikerdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epävarma<s n="adj"/></l><r>küsitav<s n="adj"/></r></p></e>
     <e><p><l>eeppinen<s n="adj"/></l><r>eepiline<s n="adj"/></r></p></e>
     <e><p><l>Balttilainen<s n="adj"/></l><r>balti<s n="adj"/></r></p></e>
@@ -11388,7 +11402,7 @@
     <e><p><l>hydrokineettinen<s n="adj"/></l><r>hüdrokineetiline<s n="adj"/></r></p></e>
     <e><p><l>heterologinen<s n="adj"/></l><r>heteroloogiline<s n="adj"/></r></p></e>
     <e><p><l>alkeeminen<s n="adj"/></l><r>alkeemia-<s n="adj"/></r></p></e>
-    <e><p><l>kirottu<s n="adj"/></l><r>neetud<s n="adj"/></r></p></e>
+    <e><p><l>kirottu<s n="adj"/></l><r>neetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>katadrominen<s n="adj"/></l><r>katadroomne<s n="adj"/></r></p></e>
     <e><p><l>siivetön<s n="adj"/></l><r>tiibadeta<s n="adj"/></r></p></e>
     <e><p><l>hölmö<s n="adj"/></l><r>tohman<s n="adj"/></r></p></e>
@@ -11410,7 +11424,7 @@
     <e><p><l>töykeä<s n="adj"/></l><r>häbematu<s n="adj"/></r></p></e>
     <e><p><l>kiliastinen<s n="adj"/></l><r>kiliastiline<s n="adj"/></r></p></e>
     <e><p><l>luumarjainen<s n="adj"/></l><r>luuviljaline<s n="adj"/></r></p></e>
-    <e><p><l>esipakattu<s n="adj"/></l><r>eelpakendatud<s n="adj"/></r></p></e>
+    <e><p><l>esipakattu<s n="adj"/></l><r>eelpakendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>lämmitettävä<s n="adj"/></l><r>kuumutatav<s n="adj"/></r></p></e>
     <e><p><l>kylmäsydäminen<s n="adj"/></l><r>tundetu<s n="adj"/></r></p></e>
     <e><p><l>kieliopillinen<s n="adj"/></l><r>grammatiline<s n="adj"/></r></p></e>
@@ -11418,7 +11432,7 @@
     <e><p><l>viuhkamainen<s n="adj"/></l><r>lehvikukujuline<s n="adj"/></r></p></e>
     <e><p><l>haavainen<s n="adj"/></l><r>haavandiline<s n="adj"/></r></p></e>
     <e><p><l>liikkumiskyvytön<s n="adj"/></l><r>liikumisvõimetu<s n="adj"/></r></p></e>
-    <e><p><l>kielletty<s n="adj"/></l><r>keelatud<s n="adj"/></r></p></e>
+    <e><p><l>kielletty<s n="adj"/></l><r>keelatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hatuton<s n="adj"/></l><r>paljapäi<s n="adj"/></r></p></e>
     <e><p><l>ymmärrettävä<s n="adj"/></l><r>haaratav<s n="adj"/></r></p></e>
     <e><p><l>värinpitävä<s n="adj"/></l><r>värvikindel<s n="adj"/></r></p></e>
@@ -11492,7 +11506,7 @@
     <e><p><l>hapahko<s n="adj"/></l><r>hapu<s n="adj"/></r></p></e>
     <e><p><l>antropometrinen<s n="adj"/></l><r>antropomeetriline<s n="adj"/></r></p></e>
     <e><p><l>antropofaginen<s n="adj"/></l><r>antropofaagne<s n="adj"/></r></p></e>
-    <e><p><l>sanaton<s n="adj"/></l><r>tummakslöödud<s n="adj"/></r></p></e>
+    <e><p><l>sanaton<s n="adj"/></l><r>tummakslöödud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>runsas<s n="adj"/></l><r>helde<s n="adj"/></r></p></e>
     <e><p><l>rasvaton<s n="adj"/></l><r>rasvatu<s n="adj"/></r></p></e>
     <e><p><l>lasiton<s n="adj"/></l><r>klaasideta<s n="adj"/></r></p></e>
@@ -11500,7 +11514,7 @@
     <e><p><l>tuulinen<s n="adj"/></l><r>tuuline<s n="adj"/></r></p></e>
     <e><p><l>säihkyvä<s n="adj"/></l><r>läiklev<s n="adj"/></r></p></e>
     <e><p><l>konsentrinen<s n="adj"/></l><r>kontsentriline<s n="adj"/></r></p></e>
-    <e><p><l>vaatetettu<s n="adj"/></l><r>rõivastatud<s n="adj"/></r></p></e>
+    <e><p><l>vaatetettu<s n="adj"/></l><r>rõivastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyhmä<s n="adj"/></l><r>puupea<s n="adj"/></r></p></e>
     <e><p><l>täydentävä<s n="adj"/></l><r>täiendav<s n="adj"/></r></p></e>
     <e><p><l>parantava<s n="adj"/></l><r>tervendav<s n="adj"/></r></p></e>
@@ -11514,7 +11528,7 @@
     <e><p><l>tasalämpöinen<s n="adj"/></l><r>püsisoojane<s n="adj"/></r></p></e>
     <e><p><l>pyökkipuinen<s n="adj"/></l><r>pöögipuidust<s n="adj"/></r></p></e>
     <e><p><l>pullollinen<s n="adj"/></l><r>pudelitäis<s n="adj"/></r></p></e>
-    <e><p><l>ostettu<s n="adj"/></l><r>ostetud<s n="adj"/></r></p></e>
+    <e><p><l>ostettu<s n="adj"/></l><r>ostetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>myrskynkestävä<s n="adj"/></l><r>tormikindel<s n="adj"/></r></p></e>
     <e><p><l>merellinen<s n="adj"/></l><r>mere-<s n="adj"/></r></p></e>
     <e><p><l>kyseenalainen<s n="adj"/></l><r>küsitav<s n="adj"/></r></p></e>
@@ -11528,20 +11542,20 @@
     <e><p><l>arka<s n="adj"/></l><r>kartlik<s n="adj"/></r></p></e>
     <e><p><l>uusi<s n="adj"/></l><r>uus<s n="adj"/></r></p></e>
     <e><p><l>uudenlainen<s n="adj"/></l><r>uus<s n="adj"/></r></p></e>
-    <e><p><l>tunnettu<s n="adj"/></l><r>tuntud<s n="adj"/></r></p></e>
-    <e><p><l>syntynyt<s n="adj"/></l><r>sündinud<s n="adj"/></r></p></e>
-    <e><p><l>tehostettu<s n="adj"/></l><r>tugevdatud<s n="adj"/></r></p></e>
-    <e><p><l>julkistettu<s n="adj"/></l><r>avaldatud<s n="adj"/></r></p></e>
-    <e><p><l>julkaistu<s n="adj"/></l><r>avaldatud<s n="adj"/></r></p></e>
+    <e><p><l>tunnettu<s n="adj"/></l><r>tuntud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>syntynyt<s n="adj"/></l><r>sündinud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tehostettu<s n="adj"/></l><r>tugevdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>julkistettu<s n="adj"/></l><r>avaldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>julkaistu<s n="adj"/></l><r>avaldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>paljo<s n="adj"/></l><r>palju<s n="adj"/></r></p></e>
     <e><p><l>poliittinen<s n="adj"/></l><r>poliitiline<s n="adj"/></r></p></e>
     <e><p><l>jatkuva<s n="adj"/></l><r>pidev<s n="adj"/></r></p></e>
-    <e><p><l>harkittu<s n="adj"/></l><r>läbimõeldud<s n="adj"/></r></p></e>
-    <e><p><l>harkittu<s n="adj"/></l><r>kaalutletud<s n="adj"/></r></p></e>
+    <e><p><l>harkittu<s n="adj"/></l><r>läbimõeldud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>harkittu<s n="adj"/></l><r>kaalutletud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kansainvälinen<s n="adj"/></l><r>rahvusvaheline<s n="adj"/></r></p></e>
     <e><p><l>vastaavanlainen<s n="adj"/></l><r>sarnane<s n="adj"/></r></p></e>
     <e><p><l>vastaava<s n="adj"/></l><r>sarnane<s n="adj"/></r></p></e>
-    <e><p><l>nimitetty<s n="adj"/></l><r>määratud<s n="adj"/></r></p></e>
+    <e><p><l>nimitetty<s n="adj"/></l><r>määratud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sosiaalinen<s n="adj"/></l><r>sotsiaalne<s n="adj"/></r></p></e>
     <e><p><l>matala<s n="adj"/></l><r>madal<s n="adj"/></r></p></e>
     <e><p><l>valkea<s n="adj"/></l><r>valge<s n="adj"/></r></p></e>
@@ -11558,18 +11572,18 @@
     <e><p><l>vahva<s n="adj"/></l><r>tugev<s n="adj"/></r></p></e>
     <e><p><l>leveä<s n="adj"/></l><r>lai<s n="adj"/></r></p></e>
     <e><p><l>laaja<s n="adj"/></l><r>lai<s n="adj"/></r></p></e>
-    <e><p><l>rajoitettu<s n="adj"/></l><r>piiratud<s n="adj"/></r></p></e>
-    <e><p><l>rajallinen<s n="adj"/></l><r>piiratud<s n="adj"/></r></p></e>
-    <e><p><l>suurentunut<s n="adj"/></l><r>kasvanud<s n="adj"/></r></p></e>
+    <e><p><l>rajoitettu<s n="adj"/></l><r>piiratud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>rajallinen<s n="adj"/></l><r>piiratud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>suurentunut<s n="adj"/></l><r>kasvanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>musiikillinen<s n="adj"/></l><r>muusikaline<s n="adj"/></r></p></e>
-    <e><p><l>valittu<s n="adj"/></l><r>valitud<s n="adj"/></r></p></e>
+    <e><p><l>valittu<s n="adj"/></l><r>valitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>punainen<s n="adj"/></l><r>punane<s n="adj"/></r></p></e>
     <e><p><l>taloudellinen<s n="adj"/></l><r>rahandus-<s n="adj"/></r></p></e>
     <e><p><l>taloudellinen<s n="adj"/></l><r>rahaline<s n="adj"/></r></p></e>
     <e><p><l>taloudellinen<s n="adj"/></l><r>finants-<s n="adj"/></r></p></e>
     <e><p><l>tyyni<s n="adj"/></l><r>rahulik<s n="adj"/></r></p></e>
-    <e><p><l>ansaittu<s n="adj"/></l><r>väljateenitud<s n="adj"/></r></p></e>
-    <e><p><l>ansaittu<s n="adj"/></l><r>teenitud<s n="adj"/></r></p></e>
+    <e><p><l>ansaittu<s n="adj"/></l><r>väljateenitud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>ansaittu<s n="adj"/></l><r>teenitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>historiallinen<s n="adj"/></l><r>ajalooline<s n="adj"/></r></p></e>
     <e><p><l>merkittävä<s n="adj"/></l><r>märkimisväärne<s n="adj"/></r></p></e>
     <e><p><l>kulttuurinen<s n="adj"/></l><r>kultuuri-<s n="adj"/></r></p></e>
@@ -11578,16 +11592,16 @@
     <e><p><l>fyysinen<s n="adj"/></l><r>füüsiline<s n="adj"/></r></p></e>
     <e><p><l>varaton<s n="adj"/></l><r>vaene<s n="adj"/></r></p></e>
     <e><p><l>köyhä<s n="adj"/></l><r>vaene<s n="adj"/></r></p></e>
-    <e><p><l>suunniteltu<s n="adj"/></l><r>kavandatud<s n="adj"/></r></p></e>
-    <e><p><l>tunnustettu<s n="adj"/></l><r>tunnustatud<s n="adj"/></r></p></e>
-    <e><p><l>tunnustettu<s n="adj"/></l><r>teada-tuntud<s n="adj"/></r></p></e>
-    <e><p><l>hyväksytty<s n="adj"/></l><r>tunnustatud<s n="adj"/></r></p></e>
-    <e><p><l>hyväksytty<s n="adj"/></l><r>omaksvõetud<s n="adj"/></r></p></e>
+    <e><p><l>suunniteltu<s n="adj"/></l><r>kavandatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tunnustettu<s n="adj"/></l><r>tunnustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tunnustettu<s n="adj"/></l><r>teada-tuntud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hyväksytty<s n="adj"/></l><r>tunnustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hyväksytty<s n="adj"/></l><r>omaksvõetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>digitaalinen<s n="adj"/></l><r>digitaalne<s n="adj"/></r></p></e>
     <e><p><l>oleva<s n="adj"/></l><r>praegune<s n="adj"/></r></p></e>
     <e><p><l>oleva<s n="adj"/></l><r>olemasolev<s n="adj"/></r></p></e>
     <e><p><l>oleva<s n="adj"/></l><r>asuv<s n="adj"/></r></p></e>
-    <e><p><l>haudattu<s n="adj"/></l><r>maetud<s n="adj"/></r></p></e>
+    <e><p><l>haudattu<s n="adj"/></l><r>maetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tieteellinen<s n="adj"/></l><r>teaduslik<s n="adj"/></r></p></e>
     <e><p><l>urbaani<s n="adj"/></l><r>linna-<s n="adj"/></r></p></e>
     <e><p><l>vieras<s n="adj"/></l><r>tundmatu<s n="adj"/></r></p></e>
@@ -11597,31 +11611,31 @@
     <e><p><l>nouseva<s n="adj"/></l><r>tõusev<s n="adj"/></r></p></e>
     <e><p><l>nouseva<s n="adj"/></l><r>suurenev<s n="adj"/></r></p></e>
     <e><p><l>nouseva<s n="adj"/></l><r>kasvav<s n="adj"/></r></p></e>
-    <e><p><l>jaettu<s n="adj"/></l><r>jagatud<s n="adj"/></r></p></e>
-    <e><p><l>hyväksytty<s n="adj"/></l><r>heakskiidetud<s n="adj"/></r></p></e>
+    <e><p><l>jaettu<s n="adj"/></l><r>jagatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hyväksytty<s n="adj"/></l><r>heakskiidetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tekninen<s n="adj"/></l><r>tehniline<s n="adj"/></r></p></e>
     <e><p><l>teknillinen<s n="adj"/></l><r>tehniline<s n="adj"/></r></p></e>
-    <e><p><l>etsitty<s n="adj"/></l><r>otsitud<s n="adj"/></r></p></e>
-    <e><p><l>sähköinen<s n="adj"/></l><r>laetud<s n="adj"/></r></p></e>
+    <e><p><l>etsitty<s n="adj"/></l><r>otsitud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>sähköinen<s n="adj"/></l><r>laetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sähköinen<s n="adj"/></l><r>elektri-<s n="adj"/></r></p></e>
     <e><p><l>sähköinen<s n="adj"/></l><r>elekter-<s n="adj"/></r></p></e>
     <e><p><l>rodullinen<s n="adj"/></l><r>rassiline<s n="adj"/></r></p></e>
     <e><p><l>rodullinen<s n="adj"/></l><r>rassi-<s n="adj"/></r></p></e>
     <e><p><l>kuninkaallinen<s n="adj"/></l><r>kuninglik<s n="adj"/></r></p></e>
-    <e><p><l>aseistettu<s n="adj"/></l><r>relvastatud<s n="adj"/></r></p></e>
-    <e><p><l>aseistautunut<s n="adj"/></l><r>relvastatud<s n="adj"/></r></p></e>
+    <e><p><l>aseistettu<s n="adj"/></l><r>relvastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>aseistautunut<s n="adj"/></l><r>relvastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyypillinen<s n="adj"/></l><r>tüüpiline<s n="adj"/></r></p></e>
     <e><p><l>tyypillinen<s n="adj"/></l><r>tüüp-<s n="adj"/></r></p></e>
     <e><p><l>rikas<s n="adj"/></l><r>rikas<s n="adj"/></r></p></e>
     <e><p><l>äveriäs<s n="adj"/></l><r>rikas<s n="adj"/></r></p></e>
-    <e><p><l>jaettu<s n="adj"/></l><r>jaotatud<s n="adj"/></r></p></e>
+    <e><p><l>jaettu<s n="adj"/></l><r>jaotatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>etninen<s n="adj"/></l><r>rahvus-<s n="adj"/></r></p></e>
     <e><p><l>etninen<s n="adj"/></l><r>etniline<s n="adj"/></r></p></e>
     <e><p><l>elektroninen<s n="adj"/></l><r>elektrooniline<s n="adj"/></r></p></e>
     <e><p><l>syytetty<s n="adj"/></l><r>süüalune<s n="adj"/></r></p></e>
-    <e><p><l>vahingoittunut<s n="adj"/></l><r>kahjustatud<s n="adj"/></r></p></e>
-    <e><p><l>kokenut<s n="adj"/></l><r>kogenud<s n="adj"/></r></p></e>
-    <e><p><l>järjestetty<s n="adj"/></l><r>korraldatud<s n="adj"/></r></p></e>
+    <e><p><l>vahingoittunut<s n="adj"/></l><r>kahjustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kokenut<s n="adj"/></l><r>kogenud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>järjestetty<s n="adj"/></l><r>korraldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>muuttuva<s n="adj"/></l><r>muutuv<s n="adj"/></r></p></e>
     <e><p><l>muuttuva<s n="adj"/></l><r>muutlik<s n="adj"/></r></p></e>
     <e><p><l>tavaton<s n="adj"/></l><r>ebaharilik<s n="adj"/></r></p></e>
@@ -11633,7 +11647,7 @@
     <e><p><l>väitetty<s n="adj"/></l><r>väidetav<s n="adj"/></r></p></e>
     <e><p><l>mentaalinen<s n="adj"/></l><r>vaimne<s n="adj"/></r></p></e>
     <e><p><l>henkinen<s n="adj"/></l><r>vaimne<s n="adj"/></r></p></e>
-    <e><p><l>integroitu<s n="adj"/></l><r>integreeritud<s n="adj"/></r></p></e>
+    <e><p><l>integroitu<s n="adj"/></l><r>integreeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>yksityiskohtainen<s n="adj"/></l><r>üksikasjalik<s n="adj"/></r></p></e>
     <e><p><l>yksityiskohtainen<s n="adj"/></l><r>detailne<s n="adj"/></r></p></e>
     <e><p><l>kokeellinen<s n="adj"/></l><r>test-<s n="adj"/></r></p></e>
@@ -11647,7 +11661,7 @@
     <e><p><l>uusin<s n="adj"/></l><r>viimane<s n="adj"/></r></p></e>
     <e><p><l>tulokseton<s n="adj"/></l><r>edutu<s n="adj"/></r></p></e>
     <e><p><l>paljas<s n="adj"/></l><r>katmata<s n="adj"/></r></p></e>
-    <e><p><l>avustettu<s n="adj"/></l><r>abistatud<s n="adj"/></r></p></e>
+    <e><p><l>avustettu<s n="adj"/></l><r>abistatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kallis<s n="adj"/></l><r>kulukas<s n="adj"/></r></p></e>
     <e><p><l>kallis<s n="adj"/></l><r>kallis<s n="adj"/></r></p></e>
     <e><p><l>väkivaltainen<s n="adj"/></l><r>vägivaldne<s n="adj"/></r></p></e>
@@ -11669,17 +11683,17 @@
     <e><p><l>automaattinen<s n="adj"/></l><r>automaatne<s n="adj"/></r></p></e>
     <e><p><l>sakea<s n="adj"/></l><r>paks<s n="adj"/></r></p></e>
     <e><p><l>paksu<s n="adj"/></l><r>paks<s n="adj"/></r></p></e>
-    <e><p><l>karannut<s n="adj"/></l><r>põgenenud<s n="adj"/></r></p></e>
+    <e><p><l>karannut<s n="adj"/></l><r>põgenenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>mielenkiintoinen<s n="adj"/></l><r>huvitav<s n="adj"/></r></p></e>
     <e><p><l>kiintoisa<s n="adj"/></l><r>huvitav<s n="adj"/></r></p></e>
     <e><p><l>kiinnostava<s n="adj"/></l><r>huvitav<s n="adj"/></r></p></e>
     <e><p><l>heikko<s n="adj"/></l><r>nõrk<s n="adj"/></r></p></e>
-    <e><p><l>peritty<s n="adj"/></l><r>päritud<s n="adj"/></r></p></e>
+    <e><p><l>peritty<s n="adj"/></l><r>päritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>romanttinen<s n="adj"/></l><r>romantiline<s n="adj"/></r></p></e>
     <e><p><l>geneettinen<s n="adj"/></l><r>geneetiline<s n="adj"/></r></p></e>
     <e><p><l>tehokas<s n="adj"/></l><r>tõhus<s n="adj"/></r></p></e>
-    <e><p><l>murhattu<s n="adj"/></l><r>tapetud<s n="adj"/></r></p></e>
-    <e><p><l>murhattu<s n="adj"/></l><r>mõrvatud<s n="adj"/></r></p></e>
+    <e><p><l>murhattu<s n="adj"/></l><r>tapetud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>murhattu<s n="adj"/></l><r>mõrvatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>aktivistinen<s n="adj"/></l><r>aktivist<s n="adj"/></r></p></e>
     <e><p><l>likvidi<s n="adj"/></l><r>vedel<s n="adj"/></r></p></e>
     <e><p><l>progressiivinen<s n="adj"/></l><r>progressiivne<s n="adj"/></r></p></e>
@@ -11687,7 +11701,7 @@
     <e><p><l>urheilullinen<s n="adj"/></l><r>atleetlik<s n="adj"/></r></p></e>
     <e><p><l>atleettinen<s n="adj"/></l><r>atleetlik<s n="adj"/></r></p></e>
     <e><p><l>kansalainen<s n="adj"/></l><r>kodanik<s n="adj"/></r></p></e>
-    <e><p><l>dokumentoitu<s n="adj"/></l><r>dokumenteeritud<s n="adj"/></r></p></e>
+    <e><p><l>dokumentoitu<s n="adj"/></l><r>dokumenteeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tarunomainen<s n="adj"/></l><r>legendaarne<s n="adj"/></r></p></e>
     <e><p><l>legendaarinen<s n="adj"/></l><r>legendaarne<s n="adj"/></r></p></e>
     <e><p><l>akustinen<s n="adj"/></l><r>akustiline<s n="adj"/></r></p></e>
@@ -11711,7 +11725,7 @@
     <e><p><l>aggressiivinen<s n="adj"/></l><r>agressiivne<s n="adj"/></r></p></e>
     <e><p><l>merkittävä<s n="adj"/></l><r>tähelepanuväärne<s n="adj"/></r></p></e>
     <e><p><l>huomattava<s n="adj"/></l><r>tähelepanuväärne<s n="adj"/></r></p></e>
-    <e><p><l>aktivoitu<s n="adj"/></l><r>aktiveeritud<s n="adj"/></r></p></e>
+    <e><p><l>aktivoitu<s n="adj"/></l><r>aktiveeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>minimaalinen<s n="adj"/></l><r>vähim<s n="adj"/></r></p></e>
     <e><p><l>minimaalinen<s n="adj"/></l><r>minimaalne<s n="adj"/></r></p></e>
     <e><p><l>sosialistinen<s n="adj"/></l><r>sotsialistlik<s n="adj"/></r></p></e>
@@ -11720,7 +11734,7 @@
     <e><p><l>mannermainen<s n="adj"/></l><r>kontinentaalne<s n="adj"/></r></p></e>
     <e><p><l>toistuva<s n="adj"/></l><r>taasesinev<s n="adj"/></r></p></e>
     <e><p><l>jyrkkä<s n="adj"/></l><r>järsk<s n="adj"/></r></p></e>
-    <e><p><l>laiton<s n="adj"/></l><r>keelatud<s n="adj"/></r></p></e>
+    <e><p><l>laiton<s n="adj"/></l><r>keelatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>valtava<s n="adj"/></l><r>üüratu<s n="adj"/></r></p></e>
     <e><p><l>valtava<s n="adj"/></l><r>päratu<s n="adj"/></r></p></e>
     <e><p><l>outo<s n="adj"/></l><r>kummaline<s n="adj"/></r></p></e>
@@ -11729,8 +11743,8 @@
     <e><p><l>huonompi<s n="adj"/></l><r>halvem<s n="adj"/></r></p></e>
     <e><p><l>luksus<s n="adj"/></l><r>luksus<s n="adj"/></r></p></e>
     <e><p><l>vihamielinen<s n="adj"/></l><r>vaenulik<s n="adj"/></r></p></e>
-    <e><p><l>arvostettu<s n="adj"/></l><r>lugupeetud<s n="adj"/></r></p></e>
-    <e><p><l>arvostettu<s n="adj"/></l><r>hinnatud<s n="adj"/></r></p></e>
+    <e><p><l>arvostettu<s n="adj"/></l><r>lugupeetud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>arvostettu<s n="adj"/></l><r>hinnatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>uhanalainen<s n="adj"/></l><r>hävimisohus<s n="adj"/></r></p></e>
     <e><p><l>täsmällinen<s n="adj"/></l><r>täpne<s n="adj"/></r></p></e>
     <e><p><l>tarkka<s n="adj"/></l><r>täpne<s n="adj"/></r></p></e>
@@ -11755,10 +11769,10 @@
     <e><p><l>krooninen<s n="adj"/></l><r>krooniline<s n="adj"/></r></p></e>
     <e><p><l>mutkikas<s n="adj"/></l><r>keeruline<s n="adj"/></r></p></e>
     <e><p><l>symbolinen<s n="adj"/></l><r>sümboolne<s n="adj"/></r></p></e>
-    <e><p><l>merkitty<s n="adj"/></l><r>märgistatud<s n="adj"/></r></p></e>
+    <e><p><l>merkitty<s n="adj"/></l><r>märgistatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pahamaineinen<s n="adj"/></l><r>kurikuulus<s n="adj"/></r></p></e>
-    <e><p><l>motivoitunut<s n="adj"/></l><r>motiveeritud<s n="adj"/></r></p></e>
-    <e><p><l>motivoitunut<s n="adj"/></l><r>ajendatud<s n="adj"/></r></p></e>
+    <e><p><l>motivoitunut<s n="adj"/></l><r>motiveeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>motivoitunut<s n="adj"/></l><r>ajendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>operatiivinen<s n="adj"/></l><r>tegutsev<s n="adj"/></r></p></e>
     <e><p><l>kirkollinen<s n="adj"/></l><r>kiriku-<s n="adj"/></r></p></e>
     <e><p><l>kirkollinen<s n="adj"/></l><r>kiriklik<s n="adj"/></r></p></e>
@@ -11784,20 +11798,20 @@
     <e><p><l>valikoiva<s n="adj"/></l><r>valikuline<s n="adj"/></r></p></e>
     <e><p><l>valikoiva<s n="adj"/></l><r>valik-<s n="adj"/></r></p></e>
     <e><p><l>valikoiva<s n="adj"/></l><r>selektiivne<s n="adj"/></r></p></e>
-    <e><p><l>automatisoitu<s n="adj"/></l><r>automatiseeritud<s n="adj"/></r></p></e>
+    <e><p><l>automatisoitu<s n="adj"/></l><r>automatiseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tunnettu<s n="adj"/></l><r>kuulus<s n="adj"/></r></p></e>
     <e><p><l>riittämätön<s n="adj"/></l><r>mitteküllaldane<s n="adj"/></r></p></e>
-    <e><p><l>vanhentunut<s n="adj"/></l><r>aegunud<s n="adj"/></r></p></e>
+    <e><p><l>vanhentunut<s n="adj"/></l><r>aegunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>vuorinen<s n="adj"/></l><r>mägine<s n="adj"/></r></p></e>
     <e><p><l>nimetön<s n="adj"/></l><r>nimetu<s n="adj"/></r></p></e>
-    <e><p><l>unohdettu<s n="adj"/></l><r>unustatud<s n="adj"/></r></p></e>
+    <e><p><l>unohdettu<s n="adj"/></l><r>unustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rahallinen<s n="adj"/></l><r>rahaline<s n="adj"/></r></p></e>
     <e><p><l>passiivinen<s n="adj"/></l><r>passiivne<s n="adj"/></r></p></e>
     <e><p><l>passiivimuotoinen<s n="adj"/></l><r>passiivne<s n="adj"/></r></p></e>
     <e><p><l>raamatullinen<s n="adj"/></l><r>piibli-<s n="adj"/></r></p></e>
     <e><p><l>raamatullinen<s n="adj"/></l><r>piibellik<s n="adj"/></r></p></e>
     <e><p><l>esihistoriallinen<s n="adj"/></l><r>eelajalooline<s n="adj"/></r></p></e>
-    <e><p><l>vuokrattu<s n="adj"/></l><r>üüritud<s n="adj"/></r></p></e>
+    <e><p><l>vuokrattu<s n="adj"/></l><r>üüritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ikoninen<s n="adj"/></l><r>ikooniline<s n="adj"/></r></p></e>
     <e><p><l>tuottoisa<s n="adj"/></l><r>tulus<s n="adj"/></r></p></e>
     <e><p><l>nokkela<s n="adj"/></l><r>nutikas<s n="adj"/></r></p></e>
@@ -11809,11 +11823,11 @@
     <e><p><l>vahingollinen<s n="adj"/></l><r>kahjustav<s n="adj"/></r></p></e>
     <e><p><l>kolmikulmainen<s n="adj"/></l><r>kolmnurkne<s n="adj"/></r></p></e>
     <e><p><l>itseliikkuva<s n="adj"/></l><r>iseliikuv<s n="adj"/></r></p></e>
-    <e><p><l>kumuloitunut<s n="adj"/></l><r>kuhjunud<s n="adj"/></r></p></e>
-    <e><p><l>vaihdettu<s n="adj"/></l><r>vahetatud<s n="adj"/></r></p></e>
+    <e><p><l>kumuloitunut<s n="adj"/></l><r>kuhjunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>vaihdettu<s n="adj"/></l><r>vahetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>painollinen<s n="adj"/></l><r>rõhuline<s n="adj"/></r></p></e>
-    <e><p><l>vanhentunut<s n="adj"/></l><r>vananenud<s n="adj"/></r></p></e>
-    <e><p><l>vanhentunut<s n="adj"/></l><r>iganenud<s n="adj"/></r></p></e>
+    <e><p><l>vanhentunut<s n="adj"/></l><r>vananenud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>vanhentunut<s n="adj"/></l><r>iganenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pelottava<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
     <e><p><l>kauhea<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
     <e><p><l>kammottava<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
@@ -11827,13 +11841,13 @@
     <e><p><l>numeerinen<s n="adj"/></l><r>arvuline<s n="adj"/></r></p></e>
     <e><p><l>ammatillinen<s n="adj"/></l><r>kutse-<s n="adj"/></r></p></e>
     <e><p><l>levoton<s n="adj"/></l><r>ärev<s n="adj"/></r></p></e>
-    <e><p><l>pettynyt<s n="adj"/></l><r>pettunud<s n="adj"/></r></p></e>
+    <e><p><l>pettynyt<s n="adj"/></l><r>pettunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pastoraalinen<s n="adj"/></l><r>pastoraalne<s n="adj"/></r></p></e>
     <e><p><l>innostunut<s n="adj"/></l><r>innukas<s n="adj"/></r></p></e>
     <e><p><l>tyytyväinen<s n="adj"/></l><r>rahul<s n="adj"/></r></p></e>
     <e><p><l>rehellinen<s n="adj"/></l><r>aus<s n="adj"/></r></p></e>
     <e><p><l>yllättävä<s n="adj"/></l><r>üllatav<s n="adj"/></r></p></e>
-    <e><p><l>nopeutettu<s n="adj"/></l><r>kiirendatud<s n="adj"/></r></p></e>
+    <e><p><l>nopeutettu<s n="adj"/></l><r>kiirendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>traaginen<s n="adj"/></l><r>traagiline<s n="adj"/></r></p></e>
     <e><p><l>tuhoisa<s n="adj"/></l><r>katastroofiline<s n="adj"/></r></p></e>
     <e><p><l>tuhoisa<s n="adj"/></l><r>hävitav<s n="adj"/></r></p></e>
@@ -11843,12 +11857,12 @@
     <e><p><l>tuhoisa<s n="adj"/></l><r>destruktiivne<s n="adj"/></r></p></e>
     <e><p><l>algebrallinen<s n="adj"/></l><r>algebraline<s n="adj"/></r></p></e>
     <e><p><l>algebrallinen<s n="adj"/></l><r>algebra-<s n="adj"/></r></p></e>
-    <e><p><l>kypsennetty<s n="adj"/></l><r>küpsetatud<s n="adj"/></r></p></e>
+    <e><p><l>kypsennetty<s n="adj"/></l><r>küpsetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>reproduktiivinen<s n="adj"/></l><r>paljunemis-<s n="adj"/></r></p></e>
     <e><p><l>rakastava<s n="adj"/></l><r>armastav<s n="adj"/></r></p></e>
     <e><p><l>neuraalinen<s n="adj"/></l><r>närvi-<s n="adj"/></r></p></e>
     <e><p><l>yksinäinen<s n="adj"/></l><r>üksik<s n="adj"/></r></p></e>
-    <e><p><l>väsynyt<s n="adj"/></l><r>väsinud<s n="adj"/></r></p></e>
+    <e><p><l>väsynyt<s n="adj"/></l><r>väsinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>punertava<s n="adj"/></l><r>punakas<s n="adj"/></r></p></e>
     <e><p><l>punakka<s n="adj"/></l><r>punakas<s n="adj"/></r></p></e>
     <e><p><l>tyylikäs<s n="adj"/></l><r>elegantne<s n="adj"/></r></p></e>
@@ -11863,13 +11877,13 @@
     <e><p><l>diagnostinen<s n="adj"/></l><r>diagnostiline<s n="adj"/></r></p></e>
     <e><p><l>ylistävä<s n="adj"/></l><r>kiitev<s n="adj"/></r></p></e>
     <e><p><l>ankara<s n="adj"/></l><r>karm<s n="adj"/></r></p></e>
-    <e><p><l>väärennetty<s n="adj"/></l><r>võltsitud<s n="adj"/></r></p></e>
+    <e><p><l>väärennetty<s n="adj"/></l><r>võltsitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>suotuisa<s n="adj"/></l><r>soodus<s n="adj"/></r></p></e>
     <e><p><l>tähdellinen<s n="adj"/></l><r>tähendusrikas<s n="adj"/></r></p></e>
     <e><p><l>kuuro<s n="adj"/></l><r>kurt<s n="adj"/></r></p></e>
     <e><p><l>republikaaninen<s n="adj"/></l><r>vabariiklik<s n="adj"/></r></p></e>
     <e><p><l>naimaton<s n="adj"/></l><r>vallaline<s n="adj"/></r></p></e>
-    <e><p><l>peitetty<s n="adj"/></l><r>varjatud<s n="adj"/></r></p></e>
+    <e><p><l>peitetty<s n="adj"/></l><r>varjatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kateellinen<s n="adj"/></l><r>armukade<s n="adj"/></r></p></e>
     <e><p><l>surullinen<s n="adj"/></l><r>kurb<s n="adj"/></r></p></e>
     <e><p><l>haikea<s n="adj"/></l><r>kurb<s n="adj"/></r></p></e>
@@ -11894,10 +11908,10 @@
     <e><p><l>tehoton<s n="adj"/></l><r>ebatõhus<s n="adj"/></r></p></e>
     <e><p><l>tehoton<s n="adj"/></l><r>ebaefektiivne<s n="adj"/></r></p></e>
     <e><p><l>haluton<s n="adj"/></l><r>soovimatu<s n="adj"/></r></p></e>
-    <e><p><l>diskvalifioitu<s n="adj"/></l><r>diskvalifitseeritud<s n="adj"/></r></p></e>
+    <e><p><l>diskvalifioitu<s n="adj"/></l><r>diskvalifitseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>subjektiivinen<s n="adj"/></l><r>subjektiivne<s n="adj"/></r></p></e>
-    <e><p><l>suojeltu<s n="adj"/></l><r>kaitstud<s n="adj"/></r></p></e>
-    <e><p><l>suojeltu<s n="adj"/></l><r>hoitud<s n="adj"/></r></p></e>
+    <e><p><l>suojeltu<s n="adj"/></l><r>kaitstud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>suojeltu<s n="adj"/></l><r>hoitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epäreilu<s n="adj"/></l><r>ebaaus<s n="adj"/></r></p></e>
     <e><p><l>tuottoisa<s n="adj"/></l><r>kasulik<s n="adj"/></r></p></e>
     <e><p><l>planetaarinen<s n="adj"/></l><r>planetaarne<s n="adj"/></r></p></e>
@@ -11916,7 +11930,7 @@
     <e><p><l>psyykkinen<s n="adj"/></l><r>psüühiline<s n="adj"/></r></p></e>
     <e><p><l>kiireellinen<s n="adj"/></l><r>kiire<s n="adj"/></r></p></e>
     <e><p><l>kiireellinen<s n="adj"/></l><r>edasilükkamatu<s n="adj"/></r></p></e>
-    <e><p><l>tasoitettu<s n="adj"/></l><r>tasandatud<s n="adj"/></r></p></e>
+    <e><p><l>tasoitettu<s n="adj"/></l><r>tasandatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kunniallinen<s n="adj"/></l><r>auväärne<s n="adj"/></r></p></e>
     <e><p><l>syömäkelpoinen<s n="adj"/></l><r>söödav<s n="adj"/></r></p></e>
     <e><p><l>goottilainen<s n="adj"/></l><r>gooti<s n="adj"/></r></p></e>
@@ -11931,7 +11945,7 @@
     <e><p><l>pornografinen<s n="adj"/></l><r>pornograafiline<s n="adj"/></r></p></e>
     <e><p><l>monimutkainen<s n="adj"/></l><r>keeruline<s n="adj"/></r></p></e>
     <e><p><l>monimutkainen<s n="adj"/></l><r>keerukas<s n="adj"/></r></p></e>
-    <e><p><l>keksitty<s n="adj"/></l><r>väljamõeldud<s n="adj"/></r></p></e>
+    <e><p><l>keksitty<s n="adj"/></l><r>väljamõeldud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tahraton<s n="adj"/></l><r>roostevaba<s n="adj"/></r></p></e>
     <e><p><l>abdominaalinen<s n="adj"/></l><r>kõhu-<s n="adj"/></r></p></e>
     <e><p><l>epämukava<s n="adj"/></l><r>ebamugav<s n="adj"/></r></p></e>
@@ -11976,10 +11990,10 @@
     <e><p><l>oikea-aikainen<s n="adj"/></l><r>õigeaegne<s n="adj"/></r></p></e>
     <e><p><l>ilmeikäs<s n="adj"/></l><r>väljendusrikas<s n="adj"/></r></p></e>
     <e><p><l>ilmeikäs<s n="adj"/></l><r>ilmekas<s n="adj"/></r></p></e>
-    <e><p><l>vastasyntynyt<s n="adj"/></l><r>vastsündinud<s n="adj"/></r></p></e>
+    <e><p><l>vastasyntynyt<s n="adj"/></l><r>vastsündinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kardiovaskulaarinen<s n="adj"/></l><r>südame-veresoonkonna<s n="adj"/></r></p></e>
     <e><p><l>kardiovaskulaarinen<s n="adj"/></l><r>kardiovaskulaar-<s n="adj"/></r></p></e>
-    <e><p><l>kyllästetty<s n="adj"/></l><r>küllastatud<s n="adj"/></r></p></e>
+    <e><p><l>kyllästetty<s n="adj"/></l><r>küllastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ikuinen<s n="adj"/></l><r>igavene<s n="adj"/></r></p></e>
     <e><p><l>ennustettava<s n="adj"/></l><r>ennustatav<s n="adj"/></r></p></e>
     <e><p><l>olemassaoleva<s n="adj"/></l><r>olemasolev<s n="adj"/></r></p></e>
@@ -11990,12 +12004,12 @@
     <e><p><l>ruma<s n="adj"/></l><r>inetu<s n="adj"/></r></p></e>
     <e><p><l>epäesteettinen<s n="adj"/></l><r>inetu<s n="adj"/></r></p></e>
     <e><p><l>aerodynaaminen<s n="adj"/></l><r>aerodünaamiline<s n="adj"/></r></p></e>
-    <e><p><l>ansaittu<s n="adj"/></l><r>ärateenitud<s n="adj"/></r></p></e>
+    <e><p><l>ansaittu<s n="adj"/></l><r>ärateenitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>voimakas<s n="adj"/></l><r>vägev<s n="adj"/></r></p></e>
     <e><p><l>mahtava<s n="adj"/></l><r>vägev<s n="adj"/></r></p></e>
     <e><p><l>pisteetön<s n="adj"/></l><r>punktideta<s n="adj"/></r></p></e>
     <e><p><l>lainsuojaton<s n="adj"/></l><r>lindprii<s n="adj"/></r></p></e>
-    <e><p><l>orjuutettu<s n="adj"/></l><r>orjastatud<s n="adj"/></r></p></e>
+    <e><p><l>orjuutettu<s n="adj"/></l><r>orjastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>nuorekas<s n="adj"/></l><r>nooruslik<s n="adj"/></r></p></e>
     <e><p><l>myrkyllinen<s n="adj"/></l><r>mürgine<s n="adj"/></r></p></e>
     <e><p><l>myrkyllinen<s n="adj"/></l><r>mürgi-<s n="adj"/></r></p></e>
@@ -12010,9 +12024,9 @@
     <e><p><l>foneettinen<s n="adj"/></l><r>foneetiline<s n="adj"/></r></p></e>
     <e><p><l>typerä<s n="adj"/></l><r>loll<s n="adj"/></r></p></e>
     <e><p><l>tyhmä<s n="adj"/></l><r>loll<s n="adj"/></r></p></e>
-    <e><p><l>ikävystynyt<s n="adj"/></l><r>tüdinud<s n="adj"/></r></p></e>
+    <e><p><l>ikävystynyt<s n="adj"/></l><r>tüdinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>heraldinen<s n="adj"/></l><r>heraldiline<s n="adj"/></r></p></e>
-    <e><p><l>sensuroitu<s n="adj"/></l><r>tsenseeritud<s n="adj"/></r></p></e>
+    <e><p><l>sensuroitu<s n="adj"/></l><r>tsenseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>seksikäs<s n="adj"/></l><r>seksikas<s n="adj"/></r></p></e>
     <e><p><l>nautittava<s n="adj"/></l><r>nauditav<s n="adj"/></r></p></e>
     <e><p><l>fluoresoiva<s n="adj"/></l><r>fluorestseeriv<s n="adj"/></r></p></e>
@@ -12028,7 +12042,7 @@
     <e><p><l>aurinkoinen<s n="adj"/></l><r>päikseline<s n="adj"/></r></p></e>
     <e><p><l>aurinkoinen<s n="adj"/></l><r>päikesepaisteline<s n="adj"/></r></p></e>
     <e><p><l>maineikas<s n="adj"/></l><r>kuulus<s n="adj"/></r></p></e>
-    <e><p><l>myötäsyntyinen<s n="adj"/></l><r>kaasasündinud<s n="adj"/></r></p></e>
+    <e><p><l>myötäsyntyinen<s n="adj"/></l><r>kaasasündinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>naurava<s n="adj"/></l><r>naerev<s n="adj"/></r></p></e>
     <e><p><l>puhekielinen<s n="adj"/></l><r>kõnekeelne<s n="adj"/></r></p></e>
     <e><p><l>puhekielinen<s n="adj"/></l><r>argikeelne<s n="adj"/></r></p></e>
@@ -12043,17 +12057,17 @@
     <e><p><l>hyperbolinen<s n="adj"/></l><r>hüperboolne<s n="adj"/></r></p></e>
     <e><p><l>gastrointestinaalinen<s n="adj"/></l><r>seedimis-<s n="adj"/></r></p></e>
     <e><p><l>gastrointestinaalinen<s n="adj"/></l><r>seedeelundite<s n="adj"/></r></p></e>
-    <e><p><l>motorisoitu<s n="adj"/></l><r>motoriseeritud<s n="adj"/></r></p></e>
+    <e><p><l>motorisoitu<s n="adj"/></l><r>motoriseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>vapaa<s n="adj"/></l><r>piiramatu<s n="adj"/></r></p></e>
     <e><p><l>okkulttinen<s n="adj"/></l><r>okultne<s n="adj"/></r></p></e>
     <e><p><l>hoikka<s n="adj"/></l><r>sale<s n="adj"/></r></p></e>
     <e><p><l>modaalinen<s n="adj"/></l><r>modaalne<s n="adj"/></r></p></e>
     <e><p><l>pilkullinen<s n="adj"/></l><r>täpiline<s n="adj"/></r></p></e>
-    <e><p><l>kauhistunut<s n="adj"/></l><r>kohkunud<s n="adj"/></r></p></e>
+    <e><p><l>kauhistunut<s n="adj"/></l><r>kohkunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kuningasmielinen<s n="adj"/></l><r>rojalist<s n="adj"/></r></p></e>
     <e><p><l>byrokraattinen<s n="adj"/></l><r>bürokraatlik<s n="adj"/></r></p></e>
     <e><p><l>inspiroiva<s n="adj"/></l><r>inspireeriv<s n="adj"/></r></p></e>
-    <e><p><l>tervehtynyt<s n="adj"/></l><r>paranenud<s n="adj"/></r></p></e>
+    <e><p><l>tervehtynyt<s n="adj"/></l><r>paranenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>laiska<s n="adj"/></l><r>laisk<s n="adj"/></r></p></e>
     <e><p><l>isohko<s n="adj"/></l><r>kopsakas<s n="adj"/></r></p></e>
     <e><p><l>epäsymmetrinen<s n="adj"/></l><r>asümmeetriline<s n="adj"/></r></p></e>
@@ -12061,12 +12075,12 @@
     <e><p><l>kupukattoinen<s n="adj"/></l><r>kuppelkatusega<s n="adj"/></r></p></e>
     <e><p><l>kupukattoinen<s n="adj"/></l><r>kupliga<s n="adj"/></r></p></e>
     <e><p><l>allerginen<s n="adj"/></l><r>allergiline<s n="adj"/></r></p></e>
-    <e><p><l>ympäröity<s n="adj"/></l><r>ümbritsetud<s n="adj"/></r></p></e>
+    <e><p><l>ympäröity<s n="adj"/></l><r>ümbritsetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epäsuotuisa<s n="adj"/></l><r>ebasoodne<s n="adj"/></r></p></e>
     <e><p><l>tietämätön<s n="adj"/></l><r>teadmatu<s n="adj"/></r></p></e>
     <e><p><l>tärkein<s n="adj"/></l><r>olulisim<s n="adj"/></r></p></e>
-    <e><p><l>saastunut<s n="adj"/></l><r>saastunud<s n="adj"/></r></p></e>
-    <e><p><l>saastunut<s n="adj"/></l><r>reostatud<s n="adj"/></r></p></e>
+    <e><p><l>saastunut<s n="adj"/></l><r>saastunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>saastunut<s n="adj"/></l><r>reostatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>meteorologinen<s n="adj"/></l><r>meteoroloogia-<s n="adj"/></r></p></e>
     <e><p><l>meteorologinen<s n="adj"/></l><r>ilmastiku-<s n="adj"/></r></p></e>
     <e><p><l>sentimentaalinen<s n="adj"/></l><r>sentimentaalne<s n="adj"/></r></p></e>
@@ -12089,8 +12103,8 @@
     <e><p><l>moraaliton<s n="adj"/></l><r>ebamoraalne<s n="adj"/></r></p></e>
     <e><p><l>heterogeeninen<s n="adj"/></l><r>heterogeenne<s n="adj"/></r></p></e>
     <e><p><l>sensaatiomainen<s n="adj"/></l><r>sensatsiooniline<s n="adj"/></r></p></e>
-    <e><p><l>pelästynyt<s n="adj"/></l><r>hirmunud<s n="adj"/></r></p></e>
-    <e><p><l>kauhistunut<s n="adj"/></l><r>hirmunud<s n="adj"/></r></p></e>
+    <e><p><l>pelästynyt<s n="adj"/></l><r>hirmunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kauhistunut<s n="adj"/></l><r>hirmunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>genitaalinen<s n="adj"/></l><r>suguelundite<s n="adj"/></r></p></e>
     <e><p><l>genitaalinen<s n="adj"/></l><r>sugu-<s n="adj"/></r></p></e>
     <e><p><l>epäoikeudenmukainen<s n="adj"/></l><r>ülekohtune<s n="adj"/></r></p></e>
@@ -12098,8 +12112,8 @@
     <e><p><l>kaamea<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
     <e><p><l>hirvittävä<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
     <e><p><l>raitis<s n="adj"/></l><r>kaine<s n="adj"/></r></p></e>
-    <e><p><l>koneistettu<s n="adj"/></l><r>mehhaniseeritud<s n="adj"/></r></p></e>
-    <e><p><l>koneellistettu<s n="adj"/></l><r>mehhaniseeritud<s n="adj"/></r></p></e>
+    <e><p><l>koneistettu<s n="adj"/></l><r>mehhaniseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>koneellistettu<s n="adj"/></l><r>mehhaniseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>relativistinen<s n="adj"/></l><r>relativistlik<s n="adj"/></r></p></e>
     <e><p><l>hyväntahtoinen<s n="adj"/></l><r>heasoovlik<s n="adj"/></r></p></e>
     <e><p><l>tahdikas<s n="adj"/></l><r>viisakas<s n="adj"/></r></p></e>
@@ -12118,12 +12132,12 @@
     <e><p><l>nöyryyttävä<s n="adj"/></l><r>alandav<s n="adj"/></r></p></e>
     <e><p><l>karmea<s n="adj"/></l><r>kohutav<s n="adj"/></r></p></e>
     <e><p><l>rakastettu<s n="adj"/></l><r>armsaim<s n="adj"/></r></p></e>
-    <e><p><l>herätetty<s n="adj"/></l><r>äratatud<s n="adj"/></r></p></e>
+    <e><p><l>herätetty<s n="adj"/></l><r>äratatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>deterministinen<s n="adj"/></l><r>deterministlik<s n="adj"/></r></p></e>
     <e><p><l>toiveikas<s n="adj"/></l><r>lootusrikas<s n="adj"/></r></p></e>
     <e><p><l>vaaleahiuksinen<s n="adj"/></l><r>blond<s n="adj"/></r></p></e>
     <e><p><l>patriootti<s n="adj"/></l><r>patrioot<s n="adj"/></r></p></e>
-    <e><p><l>purkitettu<s n="adj"/></l><r>konserveeritud<s n="adj"/></r></p></e>
+    <e><p><l>purkitettu<s n="adj"/></l><r>konserveeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>purkitettu<s n="adj"/></l><r>konserv-<s n="adj"/></r></p></e>
     <e><p><l>hopeanvärinen<s n="adj"/></l><r>hõbehall<s n="adj"/></r></p></e>
     <e><p><l>binominaalinen<s n="adj"/></l><r>binoom-<s n="adj"/></r></p></e>
@@ -12131,8 +12145,8 @@
     <e><p><l>sarvellinen<s n="adj"/></l><r>sarviline<s n="adj"/></r></p></e>
     <e><p><l>sarvekas<s n="adj"/></l><r>sarviline<s n="adj"/></r></p></e>
     <e><p><l>kummallinen<s n="adj"/></l><r>veider<s n="adj"/></r></p></e>
-    <e><p><l>kotitekoinen<s n="adj"/></l><r>omatehtud<s n="adj"/></r></p></e>
-    <e><p><l>kotitekoinen<s n="adj"/></l><r>kodukootud<s n="adj"/></r></p></e>
+    <e><p><l>kotitekoinen<s n="adj"/></l><r>omatehtud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kotitekoinen<s n="adj"/></l><r>kodukootud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>paranoidinen<s n="adj"/></l><r>paranoiline<s n="adj"/></r></p></e>
     <e><p><l>tyylikäs<s n="adj"/></l><r>stiilne<s n="adj"/></r></p></e>
     <e><p><l>epäselvä<s n="adj"/></l><r>hägune<s n="adj"/></r></p></e>
@@ -12157,9 +12171,9 @@
     <e><p><l>ilkeä<s n="adj"/></l><r>vastik<s n="adj"/></r></p></e>
     <e><p><l>totalitaarinen<s n="adj"/></l><r>totalitaarne<s n="adj"/></r></p></e>
     <e><p><l>harvinainen<s n="adj"/></l><r>harv<s n="adj"/></r></p></e>
-    <e><p><l>epäonnistunut<s n="adj"/></l><r>nurjunud<s n="adj"/></r></p></e>
+    <e><p><l>epäonnistunut<s n="adj"/></l><r>nurjunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>utopistinen<s n="adj"/></l><r>utoopiline<s n="adj"/></r></p></e>
-    <e><p><l>sivistynyt<s n="adj"/></l><r>tsiviliseeritud<s n="adj"/></r></p></e>
+    <e><p><l>sivistynyt<s n="adj"/></l><r>tsiviliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>samanaikainen<s n="adj"/></l><r>samaaegne<s n="adj"/></r></p></e>
     <e><p><l>samanaikainen<s n="adj"/></l><r>kaasaegne<s n="adj"/></r></p></e>
     <e><p><l>ansiokas<s n="adj"/></l><r>teenekas<s n="adj"/></r></p></e>
@@ -12171,8 +12185,8 @@
     <e><p><l>nerokas<s n="adj"/></l><r>geniaalne<s n="adj"/></r></p></e>
     <e><p><l>nopea<s n="adj"/></l><r>nobe<s n="adj"/></r></p></e>
     <e><p><l>monikäyttöinen<s n="adj"/></l><r>mitmeotstarbeline<s n="adj"/></r></p></e>
-    <e><p><l>yllättynyt<s n="adj"/></l><r>hämmastunud<s n="adj"/></r></p></e>
-    <e><p><l>hämmästynyt<s n="adj"/></l><r>hämmastunud<s n="adj"/></r></p></e>
+    <e><p><l>yllättynyt<s n="adj"/></l><r>hämmastunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hämmästynyt<s n="adj"/></l><r>hämmastunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>suonensisäinen<s n="adj"/></l><r>veenisisene<s n="adj"/></r></p></e>
     <e><p><l>intravenöösi<s n="adj"/></l><r>veenisisene<s n="adj"/></r></p></e>
     <e><p><l>raivostunut<s n="adj"/></l><r>marus<s n="adj"/></r></p></e>
@@ -12188,7 +12202,7 @@
     <e><p><l>relevantti<s n="adj"/></l><r>asjakohane<s n="adj"/></r></p></e>
     <e><p><l>monikansallinen<s n="adj"/></l><r>rahvusvaheline<s n="adj"/></r></p></e>
     <e><p><l>luminen<s n="adj"/></l><r>lumine<s n="adj"/></r></p></e>
-    <e><p><l>perforoitu<s n="adj"/></l><r>perforeeritud<s n="adj"/></r></p></e>
+    <e><p><l>perforoitu<s n="adj"/></l><r>perforeeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>endogeeninen<s n="adj"/></l><r>endogeenne<s n="adj"/></r></p></e>
     <e><p><l>rentouttava<s n="adj"/></l><r>lõdvestav<s n="adj"/></r></p></e>
     <e><p><l>rentouttava<s n="adj"/></l><r>kosutav<s n="adj"/></r></p></e>
@@ -12201,14 +12215,14 @@
     <e><p><l>pedagoginen<s n="adj"/></l><r>pedagoogiline<s n="adj"/></r></p></e>
     <e><p><l>valheellinen<s n="adj"/></l><r>ebatõene<s n="adj"/></r></p></e>
     <e><p><l>kaunopuheinen<s n="adj"/></l><r>ilukõneline<s n="adj"/></r></p></e>
-    <e><p><l>nälkäinen<s n="adj"/></l><r>nälginud<s n="adj"/></r></p></e>
+    <e><p><l>nälkäinen<s n="adj"/></l><r>nälginud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ymmärrettävä<s n="adj"/></l><r>mõistetav<s n="adj"/></r></p></e>
     <e><p><l>ymmärrettävä<s n="adj"/></l><r>arusaadav<s n="adj"/></r></p></e>
     <e><p><l>tasapainoton<s n="adj"/></l><r>tasakaalutu<s n="adj"/></r></p></e>
     <e><p><l>epätasapainoinen<s n="adj"/></l><r>tasakaalutu<s n="adj"/></r></p></e>
     <e><p><l>puolipyöreä<s n="adj"/></l><r>poolringikujuline<s n="adj"/></r></p></e>
     <e><p><l>puolipyöreä<s n="adj"/></l><r>poolring-<s n="adj"/></r></p></e>
-    <e><p><l>kihlattu<s n="adj"/></l><r>kihlatud<s n="adj"/></r></p></e>
+    <e><p><l>kihlattu<s n="adj"/></l><r>kihlatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kihlattu<s n="adj"/></l><r>kihlatu<s n="adj"/></r></p></e>
     <e><p><l>urhea<s n="adj"/></l><r>kartmatu<s n="adj"/></r></p></e>
     <e><p><l>tunteeton<s n="adj"/></l><r>tundetu<s n="adj"/></r></p></e>
@@ -12235,8 +12249,8 @@
     <e><p><l>menstruaalinen<s n="adj"/></l><r>menstruaal-<s n="adj"/></r></p></e>
     <e><p><l>somaattinen<s n="adj"/></l><r>somaatiline<s n="adj"/></r></p></e>
     <e><p><l>somaattinen<s n="adj"/></l><r>keha-<s n="adj"/></r></p></e>
-    <e><p><l>yllättynyt<s n="adj"/></l><r>üllatunud<s n="adj"/></r></p></e>
-    <e><p><l>hämmästynyt<s n="adj"/></l><r>üllatunud<s n="adj"/></r></p></e>
+    <e><p><l>yllättynyt<s n="adj"/></l><r>üllatunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hämmästynyt<s n="adj"/></l><r>üllatunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>vedenpitävä<s n="adj"/></l><r>veekindel<s n="adj"/></r></p></e>
     <e><p><l>vedenkestävä<s n="adj"/></l><r>veekindel<s n="adj"/></r></p></e>
     <e><p><l>asynkroninen<s n="adj"/></l><r>asünkroonne<s n="adj"/></r></p></e>
@@ -12256,7 +12270,7 @@
     <e><p><l>irrotettava<s n="adj"/></l><r>eemaldatav<s n="adj"/></r></p></e>
     <e><p><l>neuvotteleva<s n="adj"/></l><r>nõuandev<s n="adj"/></r></p></e>
     <e><p><l>neuvoa-antava<s n="adj"/></l><r>nõuandev<s n="adj"/></r></p></e>
-    <e><p><l>liimattu<s n="adj"/></l><r>liimitud<s n="adj"/></r></p></e>
+    <e><p><l>liimattu<s n="adj"/></l><r>liimitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>konsultatiivinen<s n="adj"/></l><r>nõuandev<s n="adj"/></r></p></e>
     <e><p><l>pysyvä<s n="adj"/></l><r>pidev<s n="adj"/></r></p></e>
     <e><p><l>mielikuvituksellinen<s n="adj"/></l><r>lennukas<s n="adj"/></r></p></e>
@@ -12291,7 +12305,7 @@
     <e><p><l>varjoisa<s n="adj"/></l><r>varjuline<s n="adj"/></r></p></e>
     <e><p><l>hämäräperäinen<s n="adj"/></l><r>varjuline<s n="adj"/></r></p></e>
     <e><p><l>hämärä<s n="adj"/></l><r>varjuline<s n="adj"/></r></p></e>
-    <e><p><l>retardoitunut<s n="adj"/></l><r>väärastunud<s n="adj"/></r></p></e>
+    <e><p><l>retardoitunut<s n="adj"/></l><r>väärastunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hirveä<s n="adj"/></l><r>hirmuäratav<s n="adj"/></r></p></e>
     <e><p><l>epäuskottava<s n="adj"/></l><r>uskumatu<s n="adj"/></r></p></e>
     <e><p><l>terve<s n="adj"/></l><r>kahjustamata<s n="adj"/></r></p></e>
@@ -12321,8 +12335,8 @@
     <e><p><l>riemukas<s n="adj"/></l><r>lustlik<s n="adj"/></r></p></e>
     <e><p><l>riemuisa<s n="adj"/></l><r>lustlik<s n="adj"/></r></p></e>
     <e><p><l>iloinen<s n="adj"/></l><r>lustlik<s n="adj"/></r></p></e>
-    <e><p><l>ylistetty<s n="adj"/></l><r>ülistatud<s n="adj"/></r></p></e>
-    <e><p><l>ylistetty<s n="adj"/></l><r>üleskiidetud<s n="adj"/></r></p></e>
+    <e><p><l>ylistetty<s n="adj"/></l><r>ülistatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>ylistetty<s n="adj"/></l><r>üleskiidetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>puhelias<s n="adj"/></l><r>suhtlusaldis<s n="adj"/></r></p></e>
     <e><p><l>autonominen<s n="adj"/></l><r>autonoomne<s n="adj"/></r></p></e>
     <e><p><l>todistettava<s n="adj"/></l><r>tõendatav<s n="adj"/></r></p></e>
@@ -12338,9 +12352,9 @@
     <e><p><l>ravitseva<s n="adj"/></l><r>toitev<s n="adj"/></r></p></e>
     <e><p><l>ravitseva<s n="adj"/></l><r>toitainerikas<s n="adj"/></r></p></e>
     <e><p><l>todistamaton<s n="adj"/></l><r>tõestamata<s n="adj"/></r></p></e>
-    <e><p><l>raivostunut<s n="adj"/></l><r>ärritatud<s n="adj"/></r></p></e>
-    <e><p><l>sokeroitu<s n="adj"/></l><r>magustatud<s n="adj"/></r></p></e>
-    <e><p><l>makeutettu<s n="adj"/></l><r>magustatud<s n="adj"/></r></p></e>
+    <e><p><l>raivostunut<s n="adj"/></l><r>ärritatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>sokeroitu<s n="adj"/></l><r>magustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>makeutettu<s n="adj"/></l><r>magustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epäitsekäs<s n="adj"/></l><r>omakasupüüdmatu<s n="adj"/></r></p></e>
     <e><p><l>epäitsekäs<s n="adj"/></l><r>isetu<s n="adj"/></r></p></e>
     <e><p><l>trendikäs<s n="adj"/></l><r>moekas<s n="adj"/></r></p></e>
@@ -12352,7 +12366,7 @@
     <e><p><l>sokaiseva<s n="adj"/></l><r>pimestav<s n="adj"/></r></p></e>
     <e><p><l>kuninkaallinen<s n="adj"/></l><r>kuninga-<s n="adj"/></r></p></e>
     <e><p><l>valpas<s n="adj"/></l><r>tähelepanelik<s n="adj"/></r></p></e>
-    <e><p><l>moottoroitu<s n="adj"/></l><r>motoriseeritud<s n="adj"/></r></p></e>
+    <e><p><l>moottoroitu<s n="adj"/></l><r>motoriseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>moottoroitu<s n="adj"/></l><r>mootoriga<s n="adj"/></r></p></e>
     <e><p><l>dialektinen<s n="adj"/></l><r>murdeline<s n="adj"/></r></p></e>
     <e><p><l>dialektinen<s n="adj"/></l><r>dialektiline<s n="adj"/></r></p></e>
@@ -12364,10 +12378,10 @@
     <e><p><l>käyttökelpoinen<s n="adj"/></l><r>kasutuskõlbulik<s n="adj"/></r></p></e>
     <e><p><l>käyttökelpoinen<s n="adj"/></l><r>kasutatav<s n="adj"/></r></p></e>
     <e><p><l>sietämätön<s n="adj"/></l><r>talumatu<s n="adj"/></r></p></e>
-    <e><p><l>rajoitettu<s n="adj"/></l><r>piiritletud<s n="adj"/></r></p></e>
+    <e><p><l>rajoitettu<s n="adj"/></l><r>piiritletud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kouluttamaton<s n="adj"/></l><r>harimatu<s n="adj"/></r></p></e>
     <e><p><l>tarumainen<s n="adj"/></l><r>legendaarne<s n="adj"/></r></p></e>
-    <e><p><l>sekopäinen<s n="adj"/></l><r>hullunud<s n="adj"/></r></p></e>
+    <e><p><l>sekopäinen<s n="adj"/></l><r>hullunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rumannäköinen<s n="adj"/></l><r>eemaletõukav<s n="adj"/></r></p></e>
     <e><p><l>hylkivä<s n="adj"/></l><r>eemaletõukav<s n="adj"/></r></p></e>
     <e><p><l>kirjoittamaton<s n="adj"/></l><r>suuline<s n="adj"/></r></p></e>
@@ -12392,8 +12406,8 @@
     <e><p><l>vastaansanomaton<s n="adj"/></l><r>ümberlükkamatu<s n="adj"/></r></p></e>
     <e><p><l>vastaansanomaton<s n="adj"/></l><r>eitamatu<s n="adj"/></r></p></e>
     <e><p><l>bibliografinen<s n="adj"/></l><r>bibliograafia-<s n="adj"/></r></p></e>
-    <e><p><l>kammottava<s n="adj"/></l><r>kardetud<s n="adj"/></r></p></e>
-    <e><p><l>kamala<s n="adj"/></l><r>kardetud<s n="adj"/></r></p></e>
+    <e><p><l>kammottava<s n="adj"/></l><r>kardetud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kamala<s n="adj"/></l><r>kardetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>halveksiva<s n="adj"/></l><r>halvustav<s n="adj"/></r></p></e>
     <e><p><l>lakkaamaton<s n="adj"/></l><r>lakkamatu<s n="adj"/></r></p></e>
     <e><p><l>huomaamaton<s n="adj"/></l><r>silmatorkamatu<s n="adj"/></r></p></e>
@@ -12408,7 +12422,7 @@
     <e><p><l>parantumaton<s n="adj"/></l><r>ravimatu<s n="adj"/></r></p></e>
     <e><p><l>narsistinen<s n="adj"/></l><r>nartsissistlik<s n="adj"/></r></p></e>
     <e><p><l>narsistinen<s n="adj"/></l><r>ennastimetlev<s n="adj"/></r></p></e>
-    <e><p><l>hiilihappoinen<s n="adj"/></l><r>gaseeritud<s n="adj"/></r></p></e>
+    <e><p><l>hiilihappoinen<s n="adj"/></l><r>gaseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>valpas<s n="adj"/></l><r>valvas<s n="adj"/></r></p></e>
     <e><p><l>päiväämätön<s n="adj"/></l><r>kuupäevata<s n="adj"/></r></p></e>
     <e><p><l>päiväämätön<s n="adj"/></l><r>dateerimata<s n="adj"/></r></p></e>
@@ -12430,7 +12444,7 @@
     <e><p><l>individualistinen<s n="adj"/></l><r>individualistlik<s n="adj"/></r></p></e>
     <e><p><l>sisäinen<s n="adj"/></l><r>seesmine<s n="adj"/></r></p></e>
     <e><p><l>saavutettava<s n="adj"/></l><r>saavutatav<s n="adj"/></r></p></e>
-    <e><p><l>oppinut<s n="adj"/></l><r>erudeeritud<s n="adj"/></r></p></e>
+    <e><p><l>oppinut<s n="adj"/></l><r>erudeeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>mieletön<s n="adj"/></l><r>sõge<s n="adj"/></r></p></e>
     <e><p><l>antiviraalinen<s n="adj"/></l><r>viirusevastane<s n="adj"/></r></p></e>
     <e><p><l>janoinen<s n="adj"/></l><r>janune<s n="adj"/></r></p></e>
@@ -12443,9 +12457,9 @@
     <e><p><l>epäviisas<s n="adj"/></l><r>ebamõistlik<s n="adj"/></r></p></e>
     <e><p><l>naismainen<s n="adj"/></l><r>naiselik<s n="adj"/></r></p></e>
     <e><p><l>evankelinen<s n="adj"/></l><r>evangelistlik<s n="adj"/></r></p></e>
-    <e><p><l>läpimärkä<s n="adj"/></l><r>läbiligunenud<s n="adj"/></r></p></e>
+    <e><p><l>läpimärkä<s n="adj"/></l><r>läbiligunenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>teeskennelty<s n="adj"/></l><r>võlts<s n="adj"/></r></p></e>
-    <e><p><l>teeskennelty<s n="adj"/></l><r>teeseldud<s n="adj"/></r></p></e>
+    <e><p><l>teeskennelty<s n="adj"/></l><r>teeseldud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hydrofiilinen<s n="adj"/></l><r>veelembene<s n="adj"/></r></p></e>
     <e><p><l>hydrofiilinen<s n="adj"/></l><r>hüdrofiilne<s n="adj"/></r></p></e>
     <e><p><l>lankamainen<s n="adj"/></l><r>niitjas<s n="adj"/></r></p></e>
@@ -12464,7 +12478,7 @@
     <e><p><l>pylväsmäinen<s n="adj"/></l><r>tulpjas<s n="adj"/></r></p></e>
     <e><p><l>pylväsmäinen<s n="adj"/></l><r>sammas-<s n="adj"/></r></p></e>
     <e><p><l>pylväsmäinen<s n="adj"/></l><r>sambakujuline<s n="adj"/></r></p></e>
-    <e><p><l>rakastunut<s n="adj"/></l><r>armunud<s n="adj"/></r></p></e>
+    <e><p><l>rakastunut<s n="adj"/></l><r>armunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>melodinen<s n="adj"/></l><r>meloodiline<s n="adj"/></r></p></e>
     <e><p><l>anteeksipyytävä<s n="adj"/></l><r>vabandav<s n="adj"/></r></p></e>
     <e><p><l>anteeksipyytävä<s n="adj"/></l><r>apologeetiline<s n="adj"/></r></p></e>
@@ -12493,7 +12507,7 @@
     <e><p><l>epälojaali<s n="adj"/></l><r>ebalojaalne<s n="adj"/></r></p></e>
     <e><p><l>vahingoittumaton<s n="adj"/></l><r>vigastamata<s n="adj"/></r></p></e>
     <e><p><l>vahingoittumaton<s n="adj"/></l><r>kahjustamata<s n="adj"/></r></p></e>
-    <e><p><l>vyötetty<s n="adj"/></l><r>vöötatud<s n="adj"/></r></p></e>
+    <e><p><l>vyötetty<s n="adj"/></l><r>vöötatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyytyväinen<s n="adj"/></l><r>rahulolev<s n="adj"/></r></p></e>
     <e><p><l>miehekäs<s n="adj"/></l><r>mehine<s n="adj"/></r></p></e>
     <e><p><l>epälooginen<s n="adj"/></l><r>ebaloogiline<s n="adj"/></r></p></e>
@@ -12511,8 +12525,8 @@
     <e><p><l>elektrolyyttinen<s n="adj"/></l><r>elektrolüütiline<s n="adj"/></r></p></e>
     <e><p><l>maukas<s n="adj"/></l><r>hõrk<s n="adj"/></r></p></e>
     <e><p><l>epätodellinen<s n="adj"/></l><r>ebatõeline<s n="adj"/></r></p></e>
-    <e><p><l>hämmentynyt<s n="adj"/></l><r>segadusseviidud<s n="adj"/></r></p></e>
-    <e><p><l>taitava<s n="adj"/></l><r>vilunud<s n="adj"/></r></p></e>
+    <e><p><l>hämmentynyt<s n="adj"/></l><r>segadusseviidud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>taitava<s n="adj"/></l><r>vilunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>katala<s n="adj"/></l><r>nurjatu<s n="adj"/></r></p></e>
     <e><p><l>häpeällinen<s n="adj"/></l><r>häbiväärne<s n="adj"/></r></p></e>
     <e><p><l>häpeällinen<s n="adj"/></l><r>häbistav<s n="adj"/></r></p></e>
@@ -12532,7 +12546,7 @@
     <e><p><l>despoottinen<s n="adj"/></l><r>despootlik<s n="adj"/></r></p></e>
     <e><p><l>järkevä<s n="adj"/></l><r>arukas<s n="adj"/></r></p></e>
     <e><p><l>aallonmurtaja<s n="adj"/></l><r>lainemurdja<s n="adj"/></r></p></e>
-    <e><p><l>mennyt<s n="adj"/></l><r>ammumöödunud<s n="adj"/></r></p></e>
+    <e><p><l>mennyt<s n="adj"/></l><r>ammumöödunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>geodeettinen<s n="adj"/></l><r>geodeetiline<s n="adj"/></r></p></e>
     <e><p><l>verinen<s n="adj"/></l><r>verine<s n="adj"/></r></p></e>
     <e><p><l>geriatrinen<s n="adj"/></l><r>vanadus-<s n="adj"/></r></p></e>
@@ -12542,8 +12556,8 @@
     <e><p><l>tehokas<s n="adj"/></l><r>tulemusrikas<s n="adj"/></r></p></e>
     <e><p><l>tehokas<s n="adj"/></l><r>efektiivne<s n="adj"/></r></p></e>
     <e><p><l>pitkittäinen<s n="adj"/></l><r>pikkupidi<s n="adj"/></r></p></e>
-    <e><p><l>naamioitu<s n="adj"/></l><r>varjatud<s n="adj"/></r></p></e>
-    <e><p><l>naamioitu<s n="adj"/></l><r>kaetud<s n="adj"/></r></p></e>
+    <e><p><l>naamioitu<s n="adj"/></l><r>varjatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>naamioitu<s n="adj"/></l><r>kaetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>oikukas<s n="adj"/></l><r>tujukas<s n="adj"/></r></p></e>
     <e><p><l>oikukas<s n="adj"/></l><r>kapriisne<s n="adj"/></r></p></e>
     <e><p><l>kysyvä<s n="adj"/></l><r>küsiv<s n="adj"/></r></p></e>
@@ -12552,7 +12566,7 @@
     <e><p><l>hämmentävä<s n="adj"/></l><r>segadusseajav<s n="adj"/></r></p></e>
     <e><p><l>tyydyttämätön<s n="adj"/></l><r>rahuldamatu<s n="adj"/></r></p></e>
     <e><p><l>niukkasanainen<s n="adj"/></l><r>napisõnaline<s n="adj"/></r></p></e>
-    <e><p><l>tuohtunut<s n="adj"/></l><r>nördinud<s n="adj"/></r></p></e>
+    <e><p><l>tuohtunut<s n="adj"/></l><r>nördinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>itsepäinen<s n="adj"/></l><r>iseteadlik<s n="adj"/></r></p></e>
     <e><p><l>ylimielinen<s n="adj"/></l><r>põlglik<s n="adj"/></r></p></e>
     <e><p><l>halveksuva<s n="adj"/></l><r>põlglik<s n="adj"/></r></p></e>
@@ -12578,7 +12592,7 @@
     <e><p><l>epäluuloinen<s n="adj"/></l><r>umbusklik<s n="adj"/></r></p></e>
     <e><p><l>epäilevä<s n="adj"/></l><r>umbusklik<s n="adj"/></r></p></e>
     <e><p><l>kivuton<s n="adj"/></l><r>valutu<s n="adj"/></r></p></e>
-    <e><p><l>ällistynyt<s n="adj"/></l><r>rabatud<s n="adj"/></r></p></e>
+    <e><p><l>ällistynyt<s n="adj"/></l><r>rabatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>anoksinen<s n="adj"/></l><r>anoksiline<s n="adj"/></r></p></e>
     <e><p><l>haluava<s n="adj"/></l><r>ihaldav<s n="adj"/></r></p></e>
     <e><p><l>provosoimaton<s n="adj"/></l><r>provotseerimata<s n="adj"/></r></p></e>
@@ -12599,7 +12613,7 @@
     <e><p><l>peruuttamaton<s n="adj"/></l><r>tühistamatu<s n="adj"/></r></p></e>
     <e><p><l>peruuttamaton<s n="adj"/></l><r>tagasivõtmatu<s n="adj"/></r></p></e>
     <e><p><l>turmeltunut<s n="adj"/></l><r>paheline<s n="adj"/></r></p></e>
-    <e><p><l>turmeltunut<s n="adj"/></l><r>hukkaläinud<s n="adj"/></r></p></e>
+    <e><p><l>turmeltunut<s n="adj"/></l><r>hukkaläinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tunteeton<s n="adj"/></l><r>südametu<s n="adj"/></r></p></e>
     <e><p><l>sydämetön<s n="adj"/></l><r>südametu<s n="adj"/></r></p></e>
     <e><p><l>toivoton<s n="adj"/></l><r>meeleheitel<s n="adj"/></r></p></e>
@@ -12615,7 +12629,7 @@
     <e><p><l>kiistanhaluinen<s n="adj"/></l><r>vaidlushimuline<s n="adj"/></r></p></e>
     <e><p><l>tähtikirkas<s n="adj"/></l><r>tähine<s n="adj"/></r></p></e>
     <e><p><l>hihaton<s n="adj"/></l><r>varrukateta<s n="adj"/></r></p></e>
-    <e><p><l>ruostunut<s n="adj"/></l><r>roostetanud<s n="adj"/></r></p></e>
+    <e><p><l>ruostunut<s n="adj"/></l><r>roostetanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ruostunut<s n="adj"/></l><r>roostes<s n="adj"/></r></p></e>
     <e><p><l>pervo<s n="adj"/></l><r>pervert<s n="adj"/></r></p></e>
     <e><p><l>viisiosainen<s n="adj"/></l><r>viieosaline<s n="adj"/></r></p></e>
@@ -12634,14 +12648,14 @@
     <e><p><l>viljelykelpoinen<s n="adj"/></l><r>kultiveeritav<s n="adj"/></r></p></e>
     <e><p><l>haastateltava<s n="adj"/></l><r>intervjueeritav<s n="adj"/></r></p></e>
     <e><p><l>jäykkä<s n="adj"/></l><r>paindumatu<s n="adj"/></r></p></e>
-    <e><p><l>vakaa<s n="adj"/></l><r>vaoshoitud<s n="adj"/></r></p></e>
+    <e><p><l>vakaa<s n="adj"/></l><r>vaoshoitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kuuliainen<s n="adj"/></l><r>sõnakuulelik<s n="adj"/></r></p></e>
     <e><p><l>tahditon<s n="adj"/></l><r>taktitu<s n="adj"/></r></p></e>
     <e><p><l>loistava<s n="adj"/></l><r>vahva<s n="adj"/></r></p></e>
     <e><p><l>loistava<s n="adj"/></l><r>imetore<s n="adj"/></r></p></e>
     <e><p><l>loistava<s n="adj"/></l><r>läikiv<s n="adj"/></r></p></e>
-    <e><p><l>vääristynyt<s n="adj"/></l><r>moondunud<s n="adj"/></r></p></e>
-    <e><p><l>kuormitettu<s n="adj"/></l><r>koormatud<s n="adj"/></r></p></e>
+    <e><p><l>vääristynyt<s n="adj"/></l><r>moondunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>kuormitettu<s n="adj"/></l><r>koormatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>helvetillinen<s n="adj"/></l><r>põrgulik<s n="adj"/></r></p></e>
     <e><p><l>palvova<s n="adj"/></l><r>jumaldav<s n="adj"/></r></p></e>
     <e><p><l>jumaloiva<s n="adj"/></l><r>jumaldav<s n="adj"/></r></p></e>
@@ -12689,7 +12703,7 @@
     <e><p><l>laikukas<s n="adj"/></l><r>laiguline<s n="adj"/></r></p></e>
     <e><p><l>läikikäs<s n="adj"/></l><r>laiguline<s n="adj"/></r></p></e>
     <e><p><l>mittaamaton<s n="adj"/></l><r>mõõtmatu<s n="adj"/></r></p></e>
-    <e><p><l>häikäistynyt<s n="adj"/></l><r>pimestatud<s n="adj"/></r></p></e>
+    <e><p><l>häikäistynyt<s n="adj"/></l><r>pimestatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>erottava<s n="adj"/></l><r>lahutav<s n="adj"/></r></p></e>
     <e><p><l>gastronominen<s n="adj"/></l><r>kulinaarne<s n="adj"/></r></p></e>
     <e><p><l>gastronominen<s n="adj"/></l><r>gastronoomiline<s n="adj"/></r></p></e>
@@ -12700,8 +12714,8 @@
     <e><p><l>käyttökelvoton<s n="adj"/></l><r>kasutamatu<s n="adj"/></r></p></e>
     <e><p><l>tunteeton<s n="adj"/></l><r>kiretu<s n="adj"/></r></p></e>
     <e><p><l>sivistymätön<s n="adj"/></l><r>tsiviliseerimatu<s n="adj"/></r></p></e>
-    <e><p><l>rasvattu<s n="adj"/></l><r>rasvatatud<s n="adj"/></r></p></e>
-    <e><p><l>rasvattu<s n="adj"/></l><r>õlitatud<s n="adj"/></r></p></e>
+    <e><p><l>rasvattu<s n="adj"/></l><r>rasvatatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>rasvattu<s n="adj"/></l><r>õlitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ansaitsematon<s n="adj"/></l><r>teenimatu<s n="adj"/></r></p></e>
     <e><p><l>ansaitsematon<s n="adj"/></l><r>pälvimatu<s n="adj"/></r></p></e>
     <e><p><l>rauhanomainen<s n="adj"/></l><r>rahumeelne<s n="adj"/></r></p></e>
@@ -12728,16 +12742,16 @@
     <e><p><l>urogenitaalinen<s n="adj"/></l><r>urogenitaalne<s n="adj"/></r></p></e>
     <e><p><l>urogenitaalinen<s n="adj"/></l><r>kuse-suguelundite<s n="adj"/></r></p></e>
     <e><p><l>kuluttava<s n="adj"/></l><r>kulutav<s n="adj"/></r></p></e>
-    <e><p><l>ymmärretty<s n="adj"/></l><r>taibatud<s n="adj"/></r></p></e>
+    <e><p><l>ymmärretty<s n="adj"/></l><r>taibatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>panetteleva<s n="adj"/></l><r>laimav<s n="adj"/></r></p></e>
     <e><p><l>eliömaantieteellinen<s n="adj"/></l><r>biogeograafiline<s n="adj"/></r></p></e>
     <e><p><l>biogeografinen<s n="adj"/></l><r>biogeograafiline<s n="adj"/></r></p></e>
     <e><p><l>kunnioittava<s n="adj"/></l><r>lugupidav<s n="adj"/></r></p></e>
     <e><p><l>vapaa<s n="adj"/></l><r>vaba<s n="adj"/></r></p></e>
     <e><p><l>vapaa<s n="adj"/></l><r>kohustusteta<s n="adj"/></r></p></e>
-    <e><p><l>kuivattu<s n="adj"/></l><r>kuivatatud<s n="adj"/></r></p></e>
+    <e><p><l>kuivattu<s n="adj"/></l><r>kuivatatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>astmaattinen<s n="adj"/></l><r>astmaatiline<s n="adj"/></r></p></e>
-    <e><p><l>sisäänrakennettu<s n="adj"/></l><r>sisseehitatud<s n="adj"/></r></p></e>
+    <e><p><l>sisäänrakennettu<s n="adj"/></l><r>sisseehitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>akromaattinen<s n="adj"/></l><r>värvusetu<s n="adj"/></r></p></e>
     <e><p><l>akromaattinen<s n="adj"/></l><r>akromaatiline<s n="adj"/></r></p></e>
     <e><p><l>tutkiva<s n="adj"/></l><r>uuriv<s n="adj"/></r></p></e>
@@ -12767,7 +12781,7 @@
     <e><p><l>meioottinen<s n="adj"/></l><r>meiootiline<s n="adj"/></r></p></e>
     <e><p><l>tilava<s n="adj"/></l><r>ruumikas<s n="adj"/></r></p></e>
     <e><p><l>tilava<s n="adj"/></l><r>avar<s n="adj"/></r></p></e>
-    <e><p><l>grillattu<s n="adj"/></l><r>vardaspraetud<s n="adj"/></r></p></e>
+    <e><p><l>grillattu<s n="adj"/></l><r>vardaspraetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hapuileva<s n="adj"/></l><r>kobav<s n="adj"/></r></p></e>
     <e><p><l>vokaalinen<s n="adj"/></l><r>vokaalne<s n="adj"/></r></p></e>
     <e><p><l>vokaalinen<s n="adj"/></l><r>täishäälikuline<s n="adj"/></r></p></e>
@@ -12802,17 +12816,17 @@
     <e><p><l>värekarvallinen<s n="adj"/></l><r>ripsme-<s n="adj"/></r></p></e>
     <e><p><l>siemenetön<s n="adj"/></l><r>seemneteta<s n="adj"/></r></p></e>
     <e><p><l>näkyvä<s n="adj"/></l><r>tajutav<s n="adj"/></r></p></e>
-    <e><p><l>haudutettu<s n="adj"/></l><r>hautatud<s n="adj"/></r></p></e>
+    <e><p><l>haudutettu<s n="adj"/></l><r>hautatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>uhkarohkea<s n="adj"/></l><r>hulljulge<s n="adj"/></r></p></e>
     <e><p><l>tyhmänrohkea<s n="adj"/></l><r>hulljulge<s n="adj"/></r></p></e>
-    <e><p><l>langennut<s n="adj"/></l><r>langenud<s n="adj"/></r></p></e>
+    <e><p><l>langennut<s n="adj"/></l><r>langenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>huolellinen<s n="adj"/></l><r>ettevaatlik<s n="adj"/></r></p></e>
     <e><p><l>hullunrohkea<s n="adj"/></l><r>hulljulge<s n="adj"/></r></p></e>
     <e><p><l>eideettinen<s n="adj"/></l><r>eideetiline<s n="adj"/></r></p></e>
     <e><p><l>filharmoninen<s n="adj"/></l><r>filharmoonia-<s n="adj"/></r></p></e>
     <e><p><l>lumoava<s n="adj"/></l><r>lummav<s n="adj"/></r></p></e>
     <e><p><l>verinen<s n="adj"/></l><r>vereplekkides<s n="adj"/></r></p></e>
-    <e><p><l>valmistelematon<s n="adj"/></l><r>improviseeritud<s n="adj"/></r></p></e>
+    <e><p><l>valmistelematon<s n="adj"/></l><r>improviseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>epäkongruentti<s n="adj"/></l><r>mittekongruentne<s n="adj"/></r></p></e>
     <e><p><l>tuoksuva<s n="adj"/></l><r>aromaatne<s n="adj"/></r></p></e>
     <e><p><l>taistelunhaluinen<s n="adj"/></l><r>riiakas<s n="adj"/></r></p></e>
@@ -12822,7 +12836,7 @@
     <e><p><l>plutoninen<s n="adj"/></l><r>plutooniline<s n="adj"/></r></p></e>
     <e><p><l>kyynelehtivä<s n="adj"/></l><r>ülisentimentaalne<s n="adj"/></r></p></e>
     <e><p><l>sokerinen<s n="adj"/></l><r>suhkrune<s n="adj"/></r></p></e>
-    <e><p><l>kulunut<s n="adj"/></l><r>äraleierdatud<s n="adj"/></r></p></e>
+    <e><p><l>kulunut<s n="adj"/></l><r>äraleierdatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>aikalainen<s n="adj"/></l><r>ühevanune<s n="adj"/></r></p></e>
     <e><p><l>aikalainen<s n="adj"/></l><r>kaasaegne<s n="adj"/></r></p></e>
     <e><p><l>pitsinen<s n="adj"/></l><r>pits-<s n="adj"/></r></p></e>
@@ -12840,8 +12854,8 @@
     <e><p><l>jäljittämätön<s n="adj"/></l><r>jälitamatu<s n="adj"/></r></p></e>
     <e><p><l>teekupillinen<s n="adj"/></l><r>teetass<s n="adj"/></r></p></e>
     <e><p><l>piirretty<s n="adj"/></l><r>multikas<s n="adj"/></r></p></e>
-    <e><p><l>valmispakattu<s n="adj"/></l><r>pakendatud<s n="adj"/></r></p></e>
-    <e><p><l>valmispakattu<s n="adj"/></l><r>eelpakendatud<s n="adj"/></r></p></e>
+    <e><p><l>valmispakattu<s n="adj"/></l><r>pakendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>valmispakattu<s n="adj"/></l><r>eelpakendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>unelias<s n="adj"/></l><r>unine<s n="adj"/></r></p></e>
     <e><p><l>hölmö<s n="adj"/></l><r>napakas<s n="adj"/></r></p></e>
     <e><p><l>saastumaton<s n="adj"/></l><r>reostamata<s n="adj"/></r></p></e>
@@ -12859,8 +12873,8 @@
     <e><p><l>puhekyvytön<s n="adj"/></l><r>kõnevõimetu<s n="adj"/></r></p></e>
     <e><p><l>hankala<s n="adj"/></l><r>tüütu<s n="adj"/></r></p></e>
     <e><p><l>juureton<s n="adj"/></l><r>juurteta<s n="adj"/></r></p></e>
-    <e><p><l>ruskettunut<s n="adj"/></l><r>pruunikspõlenud<s n="adj"/></r></p></e>
-    <e><p><l>ruskettunut<s n="adj"/></l><r>päevitunud<s n="adj"/></r></p></e>
+    <e><p><l>ruskettunut<s n="adj"/></l><r>pruunikspõlenud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>ruskettunut<s n="adj"/></l><r>päevitunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>omaelämäkerrallinen<s n="adj"/></l><r>autobiograafia-<s n="adj"/></r></p></e>
     <e><p><l>autobiografinen<s n="adj"/></l><r>autobiograafia-<s n="adj"/></r></p></e>
     <e><p><l>papillinen<s n="adj"/></l><r>preestri-<s n="adj"/></r></p></e>
@@ -12875,8 +12889,8 @@
     <e><p><l>eutrofinen<s n="adj"/></l><r>eutroofne<s n="adj"/></r></p></e>
     <e><p><l>tahmea<s n="adj"/></l><r>kleepuv<s n="adj"/></r></p></e>
     <e><p><l>tahmainen<s n="adj"/></l><r>kleepuv<s n="adj"/></r></p></e>
-    <e><p><l>pariloitu<s n="adj"/></l><r>küpsetatud<s n="adj"/></r></p></e>
-    <e><p><l>pariloitu<s n="adj"/></l><r>grillitud<s n="adj"/></r></p></e>
+    <e><p><l>pariloitu<s n="adj"/></l><r>küpsetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>pariloitu<s n="adj"/></l><r>grillitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kiekkomainen<s n="adj"/></l><r>ketasjas<s n="adj"/></r></p></e>
     <e><p><l>lumoutunut<s n="adj"/></l><r>lummuses<s n="adj"/></r></p></e>
     <e><p><l>lumottu<s n="adj"/></l><r>lummuses<s n="adj"/></r></p></e>
@@ -12915,7 +12929,7 @@
     <e><p><l>pesemätön<s n="adj"/></l><r>pesemata<s n="adj"/></r></p></e>
     <e><p><l>savinen<s n="adj"/></l><r>savi-<s n="adj"/></r></p></e>
     <e><p><l>amebamainen<s n="adj"/></l><r>amööbisarnane<s n="adj"/></r></p></e>
-    <e><p><l>vanhanaikainen<s n="adj"/></l><r>aegunud<s n="adj"/></r></p></e>
+    <e><p><l>vanhanaikainen<s n="adj"/></l><r>aegunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kruunuton<s n="adj"/></l><r>kroonimata<s n="adj"/></r></p></e>
     <e><p><l>kovakantinen<s n="adj"/></l><r>kõvaköiteline<s n="adj"/></r></p></e>
     <e><p><l>aivoton<s n="adj"/></l><r>arulage<s n="adj"/></r></p></e>
@@ -12953,7 +12967,7 @@
     <e><p><l>apoplektinen<s n="adj"/></l><r>ajurabanduses<s n="adj"/></r></p></e>
     <e><p><l>vasomotorinen<s n="adj"/></l><r>vasomotoorne<s n="adj"/></r></p></e>
     <e><p><l>vasomotorinen<s n="adj"/></l><r>vasomotoor-<s n="adj"/></r></p></e>
-    <e><p><l>paatunut<s n="adj"/></l><r>paadunud<s n="adj"/></r></p></e>
+    <e><p><l>paatunut<s n="adj"/></l><r>paadunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>makrobioottinen<s n="adj"/></l><r>makrobiootiline<s n="adj"/></r></p></e>
     <e><p><l>rintava<s n="adj"/></l><r>rinnakas<s n="adj"/></r></p></e>
     <e><p><l>povekas<s n="adj"/></l><r>rinnakas<s n="adj"/></r></p></e>
@@ -12978,7 +12992,7 @@
     <e><p><l>älytön<s n="adj"/></l><r>kohtlane<s n="adj"/></r></p></e>
     <e><p><l>himokas<s n="adj"/></l><r>ihar<s n="adj"/></r></p></e>
     <e><p><l>autolastillinen<s n="adj"/></l><r>autotäis<s n="adj"/></r></p></e>
-    <e><p><l>palkittu<s n="adj"/></l><r>auhinnatud<s n="adj"/></r></p></e>
+    <e><p><l>palkittu<s n="adj"/></l><r>auhinnatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>himokas<s n="adj"/></l><r>kiimaline<s n="adj"/></r></p></e>
     <e><p><l>juopotteleva<s n="adj"/></l><r>purjus<s n="adj"/></r></p></e>
     <e><p><l>juopotteleva<s n="adj"/></l><r>purjakil<s n="adj"/></r></p></e>
@@ -12987,7 +13001,7 @@
     <e><p><l>onomastinen<s n="adj"/></l><r>onomastika-<s n="adj"/></r></p></e>
     <e><p><l>huippunykyaikainen<s n="adj"/></l><r>ülimoodne<s n="adj"/></r></p></e>
     <e><p><l>vahvistava<s n="adj"/></l><r>tugevdav<s n="adj"/></r></p></e>
-    <e><p><l>lumoutunut<s n="adj"/></l><r>võlutud<s n="adj"/></r></p></e>
+    <e><p><l>lumoutunut<s n="adj"/></l><r>võlutud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>riimitön<s n="adj"/></l><r>riimimata<s n="adj"/></r></p></e>
     <e><p><l>keinotekoinen<s n="adj"/></l><r>tehislik<s n="adj"/></r></p></e>
     <e><p><l>keinotekoinen<s n="adj"/></l><r>kunstlik<s n="adj"/></r></p></e>
@@ -13078,7 +13092,7 @@
     <e><p><l>puhdasrotuinen<s n="adj"/></l><r>puhtavereline<s n="adj"/></r></p></e>
     <e><p><l>palava<s n="adj"/></l><r>süüdatav<s n="adj"/></r></p></e>
     <e><p><l>palava<s n="adj"/></l><r>põlev<s n="adj"/></r></p></e>
-    <e><p><l>erotettu<s n="adj"/></l><r>eraldatud<s n="adj"/></r></p></e>
+    <e><p><l>erotettu<s n="adj"/></l><r>eraldatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tahditon<s n="adj"/></l><r>sündsusetu<s n="adj"/></r></p></e>
     <e><p><l>tahditon<s n="adj"/></l><r>ebadelikaatne<s n="adj"/></r></p></e>
     <e><p><l>kehottava<s n="adj"/></l><r>nõustav<s n="adj"/></r></p></e>
@@ -13117,7 +13131,7 @@
     <e><p><l>syötävä<s n="adj"/></l><r>söögikõlbulik<s n="adj"/></r></p></e>
     <e><p><l>syötävä<s n="adj"/></l><r>söögiasi<s n="adj"/></r></p></e>
     <e><p><l>kyttyräselkäinen<s n="adj"/></l><r>küüruga<s n="adj"/></r></p></e>
-    <e><p><l>järkevä<s n="adj"/></l><r>läbimõeldud<s n="adj"/></r></p></e>
+    <e><p><l>järkevä<s n="adj"/></l><r>läbimõeldud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hengetön<s n="adj"/></l><r>hingetu<s n="adj"/></r></p></e>
     <e><p><l>selkeä<s n="adj"/></l><r>selge<s n="adj"/></r></p></e>
     <e><p><l>päättäväinen<s n="adj"/></l><r>kõhklematu<s n="adj"/></r></p></e>
@@ -13175,7 +13189,7 @@
     <e><p><l>ensiluokkainen<s n="adj"/></l><r>esmaklassiline<s n="adj"/></r></p></e>
     <e><p><l>autogaaminen<s n="adj"/></l><r>autogaamne<s n="adj"/></r></p></e>
     <e><p><l>päivettynyt<s n="adj"/></l><r>päikesepruun<s n="adj"/></r></p></e>
-    <e><p><l>päivettynyt<s n="adj"/></l><r>päevitunud<s n="adj"/></r></p></e>
+    <e><p><l>päivettynyt<s n="adj"/></l><r>päevitunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>lutkamainen<s n="adj"/></l><r>litsilööv<s n="adj"/></r></p></e>
     <e><p><l>saniaismainen<s n="adj"/></l><r>sõnajalataoline<s n="adj"/></r></p></e>
     <e><p><l>pelkurimainen<s n="adj"/></l><r>arglik<s n="adj"/></r></p></e>
@@ -13183,7 +13197,7 @@
     <e><p><l>kaksihuulinen<s n="adj"/></l><r>kahehuulne<s n="adj"/></r></p></e>
     <e><p><l>kaksihuulinen<s n="adj"/></l><r>bilabiaalne<s n="adj"/></r></p></e>
     <e><p><l>aviollinen<s n="adj"/></l><r>abieluline<s n="adj"/></r></p></e>
-    <e><p><l>sytytetty<s n="adj"/></l><r>läidetud<s n="adj"/></r></p></e>
+    <e><p><l>sytytetty<s n="adj"/></l><r>läidetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rahaton<s n="adj"/></l><r>puupaljas<s n="adj"/></r></p></e>
     <e><p><l>maanpäällinen<s n="adj"/></l><r>maapealne<s n="adj"/></r></p></e>
     <e><p><l>vihjaileva<s n="adj"/></l><r>vihjav<s n="adj"/></r></p></e>
@@ -13211,13 +13225,13 @@
     <e><p><l>jääräpäinen<s n="adj"/></l><r>järeleandmatu<s n="adj"/></r></p></e>
     <e><p><l>hippiäinen<s n="adj"/></l><r>pöialpoiss<s n="adj"/></r></p></e>
     <e><p><l>arkaainen<s n="adj"/></l><r>arhailine<s n="adj"/></r></p></e>
-    <e><p><l>varustettu<s n="adj"/></l><r>varustatud<s n="adj"/></r></p></e>
+    <e><p><l>varustettu<s n="adj"/></l><r>varustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kettumainen<s n="adj"/></l><r>rebasetaoline<s n="adj"/></r></p></e>
     <e><p><l>isoterminen<s n="adj"/></l><r>isotermiline<s n="adj"/></r></p></e>
     <e><p><l>hatullinen<s n="adj"/></l><r>mütsitäis<s n="adj"/></r></p></e>
     <e><p><l>harrastelijamainen<s n="adj"/></l><r>diletantlik<s n="adj"/></r></p></e>
     <e><p><l>diletanttimainen<s n="adj"/></l><r>diletantlik<s n="adj"/></r></p></e>
-    <e><p><l>nolostunut<s n="adj"/></l><r>häbistatud<s n="adj"/></r></p></e>
+    <e><p><l>nolostunut<s n="adj"/></l><r>häbistatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>katoton<s n="adj"/></l><r>katuseta<s n="adj"/></r></p></e>
     <e><p><l>uhkarohkea<s n="adj"/></l><r>riskiv<s n="adj"/></r></p></e>
     <e><p><l>rypälemäinen<s n="adj"/></l><r>kobarakujuline<s n="adj"/></r></p></e>
@@ -13246,19 +13260,19 @@
     <e><p><l>ällöttävä<s n="adj"/></l><r>vastik<s n="adj"/></r></p></e>
     <e><p><l>ällöttävä<s n="adj"/></l><r>iiveldamapanev<s n="adj"/></r></p></e>
     <e><p><l>vastaanottava<s n="adj"/></l><r>vastuvõtlik<s n="adj"/></r></p></e>
-    <e><p><l>vanhanaikainen<s n="adj"/></l><r>iganenud<s n="adj"/></r></p></e>
-    <e><p><l>sulkeutunut<s n="adj"/></l><r>endassetõmbunud<s n="adj"/></r></p></e>
+    <e><p><l>vanhanaikainen<s n="adj"/></l><r>iganenud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>sulkeutunut<s n="adj"/></l><r>endassetõmbunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>saippuamainen<s n="adj"/></l><r>seebitaoline<s n="adj"/></r></p></e>
     <e><p><l>ovela<s n="adj"/></l><r>kaval<s n="adj"/></r></p></e>
     <e><p><l>kaukonäköinen<s n="adj"/></l><r>kaugnägelik<s n="adj"/></r></p></e>
     <e><p><l>kähärä<s n="adj"/></l><r>kähar<s n="adj"/></r></p></e>
     <e><p><l>halpa<s n="adj"/></l><r>odav<s n="adj"/></r></p></e>
     <e><p><l>valaiseva<s n="adj"/></l><r>selgitav<s n="adj"/></r></p></e>
-    <e><p><l>slummiutunut<s n="adj"/></l><r>slummistunud<s n="adj"/></r></p></e>
-    <e><p><l>slummimainen<s n="adj"/></l><r>slummistunud<s n="adj"/></r></p></e>
-    <e><p><l>puettu<s n="adj"/></l><r>rõivastatud<s n="adj"/></r></p></e>
+    <e><p><l>slummiutunut<s n="adj"/></l><r>slummistunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>slummimainen<s n="adj"/></l><r>slummistunud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>puettu<s n="adj"/></l><r>rõivastatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>neuvoa-antava<s n="adj"/></l><r>nõustav<s n="adj"/></r></p></e>
-    <e><p><l>mennyt<s n="adj"/></l><r>möödunud<s n="adj"/></r></p></e>
+    <e><p><l>mennyt<s n="adj"/></l><r>möödunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>konsultatiivinen<s n="adj"/></l><r>nõustav<s n="adj"/></r></p></e>
     <e><p><l>kaukokatseinen<s n="adj"/></l><r>kaugnägelik<s n="adj"/></r></p></e>
     <e><p><l>isohko<s n="adj"/></l><r>suurepoolne<s n="adj"/></r></p></e>
@@ -13280,34 +13294,34 @@
     <e><p><l>vaadittava<s n="adj"/></l><r>nõutav<s n="adj"/></r></p></e>
     <e><p><l>jälkimmäinen<s n="adj"/></l><r>viimane<s n="adj"/></r></p></e>
     <e><p><l>tähdittävä<s n="adj"/></l><r>peaosas<s n="adj"/></r></p></e>
-    <e><p><l>erotettu<s n="adj"/></l><r>vallandatud<s n="adj"/></r></p></e>
-    <e><p><l>korjattu<s n="adj"/></l><r>toimetatud<s n="adj"/></r></p></e>
-    <e><p><l>hajotettu<s n="adj"/></l><r>lammutatud<s n="adj"/></r></p></e>
-    <e><p><l>tarkistettu<s n="adj"/></l><r>ümbertöötatud<s n="adj"/></r></p></e>
+    <e><p><l>erotettu<s n="adj"/></l><r>vallandatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>korjattu<s n="adj"/></l><r>toimetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>hajotettu<s n="adj"/></l><r>lammutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tarkistettu<s n="adj"/></l><r>ümbertöötatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kaakkoinen<s n="adj"/></l><r>kagu-<s n="adj"/></r></p></e>
     <e><p><l>vastustava<s n="adj"/></l><r>vastas-<s n="adj"/></r></p></e>
-    <e><p><l>reunainen<s n="adj"/></l><r>ääristatud<s n="adj"/></r></p></e>
+    <e><p><l>reunainen<s n="adj"/></l><r>ääristatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>samanniminen<s n="adj"/></l><r>eponüümiline<s n="adj"/></r></p></e>
-    <e><p><l>häväisty<s n="adj"/></l><r>kahjustatud<s n="adj"/></r></p></e>
+    <e><p><l>häväisty<s n="adj"/></l><r>kahjustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kyvykäs<s n="adj"/></l><r>andekas<s n="adj"/></r></p></e>
-    <e><p><l>yksinkertaistettu<s n="adj"/></l><r>lihtsustatud<s n="adj"/></r></p></e>
-    <e><p><l>tuskainen<s n="adj"/></l><r>piinatud<s n="adj"/></r></p></e>
-    <e><p><l>vapautettu<s n="adj"/></l><r>õigeksmõistetud<s n="adj"/></r></p></e>
-    <e><p><l>vahvistettu<s n="adj"/></l><r>tõendatud<s n="adj"/></r></p></e>
+    <e><p><l>yksinkertaistettu<s n="adj"/></l><r>lihtsustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tuskainen<s n="adj"/></l><r>piinatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>vapautettu<s n="adj"/></l><r>õigeksmõistetud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>vahvistettu<s n="adj"/></l><r>tõendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>bakteerisyntyinen<s n="adj"/></l><r>bakteri-<s n="adj"/></r></p></e>
     <e><p><l>yleinen<s n="adj"/></l><r>valdav<s n="adj"/></r></p></e>
-    <e><p><l>hylätty<s n="adj"/></l><r>äravisatud<s n="adj"/></r></p></e>
-    <e><p><l>valtuutettu<s n="adj"/></l><r>volitatud<s n="adj"/></r></p></e>
+    <e><p><l>hylätty<s n="adj"/></l><r>äravisatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>valtuutettu<s n="adj"/></l><r>volitatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>julkaisematon<s n="adj"/></l><r>avaldamata<s n="adj"/></r></p></e>
     <e><p><l>tarunomainen<s n="adj"/></l><r>müütiline<s n="adj"/></r></p></e>
-    <e><p><l>puserrettu<s n="adj"/></l><r>kokkusurutud<s n="adj"/></r></p></e>
-    <e><p><l>tyylitelty<s n="adj"/></l><r>stiliseeritud<s n="adj"/></r></p></e>
-    <e><p><l>paikallinen<s n="adj"/></l><r>lokaliseeritud<s n="adj"/></r></p></e>
-    <e><p><l>romuttunut<s n="adj"/></l><r>purunenud<s n="adj"/></r></p></e>
+    <e><p><l>puserrettu<s n="adj"/></l><r>kokkusurutud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>tyylitelty<s n="adj"/></l><r>stiliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>paikallinen<s n="adj"/></l><r>lokaliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>romuttunut<s n="adj"/></l><r>purunenud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyylillinen<s n="adj"/></l><r>stiili-<s n="adj"/></r></p></e>
     <e><p><l>renaalinen<s n="adj"/></l><r>neeru-<s n="adj"/></r></p></e>
     <e><p><l>häikäilemätön<s n="adj"/></l><r>halastamatu<s n="adj"/></r></p></e>
-    <e><p><l>himoittu<s n="adj"/></l><r>ihatud<s n="adj"/></r></p></e>
+    <e><p><l>himoittu<s n="adj"/></l><r>ihatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pettävä<s n="adj"/></l><r>petturlik<s n="adj"/></r></p></e>
     <e><p><l>kvadraattinen<s n="adj"/></l><r>ruut-<s n="adj"/></r></p></e>
     <e><p><l>neliöity<s n="adj"/></l><r>ruudus<s n="adj"/></r></p></e>
@@ -13320,7 +13334,7 @@
     <e><p><l>kirjava<s n="adj"/></l><r>mitmesugune<s n="adj"/></r></p></e>
     <e><p><l>dogmaattinen<s n="adj"/></l><r>doktriinne<s n="adj"/></r></p></e>
     <e><p><l>merkityksetön<s n="adj"/></l><r>mõttetu<s n="adj"/></r></p></e>
-    <e><p><l>hienonnettu<s n="adj"/></l><r>hakitud<s n="adj"/></r></p></e>
+    <e><p><l>hienonnettu<s n="adj"/></l><r>hakitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>samanlainen<s n="adj"/></l><r>eristamatu<s n="adj"/></r></p></e>
     <e><p><l>syyksiluettava<s n="adj"/></l><r>omistatav<s n="adj"/></r></p></e>
     <e><p><l>haaveiltu<s n="adj"/></l><r>unistuste<s n="adj"/></r></p></e>
@@ -13333,25 +13347,25 @@
     <e><p><l>samasyntyinen<s n="adj"/></l><r>homoloogiline<s n="adj"/></r></p></e>
     <e><p><l>kalkkinen<s n="adj"/></l><r>lubja-<s n="adj"/></r></p></e>
     <e><p><l>maaliton<s n="adj"/></l><r>väravateta<s n="adj"/></r></p></e>
-    <e><p><l>keskitetty<s n="adj"/></l><r>tsentraliseeritud<s n="adj"/></r></p></e>
+    <e><p><l>keskitetty<s n="adj"/></l><r>tsentraliseeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ainutlaatuinen<s n="adj"/></l><r>võrratu<s n="adj"/></r></p></e>
     <e><p><l>maksipituinen<s n="adj"/></l><r>maksi-<s n="adj"/></r></p></e>
     <e><p><l>arvokas<s n="adj"/></l><r>väärikas<s n="adj"/></r></p></e>
     <e><p><l>uskottu<s n="adj"/></l><r>usaldusmees<s n="adj"/></r></p></e>
-    <e><p><l>tyrmistynyt<s n="adj"/></l><r>kohutatud<s n="adj"/></r></p></e>
+    <e><p><l>tyrmistynyt<s n="adj"/></l><r>kohutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>mutkitteleva<s n="adj"/></l><r>looklev<s n="adj"/></r></p></e>
     <e><p><l>hormonaalinen<s n="adj"/></l><r>hormoon-<s n="adj"/></r></p></e>
     <e><p><l>heikentävä<s n="adj"/></l><r>kurnav<s n="adj"/></r></p></e>
-    <e><p><l>jäähdytetty<s n="adj"/></l><r>külmutatud<s n="adj"/></r></p></e>
+    <e><p><l>jäähdytetty<s n="adj"/></l><r>külmutatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>vino<s n="adj"/></l><r>viltune<s n="adj"/></r></p></e>
     <e><p><l>lumbaalinen<s n="adj"/></l><r>nimme-<s n="adj"/></r></p></e>
-    <e><p><l>hakattu<s n="adj"/></l><r>tahutud<s n="adj"/></r></p></e>
+    <e><p><l>hakattu<s n="adj"/></l><r>tahutud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>internoitu<s n="adj"/></l><r>kinnipeetu<s n="adj"/></r></p></e>
     <e><p><l>taiturimainen<s n="adj"/></l><r>meisterlik<s n="adj"/></r></p></e>
     <e><p><l>saartava<s n="adj"/></l><r>blokeeriv<s n="adj"/></r></p></e>
     <e><p><l>suvaitsematon<s n="adj"/></l><r>sallimatu<s n="adj"/></r></p></e>
     <e><p><l>uuvuttava<s n="adj"/></l><r>kurnav<s n="adj"/></r></p></e>
-    <e><p><l>tukkeutunut<s n="adj"/></l><r>ummistunud<s n="adj"/></r></p></e>
+    <e><p><l>tukkeutunut<s n="adj"/></l><r>ummistunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>painoton<s n="adj"/></l><r>rõhutu<s n="adj"/></r></p></e>
     <e><p><l>ylenpalttinen<s n="adj"/></l><r>ülikülluslik<s n="adj"/></r></p></e>
     <e><p><l>ristiriitainen<s n="adj"/></l><r>kokkusobimatu<s n="adj"/></r></p></e>
@@ -13368,18 +13382,18 @@
     <e><p><l>herjaava<s n="adj"/></l><r>laimav<s n="adj"/></r></p></e>
     <e><p><l>troofinen<s n="adj"/></l><r>toitumis-<s n="adj"/></r></p></e>
     <e><p><l>tuhoutumaton<s n="adj"/></l><r>hävimatu<s n="adj"/></r></p></e>
-    <e><p><l>kalkittu<s n="adj"/></l><r>lubjatud<s n="adj"/></r></p></e>
+    <e><p><l>kalkittu<s n="adj"/></l><r>lubjatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>riemastuttava<s n="adj"/></l><r>meeltülendav<s n="adj"/></r></p></e>
     <e><p><l>häviötön<s n="adj"/></l><r>kadudeta<s n="adj"/></r></p></e>
     <e><p><l>hurja<s n="adj"/></l><r>pöörane<s n="adj"/></r></p></e>
     <e><p><l>syntinen<s n="adj"/></l><r>patune<s n="adj"/></r></p></e>
     <e><p><l>estävä<s n="adj"/></l><r>pidurdav<s n="adj"/></r></p></e>
     <e><p><l>ainutlaatuinen<s n="adj"/></l><r>võrreldamatu<s n="adj"/></r></p></e>
-    <e><p><l>häpäisty<s n="adj"/></l><r>rüvetatud<s n="adj"/></r></p></e>
+    <e><p><l>häpäisty<s n="adj"/></l><r>rüvetatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hiilityöläinen<s n="adj"/></l><r>söekaevur<s n="adj"/></r></p></e>
     <e><p><l>ohjauskykyinen<s n="adj"/></l><r>manööverdusvõimeline<s n="adj"/></r></p></e>
     <e><p><l>ryöstelevä<s n="adj"/></l><r>marodööritsemine<s n="adj"/></r></p></e>
-    <e><p><l>rokotettu<s n="adj"/></l><r>vaktsineeritud<s n="adj"/></r></p></e>
+    <e><p><l>rokotettu<s n="adj"/></l><r>vaktsineeritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kierrätettävä<s n="adj"/></l><r>korduvkasutusega<s n="adj"/></r></p></e>
     <e><p><l>epäuskoinen<s n="adj"/></l><r>kõhklev<s n="adj"/></r></p></e>
     <e><p><l>havaittava<s n="adj"/></l><r>tajutav<s n="adj"/></r></p></e>
@@ -13388,7 +13402,7 @@
     <e><p><l>turmiollinen<s n="adj"/></l><r>kahjulik<s n="adj"/></r></p></e>
     <e><p><l>fosforipitoinen<s n="adj"/></l><r>fosfor-<s n="adj"/></r></p></e>
     <e><p><l>taivutuksellinen<s n="adj"/></l><r>fleksiooni-<s n="adj"/></r></p></e>
-    <e><p><l>kuolioinen<s n="adj"/></l><r>kärbunud<s n="adj"/></r></p></e>
+    <e><p><l>kuolioinen<s n="adj"/></l><r>kärbunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>amnioottinen<s n="adj"/></l><r>loote-<s n="adj"/></r></p></e>
     <e><p><l>häviöllinen<s n="adj"/></l><r>kadudega<s n="adj"/></r></p></e>
     <e><p><l>vääjäämätön<s n="adj"/></l><r>möödapääsmatu<s n="adj"/></r></p></e>
@@ -13413,16 +13427,16 @@
     <e><p><l>happamaton<s n="adj"/></l><r>hapendamata<s n="adj"/></r></p></e>
     <e><p><l>välinpitämätön<s n="adj"/></l><r>hoolimatu<s n="adj"/></r></p></e>
     <e><p><l>imeytyvä<s n="adj"/></l><r>nahakaudne<s n="adj"/></r></p></e>
-    <e><p><l>kiihotettu<s n="adj"/></l><r>kannustatud<s n="adj"/></r></p></e>
+    <e><p><l>kiihotettu<s n="adj"/></l><r>kannustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rotuhygieeninen<s n="adj"/></l><r>eugeeniline<s n="adj"/></r></p></e>
     <e><p><l>moukkamainen<s n="adj"/></l><r>tahumatu<s n="adj"/></r></p></e>
     <e><p><l>pihkainen<s n="adj"/></l><r>vaigu-<s n="adj"/></r></p></e>
     <e><p><l>haptinen<s n="adj"/></l><r>kompimis-<s n="adj"/></r></p></e>
     <e><p><l>pidäkkeetön<s n="adj"/></l><r>allasurumatu<s n="adj"/></r></p></e>
     <e><p><l>humoraalinen<s n="adj"/></l><r>kehavedeliku<s n="adj"/></r></p></e>
-    <e><p><l>hutiloitu<s n="adj"/></l><r>vussitud<s n="adj"/></r></p></e>
+    <e><p><l>hutiloitu<s n="adj"/></l><r>vussitud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kimmeltävä<s n="adj"/></l><r>läikiv<s n="adj"/></r></p></e>
-    <e><p><l>epäaito<s n="adj"/></l><r>järeletehtud<s n="adj"/></r></p></e>
+    <e><p><l>epäaito<s n="adj"/></l><r>järeletehtud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>makaava<s n="adj"/></l><r>pikutav<s n="adj"/></r></p></e>
     <e><p><l>torahampainen<s n="adj"/></l><r>kihvadega<s n="adj"/></r></p></e>
     <e><p><l>irstas<s n="adj"/></l><r>liiderlik<s n="adj"/></r></p></e>
@@ -13430,7 +13444,7 @@
     <e><p><l>käsivarainen<s n="adj"/></l><r>vabakäe-<s n="adj"/></r></p></e>
     <e><p><l>saarnaava<s n="adj"/></l><r>moraliseeriv<s n="adj"/></r></p></e>
     <e><p><l>juokseva<s n="adj"/></l><r>vesine<s n="adj"/></r></p></e>
-    <e><p><l>käsitelty<s n="adj"/></l><r>töödeldud<s n="adj"/></r></p></e>
+    <e><p><l>käsitelty<s n="adj"/></l><r>töödeldud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>yksiytiminen<s n="adj"/></l><r>mononukleaarne<s n="adj"/></r></p></e>
     <e><p><l>vallaton<s n="adj"/></l><r>kasvatamatu<s n="adj"/></r></p></e>
     <e><p><l>raskaudenaikainen<s n="adj"/></l><r>sünnieelne<s n="adj"/></r></p></e>
@@ -13438,12 +13452,12 @@
     <e><p><l>kiduksellinen<s n="adj"/></l><r>lõpustega<s n="adj"/></r></p></e>
     <e><p><l>kyttyräinen<s n="adj"/></l><r>küüruga<s n="adj"/></r></p></e>
     <e><p><l>vastasyntynyt<s n="adj"/></l><r>vastsündinu<s n="adj"/></r></p></e>
-    <e><p><l>turmeltu<s n="adj"/></l><r>paljaksrüüstatud<s n="adj"/></r></p></e>
-    <e><p><l>parannettu<s n="adj"/></l><r>parandatud<s n="adj"/></r></p></e>
+    <e><p><l>turmeltu<s n="adj"/></l><r>paljaksrüüstatud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>parannettu<s n="adj"/></l><r>parandatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>sietämätön<s n="adj"/></l><r>hulluksajav<s n="adj"/></r></p></e>
     <e><p><l>kymmenjalkainen<s n="adj"/></l><r>dekapood<s n="adj"/></r></p></e>
     <e><p><l>arvoton<s n="adj"/></l><r>väärtusetu<s n="adj"/></r></p></e>
-    <e><p><l>surkastunut<s n="adj"/></l><r>atrofeerunud<s n="adj"/></r></p></e>
+    <e><p><l>surkastunut<s n="adj"/></l><r>atrofeerunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kaaviollinen<s n="adj"/></l><r>skemaatiline<s n="adj"/></r></p></e>
     <e><p><l>kitkaton<s n="adj"/></l><r>hõõrdumiseta<s n="adj"/></r></p></e>
     <e><p><l>porfyyrinen<s n="adj"/></l><r>porfüriidiline<s n="adj"/></r></p></e>
@@ -13459,7 +13473,7 @@
     <e><p><l>määritettävä<s n="adj"/></l><r>määratletav<s n="adj"/></r></p></e>
     <e><p><l>kennomainen<s n="adj"/></l><r>kärgjas<s n="adj"/></r></p></e>
     <e><p><l>sotilaallinen<s n="adj"/></l><r>sõjaväelik<s n="adj"/></r></p></e>
-    <e><p><l>paleltunut<s n="adj"/></l><r>külmavõetud<s n="adj"/></r></p></e>
+    <e><p><l>paleltunut<s n="adj"/></l><r>külmavõetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>muodollinen<s n="adj"/></l><r>formalistlik<s n="adj"/></r></p></e>
     <e><p><l>monikaistainen<s n="adj"/></l><r>mitmerealine<s n="adj"/></r></p></e>
     <e><p><l>poistettava<s n="adj"/></l><r>kustutatav<s n="adj"/></r></p></e>
@@ -13472,7 +13486,7 @@
     <e><p><l>kumottava<s n="adj"/></l><r>tühistatav<s n="adj"/></r></p></e>
     <e><p><l>doorilainen<s n="adj"/></l><r>dooria<s n="adj"/></r></p></e>
     <e><p><l>valituskelpoinen<s n="adj"/></l><r>edasikaevatav<s n="adj"/></r></p></e>
-    <e><p><l>hämmentynyt<s n="adj"/></l><r>häiritud<s n="adj"/></r></p></e>
+    <e><p><l>hämmentynyt<s n="adj"/></l><r>häiritud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>raskas<s n="adj"/></l><r>kontimurdev<s n="adj"/></r></p></e>
     <e><p><l>pellemäinen<s n="adj"/></l><r>veiderdav<s n="adj"/></r></p></e>
     <e><p><l>boreaalinen<s n="adj"/></l><r>põhjapiirkondade<s n="adj"/></r></p></e>
@@ -13485,7 +13499,7 @@
     <e><p><l>ryppyinen<s n="adj"/></l><r>kortsus<s n="adj"/></r></p></e>
     <e><p><l>kehno<s n="adj"/></l><r>armetu<s n="adj"/></r></p></e>
     <e><p><l>kätevä<s n="adj"/></l><r>osav<s n="adj"/></r></p></e>
-    <e><p><l>vesipöhöinen<s n="adj"/></l><r>tursunud<s n="adj"/></r></p></e>
+    <e><p><l>vesipöhöinen<s n="adj"/></l><r>tursunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tyyni<s n="adj"/></l><r>häirimatu<s n="adj"/></r></p></e>
     <e><p><l>ojittamaton<s n="adj"/></l><r>kuivendamata<s n="adj"/></r></p></e>
     <e><p><l>diabaattinen<s n="adj"/></l><r>soojustjuhtiv<s n="adj"/></r></p></e>
@@ -13501,7 +13515,7 @@
     <e><p><l>vääristävä<s n="adj"/></l><r>deformeeriv<s n="adj"/></r></p></e>
     <e><p><l>kelluva<s n="adj"/></l><r>hõljuv<s n="adj"/></r></p></e>
     <e><p><l>kohtuuton<s n="adj"/></l><r>põhjendamatu<s n="adj"/></r></p></e>
-    <e><p><l>ärtyinen<s n="adj"/></l><r>kibestunud<s n="adj"/></r></p></e>
+    <e><p><l>ärtyinen<s n="adj"/></l><r>kibestunud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kaksoiskovera<s n="adj"/></l><r>kaksiknõgus<s n="adj"/></r></p></e>
     <e><p><l>kultapitoinen<s n="adj"/></l><r>kullasisaldusega<s n="adj"/></r></p></e>
     <e><p><l>harjaantumaton<s n="adj"/></l><r>võhiklik<s n="adj"/></r></p></e>
@@ -13517,10 +13531,10 @@
     <e><p><l>teroittamaton<s n="adj"/></l><r>teritamata<s n="adj"/></r></p></e>
     <e><p><l>ei-uskova<s n="adj"/></l><r>mitteuskuja<s n="adj"/></r></p></e>
     <e><p><l>moitteeton<s n="adj"/></l><r>laitmatu<s n="adj"/></r></p></e>
-    <e><p><l>sotkuinen<s n="adj"/></l><r>segiaetud<s n="adj"/></r></p></e>
+    <e><p><l>sotkuinen<s n="adj"/></l><r>segiaetud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>määräaikainen<s n="adj"/></l><r>lõpetatav<s n="adj"/></r></p></e>
     <e><p><l>epäsointuinen<s n="adj"/></l><r>disharmooniline<s n="adj"/></r></p></e>
-    <e><p><l>uupunut<s n="adj"/></l><r>kurnatud<s n="adj"/></r></p></e>
+    <e><p><l>uupunut<s n="adj"/></l><r>kurnatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>tunnoton<s n="adj"/></l><r>südametunnistuseta<s n="adj"/></r></p></e>
     <e><p><l>jalostava<s n="adj"/></l><r>ülendav<s n="adj"/></r></p></e>
     <e><p><l>kujeileva<s n="adj"/></l><r>ülemeelik<s n="adj"/></r></p></e>
@@ -13528,7 +13542,7 @@
     <e><p><l>kiistämätön<s n="adj"/></l><r>vaieldamatu<s n="adj"/></r></p></e>
     <e><p><l>ruoskamainen<s n="adj"/></l><r>piitsjas<s n="adj"/></r></p></e>
     <e><p><l>diluviaalinen<s n="adj"/></l><r>veeuputuse-<s n="adj"/></r></p></e>
-    <e><p><l>typistetty<s n="adj"/></l><r>mahalõigatud<s n="adj"/></r></p></e>
+    <e><p><l>typistetty<s n="adj"/></l><r>mahalõigatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ristiverinen<s n="adj"/></l><r>brünett<s n="adj"/></r></p></e>
     <e><p><l>paksupäinen<s n="adj"/></l><r>puupäine<s n="adj"/></r></p></e>
     <e><p><l>ylivarovainen<s n="adj"/></l><r>liigettevaatlik<s n="adj"/></r></p></e>
@@ -13549,7 +13563,7 @@
     <e><p><l>hävitettävä<s n="adj"/></l><r>väljajuuritav<s n="adj"/></r></p></e>
     <e><p><l>alkemistinen<s n="adj"/></l><r>alkeemiku-<s n="adj"/></r></p></e>
     <e><p><l>varreton<s n="adj"/></l><r>kehatu<s n="adj"/></r></p></e>
-    <e><p><l>matoinen<s n="adj"/></l><r>ussitanud<s n="adj"/></r></p></e>
+    <e><p><l>matoinen<s n="adj"/></l><r>ussitanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>lausunnallinen<s n="adj"/></l><r>ilukõneline<s n="adj"/></r></p></e>
     <e><p><l>tajuttava<s n="adj"/></l><r>mõistetav<s n="adj"/></r></p></e>
     <e><p><l>juonikas<s n="adj"/></l><r>salakaval<s n="adj"/></r></p></e>
@@ -13563,7 +13577,7 @@
     <e><p><l>kaarenmuotoinen<s n="adj"/></l><r>võlvikujuline<s n="adj"/></r></p></e>
     <e><p><l>biologistinen<s n="adj"/></l><r>biologistlik<s n="adj"/></r></p></e>
     <e><p><l>sakotettava<s n="adj"/></l><r>trahvitav<s n="adj"/></r></p></e>
-    <e><p><l>yläluokkainen<s n="adj"/></l><r>kõrgestisündinud<s n="adj"/></r></p></e>
+    <e><p><l>yläluokkainen<s n="adj"/></l><r>kõrgestisündinud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>töykeä<s n="adj"/></l><r>järsk<s n="adj"/></r></p></e>
     <e><p><l>merkittävä<s n="adj"/></l><r>vahva<s n="adj"/></r></p></e>
     <e><p><l>käsineetön<s n="adj"/></l><r>kinnasteta<s n="adj"/></r></p></e>
@@ -15862,8 +15876,8 @@
     <e><p><l>pöllähdys<s n="n"/></l><r>pahv<s n="n"/></r></p></e>
     <e><p><l>painaja<s n="n"/></l><r>suruja<s n="n"/></r></p></e>
     <e><p><l>painajainen<s n="n"/></l><r>painaja<s n="n"/></r></p></e>
-    <e><p><l>paistetut<s n="adj"/></l><r>praetud<s n="adj"/></r></p></e>
-    <e><p><l>turvonnut<s n="adj"/></l><r>paistetanud<s n="adj"/></r></p></e>
+    <e><p><l>paistetut<s n="adj"/></l><r>praetud<s n="adj"/></r></p><par n="nut_nud"/></e>
+    <e><p><l>turvonnut<s n="adj"/></l><r>paistetanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>pata<s n="n"/></l><r>pada<s n="n"/></r></p></e>
     <e><p><l>pakki<s n="n"/></l><r>tagasikäik<s n="n"/></r></p></e>
     <e><p><l>paketti<s n="n"/></l><r>pakk<s n="n"/></r></p></e>
@@ -15973,7 +15987,7 @@
     <e><p><l>hihna<s n="n"/></l><r>rihm<s n="n"/></r></p></e>
     <e><p><l>riista<s n="n"/></l><r>jahiloom<s n="n"/></r></p></e>
     <e><p><l>työkalu<s n="n"/></l><r>riist<s n="n"/></r></p></e>
-    <e><p><l>riivattu<s n="adj"/></l><r>nõiutud<s n="adj"/></r></p></e>
+    <e><p><l>riivattu<s n="adj"/></l><r>nõiutud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ilkeä<s n="adj"/></l><r>riivatu<s n="adj"/></r></p></e>
     <e><p><l>rinnakainen<s n="adj"/></l><r>kõrvutine<s n="adj"/></r></p></e>
     <e><p><l>suuririntainen<s n="adj"/></l><r>rinnakas<s n="adj"/></r></p></e>
@@ -16946,7 +16960,7 @@
     <e><p><l>nykyinen<s n="adj"/></l><r>praegune<s n="adj"/></r></p></e>
     <e><p><l>yhteinen<s n="adj"/></l><r>ühine<s n="adj"/></r></p></e>
     <e><p><l>lyhyt<s n="adj"/></l><r>lühike<s n="adj"/></r></p></e>
-    <e><p><l>tietty<s n="adj"/></l><r>teatud<s n="adj"/></r></p></e>
+    <e><p><l>tietty<s n="adj"/></l><r>teatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>ainoa<s n="adj"/></l><r>ainus<s n="adj"/></r></p></e>
     <e><p><l>tosi<s n="adj"/></l><r>tõsi<s n="adj"/></r></p></e>
     <e><p><l>yksityinen<s n="adj"/></l><r>isiklik<s n="adj"/></r></p></e>
@@ -16962,7 +16976,7 @@
     <e><p><l>ruotsalainen<s n="adj"/></l><r>rootsi<s n="adj"/></r></p></e>
     <e><p><l>hauska<s n="adj"/></l><r>meeldiv<s n="adj"/></r></p></e>
     <e><p><l>välitön<s n="adj"/></l><r>vahetu<s n="adj"/></r></p></e>
-    <e><p><l>aikainen<s n="adj"/></l><r>täiskasvanud<s n="adj"/></r></p></e>
+    <e><p><l>aikainen<s n="adj"/></l><r>täiskasvanud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>hidas<s n="adj"/></l><r>aeglane<s n="adj"/></r></p></e>
     <e><p><l>normaali<s n="adj"/></l><r>normaalne<s n="adj"/></r></p></e>
     <e><p><l>tuttu<s n="adj"/></l><r>tuttav<s n="adj"/></r></p></e>
@@ -16975,7 +16989,7 @@
     <e><p><l>virallinen<s n="adj"/></l><r>ametlik<s n="adj"/></r></p></e>
     <e><p><l>mukava<s n="adj"/></l><r>meeldiv<s n="adj"/></r></p></e>
     <e><p><l>mukava<s n="adj"/></l><r>mugav<s n="adj"/></r></p></e>
-    <e><p><l>avoin<s n="adj"/></l><r>avatud<s n="adj"/></r></p></e>
+    <e><p><l>avoin<s n="adj"/></l><r>avatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>kuiva<s n="adj"/></l><r>kuiv<s n="adj"/></r></p></e>
     <e><p><l>jonkinlainen<s n="adj"/></l><r>mingisugune<s n="adj"/></r></p></e>
     <e><p><l>julkinen<s n="adj"/></l><r>avalik<s n="adj"/></r></p></e>
@@ -17011,7 +17025,7 @@
     <e><p><l>henkilökohtainen<s n="adj"/></l><r>isiklik<s n="adj"/></r></p></e>
     <e><p><l>vajaa<s n="adj"/></l><r>napp<s n="adj"/></r></p></e>
     <e><p><l>kansallinen<s n="adj"/></l><r>rahvuslik<s n="adj"/></r></p></e>
-    <e><p><l>kuollut<s n="adj"/></l><r>surnud<s n="adj"/></r></p></e>
+    <e><p><l>kuollut<s n="adj"/></l><r>surnud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>nykyaikainen<s n="adj"/></l><r>nüüdisaegne<s n="adj"/></r></p></e>
     <e><p><l>venäläinen<s n="adj"/></l><r>venelane<s n="adj"/></r></p></e>
     <e><p><l>luja<s n="adj"/></l><r>tugev<s n="adj"/></r></p></e>
@@ -17074,7 +17088,7 @@
     <e><p><l>ajankohtainen<s n="adj"/></l><r>päevakohane<s n="adj"/></r></p></e>
     <e><p><l>kyseinen<s n="adj"/></l><r>kõnealune<s n="adj"/></r></p></e>
     <e><p><l>mainio<s n="adj"/></l><r>suurepärane<s n="adj"/></r></p></e>
-    <e><p><l>oikeutettu<s n="adj"/></l><r>õigustatud<s n="adj"/></r></p></e>
+    <e><p><l>oikeutettu<s n="adj"/></l><r>õigustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>rakas<s n="adj"/></l><r>armas<s n="adj"/></r></p></e>
     <e><p><l>sukulainen<s n="adj"/></l><r>sugulane<s n="adj"/></r></p></e>
     <e><p><l>tiukka<s n="adj"/></l><r>pingul<s n="adj"/></r></p></e>
@@ -17101,7 +17115,7 @@
     <e><p><l>varova<s n="adj"/></l><r>ettevaatlik<s n="adj"/></r></p></e>
     <e><p><l>vilpitön<s n="adj"/></l><r>siiras<s n="adj"/></r></p></e>
     <e><p><l>kielteinen<s n="adj"/></l><r>eitav<s n="adj"/></r></p></e>
-    <e><p><l>aiheellinen<s n="adj"/></l><r>põhjendatud<s n="adj"/></r></p></e>
+    <e><p><l>aiheellinen<s n="adj"/></l><r>põhjendatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>alituinen<s n="adj"/></l><r>alatine<s n="adj"/></r></p></e>
     <e><p><l>karjalainen<s n="adj"/></l><r>karjalane<s n="adj"/></r></p></e>
     <e><p><l>ahdas<s n="adj"/></l><r>kitsas<s n="adj"/></r></p></e>
@@ -17109,7 +17123,7 @@
     <e><p><l>jollainen<s n="adj"/></l><r>missugune<s n="adj"/></r></p></e>
     <e><p><l>meikäläinen<s n="adj"/></l><r>meie<b/>inimene<s n="adj"/></r></p></e>
     <e><p><l>tuntuva<s n="adj"/></l><r>tunduv<s n="adj"/></r></p></e>
-    <e><p><l>velvollinen<s n="adj"/></l><r>kohustatud<s n="adj"/></r></p></e>
+    <e><p><l>velvollinen<s n="adj"/></l><r>kohustatud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>akateeminen<s n="adj"/></l><r>akadeemiline<s n="adj"/></r></p></e>
     <e><p><l>arvoinen<s n="adj"/></l><r>vääriline<s n="adj"/></r></p></e>
     <e><p><l>asianmukainen<s n="adj"/></l><r>asjakohane<s n="adj"/></r></p></e>

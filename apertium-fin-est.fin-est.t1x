@@ -194,6 +194,9 @@
     <def-attr n="a_adds">
       <attr-item tags="pe4"/>
     </def-attr>
+    <def-attr n="a_attr">
+      <attr-item tags="attr"/>
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -204,6 +207,14 @@
 
   </section-def-vars>
   <section-def-macros>
+    <def-macro n="f_adj1" npar="1">
+      <choose>
+        <when>
+          <test><equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal></test>
+          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj"/></let>
+        </when>
+      </choose>
+    </def-macro>
     <def-macro n="replace-foc1" npar="1">
       <choose>
         <when>
@@ -550,6 +561,9 @@
           </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_sgpl"/><lit v="pl"/></let>
+        <call-macro n="f_adj1">
+           <with-param pos="1"/>
+        </call-macro>
         <out>
           <chunk name="a" case="caseFirstWord">
             <tags>
@@ -601,6 +615,8 @@
             <let><clip pos="2" side="tl" part="a_sgpl"/><lit v="pl"/></let>
           </when>
         </choose>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="a" case="caseFirstWord">
             <tags>
@@ -1127,6 +1143,7 @@
                 <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           </when>
         </choose>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="a" case="caseFirstWord">
             <tags>
@@ -1250,6 +1267,17 @@
             </lu>
           </chunk>
         </out>
+      </action>
+    </rule>
+
+    <rule comment="upper-lower case for any word">
+      <pattern>
+        <pattern-item n="any"/>
+      </pattern>
+      <action>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
       </action>
     </rule>
 
