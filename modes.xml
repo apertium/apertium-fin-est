@@ -225,6 +225,9 @@
       <program name="lt-proc -b">
         <file name="est-fin.autobil.bin"/>
       </program>
+      <program name="lrx-proc">
+        <file name="est-fin.autolex.bin"/>
+      </program>
       <program name="apertium-transfer -b">
         <file name="apertium-fin-est.est-fin.t1x"/>
         <file name="est-fin.t1x.bin"/>
