@@ -13616,6 +13616,7 @@
 
     <e><p><l>tietenkään<s n="part"/></l><r>ilmselt<s n="adv"/></r></p></e> <!-- !!! -->
 
+    <e><p><l>kuulemma<s n="part"/></l><r>kuuldavasti<s n="adv"/></r></p></e>
     <e><p><l>melko<s n="part"/></l><r>üsna<s n="adv"/></r></p></e>
     <e><p><l>vielä<s n="part"/></l><r>veel<s n="adv"/></r></p></e>
     <e><p><l>vain<s n="part"/></l><r>vaid<s n="adv"/></r></p></e>
@@ -14734,6 +14735,7 @@
     <e><p><l>istua<s n="vblex"/></l><r>istuma<s n="vblex"/></r></p></e>
         <!--<e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>-->
 
+    <e><p><l>maksaa<s n="vblex"/></l><r>maksma<s n="vblex"/></r></p></e>
     <e><p><l>juosta<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>vaatama<s n="vblex"/></r></p></e>
     <e><p><l>tykätä<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
@@ -15568,7 +15570,7 @@
     <e><p><l>kartta<s n="n"/></l><r>kaart<s n="n"/></r></p></e>
     <e><p><l>kahva<s n="n"/></l><r>ukselink<s n="n"/></r></p></e>
     <e><p><l>haavi<s n="n"/></l><r>kahv<s n="n"/></r></p></e>
-    <e><p><l>kai<s n="n"/></l><r>vist<s n="n"/></r></p></e>
+    <e><p><l>kai<s n="part"/></l><r>vist<s n="adv"/></r></p></e>
     <e><p><l>laituri<s n="n"/></l><r>kai<s n="n"/></r></p></e>
     <e><p><l>kaino<s n="adj"/></l><r>häbelik<s n="adj"/></r></p></e>
     <e><p><l>kaira<s n="n"/></l><r>oherdi<s n="n"/></r></p></e>
@@ -15583,7 +15585,7 @@
     <e><p><l>kalju<s n="n"/></l><r>juusteta<s n="n"/></r></p></e>
     <e><p><l>kallio<s n="n"/></l><r>kalju<s n="n"/></r></p></e>
     <e><p><l>kalkki<s n="n"/></l><r>lubi<s n="n"/></r></p></e>
-    <e><p><l>kova<s n="n"/></l><r>kalk<s n="n"/></r></p></e>
+    <e><p><l>kova<s n="adj"/></l><r>kalk<s n="adj"/></r></p></e>
     <e><p><l>kalle<s n="n"/></l><r>nõlv<s n="n"/></r></p></e>
     <e><p><l>kallistuma<s n="n"/></l><r>kalle<s n="n"/></r></p></e>
     <e><p><l>kama<s n="n"/></l><r>narkootikum<s n="n"/></r></p></e>
