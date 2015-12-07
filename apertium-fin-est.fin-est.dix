@@ -10134,6 +10134,8 @@
     <e><p><l>vuorovesimerkki<s n="n"/></l><r>tõusujoon<s n="n"/></r></p></e>
     <e><p><l>yhtiötoveri<s n="n"/></l><r>kaasosanik<s n="n"/></r></p></e>
     <e><p><l>yömaja<s n="n"/></l><r>vaesteöömaja<s n="n"/></r></p></e>
+
+    <e><p><l>euro<s n="n"/></l><r>euro<s n="n"/></r></p></e>
   
     <!-- SECTION: Proper nouns -->
 
@@ -10144,6 +10146,15 @@
     <e><p><l>Mary<s n="np"/></l><r>Mary<s n="np"/></r></p></e>
     <e><p><l>Mari<s n="np"/></l><r>Mari<s n="np"/></r></p></e>
     <e><p><l>Maria<s n="np"/></l><r>Maria<s n="np"/></r></p></e>
+    <e><p><l>Jens<s n="np"/></l><r>Jens<s n="np"/></r></p></e>
+    <e><p><l>Eija<s n="np"/></l><r>Eija<s n="np"/></r></p></e>
+    <e><p><l>Anu<s n="np"/></l><r>Anu<s n="np"/></r></p></e>
+    <e><p><l>Juha<s n="np"/></l><r>Juha<s n="np"/></r></p></e>
+    <e><p><l>Sanna<s n="np"/></l><r>Sanna<s n="np"/></r></p></e>
+    <e><p><l>Tiina<s n="np"/></l><r>Tiina<s n="np"/></r></p></e>
+    <e><p><l>Alvar<s n="np"/></l><r>Alvar<s n="np"/></r></p></e>
+    <e><p><l>Paavo<s n="np"/></l><r>Paavo<s n="np"/></r></p></e>
+
     <e><p><l>Aadam<s n="np"/></l><r>Aadam<s n="np"/></r></p></e>
     <e><p><l>Aasia<s n="np"/></l><r>Aasia<s n="np"/></r></p></e>
     <e><p><l>Adrianmeri<s n="np"/></l><r>Aadria<b/>meri<s n="np"/></r></p></e>
@@ -13615,6 +13626,7 @@
     <e><p><l>taas<s n="part"/></l><r>jälle<s n="adv"/></r></p></e> <!-- !!! -->
 
     <e><p><l>tietenkään<s n="part"/></l><r>ilmselt<s n="adv"/></r></p></e> <!-- !!! -->
+    <e><p><l>tietenkin<s n="part"/></l><r>muidugi<s n="adv"/></r></p></e> <!-- !!! -->
 
     <e><p><l>kuulemma<s n="part"/></l><r>kuuldavasti<s n="adv"/></r></p></e>
     <e><p><l>melko<s n="part"/></l><r>üsna<s n="adv"/></r></p></e>
@@ -13624,9 +13636,30 @@
     <e><p><l>siis<s n="part"/></l><r>siis<s n="adv"/></r></p></e>
     <e><p><l>lisäksi<s n="part"/></l><r>lisaks<s n="n"/></r></p></e>
     <e><p><l>yli<s n="part"/></l><r>üle<s n="adp"/></r></p></e>
-    <e><p><l>kyllä<s n="part"/></l><r>jah<s n="adv"/></r></p></e>
+    <e><p><l>kyllä<s n="part"/></l><r>jah<s n="ij"/></r></p></e>
+
+    <e><p><l>joo<s n="ij"/></l><r>jah<s n="ij"/></r></p></e>
+    <e><p><l>juu<s n="ij"/></l><r>jah<s n="ij"/></r></p></e>
+    <e><p><l>hei<s n="ij"/></l><r>tere<s n="ij"/></r></p></e>
+    <e><p><l>kuten<s n="adv"/></l><r>nagu<s n="adv"/></r></p></e>
+    <e><p><l>kuten<s n="part"/></l><r>nagu<s n="cnjsub"/></r></p></e>
+    <e><p><l>jopa<s n="part"/></l><r>isegi<s n="adv"/></r></p></e>
+    <e><p><l>iltaisin<s n="adv"/></l><r>õhtuti<s n="adv"/></r></p></e>
+    <e><p><l>iltaisin<s n="part"/></l><r>õhtuti<s n="adv"/></r></p></e>
+    <e><p><l>ihan<s n="part"/></l><r>väga<s n="adv"/></r></p></e>
+    <e><p><l>edes<s n="part"/></l><r>isegi<s n="adv"/></r></p></e>
+    <e><p><l>täältä<s n="part"/></l><r>siit<s n="adv"/></r></p></e>
+    <e><p><l>täältä<s n="adv"/></l><r>siit<s n="adv"/></r></p></e>
+    <e><p><l>takaisin<s n="adv"/></l><r>tagasi<s n="adv"/></r></p></e>
+    <e><p><l>takaisin<s n="part"/></l><r>tagasi<s n="adp"/></r></p></e>
+    <e><p><l>verran<s n="adv"/></l><r>võrra<s n="adv"/></r></p></e>
+    <e><p><l>verran<s n="adp"/></l><r>võrra<s n="adp"/></r></p></e>
+    <e><p><l>huonosti<s n="adv"/></l><r>halvasti<s n="adv"/></r></p></e>
+
     <e><p><l>ehkä<s n="part"/></l><r>ehk<s n="adv"/></r></p></e>
     <e><p><l>niin<s n="adv"/></l><r>nii<s n="adv"/></r></p></e>
+    <e><p><l>ensin<s n="adv"/></l><r>kõigepealt<s n="adv"/></r></p></e>
+    <e><p><l>ensin<s n="part"/></l><r>kõigepealt<s n="adv"/></r></p></e>
     <e><p><l>jo<s n="adv"/></l><r>juba<s n="adv"/></r></p></e>
     <e><p><l>mukaan<s n="adv"/></l><r>kaasa<s n="adv"/></r></p></e>
     <e><p><l>jälkeen<s n="adv"/></l><r>pärast<s n="adv"/></r></p></e>
@@ -14101,7 +14134,7 @@
     <e><p><l>vähemmän<s n="adv"/></l><r>vähem<s n="adv"/></r></p></e>
     <e><p><l>miltei<s n="adv"/></l><r>peaaegu<s n="adv"/></r></p></e>
     <e><p><l>liki<s n="adv"/></l><r>peaaegu<s n="adv"/></r></p></e>
-    <e><p><l>lähes<s n="adv"/></l><r>peaaegu<s n="adv"/></r></p></e>
+    <e><p><l>lähes<s n="part"/></l><r>peaaegu<s n="adv"/></r></p></e>
     <e><p><l>toisinaan<s n="adv"/></l><r>mõnikord<s n="adv"/></r></p></e>
     <e><p><l>joskus<s n="adv"/></l><r>mõnikord<s n="adv"/></r></p></e>
     <e><p><l>ajoittain<s n="adv"/></l><r>mõnikord<s n="adv"/></r></p></e>
@@ -16246,7 +16279,9 @@
     <e><p><l>koko<s n="prn"/></l><r>kogu<s n="prn"/></r></p></e>
     <e><p><l>joku<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
     <e><p><l>joku<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
-    <e><p><l>kuinka<s n="prn"/></l><r>kui<s n="prn"/></r></p></e>
+    <e><p><l>kuinka<s n="prn"/></l><r>kuidas<s n="prn"/></r></p></e>
+
+    <e><p><l>kuinka<b/>vanha<s n="adj"/></l><r>kui<b/>vana<s n="adj"/></r></p></e>
     <e><p><l>muutama<s n="prn"/></l><r>mõni<s n="prn"/></r></p></e>
     <e><p><l>kukin<s n="prn"/></l><r>igaüks<s n="prn"/></r></p></e>
     <e><p><l>kukaan<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
