@@ -21,9 +21,6 @@
       <cat-item tags="vblex.pasv.*"/>
       <cat-item tags="vblex.pss.*"/>
     </def-cat>
-    <def-cat n="verb-actv-imprt">
-      <cat-item tags="vblex.actv.imp.*"/>
-    </def-cat>
     <def-cat n="verb-fin">
       <cat-item tags="vblex.*.cond.*"/>
       <cat-item tags="vblex.*.pot.*"/>
@@ -61,9 +58,6 @@
     <def-cat n="verb-pasv-prfprc">              <!-- <vblex><pasv><prfprc><pl><nom> -->
       <cat-item tags="vblex.pss.prfprc.*"/>
     </def-cat>
-    <def-cat n="verb-imp-conneg">               <!-- <vblex><actv><imp><prt><conneg> -->
-      <cat-item tags="vblex.*.iimp.prs.conneg.*"/>
-    </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
       <cat-item tags="adv.*"/>
@@ -99,9 +93,6 @@
     </def-cat>
     <def-cat n="kanssa">
       <cat-item lemma="kanssa" tags="post"/>
-    </def-cat>
-    <def-cat n="olla">
-      <cat-item lemma="olla" tags="vblex.*"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
@@ -181,6 +172,9 @@
     </def-attr>
     <def-attr n="a_conneg">
       <attr-item tags="conneg"/>
+      <attr-item tags="neg"/>
+    </def-attr>
+    <def-attr n="a_neg">
       <attr-item tags="neg"/>
     </def-attr>
     <def-attr n="a_p3sg">
@@ -826,17 +820,52 @@
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
-        <out>
-          <chunk name="neg" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV.NEG"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="vblex.neg"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_mood"/><lit-tag v="imp"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="lemh"/><lit v="ära"/></let>
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.imprt"/></let>
+            <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
+            <choose>
+              <when>
+                <test>
+                  <and>
+                    <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
+                    <equal><clip pos="1" side="sl" part="a_person"/><lit-tag v="p3"/></equal>
+                  </and>
+                </test>
+                <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
+                <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+              </when>  
+            </choose>
+            <out>
+              <chunk name="neg" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SVNEG"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                  <lit-tag v="neg"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise> 
+            <out>
+              <chunk name="neg" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SVNEG"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lemh"/>
+                  <lit-tag v="vblex.neg"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise> 
+        </choose>
       </action>
     </rule>
 
@@ -1171,8 +1200,19 @@
                   <test>
                     <equal> <clip pos="1" side="tl" part="a_mood"/> <lit-tag v="ind"/> </equal>
                    </test>
-                  <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
-                  <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                   <choose>
+                     <when> 
+                       <test>  <!-- hack to select ei ole over pole -->
+                         <equal> <clip pos="1" side="tl" part="lemh"/> <lit-tag v="ole"/> </equal>
+                       </test>
+                          <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
+                          <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                     </when>
+                     <otherwise>
+                       <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
+                       <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                     </otherwise>
+                   </choose> 
                 </when>
                 <otherwise>
                   <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
@@ -1390,42 +1430,6 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="ei + adv + verb -- ei + verb + adv">
-      <pattern>
-        <pattern-item n="ei-neg"/>
-        <pattern-item n="adv"/>
-        <pattern-item n="verb-finate"/>
-      </pattern>
-     <action>
-        <choose>
-          <when><test><equal><clip pos="3" side="sl" part="a_screeve"/> 
-                              <lit-tag v="imp"/>
-                      </equal></test>
-                <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="prs"/></let>
-          </when>
-        </choose>
-        <out>
-          <chunk name="neg" case="yyy"> <tags> <tag> <lit-tag v="SV"/> </tag> </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="vblex.neg"/>
-            </lu>
-           <b />
-            <lu>
-              <clip pos="3" side="tl" part="lemh"/>
-              <lit-tag v="vblex.pers"/>
-              <clip pos="3" side="tl" part="a_temps"/>
-              <lit-tag v="ind.neg"/>
-            </lu>
-           <b />
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
             </lu>
           </chunk>
         </out>
