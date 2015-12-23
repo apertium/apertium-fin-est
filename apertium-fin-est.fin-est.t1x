@@ -8,30 +8,17 @@
     <def-cat n="sent">
       <cat-item tags="sent"/>
     </def-cat>
-    <def-cat n="ei-neg">
+    <def-cat n="ei-neg">                <!-- en, et, ..., älä, ... -->
       <cat-item tags="vblex.neg.*"/>
     </def-cat>
     <def-cat n="der-minen">
       <cat-item tags="vblex.der_minen.*"/>
-    </def-cat>
-    <def-cat n="verb-actv">
-      <cat-item tags="vblex.actv.*"/>
-    </def-cat>
-    <def-cat n="verb-pasv">
-      <cat-item tags="vblex.pasv.*"/>
-      <cat-item tags="vblex.pss.*"/>
     </def-cat>
     <def-cat n="verb-fin">
       <cat-item tags="vblex.*.cond.*"/>
       <cat-item tags="vblex.*.pot.*"/>
       <cat-item tags="vblex.*.ind.*"/>
       <cat-item tags="vblex.*.imp.*"/>
-    </def-cat>
-    <def-cat n="verb-finate">
-      <cat-item tags="vblex.*.ind.*"/>
-      <cat-item tags="vblex.*.imp.*"/>
-      <cat-item tags="vblex.*.cond.*"/>
-      <cat-item tags="vblex.*.quot.*"/>
     </def-cat>
     <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
       <cat-item tags="vblex.actv.infma.*"/>
@@ -42,21 +29,21 @@
     <def-cat n="verb-infe">                      <!-- <vblex><actv><infe>... -->
       <cat-item tags="vblex.actv.infe.*"/>
     </def-cat>
-    <def-cat n="verb-agprc">                      <!-- <vblex><actv><agprc> -->
+    <def-cat n="verb-agprc">                      <!-- <vblex><actv><agprc> antama, antaman, ... antamat, ... -->
       <cat-item tags="vblex.actv.agprc.*"/>
       <cat-item tags="vblex.agprc.*"/>
     </def-cat>
     <def-cat n="verb-actv-prsprc">               <!-- <vblex><actv><prsprc><pl><nom> -->
       <cat-item tags="vblex.actv.prsprc.*"/>       <!-- antava -->
     </def-cat>
-    <def-cat n="verb-pasv-prsprc">               <!-- <vblex><pasv><prsprc><pl><nom> -->
+    <def-cat n="verb-pasv-prsprc">               <!-- <vblex><pasv><prsprc><pl><nom>  -->
       <cat-item tags="vblex.pss.prsprc.*"/>        <!-- annetava --> 
     </def-cat>
     <def-cat n="verb-actv-prfprc">              <!-- <vblex><actv><prfprc><pl><nom> -->
-      <cat-item tags="vblex.actv.prfprc.*"/>
+      <cat-item tags="vblex.actv.prfprc.*"/>        <!-- antanut, antaneet -->
     </def-cat>
     <def-cat n="verb-pasv-prfprc">              <!-- <vblex><pasv><prfprc><pl><nom> -->
-      <cat-item tags="vblex.pss.prfprc.*"/>
+      <cat-item tags="vblex.pss.prfprc.*"/>        <!-- annettu -->
     </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
@@ -117,53 +104,51 @@
       <attr-item tags="@-FMAINV"/>
     </def-attr>
     <def-attr n="a_voice">
-      <attr-item tags="actv"/>
-      <attr-item tags="pasv"/>
-      <attr-item tags="pss"/>
-      <attr-item tags="pers"/>
-      <attr-item tags="impers"/>
+      <attr-item tags="actv"/>    <!-- fin -->
+      <attr-item tags="pasv"/>    <!-- fin -->
+      <attr-item tags="pss"/>     <!-- fin -->
+      <attr-item tags="pers"/>    <!-- est -->
+      <attr-item tags="impers"/>  <!-- est -->
     </def-attr>
     <def-attr n="a_temps">
       <attr-item tags="prt"/>
       <attr-item tags="prs"/>
     </def-attr>
     <def-attr n="a_inf">
-      <attr-item tags="infa"/>
-      <attr-item tags="infe"/>
-      <attr-item tags="infma"/>
-      <attr-item tags="sup"/>
-      <attr-item tags="ger"/>
+      <attr-item tags="infa"/>    <!-- fin -->
+      <attr-item tags="infe"/>    <!-- fin -->
+      <attr-item tags="infma"/>   <!-- fin -->
+      <attr-item tags="sup"/>     <!-- est -->
+      <attr-item tags="ger"/>     <!-- est -->
     </def-attr>
     <def-attr n="a_mood">
-      <attr-item tags="ind"/>
-      <attr-item tags="cond"/>
-      <attr-item tags="quot"/>
-      <attr-item tags="imprt"/>
-      <attr-item tags="imp"/>
-      <attr-item tags="pot"/>
+      <attr-item tags="ind"/>    <!-- fin, est -->
+      <attr-item tags="cond"/>   <!-- fin, est -->
+      <attr-item tags="quot"/>   <!-- est; never used in transfer -->
+      <attr-item tags="imprt"/>  <!-- est; never used in transfer -->
+      <attr-item tags="imp"/>    <!-- fin -->
+      <attr-item tags="pot"/>    <!-- fin -->
     </def-attr>
     <def-attr n="a_screeve">
       <attr-item tags="ind"/>
       <attr-item tags="cond"/>
-      <attr-item tags="quot"/>
-      <attr-item tags="imprt"/>
+      <attr-item tags="quot"/>     <!-- est; never used in transfer -->
+      <attr-item tags="imprt"/>    <!-- est; never used in transfer -->
       <attr-item tags="imp"/>
-      <attr-item tags="imp.prs"/>
+      <attr-item tags="imp.prs"/>  <!-- some intermediate fin while transfering ? -->
       <attr-item tags="pot"/>
 
-      <attr-item tags="ind.prs"/>
-      <attr-item tags="ind.prt"/>
+      <attr-item tags="ind.prs"/>    <!-- fin -->
+      <attr-item tags="ind.prt"/>    <!-- fin -->
 
-      <attr-item tags="prs.ind"/>
-      <attr-item tags="prt.ind"/>
-      <attr-item tags="prs.cond"/>
-      <attr-item tags="prt.cond"/>
-      <attr-item tags="prs.quot"/>
-      <attr-item tags="prt.quot"/>
-      <attr-item tags="prs.imprt"/>
-      <attr-item tags="prt.imprt"/>
-      <attr-item tags="prs.imp"/>
-      <attr-item tags="prt.imp"/>
+      <attr-item tags="prs.ind"/>    <!-- est -->
+      <attr-item tags="prt.ind"/>    <!-- est -->
+      <attr-item tags="prs.cond"/>   <!-- est -->
+      <attr-item tags="prt.cond"/>   <!-- est -->
+      <attr-item tags="prs.quot"/>   <!-- est; never used in transfer -->
+      <attr-item tags="prt.quot"/>   <!-- est; never used in transfer -->
+      <attr-item tags="prs.imprt"/>  <!-- est -->
+      <attr-item tags="prt.imprt"/>  <!-- est -->
     </def-attr>
     <def-attr n="a_person">
       <attr-item tags="p1"/>
@@ -198,7 +183,7 @@
     <def-attr n="a_foc">
       <attr-item tags="foc_kin"/>
       <attr-item tags="foc_kaan"/>
-      <attr-item tags="foc_gi"/>
+      <attr-item tags="foc_gi"/>     <!-- est -->
       <attr-item tags="foc_pa"/>
     </def-attr>
     <def-attr n="a_comp">
@@ -211,7 +196,7 @@
     </def-attr>
     <def-attr n="a_case">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>
+      <attr-item tags="acc"/>   <!-- fin -->
       <attr-item tags="gen"/>
       <attr-item tags="par"/>
       <attr-item tags="ins"/>
@@ -227,7 +212,7 @@
       <attr-item tags="com"/>
     </def-attr>
     <def-attr n="a_adds">
-      <attr-item tags="pe4"/>
+      <attr-item tags="pe4"/>      <!-- redundant; used exclusively in passive -->
     </def-attr>
     <def-attr n="a_attr">
       <attr-item tags="attr"/>
@@ -810,7 +795,7 @@
     </rule>
 
 
-    <rule comment="REGLA: ei-neg">
+    <rule comment="REGLA: ei-neg">      <!-- fin en, et, ..., älä, ... -->
       <pattern>
         <pattern-item n="ei-neg"/>
       </pattern>
@@ -820,12 +805,12 @@
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="pers"/></let>
-        <choose>
-          <when>
+        <choose>                   
+          <when>                  <!-- fin älä (ei_imp) form = est ära form -->
             <test>
               <equal><clip pos="1" side="sl" part="a_mood"/><lit-tag v="imp"/></equal>
             </test>
-            <let><clip pos="1" side="tl" part="lemh"/><lit v="ära"/></let>
+            <let><clip pos="1" side="tl" part="lemh"/><lit v="ära"/></let>      
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.imprt"/></let>
             <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
             <choose>
@@ -835,7 +820,7 @@
                     <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
                     <equal><clip pos="1" side="sl" part="a_person"/><lit-tag v="p3"/></equal>
                   </and>
-                </test>
+                </test>          <!-- fin älköön, älkööt = est ärgu which is underspec for number and person -->
                 <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
                 <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
               </when>  
@@ -852,7 +837,7 @@
               </chunk>
             </out>
           </when>
-          <otherwise> 
+          <otherwise>    <!-- fin ei form = est ei -->
             <out>
               <chunk name="neg" case="caseFirstWord">
                 <tags>
@@ -893,7 +878,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-actv-prsprc">
+    <rule comment="REGLA: verb-actv-prsprc">  <!-- fin antava = est andev -->
       <pattern>
         <pattern-item n="verb-actv-prsprc"/>
       </pattern>
@@ -916,7 +901,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-pasv-prsprc">
+    <rule comment="REGLA: verb-pasv-prsprc"> <!-- fin annettava = est antav -->
       <pattern>
         <pattern-item n="verb-pasv-prsprc"/>
       </pattern>
@@ -939,7 +924,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-actv-prfprc">
+    <rule comment="REGLA: verb-actv-prfprc">  <!-- fin antanut, antaneet = est andnud -->
       <pattern>
         <pattern-item n="verb-actv-prfprc"/>
       </pattern>
@@ -962,7 +947,7 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-pasv-prfprc">
+    <rule comment="REGLA: verb-pasv-prfprc">   <!-- fin annettu = est antud -->
       <pattern>
         <pattern-item n="verb-pasv-prfprc"/>
       </pattern>
@@ -1123,7 +1108,7 @@
         </choose>
         <choose>
           <when>
-            <test>
+            <test>         <!-- antaisi: est cond form annaks is underspecified for number and person -->
               <and>
                 <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="cond"/></equal>
                 <equal><clip pos="1" side="sl" part="a_p3sg"/><lit-tag v="p3.sg"/></equal>
@@ -1132,7 +1117,7 @@
             <let><clip pos="1" side="tl" part="a_p3sg"/><lit v=""/></let>
           </when>
           <when>
-            <test>
+            <test>        <!-- antakoon, antakoot: est imp form andku is underspecified for number and person --> 
               <and>
                 <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
                 <equal><clip pos="1" side="sl" part="a_person"/><lit-tag v="p3"/></equal>
@@ -1145,15 +1130,15 @@
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
                               <lit-tag v="cond"/>
-                      </equal></test>
+                      </equal></test>                   <!-- fin conditional is only present, never past -->
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.cond"/></let>
           </when>
         </choose>
-        <choose>
+        <choose>           <!-- fin potential = est vist + indicative -->
           <when><test><equal><clip pos="1" side="sl" part="a_mood"/> 
                               <lit-tag v="pot"/>                 
                       </equal>
-                      </test>
+                      </test>                         <!-- fin potential is only present, never past -->
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.ind"/></let>
                 <out>
                   <chunk name="prn" case="caseFirstWord">
@@ -1171,7 +1156,7 @@
         </choose>
         <choose>
           <when>
-            <test>
+            <test>  <!-- fin imperative is only present, never past -->
               <or>
                 <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp.prs"/></equal>
                 <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
@@ -1180,7 +1165,7 @@
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.imprt"/></let>
           </when>
         </choose>
-        <choose> 
+        <choose>  <!-- change order of tense and mood tags in indicative -->
           <when> 
             <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="ind.prs"/></equal></test>
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prs.ind"/></let>
@@ -1190,7 +1175,7 @@
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prt.ind"/></let>
           </when>
         </choose>
-        <choose>
+        <choose> <!-- fin conneg translates to est neg in ind mood only; otherwise just delete conneg -->
           <when>
             <test>
                 <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
@@ -1202,31 +1187,22 @@
                    </test>
                    <choose>
                      <when> 
-                       <test>  <!-- hack to select ei ole over pole -->
+                       <test>     <!-- hack to select ei ole over pole: change from ind to imp -->
                          <equal> <clip pos="1" side="tl" part="lemh"/> <lit-tag v="ole"/> </equal>
                        </test>
                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
                           <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                      </when>
-                     <otherwise>
+                     <otherwise>   <!-- fin ind conneg = est ind neg -->
                        <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
                        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                      </otherwise>
                    </choose> 
                 </when>
-                <otherwise>
+                <otherwise> <!-- fin imp conneg = est imprt -->
                   <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                 </otherwise>
             </choose> 
-          </when>
-          <when>
-            <test>
-              <and>
-                <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
-                <equal> <clip pos="1" side="sl" part="a_mood"/> <lit-tag v="cond"/> </equal>
-              </and> 
-            </test>
-                <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
           </when>
         </choose>
         <out>
