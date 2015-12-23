@@ -159,8 +159,8 @@
       <attr-item tags="conneg"/>
       <attr-item tags="neg"/>
     </def-attr>
-    <def-attr n="a_neg">
-      <attr-item tags="neg"/>
+    <def-attr n="a_eineg">
+      <attr-item tags="eineg"/>
     </def-attr>
     <def-attr n="a_p3sg">
       <attr-item tags="p3.sg"/>
@@ -185,6 +185,7 @@
       <attr-item tags="foc_kaan"/>
       <attr-item tags="foc_gi"/>     <!-- est -->
       <attr-item tags="foc_pa"/>
+      <attr-item tags="foc_ka"/>     <!-- eikä -->
     </def-attr>
     <def-attr n="a_comp">
       <attr-item tags="comp"/>
@@ -837,18 +838,39 @@
               </chunk>
             </out>
           </when>
-          <otherwise>    <!-- fin ei form = est ei -->
-            <out>
-              <chunk name="neg" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="SVNEG"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="lemh"/>
-                  <lit-tag v="vblex.neg"/>
-                </lu>
-              </chunk>
-            </out>
+          <otherwise>    <!-- fin ei form = est ?? -->
+            <choose>
+              <when>
+                <test>
+                  <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_ka"/></equal>
+                </test>          <!-- eikä = ega -->
+                <out>
+                  <chunk name="coord" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="CC"/></tag>
+                    </tags>
+                    <lu>
+                      <lit v="ega"/>
+                      <lit-tag v="cnjcoo"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </when>  
+              <otherwise>    <!-- fin ei form = est ei -->
+
+                <out>
+                  <chunk name="neg" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="SVNEG"/></tag>
+                    </tags>
+                    <lu>
+                      <clip pos="1" side="tl" part="lemh"/>
+                      <lit-tag v="vblex.neg"/>
+                    </lu>
+                  </chunk>
+                </out>
+              </otherwise> 
+            </choose>
           </otherwise> 
         </choose>
       </action>
@@ -1251,16 +1273,46 @@
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <out>
-          <chunk name="coord" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="CC"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
+
+        <choose>       <!-- fin eikä = est ja ei -->
+          <when><test><equal><clip pos="1" side="sl" part="a_eineg"/> 
+                              <lit-tag v="eineg"/>
+                      </equal></test>
+            <out>
+              <chunk name="coord" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="CC"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ja"/>
+                  <lit-tag v="cnjcoo"/>
+                </lu>
+              </chunk>
+              <b />
+              <chunk name="neg" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SVNEG"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ei"/>
+                  <lit-tag v="vblex.neg"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>  
+            <out>
+              <chunk name="coord" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="CC"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>  
+        </choose>
       </action>
     </rule>
 

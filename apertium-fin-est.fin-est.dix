@@ -48,6 +48,7 @@
 
     <sdef n="ine"  c=""/>
     <sdef n="ill"  c=""/>
+    <sdef n="ela"  c=""/>
     <sdef n="com"  c=""/>
     <sdef n="par"  c=""/>
 
@@ -13619,6 +13620,8 @@
     <e><p><l>missä<s n="adv"/><s n="itg"/><s n="ine"/></l><r>kuidas<s n="adv"/></r></p></e>
     <e><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="adv"/></r></p></e>
     <e><p><l>joka<s n="prn"/><s n="rel"/><s n="sg"/><s n="ill"/></l><r>kuhu<s n="adv"/></r></p></e>
+    <e><p><l>joka<s n="prn"/><s n="rel"/><s n="sg"/><s n="ine"/></l><r>kus<s n="adv"/></r></p></e>
+    <e><p><l>joka<s n="prn"/><s n="rel"/><s n="sg"/><s n="ela"/></l><r>kust<s n="adv"/></r></p></e>
     <e><p><l>nyt<s n="part"/></l><r>nüüd<s n="adv"/></r></p></e> <!-- !!! -->
 
     <e><p><l>nyt<s n="part"/></l><r>praegu<s n="adv"/></r></p></e> <!-- !!! -->
@@ -16288,7 +16291,7 @@
     <e><p><l>nuo<s n="prn"/></l><r>need<s n="prn"/></r></p></e>
     <e><p><l>harva<s n="prn"/></l><r>harv<s n="prn"/></r></p></e>
     <e><p><l>mikään<s n="prn"/></l><r>mingi<s n="prn"/></r></p></e>
-    <e><p><l>millainen<s n="prn"/></l><r>milline<s n="prn"/></r></p></e>
+    <e><p><l>millainen<s n="prn"/><s n="itg"/></l><r>milline<s n="prn"/></r></p></e>
     <e><p><l>sä<s n="prn"/></l><r>sa<s n="prn"/></r></p></e>
     <e><p><l>muuan<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
     <e><p><l>muuan<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
