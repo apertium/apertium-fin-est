@@ -38,6 +38,7 @@
     <sdef n="rel"  c=""/>
 
     <sdef n="nom"  c=""/>
+    <sdef n="gen"  c=""/>
 
     <sdef n="p1"  c=""/>
     <sdef n="p2"  c=""/>
@@ -103,7 +104,7 @@
     <e><p><l>vaikka<s n="cnjsub"/></l><r>kuigi<s n="cnjsub"/></r></p></e> <!-- !!! -->
 
     <e><p><l>mutta<s n="cnjcoo"/></l><r>aga<s n="cnjcoo"/></r></p></e>
-    <e><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="cnjcoo"/></r></p></e>
+    <e><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="cnjsub"/></r></p></e>
     <e><p><l>että<s n="cnjsub"/></l><r>et<s n="cnjsub"/></r></p></e>
     <e><p><l>kun<s n="cnjsub"/></l><r>kui<s n="cnjsub"/></r></p></e>
     <e><p><l>koska<s n="cnjsub"/></l><r>sest<s n="cnjsub"/></r></p></e>
@@ -111,7 +112,6 @@
     <e><p><l>vai<s n="cnjcoo"/></l><r>või<s n="cnjcoo"/></r></p></e>
     <e><p><l>sekä<s n="cnjcoo"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>sekä<s n="cnjcoo"/></l><r>kui<b/>ka<s n="cnjcoo"/></r></p></e>
-    <e><p><l>jos<s n="cnjcoo"/></l><r>kui<s n="cnjcoo"/></r></p></e>
     <e><p><l>jos<s n="cnjsub"/></l><r>kui<s n="cnjsub"/></r></p></e>
     <e><p><l>vaan<s n="cnjcoo"/></l><r>vaid<s n="cnjcoo"/></r></p></e>
     <e><p><l>vaan<s n="cnjsub"/></l><r>kuid<s n="cnjsub"/></r></p></e>
@@ -303,7 +303,7 @@
     <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
     <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
     <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
-    <e><p><l>kiire<s n="n"/></l><r>kiir<s n="n"/></r></p></e>
+    <e><p><l>kiire<s n="n"/></l><r>kiire<s n="adj"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
     <e><p><l>puutarha<s n="n"/></l><r>aed<s n="n"/></r></p></e>
     <e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
@@ -4007,7 +4007,7 @@
     <e><p><l>kolmas<s n="n"/></l><r>kolmas<s n="n"/></r></p></e>
     <e><p><l>vieri<s n="n"/></l><r>külg<s n="n"/></r></p></e>
     <e><p><l>sivu<s n="n"/></l><r>külg<s n="n"/></r></p></e>
-    <e><p><l>puoli<s n="n"/></l><r>pool<s n="n"/></r></p></e>
+    <e><p><l>puoli<s n="n"/></l><r>pool<s n="num"/><s n="card"/></r></p></e>
     <e><p><l>vartti<s n="n"/></l><r>veerand<s n="n"/></r></p></e>
     <e><p><l>puoli<s n="n"/></l><r>külg<s n="n"/></r></p></e>
     <e><p><l>kylki<s n="n"/></l><r>külg<s n="n"/></r></p></e>
@@ -13698,7 +13698,6 @@
     <e><p><l>myös<s n="adv"/></l><r>ka<s n="adv"/></r></p></e>
     <e><p><l>ympärille<s n="adv"/></l><r>ringi<s n="adv"/></r></p></e>
     <e><p><l>vähän<s n="adv"/></l><r>natuke<s n="adv"/></r></p></e>
-    <e><p><l>vähän<s n="part"/></l><r>natuke<s n="adv"/></r></p></e>
     <e><p><l>äkkiseltään<s n="adv"/></l><r>äkitselt<s n="adv"/></r></p></e>
     <e><p><l>alle<s n="adv"/></l><r>alla<s n="adv"/></r></p></e>
     <e><p><l>arvattavasti<s n="adv"/></l><r>arvatavasti<s n="adv"/></r></p></e>
@@ -17026,6 +17025,7 @@
     <e><p><l>tyhjä<s n="adj"/></l><r>tühi<s n="adj"/></r></p></e>
     <e><p><l>täydellinen<s n="adj"/></l><r>täielik<s n="adj"/></r></p></e>
     <e><p><l>vähä<s n="adj"/></l><r>vähene<s n="adj"/></r></p></e>
+    <e><p><l>vähä<s n="adj"/><s n="sg"/><s n="gen"/></l><r>natuke<s n="adv"/></r></p></e>
     <e><p><l>virallinen<s n="adj"/></l><r>ametlik<s n="adj"/></r></p></e>
     <e><p><l>mukava<s n="adj"/></l><r>meeldiv<s n="adj"/></r></p></e>
     <e><p><l>mukava<s n="adj"/></l><r>mugav<s n="adj"/></r></p></e>
@@ -17052,7 +17052,6 @@
     <e><p><l>semmoinen<s n="adj"/></l><r>selline<s n="adj"/></r></p></e>
     <e><p><l>kuuma<s n="adj"/></l><r>kuum<s n="adj"/></r></p></e>
     <e><p><l>pelkkä<s n="adj"/></l><r>pelk<s n="adj"/></r></p></e>
-    <e><p><l>vähä<s n="adj"/></l><r>napp<s n="adj"/></r></p></e>
     <e><p><l>kotimainen<s n="adj"/></l><r>kodumaine<s n="adj"/></r></p></e>
     <e><p><l>eräänlainen<s n="adj"/></l><r>omamoodi<s n="adj"/></r></p></e>
     <e><p><l>keskimääräinen<s n="adj"/></l><r>keskmine<s n="adj"/></r></p></e>
@@ -17063,7 +17062,7 @@
     <e><p><l>tarkoituksenmukainen<s n="adj"/></l><r>otstarbekas<s n="adj"/></r></p></e>
     <e><p><l>alkuperäinen<s n="adj"/></l><r>algupärane<s n="adj"/></r></p></e>
     <e><p><l>henkilökohtainen<s n="adj"/></l><r>isiklik<s n="adj"/></r></p></e>
-    <e><p><l>vajaa<s n="adj"/></l><r>napp<s n="adj"/></r></p></e>
+    <e><p><l>vajaa<s n="adj"/><s n="pl"/><s n="nom"/></l><r>napilt<s n="adv"/></r></p></e>
     <e><p><l>kansallinen<s n="adj"/></l><r>rahvuslik<s n="adj"/></r></p></e>
     <e><p><l>kuollut<s n="adj"/></l><r>surnud<s n="adj"/></r></p><par n="nut_nud"/></e>
     <e><p><l>nykyaikainen<s n="adj"/></l><r>nüüdisaegne<s n="adj"/></r></p></e>
@@ -17207,7 +17206,7 @@
     <e><p><l>pian<s n="adv"/></l><r>varsti<s n="adv"/></r></p></e>
     <e><p><l>ympärillä<s n="adv"/></l><r>ümber<s n="adv"/></r></p></e>
     <e><p><l>lähellä<s n="adv"/></l><r>lähedal<s n="adv"/></r></p></e>
-    <e><p><l>takia<s n="adv"/></l><r>tingitult<s n="adv"/></r></p></e>
+    <e><p><l>takia<s n="adv"/></l><r>tõttu<s n="adv"/></r></p></e>
     <e><p><l>esillä<s n="adv"/></l><r>esil<s n="adv"/></r></p></e>
     <e><p><l>melkein<s n="adv"/></l><r>peaaegu<s n="adv"/></r></p></e>
     <e><p><l>alla<s n="adv"/></l><r>all<s n="adv"/></r></p></e>
