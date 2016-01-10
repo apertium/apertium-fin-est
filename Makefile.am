@@ -17,6 +17,7 @@ TARGETS_COMMON = \
 	$(PREFIX1).autogen.hfst \
 	$(PREFIX1).autolex.bin \
 	$(PREFIX1).automorf.hfst \
+	$(PREFIX1).automorf-untrimmed.hfst \
 	$(PREFIX1).rlx.bin \
 	$(PREFIX1).t1x.bin  \
 	$(PREFIX1).t1x.bin \
@@ -41,10 +42,10 @@ TARGETS_COMMON = \
 	hfst-txt2fst -e ε <  .deps/$(PREFIX1).autobil.att > .deps/$(PREFIX1).autobil.hfst
 	hfst-project -p upper .deps/$(PREFIX1).autobil.hfst > .deps/$(PREFIX1).autobil.upper
 	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst
-	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX1).autobil.nonplussed 
+	hfst-concatenate -1 .deps/$(PREFIX1).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX1).autobil.nonplussed
 	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst
 	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX1).autobil.nonplussed -o .deps/$(PREFIX1).autobil.postplus
-	hfst-repeat -f0 -t1 -i .deps/$(PREFIX1).autobil.postplus -o .deps/$(PREFIX1).autobil.postplus.0,1 
+	hfst-repeat -f0 -t1 -i .deps/$(PREFIX1).autobil.postplus -o .deps/$(PREFIX1).autobil.postplus.0,1
 	hfst-concatenate -1 .deps/$(PREFIX1).autobil.nonplussed -2 .deps/$(PREFIX1).autobil.postplus.0,1 -o $@
 
 .deps/$(PREFIX2).autobil.prefixes: $(PREFIX2).autobil.bin .deps/.d
@@ -52,9 +53,9 @@ TARGETS_COMMON = \
 	hfst-txt2fst -e ε <  .deps/$(PREFIX2).autobil.att > .deps/$(PREFIX2).autobil.hfst
 	hfst-project -p upper .deps/$(PREFIX2).autobil.hfst > .deps/$(PREFIX2).autobil.upper
 	echo ' [ ? - %+ ]* ' | hfst-regexp2fst > .deps/any-nonplus.hfst
-	hfst-concatenate -1 .deps/$(PREFIX2).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX2).autobil.nonplussed 
+	hfst-concatenate -1 .deps/$(PREFIX2).autobil.upper -2 .deps/any-nonplus.hfst -o .deps/$(PREFIX2).autobil.nonplussed
 	echo ' %+ ' | hfst-regexp2fst > .deps/single-plus.hfst
-	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX2).autobil.nonplussed -o .deps/$(PREFIX2).autobil.postplus 
+	hfst-concatenate -1 .deps/single-plus.hfst -2 .deps/$(PREFIX2).autobil.nonplussed -o .deps/$(PREFIX2).autobil.postplus
 	hfst-repeat -f0 -t1 -i .deps/$(PREFIX2).autobil.postplus -o .deps/$(PREFIX2).autobil.postplus.0,1
 	hfst-concatenate -1 .deps/$(PREFIX2).autobil.nonplussed -2 .deps/$(PREFIX2).autobil.postplus.0,1 -o $@
 
@@ -72,31 +73,44 @@ TARGETS_COMMON = \
 
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
-$(PREFIX1).automorf.hfst: $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz .deps/$(PREFIX1).autobil.prefixes .deps/.d 
-	$(ZCAT) $(AP_SRC1)/$(BASENAME).$(PREFIX1).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX1).automorf.untrimmed.hfst
-	hfst-compose-intersect -1 .deps/$(PREFIX1).automorf.untrimmed.hfst -2 .deps/$(PREFIX1).autobil.prefixes -o .deps/$(PREFIX1).automorf.hfst
-	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
+.deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
+	$(ZCAT) $< | hfst-txt2fst > $@
+
+.deps/$(LANG1).automorf.hfst: .deps/$(LANG1).automorf-missingpunct.hfst .deps/punctuation.LR.hfst
+	hfst-union -1 $< -2 .deps/punctuation.LR.hfst -o $@
+
+.deps/$(PREFIX1).automorf-trimmed.hfst: .deps/$(LANG1).automorf.hfst .deps/$(PREFIX1).autobil.prefixes
+	hfst-compose-intersect -1 $< -2 .deps/$(PREFIX1).autobil.prefixes -o $@
+
+$(PREFIX1).automorf.hfst: .deps/$(PREFIX1).automorf-trimmed.hfst
+	hfst-fst2fst -w -i $< -o $@
+
+$(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
+	hfst-fst2fst -w -i $< -o $@
 
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
-$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/.d
+# TODO: Make this use .und as well (but giella-est doesn't install any .und yet)
+$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/punctuation.LR.hfst .deps/.d
 	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
-	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst 
+	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
 # fin->est gen
 # apertium-est.est.RL.att.gz
-$(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o .deps/$(PREFIX1).automorf.hfst
-	hfst-fst2fst -O .deps/$(PREFIX1).automorf.hfst -o $@
-#	$(ZCAT) $<  > .deps/$(PREFIX1).autogen.RL.att
-#	lt-comp lr .deps/$(PREFIX1).autogen.RL.att $@
+.deps/$(PREFIX1).autogen.hfst: $(AP_SRC2)/apertium-$(LANG2).$(LANG2).RL.att.gz .deps/punctuation.RL.hfst .deps/.d
+	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o $@
+
+$(PREFIX1).autogen.hfst: .deps/$(PREFIX1).autogen.hfst
+	hfst-fst2fst -O $< -o $@
 
 # est->fin gen
 # apertium-fin.fin.RL.att.gz
-$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz .deps/.d
-	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o .deps/$(PREFIX2).automorf.hfst
-	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
+.deps/$(PREFIX2).autogen.hfst: $(AP_SRC1)/apertium-$(LANG1).$(LANG1).RL.att.gz .deps/punctuation.RL.hfst .deps/.d
+	$(ZCAT) $< | hfst-txt2fst | hfst-union -2 .deps/punctuation.RL.hfst -o $@
+
+$(PREFIX2).autogen.hfst: .deps/$(PREFIX2).autogen.hfst
+	hfst-fst2fst -O $< -o $@
 
 
 ###############################################################################
@@ -115,11 +129,11 @@ $(PREFIX1).autobil.bin: $(BASENAME).$(PREFIX1).dix
 	lt-comp lr $< $@
 
 $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
-	apertium-validate-dictionary $< 
+	apertium-validate-dictionary $<
 	lt-comp rl $< $@
 
 ###############################################################################
-## Disambiguation rules 
+## Disambiguation rules
 ###############################################################################
 
 $(PREFIX1).rlx.bin: $(AP_SRC1)/$(LANG1).mor.rlx.bin
@@ -177,7 +191,7 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 #	lt-comp lr $< $@
 #
 #$(PREFIX2).autopgen.bin: $(BASENAME).post-$(LANG2).dix
-#	apertium-validate-dictionary $< 
+#	apertium-validate-dictionary $<
 #	lt-comp lr $< $@
 
 ###############################################################################
@@ -223,5 +237,16 @@ install-data-local: install-modes
 ###############################################################################
 
 CLEANFILES = $(TARGETS_COMMON)
-clean-local: 
+clean-local:
 	-rm -rf .deps modes
+
+
+###############################################################################
+## Test
+###############################################################################
+
+test: all
+	echo "haloisitteko" | apertium -d . sme-nob | tee .test-mt
+	@echo "Jeg har undervisning mellom to og fire." > .test-ref
+	@diff .test-ref .test-mt
+	@rm .test-ref .test-mt
