@@ -246,7 +246,7 @@ clean-local:
 ###############################################################################
 
 test: all
-	echo "haloisitteko" | apertium -d . sme-nob | tee .test-mt
-	@echo "Jeg har undervisning mellom to og fire." > .test-ref
+	echo "Ja" | apertium -d . fin-est | tee .test-mt
+	@echo "Ja" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
