@@ -73,7 +73,9 @@ TARGETS_COMMON = \
 
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
-.deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
+# .deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
+# 	$(ZCAT) $< | hfst-txt2fst > $@
+.deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-fin-est.$(LANG1)-est.LR.att.gz .deps/.d
 	$(ZCAT) $< | hfst-txt2fst > $@
 
 .deps/$(LANG1).automorf.hfst: .deps/$(LANG1).automorf-missingpunct.hfst .deps/punctuation.LR.hfst

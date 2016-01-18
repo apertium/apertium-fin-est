@@ -15,7 +15,7 @@
     <sdef n="cnjcoo"  c="Rinnastav sidesõna"/>
     <sdef n="cnjsub"  c="Alistav sidesõna"/>
     <sdef n="vblex"  c="Verb (tegusõna)"/>
-    <sdef n="part"  c="Partikkel"/>
+    <sdef n="part"  c="Partikel"/>
     <sdef n="prn"  c="Asesõna"/>
     <sdef n="rr"  c=""/>
 
@@ -4742,7 +4742,7 @@
     <e><p><l>kidnappaus<s n="n"/></l><r>inimrööv<s n="n"/></r></p></e>
     <e><p><l>ihmisryöstö<s n="n"/></l><r>inimrööv<s n="n"/></r></p></e>
     <e><p><l>nälänhätä<s n="n"/></l><r>näljahäda<s n="n"/></r></p></e>
-    <e><p><l>kuori<s n="n"/></l><r>koor<s n="n"/></r></p></e>
+    <e><p><l>kuori<s n="n"/></l><r>koor¹<s n="n"/></r></p></e>
     <e><p><l>avaaja<s n="n"/></l><r>avaja<s n="n"/></r></p></e>
     <e><p><l>manipulaatio<s n="n"/></l><r>manipuleerimine<s n="n"/></r></p></e>
     <e><p><l>kritiikki<s n="n"/></l><r>kriitika<s n="n"/></r></p></e>
@@ -15783,8 +15783,8 @@
     <e><p><l>kummtäti<s n="n"/></l><r>ristiema<s n="n"/></r></p></e>
     <e><p><l>kumu<s n="n"/></l><r>võlv<s n="n"/></r></p></e>
     <e><p><l>huhu<s n="n"/></l><r>kumu<s n="n"/></r></p></e>
-    <e><p><l>kuoro<s n="n"/></l><r>koor<s n="n"/></r></p></e>
-    <e><p><l>kerma<s n="n"/></l><r>koor<s n="n"/></r></p></e>
+    <e><p><l>kuoro<s n="n"/></l><r>koor²<s n="n"/></r></p></e>
+    <e><p><l>kerma<s n="n"/></l><r>koor¹<s n="n"/></r></p></e>
     <e><p><l>kupu<s n="n"/></l><r>kuppel<s n="n"/></r></p></e>
     <e><p><l>kupo<s n="n"/></l><r>kubu<s n="n"/></r></p></e>
     <e><p><l>kuri<s n="n"/></l><r>distsipliin<s n="n"/></r></p></e>
