@@ -38,12 +38,14 @@
     </def-cat>
     <def-cat n="verb-pasv-prsprc">               <!-- <vblex><pasv><prsprc><pl><nom>  -->
       <cat-item tags="vblex.pss.prsprc.*"/>        <!-- annetava --> 
+      <cat-item tags="vblex.pasv.prsprc.*"/>        <!-- annetava --> 
     </def-cat>
     <def-cat n="verb-actv-prfprc">              <!-- <vblex><actv><prfprc><pl><nom> -->
       <cat-item tags="vblex.actv.prfprc.*"/>        <!-- antanut, antaneet -->
     </def-cat>
     <def-cat n="verb-pasv-prfprc">              <!-- <vblex><pasv><prfprc><pl><nom> -->
       <cat-item tags="vblex.pss.prfprc.*"/>        <!-- annettu -->
+      <cat-item tags="vblex.pasv.prfprc.*"/>        <!-- annettu -->
     </def-cat>
     <def-cat n="adv">
       <cat-item tags="adv"/>
@@ -176,6 +178,7 @@
     <def-attr n="a_der">
       <attr-item tags="der_minen"/>
       <attr-item tags="der_mine.n"/>
+      <attr-item tags="der_sti"/>
     </def-attr>
     <def-attr n="a_clb">
       <attr-item tags="clb"/>
@@ -1382,6 +1385,14 @@
                 <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
                 <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
           </when>
+          <otherwise>
+            <choose>
+              <when><test><equal><clip pos="1" side="sl" part="a_der"/><lit-tag v="der_sti"/>
+                      </equal></test>              <!-- hiljaisesti - hiljainen - vaikne sg abl -->
+                       <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="sg.abl"/></let>
+              </when>
+            </choose>
+          </otherwise>
         </choose>
         <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
         <out>
