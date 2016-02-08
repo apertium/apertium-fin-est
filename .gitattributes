@@ -53,7 +53,7 @@ dev/punctuation.lexc -text
 /pending-tests.sh -text
 texts/opik.est.txt -text
 texts/opik.fin.txt -text
-texts/opik_vead_käbilt.xlsx -text
+texts/opik_vead_kaebilt.xlsx -text
 texts/story.est.txt -text
 texts/story.fin.txt -text
 /wiki-tests.sh -text
