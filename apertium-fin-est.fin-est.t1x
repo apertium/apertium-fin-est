@@ -151,6 +151,7 @@
       <attr-item tags="prt.quot"/>   <!-- est; never used in transfer -->
       <attr-item tags="prs.imprt"/>  <!-- est -->
       <attr-item tags="prt.imprt"/>  <!-- est -->
+      <attr-item tags="prt.prc"/>    <!-- est olnud oldud conneg ... -->
     </def-attr>
     <def-attr n="a_person">
       <attr-item tags="p1"/>
@@ -160,6 +161,10 @@
     <def-attr n="a_conneg">
       <attr-item tags="conneg"/>
       <attr-item tags="neg"/>
+    </def-attr>
+    <def-attr n="a_ole_conneg">
+      <attr-item tags="conneg"/>
+      <attr-item tags="p2.sg"/>
     </def-attr>
     <def-attr n="a_eineg">
       <attr-item tags="eineg"/>
@@ -1212,11 +1217,23 @@
                    </test>
                    <choose>
                      <when> 
-                       <test>     <!-- hack to select ei ole over pole: change from ind to imp -->
-                         <equal> <clip pos="1" side="tl" part="lemh"/> <lit-tag v="ole"/> </equal>
+                       <test>     <!-- hack to select ei ole over pole: change from ind conneg to imprt p2.sg-->
+                         <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
                        </test>
-                          <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
-                          <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                       <choose>
+                         <when> 
+                           <test>
+                             <equal> <clip pos="1" side="tl" part="a_temps"/> <lit-tag v="prs"/> </equal>
+                           </test>
+                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imprt"/></let>
+                           <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
+                         </when> 
+                         <otherwise>   <!-- temps = prt ollut, olleet, oltu etc -->
+                           <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prt.prc"/></let>
+                           <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                           <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
+                         </otherwise>
+                       </choose> 
                      </when>
                      <otherwise>   <!-- fin ind conneg = est ind neg -->
                        <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
