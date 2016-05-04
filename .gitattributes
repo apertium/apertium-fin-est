@@ -47,7 +47,6 @@ dev/est-fin.tsv -text
 dev/punctuation.lexc -text
 /est-fin.prob -text svneol=unset#unset
 /fin-est.prob -text svneol=unset#unset
-/gt2apertium.cg3r -text
 /modes.xml -text
 /mult.py -text
 /pending-tests.sh -text
