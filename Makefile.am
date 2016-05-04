@@ -139,10 +139,10 @@ $(PREFIX2).autobil.bin: $(BASENAME).$(PREFIX1).dix
 ###############################################################################
 
 $(PREFIX1).rlx.bin: $(AP_SRC1)/$(LANG1).mor.rlx.bin
-	cg-relabel $< gt2apertium.cg3r $@
+	cp $< $@
 
 $(PREFIX2).rlx.bin: $(AP_SRC2)/$(LANG2).mor.rlx.bin
-	cg-relabel $< gt2apertium.cg3r $@
+	cp $< $@
 
 
 ###############################################################################
