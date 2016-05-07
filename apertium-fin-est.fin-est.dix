@@ -179,17 +179,24 @@
   
     <!-- SECTION: Pronouns -->
 
-     
-
-    <e><p><l>minä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
+    <e><p><l>minä<s n="prn"/></l><r>mina<s n="prn"/></r></p></e>
+    <e><p><l>sinä<s n="prn"/></l><r>sina<s n="prn"/></r></p></e>
+    <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
+    <e><p><l>me<s n="prn"/></l><r>meie<s n="prn"/></r></p></e>
+    <e><p><l>te<s n="prn"/></l><r>teie<s n="prn"/></r></p></e>
+    <e><p><l>he<s n="prn"/></l><r>nemad<s n="prn"/></r></p></e>
+    <!-- <e><p><l>minä<s n="prn"/><s n="pers"/></l><r>mina<s n="prn"/></r></p></e>
         <e r="RL"><p><l>minä<s n="prn"/><s n="pers"/></l><r>ma<s n="prn"/></r></p></e>
     <e><p><l>sinä<s n="prn"/><s n="pers"/></l><r>sina<s n="prn"/></r></p></e>
         <e r="RL"><p><l>sinä<s n="prn"/><s n="pers"/></l><r>sa<s n="prn"/></r></p></e>
     <e><p><l>hän<s n="prn"/><s n="pers"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
+    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>tema<s n="prn"/><s n="pl"/></r></p></e>
     <e><p><l>me<s n="prn"/><s n="pers"/></l><r>meie<s n="prn"/></r></p></e>
     <e><p><l>te<s n="prn"/><s n="pers"/></l><r>teie<s n="prn"/></r></p></e>
-    <e><p><l>he<s n="prn"/><s n="pers"/><s n="pl"/></l><r>nemad<s n="prn"/><s n="pl"/></r></p></e>
+    <e><p><l>he<s n="prn"/><s n="pers"/><s n="pl"/></l><r>nemad<s n="prn"/><s n="pl"/></r></p></e> -->
     <e><p><l>ne<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
+    <e><p><l>ne<s n="prn"/></l><r>nemad<s n="prn"/></r></p></e>
     <e><p><l>moni<s n="prn"/></l><r>palju<s n="prn"/></r></p></e>
     <e><p><l>usea<s n="prn"/></l><r>mitu<s n="prn"/></r></p></e>
     <e><p><l>tuo<s n="prn"/></l><r>too<s n="prn"/></r></p></e>
@@ -204,9 +211,7 @@
     <e><p><l>mitä<s n="prn"/><s n="itg"/><s n="sg"/><s n="par"/></l><r>mis<s n="prn"/><s n="sg"/><s n="par"/></r></p></e>
     <e><p><l>mitä<s n="prn"/><s n="itg"/><s n="sg"/><s n="par"/></l><r>mis<s n="prn"/><s n="pl"/><s n="par"/></r></p></e>
     <e><p><l>se<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="sg"/></l><r>tema<s n="prn"/><s n="sg"/></r></p></e>
-    <e><p><l>hän<s n="prn"/><s n="pers"/><s n="p3"/><s n="pl"/></l><r>tema<s n="prn"/><s n="pl"/></r></p></e>
-        
+   
 
     <e><p><l>joka<s n="prn"/><s n="rel"/></l><r>kes<s n="prn"/></r></p></e>
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
@@ -218,7 +223,6 @@
     <e><p><l>muu<s n="prn"/></l><r>muu<s n="prn"/></r></p></e>
     <e><p><l>oma<s n="adj"/><s n="pos"/></l><r>oma<s n="prn"/></r></p></e>
     <e><p><l>se<s n="prn"/></l><r>see<s n="prn"/></r></p></e>
-    <e><p><l>hän<s n="prn"/></l><r>tema<s n="prn"/></r></p></e>
     <e><p><l>kaikki<s n="prn"/><s n="qnt"/></l><r>kõik<s n="prn"/></r></p></e>
     <e><p><l>tämä<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
         <e r="LR"><p><l>tää<s n="prn"/><s n="dem"/></l><r>see<s n="prn"/></r></p></e>
@@ -16330,7 +16334,6 @@
 
      
 
-    <e><p><l>ne<s n="prn"/></l><r>nemad<s n="prn"/></r></p></e>
     <e><p><l>eri<s n="prn"/></l><r>eri<s n="prn"/></r></p></e>
     <e><p><l>koko<s n="prn"/></l><r>kogu<s n="prn"/></r></p></e>
     <e><p><l>joku<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
@@ -16370,7 +16373,7 @@
     <e><p><l>vuoksi<s n="n"/></l><r>tõus<s n="n"/></r></p></e>
     <e><p><l>henkilö<s n="n"/></l><r>isik<s n="n"/></r></p></e>
     <e><p><l>esimerkki<s n="n"/></l><r>näide<s n="n"/></r></p></e>
-    <e><p><l>koulu<s n="n"/></l><r>kool<s n="n"/></r></p></e>
+    <e><p><l>koulu<s n="n"/></l><r>kool²<s n="n"/></r></p></e>
     <e><p><l>tila<s n="n"/></l><r>paik<s n="n"/></r></p></e>
     <e><p><l>vasta<s n="n"/></l><r>viht¹<s n="n"/></r></p></e>
     <e><p><l>isä<s n="n"/></l><r>isa<s n="n"/></r></p></e>
@@ -17103,7 +17106,7 @@
     <e><p><l>minkälainen<s n="adj"/></l><r>milline<s n="adj"/></r></p></e>
     <e><p><l>pimeä<s n="adj"/></l><r>pime<s n="adj"/></r></p></e>
     <e><p><l>itsenäinen<s n="adj"/></l><r>iseseisev<s n="adj"/></r></p></e>
-    <e><p><l>semmoinen<s n="adj"/></l><r>selline<s n="adj"/></r></p></e>
+    <e><p><l>semmoinen<s n="adj"/></l><r>selline<s n="prn"/></r></p></e>
     <e><p><l>kuuma<s n="adj"/></l><r>kuum<s n="adj"/></r></p></e>
     <e><p><l>pelkkä<s n="adj"/></l><r>pelk<s n="adj"/></r></p></e>
     <e><p><l>kotimainen<s n="adj"/></l><r>kodumaine<s n="adj"/></r></p></e>

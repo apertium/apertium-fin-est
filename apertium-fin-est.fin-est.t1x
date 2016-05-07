@@ -299,134 +299,6 @@
 
   <section-rules>
 
-
-    <rule comment="REGLA: Poss_elim">
-      <pattern>
-        <pattern-item n="pron"/>
-        <pattern-item n="nom"/>
-      </pattern>
-      <action>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="mina"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Mina"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxsg1"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="sina"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Sina"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxsg2"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Oma"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="tema"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Tema"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxsg3"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="meie"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Meie"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxpl1"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="teie"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Teie"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxpl2"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <choose>
-        <when>
-          <test>
-            <and>
-              <or>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="nemad"/></equal>
-                <equal><clip pos="1" side="tl" part="lem"/><lit v="Nemad"/></equal>
-              </or>
-              <equal><clip pos="2" side="sl" part="a_poss"/><lit-tag v="pxpl3"/></equal>
-            </and>
-          </test>
-          <let><clip pos="2" side="tl" part="a_poss"/><lit v=""/></let>
-        </when>
-        </choose>
-        <call-macro n="firstWord">
-          <with-param pos="1"/>
-        </call-macro>
-        <out>
-          <chunk name="prn" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="PRN"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-          <b />
-        </out>
-        <call-macro n="firstWord">
-          <with-param pos="2"/>
-        </call-macro>
-        <out>
-          <chunk name="n" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-            </tags>
-            <lu>
-              <clip pos="2" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
     <rule comment="REGLA: NOM">
       <pattern>
         <pattern-item n="nom"/>
@@ -451,12 +323,15 @@
             <lu>
               <lit v="mina"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p1"/>
               <lit-tag v="sg"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <choose>
@@ -472,12 +347,15 @@
             <lu>
               <lit v="sina"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p2"/>
               <lit-tag v="sg"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <choose>
@@ -493,12 +371,15 @@
             <lu>
               <lit v="tema"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p3"/>
               <lit-tag v="sg"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <choose>
@@ -514,12 +395,15 @@
             <lu>
               <lit v="meie"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p1"/>
               <lit-tag v="pl"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <choose>
@@ -535,12 +419,15 @@
             <lu>
               <lit v="teie"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p2"/>
               <lit-tag v="pl"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <choose>
@@ -556,12 +443,15 @@
             <lu>
               <lit v="nemad"/>
               <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p3"/>
               <lit-tag v="pl"/>
               <lit-tag v="gen"/>
             </lu>
           </chunk>
           <b />
         </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
         </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
@@ -1205,7 +1095,7 @@
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prt.ind"/></let>
           </when>
         </choose>
-        <choose> <!-- fin conneg translates to est neg in ind mood only; otherwise just delete conneg -->
+        <!-- <choose> <!- - fin conneg translates to est neg in ind mood only; otherwise just delete conneg - ->
           <when>
             <test>
                 <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
@@ -1217,7 +1107,7 @@
                    </test>
                    <choose>
                      <when> 
-                       <test>     <!-- hack to select ei ole over pole: change from ind conneg to imprt p2.sg-->
+                       <test>     <!- - hack to select ei ole over pole: change from ind conneg to imprt p2.sg- ->
                          <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
                        </test>
                        <choose>
@@ -1228,25 +1118,25 @@
                            <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imprt"/></let>
                            <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
                          </when> 
-                         <otherwise>   <!-- temps = prt ollut, olleet, oltu etc -->
+                         <otherwise>   <!- - temps = prt ollut, olleet, oltu etc - ->
                            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="prt.prc"/></let>
                            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                            <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                          </otherwise>
                        </choose> 
                      </when>
-                     <otherwise>   <!-- fin ind conneg = est ind neg -->
+                     <otherwise>   <!- - fin ind conneg = est ind neg - ->
                        <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
                        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                      </otherwise>
                    </choose> 
                 </when>
-                <otherwise> <!-- fin imp conneg = est imprt -->
+                <otherwise> <!- - fin imp conneg = est imprt - ->
                   <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                 </otherwise>
             </choose> 
           </when>
-        </choose>
+        </choose> -->
         <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
