@@ -5,23 +5,33 @@
     <def-cat n="kanssa">
       <cat-item tags="adp" lemma="koos"/>
     </def-cat>
+    <def-cat n="cm">
+      <cat-item tags="cm.*"/>
+    </def-cat>
+    <def-cat n="cnj">
+      <cat-item tags="cnjcoo.*"/>
+      <cat-item tags="cnjsub.*"/>
+    </def-cat>
     <def-cat n="ei">
       <cat-item tags="vblex.neg"/>
     </def-cat>
-    <def-cat n="prt-prc"> <!-- saada<vblex><pers><prt><prc><@+FMAINV>-->
-      <cat-item tags="vblex.pers.prt.prc.*"/>
+    <def-cat n="der-mine">
+      <cat-item tags="vblex.der.der_minen.n.*"/>
+    </def-cat>
+    <def-cat n="prt-prc"> <!-- saada<vblex><actv><pret><prc><@+FMAINV>-->
+      <cat-item tags="vblex.actv.pret.prc.*"/>
     </def-cat>
     <def-cat n="imp-neg">
       <cat-item tags="vblex.imp.pres.*"/>
     </def-cat>
     <def-cat n="pres-neg">
-      <cat-item tags="vblex.ind.pres.neg"/>
+      <cat-item tags="vblex.indic.pres.neg"/>
     </def-cat>
     <def-cat n="imprt">
-      <cat-item tags="vblex.*.imprt.*"/>
+      <cat-item tags="vblex.*.imp.*"/>
     </def-cat>
     <def-cat n="impf-neg">
-      <cat-item tags="vblex.ind.impf.neg"/>
+      <cat-item tags="vblex.indic.pret.neg"/>
     </def-cat>
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
@@ -43,22 +53,26 @@
       <cat-item tags="vblex.inf"/>
     </def-cat>
     <def-cat n="infma">  <!-- <vblex><actv><infma><sg><ine> -->
-      <cat-item tags="vblex.pers.sup.ill"/>
+      <cat-item tags="vblex.actv.sup.ill"/>
     </def-cat>
     <def-cat n="fin-verb">
-      <cat-item tags="vblex.pers.*.ind.*"/>
-      <cat-item tags="vblex.impers.*.ind.*"/>
-      <cat-item tags="vblex.pers.*.cond"/>
-      <cat-item tags="vblex.impers.*.cond"/>
-      <cat-item tags="vblex.pers.*.cond.*"/>
-      <cat-item tags="vblex.impers.*.cond.*"/>
-      <cat-item tags="vblex.pers.*.quot"/>
-      <cat-item tags="vblex.impers.*.quot"/>
-      <cat-item tags="vblex.pers.*.quot.*"/>
-      <cat-item tags="vblex.impers.*.quot.*"/>
-      <cat-item tags="vblex.pers.*.imprt.*"/>
-      <cat-item tags="vblex.impers.*.imprt.*"/>
-      <cat-item tags="vblex.*.ind"/>
+      <cat-item tags="vblex.actv.*.indic"/>
+      <cat-item tags="vblex.pasv.*.indic"/>
+      <cat-item tags="vblex.actv.*.indic.*"/>
+      <cat-item tags="vblex.pasv.*.indic.*"/>
+      <cat-item tags="vblex.actv.*.cond"/>
+      <cat-item tags="vblex.pasv.*.cond"/>
+      <cat-item tags="vblex.actv.*.cond.*"/>
+      <cat-item tags="vblex.pasv.*.cond.*"/>
+      <cat-item tags="vblex.actv.*.quot"/>
+      <cat-item tags="vblex.pasv.*.quot"/>
+      <cat-item tags="vblex.actv.*.quot.*"/>
+      <cat-item tags="vblex.pasv.*.quot.*"/>
+      <cat-item tags="vblex.actv.*.imp"/>
+      <cat-item tags="vblex.pasv.*.imp"/>
+      <cat-item tags="vblex.actv.*.imp.*"/>
+      <cat-item tags="vblex.pasv.*.imp.*"/>
+      <cat-item tags="vblex.*.indic"/>
     </def-cat>
     <def-cat n="nom">
       <cat-item tags="n.*"/>
@@ -73,6 +87,22 @@
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
+    <def-attr n="a_cnj">
+      <attr-item tags="cnjcoo"/>
+      <attr-item tags="cnjsub"/>
+    </def-attr>
+    <def-attr n="a_clo">
+      <attr-item tags="CLBC.CLB"/>
+      <attr-item tags="CLB"/>
+      <attr-item tags="CLBC"/>
+      <attr-item tags="CLO"/>
+      <attr-item tags="CLC"/>
+    </def-attr>
+    <def-attr n="a_pnc">
+	  <attr-item tags="cm.sent"/>
+      <attr-item tags="cm"/>
+      <attr-item tags="sent"/>
+    </def-attr>
     <def-attr n="a_adjec">
       <attr-item tags="adj"/>
       <attr-item tags="adj.pos"/>
@@ -84,17 +114,25 @@
       <attr-item tags="pos"/>
       <attr-item tags="comp"/>
     </def-attr>
+    <def-attr n="a_der">
+      <attr-item tags="der_mine"/>
+      <attr-item tags="der_sti"/>
+    </def-attr>
     <def-attr n="a_verb">
       <attr-item tags="vblex"/>
       <attr-item tags="vblex.neg"/>
     </def-attr>
+    <def-attr n="a_voice">
+      <attr-item tags="actv"/>
+      <attr-item tags="pasv"/>
+    </def-attr>
     <def-attr n="a_mood">
-      <attr-item tags="ind"/>
+      <attr-item tags="indic"/>
       <attr-item tags="cond"/>
     </def-attr>
     <def-attr n="a_tens">
-      <attr-item tags="prs"/>
-      <attr-item tags="prt"/>
+      <attr-item tags="pres"/>
+      <attr-item tags="pret"/>
       <attr-item tags="pot"/>
       <attr-item tags="past"/>
     </def-attr>
@@ -106,25 +144,22 @@
       <attr-item tags="neg"/>
     </def-attr>
     <def-attr n="a_screeve">
-      <attr-item tags="ind"/>
+      <attr-item tags="indic"/>
       <attr-item tags="cond"/>
       <attr-item tags="quot"/>
-      <attr-item tags="imprt"/>
       <attr-item tags="imp"/>
 
-      <attr-item tags="ind.prs"/>
-      <attr-item tags="ind.prt"/>
+      <attr-item tags="indic.pres"/>
+      <attr-item tags="indic.pret"/>
 
-      <attr-item tags="prs.ind"/>
-      <attr-item tags="prt.ind"/>
-      <attr-item tags="prs.cond"/>
-      <attr-item tags="prt.cond"/>
-      <attr-item tags="prs.quot"/>
-      <attr-item tags="prt.quot"/>
-      <attr-item tags="prs.imprt"/>
-      <attr-item tags="prt.imprt"/>
-      <attr-item tags="prs.imp"/>
-      <attr-item tags="prt.imp"/>
+      <attr-item tags="pres.indic"/>
+      <attr-item tags="pret.indic"/>
+      <attr-item tags="pres.cond"/>
+      <attr-item tags="pret.cond"/>
+      <attr-item tags="pres.quot"/>
+      <attr-item tags="pret.quot"/>
+      <attr-item tags="pres.imp"/>
+      <attr-item tags="pret.imp"/>
     </def-attr>
     <def-attr n="a_p123">
       <attr-item tags="p1"/>
@@ -132,8 +167,6 @@
       <attr-item tags="p3"/>
     </def-attr>
     <def-attr n="a_pers">
-      <attr-item tags="pers"/>
-      <attr-item tags="impers"/>
       <attr-item tags="actv"/>
       <attr-item tags="pasv"/>
     </def-attr>
@@ -168,6 +201,9 @@
       <attr-item tags="@\+FMAINV"/>
       <attr-item tags="@ADVL→"/>
       <attr-item tags="@←ADVL"/>
+    </def-attr>
+    <def-attr n="a_conneg">
+      <attr-item tags="conneg"/>
     </def-attr>
     <def-attr n="a_adds">
       <attr-item tags="pe4"/>
@@ -414,26 +450,16 @@
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prs.imprt"/>
+                              <lit-tag v="pres.imp"/>
                       </equal>
                       </test>
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="imp"/></let>
           </when>
         </choose>
-        <choose>
-          <when><test><not><equal><clip pos="1" side="sl" part="a_pers"/> 
-                              <lit-tag v="impers"/>
-                      </equal></not></test>
-                <let><clip pos="1" side="tl" part="a_pers"/><lit-tag v="actv"/></let>
-          </when>
-          <otherwise>  
-                <let><clip pos="1" side="tl" part="a_pers"/><lit-tag v="pasv"/></let>
-          </otherwise>  
-        </choose>
         <out>
           <chunk name="fin" case="caseFirstWord">
             <tags>
-              <tag><lit-tag v="SV.IMPRT"/></tag>
+              <tag><lit-tag v="SV.imprt"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -459,37 +485,27 @@
           </when>
         </choose>
         <choose>
-          <when><test><not><equal><clip pos="1" side="sl" part="a_pers"/> 
-                              <lit-tag v="impers"/>
-                      </equal></not></test>
-                <let><var n="voice"/><lit-tag v="actv"/></let>
-<!--
-        	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
--->
-          </when>
-          <otherwise>  
-                <let><var n="voice"/><lit-tag v="pasv"/></let>
-<!--
-        	<let><clip pos="1" side="tl" part="a_pers"/><lit-tag v=""/></let>
--->
-        	<let><var n="addp"/><lit-tag v="pe4"/></let>
-          </otherwise>  
+          <when><test><equal><clip pos="1" side="sl" part="a_pers"/> 
+                              <lit-tag v="pasv"/>
+                      </equal></test>
+        	    <let><var n="addp"/><lit-tag v="pe4"/></let>
+          </when>  
         </choose>
         <choose>
           <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prs.cond"/>
+                              <lit-tag v="pres.cond"/>
                       </equal>
                       <equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prt.cond"/>
+                              <lit-tag v="pret.cond"/>
                       </equal></or></test>
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="cond"/></let>
           </when>
         </choose>
         <choose>
           <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prs.quot"/>
+                              <lit-tag v="pres.quot"/>
                       </equal><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prt.cond"/>
+                              <lit-tag v="pret.quot"/>
                       </equal></or>
                       </test>
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="quot"/></let>
@@ -497,7 +513,7 @@
         </choose>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="prs.imprt"/>
+                              <lit-tag v="pres.imp"/>
                       </equal>
                       </test>
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="imp"/></let>
@@ -538,18 +554,18 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_verb"/>
-              <var n="voice"/>
+              <clip pos="1" side="tl" part="a_voice"/>
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tens"/>
               <clip pos="1" side="tl" part="a_p123"/>
               <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="1" side="tl" part="a_conneg"/>
               <var n="addp"/>
               <var n="sent-qst"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
         </out>
-        <let><var n="voice"/><lit v=""/></let>
         <let><var n="sent-qst"/><lit v=""/></let>
       </action>
     </rule>
@@ -644,7 +660,7 @@
       </pattern>
       <action>
 	<out>
-	<chunk name="koos" case="caseFirstWord">
+		<chunk name="koos" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PREP"/></tag>
             </tags>
@@ -771,6 +787,27 @@
     </rule>
 
 
+    <rule comment="REGLA: DER-MINE">
+      <pattern>
+        <pattern-item n="der-mine"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_minen"/></let>
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="sl" part="a_case"/></tag>
+              <tag><clip pos="1" side="sl" part="a_poss"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="REGLA: adv">
       <pattern>
         <pattern-item n="adv"/>
@@ -797,6 +834,47 @@
         </choose>  
       </action>
     </rule>
+
+    <rule comment="CNJ">
+      <pattern>
+        <pattern-item n="cnj"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_pnc"/><lit v=""/></let>
+        <out>
+		  <chunk name="cnj" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="CNJ"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <clip pos="1" side="tl" part="a_cnj"/>
+              <clip pos="1" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="CM">
+      <pattern>
+        <pattern-item n="cm"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" side="tl" part="a_clo"/><lit v=""/></let>
+        <out>
+          <chunk name="sent" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="CM"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: SENT">
       <pattern>
