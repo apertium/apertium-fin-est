@@ -91,7 +91,7 @@
     <e r="LR"><p><l>pa<s n="foc"/></l><r></r></p></e>
     <e><p><l>ja<s n="part"/></l><r>ja<s n="cnjcoo"/></r></p></e>
     <e><p><l>eikä<s n="adv"/></l><r>ega<s n="cnjcoo"/></r></p></e>
-    <e><p><l>ei<s n="part"/></l><r>ei<s n="adv"/></r></p></e>
+    <!-- <e><p><l>ei<s n="part"/></l><r>ei<s n="adv"/></r></p></e> is not available by ufin -->
     <e><p><l>ko<s n="qst"/></l><r>kas<s n="adv"/></r></p></e>
     <e><p><l>niinpä<s n="part"/></l><r>nõnda<s n="adv"/></r></p></e>
     <e><p><l>anteeksi<s n="part"/></l><r>vabandust<s n="ij"/></r></p></e>
@@ -15593,7 +15593,6 @@
     <e><p><l>etelä<s n="n"/></l><r>lõuna<s n="n"/></r></p></e>
     <e><p><l>etevä<s n="adj"/></l><r>suurepärane<s n="adj"/></r></p></e>
     <e><p><l>turhamainen<s n="adj"/></l><r>edev<s n="adj"/></r></p></e>
-    <e><p><l>ette<s n="adv"/></l><r>ei<s n="adv"/></r></p></e>
     <e><p><l>eteen<s n="post"/></l><r>ette<s n="adp"/></r></p></e>
     <e><p><l>etu<s n="n"/></l><r>eelis<s n="n"/></r></p></e>
     <e><p><l>edistys<s n="n"/></l><r>edu<s n="n"/></r></p></e>
