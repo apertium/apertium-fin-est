@@ -335,7 +335,7 @@
     <e><p><l>kanssa<s n="n"/></l><r>koos<s n="n"/></r></p></e>
     <e><p><l>kuukausi<s n="n"/></l><r>kuu<s n="n"/></r></p></e>
     <e><p><l>lintu<s n="n"/></l><r>lind<s n="n"/></r></p></e>
-    <e><p><l>lopettanut<s n="n"/></l><r>lõpetanu<s n="n"/></r></p></e>
+    <e><p><l>lopettanut<s n="adj"/></l><r>lõpetanu<s n="adj"/></r></p></e>
     <e><p><l>loppu<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
     <e><p><l>lähde<s n="n"/></l><r>lähe<s n="n"/></r></p></e>
     <e><p><l>mutta<s n="n"/></l><r>aga<s n="n"/></r></p></e>
@@ -347,7 +347,7 @@
     <e><p><l>pää<s n="n"/></l><r>pea<s n="n"/></r></p></e>
     <e><p><l>päätös<s n="n"/></l><r>lõpp<s n="n"/></r></p></e>
     <e><p><l>rakastava<s n="n"/></l><r>armastav<s n="n"/></r></p></e>
-    <e><p><l>saanut<s n="n"/></l><r>saanu<s n="n"/></r></p></e>
+    <e><p><l>saanut<s n="adj"/></l><r>saanu<s n="adj"/></r></p></e>
     <e><p><l>silmä<s n="n"/></l><r>silm¹<s n="n"/></r></p></e>
     <e><p><l>suku<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
     <e><p><l>suu<s n="n"/></l><r>suu<s n="n"/></r></p></e>
@@ -399,7 +399,7 @@
     <e><p><l>osuus<s n="n"/></l><r>dividend<s n="n"/></r></p></e>
     <e><p><l>ovisilmä<s n="n"/></l><r>uksesilm<s n="n"/></r></p></e>
     <e><p><l>paloposti<s n="n"/></l><r>hüdrant<s n="n"/></r></p></e>
-    <e><p><l>papukaijalinnut<s n="n"/></l><r>papagoilised<s n="n"/></r></p></e>
+    <e><p><l>papukaijalintu<s n="n"/></l><r>papagoilind<s n="n"/></r></p></e>
     <e><p><l>paralepsis<s n="n"/></l><r>paralipsis<s n="n"/></r></p></e>
     <e><p><l>perestroika<s n="n"/></l><r>uutmine<s n="n"/></r></p></e>
     <e><p><l>pornografia<s n="n"/></l><r>pornograafia<s n="n"/></r></p></e>
@@ -5168,7 +5168,7 @@
     <e><p><l>elokuvaus<s n="n"/></l><r>kinematograafia<s n="n"/></r></p></e>
     <e><p><l>takka<s n="n"/></l><r>kamin<s n="n"/></r></p></e>
     <e><p><l>piisi<s n="n"/></l><r>kamin<s n="n"/></r></p></e>
-    <e><p><l>sotavaunut<s n="n"/></l><r>sõjavanker<s n="n"/></r></p></e>
+    <e><p><l>sotavaunu<s n="n"/></l><r>sõjavanker<s n="n"/></r></p></e>
     <e><p><l>tulot<s n="n"/></l><r>tulud<s n="n"/></r></p></e>
     <e><p><l>tulot<s n="n"/></l><r>sissetulek<s n="n"/></r></p></e>
     <e><p><l>huoruus<s n="n"/></l><r>abielurikkumine<s n="n"/></r></p></e>
@@ -6490,7 +6490,7 @@
     <e><p><l>ilmanpainemittari<s n="n"/></l><r>baromeeter<s n="n"/></r></p></e>
     <e><p><l>barometri<s n="n"/></l><r>baromeeter<s n="n"/></r></p></e>
     <e><p><l>dosentti<s n="n"/></l><r>dotsent<s n="n"/></r></p></e>
-    <e><p><l>ruumisvaunut<s n="n"/></l><r>surnuvanker<s n="n"/></r></p></e>
+    <e><p><l>ruumisvaunu<s n="n"/></l><r>surnuvanker<s n="n"/></r></p></e>
     <e><p><l>ennakkoehto<s n="n"/></l><r>eeltingimus<s n="n"/></r></p></e>
     <e><p><l>vuokralainen<s n="n"/></l><r>rentnik<s n="n"/></r></p></e>
     <e><p><l>ihotautioppi<s n="n"/></l><r>dermatoloogia<s n="n"/></r></p></e>
@@ -7554,8 +7554,8 @@
     <e><p><l>satamatyöläinen<s n="n"/></l><r>sadamatööline<s n="n"/></r></p></e>
     <e><p><l>omaelämäkerrallinen<s n="n"/></l><r>autobiograafia-<s n="n"/></r></p></e>
     <e><p><l>jättikasvu<s n="n"/></l><r>hiiglasekasv<s n="n"/></r></p></e>
-    <e><p><l>hurmaantunut<s n="n"/></l><r>vaimustuses<s n="n"/></r></p></e>
-    <e><p><l>hurmaantunut<s n="n"/></l><r>liigutatud<s n="n"/></r></p></e>
+    <e><p><l>hurmaantunut<s n="adj"/><s n="sg"/><s n="nom"/></l><r>vaimustuses<s n="n"/><s n="sg"/><s n="ine"/></r></p></e>
+    <e><p><l>hurmaantunut<s n="adj"/><s n="sg"/><s n="nom"/></l><r>liigutatud<s n="adj"/></r></p></e>
     <e><p><l>gigantismus<s n="n"/></l><r>hiiglasekasv<s n="n"/></r></p></e>
     <e><p><l>tonsilliitti<s n="n"/></l><r>kurgumandlipõletik<s n="n"/></r></p></e>
     <e><p><l>nielurisatulehdus<s n="n"/></l><r>kurgumandlipõletik<s n="n"/></r></p></e>
@@ -7665,7 +7665,7 @@
     <e><p><l>isopihtihäntä<s n="n"/></l><r>kõrvahark<s n="n"/></r></p></e>
     <e><p><l>doksologia<s n="n"/></l><r>doksoloogia<s n="n"/></r></p></e>
     <e><p><l>vuorikiipeilijä<s n="n"/></l><r>alpinist<s n="n"/></r></p></e>
-    <e><p><l>vuokravaunut<s n="n"/></l><r>troska<s n="n"/></r></p></e>
+    <e><p><l>vuokravaunu<s n="n"/></l><r>troska<s n="n"/></r></p></e>
     <e><p><l>osmankäämi<s n="n"/></l><r>hundinui<s n="n"/></r></p></e>
     <e><p><l>endotoksiini<s n="n"/></l><r>endotoksiin<s n="n"/></r></p></e>
     <e><p><l>alppikiipeilijä<s n="n"/></l><r>alpinist<s n="n"/></r></p></e>
@@ -9615,7 +9615,7 @@
     <e><p><l>metsämurmeli<s n="n"/></l><r>ümiseja<s n="n"/></r></p></e>
     <e><p><l>sarjis<s n="n"/></l><r>koomiksinurk<s n="n"/></r></p></e>
     <e><p><l>vannesaha<s n="n"/></l><r>lintsaag<s n="n"/></r></p></e>
-    <e><p><l>vaunut<s n="n"/></l><r>kaarik<s n="n"/></r></p></e>
+    <e><p><l>vaunu<s n="n"/></l><r>kaarik<s n="n"/></r></p></e>
     <e><p><l>denaturoimisaine<s n="n"/></l><r>denaturant<s n="n"/></r></p></e>
     <e><p><l>boheemielämä<s n="n"/></l><r>boheemlus<s n="n"/></r></p></e>
     <e><p><l>juuttikangas<s n="n"/></l><r>kotiriie<s n="n"/></r></p></e>
@@ -9811,7 +9811,7 @@
     <e><p><l>harkitsemattomuus<s n="n"/></l><r>tormakus<s n="n"/></r></p></e>
     <e><p><l>katkeruus<s n="n"/></l><r>kibestus<s n="n"/></r></p></e>
     <e><p><l>lannevaate<s n="n"/></l><r>niudevöö<s n="n"/></r></p></e>
-    <e><p><l>lastenvaunut<s n="n"/></l><r>lapsevanker<s n="n"/></r></p></e>
+    <e><p><l>lastenvaunu<s n="n"/></l><r>lapsevanker<s n="n"/><s n="sg"/></r></p></e>
     <e><p><l>limitys<s n="n"/></l><r>ülekattumine<s n="n"/></r></p></e>
     <e><p><l>empaattisesti<s n="n"/></l><r>kaastundlikult<s n="n"/></r></p></e>
     <e><p><l>homogenaatti<s n="n"/></l><r>homogenaat<s n="n"/></r></p></e>
