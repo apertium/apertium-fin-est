@@ -134,7 +134,7 @@
     <e><p><l>varten<s n="post"/></l><r>jaoks<s n="adv"/></r></p></e>
     <e><p><l>edessä<s n="post"/></l><r>ees<s n="adp"/></r></p></e>
     <e><p><l>edestä<s n="post"/></l><r>eest<s n="adp"/></r></p></e>
-    <e><p><l>taka<s n="post"/></l><r>taga<s n="adp"/></r></p></e>
+    <e><p><l>takaa<s n="post"/></l><r>taga<s n="adp"/></r></p></e>
     <e><p><l>takaa<s n="post"/></l><r>tagant<s n="adp"/></r></p></e>
     <e><p><l>taakse<s n="post"/></l><r>taha<s n="adp"/></r></p></e>
     <e><p><l>jälkeen<s n="post"/></l><r>pärast<s n="adp"/></r></p></e>
@@ -175,7 +175,6 @@
     <e><p><l>siellä<s n="adv"/></l><r>seal<s n="adv"/></r></p></e>
     <e><p><l>takana<s n="adv"/></l><r>taga<s n="adv"/></r></p></e>
     <e><p><l>taakse<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
-    <e><p><l>vielä<s n="part"/></l><r>veel<s n="adv"/></r></p></e>
   
     <!-- SECTION: Pronouns -->
 
@@ -196,7 +195,7 @@
     <e><p><l>te<s n="prn"/><s n="pers"/></l><r>teie<s n="prn"/></r></p></e>
     <e><p><l>he<s n="prn"/><s n="pers"/><s n="pl"/></l><r>nemad<s n="prn"/><s n="pl"/></r></p></e> -->
     <e><p><l>ne<s n="prn"/><s n="dem"/></l><r>need<s n="prn"/></r></p></e>
-    <e><p><l>ne<s n="prn"/></l><r>nemad<s n="prn"/></r></p></e>
+    <e r="LR"><p><l>ne<s n="prn"/></l><r>nemad<s n="prn"/></r></p></e>
     <e><p><l>moni<s n="prn"/></l><r>palju<s n="prn"/></r></p></e>
     <e><p><l>usea<s n="prn"/></l><r>mitu<s n="prn"/></r></p></e>
     <e><p><l>tuo<s n="prn"/></l><r>too<s n="prn"/></r></p></e>
@@ -13743,7 +13742,7 @@
     <e><p><l>nopeasti<s n="adv"/></l><r>väledalt<s n="adv"/></r></p></e>
     <e><p><l>ulos<s n="adv"/></l><r>väljas<s n="adv"/></r></p></e>
     <e><p><l>lähemmäksi<s n="adv"/></l><r>lähemale<s n="adv"/></r></p></e>
-    <e><p><l>vielä<s n="adv"/></l><r>ikka<s n="adv"/></r></p></e>
+    <e><p><l>vielä<s n="part"/></l><r>ikka<s n="adv"/></r></p></e>
     <e><p><l>tänään<s n="adv"/></l><r>täna<s n="adv"/></r></p></e>
     <e><p><l>sen<s n="adv"/></l><r>päris<s n="adv"/></r></p></e>
     <e><p><l>sitten<s n="adv"/></l><r>äkitselt<s n="adv"/></r></p></e>
@@ -13766,7 +13765,6 @@
     <e><p><l>siellä<s n="adv"/></l><r>seal<s n="adv"/></r></p></e>
     <e><p><l>takana<s n="adv"/></l><r>taga<s n="adv"/></r></p></e>
     <e><p><l>tähän<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
-    <e><p><l>vielä<s n="adv"/></l><r>veel<s n="adv"/></r></p></e>
     <e><p><l>per<s n="adv"/></l><r>kohta<s n="adv"/></r></p></e>
     <e><p><l>tyypillisesti<s n="adv"/></l><r>tüüpiliselt<s n="adv"/></r></p></e>
     <e><p><l>osittain<s n="adv"/></l><r>osaliselt<s n="adv"/></r></p></e>
@@ -15488,7 +15486,7 @@
     <e><p><l>siunata<s n="vblex"/></l><r>siunama<s n="vblex"/></r></p></e>
     <e><p><l>kirota<s n="vblex"/></l><r>siunama<s n="vblex"/></r></p></e>
     <e><p><l>kiroilla<s n="vblex"/></l><r>siunama<s n="vblex"/></r></p></e>
-    <e><p><l>soittaa<s n="vblex"/></l><r>mängima<s n="vblex"/></r></p></e>
+    <e r="LR"><p><l>soittaa<s n="vblex"/></l><r>mängima<s n="vblex"/></r></p></e>
     <e><p><l>soittaa<s n="vblex"/></l><r>helistama<s n="vblex"/></r></p></e>
     <e><p><l>ajaa<s n="vblex"/></l><r>sõitma<s n="vblex"/></r></p></e>
     <e><p><l>ajella<s n="vblex"/></l><r>sõitma<s n="vblex"/></r></p></e>
