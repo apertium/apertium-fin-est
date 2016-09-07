@@ -89,7 +89,7 @@
     <!-- SECTION: Miscellaneous -->
 
     <e r="LR"><p><l>pa<s n="foc"/></l><r></r></p></e>
-    <e><p><l>ja<s n="part"/></l><r>ja<s n="cnjcoo"/></r></p></e>
+    <!-- <e><p><l>ja<s n="part"/></l><r>ja<s n="cnjcoo"/></r></p></e> is not available by uest -->
     <e><p><l>eikä<s n="adv"/></l><r>ega<s n="cnjcoo"/></r></p></e>
     <!-- <e><p><l>ei<s n="part"/></l><r>ei<s n="adv"/></r></p></e> is not available by ufin -->
     <e><p><l>ko<s n="qst"/></l><r>kas<s n="adv"/></r></p></e>
