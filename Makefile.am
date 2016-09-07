@@ -73,10 +73,12 @@ TARGETS_COMMON = \
 
 # fin->est mor
 # apertium-fin-est.fin-est.LR.att.gz
-# .deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
-# 	$(ZCAT) $< | hfst-txt2fst > $@
-.deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-fin-est.$(LANG1)-est.LR.att.gz .deps/.d
+
+.deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-und.$(LANG1)-und.LR.att.gz .deps/.d
 	$(ZCAT) $< | hfst-txt2fst > $@
+
+# .deps/$(LANG1).automorf-missingpunct.hfst: $(AP_SRC1)/apertium-fin-est.$(LANG1)-est.LR.att.gz .deps/.d
+# 	$(ZCAT) $< | hfst-txt2fst > $@
 
 .deps/$(LANG1).automorf.hfst: .deps/$(LANG1).automorf-missingpunct.hfst .deps/punctuation.LR.hfst
 	hfst-union -1 $< -2 .deps/punctuation.LR.hfst -o $@
@@ -93,8 +95,9 @@ $(PREFIX1).automorf-untrimmed.hfst: .deps/$(LANG1).automorf.hfst
 # est->fin mor
 # apertium-fin-est.est-fin.LR.att.gz
 # TODO: Make this use .und as well (but giella-est doesn't install any .und yet)
-$(PREFIX2).automorf.hfst: $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/punctuation.LR.hfst .deps/.d
-	$(ZCAT) $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
+# TP: changed $(AP_SRC2)/$(BASENAME).$(PREFIX2).LR.att.gz to $(AP_SRC2)/apertium-und.$(LANG2)-und.LR.att.gz
+$(PREFIX2).automorf.hfst: $(AP_SRC2)/apertium-und.$(LANG2)-und.LR.att.gz .deps/$(PREFIX2).autobil.prefixes .deps/punctuation.LR.hfst .deps/.d
+	$(ZCAT) $(AP_SRC2)/apertium-und.$(LANG2)-und.LR.att.gz | hfst-txt2fst | hfst-union -2 .deps/punctuation.LR.hfst -o .deps/$(PREFIX2).automorf.untrimmed.hfst
 	hfst-compose-intersect -1 .deps/$(PREFIX2).automorf.untrimmed.hfst -2 .deps/$(PREFIX2).autobil.prefixes -o .deps/$(PREFIX2).automorf.hfst
 	hfst-fst2fst -O .deps/$(PREFIX2).automorf.hfst -o $@
 
