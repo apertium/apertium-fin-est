@@ -159,6 +159,11 @@
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
     </def-attr>
+    <def-attr n="a_prntype">
+      <attr-item tags="itg"/>
+      <attr-item tags="rel"/>
+      <attr-item tags="dem"/>
+    </def-attr>
     <def-attr n="a_conneg">
       <attr-item tags="conneg"/>
       <attr-item tags="neg"/>
@@ -681,6 +686,7 @@
           </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
         <out>
           <chunk name="prn" case="caseFirstWord">
             <tags>
