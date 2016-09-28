@@ -27,6 +27,7 @@ comp/soome.tolge -text
 comp/soome.txt -text
 /configure.ac -text
 dev/bidix-analyser.fin-est.txt -text
+dev/bidix-sanity.sh -text
 dev/bidix/reliable.fin-est.adj -text
 dev/bidix/reliable.fin-est.adj.checked -text
 dev/bidix/reliable.fin-est.adv -text
