@@ -200,6 +200,7 @@
       <attr-item tags="foc_gi"/>     <!-- est -->
       <attr-item tags="foc_pa"/>
       <attr-item tags="foc_ka"/>     <!-- eikä -->
+      <attr-item tags="foc_han"/>
     </def-attr>
     <def-attr n="a_comp">
       <attr-item tags="comp"/>
@@ -687,16 +688,44 @@
         </choose>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
-        <out>
-          <chunk name="prn" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="PRN"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+            <out>
+              <chunk name="prn" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="PRN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="pcle"> 
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ju"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="prn" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="PRN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
@@ -1140,16 +1169,44 @@
             </choose> 
           </when>
         </choose> -->
-        <out>
-          <chunk name="v" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SV"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+            <out>
+              <chunk name="v" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="pcle"> 
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ju"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="v" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
