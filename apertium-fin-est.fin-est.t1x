@@ -229,6 +229,7 @@
     </def-attr>
     <def-attr n="a_adds">
       <attr-item tags="pe4"/>      <!-- redundant; used exclusively in passive -->
+      <attr-item tags="pref"/>
     </def-attr>
     <def-attr n="a_attr">
       <attr-item tags="attr"/>
@@ -251,6 +252,7 @@
         </when>
       </choose>
     </def-macro>
+    
     <def-macro n="replace-foc1" npar="1">
       <choose>
         <when>
@@ -265,6 +267,16 @@
         <when> <!-- Delete this for now -->
           <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_pa"/></equal></test>
           <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+        </when>
+        <when> <!-- Delete this also -->
+          <test><and><equal><clip pos="1" side="tl" part="a_adds"/><lit-tag v="pref"/></equal>
+          <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></equal></and></test>
+          <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
+        </when>
+        <when> 
+          <test><equal><clip pos="1" side="tl" part="a_adds"/><lit-tag v="pref"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
         </when>
       </choose>
     </def-macro>
