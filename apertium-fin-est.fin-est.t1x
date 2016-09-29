@@ -1422,16 +1422,44 @@
         <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
-        <out>
-          <chunk name="a" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="ADV"/></tag>
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+            <out>
+              <chunk name="a" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="pcle"> <!-- consider to reposition it after the verb! -->
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ju"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="a" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
