@@ -84,6 +84,9 @@
     <def-cat n="kanssa">
       <cat-item lemma="kanssa" tags="post"/>
     </def-cat>
+    <def-cat n="kanssa-ad">
+      <cat-item lemma="kanssa" tags="post.*"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="a_pos">
@@ -254,10 +257,11 @@
       </choose>
     </def-macro>
     
-    <def-macro n="sg_com" npar="1">
+    <def-macro n="sg_com" npar="1">  <!-- can be also pl -->
       <choose>
         <when>
-          <test><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></equal></test>
+          <test><and><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></equal>
+          <equal><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v=""/></equal></and></test>
           <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="sg"/></let>
         </when>
       </choose>
@@ -357,7 +361,7 @@
               <tag><lit-tag v="PRN"/></tag>
             </tags>
             <lu>
-              <lit v="mina"/>
+              <lit v="mina"/> <!-- or oma -->
               <lit-tag v="prn"/>
               <lit-tag v="pers"/>
               <lit-tag v="p1"/>
@@ -381,7 +385,7 @@
               <tag><lit-tag v="PRN"/></tag>
             </tags>
             <lu>
-              <lit v="sina"/>
+              <lit v="sina"/> <!-- or oma -->
               <lit-tag v="prn"/>
               <lit-tag v="pers"/>
               <lit-tag v="p2"/>
@@ -429,7 +433,7 @@
               <tag><lit-tag v="PRN"/></tag>
             </tags>
             <lu>
-              <lit v="meie"/>
+              <lit v="meie"/> <!-- or oma -->
               <lit-tag v="prn"/>
               <lit-tag v="pers"/>
               <lit-tag v="p1"/>
@@ -453,7 +457,7 @@
               <tag><lit-tag v="PRN"/></tag>
             </tags>
             <lu>
-              <lit v="teie"/>
+              <lit v="teie"/> <!-- or oma -->
               <lit-tag v="prn"/>
               <lit-tag v="pers"/>
               <lit-tag v="p2"/>
@@ -504,7 +508,10 @@
                   <tag><clip pos="1" side="sl" part="a_poss"/></tag>
                 </tags>
                 <lu>
-                  <clip pos="1" side="tl" part="whole"/>
+              	  <clip pos="1" side="tl" part="lem"/>
+              	  <lit-tag v="n"/>
+                  <clip pos="1" side="tl" part="a_sgpl"/>
+                  <clip pos="1" side="tl" part="a_case"/>
                 </lu>
               </chunk>
               <b/>
@@ -528,7 +535,10 @@
                   <tag><clip pos="1" side="sl" part="a_poss"/></tag>
                 </tags>
                 <lu>
-                  <clip pos="1" side="tl" part="whole"/>
+              	  <clip pos="1" side="tl" part="lem"/>
+              	  <lit-tag v="n"/>
+                  <clip pos="1" side="tl" part="a_sgpl"/>
+                  <clip pos="1" side="tl" part="a_case"/>
                 </lu>
               </chunk>
             </out>
@@ -548,15 +558,11 @@
         <choose>
           <when>
             <test>
-              <and>
-                <equal><clip pos="1" side="sl" part="a_sgpl"/><lit-tag v="sg"/></equal>
-                <equal><clip pos="2" side="sl" part="a_sgpl"/><lit-tag v="pl"/></equal>
-              </and>
+                <equal><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
             </test>
-            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v="pl"/></let>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
           </when>
         </choose>
-        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v="pl"/></let>
         <call-macro n="f_adj1">
            <with-param pos="1"/>
         </call-macro>
@@ -578,7 +584,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="adj"/>
-              <clip pos="2" side="tl" part="a_sgpl"/>
+              <clip pos="1" side="tl" part="a_sgpl"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
           </chunk>
@@ -613,14 +619,10 @@
         <choose>
           <when>
             <test>
-              <and>
-                <equal><clip pos="1" side="sl" part="a_sgpl"/><lit-tag v="sg"/></equal>
-                <equal><clip pos="2" side="sl" part="a_sgpl"/><lit-tag v="pl"/></equal>
-                <equal><clip pos="3" side="sl" part="a_sgpl"/><lit-tag v="pl"/></equal>
-              </and>
+                <equal><clip pos="3" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
             </test>
-            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v="pl"/></let>
-            <let><clip pos="2" side="tl" part="a_sgpl"/><lit v="pl"/></let>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+            <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
           </when>
         </choose>
         <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
@@ -646,7 +648,7 @@
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="adj"/>
-              <clip pos="3" side="tl" part="a_sgpl"/>
+              <clip pos="1" side="tl" part="a_sgpl"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
           </chunk>
@@ -664,7 +666,7 @@
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <lit-tag v="adj"/>
-              <clip pos="3" side="tl" part="a_sgpl"/>
+              <clip pos="2" side="tl" part="a_sgpl"/>
               <clip pos="2" side="tl" part="a_case"/>
             </lu>
           </chunk>
@@ -1567,7 +1569,36 @@
       </pattern>
      <action>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let>
+        <choose>
+        <when>
+            <test>
+                <not><equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v=""/></equal></not>
+            </test>
+        <call-macro n="remove-Px">
+          <with-param pos="1"/>
+        </call-macro>
         <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <lit v="oma"/>
+              <lit-tag v="adj"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="nom"/>
+            </lu>
+            <b />
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+          <b />
+        </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
+        </when>
+        <otherwise>
+	    <out>
           <chunk name="nom" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
@@ -1576,10 +1607,62 @@
               <clip pos="1" side="tl" part="whole"/>
             </lu>
           </chunk>
-        </out>
+        </out> 
+        </otherwise>
+        </choose>
       </action>
     </rule>
 
+    <rule comment="not nom + kanssa + poss_suff">
+      <pattern>
+        <pattern-item n="kanssa-ad"/>
+      </pattern>
+     <action>
+        <choose>
+        <when>
+            <test>
+                <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+            </test>
+        <call-macro n="remove-Px">
+          <with-param pos="1"/>
+        </call-macro>
+        <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <lit v="sina"/>
+              <lit-tag v="prn"/>
+              <lit-tag v="pers"/>
+              <lit-tag v="p2"/>
+              <lit-tag v="sg"/>
+              <lit-tag v="com"/>
+            </lu>
+            <b />
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+          <b />
+        </out>
+        <let><var n="caseFirstWord"/><lit v="aa"/></let>
+        </when>
+        <otherwise>
+	    <out>
+          <chunk name="nom" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out> 
+        </otherwise>
+        </choose>
+      </action>
+    </rule>
 
     <rule comment="upper-lower case for any word">
       <pattern>
