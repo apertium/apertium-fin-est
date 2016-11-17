@@ -4,7 +4,7 @@
 
   <mode name="fin-est" install="yes">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -w -1 -n">
@@ -29,7 +29,7 @@
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
+      <program name="hfst-proc -N 1 $1">
         <file name="fin-est.autogen.hfst"/>
       </program>
     </pipeline>
@@ -37,7 +37,7 @@
 
   <mode name="fin-est-debug" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -68,7 +68,7 @@
   
   <mode name="fin-est-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
     </pipeline>
@@ -76,7 +76,7 @@
 
   <mode name="fin-est-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-conv -a"/>
@@ -89,7 +89,7 @@
 
   <mode name="fin-est-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -101,7 +101,7 @@
 
   <mode name="fin-est-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -116,7 +116,7 @@
 
   <mode name="fin-est-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -135,7 +135,7 @@
 
   <mode name="fin-est-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -157,7 +157,7 @@
 
   <mode name="fin-est-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -183,7 +183,7 @@
 
   <mode name="fin-est-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="fin-est.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -215,7 +215,7 @@
 
   <mode name="est-fin" install="yes">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -240,7 +240,7 @@
         <file name="apertium-fin-est.est-fin.t3x"/>
         <file name="est-fin.t3x.bin"/>
       </program>
-      <program name="hfst-proc $1">
+      <program name="hfst-proc -N 1 $1">
         <file name="est-fin.autogen.hfst"/>
       </program>
     </pipeline>
@@ -248,7 +248,7 @@
 
   <mode name="est-fin-debug" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -278,7 +278,7 @@
   
   <mode name="est-fin-morph" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
     </pipeline>
@@ -286,7 +286,7 @@
 
   <mode name="est-fin-disam" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-conv -a"/>
@@ -299,7 +299,7 @@
 
   <mode name="est-fin-tagger" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -311,7 +311,7 @@
 
   <mode name="est-fin-biltrans" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -326,7 +326,7 @@
 
   <mode name="est-fin-lextor" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -344,7 +344,7 @@
 
   <mode name="est-fin-chunker" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -366,7 +366,7 @@
 
   <mode name="est-fin-interchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
@@ -392,7 +392,7 @@
 
   <mode name="est-fin-postchunk" install="no">
     <pipeline>
-      <program name="hfst-proc -e -w">
+      <program name="hfst-proc --weight-classes 1 -w -e">
         <file name="est-fin.automorf.hfst"/>
       </program>
       <program name="cg-proc -1 -n -w">
