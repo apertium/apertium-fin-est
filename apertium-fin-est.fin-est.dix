@@ -140,8 +140,9 @@
     <e><p><l>jälkeen<s n="post"/></l><r>pärast<s n="adp"/></r></p></e>
     <e><p><l>yli<s n="post"/></l><r>üle<s n="adp"/></r></p></e>
     <e><p><l>yli<s n="pr"/></l><r>üle<s n="adp"/></r></p></e>
-    <e><p><l>vaille<s n="pr"/></l><r>enne<s n="adp"/></r></p></e>
-    <e><p><l>vailla<s n="pr"/></l><r>enne<s n="adp"/></r></p></e>
+    <e><p><l>ennen<s n="pr"/></l><r>enne<s n="adp"/></r></p></e>
+    <e><p><l>vaille<s n="post"/></l><r>ilma<s n="adp"/></r></p></e>
+    <e><p><l>vailla<s n="post"/></l><r>ilma<s n="adp"/></r></p></e>
   
     <!-- SECTION: Determiners -->
 
@@ -7639,6 +7640,7 @@
     <e><p><l>musketööri<s n="n"/></l><r>musketär<s n="n"/></r></p></e>
     <e><p><l>antipodit<s n="n"/></l><r>antipoodid<s n="n"/></r></p></e>
     <e><p><l>terveystarkastus<s n="n"/></l><r>läbivaatus<s n="n"/></r></p></e>
+    <e><p><l>tarkastus<s n="n"/></l><r>kontroll<s n="n"/></r></p></e>
     <e><p><l>näytteleminen<s n="n"/></l><r>näitlemine<s n="n"/></r></p></e>
     <e><p><l>caddie<s n="n"/></l><r>Cadillac<s n="n"/></r></p></e>
     <e><p><l>suuntäysi<s n="n"/></l><r>suutäis<s n="n"/></r></p></e>
@@ -13722,7 +13724,7 @@
     <e><p><l>jo<s n="adv"/></l><r>juba<s n="adv"/></r></p></e>
     <e><p><l>mukaan<s n="adv"/></l><r>kaasa<s n="adv"/></r></p></e>
     <e><p><l>jälkeen<s n="adv"/></l><r>pärast<s n="adv"/></r></p></e>
-    <e><p><l>ennen<s n="adv"/></l><r>ennen<s n="adv"/></r></p></e>
+    <e><p><l>ennen<s n="adv"/></l><r>enne<s n="adv"/></r></p></e>
     <e><p><l>aivan<s n="adv"/></l><r>just<s n="adv"/></r></p></e>
     <e><p><l>noin<s n="adv"/></l><r>umbes<s n="adv"/></r></p></e>
     <e><p><l>täällä<s n="adv"/></l><r>siin<s n="adv"/></r></p></e>
