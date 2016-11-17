@@ -332,6 +332,14 @@
       <let><var n="EOS"/><lit v="false"/></let>
     </def-macro>
 
+    <def-macro n="default-conversion1" npar="1">
+      <let><clip pos="1" side="tl" part="a_known"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
+    </def-macro>
+
+
   </section-def-macros>
 
   <section-rules>
@@ -341,6 +349,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -555,6 +564,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
           <when>
             <test>
@@ -616,6 +626,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
           <when>
             <test>
@@ -696,6 +707,7 @@
         <pattern-item n="prop"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -728,6 +740,7 @@
         <pattern-item n="num"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -756,6 +769,7 @@
         <pattern-item n="pron"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -820,6 +834,7 @@
         <pattern-item n="ei-neg"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -900,6 +915,7 @@
         <pattern-item n="verb-agprc"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -927,6 +943,7 @@
         <pattern-item n="verb-actv-prsprc"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -953,6 +970,7 @@
         <pattern-item n="verb-pasv-prsprc"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -979,6 +997,7 @@
         <pattern-item n="verb-actv-prfprc"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1005,6 +1024,7 @@
         <pattern-item n="verb-pasv-prfprc"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1031,6 +1051,7 @@
         <pattern-item n="verb-infma"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1077,6 +1098,7 @@
         <pattern-item n="verb-infa"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1120,6 +1142,7 @@
         <pattern-item n="verb-infe"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1143,6 +1166,7 @@
         <pattern-item n="verb-fin"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1317,6 +1341,7 @@
         <pattern-item n="qst"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1339,6 +1364,7 @@
         <pattern-item n="cnjcoo"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1391,6 +1417,7 @@
         <pattern-item n="cnjsub"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1413,6 +1440,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1470,6 +1498,7 @@
         <pattern-item n="adj"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1517,6 +1546,7 @@
         <pattern-item n="der-minen"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
@@ -1547,6 +1577,7 @@
         <pattern-item n="sent"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <let><var n="EOS"/><lit v="true"/></let>
 <!--        <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>-->
         <out>
@@ -1568,6 +1599,7 @@
         <pattern-item n="kanssa"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let>
         <choose>
         <when>
@@ -1618,6 +1650,7 @@
         <pattern-item n="kanssa-ad"/>
       </pattern>
      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
         <when>
             <test>
@@ -1669,6 +1702,7 @@
         <pattern-item n="any"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
