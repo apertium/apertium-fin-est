@@ -98,6 +98,8 @@
     <def-attr n="a_func">
       <attr-item tags="@X"/>
       <attr-item tags="@CVP"/>
+      <attr-item tags="@PCLE"/>
+      <attr-item tags="@CNP"/>
       <attr-item tags="@ADVL"/>
       <attr-item tags="@→N"/>
       <attr-item tags="@NUM←"/>
