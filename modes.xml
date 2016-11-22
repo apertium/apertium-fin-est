@@ -59,7 +59,7 @@
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
+      <program name="hfst-proc -N 1 -d">
         <file name="fin-est.autogen.hfst"/>
       </program>
     </pipeline>
@@ -270,7 +270,7 @@
         <file name="apertium-fin-est.est-fin.t3x"/>
         <file name="est-fin.t3x.bin"/>
       </program>
-      <program name="hfst-proc -d">
+      <program name="hfst-proc -N 1 -d">
         <file name="est-fin.autogen.hfst"/>
       </program>
     </pipeline>
