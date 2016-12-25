@@ -33,6 +33,13 @@
     <def-cat n="impf-neg">
       <cat-item tags="vblex.indic.pret.neg"/>
     </def-cat>
+    <def-cat n="pret-conneg">
+      <cat-item tags="vblex.actv.pret.indic.conneg"/>
+    </def-cat>
+    <def-cat n="subject">
+      <cat-item tags="n.*"/>
+      <cat-item tags="prn.*"/>
+    </def-cat>
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
     </def-cat>
@@ -254,6 +261,144 @@
      </def-macro>
   </section-def-macros>
   <section-rules>
+
+    <rule comment="REGLA: add number to verb negated with 'ei'">
+      <!-- Input: ämmad ei saanud
+	   Ouput: anopit eivät saaneet (number was added to "eivät" and "saaneet")
+
+	   TODO: "ämmäd ei ole saanud" output is "anopit ei ole #saanut"
+	   TODO: Lots of things are just copy&pasted from rest of the rule file – DRY.
+      -->
+      <pattern>
+	<pattern-item n="subject"/>
+        <pattern-item n="ei"/>
+	<pattern-item n="pret-conneg"/>
+      </pattern>
+      <action>
+	<!-- action's for verb (pret-conneg) starts here -->
+        <!--<let><clip pos="3" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
+        <choose>
+          <when><test><equal><clip pos="3" side="sl" part="a_neg"/> 
+          <lit-tag v="aff"/>
+        </equal></test>
+        <let><clip pos="3" side="tl" part="a_neg"/><lit v=""/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="3" side="sl" part="a_pers"/> 
+          <lit-tag v="pasv"/>
+        </equal></test>
+        <let><var n="addp"/><lit-tag v="pe4"/></let>
+          </when>  
+        </choose>
+        <choose>
+          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <lit-tag v="pres.cond"/>
+        </equal>
+        <equal><clip pos="3" side="sl" part="a_screeve"/> 
+        <lit-tag v="pret.cond"/>
+      </equal></or></test>
+      <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="cond"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <lit-tag v="pres.quot"/>
+          </equal><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <lit-tag v="pret.quot"/>
+        </equal></or>
+      </test>
+      <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="quot"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <lit-tag v="pres.imp"/>
+        </equal>
+      </test>
+      <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="imp"/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><and><or>
+            <equal><clip pos="3" side="tl" part="a_screeve"/> 
+            <lit-tag v="cond"/>
+            </equal>
+            <equal><clip pos="3" side="tl" part="a_screeve"/> 
+            <lit-tag v="quot"/>
+            </equal>
+            </or><not>
+            <equal><clip pos="3" side="sl" part="a_nbr"/> 
+            <lit-tag v="sg"/>
+          </equal></not>
+          <not><equal><clip pos="3" side="sl" part="a_nbr"/> 
+          <lit-tag v="pl"/>
+          </equal></not>
+        </and>
+      </test>
+      <let><var n="addp"/><lit-tag v="p3.sg"/></let>
+          </when>
+          <otherwise>  
+            <let><var n="addp"/><lit v=""/></let>
+          </otherwise>  
+        </choose>
+        <!--<call-macro n="sg3">
+            <with-param pos="3"/>
+            </call-macro>-->
+	<!-- verb (pret-conneg) part ends here -->
+
+        <out>
+
+          <chunk name="subject" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+
+	  <b/>
+
+          <chunk name="ei" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.NEG.PRES"/></tag>
+            </tags>
+            <lu>
+              <clip pos="2" side="tl" part="lemh"/>
+              <clip pos="2" side="tl" part="a_verb"/>
+              <lit-tag v="actv.p3"/>
+	      <clip pos="1" side="tl" part="a_nbr"/>
+              <clip pos="2" side="tl" part="lemq"/>
+            </lu>
+          </chunk>
+
+	  <b/>
+
+          <chunk name="fin" case="caseFirstWord">
+            <tags>
+	      <tag><lit-tag v="SV.FIN"/></tag>
+            </tags>
+            <lu>
+	      <clip pos="3" side="tl" part="lemh"/>
+	      <clip pos="3" side="tl" part="a_verb"/>
+	      <clip pos="3" side="tl" part="a_voice"/>
+	      <clip pos="3" side="tl" part="a_mood"/>
+	      <clip pos="3" side="tl" part="a_tens"/>
+	      <clip pos="3" side="tl" part="a_p123"/>
+	      <clip pos="3" side="tl" part="a_conneg"/>
+	      <clip pos="1" side="tl" part="a_nbr"/>
+	      <var n="addp"/>
+	      <var n="sent-qst"/>
+	      <clip pos="3" side="tl" part="lemq"/>
+            </lu>
+	  </chunk>
+	</out>
+
+        <let><var n="sent-qst"/><lit v=""/></let>
+      </action>
+    </rule>
+
 
     <rule comment="REGLA: nom">
       <pattern>
