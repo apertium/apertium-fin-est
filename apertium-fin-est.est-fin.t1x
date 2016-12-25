@@ -703,8 +703,8 @@
               <clip pos="1" side="tl" part="a_mood"/>
               <clip pos="1" side="tl" part="a_tens"/>
               <clip pos="1" side="tl" part="a_p123"/>
-              <clip pos="1" side="tl" part="a_nbr"/>
               <clip pos="1" side="tl" part="a_conneg"/>
+              <clip pos="1" side="tl" part="a_nbr"/>
               <var n="addp"/>
               <var n="sent-qst"/>
               <clip pos="1" side="tl" part="lemq"/>
