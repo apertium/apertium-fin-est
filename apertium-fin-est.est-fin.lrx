@@ -2,4 +2,11 @@
   <rule>
     <match lemma="koer" tags="n.*"><select lemma="koira" tags="n.*"/></match>
   </rule>
+
+  <rule>
+    <match lemma="väga" tags="adv">
+      <select lemma="erittäin"/>
+    </match>
+    <match tags="adj.*"/>
+  </rule>
 </rules>
