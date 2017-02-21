@@ -1,0 +1,3 @@
+    
+    hfst-proc -e -w /home/tiina/apertium/apertium-fin-est/fin-est.automorf-untrimmed.hfst | sed 's:\^ / <punct>\$: :g' # |cg-proc -1 -w /home/tiina/apertium/apertium-fin-est/fin-est.rlx.bin 
+  

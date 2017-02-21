@@ -1,11 +1,11 @@
-Tutvustus
-Mu nimi on Riho Volmer
+Tutvustus.
+Mu nimi on Riho Volmer.
 Olen kahekümne ühe aastane eesti poiss.
 Praegusel hetkel olen vahetusõpilasena Helsingi Ülikoolis, õpin siin soome keelt.
 Kavatsen olla Soomes aasta.
 Olen veel vallaline.
 Mul on küll tüdruksõber, aga ma ei ütle, kes ta on.
-Milline tüdruk ta on?
+Milline tüdruk ta on.
 Minu meelest on ta eriti ilus tüdruk.
 Tal on lühikesed heledad juuksed ja pruunid silmad.
 Olen pärit Eestist, mu vanemad elavad Tartus.
@@ -47,90 +47,90 @@ Ta ei räägi eesti keelt ega vene keelt.
 Eija on jutukas ja seltskondlik.
 Ta on ilus naine.
 Tal on heledad sirged juuksed ja sinised silmad.
-Taanlane Jens
+Taanlane Jens.
 Riho kohtab tänaval võõrast meest.
-Riho:
-Tere, vabandust, kas sa räägid soome keelt?
-Jens:
+Riho:.
+Tere, vabandust, kas sa räägid soome keelt.
+Jens:.
 Räägin jah natukene.
-Riho:
-Kas sa võiksid öelda, kus on lähim pangaautomaat?
-Jens:
+Riho:.
+Kas sa võiksid öelda, kus on lähim pangaautomaat.
+Jens:.
 Kahjuks ma ei tea, olen isegi siin võõras.
 Olen välismaalane.
-Kes sina oled?
-Riho:
+Kes sina oled.
+Riho:.
 Olen Riho Volmer, Eesti üliõpilane.
-Kust sina pärit oled?
-Jens:
+Kust sina pärit oled.
+Jens:.
 Olen Taanist, Jens Henriksen.
 Meeldiv tutvuda.
-Riho:
+Riho:.
 Meeldiv tutvuda.
-Kust linnast sa pärit oled?
-Jens:
+Kust linnast sa pärit oled.
+Jens:.
 Olen pärit Taani pealinnast Kopenhaagenist.
-Aga sina?
-Riho:
+Aga sina.
+Riho:.
 Olen Tartust.
-Jens:
+Jens:.
 Oh kui tore.
 Olin Tartus kaks nädalat tagasi tööreisil.
-Riho:
-Kas sa räägid eesti keelt?
-Jens:
+Riho:.
+Kas sa räägid eesti keelt.
+Jens:.
 Kahjuks ei räägi.
 Räägin ainult inglise ja soome keeli.
-Riho:
-Kas ma võin veel küsida?
-Jens:
+Riho:.
+Kas ma võin veel küsida.
+Jens:.
 Jaa, ole lahke.
 Mul on aega.
-Riho:
-Kui vana sa oled?
-Jens:
+Riho:.
+Kui vana sa oled.
+Jens:.
 31-aastane.
-Riho:
-Kas sa oled abielus?
-Jens:
+Riho:.
+Kas sa oled abielus.
+Jens:.
 Ei, ma olen lahutatud.
 Mu naine oli soomlanna.
-Riho:
-Kes sa ametilt oled?
-Jens:
+Riho:.
+Kes sa ametilt oled.
+Jens:.
 Olen IT-alal.
-Riho:
-Mida sa Soomes teed?
-Jens:
+Riho:.
+Mida sa Soomes teed.
+Jens:.
 Olen siin tööl.
-Riho:
-Mida sa harrastad?
-Jens:
+Riho:.
+Mida sa harrastad.
+Jens:.
 Harrastan ujumist ja jäähokit.
 Olen spordihull.
-Riho:
+Riho:.
 Mina ka.
-Jens:
+Jens:.
 Või nii.
-Riho:
-Mis tänaval sa elad?
-Jens:
+Riho:.
+Mis tänaval sa elad.
+Jens:.
 Elan Viro tänaval.
-Riho:
+Riho:.
 See on tore, meil on sama tee.
 Läheme kõigepealt õlut jooma ja siis koos koju.
-Kas see sobib?
-Jens:
+Kas see sobib.
+Jens:.
 See sobib eriti hästi.
-Riho:
+Riho:.
 Nüüd võid minult kõike küsida.
 Andesta, et olin nii uudishimulik.
-Jens:
+Jens:.
 Sellest pole hullu.
-Kellaajad
-Mis kell on
-Palju kell on?
-Kui palju kell on?
+Kellaajad.
+Mis kell on.
+Palju kell on.
+Kui palju kell on.
 Kell on (täpselt) viis.
 Kell on pool kuus.
 Kell on kümme minutit kuus läbi.
@@ -138,44 +138,44 @@ Kell on viisteist minutit kuus läbi.
 Kell on veerand pärast kuut.
 Kell on viisteist minutit enne kuut.
 Kell on veerand enne kuut.
-Kell on juba kuus!
-Nii palju!
-Kell on alles kaheksa!
-Nii vähe!
-Mis ajal sa tõused hommikul?
+Kell on juba kuus.
+Nii palju.
+Kell on alles kaheksa.
+Nii vähe.
+Mis ajal sa tõused hommikul.
 Tõusen kell seitse.
-Millal tund algab?
+Millal tund algab.
 Tund algab seitsmest.
-Millal tuled?
+Millal tuled.
 Tulen poole kaheksast.
-Maria nädal
-Maria Koski
-Isikuandmed
-Eesnimed: Maria Johanna
-Perekonnanimi: Koski
-Kodakondsus: soomlane
-Isikukood: 291094-822F
-Sünnikoht: Pori
-Sünniaeg: 29.10.1994
-Aadress: Luotsikatu 13 C 7, postiindeks 00160 Helsingi
-E-meili aadress: mariak@teatteri.fi
-Telefoninumber: +358 44 720 9316
-Emakeel: soome
-Muud keeled: inglise, prantsuse
-Perekonnaseis: vallaline
-Amet: ettekandja
-Harrastused: lugemine, kassikaline muusika, teater
-välimus
-kena
-pikad lokkis juuksed
-sale
-prillid
-keskmist kasvu
-siniste silmadega
-iseloom
-meeldiv
-heatujuline
-rõõmus
+Maria nädal.
+Maria Koski.
+Isikuandmed.
+Eesnimed: Maria Johanna.
+Perekonnanimi: Koski.
+Kodakondsus: soomlane.
+Isikukood: 291094-822F.
+Sünnikoht: Pori.
+Sünniaeg: 29.10.1994.
+Aadress: Luotsikatu 13 C 7, postiindeks 00160 Helsingi.
+E-meili aadress: mariak@teatteri.fi.
+Telefoninumber: +358 44 720 9316.
+Emakeel: soome.
+Muud keeled: inglise, prantsuse.
+Perekonnaseis: vallaline.
+Amet: ettekandja.
+Harrastused: lugemine, kassikaline muusika, teater.
+välimus.
+kena.
+pikad lokkis juuksed.
+sale.
+prillid.
+keskmist kasvu.
+siniste silmadega.
+iseloom.
+meeldiv.
+heatujuline.
+rõõmus.
 Maria on tööl ühes restoranis.
 Tema vahetused on esmaspäeval, teisipäeval ja laupäeval.
 Täna on teisipäev.
@@ -201,83 +201,83 @@ Maal on alati palju tööd, sest neil on suur aed ja palju koduloomi.
 Mariale meeldib maal, sest nende maja on metsa ääres, järve rannal, mis on peaaegu iga soomlase unelm.
 Mariale meeldib loodus väga.
 Maria on rõõmus tüdruk ja ta on alati heas tujus.
-Kus Riho elab?
+Kus Riho elab.
 Riho ja Jens on pubis, joovat õlut ja jutustavad.
-JENS:
+Jens:.
 Siin on tore.
-See on meeldiv baar. 
+See on meeldiv baar. .
 Õlugi on soodne, ega pole nii kallis kui mujal.
 Mulle meeldib õlu, kuid ei meeldi vein.
-RIHO:
+Riho:.
 Mulle ka mitte.
 Joon hea meelega Soome õlut.
-JENS:
-Mis plaanid sul veel täna on?
-RIHO:
-Ei midagi erilist. 
+Jens:.
+Mis plaanid sul veel täna on.
+Riho:.
+Ei midagi erilist. .
 Loen väheke soome keelt, homme on juba kaheksast tund.
-Mis kell on?
-JENS:
+Mis kell on.
+Jens:.
 Kohe pool üheksa.
-RIHO:
-Tõsi või?
-Kas see on juba nii palju?
-JENS:
-On. 
+Riho:.
+Tõsi või.
+Kas see on juba nii palju.
+Jens:.
+On. .
 Kahju, et aeg läheb nii kiiresti.
-RIHO:
+Riho:.
 Maksame ja läheme nüüd.
 Mul on natukene kiire.
 Nad lahkuvad pubist ja jalutavad tänavale.
-JENS:
-Vaata, mis vastik ilm!
-Tuul puhub nii, et juuksed lendavad!
-RIHO:
-Sügis on sel aastal tõesti külm. 
+Jens:.
+Vaata, mis vastik ilm.
+Tuul puhub nii, et juuksed lendavad.
+Riho:.
+Sügis on sel aastal tõesti külm. .
 Aina vaid sajab.
 Hommikul oli ainult kaheksa kraadi külma.
-JENS:
-Kus su korter on?
-RIHO:
+Jens:.
+Kus su korter on.
+Riho:.
 Elan ühiselamus.
 Mul on väike tuba, vannituba ja WC.
 Köök on koridori lõpus, see on ühine.
 Söön tavaliselt väljas.
-Ma ei oska süüa teha. 
-Kus sa elad?
-JENS:
+Ma ei oska süüa teha. .
+Kus sa elad.
+Jens:.
 Mul on üürikorter pooleks aastaks, seejärel naasen koju, siis märtsis.
-Kas me kohtume veel sel nädalal?
+Kas me kohtume veel sel nädalal.
 Oli tõesti tore tutvuda.
-Olen siin Helsingis veidi üksik. 
+Olen siin Helsingis veidi üksik. .
 Olen kindel, et meist saavad head sõbrad.
-RIHO:
-Nii minagi. 
+Riho:.
+Nii minagi. .
 Kahju, et olen ära nädalavahetusel.
 Reisin koju, Eestisse.
 Tulen tagasi esmaspäeva hommikul.
-JENS:
-Mis ajal laev tuleb?
-RIHO:
+Jens:.
+Mis ajal laev tuleb.
+Riho:.
 See on Helsingis kohal kolmveerand kümme.
 Kohtume siis järgmisel nädalal.
 Helistan sulle.
-Oi, unustasin küsida, mis su telefoninumber on?
-JENS:
+Oi, unustasin küsida, mis su telefoninumber on.
+Jens:.
 See on 040 557 839.
-Aga sinu oma?
-RIHO:
-53 286091. 
+Aga sinu oma.
+Riho:.
+53 286091. .
 Üritan sulle helistada juba esmaspäeval.
-JENS:
-See on tore! 
-Tore oli kohtuda!
-RIHO:
-Sama siin!
-Helistame!
-JENS:
-Helistame!
-RIHO TUBA
+Jens:.
+See on tore!
+Tore oli kohtuda.
+Riho:.
+Sama siin.
+Helistame.
+Jens:.
+Helistame.
+Riho tuba.
 Riho on õnnelik, et tal on nüüd uus sõber Helsingis.
 Ei ole hea olla üksi võõras linnas.
 Riho ei taha olla üksi oma korteris.
@@ -286,7 +286,7 @@ Paar korda nädalas käib ta õhtuti kõrtsis.
 Talle ei meeldi alkohol, vaid inimesed, kes seal on.
 Tal ei ole nii palju rahagi, et võiks iga õhtu juua.
 Tema naabruses elavad vene tüdruk ja soome-rootsi poiss, aga nad on tihti ära.
-Äkki nad käivad õhtuti tööl?
+Äkki nad käivad õhtuti tööl.
 Riho ei käi tööl, sest ta saab õppetoetust.
 Riho tuba on väike, kuid siiski hubane ja tema jaoks piisavalt suur.
 Toas on paremat kätt voodi ja vasakul akna all on suur kirjutuslaud ja kaks tooli, millest üks on tugitool.
@@ -298,8 +298,8 @@ Ta nimelt õpib soome keelt.
 Laual on ka pilt Riho perest ja seinal väike maal, mille ta on ise maalinud.
 Akna ees on kollased kardinad.
 Põrandal on roheline vaip.
-EIJA PÄEV
-Hommikul
+Eija päev.
+Hommikul.
 Äratuskell heliseb pool seitse.
 Eija ei taha tõusta, aga tõusma peab, sest pikk tööpäev ootab.
 Ta valmistab hommikusöögi ja keedab kohvi.
@@ -320,7 +320,7 @@ Teekond kestab umbes seitse minutit.
 Teised lähevad autoga.
 Tavaliselt Matti juhib, ehkki Eijalgi on juhiluba.
 Nad peavad Tiina lasteaeda viima.
-Tööl
+Tööl.
 Eija vastuvõtt algab täpselt üheksast.
 Mäletad, et ta töötab arstina tervisekeskuses.
 Ta on sisehaiguste arst.
@@ -339,11 +339,11 @@ Peale tööd Eija läheb poodi, tal on vaja osta toitu kogu nädalavahetuseks.
 Matti toob Tiina lasteaiast ära ja nad kõik kohtuvad ostukeskuse ees parklas.
 Matti ootab seal, nagu nad varem telefonis Eijaga kokku leppisid.
 Nad tulevad koju poole kuuest.
-Õhtul kodus
+Õhtul kodus.
 Umbes kuuest nad söövad koos õhtusööki.
 Selle valmistab tavaliselt Juha, sest ta peab söögitegemist harjutama.
 Pühapäeviti toimetab köögis siiski Eija.
-Tallegi meeldbi söögitegemine, eriti küpsetamine.
+Tallegi meeldib söögitegemine, eriti küpsetamine.
 Sanna ja Matti pesevad kordamööda nõusid.
 Peale õhtusööki Matti loeb lehte või vaatab telekat.
 Juha mängib jalgpalli või kuulab oma toas rock-muusikat.
@@ -354,107 +354,107 @@ Ta käib tihti ka diskol.
 Sannal on siiski üks harrastus: ta käib igal teisipäeval ja kolmapäeval ratsutamas.
 Tal on oma armas hobune.
 Eija loeb õhtul raamatut või teeb käsitööd, koob või õmbleb midagi.
-Ta päeab natukene koristamagi, sest elutoas on õudne segadus.
+Ta peab natukene koristamagi, sest elutoas on õudne segadus.
 Õnneks ei pea ta prügi välja viima, sest Matti teeb seda meeleldi.
 Laaksose pere läheb magama üheteistkümnest, välja arvatud Tiina, kes magab juba.
 Sanna tuleb koju alles pool kaksteist.
 Ta on helistanud emale ja palunud luba.
 Ta sulgeb vaikselt ukse, sööb köögis midagi ja käib kiiresti duši all.
 Ta unistab veel natukene oma voodis.
-Äkki on ta armunud?
-TELEFONIKÕNE
+Äkki on ta armunud.
+Telefonikõne.
 Riho helistab Laaksostele.
 Ta valib numbri.
-RIHO:
+Riho:.
 Riho Volmer siin, tere.
-EIJA:
+Eija:.
 No tere.
-Kuidas läheb?
-RIHO:
+Kuidas läheb.
+Riho:.
 Väga hästi, aitäh.
-Aga teil?
-EIJA:
+Aga teil.
+Eija:.
 Aitäh, hästi.
-RIHO:
+Riho:.
 Teate kindlasti, et olen praegu Helsingis.
-EIJA:
+Eija:.
 Tean küll, su ema kirjutas sellest.
-RIHO:
+Riho:.
 Helistan, sest tahan küsida, mida te teete järgmisel nädalal.
 Mu õde Anu tuleb Soome ja tahaksime teile külla tulla.
-EIJA:
+Eija:.
 Hea mõte.
 Olete alati teretulnud.
-Millal kavatsete tulla?
-RIHO:
+Millal kavatsete tulla.
+Riho:.
 Lähen reedel Eestisse, sest emal on sünnipäev ja esmaspäeva hommikul tuleme Anuga laevaga tagasi Soome.
 Anul on siin mingi bioloogiaseminar, ma ei tea täpselt.
 See lõppeb neljapäeval ja siis tuleksimegi, kui sobib.
-EIJA:
+Eija:.
 See sobib väga hästi.
 Rong läheb Helsingist kell kuus õhtul ja on Turus kohal natukene peale kaheksat.
 Võite tulla sellega, kui jõuate.
-RIHO:
+Riho:.
 Usun, et jõuame.
 Aga saadan teate, kui plaan muutub.
-Mis tänaval te muidu elate?
-EIJA:
+Mis tänaval te muidu elate.
+Eija:.
 Ära selle pärast muretse.
 Tuleme teile jaama muidugi vastu.
 Helistame ja täpsustame veel järgmise nädala alguses üle, kui Anugi ka juba Soomes on.
-RIHO:
+Riho:.
 Jah, helistame.
-EIJA:
+Eija:.
 Soovi meie poolt oma emale palju õnne.
-Vii kõigile tervisi!
-RIHO:
-Aitäh, teile samuti!
-EIJA:
-Head reisi sulle!
-RIHO:
-Aitäh!
-Näeme peagi!
-EIJA:
-Näeme!
-Tsau!
-RIHO:
-Tsau!
-Saatja:
-riho.volmer@gmail.com
-Saaja:
-eija.laaksonen@terveyskeskus.fi
-Koopia:
-Pealkiri:
-ajaplaani muutus
-Tsau!
-Plaan muutus natukene. 
+Vii kõigile tervisi.
+Riho:.
+Aitäh, teile samuti.
+Eija:.
+Head reisi sulle.
+Riho:.
+Aitäh.
+Näeme peagi.
+Eija:.
+Näeme.
+Tsau.
+Riho:.
+Tsau.
+Saatja:.
+riho.volmer@gmail.com.
+Saaja:.
+eija.laaksonen@terveyskeskus.fi.
+Koopia:.
+Pealkiri:.
+ajaplaani muutus.
+Tsau.
+Plaan muutus natukene. .
 Me ei jõua kella kuuesele rongile.
 Oleme Turus alles kell üheksa.
-Näeme jaamas!
-Tervisi
-Riho ja Anu
-RIHO PÄEVAPLAAN
-hommik
-7.00 äratus, võimlemine
-7.10 dušš
-7.30 kodust lahkumine
-7.45 hommikusöök ülikooli kohvikus (kohvi, juustuvõileib, saiake)
-8.15 soome keele tund
-10.15 soome kirjanduse ajaloo loeng (auditoorium 340)
-päev
-11.50 lõuna ülikooli sööklas
-12.15 soome keele vestluskursus
-14.00 raamatukogu, korra nädalas tõlkekursus
-17.30 õhtusöök (kus juhtub)
-õhtu
-18.00 vaba aeg (kino, teater, ostlemine jne.)
-rootsi keele kursus kolmapäeviti ja reedeti
-20.00 trenn (korvpall)
-21.30 kui ta ei ole veel liiga väsinud - baar, disko
-õhtueine, kui kõht tühi on
-telekas, lugemine
-24.00 magamaminek
-RAAMATUPOES
+Näeme jaamas.
+Tervisi.
+Riho ja Anu.
+Riho Päevaplaan.
+hommik.
+7.00 äratus, võimlemine.
+7.10 dušš.
+7.30 kodust lahkumine.
+7.45 hommikusöök ülikooli kohvikus (kohvi, juustuvõileib, saiake) .
+8.15 soome keele tund.
+10.15 soome kirjanduse ajaloo loeng (auditoorium 340) .
+päev.
+11.50 lõuna ülikooli sööklas.
+12.15 soome keele vestluskursus.
+14.00 raamatukogu, korra nädalas tõlkekursus.
+17.30 õhtusöök (kus juhtub) .
+õhtu.
+18.00 vaba aeg (kino, teater, ostlemine jne) .
+rootsi keele kursus kolmapäeviti ja reedeti.
+20.00 trenn (korvpall) .
+21.30 kui ta ei ole veel liiga väsinud - baar, disko.
+õhtueine, kui kõht tühi on.
+telekas, lugemine.
+24.00 magamaminek.
+Raamatupoes.
 Enne kui Riho koju reisib, ta peab veel poes käima.
 Ta emal on ju sünnipäev.
 14. oktoobril ta saab 45 aastaseks ja see on nende peres päris tähtis sündmus.
@@ -462,244 +462,244 @@ Ta emal on ju sünnipäev.
 Riho mõtleb käia suures kaubanduskeskuses, sest seal on suur valik ja just nüüd soodusmüük.
 Ta peab vaid mõtlema, mida ta ostab.
 Ema tahaks kindlasti raamatut, sest talle meeldib lugemine.
-MÜÜJA:
-Tere päevast, kas saaksin aidata?
-RIHO:
+Müüja:.
+Tere päevast, kas saaksin aidata.
+Riho:.
 Vajan sünnipäevakingitust emale.
 Mõtlesin osta raamatu.
-MÜÜJA:
-Siinpool, ole hea!
+Müüja:.
+Siinpool, ole hea.
 Seal vasakul on palju uusi huvitavaid armastusromaane.
 Selle Ameerika naiskirjaniku "Mu elu mees" on tõesti populaarne raamat.
-RIHO:
+Riho:.
 Ei aitäh.
 Emale ei meeldi sellised naisteraamatud.
 Talle meeldivad rohkem ajalugu, kunst ja luuletused.
-MÜÜJA:
+Müüja:.
 Seal paremal on paar Soome luulekogu.
 Ehk valid sealt.
-RIHO:
+Riho:.
 Aitäh, lehitsen natukene.
 Riho lehitseb natukene aega raamatuid.
-RIHO:
+Riho:.
 Võib olla, et mu ema keeleoskus ei ole nii hea, et ta võiks lugeda soome luuletusi, ostan meelsamini midagi praktilist.
-MÜÜJA:
-Ehk kokaraamat?
-Kas talle meeldib toiduvalmistamine?
-RIHO:
+Müüja:.
+Ehk kokaraamat.
+Kas talle meeldib toiduvalmistamine.
+Riho:.
 Meeldib küll.
 See on hea idee.
-Kus teil on kokaraamatud?
-MÜÜJA:
+Kus teil on kokaraamatud.
+Müüja:.
 Seal taga.
 Lähme sinnapoole.
-RIHO:
+Riho:.
 See suur ja värviline paistab huvitav.
-Palju see maksab?
-MÜÜJA:
+Palju see maksab.
+Müüja:.
 See maksab 30 eurot.
-RIHO:
+Riho:.
 See on õudselt kallis.
 Mul ei ole nii palju raha.
 Olen vaene üliõpilane.
-MÜÜJA:
+Müüja:.
 Aga too väiksem seal maksab vaid 25 eurot.
 Seegi on hea.
-Pilte on ainult vähem
-RIHO:
-Aga too raamat, mis see maksab?
-MÜÜJA:
-Vabandust, milline?
-RIHO:
-Too õhuke punane, kaanel on paar oranži porgandit?
-MÜÜJA:
-Kas see?
-RIHO:
+Pilte on ainult vähem.
+Riho:.
+Aga too raamat, mis see maksab.
+Müüja:.
+Vabandust, milline.
+Riho:.
+Too õhuke punane, kaanel on paar oranži porgandit.
+Müüja:.
+Kas see.
+Riho:.
 Jah.
-MÜÜJA:
+Müüja:.
 Üks hetk...
 See maksab 10 eurot.
 See on odav, aga ka muidugi hea.
-Selle nimi on "Kiire kokkaja kokaraamat".
+Selle nimi on "Kiire kokkaja kokaraamat" .
 Selles ei ole ainult ühtegi pilti.
-RIHO:
+Riho:.
 Ei, sellest pole midagi.
 Võtan selle.
-MÜÜJA:
+Müüja:.
 Kassa on seal, ole hea.
-RIHO:
+Riho:.
 Aitäh abi eest.
-MÜÜJA:
+Müüja:.
 Võta heaks.
-RIHO:
-Tsau!
-MÜÜJA:
-Tsau!
+Riho:.
+Tsau.
+Müüja:.
+Tsau.
 Riho ostab sooduskaupadest veel kaks CD-plaati, 10 eurot tükk, ühe endale, teise õele, ja mänguasjaosakonnast ühe pusle.
 Ta käib ka riideosakonnas ja ostab kummalegi vennale t-särgi.
-Kas nüüd on kõik?
+Kas nüüd on kõik.
 Ei veel, oma isale ta viib pudeli soome viina ja oma tüdruksõbrale lõhnaõli.
 Kokku kulutab ta umbes 100 eurot.
-KOHVIKUS
+Kohvikus.
 Riho ja Maria tutvusid rootsi keele kursusel.
 Riho näeb Mariat taas juhuslikult tänaval ja kutsub teda kohvile.
 Maria nõustub kohe.
-MARIA:
-Tere päevast, kas see on vaba?
-ETTEKANDJA:
+Maria:.
+Tere päevast, kas see on vaba.
+Ettekandja:.
 On, olge head.
-Mida teile saab tuua?
-RIHO:
+Mida teile saab tuua.
+Riho:.
 Päevast, tahaksin tassi kohvi ja pudeli mineraalvett.
-ETTEKANDJA:
-Millist kohvi?
-RIHO:
+Ettekandja:.
+Millist kohvi.
+Riho:.
 Tavalist musta kohvi.
-ETTEKANDJA:
-Kas veel midagi?
-RIHO:
-Kas saaks ühe võileiva?
-ETTEKANDJA:
-Millist te tahate?
-RIHO:
+Ettekandja:.
+Kas veel midagi.
+Riho:.
+Kas saaks ühe võileiva.
+Ettekandja:.
+Millist te tahate.
+Riho:.
 Võtan ühe singivõileiva.
 See on kõik, aitäh.
-ETTEKANDJA:
-Ja teile?
-MARIA:
+Ettekandja:.
+Ja teile.
+Maria:.
 Mina võtan klaasi apelsiinimahla ja väikese saiakese.
-ETTEKANDJA:
-Tuleb veel midagi?
-MARIA:
+Ettekandja:.
+Tuleb veel midagi.
+Maria:.
 Ei aitäh.
-RIHO:
-Kas sa ei joo kohvi?
-MARIA:
+Riho:.
+Kas sa ei joo kohvi.
+Maria:.
 Mulle ei meeldi kohv.
 Joon meelsamini teed.
-RIHO:
+Riho:.
 Mina joon päevas vähemalt neli tassi kohvi.
 Hommikul teen kohvi koore ja suhkruga, hiljem joon mustalt.
 Mulle meeldib kange kohv.
 Hilja õhtul joon siiski aeg-ajalt teed.
-MARIA:
+Maria:.
 Aga ma ei joo mitte kunagi kohvi.
 Ei hommikul ega õhtul.
-RIHO:
+Riho:.
 Siin kohvikus on väga head toidud.
 Minu meelest on siin tore.
-MARIA:
+Maria:.
 Minu meelest ka.
 Vahel siin mängib bänd ja tantsidagi saab.
-RIHO:
+Riho:.
 Tuleme millalgi järgmisel nädalal siia.
 Mu õde on siis Helsingis.
-MARIA:
+Maria:.
 Tuleme pealegi.
 Esmaspäeval ja teisipäeval olen tööl.
-RIHO:
+Riho:.
 Me jällegi sõidame neljapäeval külla Turusse.
-MARIA:
-Äkki siis nädala pärast kolmapäeval?
-RIHO:
+Maria:.
+Äkki siis nädala pärast kolmapäeval.
+Riho:.
 Sobib hästi.
 Peale rootsi keele kursust.
-RIHO:
+Riho:.
 Võtaksin arve.
-ETTEKANDJA:
+Ettekandja:.
 See teeb 8,50.
-RIHO:
+Riho:.
 Siin, ole hea.
-ETTEKANDJA:
+Ettekandja:.
 Aitäh.
-ERAMAJAS
+Eramajas.
 On neljapäev.
 Anu ja Riho lähevad bussiga raudteejaama ja reisivad Turusse.
-Nad vaatatavad sõiduplaanist, et rong läheb perroonilt 7 kell 19:02.
+Nad vaatavad sõiduplaanist, et rong läheb perroonilt 7 kell 19:02.
 Reis kestab umbes kaks tundi.
 Turu jaamas ootavad juba Eija ja Matti.
 Nad sõidavad Matti autoga Martini tänavale, kus on Laaksoste uus ja kaunis eramaja.
 Kõigepealt näitab Matti külalistele maja, ta on selle üle eriti uhke.
-Matti:
-Lähme sisse!
-Tere tulemast meie koju!
+Matti:.
+Lähme sisse.
+Tere tulemast meie koju.
 Seal on Tiina ja see on Sanna.
 Juha tuleb hiljem.
-Riho:
+Riho:.
 Meeldiv tutvuda.
 Siin on teile väike kingitus.
-Matti:
+Matti:.
 Aitäh.
-Riho:
-Mitu tuba teil on?
-Matti:
+Riho:.
+Mitu tuba teil on.
+Matti:.
 Kokku seitse tuba.
 Alumisel korrusel on elutuba, köök, meie magamistuba ja garderoob.
-Riho:
-On alles avar esik ja elutuba!
-Teil on kamingi!
-Matti:
+Riho:.
+On alles avar esik ja elutuba.
+Teil on kamingi.
+Matti:.
 See oli Eija mõte.
 Talle meeldib soojus ja tuli.
 Lähme üles.
-Riho:
+Riho:.
 Üsna kõrge trepp.
-Matti:
+Matti:.
 On jah.
 Majas on kolm korrust.
 Lastetoad on ülakorrusel.
 Anu tuba on pööningukorrusel.
 Riho magab Juhaga samas toas, olete peaaegu samaealised ja loodetavasti sobite hästi kokku.
-Riho:
+Riho:.
 Jaa, kohtusime kord Eestis, kui Eija ja Juha olid meil külas.
-Matti:
+Matti:.
 Nii, tean, selle tõttu mõtlesimegi, et võite samas toas magada.
 Seal on sinu tuba, Anu.
-Anu:
+Anu:.
 Mõnus tuba.
-Matti:
+Matti:.
 See on Eija töötuba.
 Jäta kott siia.
 Tulge, näitan teile Juha tuba.
 See on siin tüdrukute tubade kõrval.
-Anu:
+Anu:.
 Milline suur ja valge tuba.
 Ja aknast selline ilus vaade.
-Matti:
+Matti:.
 Jaa, meil on päris suur aed.
 Ja Aura jõgi paistab siit päris hästi.
 Läheme nüüd tagasi alla.
 Eija on natuke süüa valmistanud.
 Teil on kindlasti kõht tühi.
-Riho:
-Kas teil on saun ka?
-Matti:
+Riho:.
+Kas teil on saun ka.
+Matti:.
 Ikka, saun on keldris, elektrisaun kahjuks.
 Kogu majas on elektriküte.
 Mulle endale meeldib küll rohkem puuküttega saun, aga elektrisaun teadagi soojeneb kiiremini ja tänapäeval on aeg raha.
-Riho:
+Riho:.
 Mulle meeldib iga saun, olgu ta milline tahes.
 Peaasi, et oleks soe ja natukene vettki.
-Matti:
+Matti:.
 Lähme sauna, kui tahad, aga mitte täna, sest on juba hilja.
 Eija ootab all.
 Lähme söögituppa.
 Siin vasakul on vannituba ja WC.
-Anu:
+Anu:.
 Teil on õige kaunis ja kodune maja.
-Matti:
+Matti:.
 Ja eluasemelaen viieteistkümneks aastaks.
 Aga koht on tõesti hea, keskuse lähedal.
-Sõidan auto garaaži ja tulen kohe tagasi. 
+Sõidan auto garaaži ja tulen kohe tagasi. .
 Istuge sinna sohvale.
-Riho:
-Kas siin kuskil saab suitsetada?
-Matti:
-Mine näiteks terassile.
+Riho:.
+Kas siin kuskil saab suitsetada.
+Matti:.
+Mine näiteks terrassile.
 Seal on tuhatoos ka.
-VABANDUST, KUIDAS SAAB...
+Vabandust, kuidas saab...
 Riho on Mariaga väljas ja Anu peab üksi sadamasse minema.
-- Vabandust, kuidas pääseb Läänesadamasse?
+- Vabandust, kuidas pääseb Läänesadamasse.
 - Sealt Viro tänavalt saad bussiga number 18 autobussijaama ja sealt 15-ga otse lääneterminali.
 - Aitäh.
 Anu oodatb peatuses ja peatab kätt lehvitades bussi.
@@ -715,108 +715,111 @@ Vastu tuleb politseipatrull, kellelt Anu küsib teed metrooni.
 Anu jõuab metrooga lõpp-peatusesse Ruoholahte, kus ta tõuseb taas maa peale.
 Nüüd ta peab veel vaid ületama elava liiklusega Idamere tänava valgusfoori juurest.
 Ta läheb bussile number 15 ja jõuab sadamasse.
-Miks keegi ei öelnud, et tramm 9 läheb nüüd otse Lääneterminali?
-Mida tegid eelmisel nädalal?
-Mida Riho tegi?
+Miks keegi ei öelnud, et tramm 9 läheb nüüd otse Lääneterminali.
+Mida tegid eelmisel nädalal.
+Mida Riho tegi.
 Aeg on läinud kiiresti.
 Riho lubas helistada Jensile eelmisel nädalal, aga unustas.
 Nüüd on teisipäev ja Riho räägib Jensiga telefonis.
-RIHO:
-Hei! Riho siin.
-JENS:
-Hei! Kuidas läheb?
-RIHO:
+Riho:.
+Hei!
+Riho siin.
+Jens:.
+Hei!
+Kuidas läheb.
+Riho:.
 Väga hästi, aitäh.
-Aga sul endal?
-JENS:
+Aga sul endal.
+Jens:.
 Ei midagi erilist.
-RIHO:
+Riho:.
 Andesta, et ei helistanud varem.
 Oli päris palju tegemist.
 Saan aru küll, et ma pidin helistama eelmisel esmaspäeval.
-JENS:
+Jens:.
 Ei sellest pole midagi.
 Tore kui helistad.
-Mis sa tegid?
-RIHO:
+Mis sa tegid.
+Riho:.
 Käisin üle-eelmisel nädalavahetusel Tartus.
 Emal oli sünnipäev, pool suguvõsast oli kohal ja pidu oli tõesti uhke.
 Sõin, jõin ja nii edasi.
 Muidugi ma pidin rääkima kõikidele sugulastele, milline elu siin Helsingis on.
 Viisin emale kingiks kokaraamatu.
 Ta oli selle üle väga rõõmus ja lubas harjutada nii soome keelt kui ka kokkamist.
-JENS:
-Millal sa tagasi tulid?
-Ütlesid, et tuled esmaspäeval?
-RIHO:
+Jens:.
+Millal sa tagasi tulid.
+Ütlesid, et tuled esmaspäeval.
+Riho:.
 Jaa, tulime õega hommikuse laevaga ja siis veetsin kogu nädala temaga.
-JENS:
-Millega ta tegeleb?
-RIHO:
+Jens:.
+Millega ta tegeleb.
+Riho:.
 Ta õpib Tartus bioloogiat, lõpetab järgmisel aastal.
 Näitasin talle natukene linna ja käisime šoppamas.
 Anu raiskas palju raha.
 Helistasin korra sinulegi, aga sa ei vastanud.
 See oli kolmapäeval.
-JENS:
-Kolmapäeval?
+Jens:.
+Kolmapäeval.
 Olin kogu päeva tööl.
 Oli raske päev ja kogu aeg õudselt kiire.
 Õhtu jõudes olin juba nii väsinud, et tulin koju ja jäin kohe magama.
 Telefon oli hääletu.
-RIHO:
+Riho:.
 Kurb kuulda.
 Meil oli väga tore.
-Kas ma rääkisin juba sulle, et tutvusin ühe tüdrukuga rootsi keele kursusel?
-JENS:
+Kas ma rääkisin juba sulle, et tutvusin ühe tüdrukuga rootsi keele kursusel.
+Jens:.
 Ei ole sa midagi rääkinud.
-RIHO:
+Riho:.
 Maria on soomlane ja väga tore tüüp.
 Oleme käinud paar korda söömas ja käisime siis kolmapäeval koos väljas.
-JENS:
+Jens:.
 Ai ai, mäletan ka, et rääkisid, et sul on üks ilus tüdruksõber kodus ootamas.
-RIHO:
+Riho:.
 Jäta järele, ei ole see midagi sellist.
 Mu õde Anu oli ka kaasas.
-JENS:
-No, mis te tegite siis õhtul?
-RIHO:
+Jens:.
+No, mis te tegite siis õhtul.
+Riho:.
 Olime esiteks baaris.
 Tellisime joogid, ehk tüdrukud jõid veini ja mina muidugi vaid õlut.
 Siis läksime ööklubisse tantsima ja olime seal kuni klubi kinni pandi.
-JENS:
-Kas sa tantsisid Anuga?
-RIHO:
+Jens:.
+Kas sa tantsisid Anuga.
+Riho:.
 Jäta jama.
 Tantsisin Mariaga, ütlesin ju, et ta on tore tüdruk ja tantsib muide eriti hästi.
-JENS:
-See oli kolmapäeval, aga mida sa tegid nädalavahetusel?
-Kas olid jälle Mariaga?
-RIHO:
+Jens:.
+See oli kolmapäeval, aga mida sa tegid nädalavahetusel.
+Kas olid jälle Mariaga.
+Riho:.
 Unustasin võib-olla öelda, et läksime Anuga Turusse.
 Meil on seal peretuttavad.
 Mu ema kohtas neid mõni aasta tagasi, kui nad käisid kooriga Eestis.
 Nad elasid siis meil.
 Läksime neile Turusse külla, kuna Anu ei olnud enne seal käinud.
-Kas sa oled?
-JENS:
+Kas sa oled.
+Jens:.
 Muidugi tunnen seda paika.
 Mu endine naine oli sealt pärit, seetõttu olen käinud seal mõned korrad.
 Turu on lahe linn.
-RIHO:
+Riho:.
 Minu meelest ka.
 Olime seal neljapäevast pühapäevani ja nägime päris paljut.
-Toomkirikut ja Turu keskaegset kindlust ja Kloostrimäe käsitööliste muuseumi ja... ei mäleta enam, kus käisime. 
+Toomkirikut ja Turu keskaegset kindlust ja Kloostrimäe käsitööliste muuseumi ja... 
+ei mäleta enam, kus käisime. .
 Ah jaa, reisisime laupäeval ka Naantalisse, tõesti kena väikelinn, tahaksin sinna suvel tagasi minna.
-Aga mida sina oled teinud?
+Aga mida sina oled teinud.
 Rääkisin kogu aja vaid endast.
-JENS:
+Jens:.
 Ma ei ole teinud midagi erilist.
 Mu elu on vaid töö, töö ja veel kord töö.
 Paar korda käisin õlut joomas, ühe korra kinos.
-RIHO:
-Kas oli hea film?
-JENS:
+Riho:.
+Kas oli hea film.
+Jens:.
 Tüüpiline ameerika põnevik.
 Nädalavahetusel käisin töökaaslase pool.
 Ta elab äärelinnas, neil on tore eluase ridaelamus.
@@ -824,20 +827,20 @@ Seal oli aiapidu.
 Käisime saunas ja grillisime vorsti.
 Üritasin lõõgastuda.
 Tööpinge on olnud ebaharilikult suur.
-RIHO:
-Kas sa jõid ennast siis purju?
-JENS:
+Riho:.
+Kas sa jõid ennast siis purju.
+Jens:.
 Olin küll natukene purjus, aga mitte õudselt.
 Järgmisel hommikul ärkasin kodus ja ei olnud mingit imelikku pohmelli.
-Kas su õde on veel siin?
+Kas su õde on veel siin.
 Tutvuksin meeleldi temaga.
-RIHO:
+Riho:.
 Kahjuks ta läks eile tagasi Tartusse.
 Läks nii halvasti, et ma pidin saatma teda sadamasse laevale, aga olin spordihalli jõusaalis.
 Maria käib seal võimlemas ja me kohtusime seal ja läksime selle järel...
-JENS:
+Jens:.
 Tean, jälle kohvile.
-RIHO:
+Riho:.
 Just nii.
 Unustasin Anu tõesti ja ühtäkki märkasin, et kell saab kohe neli ja laev läheb poole viiest.
 Võtsime takso ja kiirustasime sadamasse.
@@ -845,43 +848,43 @@ Anu oli loomulikult oodanud ja helistanud, aga mu telefoni aku oli tühi.
 Lõpuks ta oli küsinud teed, siis eksinud ja mingi politseinik oli juhatanud ta kohale.
 Kuid ta jõudis õigeks ajaks chek-in'i ega jäänud laevast maha.
 Ta oli minu peale tõesti vihane ega rääkinud sõnagi.
-JENS:
-Miks ta ei osanud sadamasse minna?
+Jens:.
+Miks ta ei osanud sadamasse minna.
 See ei ole nii raske.
 Bussidki sõidavad ja...
-RIHO:
+Riho:.
 Ta oli Helsingis esimest korda ja me tulime esmaspäeval koos trammiga.
 Ta ei mäletanud, kuidas ja millise trammiga.
 Tal olid suured kotid ja sadas ka veel.
 Sain aru, et olen tõeline siga, tean seda.
 Anu lausa nuttis.
-JENS:
+Jens:.
 Siis läks küll halvasti.
-RIHO:
+Riho:.
 Maria üritas teda rahustada, aga ei õnnestunud.
-Kuule, loeng algab nüüd, kui kohtume, siis näiteks homme?
-JENS:
+Kuule, loeng algab nüüd, kui kohtume, siis näiteks homme.
+Jens:.
 Ülehomme sobiks paremini.
 Homme on üks tähtis rahvusvaheline nõupidamine, mis ilmselt kestab pikalt.
-RIHO:
+Riho:.
 Kohtume siis ülehomme.
-JENS:
+Jens:.
 Võta Mariagi kaasa, siis näen, kellest räägid kogu aja.
-RIHO:
+Riho:.
 Ei luba midagi, aga üritan.
-Kohtume seitsmest, aga kus?
-JENS:
-Kas sobiks sama koht, kus kohtusime esimesel korral, seal pubi ees, mäletad?
-RIHO:
+Kohtume seitsmest, aga kus.
+Jens:.
+Kas sobiks sama koht, kus kohtusime esimesel korral, seal pubi ees, mäletad.
+Riho:.
 Jaa, mäletan.
 Kuule, nüüd ma pean küll minema.
-Näeme ülehomme!
-JENS:
-Jaa, tsau!
-RIHO:
-Tsau!
-Mida tegid kevadpuhkusel?
-RIHO:
+Näeme ülehomme.
+Jens:.
+Jaa, tsau.
+Riho:.
+Tsau.
+Mida tegid kevadpuhkusel.
+Riho:.
 Ei midagi erilist.
 Juunis oli eksamisessioon ja seejärel õppisin kogu suve soome keelt, sest tahtsin tulla septembris Soome.
 Vahepeal olin meie suvilas.
@@ -895,7 +898,7 @@ Augusti keskel pääsesin ajalehte tööle, sest mul oli õpinguteks raha vaja.
 Tõlkisin inglise keelest eesti keelde ja vastupidi.
 Mu tüdruksõber mängib võrkpalli ja ta oli spordilaagris välismaal, nii olin natukene üksik.
 Ma ei reisinud kuhugi, mul ei olnud piisavalt raha.
-MARIA:
+Maria:.
 Mu puhkus kestis viis nädalat, juuli algusest augusti keskele.
 Õppisin ja osalesin teatrikooli sisseastumiskatsetel, aga ei pääsenud sinna.
 Olin seetõttu masendunud ja läksin maale.
@@ -913,7 +916,7 @@ Laenasin neid lähima linna raamatukogust, kuhu oli viieteistkümne kilomeetri t
 Käisin seal kaks korda kontserdilgi, klassikalise muusika kontserdil.
 See on kõik.
 Järgmisel suvel proovin jälle teatrikooli saada.
-JENS:
+Jens:.
 Puhkasin juuni lõpust alates kolm nädalat.
 Mul on puhkus talvelgi, käisin Austrias mäesuusatamas.
 Seal on suursugused mäed.
@@ -936,7 +939,7 @@ Otse öeldes matk läks untsu.
 Ööbisime kehvades hotellides ning mulle ei meeldinud reisiseltskond.
 Lisaks sellele sadas nagu oavarrest.
 Siiski nägin härjavõitlust ja mulle meeldisid vanad kirikud ja kaunid tõmmud hispaania naised.
-ANU:
+Anu:.
 Mu puhkus läks nässu.
 Sain autoõnnetuses viga.
 Jalg läks katki ja sattusin haiglasse.
@@ -946,11 +949,11 @@ Oleksin tahtnud välismaal või kodumaal reisida.
 Eelmisel suvel hääletasin koos oma poiss-sõbraga läbi kogu Euroopa, nüüd oleksime tahtnud Venemaale, aga see ei õnnestunud.
 Õnneks paranesin ja suve lõpus käisin jalgrattamatkal Lääne-Eestis.
 Ööbisime telgis ja küpsetasime toitu mere ääres.
-Õhtul istusime lõkke ümber ja laulsime. 
-Oli tore!
+Õhtul istusime lõkke ümber ja laulsime. .
+Oli tore.
 Me ei hoolinud sääskedest, keda oli tõesti palju.
 Lõpp hea, kõik hea.
-Turul
+Turul.
 Maria sünnipäev on tulemas.
 Täna on 27. oktoober ja kahe päeva pärast kavatseb ta korraldada paarile sõbrale peo, sest ta saab 20 aastaseks.
 Maria peab käima toidupoes ja turul.
@@ -961,140 +964,140 @@ Maria korter ei ole eriti kaugel keskusest.
 Turul on palju rahvast.
 Seal on vanu ja noori, pereemasid ja üliõpilasi, poisse ja tüdrukuid.
 Kuna Kaubaturg on sadama lähedal, on seal ka palju välismaalasi.
-RIHO:
-Vaata, seal on maasikad!
-MARIA:
-Kuidas see võimalik on?
+Riho:.
+Vaata, seal on maasikad.
+Maria:.
+Kuidas see võimalik on.
 Praegu on ju sügis.
-RIHO:
+Riho:.
 Võib-olla need on kuskilt lõunast, Hispaaniast näiteks.
-MARIA:
+Maria:.
 Võib olla küll, aga ma ei julge neid osta.
 Ei usu, et neil on mingit maitset.
-RIHO:
-Aga need paistavad küll punased ja mahlased!
-MARIA:
+Riho:.
+Aga need paistavad küll punased ja mahlased.
+Maria:.
 Lähme sinnapoole.
 Mul on vaja osta köögivilju salati jaoks.
 Sügisel vajame vitamiine.
-MARIA:
-Tere päevast!
-PROUA:
-Tere päevast!
-MARIA:
-Palju porgandid täna maksavad?
-PROUA:
+Maria:.
+Tere päevast.
+Proua:.
+Tere päevast.
+Maria:.
+Palju porgandid täna maksavad.
+Proua:.
 Need suured maksavad poolteist eurot kilo ja nood väiksemad 2,50.
-Head porgandid!
-MARIA:
+Head porgandid.
+Maria:.
 Mina võtan neid suuri, poolteist kilo.
-PROUA:
+Proua:.
 Siin, palun väga.
-MARIA:
-Kas teil on hiina kapsast?
-PROUA:
+Maria:.
+Kas teil on hiina kapsast.
+Proua:.
 On hiina kapsast, lillkapsast ja...
-MARIA:
+Maria:.
 Võtan kaks hiina kapsast, kaks kilo kurki ja veel tomateid.
-PROUA:
-Milliseid tomateid?
+Proua:.
+Milliseid tomateid.
 Siin on head kodumaised ja seal hollandist.
 Need on natukene odavamad.
-MARIA:
+Maria:.
 Võtan neid kodumaiseid, umbes kilo.
-PROUA:
-Kas läheb veel midagi?
-MARIA:
+Proua:.
+Kas läheb veel midagi.
+Maria:.
 Ei, aitäh.
-Kui palju see kokku teeb?
-PROUA:
+Kui palju see kokku teeb.
+Proua:.
 10,20.
-MARIA:
+Maria:.
 Siin on 11 eurot.
-PROUA:
+Proua:.
 Üks hetk, 80 senti tagasi.
-MARIA:
+Maria:.
 Unustasin kartuleid osta.
-PROUA:
+Proua:.
 Oi oi, kartulid on otsas.
-MARIA:
+Maria:.
 Sellest pole midagi, lähen edasi ja küsin sealt.
-PROUA:
-Head aega!
-MARIA:
-Head aega!
-MARIA:
+Proua:.
+Head aega.
+Maria:.
+Head aega.
+Maria:.
 Nüüd on mul vaja puuvilju booli jaoks.
-RIHO:
-Kas kotti veel mahub?
-MARIA:
+Riho:.
+Kas kotti veel mahub.
+Maria:.
 Ikka mahub.
 Seal on ilusaid õunu.
-PROUA:
-Häid puuvilju, banaane, apelsiine ja viinamarju!
-MARIA:
-Kui palju need kollased õunad maksavad?
-PROUA:
+Proua:.
+Häid puuvilju, banaane, apelsiine ja viinamarju.
+Maria:.
+Kui palju need kollased õunad maksavad.
+Proua:.
 Euro kolmkümmend.
-MARIA:
-Aga nood rohelised?
-PROUA:
+Maria:.
+Aga nood rohelised.
+Proua:.
 Need maksavad euro viiskümmend.
-Kas te tahate maitsta?
-MARIA:
+Kas te tahate maitsta.
+Maria:.
 Jah, maitseksin meeleldi.
-Kas sa võtad ka, Riho?
+Kas sa võtad ka, Riho.
 Riho raputab pead.
-MARIA:
+Maria:.
 Mm, maitseb väga hästi.
 Võtan neid kaks kilo.
-PROUA:
-Aga ploome?
+Proua:.
+Aga ploome.
 Meil on head kollased ploomid.
-MARIA:
+Maria:.
 Aitäh, mul ei ole täna ploome vaja.
 Aga võtan veel natukene viinamarju ja paar banaani.
-Kas viinamarjad on magusad?
-Kust need pärit on?
-PROUA:
+Kas viinamarjad on magusad.
+Kust need pärit on.
+Proua:.
 Hispaaniast.
 Võid maitsta neidki, kui kahtled.
-MARIA:
+Maria:.
 Ei aitäh, usun küll.
 Olen ostnud siit ennegi.
 Ja siis veel paar sidrunit.
-PROUA:
+Proua:.
 Siin, palun väga.
-MARIA:
+Maria:.
 Aitäh.
-PROUA:
-Kelle kord?
-MARIA:
+Proua:.
+Kelle kord.
+Maria:.
 Nüüd küll piisab.
 Näed vähe väsinud välja.
-RIHO:
+Riho:.
 No, pidin ju ootama, kui kontrollisid kõike ja valisid neid puuvilju.
-MARIA:
+Maria:.
 Andesta, mulle meeldib turul käia.
 Olen siin tuttav klient.
 Käin turul peaaegu iga päev.
 Minu töökohta on siit napilt 300 meetrit.
-RIHO:
+Riho:.
 Või nii.
-Ma ei ole küsinud, mis toitu sa siis mõtled teha?
-Kas tuleb soe toit?
-MARIA:
+Ma ei ole küsinud, mis toitu sa siis mõtled teha.
+Kas tuleb soe toit.
+Maria:.
 Mõtlesin teha pirukaid ja erinevaid salateid.
 Ostan veel poest juustusid ja küpsiseid veini kõrvale.
-Mis arvad, mida juua?
-RIHO:
+Mis arvad, mida juua.
+Riho:.
 Mina loomulikult joon õlut, aga rääkisid midagi boolist.
-MARIA:
+Maria:.
 Nii mõtlesingi.
 Ja natukene punast veini ka.
 Kui tuleb palju külalisi, siis peab olema ka palju süüa ja erinevaid jooke.
 Ma ei ole aastaid sünnipäeva pidanud, aga nüüd pidutseme korralikult.
-RIHO:
+Riho:.
 Kõlab põnevalt.
 Ootan juba kärsitult.
 Koju nad naasesid trammiga, sest kotid olid rasked.
@@ -1110,10 +1113,10 @@ Loodetavasti see ei põhjusta talle raskusi.
 Riho oli siiski õnnelik, et sai olla peaaegu kogu ennelõuna Mariaga.
 Talle tundub, et Jensil on õigus.
 Ta hakkab vähehaaval tollesse toredasse ja kaunisse soome tüdrukusse armuma.
-Mida ta ütleb tüdruksõbrale, kes ootab Eestis?
+Mida ta ütleb tüdruksõbrale, kes ootab Eestis.
 Riho ei ütle midagi, ehk ta ei oota enam.
 Riho sai paari päeva pärast talt kirja.
-Tere Riho!
+Tere Riho.
 Ma ei ole paar nädalat sinust kuulnud.
 Ma ei tea, milles on asi.
 Viimati kui käisid Eestis, siis me kahjuks ei kohtunud.
@@ -1128,21 +1131,21 @@ Mulle tundub, et meie suhted on viimasel ajal, eriti see järel, kui kolisid Soo
 Ma ei ole kunagi öelnud, et ootan sind truult oma elu lõpuni ja ka sina ei ole midagi sellist lubanud.
 Nii mõtlesingi, et sellest pole midagi, kui minagi Eestist ära kolin.
 Võib-olla tuleneb kõik vaid mu haigest fantaasiast, aga mulle tundub, et oled leidnud kellegi teise, ega hooli enam minust.
-Soovin sulle kõike head
-Pille
-ILM
+Soovin sulle kõike head.
+Pille.
+Ilm.
 On külm ja tuuline sügispäev.
 Riho on üksi kodus ja igavleb.
 Õigemini tal ei ole midagi teha.
 Jens on läinud Taani umbes nädalaks ja Maria on peaaegu iga õhtu tööl või teatrikursusel.
-Neil on järgmine kuu esietendus tulemas, Maria mõtteis ei ole enam muud kui Tuhkatriinu poolõe roll.
+Neil on järgmine kuu esietendus tulemas ja Maria mõtteis ei ole enam muud kui Tuhkatriinu poolõe roll.
 Ta küll helistab aeg-ajalt ja küsib, kuidas Rihol läheb, aga tavaliselt ta ei jõua isegi oodata, et saaks vastuse.
 Riho üritab siiski teda mõista, on ju Maria rääkinud, mida teater talle tähendab ja mis on tema suurim unistus.
 Riho saab aru, et kui ta edaspidigi kurameerida Mariaga, siis peab ta Mariat toetama, ega või hädaldada, isegi kui tahaks.
 Tänagi on Riho õnnetu ja selle süü on ennekõike halb ilm.
 Väljas on ainult paar kraadi sooja ja põhjatuul.
 Hommikul sadas lörtsi ja päikest ei ole paar päeva näha olnud.
-No mida sellise ilmaga teha saab!
+No mida sellise ilmaga teha saab.
 Ei muud, kui unistada kaunist kevadest ja suvest, millal ilmad on soojemad ja elu toredam.
 Kõige rohkem meeldib Rihole kevad.
 Talv on möödas, ööd ei ole enam nii pimedad ja pikad, lumi on sulanud ja päike hakkab jälle soojalt paistma, lilled hakkavad õitsema ja puudele tuleb vähe-haaval rohelisi lehti ja kõik lõhnab nii meeldivalt.
@@ -1154,7 +1157,7 @@ Riho meelest kolmkümmend kraadi on sobiv.
 Riho kardab külma vett ja ta ujub vaid soojas vees.
 Meelsamini ujub ta basseinis, kus on soe ega ole laineid nagu meres.
 Tal on häbi, et ei oska korralikult ujuda.
-Võib-olla peaks veel täiskasvanuna ujumiskursustele minema?
+Võib-olla peaks veel täiskasvanuna ujumiskursustele minema.
 Teisalt talvelgi on tore.
 Kui sajab lund ja väljas ei ole liiga külm, nii viis kraadi külma ja päike paistab.
 Nii võib suusatada või uisutada või isegi mäest kelguga alla lasta.
@@ -1163,62 +1166,62 @@ Küll talvgi võib olla tõesti vahva, kui ei ole liiga kõva pakane ega tugev t
 Riho lõpetab unelemise ja paneb televiisori käima.
 Uudised on juba lõppenud, spordi järel tuleb ilmateade.
 Ta kuulab, mida homseks lubatakse.
-Ei või olla!
+Ei või olla.
 Oodata on ligikaudu null kraadi nii päeval kui ka öösel, põhjatuul puhub 15 meetrit sekundis, ennelõunal pöördub tuul kirdesse.
 Hommikul on pilvine, kekspäevast alates sajab igal pool Soomes vihma, pealinna ümbruses võib sadada lörtsigi.
 Kõva tuule hoiatus kõikjal rannikul.
 Õhtul temperatuur langeb veelgi.
-Millal hakkab ilm soojenema?
+Millal hakkab ilm soojenema.
 Kes on öelnud, et sügis on kaunis ja värviline ja et on kaunis, kui värvilised lehed langevad pargis puudelt.
-Kes on näinud seda palju kiidetud kuldset sügist?
+Kes on näinud seda palju kiidetud kuldset sügist.
 November igatahes on inetuim, kurvim ja vastikuim kuu aastas.
 Riho hakkab jõule ootama.
 Kui pööripäev tuleb, siis kõik võib muutuda, ta loodab.
 Ühtäkki helises telefon.
-MARIA:
-Tsau, kallis!
-Kuidas läheb?
-RIHO:
-Tsau!
+Maria:.
+Tsau, kallis.
+Kuidas läheb.
+Riho:.
+Tsau.
 Igatsen sind ja suve ja soojust ja...
-MARIA:
-Ära nüüd!
+Maria:.
+Ära nüüd.
 Meil on siin väike paus ja tahtsin helistada ja öelda, et mõtlen sinust.
-RIHO:
-Hea on kuulda su häält!
+Riho:.
+Hea on kuulda su häält.
 Valisid küll õige hetke, sest olen praegu eriti halvas tujus.
-MARIA:
-Mis on juhtunud?
-RIHO:
+Maria:.
+Mis on juhtunud.
+Riho:.
 Ära muretse, ei midagi, jälestan vaid seda põhjamaist ilma.
 Ja ilmateade ka ei lubanud midagi paremat.
-MARIA:
+Maria:.
 Olen peaaegu kogu päeva olnud toas ega tea ilmast midagi.
 Aga üritan nüüd olla mõistlik, kohe tuleb talv ja palju lund ja siis lähme Lapimaale mäesuusatama.
 Olen planeerinud seda juba mõned aastad ja nüüd sinuga läheksin kohe kindlasti.
-Kas sa oled käinud Lapimaal?
-RIHO:
+Kas sa oled käinud Lapimaal.
+Riho:.
 Muidugi ei ole.
-Üsna hea idee!
+Üsna hea idee.
 Ütleksin, et särav idee.
-Kas me võiksime kohe minna?
-MARIA:
+Kas me võiksime kohe minna.
+Maria:.
 Parim suusahooaeg Lapimaal on tavaliselt veebruarist aprillini, nii et oota väheke.
-RIHO:
+Riho:.
 Ei tea, kas jaksan.
-MARIA:
+Maria:.
 Tulen külla homme, meil ongi vaba päev.
 Aga nüüd ma pean minema.
-Näeme siis homme
-RIHO:
+Näeme siis homme.
+Riho:.
 Näeme.
 Tsau.
 Maria helistas.
-Kas Rihol tuli nüüd parem tuju?
-Kindlasti!
-SUVILAS
+Kas Rihol tuli nüüd parem tuju.
+Kindlasti.
+Suvilas.
 Laaksoste pereliikmed räägivad, mida nad tegid viimasel suvel ja kuidas nad suhtuvad suvilaelusse.
-EIJA:
+Eija:.
 Oleme kõik suved perega Pohjanmaal suvilas.
 Meil on olnud oma suvila peaaegu kümme aastat.
 Me hakkame käima seal juba kevadel nädalalõppudel.
@@ -1227,11 +1230,11 @@ On hea suveks linnast ära pääseda.
 Ei igatse seal telefoni ega televiisorit ega mingeid mugavusi.
 Elame lihtsamalt.
 Tähtis on olla kaugel linnast ja kiirustamisest ja stressist.
-Kui hea on jälgida, kui kõik kasvab ja hakkab õitsema!
+Kui hea on jälgida, kui kõik kasvab ja hakkab õitsema.
 Õnneks Matti on minuga sama meelt.
 Lastele kahjuks ei meeldi suvilaelu, välja arvatud Tiinale, kes on viieaastane.
 Naabermajas on teisigi väikeseid lapsi, nii et Tiinal on seltsi.
-Nad jooksevad ja hüppavad ja vahel mängivad kodu.
+Nad jooksid ja hüppasid ja vahel mängisid kodu.
 Ükskord nad veetsid öö telgis.
 Kartsin küll natukene, aga andsin siiski loa.
 Tiina ei tahtnud sügisel üldse suvilast lahkuda.
@@ -1248,30 +1251,30 @@ Nad said hästi hakkama, ei oleks uskunud, et nii hästi.
 Meil käis ka külalisi, mu nõbu tuli lastega nädalaks.
 Neile meeldis järv ja liivarand ja suitsulõhe, mida ise suitsutasime.
 Juha on tõesti hea selles töös.
-SANNA:
+Sanna:.
 Mu probleem on suvila.
-Esma ja isa tahavad aina, et lähen nendega suvilasse, aga mida ma seal teen?
+Esma ja isa tahavad aina, et lähen nendega suvilasse, aga mida ma seal teen.
 Kõik mu sõbrad on linnas, aga ma pean rohima ja kastma ja korjama ja tea mida kõike.
 Ega mulle isegi ei meeldi need köögiviljad.
-Vastik!
+Vastik.
 Tahtsin sealt ära, tahtsin minna diskole ja kinno ja jutustada sõpradega telefonis ja kuulata head muusikat, mitte vaid linnulaulu, tahan käia kontsertidel ja festivalidel ja teha kõike, mida 15-aastased teevad.
 Aga ei, jälle suvilasse minek.
 Ma pean veel paar aastat kannatama, enne kui pääsen tööle nagu Juhagi, nii olen kindel, et ma ei iialgi lähe suvilasse.
-Mida ma veel tegin?
+Mida ma veel tegin.
 Ujusin ja magasin päikese käes, läksin paksuks ja kaklesin väikese õega.
 Vihmase ilmaga istusin toas ja kuulasin muusikat.
-JUHA:
+Juha:.
 Eelmisel suvel olime suvilas.
 Parim oli käia isaga kalal, sain isegi paar haugi ja lõhet.
 Mulle meeldib õngitsemine.
 Ja saunaski on tore käia.
 Muidu seal oli nõme ja igav.
 Põgenesin linna ja läksin tööle.
-Olin restoranis suveabiline. 
+Olin restoranis suveabiline. .
 Teenisin raha uue mootorratta tarbeks.
 Tahtsin hakata motokrossi sõitma.
 Kui oli liiga kuum, läksin ujulasse ja ujusin paar kilomeetrit.
-MATTI:
+Matti:.
 Ma ei taha puhkusel minna välismaale ega Kanaari saartele, paras paik on meie suvila.
 Mu isa ehitas selle aastaid tagasi, sauna tegime hiljem koos.
 Suvilas kalastan, ujun ja liigun palju paadiga.
@@ -1297,8 +1300,8 @@ Saunatamise järel istutakse tavaliselt kamina ees, juuakse õlut ja grillitakse
 Mõnikord minnakse järve äärde ja vaadeldakse kaunit maastikku.
 Enesetunne on sauna järel kerge ja lõõgastunud.
 Kõik tõdevad, et stress ja pinge on kadunud.
-Ma ei suuda elada ilma saunata!
-Soome tähtpäevad
+Ma ei suuda elada ilma saunata.
+Soome tähtpäevad.
 Eija räägib, kuidas nende peres eelmisel aastal jõule veedeti.
 Soomlaste tähtsaim tähtpäev on tõenäoliselt jõulud.
 Minu töökoha jõulupidu peeti juba detsembri alguses.
@@ -1316,57 +1319,56 @@ Magustoiduks olid piparkoogid ja jõulutordid.
 Varem, kui oldi sugulastega koos maal, oli komme süüa ka riisiputru, kuhu oli peidetud mandel.
 Usuti, et see, kes saab mandli, abiellub järgmisena.
 Nii siiski ei juhtunud.
-Söögi järel saabus jõuluvana Lapimaalt ja küsis: Kas siin häid lapsi on?
+Söögi järel saabus jõuluvana Lapimaalt ja küsis: Kas siin häid lapsi on.
 Tiina pelgas teda natuke, aga kui kinke jagati, siis hirm kadus.
 Jõuluhommikul (25.12) käidi kirikus jumalateenistusel.
 Jõulupüha veedeti vaikselt, sellal ei ole tavaks külas käia.
-Teisel jõulupühal ehk tabanipäeval (26.12.) mindi vanematele külla.
-Kaalikavormiroog
+Teisel jõulupühal ehk tabanipäeval (26.12) mindi vanematele külla.
+Kaalikavormiroog.
 Jõululaua hõrgutis, mis sobib muulgi ajal pidulauale.
 Maitsvat ja odavat lisandit sagedaminigi serveerimiseks.
 Lisamaitseaineks võid lisada 1-2 spl siirupit.
-5-6 portsjonit
-2-3 kaalikat (u 1, 25 kg)
-vett + 2 tl soola liitri vee kohta
-0,25 dl riivsaia
-1 dl värsket koort
-0,25 tl soola, pisut valget ja musta pipart
-(0,5 tl muskaatpähklit)
-1-2 muna
+5-6 portsjonit.
+2-3 kaalikat (u 1,25 kg) .
+vett + 2 tl soola liitri vee kohta.
+0,25 dl riivsaia.
+1 dl värsket koort.
+(0,5 tl muskaatpähklit) .
+1-2 muna.
 Koori kaalikad hoolikalt, terava noaga üsna paksult.
 Tükelda need ja keeda väheses soolaga maitsestatud vees pehmeks u 30 min.
 Kalla vesi ära ja püreesta kaalikatükid kas pudrunuia, püreeveski või miksri abil.
 Lisa riivsai, koor, või, sool, värskelt jahvatatud pipar ja muskaatpähklid ning sega hoolikalt.
 Lisa munad, ükshaaval tugevalt segades.
-Pane kaalikapüree võiga määritud ahjuvormi ja küpseta 200-kraadiga 1-1, 5 h.
+Pane kaalikapüree võiga määritud ahjuvormi ja küpseta 200-kraadiga 1-1,5 h.
 Serveeri jõululauas singi lisandina, küpsetatatud sealiha või vorsti juurde, karjalaprae juurde või taimetoidu kui sellisena.
-Kuidas soomlased muid pühi veedavad?
-uusaasta (1. jaanuar)
-Head uut aastat!
-Õnnelikku uut aastat!
-Uut aastat võetakse vastu vana-aasta õhtul (31.12).
+Kuidas soomlased muid pühi veedavad.
+uusaasta (1. jaanuar) .
+Head uut aastat.
+Õnnelikku uut aastat.
+Uut aastat võetakse vastu vana-aasta õhtul (31.12) .
 Kodus valatakse tina, et näeks tulevikku.
 Süüakse näiteks viinereid ja kartulisalatit.
 Üldiselt juuakse vahuveini.
 Öösel on ilutulestik.
 Helsingi linnapea peab Senati väljakul kõne, mida näidatakse televisiooni vahendusel kogu maal.
 Uusaastal peab president või peaminister uusaastakõne.
-vastlapäev (veebruaris)
-Libedat liugu!
-Pikki linu!
+vastlapäev (veebruaris) .
+Libedat liugu.
+Pikki linu.
 Algselt tähendas vastlapäev paastu laskumist.
 Tänapäeval on vastlapäev eriti just laste pidu.
 Süüakse hernesuppi ehk hernesuppi ning vahukoore ja moosiga täidetud vastlakukleid.
 Lastakse kelguga mäest alla.
-lihavõtted (märtsis-aprillis)
-Häid lihavõttepühi!
+lihavõtted (märtsis-aprillis) .
+Häid lihavõttepühi.
 Lihavõtted on religioosne püha, mida peetakse Jeesuse kannatuste ja ülestõusmise mälestuseks, aga paljudes peredes on selle veetmine üsna ilmalik.
 Lihavõtte värvid on kollane ja roheline.
 Kaunistustena kasutatakse pajuurbasid, värvitud šokolaadimune, dekoratiivseid tibusid ja jänkusid ning ise kasvatatud rohtu.
 Värvitakse kanamune.
 Peolauas serveeritakse näiteks lambapraadi, kanamune, rukkilinnasejahuputru värske koorega ning pashat.
-volbripäev (1. mai, lipupäev)
-Toredat volbripäeva!
+volbripäev (1. mai, lipupäev) .
+Toredat volbripäeva.
 Volbripäev on kevadpüha, tööliste ja üliõpilaste päev.
 Volbripäeva tähendus tööliste pühana väheneb, varem peeti rahvakoosolekutel tuliseid kõnesid aktuaalsetel poliitilistel teemadel.
 Volbripäeval on komme kanda valget teklit.
@@ -1375,9 +1377,9 @@ Lastele ostetakse õhupall ja lehvik.
 Volbripäeval minnakse tihti restorani volbrilõunale.
 Söögi hulka võib kuuluda ka heeringas, kui volbriööl on rohkesti jooke nauditud.
 Volbripäeva hõrgutised on pontsikud ja kurepesa küpsised.
-(Kurepesa küpsis on magus volbriküpsetis, mida tehakse peenikese lindina kuuma rasva valatud taigent kerra segades.)
+(Kurepesa küpsis on magus volbriküpsetis, mida tehakse peenikese lindina kuuma rasva valatud taigent kerra segades) .
 Juuakse sima.
-jaanipäev (juuni 20. ja 26. päeva vaheline laupäev, enne oli jaanipäev 24.06)
+jaanipäev (juuni 20. ja 26. päeva vaheline laupäev, enne oli jaanipäev 24.06) .
 Jaanipäev on kesksuve ja ööta öö pidu ning ka Soome lipu päev.
 Traditsiooniliselt seostub jaanipäevaga pilt rahvariides valgejuukselisest soome neiust, kes nõjatub valgetüvelisele kasele valgel suveõhtul.
 Linnad on jaanipäeva ajal tühjad, kuna enamik soomlastest tahab veeta jaanipäeva sugulaste, sõprade või vaid pere keskel suvilas, meeleldi vee ääres.
@@ -1385,47 +1387,47 @@ Jaanipäevatoiduks ostetakse tihti väljas grillitavat vorsti või liha.
 Tehakse lõket.
 Kavasse võivad kuuluda ka vabaõhu tantsupeod.
 Iseäranis varasemalt on olnud komme abieluõnne saamiseks ja tulevase peigmehe nägemiseks nõiduda.
-iseseisvuspäev (6. detsember, lipupäev)
+iseseisvuspäev (6. detsember, lipupäev) .
 Soome kuulutas end iseseisvaks 6. detsembril 1917.
 Iseseisvuspäeva tähistatakse ametlike üritustega.
 Sõjaveteranid ja õpilased korraldavad tihti tõrvikrongkäike.
 Sõjas langenute haudadele või mälestussammastele viiakse lilli või küünlaid.
 Ametlik pidupäev kulmineerub vabariigi presidendi lossis peetava iseseisvuspäeva vastuvõtuga.
 Õhtul süüdatakse akendel küünlad.
-Riideid ostmas
+Riideid ostmas.
 Riho vajab soojemaid riideid ja uusi talvekingi.
 Ta läheb kaubamajja koos Mariaga, kuna Maria peab ostma uue kleidi.
 Esietendus on juba lähedal.
 Esiteks lähevad nad meesterõivaste osakonda.
-Müüja: Kas ma saan aidata?
-Riho: Kas võiksin näha kampsuneid?
-Müüja: Mis suurus?
+Müüja: Kas ma saan aidata.
+Riho: Kas võiksin näha kampsuneid.
+Müüja: Mis suurus.
 Riho: Arvan, et L.
 Müüja: Siin on ühevärvilised, hallid ja rohelised.
 Riho: Sooviksin midagi värvikamat.
 Müüja: Siin on erkpunane ja siin kirju.
-Riho: Kas saaksin proovida seda sinivalget?
+Riho: Kas saaksin proovida seda sinivalget.
 Müüja: Ole hea, sinnapoole, vaba proovikabiin on seal kassa kõrval.
 Kümne minuti pärast.
-Müüja: Kas sobib?
-Riho: Jah, mis selle hind on?
-Müüja: See maksab 24, 90.
+Müüja: Kas sobib.
+Riho: Jah, mis selle hind on.
+Müüja: See maksab 24,90.
 Müüja: See on just nüüd sooduspakkumisel.
 Müüja: Enne maksis see 35 eurot.
 Riho: Siis ma küll võtan selle.
 Riho: Aga sooviksin veel näha teksaseid.
-Müüja: Mis värvi?
+Müüja: Mis värvi.
 Riho: Värv ei olegi nii tähtis, peamine on, et mudel sobib.
 Müüja: Siin on kitsas mudel, üsna populaarne.
 Müüja: Need maksavad 55 eurot.
-Riho: Kas odavamaid ei ole?
+Riho: Kas odavamaid ei ole.
 Müüja: Mitte sama mudelit.
 Müüja: Aga need maksavad vaid 30 eurot.
 Müüja: Samuti head püksid.
 Müüja: Neid on musti ja pruune.
 Riho: No, siis proovin neid musti.
 Riho: Kahju küll, need ei sobi mitte sugugi.
-Riho: Kas muid ei ole?
+Riho: Kas muid ei ole.
 Müüja: Ikka leidub.
 Müüja: Proovige neid velvetpükse, need on eriti mõnusad.
 Riho: Mulle ei meeldi sellised.
@@ -1460,19 +1462,19 @@ Riho lubas, et ei unusta teda iialgi.
 Ühel päeval otsus Riho Maria sööma kutsuda.
 Ta oli säästnud natuke raha ja oli valinud kalli ja uhke restorani Helsingi kesklinnas.
 Alguses Maria ei soostunud tulema, sest ta teadis, kui vähese rahaga Rihol tuleb toime tulla, aga Riho veenis ta ümber.
-Ta ütles, et kuna Maria peab igal õhtul ettekandajana töötama, siis ta võiks ühe korra isegi nautida head sööki ja teenindust.
+Ta ütles, et kuna Maria peab igal õhtul ettekandjana töötama, siis ta võiks ühe korra isegi nautida head sööki ja teenindust.
 Nad kohtusid Maria pool ja tellisid takso, mis viis neid restorani.
 Marial oli seljas pikk must kleit ja roosa pluus, Rihol oli tume ülikond ja valge särk, kaelas oli tal muidugi Maria ostetud lips.
 Nad paistsid uhke paarina.
 Riho oli laua kindluse mõttes ette reserveerinud.
 Neil oli aknaalune laud, kust avanes suurepärane vaade õhtusele Helsingile.
 Kelner tõi neile kohe menüü.
-Kelner: Tere õhtust!
+Kelner: Tere õhtust.
 Kelner: Menüü, palun.
-Kelner: Mis võiks joogiks olla?
+Kelner: Mis võiks joogiks olla.
 Riho: Võtaksime pudeli vahuveini.
-Maria: Mida nüüd pühitsetakse, et vahuveiniga alustatakse?
-Riho: Kas sa ei mäleta, tutvusime täpselt kolme kuu eest?
+Maria: Mida nüüd pühitsetakse, et vahuveiniga alustatakse.
+Riho: Kas sa ei mäleta, tutvusime täpselt kolme kuu eest.
 Riho: See oli kolmapäev, 11. september.
 Riho: Ja peale selle oli sinul eelmisel nädalalõpul tõesti vägev esietendus.
 Riho: Sa ei esitanud küll peaosa, aga tegelikult mängisid tõesti hästi.
@@ -1482,20 +1484,21 @@ Riho: Seal oli ju veel teisigi, kes ütlesid sama.
 Riho: Aga nüüd tellima.
 Riho: Minul on juba kõht tühi.
 Riho: Ma ei söönud terve päeva, kuna mõtlesin, mida kõike head siin pakutakse.
-Maria: Nii minagi. Kas sööme eelrooga?
+Maria: Nii minagi.
+Kas sööme eelrooga.
 Riho: Kui soovid.
 Riho: Võtan sparglisupi, ma ei ole seda kunagi varem söönud.
 Maria: See on kindlasti hea.
 Maria: Mina võtaksin krevetisalati.
 Maria: Ma ei hooli supist nii väga ja ei jaksa kahjuks kõike süüa, kuigi sooviksin.
-Riho: Mida pearoaks?
+Riho: Mida pearoaks.
 Maria: Kasvõi lambafileed ja herneid.
 Maria: Sinule soovitan põhjapõdraliha hautist, kui sa ei ole seda varem maitsnud.
-Riho: Mis selles on?
+Riho: Mis selles on.
 Maria: Põhjapõdraliha, kartulipuder ja pohlamoos.
 Maria: See on väheke selline rahvustoit, aga julgen soovitada, see on tõesti maitsev.
 Riho: Väga hea, võtan selle.
-Maria: Mida võtame magustoiduks?
+Maria: Mida võtame magustoiduks.
 Riho: Sina võid otsustada.
 Riho: Ma ei tea midagi magustoitudest.
 Riho: Kodus on vahel pannkoogid või jäätis.
@@ -1505,21 +1508,23 @@ Riho: Kumba tahad.
 Riho: Vali sina.
 Riho: Vaatan, mis jooke siin on.
 Maria: Võtame siis ühe tüki puuviljakooki ja šokolaaditorti, üks sulle, teine mulle.
-Maria: Mida joome?
+Maria: Mida joome.
 Riho: Veini, siin on väga suur valik.
 Riho: Küsime kelnerilt, mida ta soovitab.
 Maria: Sobib, sooviksin siiski punast veini.
 Maria: Tellime mineraalvett ka paar pudelit, mul on janu.
 Kelner on tellimuse vastu võtnud.
-Kelner: Mida soovite pearoa kõrvale, kartuleid või riisi?
-Maria: Milliseid kartuleid teil on?
+Kelner: Mida soovite pearoa kõrvale, kartuleid või riisi.
+Maria: Milliseid kartuleid teil on.
 Kelner: Küüslaugukartuleid, friikartuleid, viilutatud kartuleid, keedetud kartuleid, praekartuleid, täidetud ahjukartuleid, grillitud kartuleid, kartulihautist...
 Maria: Võtan küüslaugukartulid.
-Kelner: Kas tuleb veel midagi?
-Riho: Tass kohvi ja üks tee. Kaks korda neli sentiliitrit mesimurakalikööri ka. See on kõik, aitäh.
+Kelner: Kas tuleb veel midagi.
+Riho: Tass kohvi ja üks tee. 
+Kaks korda neli sentiliitrit mesimurakalikööri ka. 
+See on kõik, aitäh.
 Riho: Küll oli maitsev söök.
-Riho: Kuidas sinu praad maitses?
-Riho: Kas seal oli parajalt maitseaineid?
+Riho: Kuidas sinu praad maitses.
+Riho: Kas seal oli parajalt maitseaineid.
 Maria: See ei olnud nii hea, kui arvasin, ja portsjon oli mulle liiga suur.
 Maria: Mu kõht on nüüd päris täis.
 Maria: Oleks pidanud sööma taimetoitu.
@@ -1533,21 +1538,21 @@ Riho: Mulle meeldis väga see lauljanna.
 Maria: Ta jõuab veel kaugele.
 Riho: Jah, olen sinuga sama meelt.
 Maria: Kahju ainult, et siin ei näe ühtegi tuttavat.
-Riho: Kas oled minust juba tüdinenud?
+Riho: Kas oled minust juba tüdinenud.
 Maria: Ega ma seda mõtelnud.
 Maria: Tunnen end ebamugavalt sellises uhkes paigas.
 Maria: Siin on päris palju välismaalasi ja vanu abielupaare.
 Maria: Aga sina oled muidugi parim, mis minuga on juhtunud.
-Riho: Kas saaksime arve?
-Kelner: Koos või eraldi?
+Riho: Kas saaksime arve.
+Kelner: Koos või eraldi.
 Riho: Koos, aitäh.
 Maria ja Riho tõdesid, et õhtu oli tõepoolest õnnestunud, aga ei tasu enam raha restoranis raisata.
 Parem on süüa kahekesi kodus spagette, millele on pandud rohkesti ketšupit, juua õlut otse pudelist, vaadata üheskoos jalad laual telerit ja minna seejärel edasi pidutsema kuhugi odavasse pubisse, kus on alati sõbrad ootamas.
-Elulugu
-Riho: Kuidas sa oled õppinud soome keelt nii hästi rääkima, Jens?
+Elulugu.
+Riho: Kuidas sa oled õppinud soome keelt nii hästi rääkima, Jens.
 Jens: Nagu olen öelnud, minu endine naine oli pärit Soomest, Turust.
 Jens: Oskasin soome keelt siiski juba enne, kui temaga kohtusin.
-Riho: Kus sa olid siis seda õppinud?
+Riho: Kus sa olid siis seda õppinud.
 Jens: Olen õppinud keelekeskuses soome keelt kolm aastat ja elanud sageli Soomes.
 Jens: Tõtt rääkides olen isegi natuke soome sugu, nimelt minu ema isa oli soomerootslane.
 Riho: See on natuke kauge sugulane.
@@ -1555,28 +1560,28 @@ Jens: Ei olegi nii kaugelt, see tähendab, et minu vanaema oli pooleldi soomeroo
 Jens: Minus on nõnda 1/4 (üks neljandik) soomerootslast ja tõsi on, et siit huvi Soome vastu algas.
 Jens: Olen ju lapsena veetnud suvesid Edela-Soomes.
 Jens: Kui alustasin õpinguid ülikoolis, siis hakkasin kohe ka soome keelt õppima.
-Riho: Mis sinu peaaine oli?
+Riho: Mis sinu peaaine oli.
 Jens: Alguses õppisin majandust.
 Jens: Käisin õpingute ajal tööl ühes arvutite importimise firmas ja hiljem siirdusingi sellele alale.
 Jens: Majandusõpinguist on olnud küll päris palju kasu IT-tööski.
-Riho: Kas sa lõpetasid ülikooli?
+Riho: Kas sa lõpetasid ülikooli.
 Jens: Jah, lõpetasin kuus aastat tagasi.
-Riho: Kes sa ametilt oled?
+Riho: Kes sa ametilt oled.
 Jens: IT-analüütik.
 Jens: Olen olnud juba neli aastat OÜ Beo teenistuses.
-Riho: Kas oled armees käinud?
+Riho: Kas oled armees käinud.
 Jens: Jah, sooritasin küpsuseksami ja seejärel olin armees.
 Riho: Mida tähendab "sooritasin küpsuseksami", ma ei saa sellest aru mitte sugugi.
 Jens: See tähendab, et käisin gümnaasiumi lõpuni ja sooritasin kõik eksamid ja oli seejärel küpsuseksami sooritanu.
 Riho: Saan nüüd aru.
-Riho: Kus sa oled veel töötanud?
+Riho: Kus sa oled veel töötanud.
 Jens: Mitmes kohas: tanklas, autoparandustöökojas mehhaanikuna, autojuhina ja isegi müügimehena.
-Riho: Mida sa müüsid?
+Riho: Mida sa müüsid.
 Jens: Koopiamasinaid.
-Jens: Mis koolis sa oled käinud?
+Jens: Mis koolis sa oled käinud.
 Riho: Olen käinud põhikoolis ja gümnaasiumis Tartus, sooritasin küpsuseksami ja kohe samal aastal astusin ülikooli sotsioloogiat õppima.
 Riho: Sel semestril ja ehk järgmiselgi olen siin vahetusüliõpilane.
-Jens: Ja millest selline huvi soome keele vastu?
+Jens: Ja millest selline huvi soome keele vastu.
 Jens: Räägid seda täiesti suurepäraselt.
 Riho: Ei tea isegi täpselt.
 Riho: Soome on mind ikka huvitanud ja ühel päeval otsustasin minna kursusele.
@@ -1585,12 +1590,12 @@ Riho: Kokku olen õppinud soome keelt ligikaudu kolm aastat.
 Riho: Nüüd olen saanud ka soomlasest tüdruksõbra, see kindlasti tõstab minu soome keele oskust.
 Jens: Nii see on, minagi elasin kaks ja pool aastat soome naisega koos.
 Riho: Räägi mulle temast, aga mõnikord hiljem.
-Riho: Sellest tuligi mul meelde, et lubasin täna õhtul veel Maria juures käia, ma loomulikult ei armasta teda soome keele, vaid tema meeldiva iseloomu ja ilu tõttu. 
+Riho: Sellest tuligi mul meelde, et lubasin täna õhtul veel Maria juures käia, ma loomulikult ei armasta teda soome keele, vaid tema meeldiva iseloomu ja ilu tõttu. .
 Riho: Maria tundis end eile halvasti, lähen vaatama, kas ta on haigestunud.
-Jens: Kas te ei ela veel koos?
+Jens: Kas te ei ela veel koos.
 Riho: No, ei, me oleme sellised natuke vanaaegsed ja romantilised.
 Riho: Et kõigepealt kihlutakse ja nii edasi.
-Jens: Kas olete siis juba kihlatud?
+Jens: Kas olete siis juba kihlatud.
 Riho: Ei ole.
 Riho: Ei ole sellest rääkinudki.
 Riho: Maria on jätkuvalt seda meelt, et argipäev võib rikkuda kõik parimadki suhted, me ei tahaks seda katsetada.
@@ -1606,8 +1611,8 @@ Jens: Ja nii see algas.
 Riho: Ära nüüd hirmuta.
 Riho: Jooksen kiiresti ja võtan kauplusest mett ja küüslauku kaasa.
 Maria on haige.
-Riho: Hei, kullake, kuidas läheb?
-Riho: Miks sa voodis oled?
+Riho: Hei, kullake, kuidas läheb.
+Riho: Miks sa voodis oled.
 Maria: Mul on väga paha olla, mul on himrus nohu, kurk on valus ja pea valutab.
 Maria: Ja kõvasti ajab köhima.
 Maria: Tõenäoliselt olen külmetunud.
@@ -1621,25 +1626,25 @@ Riho: Jooksen kohe.
 Riho: Panen vaid vee keema.
 Maria: Too mitu pakki.
 Riho: Loomulikult.
-Riho: Kas sa soovid veel midagi?
+Riho: Kas sa soovid veel midagi.
 Riho: Tõin sulle mett ja küüslauku.
 Riho: Minu ema ütleb, et neist on alati abi.
 Maria: Ei tänan.
 Maria: Kas sa annaksid sealt teisest sahtlist mulle kraadiklaasi, siis mõõdan sel ajal palavikku.
 Riho: Ma ei leia seda kusagilt.
 Maria: Vaata siis köögikapist, sealt, kus käärid ja plaastrid on.
-Maria: Kas leidsid?
+Maria: Kas leidsid.
 Riho: Jah, toon kohe.
 Riho: See on katki.
 Maria: On jah.
 Maria: Arvan küll, et mul on mingil määral palavikku.
 Riho: Lase ma katsun sinu otsmikku.
-Maria: No, mis arsti sa mängid?
+Maria: No, mis arsti sa mängid.
 Riho: Küll ma aru saan, kui see on minu käest kuumem.
 Riho: Tundub tõesti kuum.
 Riho: Nüüd sa pead küll natuke ootama.
 Riho: Käin apteegis ja toon uue kraadiklaasi ja ravimeid ka.
-Riho: Või tahad, et helistan arstile?
+Riho: Või tahad, et helistan arstile.
 Maria: Ei, ei see saa nüüd nii hull olla.
 Maria: Küll see läheb ise üle.
 Maria: Joon kuuma piima ja mett.
@@ -1660,7 +1665,7 @@ Riho: Okei.
 Riho: Helistan sulle niipea kui võimalik.
 Riho üritab suudelda, aga Maria keelab teda.
 Maria: Mis siis, kui see nakkab.
-Maria: Kui me mõlemad oleme haiged, siis kes meid põetab?
+Maria: Kui me mõlemad oleme haiged, siis kes meid põetab.
 Riho: Minu arust oleks tore olla sinuga koos haige.
 Riho: Kõik päevad voodis.
 Maria: Sul ei saa tõsi taga olla.
@@ -1677,16 +1682,16 @@ Arst kirjutab talle retsepti köha- ja nohuravimite jaoks ning nädalase haigusl
 Paari päeva möödudes ongi palavik langenud ja Maria tunneb ennast palju paremini.
 Riho käib iga päev teda vaatamas ja põetamas.
 Nädala möödudes on Maria täiesti terve ja pääseb taas tööle ja kursustele.
-Soome silmapaistvad isikud
+Soome silmapaistvad isikud.
 Aastatel 1860- 2002 oli soome rahaühik mark.
 Rahatähtedel olid Elias Lönnrot, Jean Sibelius, Paavo Nurmi, Väinö Linna ja Alvar Aalto.
 Aastal 2002 võttis Soome marga asemel kasutusele euro.
-Otsusta, kellest on jutt?
-Väinö Linna
-(snd 1920 Urjalas, srn 1992 Tamperes)
+Otsusta, kellest on jutt.
+Väinö Linna.
+(snd 1920 Urjalas, srn 1992 Tamperes) .
 Kirjanik, sai akadeemiku aunimetuse 1980.
 Esikromaan Eesmärk ilmus 1974.
-Tema peateoses Tundmatu sõdur (1954) peegeldab ta oma kogemusi jätkusõjas (kuulipildujakompaniis).
+Tema peateoses Tundmatu sõdur (1954) peegeldab ta oma kogemusi jätkusõjas (kuulipildujakompaniis) .
 Teos kaitses tavalist sõdurit: isikupärast, ebasõdurlikku, aga tegutsemishetkel sangarlikku.
 Realistlikud kirjeldused põhjustasid teose ilmumisel poleemikat, mis kujunes soome kirjandusajaloo suurimaks.
 Sõjaaegsete kõrgemate staapide ja tagala esindajad ei võinud seedida Linna rahvalikku, "mitte-isamaalist" nägemust sõjast.
@@ -1698,9 +1703,9 @@ Tema peateost on tõlgitud paljudesse keeltesse.
 Neist on tehtud õnnestunud dramatiseeringud.
 Mõlemast peateosest on tehtud film.
 Tema loomingusse kuulub ka aktuaalseid esseid ja artikleid, mis on selgepiiriliste sõnavõttudena kinnitanud tema mainet isikupärase mõtlejana.
-Elias Lönnrot
-(snd 1802 Sammattis, srn 1884 samas vallas)
-rätsepa poeg
+Elias Lönnrot.
+(snd 1802 Sammattis, srn 1884 samas vallas) .
+rätsepa poeg.
 Kalevala autor, rahvaluule koguja ja keeleteadlane.
 Ta käis puudust tundes koolis Tammisaares, Turus ja Porvoos, astus ülikooli 1822, lõpetas arstina, tegi rahvaluulekogumisretki Ida-Karjalas, Aunusel jm.
 Ta avaldas Kalevala 1835, Kandletari 1840, soome rahva vanasõnu, soome rahva mõistatusi, soome rahva muistseid loitse ja suure soome-rootsi sõnaraamatu.
@@ -1709,27 +1714,27 @@ soomlane leidis oma mineviku, oma luule ja iseenda.
 Ta sai soome keele professoriks 1853, ta oli ka soome kirjakeele uuendaja.
 Ta oli ka ajakirjanik.
 Ta asutas esimese soomekeelse ajalehe Mesilase, mis ilmus 1836-37 ja 1839-40.
-Alvar Aalto
-(snd 1898 Kuortanes, srn 1976 Helsingis)
-arhitekt
+Alvar Aalto.
+(snd 1898 Kuortanes, srn 1976 Helsingis) .
+arhitekt.
 Soome Akadeemia liige 1955-68.
 Ta oli rahvusvahelise tähtsusega funktsionalismi perioodi ja sellele järgnenud aja arhitekt.
 Tähelepanuväärseimad tööd: Paimio sanatoorium, Kansaneläikelaitokse administratiivhoone, Finlandia-talo, Seinäjoe ja Vuoksenniska kirikud, Göteburgi raekoda, Esseni ooperimaja Saksamaal jm.
 Ta projekteeris ka arvukalt detail- ja regionaalplaneeringuid nii Soomes kui välismaal.
-Nt Rovaniemi detailplaneering, Helnsingi tsentrumi plaan.
+Nt Rovaniemi detailplaneering, Helsingi tsentrumi plaan.
 Ta tegutses ka kunstitööstuses ja kujutavas kunstis.
-Paavo Nurmi
-(snd 1897 Turus, srn 1973 Helsingis)
+Paavo Nurmi.
+(snd 1897 Turus, srn 1973 Helsingis) .
 Kõikide aegade kuulsaim pikamaajooksja.
 Ta võitis olümpiamängudel 1920-28 kokku üheksa kuld- ja kolm hõbemedalit ning jooksis karjääri jooksul 25 maailmarekordit.
 Ta kuulutati elukutseliseks ja talt võeti õigus osaleda 1932. aasta olümpiamängudel.
-Teda süüdistati amatöörspordi reeglite vastases tasude vastuvõtmises. 
+Teda süüdistati amatöörspordi reeglite vastases tasude vastuvõtmises. .
 Lõpetanud spordi, tegutses ta kinnisvara- ja ärialal.
 Ta rajas 1968 omanimelise fondi, mille eesmärgiks on edendada südame- ja veresoonkonnahaiguste ning üldise rahvatervise uurimist.
-Wäinö Aaltose teda kujutav jooksjakuju avati Helnsingis 1925 (koopia Turus).
+Wäinö Aaltose teda kujutav jooksjakuju avati Helsingis 1925 (koopia Turus) .
 Ta sai soome spordi suure teeneteristi 1947.
-Jean Sibelius
-(snd 1865 Hämeenlinnas, srn 1957 Järvenpääl)
+Jean Sibelius.
+(snd 1865 Hämeenlinnas, srn 1957 Järvenpääl) .
 Soome muusikaajaloo tähtsaim helilooja, professor.
 Temast sai üliõpilane 1885, kavatses saada juristiks, aga hakkas harjutama helikunsti.
 Juba kümneaastasena oli ta komponeerinud Veetilgad viiulile ja tšellole.
@@ -1738,29 +1743,29 @@ Tuntuimad tema kompositsioonidest on Kullervo-sümfoonia, Toonela luik, Lemmink�
 Iseäranis karjääri keskperioodil dirigeeris ta tihti ise oma teoseid.
 Ta sai teenete eest 1897 riigilt kunstnikupensioni.
 Helsingis on Sibeliuse Akadeemia - Soome ainus ja põhjamaade suurim muusikakõrgkool.
-Lähme reisile!
+Lähme reisile.
 Aeg on läinud kiiresti ja suvi on tulemas.
 Riho ja Maria tahavad juulis koos reisile minna, enne kui Riho peab tagasi Eestisse kolima.
 Tal ju oli stipendium vaid üheks aastaks.
-Nad on asja üle järele mõtelnud ja tulnud järeldusele, et välismaale nad ei lähe (on ka siin Soomes vaatamisväärsusi), rongiga ei sõida ega pakettreisil ei osale, kuna nad tahavad olla kahekesi.
+Nad on asja üle järele mõtelnud ja tulnud järeldusele, et välismaale nad ei lähe (on ka siin Soomes vaatamisväärsusi) , rongiga ei sõida ega pakettreisil ei osale, kuna nad tahavad olla kahekesi.
 Lapimaa küll meeldiks mõlemale, aga lennureisiks sinna pole neil raha.
 Lõpuks otsustavad nad üürida auto ja sõita nädal aega Soomes ringi.
 Riho käis reisibüroos brošüüre hankimas ja nende abil koostasid nad järgmise reisiplaani.
-Alguspunkt on Helnsingi.
+Alguspunkt on Helsingi.
 Esimene peatus on Rauma.
-(Turusse nad ei lähe, sest Riho on selle linnaga juba varem tutvunud.)
+(Turusse nad ei lähe, sest Riho on selle linnaga juba varem tutvunud) .
 Rauma absoluutne pärl on Unesco maailmapärandi objekt Vana Rauma, mis on ainulaadne näide vanast põhjamaisest puulinnast.
 Sealt leiab lugematul hulgal väikseid tegutsevaid poode, käsitöökauplusi, galeriisid, kohvikuid ja restorane.
 Vanas Raumas on idüllilisi elumaju ja aedu, ehtne turumiljöö ja mitu linna aastasadade pikkustest traditsioonidest rääkivat muuseumi.
 Raumast sõidetakse Porisse, kus peatutakse, et kuulata jazzkontserti, sest samal ajal on Poris rahvusvaheline jazzfestival.
-Ei saa ju jätta sellist võimalust kasutamata!
+Ei saa ju jätta sellist võimalust kasutamata.
 Plaanis on üle saja kontserdi, tasuta ja tasulisi.
 Porisse jäädakse siiski vaid üheks õhtuks.
-Järgmisel päeval minnakse Tamperesse, kus käiakse Püüniki vabaõhuteatris (seal on pöörlev parter).
+Järgmisel päeval minnakse Tamperesse, kus käiakse Püüniki vabaõhuteatris (seal on pöörlev parter) .
 Piletid on tulebette kinni panna.
 Seda teeb Maria.
 Kavas on veel Muumioru muuseum.
-Tamperest sõidetakse Jyväskyllä, käiakse Alvar Aalto muuseumis, peatutakse Soome suuruselt teise järve Päijänte ääres. 
+Tamperest sõidetakse Jyväskyllä, käiakse Alvar Aalto muuseumis, peatutakse Soome suuruselt teise järve Päijänte ääres. .
 Seal veedetakse öö.
 Jyväskyläst jätkatakse Oulu kaudu põhjarannikut pidi Lapimaa suunas, kuhu saabutakse Tornios, Rootsi piiril.
 Tullakse Rovaniemisse, Lapimaa tänapäevasesse pealinna.
@@ -1784,8 +1789,8 @@ Lahti on maa tuntuim spordikeskus.
 Seal käiakse vaatamas suusahüppemäge ja suusamuuseumis.
 Kuna Riho ja Maria ei hooli hotellidest, siis ööbitakse kämpingus telgis.
 Tingimata on tuleb kaasa võtta fotoaparaat, teedeatlas, telk ja magamiskott.
-Harrastused
-Mida sa harrastad?
+Harrastused.
+Mida sa harrastad.
 Olen lapsepõlvest saadik harrastanud sporti.
 Juba viieaastaselt hakkasin käima vähemalt kolm korda nädalas jooksmas.
 Hiljem lisandus harrastustele veel ujumine ja jalgpall.
@@ -1817,7 +1822,7 @@ Nooremana võistlesin ise, nüüd jälgin võistlusi staadionil, nii palju kui v
 Haruharva jääb mul midagi tähtsat nägemata.
 Olen olnud mõnegi maailmarekordi sünni juures.
 Tellin spordiajakirju ja loen meeleldi raamatuid kuulsate sportlaste elust ja saavutustest.
-Lapsepõlvekodu lähedal oli spordiväljak, ja veetsin seal kõik päevad.
+Lapsepõlvekodu lähedal oli spordiväljak ja veetsin seal kõik päevad.
 Olen harrastanud mitmeid alasid: kergejõustikku, tennist, jalgrattasõitu, maadlust.
 Parimad tulemused on siiski jäähokist ja ujumisest.
 Nüüd harrastan ujumist.
@@ -1830,14 +1835,14 @@ Minu teine harrastus on reisimine.
 Paar korda aastas käin tingimata kusagil välismaal.
 Üritan alati leida uue ja põneva koha.
 Suurim soov on käia kõigil mandritel, nimekirjast puuduvad veel Aafrika ja polaarmaad.
-See on küll üsna kallis harrastus, aga mille jaoks inimene siis töötab?
+See on küll üsna kallis harrastus, aga mille jaoks inimene siis töötab.
 Kui minul ei ole nüüd peret, on kerge selle jaoks raha leida.
 Olen ometigi kindel selles, et kui abiellun uuesti ja sünnivad lapsed, siis ma ei loobu mingil juhul reisimisest.
 Võib ju ka reisida koos perega.
-Maailmas on nii palju vaatamisväärset!
+Maailmas on nii palju vaatamisväärset.
 Parim reis on seniajani olnud kaks nädalat Jaapanis, kui samal ajal peeti seal olümpiamänge.
 Õnnestus näha jäähoki finaalmatši.
-Vägev!
+Vägev.
 Kogu Jaapan oma eksootilise kultuuri ja inimestega jättis mulle unustamatud mälestused.
 Kui on vaba õhtu, istun sõpradega koos kõrtsis või käin diskol.
 Minu suur armastus on teater ja klassikaline muusika.
@@ -1858,8 +1863,8 @@ Loen ükskõik missuguseid raamatuid, see oleneb meeleolust.
 Loen detektiivromaane ja armastusromaane sama hästi kui luuletusi ja ajaloolisi uurimusi.
 Ei või taluda mingisuguseid rämpslehti.
 Mulle meeldib liikumine, vormis püsimaks käin kaks korda nädalas aeroobikas.
-Vaba aeg
-Mida sa vabal ajal teed?
+Vaba aeg.
+Mida sa vabal ajal teed.
 Kahjuks ei jää harrastusteks palju aega, sest minul on suur pere.
 Korra või kaks nädalas käin segakooris laulmas.
 Olen seda teinud pea 25 aastat ega taha mitte mingil juhul lõpetada.
@@ -1870,10 +1875,10 @@ Eriti meeldib mulle küpsetada.
 Enda arust koon, heegeldan ja õmblen päris hästi.
 Vähemalt kõik pereliikmed on seda meelt, sest kampsuneid, sokke ja kindaid jätkub kõigile.
 Kevaditi ja suviti töötan aias nii kodus kui ka suvilas.
-See on parim puhkus!
+See on parim puhkus.
 Kasvatan ka toas mitmesuguseid toataimi ja maitsetaimi.
 Aeg-ajalt käin õhtuti väljas ja kui lähen, siis teatrisse või kontserdile.
-Matti (Eija abikaasa)
+Matti (Eija abikaasa) .
 Mul ei ole ühtegi erilist harrastust.
 Koolilapsena kogusin ajaviiteks postmarke, õpingute ajal olin jälle huvitatud autodest.
 Käisin näitustel ja tellisin vastavaid ajakirju.
@@ -1893,7 +1898,7 @@ Olen harrastanud suusatamist ja pikamaajooksu ning mänginud jalgpalli.
 Mõnikord tegelen viimati nimetatuga ikka veel ja talviti käin slaalomit sõitmas.
 Mängin natuke kitarri.
 Kuulan ainult rokkmuusikat.
-Mul õnnestus päris odavalt saada head aparaadid?? soodusmüügist.
+Mul õnnestus päris odavalt saada head aparaadid soodusmüügist.
 Vabadel hetkedel jalutan tavaliselt koeraga.
 Mina käin ratsutamas ja armastan lisaks hobustele veel teisigi loomi.
 Tahaksin endale veel küülikut ja hamstrit, aga vanemad ütlevad, et neist ei tasu isegi rääkida, sest meil on juba koer ja kass.
@@ -1930,7 +1935,7 @@ Põhja-Lapimaal ei looju päike suvel kahe kuu jooksul ja talvel see ei tõuse �
 Anu tahaks korra Lapimaal käia ka polaaröö ajal.
 Lisaks huvitab teda saarestik, kus on tuhandeid saari.
 Ahvenamaal või Järve-Soomeski oleks tore käia.
-On ju Soome "tuhande järve maa".
+On ju Soome "tuhande järve maa" .
 Loodusele, reisimisele ja teadusele lisaks läheb Anul palju aega üliõpilastegevusele.
 Ta osaleb mitmetes ühingutes, saunaõhtutel ja matkadel.
 Teda huvitav väga ka rahvapärimus.
@@ -1938,14 +1943,14 @@ Kooliajal käis ta rahvatantsuansamblis laulmas ja rahvatantsu tantsimas.
 Ta oskab ka kannelt mängida.
 Viimasel ajal ei ole selle jaoks enam aega jäänud, aga Anu usub end tantsivat ja laulvat tulevikuski.
 On tal ju kapis vanaema õmmeldud rahvariidedki.
-Nädalavahetus Helsingis
-Riho vanemad on helistanud ja öelnud, et tulevad poistega koos Helsingisse 2.6 (teisel päeval juunis).
+Nädalavahetus Helsingis.
+Riho vanemad on helistanud ja öelnud, et tulevad poistega koos Helsingisse 2.6 (teisel päeval juunis) .
 Nad kavatsevad tutvuda Helsingi tähtsaimate vaatamisväärsustega ja käia Serena veelõbustuspargis.
 Riho lubanud nad vastu võtta.
 Vanemad ongi nüüd tulemas, aga Rihol on kiire, sest tal tuleb õppida keeleteaduse ajaloo eksamiks.
 Ta palub Marial neile linna tutvustada.
 Maria soostub kohe, kuna tal on vaba päev ja teatrietendused on selleks korraks lõppenud.
-Nad arutavad natuke asja ja koostavad koos plaani, mis näeb välja selline:
+Nad arutavad natuke asja ja koostavad koos plaani, mis näeb välja selline:.
 Start on Helsingi kesklinnas asetseval Senati väljakul, mille ümber on mitmeid kauneid vanu hooneid.
 Väljaku keskel on keiser Aleksander II ausammas.
 Kirikust vasakul pool on ülikooli peahoone ja raamatukogu.
@@ -1971,14 +1976,14 @@ See on suur roheala, kus on mitmeid välismaa saatkondi.
 Korkeasaare loomaaed.
 Linnanmäki lõbustuspark.
 Suomenlinna -merekindlus.
-Kuna vaatamist on üheks päevaks liiga palju, siis Suomenlinna ja loomaaeda minnakse 5.6 (viiendal juunil), kui vanemad naasevad Helsingisse.
+Kuna vaatamist on üheks päevaks liiga palju, siis Suomenlinna ja loomaaeda minnakse 5.6 (viiendal juunil) , kui vanemad naasevad Helsingisse.
 Vahepeal kavatsevad nad käia Laaksoste juures Turus.
 Lõpuks nad kinnitavad, et laev saabub Lõunasadamasse kell 11.10.
 Riho läheb oma perele vastu.
 Nad tulevad Kaubaturu kaudu kesklinna.
 Möödaminnes vaadatakse Presidendilossi.
 Kell 11.45 kohtutakse Mariaga Senati väljakul toomkiriku ees.
-Lisaandmeid Helsingist:
+Lisaandmeid Helsingist:.
 Helsingi on rajatud 1550.
 Rajaja on Rootsi kuningas Gustav Vasa.
 Aastal 1809 liideti Soome Venemaaga ja aastal 1812 tehti Helsingist pealinn.
@@ -1990,8 +1995,8 @@ Aastal 1952 peeti Helsingis olümpiamänge.
 Helsingi rahvaarv on nüüd üle 600 000 inimese.
 Carl Gustaf Mannerheim (1867-1951) - marssal, valgete poole komandör Soome kodusõjas aastatel 1917-1918, Soome sõjaväe ülemjuhataja talvesõja (1939-1940) ja jätkusõja (1941-44) ajal, 1944-46 Soome vabariigi president.
 Ta valiti aastal 2004 suurimaks soomlaseks.
-Andmeid Soomest
-Soome pindala on 338 000 km2 (ruutkilomeetrit). 
+Andmeid Soomest.
+Soome pindala on 338 000 km2 (ruutkilomeetrit) . .
 Nüüd on Soomes umbes 5,4 miljonit elanikku.
 Soome on vabariik.
 Parlamendis on 200 rahvasaadikut.
@@ -1999,15 +2004,15 @@ Parlamenti valitakse neljaks ja vabariigi presidenti kuueks aastaks korraga.
 Soome lipu (siniristlipu) värvid on sinine ja valge.
 Soome rahaühik on euro.
 1 euro = 100 senti.
-Soomes on kaks riigikeelt: soome ja rootsi (aastal 1863 sai soome keel riigi teiseks ametlikuks keeleks).
+Soomes on kaks riigikeelt: soome ja rootsi (aastal 1863 sai soome keel riigi teiseks ametlikuks keeleks) .
 93% (protsenti) elanikest räägib emakeelena soome keelt, 5,4 % rootsi keelt.
 Ametlik positsioon on ka kolmel saami keelel, mida räägib ühtekokku umbes 2300 inimest.
 Saami keeled on soome keele sugulaskeeled.
 Soomes on üheksa ajaloolist maakonda: Häme, Satakunta, Savo, Karjala, Pohjanmaa, Varsinais-Suomi, Uusimaa, Ahvenamaa ja Lapimaa.
 Soomes on u 188 000 järve ja 179 584 saart.
 Soome järvede vesi on puhas ja kõrge kvaliteediga.
-Kõrgeim tundur on Halti (kõrgus 1328 m).
-Soome ajalugu
+Kõrgeim tundur on Halti (kõrgus 1328 m) .
+Soome ajalugu.
 Soome on asustatud kohe jääaja järel ehk umbes 10 000 aastat tagasi.
 1155-1323 toodi Soome läänest ristiusk.
 Rootslased vallutasid Soome.
@@ -2030,11 +2035,11 @@ Jätkusõda lõppes Soome kaotusega.
 Soome kaotas Nõukogude Liidule veel alasid ja kohustus maksma raskeid reparatsioone.
 1955 Soome võeti vastu Ühinenud Rahvaste Organisatsiooni.
 1956-1981 president Urho Kekkoneni ajal vahetus sõjajärgne välispoliitiline passiivsus erapooletuspoliitikaks, loodi head suhted paljude maade ja rahvastega.
-1975 organiseeriti Helsingis Euroopa julgeoleku- ja koostöökonverents (ETYK).
+1975 organiseeriti Helsingis Euroopa julgeoleku- ja koostöökonverents (ETYK) .
 1995 Soome liitus Euroopa Liiduga.
 2000 Tarja Halonenist sai Soome esimene naispresident.
 2002 Soome rahaühikuks sai marga asemel euro.
-Kuidas Riho ja Maria lugu jätkub?
-Õnnelik pereelu
-Kas ämm hävitab suhte?
+Kuidas Riho ja Maria lugu jätkub.
+Õnnelik pereelu.
+Kas ämm hävitab suhte.
 Mariast saab kuulus filmistaar.

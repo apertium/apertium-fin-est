@@ -16,15 +16,6 @@
 /apertium-fin-est.fin-est.t2x -text
 /apertium-fin-est.fin-est.t3x -text
 /autogen.sh -text
-comp/comp.py -text
-comp/eesti.mrf -text
-comp/eesti.txt -text
-comp/soome.biltr -text
-comp/soome.dix -text
-comp/soome.mrf -text
-comp/soome.pchnk -text
-comp/soome.tolge -text
-comp/soome.txt -text
 /configure.ac -text
 dev/bidix-analyser.fin-est.txt -text
 dev/bidix-sanity.sh -text
@@ -45,9 +36,28 @@ dev/bidix/unreliable.fin-est.vblex.checked -text
 dev/est-eng.txt -text
 dev/est-fin.awk -text
 dev/est-fin.tsv -text
+dev/lexind/comp.py -text
+dev/lexind/di.py -text
+dev/lexind/dix/apertium-fin-est.fin-est.dix -text
+dev/lexind/dix/est-fin.rlx.bin -text
+dev/lexind/dix/fin-est.rlx.bin -text
+dev/lexind/ls.py -text
+dev/lexind/modes/est-fin-mrf.mode -text
+dev/lexind/modes/fin-est-biltrans-ls.mode -text
+dev/lexind/modes/fin-est-ls.mode -text
+dev/lexind/modes/fin-est-mrf.mode -text
+dev/lexind/modes/fin-est-postchunk-ls.mode -text
+dev/lexind/r.sh -text
+dev/lexind/rls.sh -text
+dev/lexind/test.sh -text
+dev/lexind/testset/udtest.txt -text
+dev/lexind/testset/udtfin.txt -text
+dev/lexind/textbook/eesti.txt -text
+dev/lexind/textbook/soome.txt -text
 dev/punctuation.lexc -text
 /est-fin.prob -text svneol=unset#unset
 /fin-est.prob -text svneol=unset#unset
+/gt2apertium.cg3r -text
 /modes.xml -text
 /mult.py -text
 /pending-tests.sh -text

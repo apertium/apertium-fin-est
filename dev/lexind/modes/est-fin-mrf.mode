@@ -1,0 +1,3 @@
+    
+    hfst-proc -e -w /home/tiina/apertium/apertium-fin-est/est-fin.automorf-untrimmed.hfst |cg-proc -1 -w /home/tiina/apertium/apertium-fin-est/est-fin.rlx.bin 
+  

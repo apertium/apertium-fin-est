@@ -31,14 +31,14 @@ Matti on mukava ja rauhallinen mies.
 Eija on Matille hyvä vaimo ja lapsille erittäin hyvä äiti.
 Eija on lääkäri ja käy töissä terveyskeskuksessa.
 Heillä on kolme lasta, yksi poika ja kaksi tytärtä.
-Juha (20) on ammatikoulussa, hänestä tulee kokki.
+Juha (20) on ammattikoulussa, hänestä tulee kokki.
 Sanna (15) on teini-ikäinen ja käy koulua, Tiina (5) on päiväkodissa.
-He ovat oikein mukava ja onnelinen perhe.
+He ovat oikein mukava ja onnellinen perhe.
 Heillä on pieni valkoinen kissa Mirri.
 Se on hyvin ystävällinen.
 Heillä on myös iso musta koira Musti.
 Se on vielä aika nuori.
-Tiina leikkii usein koeran kanssa.
+Tiina leikkii usein koiran kanssa.
 Eija harrastaa käsitöitä ja ruuanlaittoa.
 Hän soittaa pianoa ja laulaa hyvin.
 Eija laulaa kuorossa.
@@ -75,7 +75,7 @@ Riho:.
 Olen Tartosta.
 Jens:.
 Ai kuinka kiva.
-Olin Tartossa kaksi viikoa sitten, työmatkalla.
+Olin Tartossa kaksi viikkoa sitten, työmatkalla.
 Riho:.
 Puhutko viroa?
 Jens:.
@@ -106,7 +106,7 @@ Olen täällä töissä.
 Riho:.
 Mitä harrastat?
 Jens:.
-Harrastan uintia ja jääkiekkoa. .
+Harrastan uintia ja jääkiekkoa.
 Olen urheiluhullu.
 Riho:.
 Niin minäkin.
@@ -121,7 +121,7 @@ Sepä hauskaa, meillä on sama matka.
 Mennään ensin kaljalle ja sitten yhdessä kotiin.
 Sopiiko?
 Jens:.
-See sopii erittäin hyvin.
+Se sopii erittäin hyvin.
 Riho:.
 Nyt voit kysyä minulta kaikkea.
 Anteeksi, että olin näin utelias.
@@ -138,7 +138,7 @@ Kello on viisitoista yli kuusi.
 Kello on vartin/varttia yli kuusi.
 Kello on viittätoista vaille/vailla kuusi.
 Kello on varttia vaille kuusi.
-Kello on ju kuusi!
+Kello on jo kuusi!
 Niin paljon!
 Kello on vasta kahdeksan!
 Niin vähän!
@@ -163,7 +163,7 @@ Puhelinnumero/kännykkänumero: +358 44 720 9316.
 Äidinkieli: suomi.
 Muut kielet: englanti, ranska.
 Siviilisääty: naimaton.
-Ammatti: tarjoilla.
+Ammatti: tarjoilija.
 Harrastukset: lukeminen, klassinen musiikki, teatteri.
 ulkonäkö.
 sievä.
@@ -198,86 +198,86 @@ Sunnuntaina hän lähtee ehkä maalle, koska siellä asuvat hänen vanhempansa.
 Heillä on iso maalaistalo.
 Loman aikana kesäkuussa hän on varmasti siellä.
 Maalla on aina paljon töitä, koska heillä on iso puutarha ja paljon kotielämiä.
-Maria viihdy maalla, koska heidän talonsa on metsän laidassa järven rannalla, mikä on melkein jokaisen suomalaisen unelma.
+Maria viihtyy maalla, koska heidän talonsa on metsän laidassa järven rannalla, mikä on melkein jokaisen suomalaisen unelma.
 Maria pitää luonnosta erittäin paljon.
 Maria on iloinen tyttö ja hän on aina hyvällä tuulella.
 Missä Riho asuu?
 Riho ja Jens ovat pubissa, juovat olutta ja keskustelevat.
-JENS:.
+Jens:.
 Täällä on hauskaa.
 Tämä on mukava baari.
 Olutkin on edullista eikä niin kallista kuin muualla.
 Minä pidän keskioluesta, en pidä viinistä.
-RIHO:.
-En minäkään. .
+Riho:.
+En minäkään.
 Juon mielelläni suomalaista olutta.
-JENS:.
+Jens:.
 Mitä ohjelmaa sinulla vielä tänään on?
-RIHO:.
+Riho:.
 Ei mitään erikoista.
 Luen vähän suomea, huomenna on jo kahdeksalta tunti.
 Mitä kello on?
-JENS:.
+Jens:.
 Kohta puoli yhdeksän.
-RIHO:.
+Riho:.
 Ihanko totta?
 Onko se jo niin paljon?
-JENS:.
+Jens:.
 On.
 Harmi, että aika kuluu niin nopeasti.
-RIHO:.
+Riho:.
 Maksetaan ja lähdetään nyt.
 Minulla on vähän kiire.
 He lähtevät pubista ja kävelevät kadulle.
-JENS:.
+Jens:.
 Voi, mikä inhottava ilma!
 Tuulee niin että tukka lähtee!
-RIHO:.
+Riho:.
 Syksy on tänä vuonna tosi kylmä.
-Aina vaan sataa. .
+Aina vaan sataa.
 Aamulla oli vain kahdeksan astetta lämmintä.
-JENS:.
+Jens:.
 Missä sun kämppä on?
-RIHO:.
+Riho:.
 Asun opiskelija-asuntolassa.
 Minulla on pieni huone, kylpyhuone ja vessa.
 Keittiö on käytävän päässä, se on yhteinen.
-Syön tavallisesti ulkona. .
+Syön tavallisesti ulkona.
 En osaa laittaa ruokaa.
 Missä sinä asut?
-JENS:.
-Minulla on vuokra-asunto puoleksi vuodeksi, sen jälkeen palaan kotiin, siis maaliskuussa. .
-Tavataanko vielä tällä viikolla? .
-Oli todella hauska tutustua. .
+Jens:.
+Minulla on vuokra-asunto puoleksi vuodeksi, sen jälkeen palaan kotiin, siis maaliskuussa.
+Tavataanko vielä tällä viikolla?
+Oli todella hauska tutustua.
 Olen täällä Helsingissä vähän yksinäinen.
 Olen varma, että meistä tulee hyviä ystäviä.
-RIHO:.
+Riho:.
 Niin minäkin.
 Sääli, että olen poissa viikonloppuna.
 Matkustan kotiin, Viroon.
 Tulen takaisin maanantaiaamuna.
-JENS:.
+Jens:.
 Mihin aikaan laiva saapuu?
-RIHO:.
+Riho:.
 Se on perillä Helsingissä viittätoista vaille kymmenen.
 Tavataan sitten ensi viikolla.
 Soitan sinulle.
 Voi, unohdin kysyä, mikä sun puhelinnumero on?
-JENS:.
+Jens:.
 Se on 040 557 839.
 Entäs sinun?
-RIHO:.
+Riho:.
 53 286091.
 Yritän soittaa jo maanantaina.
-JENS:.
+Jens:.
 Sepä hauskaa!
 Oli kiva nähdä!
-RIHO:.
+Riho:.
 Sama täällä!
 Soitellaan!
-JENS:.
+Jens:.
 Soitellaan!
-RIHON HUONE.
+Rihon huone.
 Riho on onnellinen, että hänellä on nyt uusi kaveri Helsingissä.
 Ei ole hyvä olla yksin vieraassa kaupungissa.
 Riho ei halua olla yksin kämpässään.
@@ -298,7 +298,7 @@ Hän nimittäin opiskelee suomea.
 Pöydällä on myös valokuva Rihon perheestä ja seinällä pieni taulu, jonka hän on itse maalannut.
 Ikkunassa on keltaiset verhot.
 Lattialla on vihreä matto.
-EIJAN PÄIVÄ.
+Eijan päivä.
 Aamulla.
 Herätyskello soi puoli seitsemältä.
 Eija ei halua nousta, mutta nousta pitää, koska pitkä työpäivä odottaa.
@@ -362,62 +362,62 @@ Hän on soittanut äidille ja pyytänyt luvan.
 Hän sulkee hiljaa oven, syö keittiössä jotakin ja käy nopeasti suihkussa.
 Hän unelmoi vielä vähän vuoteessaan.
 Ehkä hän on rakastunut?
-PUHELINKESKUSTELU.
+Puhelinkeskustelu.
 Riho soittaa Laaksosille.
 Hän valitsee numeron.
-RIHO:.
+Riho:.
 Riho Volmer täällä, hei.
-EIJA:.
+Eija:.
 No hei.
 Mitä kuuluu?
-RIHO:.
+Riho:.
 Ihan hyvää, kiitos.
 Entäs teille?
-EIJA:.
+Eija:.
 Kiitos hyvää.
-RIHO:.
+Riho:.
 Tiedätte varmaan, että olen täällä Helsingissä.
-EIJA:.
+Eija:.
 Tiedän kyllä, äitisi kirjoitti siitä.
-RIHO:.
+Riho:.
 Soitan, koska haluan kysyä, mitä teette ensi viikolla.
 Siskoni Anu tulee käymään Suomessa ja haluaisimme tulla teille kylään.
-EIJA:.
+Eija:.
 Kiva juttu.
 Olette aina tervetulleita.
 Milloin aiotte tulla?
-RIHO:.
+Riho:.
 Lähden perjantaina Viroon, koska äidillä on syntymäpäivä, ja maanantaiaamuna tulemme Anun kanssa laivalla takaisin Suomeen.
 Anulla on täällä jokin biologian seminaari, en tiedä tarkkaan.
 Se päättyy torstaina, ja silloin tulisimmekin, jos sopii.
-EIJA:.
+Eija:.
 Se sopii ihan hyvin.
 Juna lähtee Helsingistä kello kuusi illalla ja on perillä Turussa vähän yli kahdeksan.
 Voitte tulla sillä, jos ehditte.
-RIHO:.
+Riho:.
 Uskon, että ehdimme.
 Mutta lähetän viestin, jos suunnitelma muuttuu.
 Millä kadulla muuten asutte?
-EIJA:.
+Eija:.
 Älä siitä huolehdi.
 Tulemme tietenkin asemalle vastaan.
 Soitellaan asiasta vielä tarkemmin ensi viikon alussa, kun Anukin on jo Suomessa.
-RIHO:.
+Riho:.
 Joo, soitellaan.
-EIJA:.
+Eija:.
 Toivota meidän puolestamme äidillesi paljon onnea.
 Vie terveisiä kaikille!
-RIHO:.
+Riho:.
 Kiitos samoin.
-EIJA:.
+Eija:.
 Hauskaa matkaa sinulle!
-RIHO:.
+Riho:.
 Kiitos.
 Nähdään pian!
-EIJA:.
+Eija:.
 Nähdään!
 Hei!
-RIHO:.
+Riho:.
 Hei hei!
 Lähettäjä:.
 riho.volmer@gmail.com.
@@ -433,28 +433,28 @@ Olemme Turussa vasta yhdeksältä.
 Nähdään asemalla!
 Terveisin.
 Riho ja Anu.
-RIHON PÄIVÄOHJELMA.
+Rihon päivänohjelma.
 aamu.
 7.00 herätys, voimistelu.
 7.10 suihku.
 7.30 lähtö kotoa.
 7.45 aamupala yliopiston kahvilassa (kahvi, juustovoileipä, sämpylä) .
 8.15 suomen kieliopin tunti.
-10.15 suomen kirjallisuuden historian luento (luentosali 340).
+10.15 suomen kirjallisuuden historian luento (luentosali 340) .
 päivä.
 11.50 lounas yliopiston ruokalassa.
 12.15 suomen keskustelukurssi.
 14.00 kirjasto, kerran viikossa käännöskurssi.
-17.30 päivällinen (missä sattuu).
+17.30 päivällinen (missä sattuu) .
 ilta.
-18.00 vapaa aika (elokuvat, teatteri, ostokset jne.).
+18.00 vapaa aika (elokuvat, teatteri, ostokset jne) .
 ruotsin kurssi keskiviikkona ja perjantaina.
-20.00 harjoitukset (koripallo).
+20.00 harjoitukset (koripallo) .
 21.30 jos hän ei ole vielä liian väsynyt - baari, disko.
 iltapala, jos on nälkä.
 televisio, lukeminen.
 24.00 nukkumaanmeno.
-KIRJAKAUPASSA.
+Kirjakaupassa.
 Ennen kuin Riho matkustaa kotiin, hänen täytyy vielä käydä ostoksilla.
 Äidillähän on syntymäpäivä.
 14. lokakuuta hän täyttää 45 vuotta ja se on heidän perheessään aika tärkeä tapahtuma.
@@ -462,157 +462,157 @@ Sisaruksetkin odottavat varmaan tuliaisia.
 Riho ajattelee käydä isossa tavaratalossa, koska siellä on suuri valikoima ja juuri nyt alennusmyynti.
 Hänen täytyy vain miettiä, mitä hän ostaa.
 Äiti haluaisi varmasti kirjan, koska hän pitää lukemisesta.
-MYYJÄ:.
+Myyjä:.
 Päivää, saisinko auttaa?
-RIHO:.
+Riho:.
 Tarvitsen syntymäpäivälahjan äidilleni.
 Ajattelin ostaa kirjan.
-MYYJÄ:.
+Myyjä:.
 Tännepäin, olkaa hyvä!
 Täällä vasemmalla on monta uutta mielenkiintoista rakkausromaania.
 Tämä amerikkalaisen naiskirjailijan Elämäni mies on todella suosittu kirja.
-RIHO:.
+Riho:.
 Ei kiitos.
 Äiti ei pidä sellaisista naistenkirjoista.
 Hän on enemmän kiinnostunut historiasta, taiteesta ja runoudesta.
-MYYJÄ:.
+Myyjä:.
 Täällä oikealla on pari suomalaista runokokoelmaa.
 Ehkä valitsette tästä.
-RIHO:.
+Riho:.
 Kiitos, selailen vähän.
 Riho selailee vähän aikaa kirjoja.
-RIHO:.
+Riho:.
 Voi olla, ettei äitini kielitaito ole niin hyvä, että hän voisi lukea suomalaista runoutta, ostan mieluummin jotain käytännöllistä.
-MYYJÄ:.
+Myyjä:.
 Ehkä keittokirja?
 Pitääkö hän ruuanlaitosta?
-RIHO:.
+Riho:.
 Kyllä pitää.
 Se on hyvä idea.
 Missä teillä ovat keittokirjat?
-MYYJÄ:.
+Myyjä:.
 Tuolla takana.
 Mennään sinnepäin.
-RIHO:.
+Riho:.
 Tämä iso ja värillinen näyttää kiinnostavalta.
 Paljonko se maksaa?
-MYYJÄ:.
+Myyjä:.
 Se maksaa 30 euroa.
-RIHO:.
+Riho:.
 Se on hirveän kallis.
 Minulla ei ole niin paljon rahaa.
 Olen köyhä opiskelija.
-MYYJÄ:.
+Myyjä:.
 Mutta tuo pienempi tuolla maksaa vain 25 euroa.
 Sekin on hyvä.
 Kuvia vain on vähemmän.
-RIHO:.
+Riho:.
 Entä tuo kirja, mitä se maksaa?
-MYYJÄ:.
+Myyjä:.
 Anteeksi, mikä?
-RIHO:.
+Riho:.
 Tuo ohut punainen, kannessa pari oranssia porkkanaa?
-MYYJÄ:.
+Myyjä:.
 Tämäkö?
-RIHO:.
+Riho:.
 Niin.
-MYYJÄ:.
+Myyjä:.
 Hetkinen..
 Tämä maksaa 10 euroa.
 Se on halpa, mutta myös tietysti hyvä.
 Sen nimi on Kiireisen kokkaajan keittokirja.
 Tässä ei ole vain yhtään kuvaa.
-RIHO:.
+Riho:.
 Ei se mitään.
 Otan sen.
-MYYJÄ:.
+Myyjä:.
 Kassa on tuolla, olkaa hyvä.
-RIHO:.
+Riho:.
 Kiitos avusta.
-MYYJÄ:.
+Myyjä:.
 Olkaa hyvä.
-RIHO:.
+Riho:.
 Hei!
-MYYJÄ:.
+Myyjä:.
 Hei!
-Riho ostaa alennusmyynnistä vielä kaksi CD-levyä, 10 euroa kappale, toisen itselleen, toisen siskolleen, ja leluosastolta yhden palapelin.
+Riho ostaa alennusmyynnistä vielä kaksi CD-levyä, 10 euroa kappale, toisen itselleen,toisen siskolleen, ja leluosastolta yhden palapelin.
 Hän käy myös vaateosastolla ja ostaa kummallekin veljelleen T-paidan.
 Onko nyt kaikki?
 Ei vielä, isälleen hän vie pullon suomalaista viinaa ja tyttöystävälleen hajuvettä.
 Yhteensä hän kuluttaa lähes 100 euroa.
-KAHVILASSA.
+Kahvilassa.
 Riho ja Maria tutustuivat ruotsin kurssilla.
 Riho näkee Marian taas sattumalta kadulla ja kutsuu hänet kahville.
 Maria suostuu heti.
-MARIA:.
+Maria:.
 Hyvää päivää, onko tämä vapaa?
-TARJOILIJA:.
+Tarjoilija:.
 On, olkaa hyvä.
 Mitä teille saa olla?
-RIHO:.
+Riho:.
 Päivää, haluaisin kupin kahvia ja pullon kivennäisvettä.
-TARJOILIJA:.
+Tarjoilija:.
 Millaista kahvia?
-RIHO:.
+Riho:.
 Tavallista mustaa kahvia.
-TARJOILIJA:.
+Tarjoilija:.
 Entä muuta?
-RIHO:.
+Riho:.
 Saanko yhden voileivän?
-TARJOILIJA:.
+Tarjoilija:.
 Millaisen haluatte?
-RIHO:.
+Riho:.
 Otan yhden kinkkuvoileivän.
 Ei muuta, kiitos.
-TARJOILIJA:.
+Tarjoilija:.
 Entä teille?
-MARIA:.
+Maria:.
 Minä otan lasin appelsiinimehua ja pienen pullan.
-TARJOILIJA:.
+Tarjoilija:.
 Tuleeko muuta?
-MARIA:.
+Maria:.
 Kiitos, ei.
-RIHO:.
+Riho:.
 Etkö sinä juo kahvia?
-MARIA:.
+Maria:.
 En pidä kahvista.
 Juon mieluummin teetä.
-RIHO:.
+Riho:.
 Minä juon päivässä ainakin neljä kuppia kahvia.
 Aamulla laitan kahviin kermaa ja sokeria, myöhemmin juon mustana.
 Pidän vahvasta kahvista.
 Myöhään illalla juon kuitenkin silloin tällöin teetä.
-MARIA:.
+Maria:.
 Mutta minä en juo koskaan kahvia.
 En aamulla enkä illalla.
-RIHO:.
+Riho:.
 Tässä kahvilassa on oikein hyvää ruokaakin.
 Minusta täällä on kivaa.
-MARIA:.
+Maria:.
 Niin minustakin.
 Välillä täällä soittaa bändi ja tanssiakin voi.
-RIHO:.
+Riho:.
 Tullaan joskus ensi viikolla tänne.
 Siskonikin on silloin Helsingissä.
-MARIA:.
+Maria:.
 Tullaan vaan.
 Maanantaina ja tiistaina olen töissä.
-RIHO:.
+Riho:.
 Me taas lähdetään torstaina vierailulle Turkuun.
-MARIA:.
+Maria:.
 Ehkä sitten viikon päästä keskiviikkona?
-RIHO:.
+Riho:.
 Sopii hyvin.
 Ruotsin kurssin jälkeen.
-RIHO:.
+Riho:.
 Ottaisin laskun.
-TARJOILIJA:.
+Tarjoilija:.
 Se tekee 8,50.
-RIHO:.
+Riho:.
 Tässä, ole hyvä.
-TARJOILIJA:.
+Tarjoilija:.
 Kiitos.
-OMAKOTITALOSSA.
+Omakotitalossa.
 On torstai.
 Anu ja Riho menevät bussilla rautatieasemalle ja matkustavat Turkuun.
 He katsovat aikataulusta, että juna lähtee laiturilta 7 kello 19.02.
@@ -697,7 +697,7 @@ Saako täällä jossain polttaa?
 Matti:.
 Mene vaikka terassille.
 Siellä on tuhkakuppikin.
-ANTEEKSI, MITEN PÄÄSEE..
+Anteeksi, miten pääsee..
 Riho on ulkona Marian kanssa, ja Anun täytyy mennä yksin satamaan.
 - Anteeksi, miten pääsen Länsisatamaan?
 - Tästä Vironkadulta pääset bussilla numero 18 linja-autoasemalle ja sieltä 15:llä (viidellätoista) suoraan länsiterminaaliin.
@@ -716,107 +716,110 @@ Anu pääsee metrolla pääteasemalle Ruoholahteen, jossa hän nousee taas maan 
 Nyt hänen täytyy vain ylittää vilkas Itämerenkatu liikennevaloista.
 Hän nousee bussiin numero 15 ja pääsee satamaan.
 Miksi kukaan ei kertonut, että raitiovaunu 9 menee nykyään suoraan Länsiterminaaliin?
-MITÄ TEIT VIIME VIIKOLLA?
-MITÄ RIHO TEKI?
+Mitä teit viime viikolla?
+Mitä Riho teki?
 Aika on mennyt nopeasti.
 Riho lupasi soittaa Jensille viime viikolla mutta unohti.
 Nyt on tiistai ja Riho puhuu Jensin kanssa puhelimessa.
-RIHO:.
-Hei! Riho täällä.
-JENS:.
-Hei! Mitäs kuuluu?
-RIHO:.
+Riho:.
+Hei!
+Riho täällä.
+Jens:.
+Hei!
+Mitäs kuuluu?
+Riho:.
 Todella hyvää, kiitos.
 Entä itsellesi?
-JENS:.
+Jens:.
 Ei mitään erikoista.
-RIHO:.
+Riho:.
 Anteeksi, etten soittanut aikaisemmin.
 Oli aika paljon tekemistä.
 Muistan kyllä, että minun piti soittaa viime maanantaina.
-JENS:.
+Jens:.
 Ei se mitään.
 Kiva kun soitit.
 Mitäs puuhailet?
-RIHO:.
+Riho:.
 Kävin toissa viikonloppuna Tartossa.
 Äidillä oli syntymäpäivä, puolet suvusta oli paikalla, ja juhlat oli tosi upeat.
 Söin, join ja niin edelleen.
 Tietysti minun piti kertoa jokaiselle sukulaiselle, millaista elämä täällä Helsingissä on.
 Vein äidille lahjaksi keittokirjan.
 Hän oli siitä todella iloinen ja lupasi harjoitella sekä suomea että kokkaamista.
-JENS:.
+Jens:.
 Milloin palasit?
 Sanoit, että tulet maanantaina?
-RIHO:.
+Riho:.
 Joo, tulimme siskon kanssa aamulaivalla, ja sitten meni koko viikko hänen kanssaan.
-JENS:.
+Jens:.
 Mitä hän tekee?
-RIHO:.
+Riho:.
 Hän opiskelee Tartossa biologiaa, valmistuu ensi vuonna.
 Näytin hänelle vähän kaupunkia ja kävimme shoppailemassa.
 Anu tuhlasi paljon rahaa.
 Soitin kerran sinullekin, mutta et vastannut.
 Se oli keskiviikkona.
-JENS:.
+Jens:.
 Keskiviikkona?
 Olin koko päivän työpaikalla.
 Oli rankka päivä ja koko ajan hirveä kiire.
 Iltaan mennessä olin jo niin väsynyt, että tulin kotiin ja nukahdin heti.
 Puhelin oli äänettömällä.
-RIHO:.
+Riho:.
 Ikävä juttu.
 Meillä oli tosi kivaa.
 Kerroinko jo sinulle, että tutustuin erääseen tyttöön ruotsin kurssilla?
-JENS:.
+Jens:.
 Et ole sanonut mitään.
-RIHO:.
+Riho:.
 Maria on suomalainen ja oikein mukava tyyppi.
 Olemme olleet pari kertaa syömässä ja kävimme silloin keskiviikkona yhdessä ulkona.
-JENS:.
+Jens:.
 Ai ai, muistan myös, että kerroit yhdestä kauniista tyttöystävästä kotonakin odottamassa.
-RIHO:.
+Riho:.
 Älä nyt viitsi, ei se ole mitään sellaista.
 Siskoni Anu oli myös mukana.
-JENS:.
+Jens:.
 No, mitäs te sitten illalla teitte?
-RIHO:.
+Riho:.
 Olimme ensin baarissa.
 Tilasimme juomat, eli tytöt joivat viiniä ja minä tietenkin vain olutta.
 Sitten menimme yökerhoon tanssimaan ja olimme siellä kunnes klubi meni kiinni.
-JENS: .
+Jens: .
 Tanssitko Anun kanssa?
-RIHO:.
+Riho:.
 Höpö höpö.
 Tanssin Marian kanssa, sanoin jo, että hän on mukava tyttö ja tanssii muuten erittäin hyvin.
-JENS:.
+Jens:.
 Se oli keskiviikkona, entä mitä teit viikonloppuna?
 Olitko taas Marian kanssa?
-RIHO:.
+Riho:.
 Unohdin kai kertoa, että menimme Anun kanssa Turkuun.
 Meillä on siellä perhetuttavia.
 Äitini tapasi heidät monta vuotta sitten, kun he kävivät Virossa kuoron kanssa.
 He asuivat silloin meillä.
 Menimme heille Turkuun kylään, koska Anu ei ollut ennen käynyt siellä.
 Oletko sinä?
-JENS:.
+Jens:.
 Totta kai tunnen sen paikan.
 Entinen vaimoni oli sieltä kotoisin, joten olen käynyt siellä monta kertaa.
 Turku on kiva kaupunki.
-RIHO:.
+Riho:.
 Niin minustakin.
 Olimme siellä torstaista sunnuntaihin ja näimme aika paljon.
-Tuomiokirkon ja Turun keskiaikaisen linnan ja Luostarinmäen käsityöläismuseon ja.. en muistakaan enää, missä kävimme.
+Tuomiokirkon ja Turun keskiaikaisen linnan ja Luostarinmäen käsityöläismuseon ja.. 
+en muistakaan enää, missä kävimme.
 Ai niin, matkustimme lauantaina myös Naantaliin, tosi hieno pikkukaupunki, haluaisin mennä sinne kesällä takaisin.
 Entäs mitä sinä olet tehnyt?
 Kerroin koko ajan vain itsestäni.
-JENS:.
+Jens:.
 En ole tehnyt mitään erikoista.
 Elämäni on vain työtä, työtä ja vielä kerran työtä.
 Pari kertaa kävin kaljalla, kerran leffassa.
-RIHO:.
+Riho:.
 Oliko hyvä leffa?
-JENS:.
+Jens:.
 Tyypillinen amerikkalainen jännäri.
 Viikonloppuna kävin työkaverin luona.
 Hän asuu laitakaupungilla, heillä on mukava asunto rivitalossa.
@@ -824,20 +827,20 @@ Siellä oli puutarhajuhlat.
 Kävimme saunassa ja paistoimme makkaraa.
 Yritin rentoutua.
 Työpaine on ollut tavattoman suuri.
-RIHO:.
+Riho:.
 Joitko sitten itsesi humalaan?
-JENS:.
+Jens:.
 Olin kyllä vähän humalassa, mutta en hirveästi.
 Seuraavana aamuna heräsin kotona eikä mitään kummempaa krapulaa ollut.
 Onko siskosi vielä täällä?
 Tutustuisin mielelläni häneenkin.
-RIHO:.
+Riho:.
 Ikävä kyllä, hän matkusti eilen takaisin Tarttoon.
 Kävi niin ikävästi, että minun piti saattaa hänet laivalle satamaan, mutta olin urheiluhallin kuntosalilla.
 Maria käy siellä jumppaamassa, ja me tapasimme siellä ja menimme sen jälkeen..
-JENS:.
+Jens:.
 Tiedän, kahville taas.
-RIHO:.
+Riho:.
 Juuri niin.
 Unohdin Anun kokonaan ja huomasin yhtäkkiä, että kello tulee kohta neljä ja laiva lähtee puoli viideltä.
 Otimme taksin ja kiirehdimme satamaan.
@@ -845,43 +848,43 @@ Anu oli luonnollisesti odottanut ja soittanut, mutta mun kännykän akku oli tyh
 Lopulta hän oli kysynyt tietä, sitten eksynyt ja joku poliisi oli neuvonut hänet paikalle.
 Kuitenkin hän ehti ajoissa lähtöselvitykseen eikä myöhästynyt laivasta.
 Hän oli minulle tosi vihainen eikä sanonut sanaakaan.
-JENS:.
+Jens:.
 Miksi hän ei osannut mennä satamaan?
 Ei se niin vaikeaa ole.
 Bussitkin kulkevat ja..
-RIHO:.
+Riho:.
 Hän oli Helsingissä ensi kertaa ja me tulimme maanantaina yhdessä ratikalla.
 Hän ei muistanut, miten ja millä ratikalla.
 Hänellä oli isot laukut ja satoikin vielä.
 Ymmärsin olevani todellinen sika, tiedän sen.
 Anu suorastaan itki.
-JENS:.
+Jens:.
 Sitten kävi kyllä huonosti.
-RIHO:.
+Riho:.
 Maria yritti rauhoittaa häntä, mutta ei onnistunut.
 Kuule, luento alkaa nyt, mitä jos tapaisimme vaikka huomenna?
-JENS:.
+Jens:.
 Ylihuomenna sopisi paremmin.
 Huomenna on eräs tärkeä kansainvälinen neuvottelu, joka ilmeisesti kestää pitkään.
-RIHO:.
+Riho:.
 Tavataan sitten ylihuomenna.
-JENS:.
+Jens:.
 Ota Mariakin mukaan, niin näen, kenestä puhut koko ajan.
-RIHO:.
+Riho:.
 En lupaa mitään, mutta yritän.
 Tavataan seitsemältä, mutta missä?
-JENS:.
+Jens:.
 Sopisiko sama paikka, jossa tapasimme ensimmäisen kerran, sen pubin edessä, muistatko?
-RIHO:.
+Riho:.
 Joo, muistan.
 Kuule, nyt minun kyllä pitää lähteä.
 Nähdään ylihuomenna!
-JENS:.
+Jens:.
 Joo, moi!
-RIHO:.
+Riho:.
 Moi!
-MITÄ TEIT KESÄLOMALLA?
-RIHO:.
+Mitä teit kesälomalla?
+Riho:.
 En mitään erikoista.
 Kesäkuussa oli tenttikausi ja sen jälkeen luin melkein koko kesän suomea, koska halusin tulla Suomeen syyskuussa.
 Välillä olin meidän kesämökillä.
@@ -895,7 +898,7 @@ Elokuun puolivälissä pääsin sanomalehteen töihin, koska tarvitsin rahaa opi
 Käänsin englannista viroksi ja päinvastoin.
 Tyttöystäväni pelaa lentopalloa ja hän oli urheiluleirillä ulkomailla, joten olin vähän yksinäinen.
 En matkustanut mihinkään, ei ollut tarpeeksi rahaa.
-MARIA:.
+Maria:.
 Lomani kesti viisi viikkoa, heinäkuun alusta elokuun puoliväliin.
 Opiskelin ja osallistuin teatterikoulun pääsykokeeseen, mutten päässyt sinne.
 Olin siksi masentunut ja lähdin maalle.
@@ -913,7 +916,7 @@ Lainasin niitä lähimmän kaupungin kirjastosta, johon oli viidentoista kilomet
 Kävin siellä kaksi kertaa konsertissakin, klassisen musiikin konserteissa.
 Siinä kaikki.
 Ensi kesänä yritän taas teatterikouluun.
-JENS:.
+Jens:.
 Lomailin kesäkuun lopusta lähtien kolme viikkoa.
 Minulla on loma talvellakin, kävin Itävallassa laskettelemassa.
 Siellä on upeita vuoria.
@@ -936,11 +939,11 @@ Suoraan sanoen matka meni pilalle.
 Yövyimme kehnoissa hotelleissa enkä pitänyt matkaseurastakaan.
 Sen lisäksi satoi kaatamalla.
 Kuitenkin näin härkätaistelun ja tykkäsin vanhoista kirkoista ja kauniista tummista espanjalaisista naisista.
-ANU:.
+Anu:.
 Minun lomani meni pieleen.
 Loukkaannuin auto-onnettomuudessa.
 Jalka meni poikki ja jouduin sairaalaan.
-Makasin siellä monta viikkoa. .
+Makasin siellä monta viikkoa.
 Kaikki ystävät kävivät katsomassa minua.
 Olisin halunnut ulkomaille tai retkeillä kotimaassa.
 Viime kesänä liftasin poikaystäväni kanssa läpi koko Euroopan, nyt olisimme halunneet Venäjälle, mutta se ei onnistunut.
@@ -950,7 +953,7 @@ Illalla istuimme nuotion ympärillä ja lauloimme.
 Oli ihanaa!
 Emme välittäneet hyttysistä, joita oli tosi paljon.
 Loppu hyvin, kaikki hyvin.
-TORILLA.
+Torilla.
 Marian syntymäpäivä on tulossa.
 Tänään on 27. (kahdeskymmenesseitsemäs) lokakuuta, ja kahden päivän päästä hän aikoo pitää juhlat muutamille ystäville, sillä hän täyttää 20 vuotta.
 Marian täytyy käydä ostoksilla ruokakaupassa ja torilla.
@@ -961,140 +964,140 @@ Marian asunto ei ole kovin kaukana keskustasta.
 Torilla on paljon väkeä.
 Siellä on vanhoja ja nuoria, perheenäitejä ja opiskelijoita, poikia ja tyttöjä.
 Koska Kauppatori on sataman lähellä, on siellä myös paljon ulkomaalaisia.
-RIHO:.
+Riho:.
 Katso, tuolla on mansikoita!
-MARIA:.
+Maria:.
 Miten se on mahdollista?
 Nythän on syksy!
-RIHO:.
+Riho:.
 Ehkä ne ovat jostain etelästä, Espanjasta esimerkiksi.
-MARIA:.
+Maria:.
 Voi olla, mutta en uskalla ostaa niitä.
 En usko, että niissä on mitään makua.
-RIHO:.
+Riho:.
 Mutta ne näyttävät kyllä punaisilta ja mehukkailta!
-MARIA:.
+Maria:.
 Mennään tuonnepäin.
 Minun pitää ostaa vihanneksia salaattia varten.
 Tarvitsemme syksyllä vitamiineja.
-MARIA:.
+Maria:.
 Päivää!
-ROUVA:.
+Rouva:.
 Päivää!
-MARIA:.
+Maria:.
 Mitä porkkanat maksavat tänään?
-ROUVA:.
+Rouva:.
 Nämä isot maksavat puolitoista euroa kilo ja nuo pienemmät 2,50.
 Hyviä porkkanoita!
-MARIA:.
+Maria:.
 Minä otan näitä isoja, puolitoista kiloa.
-ROUVA:.
+Rouva:.
 Tässä, ole hyvä.
-MARIA:.
+Maria:.
 Onko teillä kiinankaalia?
-ROUVA:.
+Rouva:.
 On, kiinankaalia, kukkakaalia ja..
-MARIA:.
+Maria:.
 Otan kaksi kiinankaalia, kaksi kiloa kurkkua ja vielä tomaatteja.
-ROUVA:.
+Rouva:.
 Millaisia tomaatteja?
 Täällä on hyviä kotimaisia ja tuolla hollantilaisia.
 Nuo ovat hieman halvempia.
-MARIA:.
+Maria:.
 Otan näitä kotimaisia, noin kilon.
-ROUVA:.
+Rouva:.
 Tuleeko muuta?
-MARIA:.
+Maria:.
 Ei, kiitos.
 Paljonko se tekee?
-ROUVA:.
+Rouva:.
 10,20.
-MARIA:.
+Maria:.
 Tässä on 11 euroa.
-ROUVA:.
+Rouva:.
 Hetkinen, 80 senttiä takaisin.
-MARIA:.
+Maria:.
 Unohdin ostaa perunoita.
-ROUVA:.
+Rouva:.
 Voi voi, perunat ovat lopussa.
-MARIA:.
+Maria:.
 Ei se mitään, menen eteenpäin ja kysyn sieltä.
-ROUVA:.
+Rouva:.
 Hei hei!
-MARIA:.
+Maria:.
 Hei hei!
-MARIA:.
+Maria:.
 Nyt tarvitsen hedelmiä booliin.
-RIHO:.
+Riho:.
 Mahtuuko kassiin vielä?
-MARIA:.
+Maria:.
 Kyllä mahtuu.
 Tuolla on kauniita omenia.
-ROUVA:.
+Rouva:.
 Hyviä hedelmiä, banaaneja, appelsiineja, viinirypäleitä!
-MARIA:.
+Maria:.
 Paljonko nämä keltaiset omenat maksavat?
-ROUVA:.
+Rouva:.
 Euro kolmekymmentä.
-MARIA:.
+Maria:.
 Entä nuo vihreät?
-ROUVA:.
+Rouva:.
 Ne maksavat euro viisikymmentä.
 Haluatteko maistaa?
-MARIA:.
+Maria:.
 Joo, maistaisin mielelläni.
 Otatko sinäkin, Riho?
 Riho pudistaa päätään.
-MARIA:.
+Maria:.
 Mmm, maistuu tosi ihanalta.
 Otan niitä kaksi kiloa.
-ROUVA:.
+Rouva:.
 Entäs luumuja?
 Meillä on hyviä keltaisia luumuja.
-MARIA:.
+Maria:.
 Kiitos, en tarvitse tänään luumuja.
 Mutta otan vielä vähän viinirypäleitä ja pari banaania.
 Ovatko viinirypäleet makeita?
 Mistä ne ovat peräisin?
-ROUVA:.
+Rouva:.
 Espanjasta.
 Voit maistaa niitäkin, jos epäilet.
-MARIA:.
+Maria:.
 Ei kiitos, uskon kyllä.
 Olen ostanut täältä ennenkin.
 Ja sitten vielä pari sitruunaa.
-ROUVA:.
+Rouva:.
 Tässä, ole hyvä.
-MARIA:.
+Maria:.
 Kiitos.
-ROUVA:.
+Rouva:.
 Kenen vuoro?
-MARIA:.
+Maria:.
 Nyt kyllä riittää.
 Näytät vähän väsyneeltä.
-RIHO:.
-No, pitihän minun odottaa, kun tarkistelet kaikkea ja valitset niitä hedelmiä.
-MARIA:.
+Riho:.
+No, pitihän minun odottaa, kun tarkastelet kaikkea ja valitset niitä hedelmiä.
+Maria:.
 Anteeksi, pidän torilla käymisestä.
 Olen täällä tuttu asiakas.
 Käyn torilla melkein joka päivä.
 Työpaikalleni on täältä vajaat 300 metriä.
-RIHO:.
+Riho:.
 Vai niin.
 En ole kysynyt, mitä ruokaa sinä sitten aiot tehdä?
 Tuleeko lämmintä ruokaa?
-MARIA:.
+Maria:.
 Ajattelin tehdä piirakoita ja erilaisia salaatteja.
 Ostan vielä kaupasta juustoja ja keksejä viiniä varten.
 Mitä ehdotat juotavaksi?
-RIHO:.
+Riho:.
 Minä tietenkin juon olutta, mutta puhuit jotain boolista.
-MARIA:.
+Maria:.
 Niin ajattelinkin.
 Ja vähän punaviiniä myös.
 Jos tulee paljon vieraita, niin pitää olla myös paljon ruokaa ja eri juomia.
 En ole vuosiin viettänyt syntymäpäiviäni, mutta nyt juhlitaan kunnolla.
-RIHO: .
+Riho: .
 Kuulostaa jännittävältä.
 Odotan jo kärsimättömästi.
 Kotiin he palasivat ratikalla, koska kassit olivat painavia.
@@ -1130,7 +1133,7 @@ Niin ajattelinkin, ettei haittaa, jos minäkin muutan pois Virosta.
 Ehkä kaikki johtuu vain sairaasta mielikuvituksestani, mutta tuntuu siltä, että olet löytänyt jonkun toisen etkä välitä enää minusta.
 Toivon sinulle hyvää jatkoa.
 Pille.
-SÄÄ.
+Sää.
 On kylmä ja tuulinen syyspäivä.
 Riho on yksin kotona ja ikävissään.
 Oikeastaan hänellä ei ole mitään tekemistä.
@@ -1139,7 +1142,7 @@ Heillä on ensi kuussa ensi-ilta tulossa, eikä Marian ajatuksissa ole enää mu
 Hän kyllä soittelee silloin tällöin ja kysyy, mitä Riholle kuuluu, mutta tavallisesti hän ei ehdi edes odottaa, että saa vastauksen.
 Riho kuitenkin yrittää ymmärtää häntä, onhan Maria kertonut, mitä teatteri hänelle merkitsee ja mikä on hänen suurin haaveensa.
 Riho ymmärtää, että jos hän haluaa seurustella Marian kanssa vastedeskin, niin hänen pitää tukea Mariaa eikä hän saa valittaa, vaikka haluaisi.
-Tänäänkin Riho on onneton ja syynä siihen on ennen kaikkea huono ilma. .
+Tänäänkin Riho on onneton ja syynä siihen on ennen kaikkea huono ilma.
 Ulkona on ainoastaan pari astetta lämmintä ja tuulee pohjoisesta.
 Aamulla satoi räntää, eikä aurinkoa ole näkynyt pariin päivään.
 No, mitä sellaisella säällä voi tehdä!
@@ -1175,50 +1178,50 @@ Marraskuu ainakin on rumin, ikävin ja tylsin kuukausi vuodessa.
 Riho alkaa odottaa joulua.
 Kun päivänseisaus tulee, niin kaikki saattaa muuttua, hän toivoo.
 Yhtäkkiä puhelin soi.
-MARIA:.
+Maria:.
 Hei kulta!
 Mitä kuuluu?
-RIHO: .
+Riho: .
 Hei!
 Ikävöin sinua ja kesää ja lämmintä ja..
-MARIA:.
+Maria:.
 Älä nyt!
 Meillä on täällä pieni tauko ja teki mieli soittaa ja sanoa, että ajattelen sinua.
-RIHO:.
+Riho:.
 Kiva kuulla ääntäsi!
 Valitsit kyllä oikean hetken, koska olen parhaillaan erittäin huonolla tuulella.
-MARIA:.
+Maria:.
 Mitäs on tapahtunut?
-RIHO:.
+Riho:.
 Älä murehdi, ei mitään, inhoan vain tätä pohjoismaista ilmastoa.
 Ja säätiedotuskaan ei luvannut mitään parempaa.
-MARIA:.
+Maria:.
 Olen melkein koko päivän ollut sisällä enkä tiedä säästä mitään.
 Mutta yritä nyt olla järkevä, kohta tulee talvi ja paljon lunta ja sitten lähdemme Lappiin laskettelemaan.
 Olen suunnitellut sitä jo monta vuotta ja nyt sinun kanssasi menisin ihan varmasti.
 Etkö ole käynyt Lapissa?
-RIHO:.
+Riho:.
 En tietenkään ole.
 Aika hyvä idea!
 Sanoisin, että loistoidea!
 Voidaanko lähteä heti?
-MARIA:.
+Maria:.
 Paras hiihtokausi Lapissa on yleensä helmikuusta huhtikuuhun, niin että odota vähän.
-RIHO:.
+Riho:.
 En tiedä, jaksanko.
-MARIA:.
+Maria:.
 Tulen käymään huomenna, meillä onkin vapaapäivä.
 Mutta nyt minun täytyy mennä.
 Nähdään sitten huomenna.
-RIHO:.
+Riho:.
 Nähdään.
 Moi.
 Maria soitti.
 Tuliko Riho nyt paremmalle tuulelle?
 Totta kai!
-KESÄMÖKILLÄ.
+Kesämökillä.
 Laaksosen perheen jäsenet kertovat, mitä he tekivät viime kesänä ja miten he suhtautuvat mökkielämään.
-EIJA:.
+Eija:.
 Olemme kaikki kesät perheen kanssa Pohjanmaalla kesämökillä.
 Meillä on ollut oma mökki lähes kymmenen vuotta.
 Me aletaan käydä siellä jo keväällä viikonloppuisin.
@@ -1248,7 +1251,7 @@ He pärjäsivät hyvin, en olisi uskonutkaan miten hyvin.
 Meillä kävi myös vieraita, serkkuni tuli lastensa kanssa viikoksi.
 He pitivät järvestä ja hiekkarannasta ja savulohesta, jota itse savustimme.
 Juha on todella hyvä siinä hommassa.
-SANNA:.
+Sanna:.
 Mun ongelma on kesämökki.
 Äiti ja isä haluavat aina, että lähden niiden kanssa mökille, mutta mitä mä siellä teen?
 Kaikki mun kaverit on kaupungissa, mutta mun täytyy kitkeä ja kastella ja kerätä ja ties mitä kaikkea.
@@ -1260,7 +1263,7 @@ Mun pitää kestää vielä nää pari vuotta, kunnes pääsen töihin kuten Juh
 Mitäs mä vielä tein?
 Uin ja makasin auringossa, lihoin ja tappelin pikkusiskon kanssa.
 Sateella istuin sisällä ja kuuntelin musiikkia.
-JUHA:.
+Juha:.
 Viime kesänä olimme mökillä.
 Parasta oli käydä isän kanssa kalassa, sain itsekin pari haukea ja lohta.
 Pidän onkimisesta.
@@ -1271,7 +1274,7 @@ Olin ravintolassa kesäapulaisena.
 Ansaitsin rahaa uutta moottoripyörää varten.
 Haluaisin alkaa ajaa motocrossia.
 Kun oli liian kuumaa, menin uima-halliin ja uin pari kilometriä.
-MATTI:.
+Matti:.
 En halua lomalla ulkomaille enkä Kanarian saarille, paras paikka on meidän kesämökki.
 Isäni rakensi sen vuosia sitten, saunan teimme myöhemmin yhdessä.
 Mökillä kalastan, uin ja liikun paljon veneellä.
@@ -1287,7 +1290,7 @@ Olen opettanut pojankin nauttimaan todella kuumasta saunasta.
 Me istutaan aina yhdessä lauteilla, hikoillaan, heitetään vettä kiukaalle ja vihdotaan.
 Sauna ilman tuoretta vihtaa ei ole mikään sauna.
 Vihtoja teen Juhan kanssa joka vuosi ennen juhannusta.
-Niitä varten tuodaan metsästä tuoreita koivunoksia. .
+Niitä varten tuodaan metsästä tuoreita koivunoksia.
 Kun mittari saunan seinällä osoittaa jo lähes yhdeksääkymmentä astetta, niin Juha tavallisesti häipyy lauteilta.
 Minä olen kyllä kuumuuteen tottunut.
 Koska sauna sijaitsee suoraan järven rannalla, niin löylyn jälkeen on hyvä hypätä veteen.
@@ -1310,7 +1313,7 @@ Kuopuksemme Tiina oli koko joulukuun ollut erittäin kiltti ja hyvä lapsi, kosk
 Hän kirjoitti hyvissä ajoin joulupukille lahjatoiveistaan.
 Joulukuusen hakivat Matti ja Juha metsästä, sen koristelivat Sanna ja Tiina.
 He koristelivat talon joulukoristeilla.
-Jouluaattona (24.12.) iltapäivällä käytiin omaisten haudoilla ja vietiin niille kynttilä.
+Jouluaattona (24.12) iltapäivällä käytiin omaisten haudoilla ja vietiin niille kynttilä.
 Jouluillallinen syötiin noin kello kuusi ja siihen kuului perinteisesti kinkkua, porkkana- ja lanttulaatikkoa sekä joulukaljaa.
 Jälkiruoaksi oli piparkakkuja ja joulutorttuja.
 Aikaisemmin, kun oltiin sukulaisten kanssa maalla, oli tapana syödä myös riisipuuroa, johon oli piilotettu manteli.
@@ -1318,66 +1321,65 @@ Uskottiin, että se, joka saa mantelin, menee seuraavaksi naimisiin.
 Niin ei kylläkään tapahtunut.
 Aterian jälkeen joulupukki saapui Lapista ja kysyi: Onkos täällä kilttejä lapsia?
 Tiina pelkäsi häntä hiukan, mutta kun lahjat jaettiin, niin pelko hävisi.
-Jouluaamuna (25.12.) käytiin kirkossa jumalanpalveluksessa.
+Jouluaamuna (25.12) käytiin kirkossa jumalanpalveluksessa.
 Joulupäivä vietettiin hiljaisesti, silloin ei ole tapana käydä kylässä.
-Toisena joulupäivänä eli tapaninpäivänä (26.12.) lähdettiin vierailulle vanhempieni luokse.
+Toisena joulupäivänä eli tapaninpäivänä (26.12) lähdettiin vierailulle vanhempieni luokse.
 Lanttulaatikko.
 Joulupöydän herkku, joka sopii muulloinkin pitopöytäämme.
 Maukas ja halpa lisäke tarjottavaksi useamminkin.
 Lisämausteeksi voit lisätä 1-2 rkl siirappia.
 5-6 annosta.
-2-3 lanttua (n. 1,25 kg).
+2-3 lanttua (n. 1,25 kg) .
 vettä + 2 tl suolaa vesilitraa kohti.
 0,25 dl korppujauhetta.
 1 dl kermaa.
-1 rkl võid või margariini.
-(0,5 tl muskottipähkinää).
+(0,5 tl muskottipähkinää) .
 1-2 munaa.
 Kuori lantut hyvällä, terävällä veitsellä melko paksulti.
 Paloittele ne ja keitä vähässä, suolalla maustetussa vedessä pehmeiksi n. 30 min.
 Kaada vesi pois ja muhenna lanttupalat joko perunanuijalla, sosemyllyllä tai sähkövatkaimella.
 Lisää korppujauhe, kerma, voi, suola, vastajauhettu pippuri ja muskottipähkinä ja sekoita hyvin.
 Lisää munat, yksitellen voimakkaasti sekoittaen.
-Pane lanttuseos voideltuihin uunivuokiin ja pista 200 asteessa 1-1,5 t.
+Pane lanttuseos voideltuihin uunivuokiin ja pistä 200 asteessa 1-1,5 t. .
 Tarjoa joulupöydässä kinkun lisukkeeksi, paistetun sianlihan tai makkaran kanssa, karjalanpaistin kanssa tai kasvisruokana sellaisenaan.
 Miten suomalaiset viettävät muita pyhiä?
-uusivuosi (1. tammikuuta).
+uusivuosi (1. tammikuuta) .
 Hyvää uutta vuotta!
 Onnellista uutta vuotta!
-Uusivuosi otetaan vastaan uudenvuoden aattoiltana (31.12).
+Uusivuosi otetaan vastaan uudenvuoden aattoiltana (31.12) .
 Kodeissa valetaan tinaa, jotta näkisi tulevaisuuteen.
 Syödään esimerkiksi nakkeja ja perunasalaattia.
-Yleensä juodaan kouhuviiniä.
+Yleensä juodaan kouhonviiniä.
 Yöllä on ilotulitus.
 Helsingin pormestari pitää Senaatintorilla puheen, joka näytetään television välityksellä koko maassa.
 Uudenvuodenpäivänä presidentti tai pääministeri pitää uudenvuodenpuheen.
-laskiainen (helmikuussa).
+laskiainen (helmikuussa) .
 Liukasta laskiaista!
 Pitkiä pellavia!
 Alkuaan laskiainen tarkoitti paastoon laskeutumista.
 Nykyään laskiainen on erityisesti lasten juhla.
 Syödään hernekeittoa eli hernerokkaa sekä kermavaahdolla ja hillolla täytettyjä laskiaispullia.
 Lasketaan kelkalla mäkeä.
-pääsiäinen (maalis-huhtikuussa).
-Hyvää pääsiästä!
+pääsiäinen (maalis-huhtikuussa) .
+Hyvää pääsiäistä!
 Pääsiäinen on uskonnollinen juhla, jota vietetään Jeesuksen kärsimyksen ja ylösnousemisen muistoksi, mutta useissa perheissä sen vietto lienee melko maallista.
 Pääsiäisen värit ovat keltainen ja vihreä.
 Koristeina käytetään pajunkissoja, värikkäitä suklaamunia, koristetipuja ja -pupuja sekä itse kasvatettua ruohoa.
 Kananmunia värjätään.
 Ruokapöydässä tarjotaan esimerkiksi lammaspaistia, kananmunia, mämmiä kerman kanssa sekä pashaa.
-vappu (1. toukokuuta, liputuspäivä).
+vappu (1. toukokuuta, liputuspäivä) .
 Hauskaa vappua!
 Vappu on kevään juhla, työläisten ja ylioppilaiden päivä.
 Vapun merkitys työväen juhlana vähenee, aiemmin torikokouksissa pidettiin palavia puheita ajankohtaisista poliittisista aiheista.
 Vappuna on tapana pitää valkoista ylioppilaslakkia.
-Vappuaattona juhlitaan iloisesti, lähdetään kaduille ja ravintoloihin, lauletaan ja tanssitaan tai ollaan ysätväpiirissä kotona.
+Vappuaattona juhlitaan iloisesti, lähdetään kaduille ja ravintoloihin, lauletaan ja tanssitaan tai ollaan ystäväpiirissä kotona.
 Lapsille ostetaan ilmapallo ja viuhka.
 Vapunpäivänä mennään usein ravintolaan vappulounaalle.
 Ateriaan voi kuulua myös silli, jos vappuaattona juomista on nautittu runsaasti.
 Vapun makeita herkkuja ovat munkit ja tippaleivät.
-(Tippaleipä on makea vappuleivonnainen, joka tehdään valuttamalla taikinaa ohuena nauhana kuumaan rasvaan sekavaksi keräksi.).
+(Tippaleipä on makea vappuleivonnainen, joka tehdään valuttamalla taikinaa ohuena nauhana kuumaan rasvaan sekavaksi keräksi) .
 Juodaan simaa.
-juhannus (kesäkuun 20. ja 26. päivän välisenä lauantaina, ennen juhannus oli 24.06).
+juhannus (kesäkuun 20. ja 26. päivän välisenä lauantaina, ennen juhannus oli 24.06) .
 Juhannus on keskikesän ja yöttömän yön juhla sekä myös Suomen lipun päivä.
 Perinteisimmillään juhannukseen liittyy kuva kansallispukuun pukeutuneesta vaaleahiuksisesta Suomi-neidosta, joka nojaa valkorunkoiseen koivuun valoisassa kesäillassa.
 Kaupungit ovat juhannuksen aikana autioina, sillä suurin osa suomalaisista haluaa viettää juhannusta sukulaisten, ystävien tai vain perheen kesken kesämökillä, mielellään veden äärellä.
@@ -1385,8 +1387,8 @@ Juhannusruoaksi ostetaan usein ulkona grillattavaa makkaraa tai lihaa.
 Poltetaan kokkoa.
 Ohjelmaan saattavat kuulua myös lavatanssit.
 Etenkin aiemmin on ollut tapana tehdä taikoja naimaonnen saamiseksi ja tulevan sulhasen näkemiseksi.
-itsenäisyyspäivä (6. joulukuuta, liputuspäivä).
-Suomi julistautui itsenäiseksi 6. joulukuuta 1917. .
+itsenäisyyspäivä (6. joulukuuta, liputuspäivä) .
+Suomi julistautui itsenäiseksi 6. joulukuuta 1917.
 Itsenäisyyspäivää vietetään virallisin tilaisuuksin.
 Sotaveteraanit ja opiskelijat järjestävät usein soihtukulkueita.
 Sodassa kaatuneiden haudoille tai muistopatsaalle viedään kukkia tai kynttilöitä.
@@ -1400,7 +1402,7 @@ Ensiksi he menevät miesten vaateosastolle.
 Myyjä: Voinko auttaa?
 Riho: Saisinko nähdä villapaitoja?
 Myyjä: Mikä koko?
-Riho: Luulen, että L.
+Riho: Luulen, että L .
 Myyjä: Tässä on yksivärisiä, harmaita ja vihreitä.
 Riho: Haluaisin jotain värikkäämpää.
 Myyjä: Tässä on kirkkaanpunainen ja tässä kirjava.
@@ -1415,7 +1417,7 @@ Myyjä: Ennen se maksoi 35 euroa.
 Riho: Sitten kyllä otan sen.
 Riho: Mutta haluaisin vielä nähdä farkkuja.
 Myyjä: Minkävärisiä?
-Riho: Väri ei olekaan niin tärkeä, pääasi on, että malli sopii.
+Riho: Väri ei olekaan niin tärkeä, pääasia on, että malli sopii.
 Myyjä: Tässä on kapea malli, aika suosittu.
 Myyjä: Ne maksavat 55 euroa.
 Riho: Eikö ole halvempia?
@@ -1450,7 +1452,7 @@ Maria esitteli Rihon hyvänä virolaisystävänään, joka parhaillaan oleskelee
 He pakenivat salaa muita ja lähtivät ulos.
 He kävelivät kaduilla, suutelivat ja halasivat.
 He palasivat vasta keskiyön aikaan Marian asuntoon.
-Muut vieraat eivät olleet huomanneetkaan heidän poissaoloaan, ja juhla oli vielä tädessä vauhdissa.
+Muut vieraat eivät olleet huomanneetkaan heidän poissaoloaan, ja juhla oli vielä täydessä vauhdissa.
 Riho on kuten jo sanottu korviaan myöten rakastunut.
 Heidän suhteensa on jo sellaisessa vaiheessa, että Rihon täytyi tehdä tärkeä päätös.
 Koska hän on rehellinen nuorimies, niin hän vastasi entisen tyttöystävänsä kirjeeseen.
@@ -1482,7 +1484,8 @@ Riho: Olihan siellä muitakin, jotka sanoivat samaa.
 Riho: Mutta nyt tilataan.
 Riho: Minulla on jo nälkä.
 Riho: En syönyt koko päivänä, koska ajattelin, mitä kaikkea hyvää täällä tarjotaan.
-Maria: Niin minäkin. Syödäänkö alkupalaa?
+Maria: Niin minäkin.
+Syödäänkö alkupalaa?
 Riho: Jos haluat.
 Riho: Otan parsakeittoa, en ole syönyt sitä koskaan ennen.
 Maria: Se on varmasti hyvää.
@@ -1492,7 +1495,7 @@ Riho: Entä pääruoaksi?
 Maria: Vaikkapa lampaanseläkettä ja herneitä.
 Maria: Sinulle suosittelen poronkäristystä, jos et ole sitä aikaisemmin maistanut.
 Riho: Mitä siinä on?
-Maria: Poronlihaa, perunamuusia ja poulukkahilloa.
+Maria: Poronlihaa, perunamuusia ja puolukkahilloa.
 Maria: Se on vähän sellaista perinneruokaa, mutta uskallan suositella, se on todella maukasta.
 Riho: Hyvä on, otan sen.
 Maria: Mitä otetaan jälkiruoaksi?
@@ -1510,13 +1513,15 @@ Riho: Viiniä, tässä on oikein iso valikoima.
 Riho: Kysytään tarjoilijalta, mitä hän suosittelee.
 Maria: Sopii, haluaisin kuitenkin punaviiniä.
 Maria: Tilataan kivennäisvettäkin pari pullollista, minua janottaa.
-Tarjoilija on ottanut tilauksen vastaan.
+Tarjoilnja on ottanut tilauksen vastaan.
 Tarjoilija: Mitä haluatte pääruoan kanssa, perunoita vai riisiä?
 Maria: Millaisia perunoita teillä on?
-Tarjoilija: Valkosipuliperunoita, ranskalaisia perunoitda, lohkoperunoita, kietettyjä perunoita, paistettuja perunoita, täytettyjä uuniperunoita, grilliperunoita, perunamuhennosta..
+Tarjoilija: Valkosipuliperunoita, ranskalaisia perunoita, lohkoperunoita, kietettyjä perunoita, paistettuja perunoita, täytettyjä uuniperunoita, grilliperunoita, perunamuhennosta..
 Maria: Otan valkosipuliperunoita.
 Tarjoilija: Tuleeko muuta?
-Riho: Kuppi kahvia ja toinen teetä. Kaksi kertaa neljä senttiä mesimarjalikööriä myös. Ei muuta, kiitos.
+Riho: Kuppi kahvia ja toinen teetä. 
+Kaksi kertaa neljä senttiä mesimarjalikööriä myös. 
+Ei muuta, kiitos.
 Riho: Olipas herkullista ruokaa.
 Riho: Miltä sinun paistisi maistui?
 Riho: Oliko siinä sopivasti mausteita?
@@ -1610,7 +1615,7 @@ Riho: Hei kullanmuru, miten voit?
 Riho: Miksi olet sängyssä?
 Maria: Voin tosi huonosti, minulla on hirveä nuha, kurkku on kipeä ja päätä särkee.
 Maria: Ja yskittää kovasti.
-Maria: Todennäköisesti ole vilustunut.
+Maria: Todennäköisesti olen vilustunut.
 Maria: On vaikea hengittää ja lihakset ovat kipeät.
 Riho: Näytät kyllä sairaalta.
 Riho: Ne ovat flunssan oireita.
@@ -1641,7 +1646,7 @@ Riho: Nyt sinun kyllä pitää vähän odottaa.
 Riho: Käyn apteekissa ja tuon uuden kuumemittarin ja lääkkeitäkin.
 Riho: Vai haluatko, että soitan lääkärille?
 Maria: En, ei se nyt niin hullua voi olla.
-Maria: Kyllä se mene itsestään ohi.
+Maria: Kyllä se menee itsestään ohi.
 Maria: Juon kuumaa maitoa ja hunajaa.
 Maria: Vähän yskänlääkettä ja särkylääkettä voisit kyllä tuoda, ole kiltti.
 Käy ilmi, että Marialla onkin korkea kuume, 38,1 (kolmekymmentäkahdeksan pilkku yksi) astetta.
@@ -1677,20 +1682,20 @@ Lääkäri kirjoittaa hänelle reseptin yskän- ja nuhalääkkeitä varten sekä
 Parin päivän kuluttua kuume onkin laskenut ja Marian vointi on paljon parempi.
 Riho käy joka päivä häntä katsomassa ja hoitamassa.
 Viikon kuluttua Maria on aivan terve ja pääsee taas työhön ja kursseille.
-Suomalaisia merkkihenhilöitä.
+Suomalaisia merkkihenkilöitä.
 Vuosina 1860-2002 oli Suomen rahayksikkö markka.
 Seteleissä olivat Elias Lönnrot, Jean Sibelius, Paavo Nurmi, Väinö Linna ja Alvar Aalto.
 Vuonna 2002 Suomi otti markan sijasta käyttöön euron.
 Päättele, kenestä on kyse?
 Väinö Linna.
-(s. 1920 Urjalassa, k. 1992 Tampereella).
+(s. 1920 Urjalassa, k. 1992 Tampereella) .
 Kirjailija, sai akateemikon arvonimen 1980.
 Esikoisromaani Päämäärä ilmestyi 1974.
-Hänen pääteoksensa Tuntematon sotilas (1954) heijastaa hänen kokemuksiaan jatkosodasta (konekiväärikomppaniassa).
+Hänen pääteoksensa Tuntematon sotilas (1954) heijastaa hänen kokemuksiaan jatkosodasta (konekiväärikomppaniassa) .
 Teos puolusti tavallista rivimiestä: yksilöllistä, epäsotilaallista, mutta tekojen hetkellä sankarillista.
 Realistiset kuvaukset aiheuttivat teoksen ilmestyessä polemiikkia, joka laajeni Suomen kirjallisuushistorian suurimmiksi.
 Sodanaikaisten ylempien esikuntien ja kotirintaman edustajat eivät voineet sulattaa Linnan kansanomaista, "epäisänmaallista" näkemystä sodasta.
-Rintamamiehet ja laaja lukeva yleisö hyväksivät teoksen ja sitä myytiin muutamassa vuodessa yli 300 000 kappaletta.
+Rintamamiehet ja laaja lukeva yleisö hyväksyvät teoksen ja sitä myytiin muutamassa vuodessa yli 300 000 kappaletta.
 Tuntemattomasta sotilaasta tuli kansallinen suurteos.
 Romaanitrilogia Täällä Pohjantähden alla (ilmestyi 1959-62) sai Pohjoismaiden neuvoston kirjallisuuspalkinnon.
 Noin puoleentoista tuhanteen sivuun kirjailija on mahduttanut suomalaisen yhteiskunnan historian 1880-luvulta toisen maailmansodan jälkeiseen aikaan.
@@ -1699,10 +1704,10 @@ Niistä on laadittu onnistuneet näytelmäsovitukset.
 Molemmat pääteokset on filmattu.
 Hänen tuotantoonsa kuuluu myös ajankohtaisia esseitä ja artikkeleita, jotka selväpiirteisinä puheenvuoroina ovat vahvistaneet hänen mainettaan omaperäisenä ajattelijana.
 Elias Lönnrot.
-(s. 1802 Sammatissa, k. 1884 samassa pitäjässä).
+(s. 1802 Sammatissa, k. 1884 samassa pitäjässä) .
 räätälin poika.
 Kalevalan luoja, kansanrunouden kerääjä ja kielentutkija.
-Hän kävi koulua Tammisaaressa, Turussa ja Porvoossa puutetta kärsien, tuli ylioppilaaksi 1822, valmistui lääkäriksi, teki runonkeruumatkoja Itä-Karjalaan, Aunukseen ym.
+Hän kävi koulua Tammisaaressa, Turussa ja Porvoossa puutetta kärsien, tuli ylioppilaaksi 1822, valmistui lääkäriksi, teki runonkeruumatkoja Itä-Karjalaan, Aunukseen ym. .
 Hän julkaisi Kalevalan 1835, Kantelettaren 1840, Suomen kansan sananlaskuja, Suomen kansan arvoituksia, Suomen kansan muinaisia loitsurunoja ja suuren suomalais-ruotsalaisen sanakirjan.
 Kalevalan synty merkitsi aikoinaan suomalaisuudelle tavattoman paljon.
 Suomalainen löysi menneisyytensä, runoutensa ja itsensä.
@@ -1710,7 +1715,7 @@ Suomen kielen professoriksi hän tuli 1853, hän oli myös suomen kirjakielen uu
 Hän oli myös lehtimies.
 Hän perusti ensimmäisen suomenkielisen aikakauskirjan Mehiläisen, joka ilmestyi 1836-37 ja 1839-40.
 Alvar Aalto.
-(s. 1898 Kuortaneella, k. 1976 Helsingissä).
+(s. 1898 Kuortaneella, k. 1976 Helsingissä) .
 arkkitehti.
 Suomen Akatemian jäsen 1955-68.
 Hän oli kansainvälisesti merkittävimpiä funktionalismin kauden ja sitä seuranneen ajan arkkitehteja.
@@ -1719,17 +1724,17 @@ Hän suunnitteli myös lukuisia asema- ja seutukaavoja sekä Suomeen että ulkom
 Esim. Rovaniemen asemakaava, Helsingin keskustasuunnitelma.
 Hän toimi myös taideteollisuudessa ja kuvataiteissa.
 Paavo Nurmi.
-(s. 1897 Turussa, k. 1973 Helsingissä).
+(s. 1897 Turussa, k. 1973 Helsingissä) .
 Kaikkien aikojen tunnetuin kestävyysjuoksija.
-Hän voitti olympiakisoissa 1920-28 kaikkiaan yhdeksän kulta- ja kolme hopeamitlia ja juoksi uransa aikana 25 maailmanennätystä.
+Hän voitti olympiakisoissa 1920-28 kaikkiaan yhdeksän kulta- ja kolme hopeamitalia ja juoksi uransa aikana 25 maailmanennätystä.
 Hänet julistettiin ammattilaiseksi ja häneltä evättiin oikeus osallistua vuoden 1932 olympiakisoihin.
 Häntä syytettiin amatöörisääntöjen vastaisten palkkioiden ottamisesta.
 Lopetettuaan urheilun hän toimi kiinteistö- ja liikealalla.
 Hän perusti 1968 nimeään kantavan säätiön, jonka tarkoituksena on edistää sydän- ja verisuonitautien sekä yleisen kansanterveyden tutkimusta.
-Wäinö Aaltosen häntä esittävä juoksijapatsas paljastettiin Helsingissä 1925 (kaksoiskappale Turussa).
-Suomean urheilun suuren ansioristin hän sai 1947.
+Wäinö Aaltosen häntä esittävä juoksijapatsas paljastettiin Helsingissä 1925 (kaksoiskappale Turussa) .
+Suomen urheilun suuren ansioristin hän sai 1947.
 Jean Sibelius.
-(s. 1865 Hämeenlinnassa, k. 1957 Järvenpäässä).
+(s. 1865 Hämeenlinnassa, k. 1957 Järvenpäässä) .
 Suomen musiikkihistorian merkittävin säveltäjä, professori.
 Hän tuli ylioppilaaksi 1885, aikoi lakimieheksi, mutta ryhtyi harjoittamaan säveltaidetta.
 Jo 10-vuotiaana hän oli säveltänyt Vesipisaroita viululle ja sellolle.
@@ -1742,13 +1747,13 @@ Mennään matkalle!
 Aika on mennyt nopeasti ja kesä on tulossa.
 Riho ja Maria haluavat tehdä yhdessä matkan heinäkuussa, ennen kuin Rihon pitää muuttaa takaisin Viroon.
 Hänellähän oli stipendi vain yhdeksi vuodeksi.
-He ovat harkinneet asiaa ja tulleet tulokseen, että ulkomaille he eivät lähde (onhan täällä Suomessakin nähtävää), junalla eivät matkusta eivätkä pakettimatkalle osallistu, koska he haluavat olla kahden kesken.
+He ovat harkinneet asiaa ja tulleet tulokseen, että ulkomaille he eivät lähde (onhan täällä Suomessakin nähtävää) , junalla eivät matkusta eivätkä pakettimatkalle osallistu, koska he haluavat olla kahden kesken.
 Lappi kyllä miellyttäisi kumpaakin, mutta lentomatkaan sinne heillä ei ole varaa.
 Lopulta he päättävät vuokrata auton ja ajella viikon Suomessa.
 Riho kävi matkatoimistossa hakemassa esitteitä, ja niiden avulla he laativat seuraavan matkasuunnitelman.
-Lähtöpaikka on Helnsinki.
+Lähtöpaikka on Helsinki.
 Ensimmäinen pysäkki on Raumalla.
-(Turkuun he eivät mene, koska Riho on tutustunut kaupunkiin jo aikaisemmin.).
+(Turkuun he eivät mene, koska Riho on tutustunut kaupunkiin jo aikaisemmin) .
 Rauman ehdoton helmi on Unescon maailmanperintökohde Vanha Rauma, joka on ainutlaatuinen esimerkki vanhasta pohjoismaisesta puukaupungista.
 Sieltä löytyy lukematon määrä pieniä toimivia putiikkeja, käsityöliikkeitä, gallerioita, kahviloita ja ravintoloita.
 Vanhassa Raumassa on idyllisiä asuinrakennuksia ja pihoja, aito torimiljöö ja useita kaupungin vuosisataisista perinteistä kertovia museoita.
@@ -1756,11 +1761,11 @@ Raumalta ajetaan Poriin, jossa pysähdytään kuuntelemaan jazzkonserttia, sill�
 Eihän voi jättää sellaista mahdollisuutta käyttämättä!
 Luvassa on yli sata konserttia, ilmaista tai maksullista.
 Poriin jäädään kuitenkin vain yhdeksi illaksi.
-Seuravaana päivänä tullaan Tampereelle, jossa käydään Pyynikin ulkoilmateatterissa (siellä on pyörivä katsomo).
+Seuraavana päivänä tullaan Tampereelle, jossa käydään Pyynikin ulkoilmateatterissa (siellä on pyörivä katsomo) .
 Liput on varattava etukäteen.
 Sen tekee Maria.
 Ohjelmassa on vielä Muumilaakson museo.
-Tampereelta matkustaan Jyväskylään, käydään Alvar Aallon museossa, pysähdytään Suomen toiseksi suurimman järven, Päijänteen rannalla.
+Tampereelta matkustetaan Jyväskylään, käydään Alvar Aallon museossa, pysähdytään Suomen toiseksi suurimman järven, Päijänteen rannalla.
 Ollaan siellä yötä.
 Jyväskylästä jatketaan Oulun kautta Pohjanmaan rannikkoa pitkin kohti Lappia, johon saavutaan Torniossa, Ruotsin rajalle.
 Tullaan Rovaniemelle, Lapin uudenaikaiseen pääkaupunkiin.
@@ -1774,7 +1779,7 @@ Höyrylaivalla matkustetaan Punkaharjulle, jota pidetään järvialueen ihanimpa
 Käydään Retretin taidekeskuksen näyttelyissä.
 Retkeillään luonnonsuojelualueella.
 Savonlinnassa ollaan yötä laivan hytissä.
-Ohjelmaan kuuluu käynti pienellä saarella sijaitsevassa Olavinlinnassa, kauneimmassa Suomen vanhoista linnoista, jonka pihalla pidetään Savonlinnan oopperajuhlia.
+Ohjelmaan kuuluu käynti pienellä saarella sijaitsevassa Olavinlinnassa, kauniimmassa Suomen vanhoista linnoista, jonka pihalla pidetään Savonlinnan oopperajuhlia.
 Savonlinnasta on 80 kilometrin matka Imatralle.
 Siellä on suuri koski, joka nykyisin tuottaa sähkövoimaa ja virtaa vapaana vain kesäsunnuntaisin.
 Koskea ympäröivässä Kruununpuistossa tehdään pieni virkistävä kävely.
@@ -1828,7 +1833,7 @@ Haluan eläkeläisenäkin olla hyvässä kunnossa.
 Avioeroni sai alkunsa juuri siitä, että entinen vaimoni ei tukenut minua harrastuksissani ja suorastaan vihasi urheilemista.
 Toinen harrastukseni on matkustaminen.
 Pari kertaa vuodessa käyn ehdottomasti jossain ulkomailla.
-Yritän aina löytää uuden ja jännitävän paikan.
+Yritän aina löytää uuden ja jännittävän paikan.
 Suurin haaveeni on käydä kaikilla mantereilla, listalta puuttuvat vielä Afrikka ja napamaat.
 Se on kyllä aika kallis harrastus, mutta mitä varten ihminen sitten työskentelee?
 Kun minulla ei nyt ole perhettä, on helppo löytää siihen rahaa.
@@ -1871,9 +1876,9 @@ Mielestäni neulon, virkkaan ja ompelen oikein hyvin.
 Ainakin kaikki perheenjäsenet ovat sitä mieltä, koska villapaitoja, sukkia ja käsineitä riittää kaikille.
 Keväisin ja kesäisin työskentelen puutarhassa sekä kotona että mökillä.
 Se on parasta lepoa!
-Kasvatan sisälläkin monelaisia huonekasveja ja yrttejä.
+Kasvatan sisälläkin monenlaisia huonekasveja ja yrttejä.
 Silloin tällöin käyn iltaisin ulkona, ja jos menen, niin teatteriin tai konserttiin.
-Matti (Eijan aviomies).
+Matti (Eijan aviomies) .
 Minulla ei ole mitään erikoista harrastusta.
 Koululaisena keräsin huvin vuoksi postimerkkejä, opiskeluaikoina taas olin kiinnostunut autoista.
 Kävin näyttelyissä ja tilasin vastaavia aikakauslehtiä.
@@ -1895,7 +1900,7 @@ Soitan vähän kitaraa.
 Kuuntelen ainoastaan rockmusiikkia.
 Onnistuin saamaan hyvät laitteet tarjouksesta oikein halvalla.
 Vapaahetkinäni ulkoilen, tavallisesti koiran kanssa.
-Minä käyn ratsamassa ja rakastan hevosten lisäksi muitakin eläimiä.
+Minä käyn ratsaamassa ja rakastan hevosten lisäksi muitakin eläimiä.
 Haluaisin itselleni vielä kaniinin ja hamsterin, mutta vanhempani sanovat, ettei niistä kannata edes puhua, koska meillä jo on koira ja kissa.
 Ehkä minusta tulee isona eläinlääkäri.
 Kaikki elävä kiinnostaa minua.
@@ -1920,7 +1925,7 @@ Anun isoäiti ikävöi kaunista paikkaa, joka oli ollut hänen kotinaan lähes 4
 Siihen liittyi liikaa muistoja onnellisesta elämästä yhdessä hänen miehensä kanssa.
 Niinpä tuntuikin aivan luonnolliselta, kun Anu ilmoitti, että hänestä tulee luonnontutkija.
 Päästyään ylioppilaaksi hän vei paperinsa Tarton yliopiston luonnontieteelliseen tiedekuntaan.
-Joka vuosi Any käy ystäviensä kanssa jollakin retkellä joko polkupyörällä, veneellä tai jalan.
+Joka vuosi Anu käy ystäviensä kanssa jollakin retkellä joko polkupyörällä, veneellä tai jalan.
 Mielenkiintoisimmat matkat ovat olleet Kaukasukselle ja Karjalan kannakselle.
 Viroa hän on tietysti retkeillyt pitkin ja poikin.
 Anun kiinnostuksen kohteena on nyt Suomi rikkaine ja vaihtelevine luontoineen.
@@ -1971,7 +1976,7 @@ Se on suuri viheralue, jossa on useita ulkomaiden lähetystöjä.
 Korkeasaaren eläintarha.
 Huvipuisto Linnanmäellä.
 Suomenlinna - saarilinnoitus.
-Koska nähtävää on yhdeksi päiväksi liikaa, niin Suomenlinnaan ja eläintarhaan mennään 5.6 (viidentenä kesäkuuta), kun vanhemmat palaavat Helsinkiin.
+Koska nähtävää on yhdeksi päiväksi liikaa, niin Suomenlinnaan ja eläintarhaan mennään 5.6 (viidentenä kesäkuuta) , kun vanhemmat palaavat Helsinkiin.
 Välillä he aikovat käydä Laaksosilla Turussa.
 Lopulta he varmistavat, että laiva saapuu Eteläsatamaan kello 11.10.
 Riho lähtee perhettään vastaan.
@@ -1985,13 +1990,13 @@ Vuonna 1809 Suomi liitettiin Venäjään ja vuonna 1812 Helsingistä tehtiin pä
 Vuonna 1827 entinen pääkaupunki Turku paloi ja yliopisto siirrettiin Helsinkiin.
 Helsingin keskustaa alettiin suunnitella ja rakentaa 1800-luvulla.
 Vuonna 1939 Suomi joutui toiseen maailmansotaan.
-Helsinkiä pommitettiin, mutta rakennukset korjattiin vai rakennettin uudestaan.
+Helsinkiä pommitettiin, mutta rakennukset korjattiin vai rakennettiin uudestaan.
 Vuonna 1952 Helsingissä pidettiin olympialaiset.
 Helsingin väkiluku on nykyään yli 600 000 henkeä.
 Carl Gustaf Mannerheim (1867-1951) - marsalkka, valkoisten joukkojen komentaja Suomen kansalaissodassa vuosina 1917-1918, Suomen puolustusvoimien ylipäällikkö talvisodan (1939-1940) ja jatkosodan (1941-44) aikana, 1944-46 Suomen tasavallan presidentti.
 Hänet valittiin vuonna 2004 suurimmaksi suomalaiseksi.
 Tietoja Suomesta.
-Suomen pinta-ala on 338 000 km2 (neliökilometriä).
+Suomen pinta-ala on 338 000 km2 (neliökilometriä) .
 Nykyään Suomessa on noin 5,4 miljoonaa asukasta.
 Suomi on tasavalta.
 Eduskunnassa on 200 kansanedustajaa.
@@ -1999,14 +2004,14 @@ Eduskunta valitaan neljäksi ja tasavallan presidentti kuudeksi vuodeksi kerrall
 Suomen lipun (siniristilipun) värit ovat sininen ja valkoinen.
 Suomen rahayksikkö on euro.
 1 euro = 100 senttiä.
-Suomessa on kaksi virallista kieltä: suomi ja ruotsi (vuonna 1863 suomesta tuli maan toinen virallinen kieli).
+Suomessa on kaksi virallista kieltä: suomi ja ruotsi (vuonna 1863 suomesta tuli maan toinen virallinen kieli) .
 93% (prosenttia) väestöstä puhuu äidinkielenään suomea, 5,4% ruotsia.
 Virallinen asema on myös kolmella saamen kielellä, joita puhuu yhteensä noin 2300 ihmistä.
 Saamelaiskielet ovat suomen sukukieliä.
 Suomessa on yhdeksän historiallista maakuntaa: Häme, Satakunta, Savo, Karjala, Pohjanmaa, Varsinais-Suomi, Uusimaa, Ahvenanmaa ja Lappi.
 Suomessa on n. 188 000 järveä ja 179 584 saarta.
 Suomen järvien vesi on puhdasta ja korkealaatuista.
-Korkein tunturi on Halti (korkeus 1328 m).
+Korkein tunturi on Halti (korkeus 1328 m) .
 Suomen historiasta.
 Suomi on asutettu heti jääkauden jälkeen eli noin 10 000 vuotta sitten.
 1155-1323 Kristinusko tuotiin Suomeen lännestä.
@@ -2030,7 +2035,7 @@ Jatkosota loppui Suomen tappioon.
 Suomi menetti Neuvostoliitolle lisää alueita ja joutui maksamaan raskaat sotakorvaukset.
 1955 Suomi hyväksyttiin Yhdistyneiden kansakuntien jäseneksi.
 1956-1981 presidentti Urho Kekkosen aikana sodanjälkeinen ulkopoliittinen passiivisuus vaihtui puolueettomuuspolitiikaksi, luotiin hyvät suhteet moniin maihin ja kansoihin.
-1975 Helsingissä järjestettiin Euroopan turvallisuus- ja yhteistyökonferenssi (ETYK).
+1975 Helsingissä järjestettiin Euroopan turvallisuus- ja yhteistyökonferenssi (ETYK) .
 1995 Suomi liittyi Euroopan unioniin.
 2000 Tarja Halosesta tuli Suomen ensimmäinen naispresidentti.
 2002 Suomen rahayksiköksi tuli markan sijasta euro.
