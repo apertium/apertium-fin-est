@@ -414,6 +414,7 @@
       <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
+      <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>
     </def-macro>
 
 
@@ -581,7 +582,7 @@
         </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <!-- let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let -->
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
@@ -642,6 +643,7 @@
       </pattern>
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <choose>
           <when>
             <test>
@@ -704,6 +706,8 @@
       </pattern>
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
         <choose>
           <when>
             <test>
@@ -1328,7 +1332,8 @@
             <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
           </when>
         </choose>
-        <!-- <choose> <!- - fin conneg translates to est neg in indic mood only; otherwise just delete conneg - ->
+<!-- beginning of conneg-neg stuff -->
+        <choose> <!-- fin conneg translates to est neg in indic mood only; otherwise just delete conneg -->
           <when>
             <test>
                 <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
@@ -1340,7 +1345,7 @@
                    </test>
                    <choose>
                      <when> 
-                       <test>     <!- - hack to select ei ole over pole: change from indic conneg to imprt p2.sg- ->
+                       <test>     <!-- hack to select ei ole over pole: change from indic conneg to imprt p2.sg -->
                          <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
                        </test>
                        <choose>
@@ -1348,28 +1353,29 @@
                            <test>
                              <equal> <clip pos="1" side="tl" part="a_temps"/> <lit-tag v="pres"/> </equal>
                            </test>
-                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imprt"/></let>
+                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
                            <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
                          </when> 
-                         <otherwise>   <!- - temps = prt ollut, olleet, oltu etc - ->
+                         <otherwise>   <!-- temps = prt ollut, olleet, oltu etc -->
                            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.prc"/></let>
                            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                            <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                          </otherwise>
                        </choose> 
                      </when>
-                     <otherwise>   <!- - fin indic conneg = est indic neg - ->
+                     <otherwise>   <!-- fin indic conneg = est indic neg -->
                        <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
                        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                      </otherwise>
                    </choose> 
                 </when>
-                <otherwise> <!- - fin imp conneg = est imprt - ->
+                <otherwise> <!-- fin imp conneg = est imprt -->
                   <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                 </otherwise>
             </choose> 
           </when>
-        </choose> -->
+        </choose> 
+<!-- end of conneg-neg stuff -->
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
@@ -1630,7 +1636,7 @@
         <call-macro n="remove-Px">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der.der_mine.n"/></let>
+        <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_mine.n"/></let>
         <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
@@ -1645,8 +1651,6 @@
         </out>
       </action>
     </rule>
-
-
 
 
     <rule comment="REGLA: SENT">
