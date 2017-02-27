@@ -201,6 +201,8 @@
       <attr-item tags="infa"/>    <!-- fin -->
       <attr-item tags="infe"/>    <!-- fin -->
       <attr-item tags="infma"/>   <!-- fin -->
+      <attr-item tags="inf"/>     <!-- est -->
+      <attr-item tags="sup.ill"/>     <!-- est -->
       <attr-item tags="sup"/>     <!-- est -->
       <attr-item tags="ger"/>     <!-- est -->
     </def-attr>
@@ -417,6 +419,135 @@
       <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>
     </def-macro>
 
+    <def-macro n="verb-fin-mac" npar="1">
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <call-macro n="replace-foc1">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let>
+        <choose>
+          <when>
+            <test>         <!-- antaisi: est cond form annaks is underspecified for number and person -->
+              <and>
+                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="cond"/></equal>
+                <equal><clip pos="1" side="sl" part="a_p3sg"/><lit-tag v="p3.sg"/></equal>
+              </and>
+            </test>
+            <let><clip pos="1" side="tl" part="a_p3sg"/><lit v=""/></let>
+          </when>
+          <when>
+            <test>        <!-- antakoon, antakoot: est imp form andku is underspecified for number and person --> 
+              <and>
+                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
+                <equal><clip pos="1" side="sl" part="a_person"/><lit-tag v="p3"/></equal>
+              </and>
+            </test>
+            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+          </when>
+        </choose>
+        <choose>
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+                              <lit-tag v="cond"/>
+                      </equal></test>                   <!-- fin conditional is only present, never past -->
+                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.cond"/></let>
+          </when>
+        </choose>
+        <choose>           <!-- fin potential = est vist + indicative -->
+          <when><test><equal><clip pos="1" side="sl" part="a_mood"/> 
+                              <lit-tag v="pot"/>                 
+                      </equal>
+                      </test>                         <!-- fin potential is only present, never past -->
+                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
+                <out>
+                  <chunk name="prn" case="caseFirstWord">
+                    <tags>
+                      <tag><lit-tag v="PRN"/></tag>
+                    </tags>
+                    <lu>
+                      <lit v="vist"/>
+                      <lit-tag v="adv"/>
+                    </lu>
+                  </chunk>
+                  <b />
+                </out>
+          </when>
+        </choose>
+        <choose>
+          <when>
+            <test>  <!-- fin imperative is only present, never past -->
+              <or>
+                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp.pres"/></equal>
+                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
+              </or>
+            </test>
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.imp"/></let>
+          </when>
+        </choose>
+        <choose>  <!-- change order of tense and mood tags in indicative -->
+          <when> 
+            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="indic.pres"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
+          </when>
+          <when> 
+            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="indic.pret"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.indic"/></let>
+          </when>
+        </choose>
+        <choose>  <!-- conneg forms do not have sgpl -->
+          <when> 
+            <test><equal><clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+          </when>
+        </choose>
+        <!-- <choose> <!- - fin conneg translates to est neg in indic mood only; otherwise just delete conneg - ->
+          <when>
+            <test>
+                <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
+            </test>
+            <choose>
+                <when> 
+                  <test>
+                    <equal> <clip pos="1" side="tl" part="a_mood"/> <lit-tag v="indic"/> </equal>
+                   </test>
+                   <choose>
+                     <when> 
+                       <test>     <!- - hack to select ei ole over pole: change from indic conneg to imprt p2.sg- ->
+                         <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
+                       </test>
+                       <choose>
+                         <when> 
+                           <test>
+                             <equal> <clip pos="1" side="tl" part="a_temps"/> <lit-tag v="pres"/> </equal>
+                           </test>
+                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imprt"/></let>
+                           <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
+                         </when> 
+                         <otherwise>   <!- - temps = prt ollut, olleet, oltu etc - ->
+                           <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.prc"/></let>
+                           <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                           <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
+                         </otherwise>
+                       </choose> 
+                     </when>
+                     <otherwise>   <!- - fin indic conneg = est indic neg - ->
+                       <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
+                       <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
+                     </otherwise>
+                   </choose> 
+                </when>
+                <otherwise> <!- - fin imp conneg = est imprt - ->
+                  <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
+                </otherwise>
+            </choose> 
+          </when>
+        </choose> -->
+    </def-macro>
 
   </section-def-macros>
 
@@ -1173,7 +1304,6 @@
       </action>
     </rule>
 
-
     <rule comment="REGLA: verb-infa">
       <pattern>
         <pattern-item n="verb-infa"/>
@@ -1218,102 +1348,97 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-infe">
+
+    <rule comment="REGLA: verb-fin-infa">
       <pattern>
-        <pattern-item n="verb-infe"/>
+        <pattern-item n="verb-fin"/>
+        <pattern-item n="verb-infa"/>
       </pattern>
      <action>
-        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="verb-fin-mac"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="firstWord">
-          <with-param pos="1"/>
+          <with-param pos=""/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="2" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="2" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
+        <let><clip pos="2" side="tl" part="a_inf"/><lit-tag v="inf"/></let>
+        <choose>
+          <when>
+            <test>
+              <or>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="pidama"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="hakkama"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="minema"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="sundima"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="jääma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="jätma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="kippuma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="sattuma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="sõitma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="asuma"/> </equal>
+                 <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="puhkema"/> </equal>
+              </or>
+            </test>
+            <let><clip pos="2" side="tl" part="a_inf"/><lit-tag v="sup.ill"/></let>
+          </when>
+        </choose>
         <out>
-          <chunk name="infa" case="caseFirstWord">
+          <chunk name="v" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+          </chunk>
+          <b/>
+          <chunk name="infa">
             <tags>
-              <tag><lit-tag v="SV.INFE"/></tag>
+              <tag><lit-tag v="SV.INFA"/></tag>
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lemh"/>
-              <lit-tag v="vblex.ger"/>
+                <clip pos="2" side="tl" part="lemh"/>
+                <lit-tag v="vblex.actv"/>
+                <clip pos="2" side="tl" part="a_inf"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
 
-    <rule comment="REGLA: verb-fin">
+    <rule comment="REGLA: verb-infa-fin">
       <pattern>
+        <pattern-item n="verb-infa"/>
         <pattern-item n="verb-fin"/>
       </pattern>
      <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="verb-fin-mac"><with-param pos="2"/></call-macro>
         <call-macro n="firstWord">
-          <with-param pos="1"/>
-        </call-macro>
-        <call-macro n="replace-foc1">
-          <with-param pos="1"/>
+          <with-param pos=""/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let>
+        <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
+        <let><clip pos="1" side="tl" part="a_inf"/><lit-tag v="inf"/></let>
         <choose>
           <when>
-            <test>         <!-- antaisi: est cond form annaks is underspecified for number and person -->
-              <and>
-                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="cond"/></equal>
-                <equal><clip pos="1" side="sl" part="a_p3sg"/><lit-tag v="p3.sg"/></equal>
-              </and>
-            </test>
-            <let><clip pos="1" side="tl" part="a_p3sg"/><lit v=""/></let>
-          </when>
-          <when>
-            <test>        <!-- antakoon, antakoot: est imp form andku is underspecified for number and person --> 
-              <and>
-                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
-                <equal><clip pos="1" side="sl" part="a_person"/><lit-tag v="p3"/></equal>
-              </and>
-            </test>
-            <let><clip pos="1" side="tl" part="a_person"/><lit v=""/></let>
-            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-          </when>
-        </choose>
-        <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="cond"/>
-                      </equal></test>                   <!-- fin conditional is only present, never past -->
-                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.cond"/></let>
-          </when>
-        </choose>
-        <choose>           <!-- fin potential = est vist + indicative -->
-          <when><test><equal><clip pos="1" side="sl" part="a_mood"/> 
-                              <lit-tag v="pot"/>                 
-                      </equal>
-                      </test>                         <!-- fin potential is only present, never past -->
-                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
-                <out>
-                  <chunk name="prn" case="caseFirstWord">
-                    <tags>
-                      <tag><lit-tag v="PRN"/></tag>
-                    </tags>
-                    <lu>
-                      <lit v="vist"/>
-                      <lit-tag v="adv"/>
-                    </lu>
-                  </chunk>
-                  <b />
-                </out>
-          </when>
-        </choose>
-        <choose>
-          <when>
-            <test>  <!-- fin imperative is only present, never past -->
+            <test>
               <or>
-                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp.pres"/></equal>
-                <equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="imp"/></equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="pidama"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="hakkama"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="minema"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="sundima"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="jääma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="jätma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="kippuma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="sattuma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="sõitma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="asuma"/> </equal>
+                 <equal> <clip pos="2" side="tl" part="lemh"/> <lit v="puhkema"/> </equal>
               </or>
             </test>
-            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.imp"/></let>
+            <let><clip pos="1" side="tl" part="a_inf"/><lit-tag v="sup.ill"/></let>
           </when>
         </choose>
         <choose>  <!-- change order of tense and mood tags in indicative -->
