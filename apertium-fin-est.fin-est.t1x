@@ -1951,7 +1951,17 @@
             <test><equal><clip pos="2" side="sl" part="lemh"/><lit v="pitää"/></equal></test>
             <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="all"/></let>
             <let><clip pos="2" side="tl" part="lemh"/><lit v="meeldima"/></let>
+            <let><clip pos="2" side="tl" part="a_person"/><lit-tag v="p3"/></let>
             <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+            <choose>
+              <when>
+                <test><equal><clip pos="3" side="sl" part="a_sgpl"/><lit-tag v="pl"/></equal></test>
+                <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+              </when>
+              <otherwise>
+                <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="sg"/></let>
+              </otherwise>
+            </choose>
           </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
