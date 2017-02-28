@@ -416,7 +416,6 @@
       <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>
     </def-macro>
 
     <def-macro n="verb-fin-mac" npar="1">
@@ -713,7 +712,7 @@
         </when>
         </choose>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-        <!-- let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let -->
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
@@ -1441,66 +1440,60 @@
             <let><clip pos="1" side="tl" part="a_inf"/><lit-tag v="sup.ill"/></let>
           </when>
         </choose>
-        <choose>  <!-- change order of tense and mood tags in indicative -->
-          <when> 
-            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="indic.pres"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
-          </when>
-          <when> 
-            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="indic.pret"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.indic"/></let>
-          </when>
-        </choose>
-        <choose>  <!-- conneg forms do not have sgpl -->
-          <when> 
-            <test><equal><clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-          </when>
-        </choose>
-<!-- beginning of conneg-neg stuff -->
-        <choose> <!-- fin conneg translates to est neg in indic mood only; otherwise just delete conneg -->
-          <when>
-            <test>
-                <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
-            </test>
-            <choose>
-                <when> 
-                  <test>
-                    <equal> <clip pos="1" side="tl" part="a_mood"/> <lit-tag v="indic"/> </equal>
-                   </test>
-                   <choose>
-                     <when> 
-                       <test>     <!-- hack to select ei ole over pole: change from indic conneg to imprt p2.sg -->
-                         <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
-                       </test>
-                       <choose>
-                         <when> 
-                           <test>
-                             <equal> <clip pos="1" side="tl" part="a_temps"/> <lit-tag v="pres"/> </equal>
-                           </test>
-                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
-                           <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
-                         </when> 
-                         <otherwise>   <!-- temps = prt ollut, olleet, oltu etc -->
-                           <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.prc"/></let>
-                           <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                           <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
-                         </otherwise>
-                       </choose> 
-                     </when>
-                     <otherwise>   <!-- fin indic conneg = est indic neg -->
-                       <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
-                       <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                     </otherwise>
-                   </choose> 
-                </when>
-                <otherwise> <!-- fin imp conneg = est imprt -->
-                  <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
-                </otherwise>
-            </choose> 
-          </when>
-        </choose> 
-<!-- end of conneg-neg stuff -->
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFA"/></tag>
+            </tags>
+            <lu>
+                <clip pos="1" side="tl" part="lemh"/>
+                <lit-tag v="vblex.actv"/>
+                <clip pos="1" side="tl" part="a_inf"/>
+             </lu>
+          </chunk>
+          <b/>
+          <chunk name="v">
+                <tags>
+                  <tag><lit-tag v="SV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: verb-infe">
+      <pattern>
+        <pattern-item n="verb-infe"/>
+      </pattern>
+     <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord">
+          <with-param pos="1"/>
+        </call-macro>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <out>
+          <chunk name="infa" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV.INFE"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lemh"/>
+              <lit-tag v="vblex.ger"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: verb-fin">
+      <pattern>
+        <pattern-item n="verb-fin"/>
+      </pattern>
+     <action>
+        <call-macro n="verb-fin-mac"><with-param pos="1"/></call-macro>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
@@ -1776,6 +1769,8 @@
         </out>
       </action>
     </rule>
+
+
 
 
     <rule comment="REGLA: SENT">
