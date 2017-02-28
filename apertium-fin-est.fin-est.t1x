@@ -77,6 +77,16 @@
     <def-cat n="nom">
       <cat-item tags="n.*"/>
     </def-cat>
+    <def-cat n="pronpnom-nom">
+      <cat-item tags="n.*.nom"/>
+      <cat-item tags="np.*.nom"/>
+      <cat-item tags="prn.*.nom"/>
+    </def-cat>
+    <def-cat n="pronpnom-ela">
+      <cat-item tags="n.*.ela"/>
+      <cat-item tags="np.*.ela"/>
+      <cat-item tags="prn.*.ela"/>
+    </def-cat>
     <def-cat n="adds">
       <cat-item tags="vblex.*.pe4"/>
       <cat-item tags="vblex.*.pe4.*"/>
@@ -1917,6 +1927,98 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: PPN pitää PPN">
+      <pattern>
+        <pattern-item n="pronpnom-nom"/>
+        <pattern-item n="verb-fin"/>
+        <pattern-item n="pronpnom-ela"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="verb-fin-mac"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="3"/></call-macro>
+        <call-macro n="remove-Px"><with-param pos="3"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="sg_com"><with-param pos="3"/></call-macro>
+        <choose>
+          <when>
+            <test><equal><clip pos="2" side="sl" part="lemh"/><lit v="pitää"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="all"/></let>
+            <let><clip pos="2" side="tl" part="lemh"/><lit v="meeldima"/></let>
+            <let><clip pos="3" side="tl" part="a_case"/><lit-tag v="nom"/></let>
+          </when>
+        </choose>
+        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
+        <let><clip pos="3" side="tl" part="a_func"/><lit v=""/></let>
+        <let><clip pos="3" side="tl" part="a_prntype"/><lit v=""/></let>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+            <out>
+              <chunk name="prn" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="PRN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="pcle"> 
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ju"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk name="nom" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+            </out>
+          </otherwise>
+        </choose>
+        <out>
+              <b/>
+              <chunk name="v">
+                <tags>
+                  <tag><lit-tag v="SV"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="2" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+              <b/>
+              <chunk name="nom">
+                <tags>
+                  <tag><lit-tag v="SN"/></tag>
+                </tags>
+                <lu>
+                  <clip pos="3" side="tl" part="whole"/>
+                </lu>
+              </chunk>
+        </out>
+      </action>
+    </rule>
+
 
   </section-rules>
 </transfer>
