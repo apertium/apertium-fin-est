@@ -1,2 +1,44 @@
 
 Compile apertium-fin with --enable-hfst
+
+
+ülemine sõnastik on kataloogis ~/apertium/apertium-fin-est
+alumine on kataloogis ~/svn-giellatekno/main/experiment-langs/est/tools/mt/apertium
+
+analyse in est
+echo 'ta' | hfst-lookup est-fin.automorf.hfst
+echo 'ta' | hfst-lookup analyser-mt-apertium-desc.und.hfstol
+
+> ta	tema<prn><sg><gen>	0,000000
+ta	tema<prn><sg><nom>	0,000000
+
+analyse in fin
+echo 'hän' | hfst-lookup fin-est.automorf.hfst
+
+> hän	hän<prn><pers><p3><sg><nom>	0,000000
+
+generate in est
+echo 'kala<n><sg><gen>' | hfst-lookup fin-est.autogen.hfst 
+> kala<n><sg><gen>	kala	0,000000
+
+generate in fin
+echo 'kala<n><sg><gen>' | hfst-lookup est-fin.autogen.hfst 
+> kala<n><sg><gen>	kalan	0,000000
+
+generate in est
+echo 'tema<prn><sg><nom>' | hfst-lookup fin-est.autogen.hfst
+tema<prn><sg><nom>	tema<prn><sg><nom>+?	inf
+
+generate in est
+echo 'tema<prn><pers><p3><sg><nom>' | hfst-lookup fin-est.autogen.hfst
+tema<prn><pers><p3><sg><nom>	ta	0,000000
+
+
+generate in fin
+echo 'hän<prn><pers><p3><sg><nom>' | hfst-lookup est-fin.autogen.hfst 
+hän<prn><pers><p3><sg><nom>	hän	0,000000
+
+generate in fin
+echo 'hän<prn><sg><nom>' | hfst-lookup est-fin.autogen.hfst
+hän<prn><sg><nom>	hän<prn><sg><nom>+?	inf
+

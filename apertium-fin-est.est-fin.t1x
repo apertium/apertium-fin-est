@@ -2,6 +2,9 @@
 <!-- -*- nxml -*- -->
 <transfer default="chunk">
   <section-def-cats>
+    <def-cat n="any">
+      <cat-item tags="*"/>
+    </def-cat>
     <def-cat n="kanssa">
       <cat-item tags="adp" lemma="koos"/>
     </def-cat>
@@ -55,9 +58,11 @@
     </def-cat>
     <def-cat n="infa">
       <cat-item tags="vblex.infa"/>
+      <cat-item tags="vblex.infa.*"/>
     </def-cat>
     <def-cat n="infda">
       <cat-item tags="vblex.inf"/>
+      <cat-item tags="vblex.inf.*"/>
     </def-cat>
     <def-cat n="infma">  <!-- <vblex><actv><infma><sg><ine> -->
       <cat-item tags="vblex.actv.sup.ill"/>
@@ -199,15 +204,96 @@
       <attr-item tags="abe"/>
       <attr-item tags="ade"/>
     </def-attr>
-
-    <def-attr n="a_func">
-      <attr-item tags="@X"/>
-      <attr-item tags="@HNOUN"/>
-      <attr-item tags="@→N"/>
-      <attr-item tags="@N←"/>
-      <attr-item tags="@\+FMAINV"/>
+    <def-attr n="a_func">  <!-- feb 2017 hjk copied it from fin-est.t1x -->
+      <attr-item tags="@+FAUXV"/>
+      <attr-item tags="@+FMAINV"/>
+      <attr-item tags="@-FADVL"/>
+      <attr-item tags="@-FADVL→"/>
+      <attr-item tags="@-FAUXV"/>
+      <attr-item tags="@-FAUXV"/>
+      <attr-item tags="@-FMAINV"/>
+      <attr-item tags="@-FMAINV"/>
+      <attr-item tags="@-FOBJ"/>
+      <attr-item tags="@-FOBJ"/>
+      <attr-item tags="@-FOBJ→"/>
+      <attr-item tags="@-FOBJ→"/>
+      <attr-item tags="@-FOPRED→"/>
+      <attr-item tags="@-FSPRED→"/>
+      <attr-item tags="@-FSUBJ→"/>
+      <attr-item tags="@-F←ADVL"/>
+      <attr-item tags="@-F←ADVL-ela"/>
+      <attr-item tags="@-F←ADVL-ine"/>
+      <attr-item tags="@-F←OBJ"/>
+      <attr-item tags="@-F←OBJ"/>
+      <attr-item tags="@-F←OPRED"/>
+      <attr-item tags="@-F←SPRED"/>
+      <attr-item tags="@-F←SUBJ"/>
+      <attr-item tags="@-OPRED→"/>
+      <attr-item tags="@-SPRED→"/>
+      <attr-item tags="@ADVL"/>
+      <attr-item tags="@ADVL-ela→"/>
+      <attr-item tags="@ADVL-ine→"/>
+      <attr-item tags="@ADVL←"/>
+      <attr-item tags="@ADVL←OBJ"/>
       <attr-item tags="@ADVL→"/>
+      <attr-item tags="@ADVL→CS"/>
+      <attr-item tags="@ADVL→SUBJ"/>
+      <attr-item tags="@APP"/>
+      <attr-item tags="@APP-ADVL←"/>
+      <attr-item tags="@APP-Num←"/>
+      <attr-item tags="@APP-N←"/>
+      <attr-item tags="@APP-Pron←"/>
+      <attr-item tags="@APP→Pron"/>
+      <attr-item tags="@A←"/>
+      <attr-item tags="@CNP"/>
+      <attr-item tags="@CNP"/>
+      <attr-item tags="@COMP-CS←"/>
+      <attr-item tags="@CVP"/>
+      <attr-item tags="@CVP"/>
+      <attr-item tags="@HAB"/>
+      <attr-item tags="@HAB"/>
+      <attr-item tags="@HNOUN"/>
+      <attr-item tags="@INTERJ"/>
+      <attr-item tags="@N"/>
+      <attr-item tags="@NUM←"/>
+      <attr-item tags="@Num←"/>
+      <attr-item tags="@N←"/>
+      <attr-item tags="@OBJ"/>
+      <attr-item tags="@OBJ→"/>
+      <attr-item tags="@OBJ→SPRED"/>
+      <attr-item tags="@OPRED"/>
+      <attr-item tags="@OPRED→"/>
+      <attr-item tags="@PCLE"/>
+      <attr-item tags="@PPRED"/>
+      <attr-item tags="@Pron←"/>
+      <attr-item tags="@P←"/>
+      <attr-item tags="@SPRED"/>
+      <attr-item tags="@SPRED←OBJ"/>
+      <attr-item tags="@SPRED→"/>
+      <attr-item tags="@SUBJ"/>
+      <attr-item tags="@SUBJ←ADVL"/>
+      <attr-item tags="@SUBJ←OBJ"/>
+      <attr-item tags="@SUBJ→"/>
+      <attr-item tags="@VOC"/>
+      <attr-item tags="@X"/>
+      <attr-item tags="@\+FAUXV"/>
+      <attr-item tags="@\+FMAINV"/>
       <attr-item tags="@←ADVL"/>
+      <attr-item tags="@←ADVL-ela"/>
+      <attr-item tags="@←ADVL-ine"/>
+      <attr-item tags="@←OBJ"/>
+      <attr-item tags="@←OPRED"/>
+      <attr-item tags="@←PPRED"/>
+      <attr-item tags="@←SPRED"/>
+      <attr-item tags="@←SUBJ"/>
+      <attr-item tags="@→A"/>
+      <attr-item tags="@→ADVL"/>
+      <attr-item tags="@→CC"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@→N"/>
+      <attr-item tags="@→Num"/>
+      <attr-item tags="@→P"/>
+      <attr-item tags="@→Pron"/>
     </def-attr>
     <def-attr n="a_conneg">
       <attr-item tags="conneg"/>
@@ -225,6 +311,9 @@
     <def-var n="sn-chunk-name"/>
     <def-var n="current_verb"/>
     <def-var n="addp"/>
+    <def-var n="EOS" v="true"/>
+    <def-var n="caseFirstWord"/>
+
   </section-def-vars>
   <section-def-macros>
     <def-macro n="test" npar="1">
@@ -259,7 +348,13 @@
           </otherwise>  
         </choose>
      </def-macro>
+
+    <def-macro n="default-conversion1" npar="1">
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+    </def-macro>
+
   </section-def-macros>
+
   <section-rules>
 
     <rule comment="REGLA: add number to verb negated with 'ei'">
@@ -275,6 +370,9 @@
 	<pattern-item n="pret-conneg"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
 	<!-- action's for verb (pret-conneg) starts here -->
         <!--<let><clip pos="3" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
         <choose>
@@ -405,7 +503,7 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
                               <lit-tag v="adi"/>
@@ -464,7 +562,7 @@
         <pattern-item n="pron"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
                               <lit-tag v="adi"/>
@@ -524,7 +622,7 @@
         <pattern-item n="num"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="z" case="caseFirstWord">
             <tags>
@@ -544,7 +642,7 @@
         <pattern-item n="adjec"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
 <!--
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_adjec"/> 
@@ -573,7 +671,7 @@
         <pattern-item n="prt-prc"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="prc" case="caseFirstWord">
             <tags>
@@ -592,7 +690,7 @@
         <pattern-item n="imprt"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
                               <lit-tag v="pres.imp"/>
@@ -621,6 +719,7 @@
         <pattern-item n="fin-verb"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <!--<let><clip pos="1" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
@@ -720,6 +819,7 @@
         <pattern-item n="infda"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="infa" case="caseFirstWord">
             <tags>
@@ -741,6 +841,7 @@
         <pattern-item n="infma"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="infa" case="caseFirstWord">
             <tags>
@@ -762,6 +863,7 @@
         <pattern-item n="infa"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="infa" case="caseFirstWord">
             <tags>
@@ -783,6 +885,7 @@
         <pattern-item n="ei"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="ei" case="caseFirstWord">
             <tags>
@@ -804,6 +907,7 @@
 	<pattern-item n="kanssa" />
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
 	<out>
 		<chunk name="koos" case="caseFirstWord">
             <tags>
@@ -823,6 +927,8 @@
         <pattern-item n="impf-neg"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ei" case="caseFirstWord">
             <tags>
@@ -857,6 +963,7 @@
         <pattern-item n="imp-neg"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="imp" case="caseFirstWord">
             <tags>
@@ -880,6 +987,7 @@
         <pattern-item n="pres-neg"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="conneg" case="caseFirstWord">
             <tags>
@@ -903,6 +1011,8 @@
         <pattern-item n="pres-neg"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <out>
           <chunk name="ei" case="caseFirstWord">
             <tags>
@@ -937,6 +1047,7 @@
         <pattern-item n="der-mine"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="der_minen"/></let>
         <out>
           <chunk name="v" case="caseFirstWord">
@@ -958,7 +1069,7 @@
         <pattern-item n="adv"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose><when><test><equal><clip pos="1" side="tl" part="a_qst"/>
                                    <lit-tag v="qst"/></equal>
                       </test>
@@ -985,6 +1096,7 @@
         <pattern-item n="cnj"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_pnc"/><lit v=""/></let>
         <out>
 		  <chunk name="cnj" case="caseFirstWord">
@@ -1006,6 +1118,7 @@
         <pattern-item n="cm"/>
       </pattern>
       <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_clo"/><lit v=""/></let>
         <out>
           <chunk name="sent" case="caseFirstWord">
@@ -1026,7 +1139,7 @@
         <pattern-item n="sent"/>
       </pattern>
       <action>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="sent" case="caseFirstWord">
             <tags>
@@ -1038,6 +1151,23 @@
           </chunk>
         </out>
         <let><var n="sent-qst"/><lit v=""/></let>
+      </action>
+    </rule>
+
+    <rule comment="upper-lower case for any word">
+      <pattern>
+        <pattern-item n="any"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="any" case="caseFirstWord"> 
+            <tags> <tag> <lit-tag v="any"/> </tag> </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu> 
+          </chunk>
+        </out>
       </action>
     </rule>
 
