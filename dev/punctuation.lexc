@@ -4,6 +4,8 @@ Multichar_Symbols
 %<guio%>
 %<sent%>
 %<quot%>
+%<lpar%>
+%<rpar%>
 
 LEXICON Root
 
@@ -15,3 +17,5 @@ LEXICON Root
 %;%<sent%>:%; # ;
 %?%<sent%>:%? # ;
 %"%<quot%>:%" # ;
+%(%<lpar%>:%( # ;
+%)%<rpar%>:%) # ;
