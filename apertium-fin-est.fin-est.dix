@@ -352,7 +352,6 @@
     <e><p><l>silmä<s n="n"/></l><r>silm¹<s n="n"/></r></p></e>
     <e><p><l>suku<s n="n"/></l><r>sugu<s n="n"/></r></p></e>
     <e><p><l>suu<s n="n"/></l><r>suu<s n="n"/></r></p></e>
-    <e><p><l>suuri<s n="n"/></l><r>väike<s n="n"/></r></p></e>
     <e><p><l>firma<s n="n"/></l><r>firma<s n="n"/></r></p></e>
     <e><p><l>tuoli<s n="n"/></l><r>tool<s n="n"/></r></p></e>
     <e><p><l>tähti<s n="n"/></l><r>täht<s n="n"/></r></p></e>
@@ -10617,15 +10616,21 @@
     <e><p><l>kivinen<s n="adj"/></l><r>kivine<s n="adj"/></r></p></e>
     <e><p><l>ääretön<s n="adj"/></l><r>lõpmatu<s n="adj"/></r></p></e>
     <e><p><l>hyvä<s n="adj"/></l><r>hea<s n="adj"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/><s n="comp"/></l><r>parem<s n="adj"/><s n="comp"/></r></p></e>
+    <e><p><l>hyvä<s n="adj"/><s n="sup"/></l><r>parim<s n="adj"/><s n="sup"/></r></p></e>
     <e><p><l>nuori<s n="adj"/></l><r>noor<s n="adj"/></r></p></e>
     <e><p><l>vanha<s n="adj"/></l><r>vana<s n="adj"/></r></p></e>
     <e><p><l>iso<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
     <e><p><l>kaunis<s n="adj"/></l><r>ilus<s n="adj"/></r></p></e>
     <e><p><l>kylmä<s n="adj"/></l><r>külm<s n="adj"/></r></p></e>
+    <e><p><l>kylmä<s n="adj"/><s n="comp"/></l><r>külmem<s n="adj"/><s n="comp"/></r></p></e>
     <e><p><l>lämmin<s n="adj"/></l><r>soe<s n="adj"/></r></p></e>
+    <e><p><l>lämmin<s n="adj"/><s n="comp"/></l><r>soojem<s n="adj"/><s n="comp"/></r></p></e>
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
     <e><p><l>pieni<s n="adj"/></l><r>väike<s n="adj"/></r></p></e>
     <e><p><l>suuri<s n="adj"/></l><r>suur<s n="adj"/></r></p></e>
+    <e><p><l>suuri<s n="adj"/><s n="comp"/></l><r>suurem<s n="adj"/><s n="comp"/></r></p></e>
+    <e><p><l>suuri<s n="adj"/><s n="sup"/></l><r>suurim<s n="adj"/><s n="sup"/></r></p></e>
         <!--<e><p><l>koiranleuka<s n="adj"/></l><r>koer<s n="adj"/></r></p></e>-->
 
     <e><p><l>iloinen<s n="adj"/></l><r>õnnelik<s n="adj"/></r></p></e>
@@ -13677,7 +13682,7 @@
     <e><p><l>minne<s n="adv"/></l><r>kuhu<s n="adv"/></r></p></e>
     <e><p><l>missä<s n="adv"/><s n="rel"/></l><r>kus<s n="adv"/></r></p></e>
     <e><p><l>missä<s n="adv"/><s n="itg"/></l><r>kus<s n="adv"/></r></p></e>
-    <e><p><l>missä<s n="adv"/></l><r>kuidas<s n="adv"/></r></p></e>
+    <e><p><l>missä<s n="adv"/></l><r>kus<s n="adv"/></r></p></e>
     <e><p><l>kuin<s n="cnjcoo"/></l><r>kui<s n="adv"/></r></p></e>
     <e><p><l>joka<s n="prn"/><s n="rel"/><s n="sg"/><s n="ill"/></l><r>kuhu<s n="adv"/></r></p></e>
     <e><p><l>joka<s n="prn"/><s n="rel"/><s n="sg"/><s n="ine"/></l><r>kus<s n="adv"/></r></p></e>
@@ -16348,7 +16353,7 @@
     <e><p><l>harva<s n="prn"/></l><r>harv<s n="prn"/></r></p></e>
     <e><p><l>mikään<s n="prn"/></l><r>mingi<s n="prn"/></r></p></e>
     <e><p><l>millainen<s n="prn"/></l><r>milline<s n="prn"/></r></p></e>
-    <e><p><l>sä<s n="prn"/></l><r>sa<s n="prn"/></r></p></e>
+    <e><p><l>sä<s n="prn"/></l><r>sina<s n="prn"/></r></p></e>
     <e><p><l>muuan<s n="prn"/></l><r>keegi<s n="prn"/></r></p></e>
     <e><p><l>muuan<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
     <e><p><l>toinen<s n="prn"/></l><r>teine<s n="prn"/></r></p></e>

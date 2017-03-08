@@ -421,7 +421,7 @@
     <def-macro n="default-conversion1" npar="1">
       <let><clip pos="1" side="tl" part="a_known"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
-      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+      <!--let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let-->
       <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>
     </def-macro>
@@ -616,7 +616,6 @@
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
@@ -674,7 +673,6 @@
             <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
           </when>
         </choose>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
         <choose>
           <when>
@@ -816,7 +814,6 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
         <out>
           <chunk name="agprc" case="caseFirstWord">
@@ -840,7 +837,6 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="prsprc" case="caseFirstWord">
             <tags>
@@ -863,7 +859,6 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="prsprc" case="caseFirstWord">
             <tags>
@@ -886,7 +881,6 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="prfprc" case="caseFirstWord">
             <tags>
@@ -909,7 +903,6 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="prfprc" case="caseFirstWord">
             <tags>
@@ -933,7 +926,6 @@
         <call-macro n="firstWord">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
         <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
         <choose>
@@ -978,7 +970,6 @@
      <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
         <choose>
           <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
@@ -1020,7 +1011,6 @@
      <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="infa" case="caseFirstWord">
             <tags>
@@ -1045,9 +1035,8 @@
         <call-macro n="replace-foc1">
           <with-param pos="1"/>
         </call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let>
+        <!--let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let-->
         <choose>
           <when>
             <test>         <!-- antaisi: est cond form annaks is underspecified for number and person -->
@@ -1221,7 +1210,6 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="qst" case="caseFirstWord">
             <tags>
@@ -1242,7 +1230,6 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
 
         <choose>       <!-- fin eikä = est ja ei -->
           <when><test><equal><clip pos="1" side="sl" part="a_eineg"/> 
@@ -1293,7 +1280,6 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <out>
           <chunk name="sub" case="caseFirstWord">
             <tags>
@@ -1374,7 +1360,6 @@
           <when><test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
                 <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
                 <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                 <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
