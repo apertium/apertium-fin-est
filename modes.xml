@@ -25,9 +25,13 @@
         <file name="apertium-fin-est.fin-est.t2x"/>
         <file name="fin-est.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-interchunk">
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t4x"/>
+        <file name="fin-est.t4x.bin"/>
       </program>
       <program name="hfst-proc -N 1 $1">
         <file name="fin-est.autogen.hfst"/>
@@ -55,9 +59,13 @@
         <file name="apertium-fin-est.fin-est.t2x"/>
         <file name="fin-est.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-interchunk">
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t4x"/>
+        <file name="fin-est.t4x.bin"/>
       </program>
       <program name="hfst-proc -N 1 -d">
         <file name="fin-est.autogen.hfst"/>
@@ -181,6 +189,38 @@
     </pipeline>
   </mode>
 
+  <mode name="fin-est-interchunk2" install="no">
+    <pipeline>
+      <program name="hfst-proc --weight-classes 1 -w -e">
+        <file name="fin-est.automorf.hfst"/>
+      </program>
+      <program name="cg-proc -1 -n -w">
+        <file name="fin-est.rlx.bin"/>
+      </program>
+      <program name="apertium-pretransfer"/>
+      <program name="lt-proc -b">
+        <file name="fin-est.autobil.bin"/>
+      </program>
+      <program name="lrx-proc -m">
+        <file name="fin-est.autolex.bin"/>
+      </program>
+      <program name="apertium-transfer -b">
+        <file name="apertium-fin-est.fin-est.t1x"/>
+        <file name="fin-est.t1x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t2x"/>
+        <file name="fin-est.t2x.bin"/>
+      </program>
+      <program name="apertium-interchunk">
+        <file name="apertium-fin-est.fin-est.t3x"/>
+        <file name="fin-est.t3x.bin"/>
+      </program>
+    </pipeline>
+  </mode>
+
+
+
   <mode name="fin-est-postchunk" install="no">
     <pipeline>
       <program name="hfst-proc --weight-classes 1 -w -e">
@@ -204,9 +244,13 @@
         <file name="apertium-fin-est.fin-est.t2x"/>
         <file name="fin-est.t2x.bin"/>
       </program>
-      <program name="apertium-postchunk">
+      <program name="apertium-interchunk">
         <file name="apertium-fin-est.fin-est.t3x"/>
         <file name="fin-est.t3x.bin"/>
+      </program>
+      <program name="apertium-postchunk">
+        <file name="apertium-fin-est.fin-est.t4x"/>
+        <file name="fin-est.t4x.bin"/>
       </program>
     </pipeline>
   </mode>
@@ -237,8 +281,8 @@
         <file name="est-fin.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-fin-est.est-fin.t3x"/>
-        <file name="est-fin.t3x.bin"/>
+        <file name="apertium-fin-est.est-fin.t4x"/>
+        <file name="est-fin.t4x.bin"/>
       </program>
       <program name="hfst-proc -N 1 $1">
         <file name="est-fin.autogen.hfst"/>
@@ -267,8 +311,8 @@
         <file name="est-fin.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-fin-est.est-fin.t3x"/>
-        <file name="est-fin.t3x.bin"/>
+        <file name="apertium-fin-est.est-fin.t4x"/>
+        <file name="est-fin.t4x.bin"/>
       </program>
       <program name="hfst-proc -N 1 -d">
         <file name="est-fin.autogen.hfst"/>
@@ -414,8 +458,8 @@
         <file name="est-fin.t2x.bin"/>
       </program>
       <program name="apertium-postchunk">
-        <file name="apertium-fin-est.est-fin.t3x"/>
-        <file name="est-fin.t3x.bin"/>
+        <file name="apertium-fin-est.est-fin.t4x"/>
+        <file name="est-fin.t4x.bin"/>
       </program>
     </pipeline>
   </mode>
