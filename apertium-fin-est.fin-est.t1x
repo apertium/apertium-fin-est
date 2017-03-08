@@ -6,7 +6,9 @@
       <cat-item tags="*"/>
     </def-cat>
     <def-cat n="sent">
-      <cat-item tags="sent"/>
+      <cat-item lemma="." tags="sent"/>
+      <cat-item lemma="!" tags="sent"/>
+      <cat-item lemma="?" tags="sent"/>
     </def-cat>
     <def-cat n="ei-neg">                <!-- en, et, ..., älä, ... -->
       <cat-item tags="vblex.neg.*"/>
@@ -318,6 +320,9 @@
     <def-attr n="a_attr">
       <attr-item tags="attr"/>
     </def-attr>
+    <def-attr n="a_pron_type">     <!-- personal pronouns need to be remembered for possessive handling in t2x -->
+      <attr-item tags="pers"/>
+    </def-attr>
 
   </section-def-attrs>
   <section-def-vars>
@@ -325,6 +330,7 @@
     <def-var n="current_verb"/>
     <def-var n="EOS" v="true"/>
     <def-var n="caseFirstWord"/>
+    <def-var n="px_poss"/>      <!-- for oma -->
 
   </section-def-vars>
   <section-def-macros>
@@ -494,18 +500,29 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="2"/></call-macro>
+        <let><var n="px_poss"/><clip pos="2" side="sl" part="a_poss"/></let>
+        <choose>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="oma"/></equal>
+                <contains-substring><clip pos="2" side="sl" part="a_poss"/><lit v="px3"/></contains-substring>
+            </and></test>
+            <let><var n="px_poss"/><lit v=""/></let>
+          </when>
+        </choose>
         <out>
           <chunk name="a_n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="2" side="tl" part="a_sgpl"/></tag>
               <tag><clip pos="2" side="tl" part="a_case"/></tag>
-              <tag><clip pos="2" side="sl" part="a_poss"/></tag>
+              <tag><var n="px_poss"/></tag>
               <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="adj"/>
+              <clip pos="1" side="tl" part="a_comp"/>
               <clip pos="1" side="tl" part="a_sgpl"/>
               <clip pos="1" side="tl" part="a_case"/>
             </lu>
@@ -544,50 +561,41 @@
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="2"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="3"/></call-macro>
+        <let><var n="px_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
+        <choose>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="oma"/></equal>
+                <contains-substring><clip pos="3" side="sl" part="a_poss"/><lit v="px3"/></contains-substring>
+            </and></test>
+            <let><var n="px_poss"/><lit v=""/></let>
+          </when>
+        </choose>
         <out>
-          <chunk name="a" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="AN"/></tag>
-              <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-              <tag><clip pos="1" side="tl" part="a_case"/></tag>
-              <!--tag><clip pos="1" side="sl" part="a_poss"/></tag-->
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <lit-tag v="adj"/>
-              <clip pos="1" side="tl" part="a_sgpl"/>
-              <clip pos="1" side="tl" part="a_case"/>
-            </lu>
-          </chunk>
-          <b />
-        </out>
-        <call-macro n="firstWord"><with-param pos="2"/></call-macro>
-        <out>
-          <chunk name="a" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="AN"/></tag>
-              <tag><clip pos="2" side="tl" part="a_sgpl"/></tag>
-              <tag><clip pos="2" side="tl" part="a_case"/></tag>
-              <!--tag><clip pos="2" side="sl" part="a_poss"/></tag-->
-            </tags>
-            <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="adj"/>
-              <clip pos="2" side="tl" part="a_sgpl"/>
-              <clip pos="2" side="tl" part="a_case"/>
-            </lu>
-          </chunk>
-          <b />
-        </out>
-        <call-macro n="firstWord"><with-param pos="3"/></call-macro>
-        <out>
-          <chunk name="n" case="caseFirstWord">
+          <chunk name="a_a_n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
               <tag><clip pos="3" side="tl" part="a_sgpl"/></tag>
               <tag><clip pos="3" side="tl" part="a_case"/></tag>
-              <tag><clip pos="3" side="sl" part="a_poss"/></tag>
+              <tag><var n="px_poss"/></tag>
+              <!--tag><clip pos="3" side="sl" part="a_poss"/></tag-->
             </tags>
+            <lu>
+              <clip pos="1" side="tl" part="lem"/>
+              <lit-tag v="adj"/>
+              <clip pos="1" side="tl" part="a_comp"/>
+              <clip pos="1" side="tl" part="a_sgpl"/>
+              <clip pos="1" side="tl" part="a_case"/>
+            </lu>
+            <b pos="1"/>
+            <lu>
+              <clip pos="2" side="tl" part="lem"/>
+              <lit-tag v="adj"/>
+              <clip pos="1" side="tl" part="a_comp"/>
+              <clip pos="2" side="tl" part="a_sgpl"/>
+              <clip pos="2" side="tl" part="a_case"/>
+            </lu>
+            <b pos="1"/>
             <lu>
               <clip pos="3" side="tl" part="whole"/>
             </lu>
@@ -676,9 +684,11 @@
               <chunk name="prn" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="PRN"/></tag>
+                  <tag><lit-tag v="prn"/></tag>
+                  <tag><clip pos="1" side="tl" part="a_pron_type"/></tag> <!-- no harm if it is empty -->
+                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- no harm if it is empty -->
                   <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
                   <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- what happens if it is empty? -->
                   <!--tag><clip pos="1" side="sl" part="a_poss"/></tag--> <!-- itse forms; kaikkiaan -->
                 </tags>
                 <lu>
@@ -702,9 +712,11 @@
               <chunk name="prn" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="PRN"/></tag>
+                  <tag><lit-tag v="prn"/></tag>
+                  <tag><clip pos="1" side="tl" part="a_pron_type"/></tag> <!-- no harm if it is empty -->
+                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- no harm if it is empty -->
                   <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
                   <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- what happens if it is empty? -->
                   <!--tag><clip pos="1" side="sl" part="a_poss"/></tag--> <!-- itse forms; kaikkiaan -->
                 </tags>
                 <lu>
@@ -1303,11 +1315,11 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
+        <!--let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
         <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+        <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let-->
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>

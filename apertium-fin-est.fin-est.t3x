@@ -2,30 +2,13 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
-    <def-cat n="SN">
-      <cat-item tags="SN"/>
-      <cat-item tags="SN.*"/>
-    </def-cat>
+
     <def-cat n="PRN">
-      <cat-item tags="PRN"/>
       <cat-item tags="PRN.*"/>
-    </def-cat>
-    <def-cat n="QST">
-      <cat-item tags="QST"/>
     </def-cat>
     <def-cat n="SV">
       <cat-item tags="SV"/>
-      <cat-item tags="SVNEG"/> <!-- ??? -->
       <cat-item tags="SV.*"/>
-    </def-cat>
-    <def-cat n="SVNEG">
-      <cat-item tags="SVNEG"/>
-    </def-cat>
-    <def-cat n="ADV">
-      <cat-item tags="ADV"/>
-    </def-cat>
-    <def-cat n="SENT">
-      <cat-item tags="SENT"/>
     </def-cat>
   </section-def-cats>
 
@@ -36,22 +19,10 @@
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="a_arg2">  <!-- for minä tykkään - mulle meeldib -->
-      <attr-item tags="arg2_nom"/>
-    </def-attr>
     <def-attr n="a_person">
       <attr-item tags="p1"/>
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
-    </def-attr>
-    <def-attr n="a_poss">
-      <attr-item tags="px1sg"/>
-      <attr-item tags="px2sg"/>
-      <attr-item tags="px3sg"/>
-      <attr-item tags="px1pl"/>
-      <attr-item tags="px2pl"/>
-      <attr-item tags="px3pl"/>
-      <attr-item tags="px3"/>
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
@@ -73,281 +44,43 @@
   </section-def-attrs>
 
   <section-def-vars>
-    <def-var n="number"/>
-    <def-var n="POST"/>
-    <def-var n="prn_lem"/>  <!-- for inserted prn -->
-    <def-var n="prn_pers"/> <!-- for inserted prn -->
-    <def-var n="prn_nbr"/>  <!-- for inserted prn -->
-    <def-var n="verb_nbr_pers"/>   <!-- finite verb number and person; initially unset -->
+    <def-var n="paraula"/>
   </section-def-vars>
-
-  <section-def-macros>
-
-    <def-macro n="remember_verb" npar="1" c="remember verb person and number for handling possessive clitics">
-      <choose>
-      <when>
-        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p1"/></equal></test>
-        <let><var n="verb_nbr_pers"/><lit v="px1"/></let>
-      </when>
-      <when>
-        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p2"/></equal></test>
-        <let><var n="verb_nbr_pers"/><lit v="px2"/></let>
-      </when>
-      <when>
-        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p3"/></equal></test>
-        <let><var n="verb_nbr_pers"/><lit v="px3"/></let>
-      </when>
-      </choose>
-      <choose>
-      <!-- <append n="verb_nbr_pers"><clip pos="1" part="a_nbr"/></append> doesn't work, thus 2 tests below -->
-      <when>
-        <test><equal><clip pos="1" part="a_nbr"/><lit-tag v="sg"/></equal></test>
-        <append n="verb_nbr_pers"><lit v="sg"/></append>
-      </when>
-      <when>
-        <test><equal><clip pos="1" part="a_nbr"/><lit-tag v="pl"/></equal></test>
-        <append n="verb_nbr_pers"><lit v="pl"/></append>
-      </when>
-      </choose>
-    </def-macro>
-
-    <def-macro n="prn_out" npar="1"> <!-- create a pers pronoun from px... tag -->
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="mina"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p1"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="sina"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p2"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="tema"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p3"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="meie"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p1"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="teie"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p2"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal>
-            </test>
-            <let><var n="prn_lem"/><lit v="nemad"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p3"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
-          </when></choose>
-          <out>
-          <chunk>
-            <get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from>
-            <lit v="prn"/>
-            <lit-tag v="PRN"/>
-            <lit v="{^"/>
-            <var n="prn_lem"/>
-            <lit-tag v="prn"/>
-            <lit-tag v="pers"/>
-            <var n="prn_pers"/>
-            <var n="prn_nbr"/>
-            <lit-tag v="gen"/>
-            <lit v="$"/>
-            <lit v="}"/>
-          </chunk>
-          <b />
-          </out>
-    </def-macro>
-
-  </section-def-macros>
 
   <section-rules>
 
-    <rule comment="REGLA: SN">
+    <rule comment="PRN pxPRN"> <!-- pxPRN is a possessive suffix changed to a pronoun -->
       <pattern>
-        <pattern-item n="SN"/>
-      </pattern>
-      <action>
-
-<out><chunk><lit v="verb:"/><var n="verb_nbr_pers"/></chunk></out>
-      <choose>
-        <when>  <!-- a possessive tag should convert to a pronoun -->
-          <test> 
-              <contains-substring><clip pos="1" part="a_poss"/><lit v="px"/></contains-substring>
-          </test>
-          <choose>  <!-- either a personal pronoun or oma -->
-            <when>  <!-- test for same-referral -->
-              <test> <!-- refer to the same subject -->
-                <and>
-                <contains-substring><var n="verb_nbr_pers"/><lit v="px"/></contains-substring>
-                <contains-substring><clip pos="1" part="a_poss"/><var n="verb_nbr_pers"/></contains-substring>
-                </and>
-              </test>
-              <out>
-                <chunk>
-                  <get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from>
-                  <lit v="prn"/>
-                  <lit-tag v="PRN"/>
-                  <lit v="{"/>
-                  <lit v="^oma"/>
-                  <lit-tag v="prn"/>
-                  <lit-tag v="sg"/>
-                  <lit-tag v="gen"/>
-                  <lit v="$"/>
-                  <lit v="}"/>
-                </chunk>
-                <b />
-              </out>
-            </when>
-            <otherwise> <!-- refer to different subjects; it should be a personal pronoun -->
-              <call-macro n="prn_out"><with-param pos="1"/></call-macro>
-            </otherwise>
-          </choose>
-          <modify-case><clip pos="1" part="lem"/><lit v="aa"/></modify-case>
-          <let><var n="verb_nbr_pers"/><lit v=""/></let>  <!-- unset; assuming that lists are in the same chunk -->
-        </when>
-      </choose>
-      <out>
-        <chunk>
-          <clip pos="1" part="whole"/>
-        </chunk>
-      </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SV">
-      <pattern>
-        <pattern-item n="SV"/>
-      </pattern>
-      <action>
-        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: PRN">
-      <pattern>
+        <pattern-item n="PRN"/>
         <pattern-item n="PRN"/>
       </pattern>
       <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="lem"/>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-        </out>
+      <choose>
+        <when>  
+          <test><and>
+            <equal><clip pos="2" part="lem"/><lit v="px"/></equal>  
+            <equal><clip pos="1" part="chcontent"/><clip pos="2" part="chcontent"/></equal>
+          </and></test> 
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+          </out>
+        </when>
+        <otherwise>
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+          </out>
+        </otherwise>
+      </choose>
       </action>
     </rule>
-
-    <rule comment="REGLA: SV QST">
-      <pattern>
-        <pattern-item n="SV"/>
-        <pattern-item n="QST"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <get-case-from pos="1">
-              <clip pos="2" part="lem"/></get-case-from>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-          <b pos="1"/>
-          <chunk>
-            <get-case-from pos="2">
-              <clip pos="1" part="lem"/></get-case-from>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
-    <rule comment="REGLA: SV QST SN">
-      <pattern>
-        <pattern-item n="SV"/>
-        <pattern-item n="QST"/>
-        <pattern-item n="SN"/>
-      </pattern>
-      <action>
-        <choose><when><test><equal><clip pos="1" part="a_arg2"/><lit-tag v="arg2_nom"/></equal></test>
-                      <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let></when></choose>
-        <out>
-          <chunk>
-            <get-case-from pos="1">
-              <clip pos="2" part="lem"/></get-case-from>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-          <b pos="1"/>
-          <chunk>
-            <get-case-from pos="2">
-              <clip pos="1" part="lem"/></get-case-from>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-          <b pos="2"/>
-          <chunk>
-              <clip pos="3" part="lem"/>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: reorder SVNEG ADV SV   ">
-      <pattern>
-        <pattern-item n="SVNEG"/>
-        <pattern-item n="ADV"/>
-        <pattern-item n="SV"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <clip pos="1" part="whole"/>
-          </chunk>
-          <b pos="1"/>
-          <chunk>
-            <clip pos="3" part="whole"/>
-          </chunk>
-          <b pos="2"/>
-          <chunk>
-            <clip pos="2" part="whole"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-
 
   </section-rules>
 </interchunk>

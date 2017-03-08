@@ -24,6 +24,9 @@
     <sdef n="ND"  c=""/>
     <sdef n="CD"  c=""/>
 
+    <sdef n="sup"  c="ülivõrre"/>
+    <sdef n="comp"  c="keskvõrre"/>
+
 
     <sdef n="itg"  c=""/>
     <sdef n="dem"  c=""/>
@@ -297,7 +300,7 @@
     <e><p><l>unioni<s n="n"/></l><r>liit<s n="n"/></r></p></e>
     <e><p><l>aika<s n="n"/></l><r>aeg<s n="n"/></r></p></e>
     <e><p><l>aika<s n="n"/></l><r>kell<s n="n"/></r></p></e>
-    <e><p><l>aika<s n="n"/></l><r>päris<s n="n"/></r></p></e>
+    <e><p><l>aika<s n="part"/></l><r>üsna<s n="adv"/></r></p></e>
     <e><p><l>vesi<s n="n"/></l><r>vesi<s n="n"/></r></p></e>
     <e><p><l>kivennäisvesi<s n="n"/></l><r>mineraalvesi<s n="n"/></r></p></e>
     <e><p><l>koira<s n="n"/></l><r>koer<s n="n"/></r></p></e>
@@ -305,7 +308,7 @@
     <e><p><l>talo<s n="n"/></l><r>maja<s n="n"/></r></p></e>
     <e><p><l>sää<s n="n"/></l><r>ilm<s n="n"/></r></p></e>
     <e><p><l>poika<s n="n"/></l><r>poiss<s n="n"/></r></p></e>
-    <e><p><l>kiire<s n="n"/></l><r>kiire<s n="adj"/></r></p></e>
+    <e><p><l>kiire<s n="adj"/></l><r>kiire<s n="adj"/></r></p></e>
     <e><p><l>tyttö<s n="n"/></l><r>tüdruk<s n="n"/></r></p></e>
     <e><p><l>puutarha<s n="n"/></l><r>aed<s n="n"/></r></p></e>
     <e><p><l>sisko<s n="n"/></l><r>õde<s n="n"/></r></p></e>
@@ -9509,7 +9512,6 @@
     <e><p><l>jarruttaja<s n="n"/></l><r>obstruktsionist<s n="n"/></r></p></e>
     <e><p><l>ulkoloinen<s n="n"/></l><r>ektoparasiit<s n="n"/></r></p></e>
     <e><p><l>ulkomaalainen<s n="n"/></l><r>välismaalane<s n="n"/></r></p></e>
-    <e><p><l>ulkomaalainen<s n="n"/></l><r>gringo<s n="n"/></r></p></e>
     <e><p><l>rae<s n="n"/></l><r>rahetera<s n="n"/></r></p></e>
     <e><p><l>resorsinoli<s n="n"/></l><r>resortsinool<s n="n"/></r></p></e>
     <e><p><l>epäuskottavuus<s n="n"/></l><r>uskumatus<s n="n"/></r></p></e>
@@ -11449,7 +11451,7 @@
     <e><p><l>tuottamaton<s n="adj"/></l><r>ebaproduktiivne<s n="adj"/></r></p></e>
     <e><p><l>reikäinen<s n="adj"/></l><r>auklik<s n="adj"/></r></p></e>
     <e><p><l>kotoisa<s n="adj"/></l><r>kodune<s n="adj"/></r></p></e>
-    <e><p><l>kotoisa<s n="adj"/></l><r>pärit<s n="adv"/></r></p></e>
+    <e><p><l>kotoisin<s n="adv"/></l><r>pärit<s n="adv"/></r></p></e>
     <e><p><l>käyttöoikeudellinen<s n="adj"/></l><r>kasutusvaldaja<s n="adj"/></r></p></e>
     <e><p><l>katalektinen<s n="adj"/></l><r>katalektiline<s n="adj"/></r></p></e>
     <e><p><l>nomoteettinen<s n="adj"/></l><r>nomoteetiline<s n="adj"/></r></p></e>
@@ -15757,7 +15759,7 @@
     <e><p><l>kohtu<s n="n"/></l><r>üsk<s n="n"/></r></p></e>
     <e><p><l>oikeus<s n="n"/></l><r>kohus<s n="n"/></r></p></e>
     <e><p><l>koju<s n="n"/></l><r>putka<s n="n"/></r></p></e>
-    <e><p><l>kotiin<s n="adv"/></l><r>koju<s n="adv"/></r></p></e>
+    <e><p><l>kotiin<s n="adv"/></l><r>kodu<s n="n"/><s n="sg"/><s n="ill"/></r></p></e>
     <e><p><l>kokka<s n="n"/></l><r>laevanina<s n="n"/></r></p></e>
     <e><p><l>kolea<s n="n"/></l><r>vilu<s n="n"/></r></p></e>
     <e><p><l>kauhea<s n="n"/></l><r>kole<s n="n"/></r></p></e>
@@ -16093,7 +16095,7 @@
     <e><p><l>ape<s n="n"/></l><r>rokk<s n="n"/></r></p></e>
     <e><p><l>rotu<s n="n"/></l><r>tõug<s n="n"/></r></p></e>
     <e><p><l>rivi<s n="n"/></l><r>rodu<s n="n"/></r></p></e>
-    <e><p><l>kiire<s n="n"/></l><r>rutt<s n="n"/></r></p></e>
+    <e><p><l>kiire<s n="n"/></l><r>rutt<s n="adj"/></r></p></e>
     <e><p><l>ruttuun<s n="adv"/></l><r>kortsu<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>ruttu<s n="adv"/></r></p></e>
     <e><p><l>ruumiin<b/>koristaja<s n="n"/></l><r>laibaehitaja<s n="n"/></r></p></e>
@@ -16326,6 +16328,7 @@
     <e><p><l>'<s n="apos"/></l><r>'<s n="apos"/></r></p></e>
     <e><re>[\?:;!"…]+</re><p><l><s n="sent"/></l><r><s n="sent"/></r></p></e>
     <e><re>[0-9]+([.,][0-9]+)*</re><p><l><s n="num"/><s n="card"/><s n="sg"/><s n="nom"/></l><r><s n="num"/><s n="card"/></r></p></e> 
+    <!--e><re>[0-9]+([.,][0-9]+)*</re><p><l><s n="num"/><s n="card"/><s n="sg"/><s n="nom"/></l><r></r></p></e--> 
 
     <!-- to merge-->
 
@@ -16946,7 +16949,7 @@
     <e><p><l>laakso<s n="n"/></l><r>org<s n="n"/></r></p></e>
     <e><p><l>lehdistö<s n="n"/></l><r>ajakirjandus<s n="n"/></r></p></e>
     <e><p><l>leimikko<s n="n"/></l><r>raielank<s n="n"/></r></p></e>
-    <e><p><l>lähin<s n="n"/></l><r>lähim<s n="n"/></r></p></e>
+    <e><p><l>lähin<s n="adj"/></l><r>lähim<s n="adj"/><s n="sup"/></r></p></e>
     <e><p><l>menneisyys<s n="n"/></l><r>minevik<s n="n"/></r></p></e>
     <e><p><l>merkintä<s n="n"/></l><r>märkimine<s n="n"/></r></p></e>
     <e><p><l>metsästys<s n="n"/></l><r>jaht<s n="n"/></r></p></e>
@@ -17098,7 +17101,6 @@
     <e><p><l>asianomainen<s n="adj"/></l><r>asjaomane<s n="adj"/></r></p></e>
     <e><p><l>näköinen<s n="adj"/></l><r>sarnane<s n="adj"/></r></p></e>
     <e><p><l>edullinen<s n="adj"/></l><r>soodne<s n="adj"/></r></p></e>
-    <e><p><l>matti<s n="adj"/></l><r>rahatu<s n="adj"/></r></p></e>
     <e><p><l>harva<s n="adj"/></l><r>üksik<s n="adj"/></r></p></e>
     <e><p><l>minkälainen<s n="adj"/></l><r>milline<s n="adj"/></r></p></e>
     <e><p><l>pimeä<s n="adj"/></l><r>pime<s n="adj"/></r></p></e>
@@ -17325,7 +17327,6 @@
     <e><p><l>sittemmin<s n="adv"/></l><r>hiljem<s n="adv"/></r></p></e>
     <e><p><l>tiettävästi<s n="adv"/></l><r>teatavasti<s n="adv"/></r></p></e>
     <e><p><l>pystyssä<s n="adv"/></l><r>püsti<s n="adv"/></r></p></e>
-    <e><p><l>lähin<s n="adv"/></l><r>lähim<s n="adv"/></r></p></e>
     <e><p><l>tasan<s n="adv"/></l><r>täpselt<s n="adv"/></r></p></e>
     <e><p><l>tasan<s n="adv"/></l><r>ühtlaselt<s n="adv"/></r></p></e>
     <e><p><l>korkealla<s n="adv"/></l><r>kõrgel<s n="adv"/></r></p></e>
@@ -17708,6 +17709,7 @@
     <!-- SECTION: Interjections -->
 
     <e><p><l>oi<s n="ij"/></l><r>oi<s n="ij"/></r></p></e>
+    <e><p><l>ai<s n="ij"/></l><r>ai<s n="ij"/></r></p></e>
   </section>
 </dictionary>
 <!-- vim: set ft=xml: -->

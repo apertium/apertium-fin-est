@@ -75,10 +75,11 @@
   <section-def-vars>
     <def-var n="number"/>
     <def-var n="POST"/>
-    <def-var n="prn_lem"/>  <!-- for inserted prn -->
-    <def-var n="prn_pers"/> <!-- for inserted prn -->
-    <def-var n="prn_nbr"/>  <!-- for inserted prn -->
-    <def-var n="verb_nbr_pers"/>   <!-- finite verb number and person; initially unset -->
+    <def-var n="verb_nbr_pers" v=""/>   <!-- finite verb number and person; initially unset -->
+    <def-var n="upper_lower"/>
+    <def-var n="px"/>       <!-- clumsy way to get the upper-lower info into new chunk -->
+    <def-var n="pron_tags"/>  <!-- for inserted pronoun -->
+    <def-var n="pron_word"/>  <!-- for inserted pronoun -->
   </section-def-vars>
 
   <section-def-macros>
@@ -111,72 +112,63 @@
       </choose>
     </def-macro>
 
-    <def-macro n="prn_out" npar="1"> <!-- create a pers pronoun from px... tag -->
+    <def-macro n="gen_pers_pron_pseudolemma" npar="1"> <!-- create a pers pronoun from px... tag -->
+          <let><var n="pron_word"/><lit v=""/></let>
+          <let><var n="pron_tags"/><lit-tag v="prn"/></let>
+            <append n="pron_tags"><lit-tag v="pers"/></append>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="mina"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p1"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_word"/><lit v="mina"/></let>
+            <append n="pron_tags"><lit-tag v="p1"/></append>
+            <append n="pron_tags"><lit-tag v="sg"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="sina"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p2"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_word"/><lit v="sina"/></let>
+            <append n="pron_tags"><lit-tag v="p2"/></append>
+            <append n="pron_tags"><lit-tag v="sg"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="tema"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p3"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_word"/><lit v="tema"/></let>
+            <append n="pron_tags"><lit-tag v="p3"/></append>
+            <append n="pron_tags"><lit-tag v="sg"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="meie"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p1"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_word"/><lit v="meie"/></let>
+            <append n="pron_tags"><lit-tag v="p1"/></append>
+            <append n="pron_tags"><lit-tag v="pl"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="teie"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p2"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_word"/><lit v="teie"/></let>
+            <append n="pron_tags"><lit-tag v="p2"/></append>
+            <append n="pron_tags"><lit-tag v="pl"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal>
             </test>
-            <let><var n="prn_lem"/><lit v="nemad"/></let>
-            <let><var n="prn_pers"/><lit-tag v="p3"/></let>
-            <let><var n="prn_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_word"/><lit v="nemad"/></let>
+            <append n="pron_tags"><lit-tag v="p3"/></append>
+            <append n="pron_tags"><lit-tag v="pl"/></append>
           </when></choose>
-          <out>
-          <chunk>
-            <get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from>
-            <lit v="prn"/>
-            <lit-tag v="PRN"/>
-            <lit v="{^"/>
-            <var n="prn_lem"/>
-            <lit-tag v="prn"/>
-            <lit-tag v="pers"/>
-            <var n="prn_pers"/>
-            <var n="prn_nbr"/>
-            <lit-tag v="gen"/>
-            <lit v="$"/>
-            <lit v="}"/>
-          </chunk>
-          <b />
-          </out>
+          <append n="pron_tags"><lit-tag v="gen"/></append>
+    </def-macro>
+
+    <def-macro n="forget_verb" npar="0" c="set the variable to empty">
+        <let><var n="verb_nbr_pers"/><lit v=""/></let>
     </def-macro>
 
   </section-def-macros>
@@ -188,8 +180,6 @@
         <pattern-item n="SN"/>
       </pattern>
       <action>
-
-<out><chunk><lit v="verb:"/><var n="verb_nbr_pers"/></chunk></out>
       <choose>
         <when>  <!-- a possessive tag should convert to a pronoun -->
           <test> 
@@ -197,34 +187,43 @@
           </test>
           <choose>  <!-- either a personal pronoun or oma -->
             <when>  <!-- test for same-referral -->
-              <test> <!-- refer to the same subject -->
+              <test> <!-- refering to the same subject -->
                 <and>
                 <contains-substring><var n="verb_nbr_pers"/><lit v="px"/></contains-substring>
                 <contains-substring><clip pos="1" part="a_poss"/><var n="verb_nbr_pers"/></contains-substring>
                 </and>
               </test>
-              <out>
-                <chunk>
-                  <get-case-from pos="1"><clip pos="1" part="lem"/></get-case-from>
-                  <lit v="prn"/>
-                  <lit-tag v="PRN"/>
-                  <lit v="{"/>
-                  <lit v="^oma"/>
-                  <lit-tag v="prn"/>
-                  <lit-tag v="sg"/>
-                  <lit-tag v="gen"/>
-                  <lit v="$"/>
-                  <lit v="}"/>
-                </chunk>
-                <b />
-              </out>
+              <let><var n="pron_word"/><lit v="oma"/></let>
+              <let><var n="pron_tags"/><lit-tag v="prn"/></let>
+              <append n="pron_tags"><lit-tag v="sg"/></append>
+              <append n="pron_tags"><lit-tag v="gen"/></append>
             </when>
-            <otherwise> <!-- refer to different subjects; it should be a personal pronoun -->
-              <call-macro n="prn_out"><with-param pos="1"/></call-macro>
+            <otherwise> <!-- refering to different subjects - it should be a personal pronoun -->
+              <call-macro n="gen_pers_pron_pseudolemma"><with-param pos="1"/></call-macro>
             </otherwise>
           </choose>
+          <let><var n="px"/><lit v="px"/></let>
+          <let><var n="upper_lower"/><case-of pos="1" part="lem"/></let>
+          <choose><when>
+            <test>
+              <equal><var n="upper_lower"/><lit v="Aa"/></equal>
+            </test>
+            <let><var n="px"/><lit v="Px"/></let>
+          </when></choose>
+          <out>
+            <chunk>
+              <var n="px"/>
+              <lit-tag v="PRN"/>
+              <var n="pron_tags"/>
+              <lit v="{^"/>
+              <var n="pron_word"/>
+              <var n="pron_tags"/>
+              <lit v="$}"/>
+            </chunk>
+            <b />
+          </out>
           <modify-case><clip pos="1" part="lem"/><lit v="aa"/></modify-case>
-          <let><var n="verb_nbr_pers"/><lit v=""/></let>  <!-- unset; assuming that lists are in the same chunk -->
+          <call-macro n="forget_verb"></call-macro> <!-- assuming that coordin words are in the same chunk... -->
         </when>
       </choose>
       <out>
@@ -347,6 +346,19 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="SENT"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+        <call-macro n="forget_verb"><with-param pos="1"/></call-macro>  <!-- a new sentence starts from blank -->
+      </action>
+    </rule>
 
 
   </section-rules>
