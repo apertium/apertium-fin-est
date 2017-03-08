@@ -10,11 +10,13 @@
 /apertium-fin-est.est-fin.t1x -text
 /apertium-fin-est.est-fin.t2x -text
 /apertium-fin-est.est-fin.t3x -text
+/apertium-fin-est.est-fin.t4x -text
 /apertium-fin-est.fin-est.dix -text
 /apertium-fin-est.fin-est.lrx -text
 /apertium-fin-est.fin-est.t1x -text
 /apertium-fin-est.fin-est.t2x -text
 /apertium-fin-est.fin-est.t3x -text
+/apertium-fin-est.fin-est.t4x -text
 /autogen.sh -text
 /configure.ac -text
 dev/bidix-analyser.fin-est.txt -text

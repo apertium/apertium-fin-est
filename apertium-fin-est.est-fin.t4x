@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+<postchunk>
+  <section-def-cats>
+    <def-cat n="sent">
+      <cat-item name="sent"/>
+    </def-cat>
+    <def-cat n="default">
+      <cat-item name="*"/>
+    </def-cat>
+  </section-def-cats>
+  <section-def-attrs>
+    <def-attr n="a_foc">
+      <attr-item tags="foc_gi"/>
+    </def-attr>
+    <def-attr n="nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+  </section-def-attrs>
+  <section-def-vars>
+    <def-var n="paraula"/>
+  </section-def-vars>
+  <section-rules>
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="default"/>
+      </pattern>
+      <action>
+        <choose>
+          <when><test><equal><clip pos="1" part="a_foc"/><lit-tag v="foc_gi"/></equal></test>
+                <let><clip pos="1" part="a_foc"/><lit v=""/></let>
+            <out>
+              <mlu>
+                <lu>
+                  <clip pos="1" part="whole"/>
+                </lu>
+                <lu>
+                  <lit v="kin"/>
+                  <lit-tag v="enc"/>
+                </lu>
+              </mlu>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <lu>
+                <clip pos="1" part="whole"/>
+              </lu>
+            </out>
+          </otherwise>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+  </section-rules>
+</postchunk>
