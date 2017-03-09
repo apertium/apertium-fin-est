@@ -73,11 +73,12 @@
     <def-cat n="pron">
       <cat-item tags="prn.*"/>
     </def-cat>
-    <def-cat n="prop">
+    <!--def-cat n="prop">
       <cat-item tags="np.*"/>
-    </def-cat>
+    </def-cat-->
     <def-cat n="nom">
       <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
     </def-cat>
     <def-cat n="adds">
       <cat-item tags="vblex.*.pe4"/>
@@ -93,6 +94,12 @@
   <section-def-attrs>
     <def-attr n="a_pos">
       <attr-item tags="adv"/>
+      <attr-item tags="n"/>
+      <attr-item tags="np"/>
+      <attr-item tags="num.card"/>
+      <attr-item tags="num.ord"/>
+      <attr-item tags="adj"/>
+      <attr-item tags="prn"/>
     </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
@@ -325,14 +332,16 @@
     </def-attr>
 
   </section-def-attrs>
+
   <section-def-vars>
-    <def-var n="number"/>
-    <def-var n="current_verb"/>
+    <def-var n="chunk_number"/>
+    <def-var n="chunk_case"/>
+    <def-var n="chunk_poss"/>
     <def-var n="EOS" v="true"/>
     <def-var n="caseFirstWord"/>
     <def-var n="px_poss"/>      <!-- for oma -->
-
   </section-def-vars>
+
   <section-def-macros>
     <def-macro n="f_adj1" npar="1">
       <choose>
@@ -372,6 +381,10 @@
           <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_pa"/></equal></test>
           <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
         </when>
+        <when> <!-- Delete this from tl -->
+          <test><equal><clip pos="1" side="tl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+          <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+        </when>
         <when> <!-- Don't preserve the hyph -->
           <test><and><equal><clip pos="1" side="tl" part="a_adds"/><lit-tag v="pref"/></equal>
           <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></equal></and></test>
@@ -383,6 +396,22 @@
           <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
         </when>
       </choose>
+    </def-macro>
+
+    <def-macro n="replace_foc_han" npar="1"> 
+        <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
+            <out>
+              <b/>
+              <chunk name="han"> 
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="ju"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+            </out>
     </def-macro>
 
     <def-macro n="firstWord" npar="1" c="modified by mginesti 11/nov/10">
@@ -440,45 +469,35 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
         <call-macro n="sg_com"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-            <out>
-              <chunk name="n" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="SN"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                  <tag><clip pos="1" side="sl" part="a_poss"/></tag>
-                </tags>
-                <lu>
-              	  <clip pos="1" side="tl" part="lem"/>
-              	  <lit-tag v="n"/>
-                  <clip pos="1" side="tl" part="a_sgpl"/>
-                  <clip pos="1" side="tl" part="a_case"/>
-                </lu>
-              </chunk>
-            </out>
+        <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><clip pos="1" side="sl" part="a_poss"/></let>
+        <out>
+          <chunk name="n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+            </tags>
+            <lu>
+       	      <clip pos="1" side="tl" part="lem"/>
+       	      <clip pos="1" side="tl" part="a_pos"/>
+              <!--lit-tag v="n"/-->
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
+       	      <clip pos="1" side="tl" part="a_foc"/>
+            </lu>
+          </chunk>
+        </out>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
-            <!-- let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let-->
-            <out>
-              <b/>
-              <chunk name="pcle"> 
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <lit v="ju"/>
-                  <lit-tag v="adv"/>
-                </lu>
-              </chunk>
-            </out>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
           </when>
         </choose>
       </action>
     </rule>
-
-
 
     <rule comment="REGLA: AdjNSgPl">
       <pattern>
@@ -486,20 +505,32 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <choose>
+          <when>
+            <test><not><and>
+                <equal><clip pos="1" side="sl" part="a_sgpl"/><clip pos="2" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_case"/><clip pos="2" side="sl" part="a_case"/></equal>
+            </and></not></test>
+            <reject-current-rule shifting="no"/> <!-- not the same chunk; treat adj and nom separately -->
+          </when>
+        </choose>
+        <!-- the same chunk -->
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
-        <choose>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <choose>  <!-- fin lyhyt tukka (sg) = est lühikesed juuksed (pl) -->
           <when>
             <test>
                 <equal><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
             </test>
             <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+            <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
           </when>
         </choose>
-        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
-        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="2"/></call-macro>
+
         <let><var n="px_poss"/><clip pos="2" side="sl" part="a_poss"/></let>
         <choose>
           <when>
@@ -510,25 +541,34 @@
             <let><var n="px_poss"/><lit v=""/></let>
           </when>
         </choose>
+
+        <let><var n="chunk_number"/><clip pos="2" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="2" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><var n="px_poss"/></let>
         <out>
           <chunk name="a_n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="2" side="tl" part="a_sgpl"/></tag>
-              <tag><clip pos="2" side="tl" part="a_case"/></tag>
-              <tag><var n="px_poss"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
               <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="adj"/>
               <clip pos="1" side="tl" part="a_comp"/>
-              <clip pos="1" side="tl" part="a_sgpl"/>
-              <clip pos="1" side="tl" part="a_case"/>
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
             </lu>
           <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="whole"/>
+       	      <clip pos="2" side="tl" part="lem"/>
+              <clip pos="2" side="tl" part="a_pos"/>
+              <!--lit-tag v="n"/-->
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
+       	      <clip pos="1" side="tl" part="a_foc"/>
             </lu>
           </chunk>
         </out>
@@ -543,10 +583,28 @@
         <pattern-item n="nom"/>
       </pattern>
       <action>
+        <choose>
+          <when>
+            <test><not><and>
+                <equal><clip pos="1" side="sl" part="a_sgpl"/><clip pos="2" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="2" side="sl" part="a_sgpl"/><clip pos="3" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_case"/><clip pos="2" side="sl" part="a_case"/></equal>
+                <equal><clip pos="2" side="sl" part="a_case"/><clip pos="3" side="sl" part="a_case"/></equal>
+            </and></not></test>
+            <reject-current-rule shifting="no"/> <!-- not the same chunk; treat adj and nom separately -->
+          </when>
+        </choose>
+        <!-- the same chunk -->
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
         <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
-        <choose>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="2"/></call-macro>
+        <choose>  <!-- fin lyhyt tukka (sg) = est lühikesed juuksed (pl) -->
           <when>
             <test>
                 <equal><clip pos="3" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
@@ -555,12 +613,7 @@
             <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
           </when>
         </choose>
-        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
-        <call-macro n="f_adj1"><with-param pos="2"/></call-macro>
-        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="2"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="3"/></call-macro>
+
         <let><var n="px_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
         <choose>
           <when>
@@ -571,51 +624,60 @@
             <let><var n="px_poss"/><lit v=""/></let>
           </when>
         </choose>
+
+        <let><var n="chunk_number"/><clip pos="3" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="3" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><var n="px_poss"/></let>
         <out>
           <chunk name="a_a_n" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SN"/></tag>
-              <tag><clip pos="3" side="tl" part="a_sgpl"/></tag>
-              <tag><clip pos="3" side="tl" part="a_case"/></tag>
-              <tag><var n="px_poss"/></tag>
-              <!--tag><clip pos="3" side="sl" part="a_poss"/></tag-->
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+              <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
               <lit-tag v="adj"/>
               <clip pos="1" side="tl" part="a_comp"/>
-              <clip pos="1" side="tl" part="a_sgpl"/>
-              <clip pos="1" side="tl" part="a_case"/>
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
             </lu>
-            <b pos="1"/>
+          <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
               <lit-tag v="adj"/>
-              <clip pos="1" side="tl" part="a_comp"/>
-              <clip pos="2" side="tl" part="a_sgpl"/>
-              <clip pos="2" side="tl" part="a_case"/>
+              <clip pos="2" side="tl" part="a_comp"/>
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
             </lu>
-            <b pos="1"/>
+          <b pos="1"/>
             <lu>
-              <clip pos="3" side="tl" part="whole"/>
+       	      <clip pos="3" side="tl" part="lem"/>
+              <clip pos="3" side="tl" part="a_pos"/>
+              <!--lit-tag v="n"/-->
+              <lit-tag v="2"/>
+              <lit-tag v="3"/>
+       	      <clip pos="1" side="tl" part="a_foc"/>
             </lu>
           </chunk>
         </out>
       </action>
     </rule>
 
-
-
-    <rule comment="REGLA: PROP">
+    <!--rule comment="REGLA: PROP">
       <pattern>
         <pattern-item n="prop"/>
       </pattern>
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
+        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><clip pos="1" side="sl" part="a_poss"/></let>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
@@ -630,7 +692,7 @@
           </chunk>
         </out>
       </action>
-    </rule>
+    </rule-->
 
 
     <rule comment="REGLA: NUM">
@@ -663,66 +725,46 @@
         <pattern-item n="pron"/>
       </pattern>
       <action>
+
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></test>
             <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
           </when>
         </choose>
+        <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
-        <choose>
+        <out>
+          <chunk name="prn" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRN"/></tag>
+              <tag><lit-tag v="prn"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><clip pos="1" side="tl" part="a_pron_type"/></tag> <!-- no harm if it is empty -->
+              <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- no harm if it is empty -->
+            </tags>
+            <lu>
+       	      <clip pos="1" side="tl" part="lem"/>
+       	      <clip pos="1" side="tl" part="a_pos"/>
+              <clip pos="1" side="tl" part="a_pron_type"/> <!-- no harm if it is empty -->
+              <clip pos="1" side="tl" part="a_person"/> <!-- no harm if it is empty -->
+              <lit-tag v="3"/>
+              <lit-tag v="4"/>
+       	      <clip pos="1" side="tl" part="a_foc"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose>                   
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
-            <out>
-              <chunk name="prn" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="PRN"/></tag>
-                  <tag><lit-tag v="prn"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_pron_type"/></tag> <!-- no harm if it is empty -->
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- no harm if it is empty -->
-                  <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                  <!--tag><clip pos="1" side="sl" part="a_poss"/></tag--> <!-- itse forms; kaikkiaan -->
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-              <b/>
-              <chunk name="pcle"> 
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <lit v="ju"/>
-                  <lit-tag v="adv"/>
-                </lu>
-              </chunk>
-            </out>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
           </when>
-          <otherwise>
-            <out>
-              <chunk name="prn" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="PRN"/></tag>
-                  <tag><lit-tag v="prn"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_pron_type"/></tag> <!-- no harm if it is empty -->
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag> <!-- no harm if it is empty -->
-                  <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_case"/></tag>
-                  <!--tag><clip pos="1" side="sl" part="a_poss"/></tag--> <!-- itse forms; kaikkiaan -->
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </otherwise>
         </choose>
       </action>
     </rule>
@@ -1156,47 +1198,23 @@
           </when>
         </choose> 
 <!-- end of conneg-neg stuff -->
+        <out>
+          <chunk name="v" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SV"/></tag>
+              <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
+              <tag><clip pos="1" side="tl" part="a_person"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
-            <out>
-              <chunk name="v" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="SV"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-              <b/>
-              <chunk name="pcle"> 
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <lit v="ju"/>
-                  <lit-tag v="adv"/>
-                </lu>
-              </chunk>
-            </out>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
           </when>
-          <otherwise>
-            <out>
-              <chunk name="v" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="SV"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-                  <tag><clip pos="1" side="tl" part="a_person"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </otherwise>
         </choose>
       </action>
     </rule>
@@ -1301,48 +1319,21 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
-        <!--let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
-        <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let-->
+        <out>
+          <chunk name="a" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="ADV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
-            <let><clip pos="1" side="tl" part="a_foc"/><lit v=""/></let>
-            <out>
-              <chunk name="a" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-              <b/>
-              <chunk name="pcle"> <!-- consider to reposition it after the verb! -->
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <lit v="ju"/>
-                  <lit-tag v="adv"/>
-                </lu>
-              </chunk>
-            </out>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
           </when>
-          <otherwise>
-            <out>
-              <chunk name="a" case="caseFirstWord">
-                <tags>
-                  <tag><lit-tag v="ADV"/></tag>
-                </tags>
-                <lu>
-                  <clip pos="1" side="tl" part="whole"/>
-                </lu>
-              </chunk>
-            </out>
-          </otherwise>
         </choose>
       </action>
     </rule>
@@ -1354,16 +1345,25 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
         <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+
         <choose>
           <when><test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/>
                       </equal></test>
-                <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                <let><clip pos="1" side="tl" part="a_poss"/><lit v=""/></let>
-                <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                <let><clip pos="1" side="tl" part="a_comp"/><lit v=""/></let>
-                <let><clip pos="1" side="tl" part="a_case"/><lit v=""/></let>
+            <out>
+              <chunk name="a" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+       	          <clip pos="1" side="tl" part="lem"/>
+       	          <clip pos="1" side="tl" part="a_pos"/>
+       	          <clip pos="1" side="tl" part="a_foc"/>
+                </lu>
+              </chunk>
+            </out>
           </when>
           <otherwise>
             <choose>
@@ -1372,22 +1372,30 @@
                        <let><clip pos="1" side="tl" part="a_der"/><lit-tag v="sg.abl"/></let>
               </when>
             </choose>
+
+            <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
+            <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
+            <out>
+              <chunk name="a" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADJ"/></tag>
+                  <tag><var n="chunk_number"/></tag>
+                  <tag><var n="chunk_case"/></tag>
+                  <!--tag><var n="chunk_poss"/></tag-->
+              <!-- uudelleen, suorastaan, ikävissään, parhaimmillaan, parhaillaan, sellaisenaan, perinteisimmillään, tosissasi, vähintään, ainoastaan -->
+                </tags>
+                <lu>
+                  <clip pos="1" side="tl" part="lem"/>
+                  <clip pos="1" side="tl" part="a_pos"/>
+                  <clip pos="1" side="tl" part="a_comp"/>
+                  <lit-tag v="2"/>
+                  <lit-tag v="3"/>
+       	          <clip pos="1" side="tl" part="a_foc"/>
+                </lu>
+              </chunk>
+            </out>
           </otherwise>
         </choose>
-        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
-        <out>
-          <chunk name="a" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="ADJ"/></tag>
-              <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
-              <tag><clip pos="1" side="tl" part="a_case"/></tag>
-              <!-- tag><clip pos="1" side="sl" part="a_poss"/></tag--> <!-- uudelleen, suorastaan, ikävissään, parhaimmillaan, parhaillaan, sellaisenaan, perinteisimmillään, tosissasi, vähintään, ainoastaan -->
-            </tags>
-            <lu>
-              <clip pos="1" side="tl" part="whole"/>
-            </lu>
-          </chunk>
-        </out>
       </action>
     </rule>
 

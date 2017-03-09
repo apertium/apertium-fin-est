@@ -59,7 +59,7 @@
         <when>  
           <test><and>
             <equal><clip pos="2" part="lem"/><lit v="px"/></equal>  
-            <equal><clip pos="1" part="chcontent"/><clip pos="2" part="chcontent"/></equal>
+            <equal><clip pos="1" part="tags"/><clip pos="2" part="tags"/></equal>
           </and></test> 
           <out>
             <chunk>

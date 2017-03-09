@@ -218,7 +218,7 @@
     <e><p><l>yksi<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
     <e><p><l>sama<s n="prn"/></l><r>sama<s n="prn"/></r></p></e>
     <e><p><l>itse<s n="prn"/><s n="ref"/></l><r>ise<s n="prn"/></r></p></e>
-    <e><p><l>eräs<s n="prn"/></l><r>miski<s n="prn"/></r></p></e>
+    <e><p><l>eräs<s n="prn"/></l><r>üks<s n="prn"/></r></p></e>
     <e><p><l>molempi<s n="n"/></l><r>mõlema<s n="prn"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>teine<s n="prn"/></r></p></e>
     <e><p><l>muu<s n="prn"/></l><r>muu<s n="prn"/></r></p></e>
@@ -15871,7 +15871,6 @@
     <e><p><l>jäsen<s n="n"/></l><r>liige<s n="n"/></r></p></e>
     <e><p><l>liiteri<s n="n"/></l><r>kuur<s n="n"/></r></p></e>
     <e><p><l>johtaja<s n="n"/></l><r>liider<s n="n"/></r></p></e>
-    <e><p><l>eräs<b/>laatikkomainen<s n="n"/></l><r>liiv<s n="n"/></r></p></e>
     <e><p><l>Linnunrata<s n="n"/></l><r>Linnutee<s n="n"/></r></p></e>
     <e><p><l>lipeä<s n="n"/></l><r>leelis<s n="n"/></r></p></e>
     <e><p><l>liukas<s n="adj"/></l><r>libe<s n="adj"/></r></p></e>
@@ -16100,7 +16099,7 @@
     <e><p><l>ape<s n="n"/></l><r>rokk<s n="n"/></r></p></e>
     <e><p><l>rotu<s n="n"/></l><r>tõug<s n="n"/></r></p></e>
     <e><p><l>rivi<s n="n"/></l><r>rodu<s n="n"/></r></p></e>
-    <e><p><l>kiire<s n="n"/></l><r>rutt<s n="adj"/></r></p></e>
+    <e><p><l>kiire<s n="n"/></l><r>rutt<s n="n"/></r></p></e>
     <e><p><l>ruttuun<s n="adv"/></l><r>kortsu<s n="adv"/></r></p></e>
     <e><p><l>nopeasti<s n="adv"/></l><r>ruttu<s n="adv"/></r></p></e>
     <e><p><l>ruumiin<b/>koristaja<s n="n"/></l><r>laibaehitaja<s n="n"/></r></p></e>

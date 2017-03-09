@@ -79,6 +79,7 @@
     <def-var n="upper_lower"/>
     <def-var n="px"/>       <!-- clumsy way to get the upper-lower info into new chunk -->
     <def-var n="pron_tags"/>  <!-- for inserted pronoun -->
+    <def-var n="chunk_pron_tags"/>  <!-- for inserted pronoun -->
     <def-var n="pron_word"/>  <!-- for inserted pronoun -->
   </section-def-vars>
 
@@ -112,10 +113,11 @@
       </choose>
     </def-macro>
 
-    <def-macro n="gen_pers_pron_pseudolemma" npar="1"> <!-- create a pers pronoun from px... tag -->
+    <def-macro n="gen_pers_pron" npar="1"> <!-- create a pers pronoun from px... tag -->
           <let><var n="pron_word"/><lit v=""/></let>
           <let><var n="pron_tags"/><lit-tag v="prn"/></let>
-            <append n="pron_tags"><lit-tag v="pers"/></append>
+          <let><var n="chunk_pron_tags"/><lit-tag v="prn"/></let>
+          <append n="pron_tags"><lit-tag v="pers"/></append>
           <choose><when>
             <test>
               <equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal>
@@ -123,6 +125,10 @@
             <let><var n="pron_word"/><lit v="mina"/></let>
             <append n="pron_tags"><lit-tag v="p1"/></append>
             <append n="pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p1"/></append>
           </when></choose>
           <choose><when>
             <test>
@@ -131,6 +137,10 @@
             <let><var n="pron_word"/><lit v="sina"/></let>
             <append n="pron_tags"><lit-tag v="p2"/></append>
             <append n="pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p2"/></append>
           </when></choose>
           <choose><when>
             <test>
@@ -139,6 +149,10 @@
             <let><var n="pron_word"/><lit v="tema"/></let>
             <append n="pron_tags"><lit-tag v="p3"/></append>
             <append n="pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p3"/></append>
           </when></choose>
           <choose><when>
             <test>
@@ -147,6 +161,10 @@
             <let><var n="pron_word"/><lit v="meie"/></let>
             <append n="pron_tags"><lit-tag v="p1"/></append>
             <append n="pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p1"/></append>
           </when></choose>
           <choose><when>
             <test>
@@ -155,6 +173,10 @@
             <let><var n="pron_word"/><lit v="teie"/></let>
             <append n="pron_tags"><lit-tag v="p2"/></append>
             <append n="pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p2"/></append>
           </when></choose>
           <choose><when>
             <test>
@@ -163,6 +185,10 @@
             <let><var n="pron_word"/><lit v="nemad"/></let>
             <append n="pron_tags"><lit-tag v="p3"/></append>
             <append n="pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="gen"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="p3"/></append>
           </when></choose>
           <append n="pron_tags"><lit-tag v="gen"/></append>
     </def-macro>
@@ -199,7 +225,7 @@
               <append n="pron_tags"><lit-tag v="gen"/></append>
             </when>
             <otherwise> <!-- refering to different subjects - it should be a personal pronoun -->
-              <call-macro n="gen_pers_pron_pseudolemma"><with-param pos="1"/></call-macro>
+              <call-macro n="gen_pers_pron"><with-param pos="1"/></call-macro>
             </otherwise>
           </choose>
           <let><var n="px"/><lit v="px"/></let>
@@ -214,7 +240,7 @@
             <chunk>
               <var n="px"/>
               <lit-tag v="PRN"/>
-              <var n="pron_tags"/>
+              <var n="chunk_pron_tags"/>
               <lit v="{^"/>
               <var n="pron_word"/>
               <var n="pron_tags"/>
@@ -271,6 +297,7 @@
         <pattern-item n="QST"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="1">
@@ -297,6 +324,7 @@
         <pattern-item n="SN"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <choose><when><test><equal><clip pos="1" part="a_arg2"/><lit-tag v="arg2_nom"/></equal></test>
                       <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let></when></choose>
         <out>
@@ -330,6 +358,7 @@
         <pattern-item n="SV"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <out>
           <chunk>
             <clip pos="1" part="whole"/>
