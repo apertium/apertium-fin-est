@@ -1212,16 +1212,6 @@
           </when>
         </choose> 
 <!-- end of conneg-neg stuff -->
-<!-- make a lexical choice (not working)... -->
-        <!--choose>
-          <when> 
-            <test><and>
-              <equal><clip pos="1" side="tl" part="lemh"/><lit v="pidama"/> </equal>
-              <equal> <var n="xxx"/> <lit v="meeldima"/> </equal>
-            </and></test>
-            <let><clip pos="1" side="tl" part="lemh"/><lit v="meeldima"/></let>
-         </when> 
-        </choose--> 
         <out>
           <chunk name="v" case="caseFirstWord">
             <tags>
@@ -1675,25 +1665,6 @@
             </lu> 
           </chunk>
         </out>
-      </action>
-    </rule>
-
-<!-- a stupid way to learn info from around a verb ... -->
-    <rule comment="remember subcat">
-      <pattern>
-        <pattern-item n="any"/>
-        <pattern-item n="pitää"/>
-        <pattern-item n="any"/>
-      </pattern>
-      <action>
-        <choose><when>
-          <test><and>
-            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="nom"/></equal>
-            <equal><clip pos="3" side="sl" part="a_case"/><lit-tag v="ela"/></equal>
-          </and></test>
-          <let><var n="xxx"/><lit v="meeldima"/></let>
-        </when></choose>
-        <reject-current-rule shifting="no"/> <!-- pretend you haven't seen me -->
       </action>
     </rule>
 

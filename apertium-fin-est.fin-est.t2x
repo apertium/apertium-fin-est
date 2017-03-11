@@ -2,6 +2,17 @@
 <!-- -*- nxml -*- -->
 <interchunk>
   <section-def-cats>
+    <def-cat n="any">
+      <cat-item tags="*"/>
+    </def-cat>
+    <def-cat n="n-nom">
+      <cat-item tags="SN.*.nom"/>
+      <cat-item tags="SN.*.nom.*"/>
+    </def-cat>
+    <def-cat n="n-ela">
+      <cat-item tags="SN.*.ela"/>
+      <cat-item tags="SN.*.ela.*"/>
+    </def-cat>
     <def-cat n="SN">
       <cat-item tags="SN"/>
       <cat-item tags="SN.*"/>
@@ -81,6 +92,7 @@
     <def-var n="pron_tags"/>  <!-- for inserted pronoun -->
     <def-var n="chunk_pron_tags"/>  <!-- for inserted pronoun -->
     <def-var n="pron_word"/>  <!-- for inserted pronoun -->
+    <def-var n="verb_lemma"/>  <!-- a place to hold stuff -->
   </section-def-vars>
 
   <section-def-macros>
@@ -386,6 +398,45 @@
           </chunk>
         </out>
         <call-macro n="forget_verb"><with-param pos="1"/></call-macro>  <!-- a new sentence starts from blank -->
+      </action>
+    </rule>
+
+<!--  -->
+    <rule comment="x peab y-st - x-le meeldib y">
+      <pattern>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="SV"/>
+        <pattern-item n="n-ela"/>
+      </pattern>
+      <action>
+        <let><var n="verb_lemma"/><clip pos="2" part="chcontent"/></let>
+        <choose><when>
+          <test>
+            <contains-substring><clip pos="2" part="chcontent"/><lit v="pidama"/></contains-substring>
+          </test>
+          <let><var n="verb_lemma"/><lit v="{^"/></let>
+          <append n="verb_lemma"><lit v="meeldima"/></append>
+          <append n="verb_lemma"><lit-tag v="2.3.4.5.6.7"/></append>
+          <append n="verb_lemma"><lit v="$}"/></append>
+          <let><clip pos="2" part="a_nbr"/><clip pos="3" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
+          <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
+          <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
+        </when></choose>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
       </action>
     </rule>
 
