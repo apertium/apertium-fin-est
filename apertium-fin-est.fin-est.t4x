@@ -5,6 +5,9 @@
     <def-cat n="sent">
       <cat-item name="punt"/>
     </def-cat>
+    <def-cat n="ole-pole">
+      <cat-item name="v"/>
+    </def-cat>
   </section-def-cats>
   <section-def-attrs>
     <def-attr n="nbr">
@@ -13,11 +16,39 @@
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
+    <def-attr n="ad_hoc">
+      <attr-item tags="pres.indic.neg"/>
+    </def-attr>
   </section-def-attrs>
   <section-def-vars>
     <def-var n="paraula"/>
   </section-def-vars>
   <section-rules>
+
+<!-- olema<vblex><actv><pres><indic><neg> generates ole/pole, while
+     olema<vblex><actv><pres><imp><p2><sg> generates ole       -->
+    <rule comment="hack for pole/ole: output only ole">
+      <pattern>
+        <pattern-item n="ole-pole"/>
+      </pattern>
+      <action>
+      <choose>
+        <when>
+          <test><and>
+            <equal><clip pos="1" part="lemh"/><lit v="olema"/></equal>
+            <equal><clip pos="1" part="ad_hoc"/><lit-tag v="pres.indic.neg"/></equal>
+          </and></test>
+        <let><clip pos="1" part="ad_hoc"/><lit-tag v="pres.imp.p2.sg"/></let>
+        </when>
+      </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
     <rule comment="CHUNK:">
       <pattern>
         <pattern-item n="sent"/>

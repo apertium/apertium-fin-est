@@ -1092,7 +1092,6 @@
           <with-param pos="1"/>
         </call-macro>
         <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
-        <!--let><clip pos="1" side="tl" part="a_adds"/><lit-tag v=""/></let-->
         <choose>
           <when>
             <test>         <!-- antaisi: est cond form annaks is underspecified for number and person -->
@@ -1115,30 +1114,30 @@
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
-                              <lit-tag v="cond"/>
-                      </equal></test>                   <!-- fin conditional is only present, never past -->
-                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.cond"/></let>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_screeve"/><lit-tag v="cond"/>
+            </equal></test>                   <!-- fin conditional is only present, never past -->
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.cond"/></let>
           </when>
         </choose>
         <choose>           <!-- fin potential = est vist + indicative -->
-          <when><test><equal><clip pos="1" side="sl" part="a_mood"/> 
-                              <lit-tag v="pot"/>                 
-                      </equal>
-                      </test>                         <!-- fin potential is only present, never past -->
-                <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
-                <out>
-                  <chunk name="prn" case="caseFirstWord">
-                    <tags>
-                      <tag><lit-tag v="PRN"/></tag>
-                    </tags>
-                    <lu>
-                      <lit v="vist"/>
-                      <lit-tag v="adv"/>
-                    </lu>
-                  </chunk>
-                  <b />
-                </out>
+          <when>
+            <test><equal>
+              <clip pos="1" side="sl" part="a_mood"/><lit-tag v="pot"/>                 
+            </equal></test>                         <!-- fin potential is only present, never past -->
+            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.indic"/></let>
+            <out>
+              <chunk name="adv" case="caseFirstWord">
+                <tags>
+                  <tag><lit-tag v="ADV"/></tag>
+                </tags>
+                <lu>
+                  <lit v="vist"/>
+                  <lit-tag v="adv"/>
+                </lu>
+              </chunk>
+              <b />
+            </out>
           </when>
         </choose>
         <choose>
@@ -1179,9 +1178,11 @@
                   <test>
                     <equal> <clip pos="1" side="tl" part="a_mood"/> <lit-tag v="indic"/> </equal>
                    </test>
+                   <!-- fin indic conneg = est indic neg -->
+                   <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
                    <choose>
                      <when> 
-                       <test>     <!-- hack to select ei ole over pole: change from indic conneg to imprt p2.sg -->
+                       <test>     <!-- olla has too many analyses in Finnish, prune them... -->
                          <equal> <clip pos="1" side="tl" part="lemh"/> <lit v="olema"/> </equal>
                        </test>
                        <choose>
@@ -1189,23 +1190,17 @@
                            <test>
                              <equal> <clip pos="1" side="tl" part="a_temps"/> <lit-tag v="pres"/> </equal>
                            </test>
-                           <let><clip pos="1" side="tl" part="a_mood"/><lit-tag v="imp"/></let>
-                           <let><clip pos="1" side="tl" part="a_ole_conneg"/><lit-tag v="p2.sg"/></let>
+                           <!-- this gets solved with a hack in postchunk -->
                          </when> 
                          <otherwise>   <!-- temps = prt ollut, olleet, oltu etc -->
                            <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.prc"/></let>
-                           <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
                            <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                          </otherwise>
                        </choose> 
                      </when>
-                     <otherwise>   <!-- fin indic conneg = est indic neg -->
-                       <let><clip pos="1" side="tl" part="a_conneg"/><lit-tag v="neg"/></let>
-                       <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
-                     </otherwise>
                    </choose> 
                 </when>
-                <otherwise> <!-- fin imp conneg = est imprt -->
+                <otherwise> <!-- fin imp, cond + conneg = est imprt, cond -->
                   <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
                 </otherwise>
             </choose> 
