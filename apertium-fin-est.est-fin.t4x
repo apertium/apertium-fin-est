@@ -1,71 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
-<postchunk>
+<interchunk>
   <section-def-cats>
-    <def-cat n="sent">
-      <cat-item name="sent"/>
+    <def-cat n="koos">
+      <cat-item lemma="koos" tags="PREP"/>
     </def-cat>
-    <def-cat n="default">
-      <cat-item name="*"/>
+    <def-cat n="SN">
+      <cat-item tags="SN"/>
+      <cat-item tags="SN.*"/>
+    </def-cat>
+    <def-cat n="SENT">
+      <cat-item tags="SENT"/>
     </def-cat>
   </section-def-cats>
   <section-def-attrs>
-    <def-attr n="a_foc">
-      <attr-item tags="foc_gi"/>
-    </def-attr>
-    <def-attr n="nbr">
+    <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
+    <def-attr n="a_cas">
+      <attr-item tags="nom"/>
+      <attr-item tags="acc"/>
+      <attr-item tags="dat"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="loc"/>
+      <attr-item tags="abl"/>
+    </def-attr>
   </section-def-attrs>
   <section-def-vars>
-    <def-var n="paraula"/>
+    <def-var n="number"/>
+    <def-var n="POST"/>
   </section-def-vars>
+  <section-def-macros>
+    <def-macro n="test1" npar="1">
+      <let>
+        <var n="POST"/>
+        <lit v=""/>
+      </let>
+    </def-macro>
+  </section-def-macros>
   <section-rules>
-    <rule comment="CHUNK:">
+    <rule comment="REGLA: SN">
       <pattern>
-        <pattern-item n="default"/>
-      </pattern>
-      <action>
-        <choose>
-          <when><test><equal><clip pos="1" part="a_foc"/><lit-tag v="foc_gi"/></equal></test>
-                <let><clip pos="1" part="a_foc"/><lit v=""/></let>
-            <out>
-              <mlu>
-                <lu>
-                  <clip pos="1" part="whole"/>
-                </lu>
-                <lu>
-                  <lit v="kin"/>
-                  <lit-tag v="enc"/>
-                </lu>
-              </mlu>
-            </out>
-          </when>
-          <otherwise>
-            <out>
-              <lu>
-                <clip pos="1" part="whole"/>
-              </lu>
-            </out>
-          </otherwise>
-        </choose>
-      </action>
-    </rule>
-
-    <rule comment="CHUNK:">
-      <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="SN"/>
       </pattern>
       <action>
         <out>
-          <lu>
-            <clip pos="1" part="whole"/>
-          </lu>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+    <rule comment="REGLA: koos SN">
+      <pattern>
+	<pattern-item n="koos"/>
+        <pattern-item n="SN"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="2" part="lem"/>
+            <clip pos="2" part="tags"/>
+            <clip pos="2" part="chcontent"/>
+          </chunk>
         </out>
       </action>
     </rule>
   </section-rules>
-</postchunk>
+</interchunk>
+

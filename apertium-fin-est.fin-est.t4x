@@ -1,65 +1,149 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
-<postchunk>
+<interchunk>
   <section-def-cats>
-    <def-cat n="sent">
-      <cat-item name="punt"/>
+
+    <def-cat n="PRN-gen">
+      <cat-item tags="PRN.*.gen.*"/>
     </def-cat>
-    <def-cat n="ole-pole">
-      <cat-item name="v"/>
+    <def-cat n="PRN">
+      <cat-item tags="PRN.*"/>
+    </def-cat>
+    <def-cat n="SV">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
+    </def-cat>
+    <def-cat n="SVNEG-p3">
+      <cat-item tags="SVNEG.p3.*"/>
+    </def-cat>
+    <def-cat n="SVNEG-p12">
+      <cat-item tags="SVNEG.p1.*"/>
+      <cat-item tags="SVNEG.p2.*"/>
+    </def-cat>
+    <def-cat n="SN">
+      <cat-item tags="SN"/>
+      <cat-item tags="SN.*"/>
+    </def-cat>
+    <def-cat n="QST">
+      <cat-item tags="QST"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
-    <def-attr n="nbr">
+    <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="ad_hoc">
-      <attr-item tags="pres.indic.neg"/>
+    <def-attr n="a_person">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_cas">
+      <attr-item tags="nom"/>
+      <attr-item tags="acc"/>   <!-- fin -->
+      <attr-item tags="gen"/>
+      <attr-item tags="par"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="abl"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="all"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="ess"/>
+      <attr-item tags="tra"/>
+      <attr-item tags="abe"/>
+      <attr-item tags="com"/>
     </def-attr>
   </section-def-attrs>
+
   <section-def-vars>
     <def-var n="paraula"/>
   </section-def-vars>
+
   <section-rules>
 
-<!-- olema<vblex><actv><pres><indic><neg> generates ole/pole, while
-     olema<vblex><actv><pres><imp><p2><sg> generates ole       -->
-    <rule comment="hack for pole/ole: output only ole">
+    <rule comment="pxPRN is a result of poss suff conversion; but there is the same PRN already, so delete the pxPRN"> 
       <pattern>
-        <pattern-item n="ole-pole"/>
+        <pattern-item n="PRN"/>
+        <pattern-item n="PRN"/>
       </pattern>
       <action>
       <choose>
-        <when>
+        <when>  
           <test><and>
-            <equal><clip pos="1" part="lemh"/><lit v="olema"/></equal>
-            <equal><clip pos="1" part="ad_hoc"/><lit-tag v="pres.indic.neg"/></equal>
-          </and></test>
-        <let><clip pos="1" part="ad_hoc"/><lit-tag v="pres.imp.p2.sg"/></let>
+            <equal><clip pos="2" part="lem"/><lit v="px"/></equal>  
+            <equal><clip pos="1" part="tags"/><clip pos="2" part="tags"/></equal>
+          </and></test> 
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+          </out>
         </when>
+        <otherwise>
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+          </out>
+        </otherwise>
       </choose>
-        <out>
-          <lu>
-            <clip pos="1" part="whole"/>
-          </lu>
-        </out>
       </action>
     </rule>
 
-    <rule comment="CHUNK:">
+    <rule comment="enkö/etkö/emmekö/ettekö was transformed to QST PRN SVNEG, 
+                   but perhaps there was a PRN already (etkö sinä), so delete the latter"> 
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="PRN"/>
+        <pattern-item n="SVNEG-p12"/>
+        <pattern-item n="PRN"/>
       </pattern>
       <action>
-        <out>
-          <lu>
-            <clip pos="1" part="whole"/>
-          </lu>
-        </out>
+      <choose>
+        <when>  
+          <test><and>
+            <equal><clip pos="1" part="lem"/><clip pos="3" part="lem"/></equal>  
+            <equal><clip pos="1" part="tags"/><clip pos="3" part="tags"/></equal>
+          </and></test> 
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+          </out>
+        </when>
+        <otherwise>
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="3" part="whole"/>
+            </chunk>
+          </out>
+        </otherwise>
+      </choose>
       </action>
     </rule>
+
+
+
   </section-rules>
-</postchunk>
+</interchunk>
+

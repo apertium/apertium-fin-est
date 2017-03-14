@@ -66,6 +66,7 @@
     </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
+      <cat-item lemma="sama" tags="prn.*"/>
     </def-cat>
     <def-cat n="num">
       <cat-item tags="num.*"/>
@@ -367,11 +368,13 @@
       </choose>
     </def-macro>
     
-    <def-macro n="sg_com" npar="1">  <!-- can be also pl -->
+    <def-macro n="default_sg" npar="1">  <!-- if the case is determined, but no number, define number as sg -->
       <choose>
         <when>
-          <test><and><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></equal>
-          <equal><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v=""/></equal></and></test>
+          <test><and>
+            <not><equal><clip pos="1" side="tl" part="a_case"/><lit-tag v=""/></equal></not>
+            <equal><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v=""/></equal>
+          </and></test>
           <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="sg"/></let>
         </when>
       </choose>
@@ -482,7 +485,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <let><var n="chunk_poss"/><clip pos="1" side="sl" part="a_poss"/></let>
@@ -497,7 +500,6 @@
             <lu>
        	      <clip pos="1" side="tl" part="lem"/>
        	      <clip pos="1" side="tl" part="a_pos"/>
-              <!--lit-tag v="n"/-->
               <lit-tag v="2"/>
               <lit-tag v="3"/>
        	      <clip pos="1" side="tl" part="a_foc"/>
@@ -570,7 +572,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <lit-tag v="adj"/>
+              <clip pos="1" side="tl" part="a_pos"/>
               <clip pos="1" side="tl" part="a_comp"/>
               <lit-tag v="2"/>
               <lit-tag v="3"/>
@@ -579,7 +581,6 @@
             <lu>
        	      <clip pos="2" side="tl" part="lem"/>
               <clip pos="2" side="tl" part="a_pos"/>
-              <!--lit-tag v="n"/-->
               <lit-tag v="2"/>
               <lit-tag v="3"/>
        	      <clip pos="1" side="tl" part="a_foc"/>
@@ -653,7 +654,7 @@
             </tags>
             <lu>
               <clip pos="1" side="tl" part="lem"/>
-              <lit-tag v="adj"/>
+              <clip pos="1" side="tl" part="a_pos"/>
               <clip pos="1" side="tl" part="a_comp"/>
               <lit-tag v="2"/>
               <lit-tag v="3"/>
@@ -661,7 +662,7 @@
           <b pos="1"/>
             <lu>
               <clip pos="2" side="tl" part="lem"/>
-              <lit-tag v="adj"/>
+              <clip pos="2" side="tl" part="a_pos"/>
               <clip pos="2" side="tl" part="a_comp"/>
               <lit-tag v="2"/>
               <lit-tag v="3"/>
@@ -688,7 +689,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <out>
@@ -725,7 +726,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
         <choose>
           <when>
             <test><equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="acc"/></equal></test>
@@ -830,6 +831,8 @@
                   <chunk name="neg" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SVNEG"/></tag>
+                      <tag><clip pos="1" side="tl" part="a_person"/></tag>
+                      <tag><clip pos="1" side="tl" part="a_sgpl"/></tag>
                     </tags>
                     <lu>
                       <clip pos="1" side="tl" part="lemh"/>
@@ -1362,7 +1365,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
         <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
 
         <choose>
@@ -1423,7 +1426,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <call-macro n="sg_com"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <out>
@@ -1577,56 +1580,39 @@
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- is it needed here? -->
 
           <let><var n="pron_word"/><lit v=""/></let>
-          <let><var n="pron_tags"/><lit-tag v="prn"/></let>
+          <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
           <let><var n="chunk_pron_tags"/><lit-tag v="prn"/></let>
-          <append n="pron_tags"><lit-tag v="pers"/></append>
           <choose><when>
             <test>
               <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
             </test>
             <let><var n="pron_word"/><lit v="mina"/></let>
-            <append n="pron_tags"><lit-tag v="p1"/></append>
-            <append n="pron_tags"><lit-tag v="sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="com"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="p1"/></append>
+            <append n="pron_tags"><lit-tag v="p1.sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p1"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
             </test>
             <let><var n="pron_word"/><lit v="sina"/></let>
-            <append n="pron_tags"><lit-tag v="p2"/></append>
-            <append n="pron_tags"><lit-tag v="sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="com"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="p2"/></append>
+            <append n="pron_tags"><lit-tag v="p2.sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p2"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1pl"/></equal>
             </test>
             <let><var n="pron_word"/><lit v="meie"/></let>
-            <append n="pron_tags"><lit-tag v="p1"/></append>
-            <append n="pron_tags"><lit-tag v="pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="com"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="p1"/></append>
+            <append n="pron_tags"><lit-tag v="p1.pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p1"/></append>
           </when></choose>
           <choose><when>
             <test>
               <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2pl"/></equal>
             </test>
             <let><var n="pron_word"/><lit v="teie"/></let>
-            <append n="pron_tags"><lit-tag v="p2"/></append>
-            <append n="pron_tags"><lit-tag v="pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="com"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="p2"/></append>
+            <append n="pron_tags"><lit-tag v="p2.pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p2"/></append>
           </when></choose>
           <append n="pron_tags"><lit-tag v="com"/></append>
 

@@ -23,6 +23,7 @@ TARGETS_COMMON = \
 	$(PREFIX1).t2x.bin \
 	$(PREFIX1).t3x.bin \
 	$(PREFIX1).t4x.bin \
+	$(PREFIX1).t5x.bin \
 	$(PREFIX2).autobil.bin \
 	$(PREFIX2).autogen.hfst \
 	$(PREFIX2).autolex.bin \
@@ -32,6 +33,7 @@ TARGETS_COMMON = \
 	$(PREFIX2).t2x.bin \
 	$(PREFIX2).t3x.bin \
 	$(PREFIX2).t4x.bin
+	$(PREFIX2).t5x.bin
 
 
 # This include defines goals for install-modes, .deps/.d and .mode files:
@@ -185,8 +187,12 @@ $(PREFIX1).t3x.bin: $(BASENAME).$(PREFIX1).t3x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t3x $@
 
 $(PREFIX1).t4x.bin: $(BASENAME).$(PREFIX1).t4x
-	apertium-validate-postchunk $(BASENAME).$(PREFIX1).t4x
+	apertium-validate-interchunk $(BASENAME).$(PREFIX1).t4x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t4x $@
+
+$(PREFIX1).t5x.bin: $(BASENAME).$(PREFIX1).t5x
+	apertium-validate-postchunk $(BASENAME).$(PREFIX1).t5x
+	apertium-preprocess-transfer $(BASENAME).$(PREFIX1).t5x $@
 
 $(PREFIX2).t1x.bin: $(BASENAME).$(PREFIX2).t1x
 	apertium-validate-transfer $(BASENAME).$(PREFIX2).t1x
@@ -201,8 +207,12 @@ $(PREFIX2).t3x.bin: $(BASENAME).$(PREFIX2).t3x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t3x $@
 
 $(PREFIX2).t4x.bin: $(BASENAME).$(PREFIX2).t4x
-	apertium-validate-postchunk $(BASENAME).$(PREFIX2).t4x
+	apertium-validate-interchunk $(BASENAME).$(PREFIX2).t4x
 	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t4x $@
+
+$(PREFIX2).t5x.bin: $(BASENAME).$(PREFIX2).t5x
+	apertium-validate-postchunk $(BASENAME).$(PREFIX2).t5x
+	apertium-preprocess-transfer $(BASENAME).$(PREFIX2).t5x $@
 
 
 ###############################################################################
@@ -228,10 +238,12 @@ EXTRA_DIST=$(PREFIX1).prob \
 	   $(BASENAME).$(PREFIX1).t2x \
 	   $(BASENAME).$(PREFIX1).t3x \
 	   $(BASENAME).$(PREFIX1).t4x \
+	   $(BASENAME).$(PREFIX1).t5x \
 	   $(BASENAME).$(PREFIX2).t1x \
 	   $(BASENAME).$(PREFIX2).t2x \
-	   $(BASENAME).$(PREFIX2).t333x \
+	   $(BASENAME).$(PREFIX2).t3x \
 	   $(BASENAME).$(PREFIX2).t4x \
+	   $(BASENAME).$(PREFIX2).t5x \
 	   modes.xml
 
 
@@ -247,10 +259,12 @@ apertium_fin_est_DATA=$(TARGETS_COMMON) \
 	$(BASENAME).$(PREFIX1).t2x \
 	$(BASENAME).$(PREFIX1).t3x \
 	$(BASENAME).$(PREFIX1).t4x \
+	$(BASENAME).$(PREFIX1).t5x \
 	$(BASENAME).$(PREFIX2).t1x \
 	$(BASENAME).$(PREFIX2).t2x \
 	$(BASENAME).$(PREFIX2).t3x \
-	$(BASENAME).$(PREFIX2).t4x
+	$(BASENAME).$(PREFIX2).t4x \
+	$(BASENAME).$(PREFIX2).t5x
 
 
 # All modes are created by the same goal, listing several will just give problems with make -j2
