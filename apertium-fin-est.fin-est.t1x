@@ -5,16 +5,65 @@
     <def-cat n="any">
       <cat-item tags="*"/>
     </def-cat>
-    <def-cat n="sent">
-      <cat-item lemma="." tags="sent"/>
-      <cat-item lemma="!" tags="sent"/>
-      <cat-item lemma="?" tags="sent"/>
+    <def-cat n="adj">
+      <cat-item tags="adj.*"/>
+      <cat-item lemma="sama" tags="prn.*"/>
+    </def-cat>
+    <def-cat n="nom">
+      <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
+    </def-cat>
+    <def-cat n="num">
+      <cat-item tags="num.*"/>
+    </def-cat>
+    <def-cat n="pron">
+      <cat-item tags="prn.*"/>
+    </def-cat>
+    <def-cat n="der-minen">
+      <cat-item tags="vblex.der_minen.*"/>
+    </def-cat>
+    <def-cat n="declinable">
+      <cat-item tags="n.*"/>
+      <cat-item tags="np.*"/>
+      <cat-item tags="prn.*"/>
+      <cat-item tags="num.*"/>
+      <cat-item tags="adj.*"/>
+      <cat-item tags="vblex.der_minen.*"/>
+    </def-cat>
+    <def-cat n="adv">
+      <cat-item tags="adv"/>
+      <cat-item tags="adv.*"/>
+      <cat-item tags="part"/>
+    </def-cat>
+    <def-cat n="cnjcoo">
+      <cat-item tags="cnjcoo.*"/>
+    </def-cat>
+    <def-cat n="cnjsub">
+      <cat-item tags="cnjsub.*"/>
+    </def-cat>
+    <def-cat n="kanssa">
+      <cat-item lemma="kanssa" tags="post.*"/>
+    </def-cat>
+    <def-cat n="post">
+      <cat-item tags="post"/>
+      <cat-item tags="post.*"/>
+    </def-cat>
+    <def-cat n="pr">
+      <cat-item tags="pr"/>
+      <cat-item tags="pr.*"/>
+    </def-cat>
+    <def-cat n="qst">
+      <cat-item tags="qst"/>
+    </def-cat>
+    <def-cat n="pitää">
+      <cat-item lemma="pitää" tags="vblex.*"/>
     </def-cat>
     <def-cat n="ei-neg">                <!-- en, et, ..., älä, ... -->
       <cat-item tags="vblex.neg.*"/>
     </def-cat>
-    <def-cat n="der-minen">
-      <cat-item tags="vblex.der_minen.*"/>
+    <def-cat n="adds">
+      <cat-item tags="vblex.*.pe4"/>
+      <cat-item tags="vblex.*.pe4.*"/>
     </def-cat>
     <def-cat n="verb-fin">
       <cat-item tags="vblex.*.cond.*"/>
@@ -23,14 +72,14 @@
       <cat-item tags="vblex.pasv.indic.*"/>
       <cat-item tags="vblex.*.imp.*"/>
     </def-cat>
-    <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
-      <cat-item tags="vblex.actv.infma.*"/>
-    </def-cat>
     <def-cat n="verb-infa">                      <!-- <vblex><actv><infa><sg><lat> -->
       <cat-item tags="vblex.actv.infa.*"/>
     </def-cat>
     <def-cat n="verb-infe">                      <!-- <vblex><actv><infe>... -->
       <cat-item tags="vblex.actv.infe.*"/>
+    </def-cat>
+    <def-cat n="verb-infma">                      <!-- <vblex><actv><infma><sg><ine> -->
+      <cat-item tags="vblex.actv.infma.*"/>
     </def-cat>
     <def-cat n="verb-agprc">                      <!-- <vblex><actv><agprc> antama, antaman, ... antamat, ... -->
       <cat-item tags="vblex.actv.agprc"/>
@@ -42,15 +91,15 @@
       <cat-item tags="vblex.actv.prsprc"/>       <!-- antava -->
       <cat-item tags="vblex.actv.prsprc.*"/>       <!-- antava -->
     </def-cat>
+    <def-cat n="verb-actv-prfprc">              <!-- <vblex><actv><prfprc><pl><nom> -->
+      <cat-item tags="vblex.actv.prfprc"/>        <!-- antanut, antaneet -->
+      <cat-item tags="vblex.actv.prfprc.*"/>        <!-- antanut, antaneet -->
+    </def-cat>
     <def-cat n="verb-pasv-prsprc">               <!-- <vblex><pasv><prsprc><pl><nom>  -->
       <cat-item tags="vblex.pss.prsprc"/>        <!-- annetava --> 
       <cat-item tags="vblex.pasv.prsprc"/>        <!-- annetava --> 
       <cat-item tags="vblex.pss.prsprc.*"/>        <!-- annetava --> 
       <cat-item tags="vblex.pasv.prsprc.*"/>        <!-- annetava --> 
-    </def-cat>
-    <def-cat n="verb-actv-prfprc">              <!-- <vblex><actv><prfprc><pl><nom> -->
-      <cat-item tags="vblex.actv.prfprc"/>        <!-- antanut, antaneet -->
-      <cat-item tags="vblex.actv.prfprc.*"/>        <!-- antanut, antaneet -->
     </def-cat>
     <def-cat n="verb-pasv-prfprc">              <!-- <vblex><pasv><prfprc><pl><nom> -->
       <cat-item tags="vblex.pss.prfprc"/>        <!-- annettu -->
@@ -58,52 +107,10 @@
       <cat-item tags="vblex.pss.prfprc.*"/>        <!-- annettu -->
       <cat-item tags="vblex.pasv.prfprc.*"/>        <!-- annettu -->
     </def-cat>
-    <def-cat n="adv">
-      <cat-item tags="adv"/>
-      <cat-item tags="adv.*"/>
-      <cat-item tags="part"/>
-    </def-cat>
-    <def-cat n="qst">
-      <cat-item tags="qst"/>
-    </def-cat>
-    <def-cat n="cnjcoo">
-      <cat-item tags="cnjcoo.*"/>
-    </def-cat>
-    <def-cat n="cnjsub">
-      <cat-item tags="cnjsub.*"/>
-    </def-cat>
-    <def-cat n="adj">
-      <cat-item tags="adj.*"/>
-      <cat-item lemma="sama" tags="prn.*"/>
-    </def-cat>
-    <def-cat n="num">
-      <cat-item tags="num.*"/>
-    </def-cat>
-    <def-cat n="pron">
-      <cat-item tags="prn.*"/>
-    </def-cat>
-    <def-cat n="nom">
-      <cat-item tags="n.*"/>
-      <cat-item tags="np.*"/>
-    </def-cat>
-    <def-cat n="adds">
-      <cat-item tags="vblex.*.pe4"/>
-      <cat-item tags="vblex.*.pe4.*"/>
-    </def-cat>
-    <def-cat n="kanssa">
-      <cat-item lemma="kanssa" tags="post"/>
-      <cat-item lemma="kanssa" tags="post.*"/>
-    </def-cat>
-    <def-cat n="pitää">
-      <cat-item lemma="pitää" tags="vblex.*"/>
-    </def-cat>
-    <def-cat n="declinable">
-      <cat-item tags="n.*"/>
-      <cat-item tags="np.*"/>
-      <cat-item tags="prn.*"/>
-      <cat-item tags="num.*"/>
-      <cat-item tags="adj.*"/>
-      <cat-item tags="vblex.der_minen.*"/>
+    <def-cat n="sent">
+      <cat-item lemma="." tags="sent"/>
+      <cat-item lemma="!" tags="sent"/>
+      <cat-item lemma="?" tags="sent"/>
     </def-cat>
 
   </section-def-cats>
@@ -367,11 +374,12 @@
   </section-def-vars>
 
   <section-def-macros>
+
     <def-macro n="f_adj1" npar="1">
       <choose>
         <when>
           <test><equal><clip pos="1" side="tl" part="a_attr"/><lit-tag v="attr"/></equal></test>
-          <let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj"/></let>
+          <!--let><clip pos="1" side="tl" part="tags"/><lit-tag v="adj"/></let-->
         </when>
       </choose>
     </def-macro>
@@ -1334,9 +1342,133 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="a" case="caseFirstWord">
+          <chunk name="adv" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="ADV"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
+          </when>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="kanssa + poss_suff">   <!-- fires only when nom/pron + kanssa didn't -->
+      <pattern>
+        <pattern-item n="kanssa"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><not><or>
+              <contains-substring><clip pos="1" side="sl" part="a_poss"/><lit v="px1"/></contains-substring>
+              <contains-substring><clip pos="1" side="sl" part="a_poss"/><lit v="px2"/></contains-substring>
+            </or></not></test>
+            <reject-current-rule shifting="no"/> <!-- not kanssa + poss_suff that we can handle... -->
+          </when>
+        </choose>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- is it needed here? -->
+
+          <let><var n="pron_word"/><lit v=""/></let>
+          <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
+          <let><var n="chunk_pron_tags"/><lit-tag v="prn"/></let>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="mina"/></let>
+            <append n="pron_tags"><lit-tag v="p1.sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p1"/></append>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="sina"/></let>
+            <append n="pron_tags"><lit-tag v="p2.sg"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p2"/></append>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="meie"/></let>
+            <append n="pron_tags"><lit-tag v="p1.pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p1"/></append>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="teie"/></let>
+            <append n="pron_tags"><lit-tag v="p2.pl"/></append>
+            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p2"/></append>
+          </when></choose>
+          <append n="pron_tags"><lit-tag v="com"/></append>
+
+        <out>
+          <chunk name="px" case="caseFirstWord"> 
+            <tags>
+              <tag><lit-tag v="PRN"/></tag>
+              <tag><var n="chunk_pron_tags"/></tag>
+            </tags>
+            <lu>
+              <var n="pron_word"/>
+              <var n="pron_tags"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: POST">
+      <pattern>
+        <pattern-item n="post"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="post" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="POST"/></tag>
+            </tags>
+            <lu>
+              <clip pos="1" side="tl" part="whole"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
+          </when>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: PRE">
+      <pattern>
+        <pattern-item n="pr"/>
+      </pattern>
+      <action>
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk name="pr" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="PRE"/></tag>
             </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
@@ -1367,9 +1499,9 @@
           <when><test><equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adv"/>
                       </equal></test>
             <out>
-              <chunk name="a" case="caseFirstWord">
+              <chunk name="adj" case="caseFirstWord">
                 <tags>
-                  <tag><lit-tag v="ADV"/></tag>
+                  <tag><lit-tag v="ADJ"/></tag>
                 </tags>
                 <lu>
        	          <clip pos="1" side="tl" part="lem"/>
@@ -1472,45 +1604,6 @@
       </action>
     </rule>
 
-    <rule comment="nom + kanssa nom + ga">
-      <pattern>
-        <pattern-item n="nom"/>
-        <pattern-item n="kanssa"/>
-      </pattern>
-     <action>
-        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
-        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
-        <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="com"/></let>
-        <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
-        <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
-        <let><var n="chunk_poss"/><clip pos="1" side="sl" part="a_poss"/></let>
-        <out>
-          <chunk name="n" case="caseFirstWord">
-            <tags>
-              <tag><lit-tag v="SN"/></tag>
-              <tag><var n="chunk_number"/></tag>
-              <tag><var n="chunk_case"/></tag>
-              <tag><var n="chunk_poss"/></tag>
-            </tags>
-            <lu>
-       	      <clip pos="1" side="tl" part="lem"/>
-       	      <clip pos="1" side="tl" part="a_pos"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
-       	      <clip pos="1" side="tl" part="a_foc"/>
-            </lu>
-          </chunk>
-        </out>
-        <choose>
-          <when>
-            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
-            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
-          </when>
-        </choose>
-      </action>
-    </rule>
-
     <rule comment="pron + kanssa nom + ga">
       <pattern>
         <pattern-item n="pron"/>
@@ -1556,75 +1649,6 @@
 
 
 
-    <rule comment="kanssa + poss_suff">   <!-- fires only when nom/pron + kanssa didn't -->
-      <pattern>
-        <pattern-item n="kanssa"/>
-      </pattern>
-      <action>
-        <choose>
-          <when>
-            <test><not><or>
-              <contains-substring><clip pos="1" side="sl" part="a_poss"/><lit v="px1"/></contains-substring>
-              <contains-substring><clip pos="1" side="sl" part="a_poss"/><lit v="px2"/></contains-substring>
-            </or></not></test>
-            <reject-current-rule shifting="no"/> <!-- not kanssa + poss_suff that we can handle... -->
-          </when>
-        </choose>
-        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
-        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- is it needed here? -->
-
-          <let><var n="pron_word"/><lit v=""/></let>
-          <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
-          <let><var n="chunk_pron_tags"/><lit-tag v="prn"/></let>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1sg"/></equal>
-            </test>
-            <let><var n="pron_word"/><lit v="mina"/></let>
-            <append n="pron_tags"><lit-tag v="p1.sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p1"/></append>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2sg"/></equal>
-            </test>
-            <let><var n="pron_word"/><lit v="sina"/></let>
-            <append n="pron_tags"><lit-tag v="p2.sg"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="sg.com.pers.p2"/></append>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px1pl"/></equal>
-            </test>
-            <let><var n="pron_word"/><lit v="meie"/></let>
-            <append n="pron_tags"><lit-tag v="p1.pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p1"/></append>
-          </when></choose>
-          <choose><when>
-            <test>
-              <equal><clip pos="1" side="sl" part="a_poss"/><lit-tag v="px2pl"/></equal>
-            </test>
-            <let><var n="pron_word"/><lit v="teie"/></let>
-            <append n="pron_tags"><lit-tag v="p2.pl"/></append>
-            <append n="chunk_pron_tags"><lit-tag v="pl.com.pers.p2"/></append>
-          </when></choose>
-          <append n="pron_tags"><lit-tag v="com"/></append>
-
-        <out>
-          <chunk name="px" case="caseFirstWord"> 
-            <tags>
-              <tag><lit-tag v="PRN"/></tag>
-              <tag><var n="chunk_pron_tags"/></tag>
-            </tags>
-            <lu>
-              <var n="pron_word"/>
-              <var n="pron_tags"/>
-            </lu>
-          </chunk>
-        </out>
-      </action>
-    </rule>
 
     <rule comment="upper-lower case for any word">
       <pattern>
