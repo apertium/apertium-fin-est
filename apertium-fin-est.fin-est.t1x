@@ -334,7 +334,7 @@
       <attr-item tags="acc"/>   <!-- fin -->
       <attr-item tags="gen"/>
       <attr-item tags="par"/>
-      <attr-item tags="ins"/>
+      <attr-item tags="ins"/>   <!-- fin -->
       <attr-item tags="abl"/>
       <attr-item tags="ill"/>
       <attr-item tags="ade"/>
@@ -345,6 +345,7 @@
       <attr-item tags="tra"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
+      <attr-item tags="trm"/>   <!-- est -->
     </def-attr>
     <def-attr n="a_adds">
       <attr-item tags="pe4"/>      <!-- redundant; used exclusively in passive -->
@@ -369,7 +370,8 @@
     <def-var n="pron_tags"/>  <!-- kanssani etc: for inserted pronoun -->
     <def-var n="chunk_pron_tags"/>  <!-- kanssani etc: for inserted pronoun -->
     <def-var n="pron_word"/>  <!-- kanssani etc: for inserted pronoun -->
-    <def-var n="verb_lemma"/>  <!-- pidama - meeldima -->
+    <def-var n="sl_lemma"/>  <!-- for pidama - meeldima etc -->
+    <def-var n="c_name"/>   <!-- for pidama - meeldima etc -->
     <def-var n="xxx"/>  <!-- to remember smth -->
   </section-def-vars>
 
@@ -384,6 +386,10 @@
       </choose>
     </def-macro>
     
+    <def-macro n="remember_sl_lemma" npar="1">
+          <let><var n="sl_lemma"/><clip pos="1" side="sl" part="lem"/></let>
+    </def-macro>
+
     <def-macro n="default_sg" npar="1">  <!-- if the case is determined, but no number, define number as sg -->
       <choose>
         <when>
@@ -471,7 +477,7 @@
     <def-macro n="default-conversion1" npar="1">
       <let><clip pos="1" side="tl" part="a_known"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="x_func"/><lit v=""/></let>
-      <!--let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let-->
+      <let><clip pos="1" side="tl" part="a_func"/><lit v=""/></let> <!-- delete the function tags -->
       <let><clip pos="1" side="tl" part="a_dialect"/><lit v=""/></let>
       <let><clip pos="1" side="tl" part="a_clb"/><lit v=""/></let>
     </def-macro>
@@ -1094,9 +1100,8 @@
      <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
-        <call-macro n="replace-foc1">
-          <with-param pos="1"/>
-        </call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_adds"/><lit v=""/></let>
         <choose>
           <when>
@@ -1213,8 +1218,9 @@
           </when>
         </choose> 
 <!-- end of conneg-neg stuff -->
+        <let><var n="c_name"/><concat><lit v="v_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="v" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV"/></tag>
               <tag><lit-tag v="vblex"/></tag>

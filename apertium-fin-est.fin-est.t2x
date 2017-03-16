@@ -18,7 +18,7 @@
       <cat-item tags="SN.*.nom"/>
       <cat-item tags="SN.*.nom.*"/>
       <cat-item tags="PRN.*.nom"/>
-      <cat-item tags="PRNN.*.nom.*"/>
+      <cat-item tags="PRN.*.nom.*"/>
     </def-cat>
     <def-cat n="PRN">
       <cat-item tags="PRN"/>
@@ -39,6 +39,9 @@
       <cat-item tags="SN.*"/>
       <cat-item tags="PRN"/>
       <cat-item tags="PRN.*"/>
+    </def-cat>
+    <def-cat n="v_pitää">
+      <cat-item lemma="v_pitää" tags="SV.*"/>
     </def-cat>
     <def-cat n="SV">
       <cat-item tags="SV"/>
@@ -83,20 +86,20 @@
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>   <!-- fin -->
       <attr-item tags="gen"/>
       <attr-item tags="par"/>
-      <attr-item tags="ins"/>
-      <attr-item tags="abl"/>
       <attr-item tags="ill"/>
-      <attr-item tags="ade"/>
-      <attr-item tags="all"/>
       <attr-item tags="ine"/>
       <attr-item tags="ela"/>
-      <attr-item tags="ess"/>
+      <attr-item tags="all"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="abl"/>
       <attr-item tags="tra"/>
+      <attr-item tags="trm"/>
+      <attr-item tags="ess"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
+      <attr-item tags="acc"/>  <!-- fin -->
     </def-attr>
   </section-def-attrs>
 
@@ -257,6 +260,10 @@
           <append n="pron_tags"><var n="pron_case"/></append>
     </def-macro>
 
+    <def-macro n="gen_chcontent_verb" npar="0"> <!-- create the chcontent-form string from variable verb_lemma -->
+        <let><var n="verb_lemma"/><concat><lit v="{^"/><var n="verb_lemma"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+    </def-macro>
+
     <def-macro n="forget_verb" npar="0" c="set the variable to empty">
         <let><var n="verb_nbr_pers"/><lit v=""/></let>
     </def-macro>
@@ -271,7 +278,6 @@
       </pattern>
       <action>
       <call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
-      <!--call-macro n="forget_verb"></call-macro--> <!-- assuming that coordin words are in the same chunk... -->
       <out>
         <chunk>
           <clip pos="1" part="whole"/>
@@ -363,23 +369,15 @@
     <rule comment="x peab y-st - x-le meeldib y">
       <pattern>
         <pattern-item n="n-nom"/>
-        <pattern-item n="SV"/>
+        <pattern-item n="v_pitää"/>
         <pattern-item n="n-ela"/>
       </pattern>
       <action>
-        <let><var n="verb_lemma"/><clip pos="2" part="chcontent"/></let>
-        <choose><when>
-          <test>
-            <contains-substring><clip pos="2" part="chcontent"/><lit v="pidama"/></contains-substring>
-          </test>
-          <let><var n="verb_lemma"/><lit v="{^"/></let>
-          <append n="verb_lemma"><lit v="meeldima"/></append>
-          <append n="verb_lemma"><lit-tag v="2.3.4.5.6.7"/></append>
-          <append n="verb_lemma"><lit v="$}"/></append>
-          <let><clip pos="2" part="a_nbr"/><clip pos="3" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
-          <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
-          <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
-        </when></choose>
+        <let><clip pos="2" part="a_nbr"/><clip pos="3" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
+        <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
+        <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
+        <let><var n="verb_lemma"/><concat><lit v="{^meeldima"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
           <chunk>
             <clip pos="1" part="whole"/>
@@ -391,6 +389,9 @@
               <var n="verb_lemma"/>
           </chunk>
           <b pos="1"/>
+        </out>
+      	<call-macro n="poss2pronoun"><with-param pos="3"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
           <chunk>
             <clip pos="3" part="whole"/>
           </chunk>
@@ -398,6 +399,43 @@
       </action>
     </rule>
 
+    <rule comment="x ei pea y-st - x-le ei meeldi y">
+      <pattern>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="SVNEG"/>
+        <pattern-item n="v_pitää"/>
+        <pattern-item n="n-ela"/>
+      </pattern>
+      <action>
+        <let><clip pos="3" part="a_nbr"/><clip pos="4" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
+        <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
+        <let><clip pos="4" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
+        <let><var n="verb_lemma"/><concat><lit v="{^meeldima"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b pos="1"/>
+        </out>
+      	<call-macro n="poss2pronoun"><with-param pos="3"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   </section-rules>
 </interchunk>
