@@ -376,7 +376,6 @@
   </section-def-vars>
 
   <section-def-macros>
-
     <def-macro n="f_adj1" npar="1">
       <choose>
         <when>

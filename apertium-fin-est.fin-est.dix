@@ -14837,8 +14837,6 @@
     <e><p><l>juosta<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
     <e><p><l>katsoa<s n="vblex"/></l><r>vaatama<s n="vblex"/></r></p></e>
     <e><p><l>tykätä<s n="vblex"/></l><r>meeldima<s n="vblex"/></r></p></e>
-    <e r="LR"><p><l>tykätä<s n="vblex"/></l><r>meeldima<s n="vblex"/><s n="arg1_all"/><s n="arg2_nom"/></r></p></e>
-    <e r="RL"><p><l>tykätä<s n="vblex"/><s n="arg1_nom"/><s n="arg2_ela"/></l><r>meeldima<s n="vblex"/></r></p></e>
     <e><p><l>kuulla<s n="vblex"/></l><r>kuulma<s n="vblex"/></r></p></e>
     <e><p><l>kysyä<s n="vblex"/></l><r>küsima<s n="vblex"/></r></p></e>
     <e><p><l>lausua<s n="vblex"/></l><r>lausuma<s n="vblex"/></r></p></e>

@@ -17,6 +17,7 @@
     </def-cat>
     <def-cat n="v_pitää">
       <cat-item lemma="v_pitää" tags="SV.*"/>
+      <cat-item lemma="v_tykätä" tags="SV.*"/>
     </def-cat>
     <def-cat n="SVNEG">
       <cat-item tags="SVNEG"/>
@@ -179,8 +180,7 @@
           <append n="chunk_pron_tags"><var n="pron_pers"/></append>
           <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
           <append n="pron_tags"><var n="pron_pers"/></append>
-          <append n="pron_tags"><var n="pron_nbr"/></append>
-          <append n="pron_tags"><var n="pron_case"/></append>
+          <append n="pron_tags"><lit-tag v="3.4"/></append>
     </def-macro>
   </section-def-macros>
 
