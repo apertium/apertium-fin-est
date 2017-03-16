@@ -87,7 +87,7 @@
 
   <section-def-macros>
 
-    <def-macro n="insert_pers_pron" npar="1"> <!-- create and insert a pers pronoun from person, nbr tags -->
+    <def-macro n="insert_pers_pron" npar="2"> <!-- create and insert a pers pronoun from person, nbr tags -->
         <choose><when>
           <test><or>  <!-- enkö, etkö, emmekö, ettekö -->
             <equal><clip pos="1" part="a_person"/><lit-tag v="p1"/></equal>
@@ -98,7 +98,8 @@
           <call-macro n="gen_pers_pron"></call-macro>           <!-- turn vars into pronoun strings -->
           <out>
             <chunk>
-              <lit v="prn"/>
+            <get-case-from pos="2">
+              <lit v="prn"/></get-case-from>
               <lit-tag v="PRN"/>
               <var n="chunk_pron_tags"/>
               <lit v="{^"/>
@@ -153,8 +154,7 @@
           <append n="chunk_pron_tags"><var n="pron_pers"/></append>
           <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
           <append n="pron_tags"><var n="pron_pers"/></append>
-          <append n="pron_tags"><var n="pron_nbr"/></append>
-          <append n="pron_tags"><var n="pron_case"/></append>
+          <append n="pron_tags"><lit-tag v="3.4"/></append>
     </def-macro>
 
 
@@ -177,7 +177,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/></call-macro>
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="2">
@@ -204,7 +204,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/></call-macro>
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="2">
@@ -232,7 +232,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/></call-macro>
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3">
@@ -268,7 +268,7 @@
           </chunk>
           <b pos="1"/>
         </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/></call-macro>
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="4">
@@ -311,7 +311,7 @@
           </chunk>
           <b />
         </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/></call-macro>
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="3">
@@ -344,11 +344,31 @@
         <pattern-item n="SV"/>
       </pattern>
       <action>
+        <let><var n="pron_word"/><lit v=""/></let>  <!-- to get info back from macro -->
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="1"/></call-macro>
+        <choose>
+          <when>
+            <test><not><equal><var n="pron_word"/><lit v=""/></equal></not></test>
+            <out>
+              <chunk>
+                <get-case-from pos="2">
+                <clip pos="1" part="lem"/></get-case-from>
+                <clip pos="1" part="tags"/>
+                <clip pos="1" part="chcontent"/>
+              </chunk>
+              <b pos="1"/>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk>
+                <clip pos="1" part="whole"/>
+              </chunk>
+              <b pos="1"/>
+            </out>
+          </otherwise>
+        </choose>
         <out>
-          <chunk>
-            <clip pos="1" part="whole"/>
-          </chunk>
-          <b pos="1"/>
           <chunk>
             <clip pos="3" part="whole"/>
           </chunk>
@@ -360,6 +380,43 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: SVNEG-p12 ">   <!-- en et emme ette -->
+      <pattern>
+        <pattern-item n="SVNEG-p12"/>
+        <pattern-item n="SV"/>
+      </pattern>
+      <action>
+        <let><var n="pron_word"/><lit v=""/></let>  <!-- to get info back from macro -->
+        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="1"/></call-macro>
+        <choose>
+          <when>
+            <test><not><equal><var n="pron_word"/><lit v=""/></equal></not></test>
+            <out>
+              <chunk>
+                <get-case-from pos="2">
+                <clip pos="1" part="lem"/></get-case-from>
+                <clip pos="1" part="tags"/>
+                <clip pos="1" part="chcontent"/>
+              </chunk>
+              <b pos="1"/>
+            </out>
+          </when>
+          <otherwise>
+            <out>
+              <chunk>
+                <clip pos="1" part="whole"/>
+              </chunk>
+              <b pos="1"/>
+            </out>
+          </otherwise>
+        </choose>
+        <out>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   </section-rules>
 </interchunk>

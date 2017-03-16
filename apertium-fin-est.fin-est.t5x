@@ -1,162 +1,267 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- -*- nxml -*- -->
-<postchunk>
+<interchunk>
   <section-def-cats>
-    <def-cat n="sent">
-      <cat-item name="punt"/>
+
+    <def-cat n="n-ela">
+      <cat-item tags="SN.*.ela"/>
+      <cat-item tags="SN.*.ela.*"/>
+      <cat-item tags="PRN.*.ela"/>
+      <cat-item tags="PRN.*.ela.*"/>
     </def-cat>
-    <def-cat n="ole-pole">
-      <cat-item name="v"/>
+    <def-cat n="n-nom">
+      <cat-item tags="SN.*.nom"/>
+      <cat-item tags="SN.*.nom.*"/>
+      <cat-item tags="PRN.*.nom"/>
+      <cat-item tags="PRN.*.nom.*"/>
     </def-cat>
-    <def-cat n="adj_ninataga">
-      <cat-item name="a_n"/>
+    <def-cat n="v_pitää">
+      <cat-item lemma="v_pitää" tags="SV.*"/>
     </def-cat>
-    <def-cat n="adj_adj_ninataga">
-      <cat-item name="a_a_n"/>
+    <def-cat n="SVNEG">
+      <cat-item tags="SVNEG"/>
+      <cat-item tags="SVNEG.*"/>
     </def-cat>
   </section-def-cats>
+
   <section-def-attrs>
-    <def-attr n="nbr">
+    <def-attr n="a_nbr">
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
       <attr-item tags="sp"/>
       <attr-item tags="ND"/>
     </def-attr>
-    <def-attr n="a_case">
+    <def-attr n="a_person">
+      <attr-item tags="p1"/>
+      <attr-item tags="p2"/>
+      <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_cas">
       <attr-item tags="nom"/>
+      <attr-item tags="acc"/>   <!-- fin -->
       <attr-item tags="gen"/>
       <attr-item tags="par"/>
+      <attr-item tags="ins"/>
+      <attr-item tags="abl"/>
       <attr-item tags="ill"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="all"/>
       <attr-item tags="ine"/>
       <attr-item tags="ela"/>
-      <attr-item tags="all"/>
-      <attr-item tags="ade"/>
-      <attr-item tags="abl"/>
-      <attr-item tags="tra"/>
-      <attr-item tags="trm"/>
       <attr-item tags="ess"/>
+      <attr-item tags="tra"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
     </def-attr>
-    <def-attr n="ad_hoc">
-      <attr-item tags="pres.indic.neg"/>
-    </def-attr>
   </section-def-attrs>
+
   <section-def-vars>
-    <def-var n="paraula"/>
+    <def-var n="verb_nbr_pers" v=""/>   <!-- finite verb number and person; initially unset -->
+    <def-var n="upper_lower"/>
+    <def-var n="px"/>       <!-- clumsy way to get the upper-lower info into new chunk -->
+    <def-var n="pron_pers"/>  <!-- person for inserted personal pronoun -->
+    <def-var n="pron_nbr"/>  <!-- number for inserted  pronoun -->
+    <def-var n="pron_case"/>  <!-- case for inserted  pronoun -->
+    <def-var n="pron_tags"/>  <!-- for inserted pronoun -->
+    <def-var n="chunk_pron_tags"/>  <!-- for inserted pronoun -->
+    <def-var n="pron_word"/>  <!-- lemma for inserted pronoun -->
+    <def-var n="verb_lemma"/>  <!-- a place to hold stuff -->
   </section-def-vars>
+
+  <section-def-macros>
+
+    <def-macro n="poss2pronoun" npar="1"> <!-- create a pronoun from px... tag -->
+      <choose>
+        <when>  <!-- a possessive tag should convert to a pronoun -->
+          <test> 
+              <contains-substring><clip pos="1" part="a_poss"/><lit v="px"/></contains-substring>
+          </test>
+          <choose>  <!-- either a personal pronoun or oma -->
+            <when>  <!-- test for same-referral -->
+              <test> <!-- refering to the same subject -->
+                <and>
+                <contains-substring><var n="verb_nbr_pers"/><lit v="px"/></contains-substring>
+                <contains-substring><clip pos="1" part="a_poss"/><var n="verb_nbr_pers"/></contains-substring>
+                </and>
+              </test>
+              <let><var n="pron_word"/><lit v="oma"/></let>
+              <let><var n="pron_tags"/><lit-tag v="prn"/></let>
+              <append n="pron_tags"><lit-tag v="sg"/></append>
+              <append n="pron_tags"><lit-tag v="gen"/></append>
+            </when>
+            <otherwise> <!-- refering to different subjects - it should be a personal pronoun -->
+              <let><var n="pron_case"/><lit-tag v="gen"/></let>
+              <call-macro n="gen_px_pron"><with-param pos="1"/></call-macro> <!-- generate vars -->
+              <call-macro n="gen_pers_pron"></call-macro>         <!-- turn vars into output strings -->
+            </otherwise>
+          </choose>
+          <let><var n="px"/><lit v="px"/></let>
+          <let><var n="upper_lower"/><case-of pos="1" part="lem"/></let>
+          <choose><when>
+            <test>
+              <equal><var n="upper_lower"/><lit v="Aa"/></equal>
+            </test>
+            <let><var n="px"/><lit v="Px"/></let>
+          </when></choose>
+          <out>
+            <chunk>
+              <var n="px"/>
+              <lit-tag v="PRN"/>
+              <var n="chunk_pron_tags"/>
+              <lit v="{^"/>
+              <var n="pron_word"/>
+              <var n="pron_tags"/>
+              <lit v="$}"/>
+            </chunk>
+            <b />
+          </out>
+          <modify-case><clip pos="1" part="lem"/><lit v="aa"/></modify-case>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="gen_px_pron" npar="1"> <!-- create a pers pronoun from px... tag -->
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="mina"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p1"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="sina"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p2"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="tema"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p3"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="meie"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p1"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="teie"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p2"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="nemad"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p3"/></let>
+          </when></choose>
+    </def-macro>
+
+    <def-macro n="gen_pers_pron" npar="0"> <!-- create a personal pronoun from variables -->
+          <let><var n="chunk_pron_tags"/><lit-tag v="prn"/></let>
+          <append n="chunk_pron_tags"><var n="pron_nbr"/></append>
+          <append n="chunk_pron_tags"><var n="pron_case"/></append>
+          <append n="chunk_pron_tags"><lit-tag v="pers"/></append>
+          <append n="chunk_pron_tags"><var n="pron_pers"/></append>
+          <let><var n="pron_tags"/><lit-tag v="prn.pers"/></let>
+          <append n="pron_tags"><var n="pron_pers"/></append>
+          <append n="pron_tags"><var n="pron_nbr"/></append>
+          <append n="pron_tags"><var n="pron_case"/></append>
+    </def-macro>
+  </section-def-macros>
+
+
   <section-rules>
 
-    <!-- olema<vblex><actv><pres><indic><neg> generates ole/pole, while
-     olema<vblex><actv><pres><imp><p2><sg> generates ole       -->
-    <!-- INPUT:  ^v<SV><vblex><actv><pres><indic><neg>{^olema<2><3><4><5><6><7>$}
-         OUTPUT: ^v<SV><vblex><actv><pres><imp><p2><sg>{^olema<2><3><4><5><6><7>$} --> 
-    <rule comment="hack for pole/ole: change tags to force to output only ole">
+<!--  -->
+    <rule comment="x peab y-st - x-le meeldib y">
       <pattern>
-        <pattern-item n="ole-pole"/>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="v_pitää"/>
+        <pattern-item n="n-ela"/>
       </pattern>
       <action>
-      <choose>
-        <when>
-          <test><and>
-            <equal><clip pos="1" part="lemh"/><lit v="olema"/></equal>
-            <equal><clip pos="1" part="ad_hoc"/><lit-tag v="pres.indic.neg"/></equal>
-          </and></test>
-        <let><clip pos="1" part="ad_hoc"/><lit-tag v="pres.imp.p2.sg"/></let>
-        </when>
-      </choose>
+        <let><clip pos="2" part="a_person"/><lit-tag v="p3"/></let> <!-- pean  - meeldib  -->
+        <let><clip pos="2" part="a_nbr"/><clip pos="3" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
+        <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
+        <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
+        <let><var n="verb_lemma"/><concat><lit v="{^meeldima"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
-          <lu>
+          <chunk>
             <clip pos="1" part="whole"/>
-          </lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b pos="1"/>
         </out>
-      </action>
-    </rule>
-
-    <rule comment="adjective should be in gen">
-      <pattern>
-        <pattern-item n="adj_ninataga"/>
-      </pattern>
-      <action>
-      <choose>
-        <when>
-          <test><or>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="trm"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
-          </or></test>
-          <let><clip pos="1" part="a_case"/><lit-tag v="gen"/></let>
-        </when>
-      </choose>
+      	<call-macro n="poss2pronoun"><with-param pos="3"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
-          <lu>
-            <clip pos="1" part="whole"/>
-          </lu>
-          <b />
-          <lu>
-            <clip pos="2" part="whole"/>
-          </lu>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="both adjectives should be in gen">
-      <pattern>
-        <pattern-item n="adj_adj_ninataga"/>
-      </pattern>
-      <action>
-      <choose>
-        <when>
-          <test><or>
-            <and>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="trm"/></equal>
-            <equal><clip pos="2" part="a_case"/><lit-tag v="trm"/></equal>
-            </and>
-            <and>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
-            </and>
-            <and>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
-            </and>
-            <and>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
-            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
-            </and>
-          </or></test>
-          <let><clip pos="1" part="a_case"/><lit-tag v="gen"/></let>
-          <let><clip pos="2" part="a_case"/><lit-tag v="gen"/></let>
-        </when>
-      </choose>
-        <out>
-          <lu>
-            <clip pos="1" part="whole"/>
-          </lu>
-          <b />
-          <lu>
-            <clip pos="2" part="whole"/>
-          </lu>
-          <b />
-          <lu>
+          <chunk>
             <clip pos="3" part="whole"/>
-          </lu>
+          </chunk>
         </out>
       </action>
     </rule>
 
-    <rule comment="CHUNK:">
+    <rule comment="x ei pea y-st - x-le ei meeldi y">
       <pattern>
-        <pattern-item n="sent"/>
+        <pattern-item n="n-nom"/>
+        <pattern-item n="SVNEG"/>
+        <pattern-item n="v_pitää"/>
+        <pattern-item n="n-ela"/>
       </pattern>
       <action>
+        <let><clip pos="3" part="a_nbr"/><clip pos="4" part="a_nbr"/></let> <!-- peab lilledest - meeldivad lilled -->
+        <let><clip pos="1" part="a_cas"/><lit-tag v="all"/></let> <!-- x-le -->
+        <let><clip pos="4" part="a_cas"/><lit-tag v="nom"/></let> <!-- y -->
+        <let><var n="verb_lemma"/><concat><lit v="{^meeldima"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
-          <lu>
+          <chunk>
             <clip pos="1" part="whole"/>
-          </lu>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b pos="1"/>
+        </out>
+      	<call-macro n="poss2pronoun"><with-param pos="3"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
+          <chunk>
+            <clip pos="4" part="whole"/>
+          </chunk>
         </out>
       </action>
     </rule>
+
+
+
   </section-rules>
-</postchunk>
+</interchunk>
+
