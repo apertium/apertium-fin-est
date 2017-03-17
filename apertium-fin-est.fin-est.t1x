@@ -1443,8 +1443,10 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="post_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="post" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="POST"/></tag>
             </tags>
@@ -1470,8 +1472,10 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="pr_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="pr" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PRE"/></tag>
             </tags>

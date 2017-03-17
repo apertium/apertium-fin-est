@@ -8,11 +8,11 @@
     <def-cat n="any">
       <cat-item tags="*"/>
     </def-cat>
-    <def-cat n="n-ela">
-      <cat-item tags="SN.*.ela"/>
-      <cat-item tags="SN.*.ela.*"/>
-      <cat-item tags="PRN.*.ela"/>
-      <cat-item tags="PRN.*.ela.*"/>
+    <def-cat n="n-gen">
+      <cat-item tags="SN.*.gen"/>
+      <cat-item tags="SN.*.gen.*"/>
+      <cat-item tags="PRN.*.gen"/>
+      <cat-item tags="PRN.*.gen.*"/>
     </def-cat>
     <def-cat n="n-nom">
       <cat-item tags="SN.*.nom"/>
