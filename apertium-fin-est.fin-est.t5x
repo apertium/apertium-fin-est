@@ -3,25 +3,38 @@
 <interchunk>
   <section-def-cats>
 
-    <def-cat n="n-ela">
-      <cat-item tags="SN.*.ela"/>
-      <cat-item tags="SN.*.ela.*"/>
-      <cat-item tags="PRN.*.ela"/>
-      <cat-item tags="PRN.*.ela.*"/>
-    </def-cat>
     <def-cat n="n-nom">
       <cat-item tags="SN.*.nom"/>
       <cat-item tags="SN.*.nom.*"/>
       <cat-item tags="PRN.*.nom"/>
       <cat-item tags="PRN.*.nom.*"/>
     </def-cat>
+    <def-cat n="n-gen">
+      <cat-item tags="SN.*.gen"/>
+      <cat-item tags="SN.*.gen.*"/>
+      <cat-item tags="PRN.*.gen"/>
+      <cat-item tags="PRN.*.gen.*"/>
+    </def-cat>
+    <def-cat n="n-ela">
+      <cat-item tags="SN.*.ela"/>
+      <cat-item tags="SN.*.ela.*"/>
+      <cat-item tags="PRN.*.ela"/>
+      <cat-item tags="PRN.*.ela.*"/>
+    </def-cat>
     <def-cat n="v_pitää">
       <cat-item lemma="v_pitää" tags="SV.*"/>
       <cat-item lemma="v_tykätä" tags="SV.*"/>
     </def-cat>
+    <def-cat n="v_täytyy">
+      <cat-item lemma="v_pitää" tags="SV.*"/>
+      <cat-item lemma="v_täytyä" tags="SV.*"/>
+    </def-cat>
     <def-cat n="SVNEG">
       <cat-item tags="SVNEG"/>
       <cat-item tags="SVNEG.*"/>
+    </def-cat>
+    <def-cat n="inf">  <!-- da-infinitiiv -->
+      <cat-item tags="SV.vblex.inf"/>
     </def-cat>
   </section-def-cats>
 
@@ -39,18 +52,17 @@
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
-      <attr-item tags="acc"/>   <!-- fin -->
       <attr-item tags="gen"/>
       <attr-item tags="par"/>
-      <attr-item tags="ins"/>
-      <attr-item tags="abl"/>
       <attr-item tags="ill"/>
-      <attr-item tags="ade"/>
-      <attr-item tags="all"/>
       <attr-item tags="ine"/>
       <attr-item tags="ela"/>
-      <attr-item tags="ess"/>
+      <attr-item tags="all"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="abl"/>
       <attr-item tags="tra"/>
+      <attr-item tags="trm"/>
+      <attr-item tags="ess"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
     </def-attr>
@@ -260,7 +272,103 @@
       </action>
     </rule>
 
+    <rule comment="x-n täytyy - x-l tuleb">
+      <pattern>
+        <pattern-item n="n-gen"/>
+        <pattern-item n="v_täytyy"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="a_cas"/><lit-tag v="ade"/></let> <!-- x-l -->
+        <let><var n="verb_lemma"/><concat><lit v="{^tulema"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b pos="1"/>
+          <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
+    <rule comment="x-n ei täytyy - x-l ei tule">
+      <pattern>
+        <pattern-item n="n-gen"/>
+        <pattern-item n="SVNEG"/>
+        <pattern-item n="v_täytyy"/>
+      </pattern>
+      <action>
+        <let><clip pos="1" part="a_cas"/><lit-tag v="ade"/></let> <!-- x-l -->
+        <let><var n="verb_lemma"/><concat><lit v="{^tulema"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+      	<call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b />
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+          <b />
+          <chunk>
+              <clip pos="3" part="lem"/>
+              <clip pos="3" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="täytyy kirjoittaa - tuleb kirjutada">
+      <pattern>
+        <pattern-item n="v_täytyy"/>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <let><var n="verb_lemma"/><concat><lit v="{^tulema"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+        <out>
+          <chunk>
+              <clip pos="1" part="lem"/>
+              <clip pos="1" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b />
+          <chunk>
+            <clip pos="2" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="ei täytyy kirjoittaa - ei tule kirjutada">
+      <pattern>
+        <pattern-item n="SVNEG"/>
+        <pattern-item n="v_täytyy"/>
+        <pattern-item n="inf"/>
+      </pattern>
+      <action>
+        <let><var n="verb_lemma"/><concat><lit v="{^tulema"/><lit-tag v="2.3.4.5.6.7"/><lit v="$}"/></concat></let>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+          <b />
+          <chunk>
+              <clip pos="2" part="lem"/>
+              <clip pos="2" part="tags"/>
+              <var n="verb_lemma"/>
+          </chunk>
+          <b />
+          <chunk>
+            <clip pos="3" part="whole"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
 
   </section-rules>
 </interchunk>

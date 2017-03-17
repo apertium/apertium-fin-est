@@ -99,7 +99,6 @@
       <attr-item tags="ess"/>
       <attr-item tags="abe"/>
       <attr-item tags="com"/>
-      <attr-item tags="acc"/>  <!-- fin -->
     </def-attr>
   </section-def-attrs>
 

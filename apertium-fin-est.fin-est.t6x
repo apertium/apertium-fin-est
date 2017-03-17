@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- -*- nxml -*- -->
+<postchunk>
+  <section-def-cats>
+    <def-cat n="sent">
+      <cat-item name="punt"/>
+    </def-cat>
+    <def-cat n="ole-pole">
+      <cat-item name="v_olla"/>
+    </def-cat>
+    <def-cat n="adj_ninataga">
+      <cat-item name="a_n"/>
+    </def-cat>
+    <def-cat n="adj_adj_ninataga">
+      <cat-item name="a_a_n"/>
+    </def-cat>
+  </section-def-cats>
+  <section-def-attrs>
+    <def-attr n="nbr">
+      <attr-item tags="sg"/>
+      <attr-item tags="pl"/>
+      <attr-item tags="sp"/>
+      <attr-item tags="ND"/>
+    </def-attr>
+    <def-attr n="a_case">
+      <attr-item tags="nom"/>
+      <attr-item tags="gen"/>
+      <attr-item tags="par"/>
+      <attr-item tags="ill"/>
+      <attr-item tags="ine"/>
+      <attr-item tags="ela"/>
+      <attr-item tags="all"/>
+      <attr-item tags="ade"/>
+      <attr-item tags="abl"/>
+      <attr-item tags="tra"/>
+      <attr-item tags="trm"/>
+      <attr-item tags="ess"/>
+      <attr-item tags="abe"/>
+      <attr-item tags="com"/>
+    </def-attr>
+    <def-attr n="ad_hoc">
+      <attr-item tags="pres.indic.neg"/>
+    </def-attr>
+  </section-def-attrs>
+  <section-def-vars>
+    <def-var n="paraula"/>
+  </section-def-vars>
+  <section-rules>
+
+    <!-- olema<vblex><actv><pres><indic><neg> generates ole/pole, while
+     olema<vblex><actv><pres><imp><p2><sg> generates ole       -->
+    <!-- INPUT:  ^v<SV><vblex><actv><pres><indic><neg>{^olema<2><3><4><5><6><7>$}
+         OUTPUT: ^v<SV><vblex><actv><pres><imp><p2><sg>{^olema<2><3><4><5><6><7>$} --> 
+    <rule comment="hack for pole/ole: change tags to force to output only ole">
+      <pattern>
+        <pattern-item n="ole-pole"/>
+      </pattern>
+      <action>
+      <choose>
+        <when>
+          <test>
+            <equal><clip pos="1" part="ad_hoc"/><lit-tag v="pres.indic.neg"/></equal>
+          </test>
+        <let><clip pos="1" part="ad_hoc"/><lit-tag v="pres.imp.p2.sg"/></let>
+        </when>
+      </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="adjective should be in gen">
+      <pattern>
+        <pattern-item n="adj_ninataga"/>
+      </pattern>
+      <action>
+      <choose>
+        <when>
+          <test><or>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="trm"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
+          </or></test>
+          <let><clip pos="1" part="a_case"/><lit-tag v="gen"/></let>
+        </when>
+      </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+          <b />
+          <lu>
+            <clip pos="2" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="both adjectives should be in gen">
+      <pattern>
+        <pattern-item n="adj_adj_ninataga"/>
+      </pattern>
+      <action>
+      <choose>
+        <when>
+          <test><or>
+            <and>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="trm"/></equal>
+            <equal><clip pos="2" part="a_case"/><lit-tag v="trm"/></equal>
+            </and>
+            <and>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="ess"/></equal>
+            </and>
+            <and>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="abe"/></equal>
+            </and>
+            <and>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
+            <equal><clip pos="1" part="a_case"/><lit-tag v="com"/></equal>
+            </and>
+          </or></test>
+          <let><clip pos="1" part="a_case"/><lit-tag v="gen"/></let>
+          <let><clip pos="2" part="a_case"/><lit-tag v="gen"/></let>
+        </when>
+      </choose>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+          <b />
+          <lu>
+            <clip pos="2" part="whole"/>
+          </lu>
+          <b />
+          <lu>
+            <clip pos="3" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="CHUNK:">
+      <pattern>
+        <pattern-item n="sent"/>
+      </pattern>
+      <action>
+        <out>
+          <lu>
+            <clip pos="1" part="whole"/>
+          </lu>
+        </out>
+      </action>
+    </rule>
+  </section-rules>
+</postchunk>
