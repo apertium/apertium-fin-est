@@ -29,12 +29,21 @@
     <def-cat n="SVNEG">
       <cat-item tags="SVNEG.*"/>
     </def-cat>
+    <def-cat n="some-verb">
+      <cat-item tags="SV"/>
+      <cat-item tags="SV.*"/>
+      <cat-item tags="SVNEG"/>
+      <cat-item tags="SVNEG.*"/>
+    </def-cat>
     <def-cat n="SVNEG-p3">
       <cat-item tags="SVNEG.p3.*"/>
     </def-cat>
     <def-cat n="SVNEG-p12">
       <cat-item tags="SVNEG.p1.*"/>
       <cat-item tags="SVNEG.p2.*"/>
+    </def-cat>
+    <def-cat n="SENT">
+      <cat-item tags="SENT"/>
     </def-cat>
   </section-def-cats>
 
@@ -49,6 +58,15 @@
       <attr-item tags="p1"/>
       <attr-item tags="p2"/>
       <attr-item tags="p3"/>
+    </def-attr>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+      <attr-item tags="px3"/>
     </def-attr>
     <def-attr n="a_cas">
       <attr-item tags="nom"/>
@@ -85,6 +103,137 @@
   </section-def-vars>
 
   <section-def-macros>
+
+    <def-macro n="remember_verb" npar="1" c="remember verb person and number for handling possessive clitics">
+      <choose>
+      <when>
+        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p1"/></equal></test>
+        <let><var n="verb_nbr_pers"/><lit v="px1"/></let>
+      </when>
+      <when>
+        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p2"/></equal></test>
+        <let><var n="verb_nbr_pers"/><lit v="px2"/></let>
+      </when>
+      <when>
+        <test><equal><clip pos="1" part="a_person"/><lit-tag v="p3"/></equal></test>
+        <let><var n="verb_nbr_pers"/><lit v="px3"/></let>
+      </when>
+      </choose>
+      <choose>
+      <!-- <append n="verb_nbr_pers"><clip pos="1" part="a_nbr"/></append> doesn't work, thus 2 tests below -->
+      <when>
+        <test><equal><clip pos="1" part="a_nbr"/><lit-tag v="sg"/></equal></test>
+        <append n="verb_nbr_pers"><lit v="sg"/></append>
+      </when>
+      <when>
+        <test><equal><clip pos="1" part="a_nbr"/><lit-tag v="pl"/></equal></test>
+        <append n="verb_nbr_pers"><lit v="pl"/></append>
+      </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="poss2pronoun" npar="1"> <!-- create a pronoun from px... tag -->
+      <choose>
+        <when>  <!-- a possessive tag should convert to a pronoun -->
+          <test> 
+              <contains-substring><clip pos="1" part="a_poss"/><lit v="px"/></contains-substring>
+          </test>
+          <choose>  <!-- either a personal pronoun or oma -->
+            <when>  <!-- test for same-referral -->
+              <test> <!-- refering to the same subject -->
+                <and>
+                <contains-substring><var n="verb_nbr_pers"/><lit v="px"/></contains-substring>
+                <contains-substring><clip pos="1" part="a_poss"/><var n="verb_nbr_pers"/></contains-substring>
+                </and>
+              </test>
+              <let><var n="pron_word"/><lit v="oma"/></let>
+              <let><var n="pron_tags"/><lit-tag v="prn"/></let>
+              <append n="pron_tags"><lit-tag v="sg"/></append>
+              <append n="pron_tags"><lit-tag v="gen"/></append>
+            </when>
+            <otherwise> <!-- refering to different subjects - it should be a personal pronoun -->
+              <let><var n="pron_case"/><lit-tag v="gen"/></let>
+              <call-macro n="gen_px_pron"><with-param pos="1"/></call-macro> <!-- generate vars -->
+              <call-macro n="gen_pers_pron"></call-macro>         <!-- turn vars into output strings -->
+            </otherwise>
+          </choose>
+          <!--let><var n="px"/><lit v="px"/></let>
+          <let><var n="upper_lower"/><case-of pos="1" part="lem"/></let>
+          <choose><when>
+            <test>
+              <equal><var n="upper_lower"/><lit v="Aa"/></equal>
+            </test>
+            <let><var n="px"/><lit v="Px"/></let>
+          </when></choose-->
+          <out>
+            <chunk>
+              <get-case-from pos="1">
+              <lit v="px"/></get-case-from>
+              <lit-tag v="PRN"/>
+              <var n="chunk_pron_tags"/>
+              <lit v="{^"/>
+              <var n="pron_word"/>
+              <var n="pron_tags"/>
+              <lit v="$}"/>
+            </chunk>
+            <b />
+          </out>
+          <modify-case><clip pos="1" part="lem"/><lit v="aa"/></modify-case>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="gen_px_pron" npar="1"> <!-- create a pers pronoun from px... tag -->
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="mina"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p1"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="sina"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p2"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3sg"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="tema"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="sg"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p3"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px1pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="meie"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p1"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px2pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="teie"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p2"/></let>
+          </when></choose>
+          <choose><when>
+            <test>
+              <equal><clip pos="1" part="a_poss"/><lit-tag v="px3pl"/></equal>
+            </test>
+            <let><var n="pron_word"/><lit v="nemad"/></let>
+            <let><var n="pron_nbr"/><lit-tag v="pl"/></let>
+            <let><var n="pron_pers"/><lit-tag v="p3"/></let>
+          </when></choose>
+    </def-macro>
+
 
     <def-macro n="insert_pers_pron" npar="2"> <!-- create and insert a pers pronoun from person, nbr tags -->
         <choose><when>
@@ -156,6 +305,9 @@
           <append n="pron_tags"><lit-tag v="3.4"/></append>
     </def-macro>
 
+    <def-macro n="forget_verb" npar="0" c="set the variable to empty">
+        <let><var n="verb_nbr_pers"/><lit v=""/></let>
+    </def-macro>
 
   </section-def-macros>
 
@@ -167,6 +319,7 @@
         <pattern-item n="QST"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="1">
@@ -194,6 +347,7 @@
         <pattern-item n="QST"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="1">
@@ -222,6 +376,7 @@
         <pattern-item n="SN2"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="1">
@@ -232,6 +387,7 @@
           <b pos="1"/>
         </out>
         <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="poss2pronoun"><with-param pos="3"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
           <chunk>
             <get-case-from pos="3">
@@ -258,6 +414,8 @@
         <pattern-item n="SN2"/>
       </pattern>
       <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_verb"><with-param pos="3"/></call-macro>
         <out>
           <chunk>
             <get-case-from pos="1">
@@ -268,6 +426,7 @@
           <b pos="1"/>
         </out>
         <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
         <out>
           <chunk>
             <get-case-from pos="4">
@@ -288,49 +447,6 @@
             <clip pos="3" part="lem"/></get-case-from>
             <clip pos="3" part="tags"/>
             <clip pos="3" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SV QST PRN-gen SN">  <!-- ei kas sinu naine -->
-      <pattern>
-        <pattern-item n="SV"/>
-        <pattern-item n="QST"/>
-        <pattern-item n="PRN-gen"/>
-        <pattern-item n="SN"/>
-      </pattern>
-      <action>
-        <out>
-          <chunk>
-            <get-case-from pos="1">
-            <clip pos="2" part="lem"/></get-case-from>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-          <b />
-        </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <out>
-          <chunk>
-            <get-case-from pos="3">
-            <clip pos="3" part="lem"/></get-case-from>
-            <clip pos="3" part="tags"/>
-            <clip pos="3" part="chcontent"/>
-          </chunk>
-          <b />
-          <chunk>
-            <get-case-from pos="4">
-            <clip pos="4" part="lem"/></get-case-from>
-            <clip pos="4" part="tags"/>
-            <clip pos="4" part="chcontent"/>
-          </chunk>
-          <b />
-          <chunk>
-            <get-case-from pos="2">
-            <clip pos="1" part="lem"/></get-case-from>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
           </chunk>
         </out>
       </action>
@@ -345,6 +461,8 @@
       <action>
         <let><var n="pron_word"/><lit v=""/></let>  <!-- to get info back from macro -->
         <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="1"/></call-macro>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_verb"><with-param pos="3"/></call-macro>
         <choose>
           <when>
             <test><not><equal><var n="pron_word"/><lit v=""/></equal></not></test>
@@ -387,6 +505,8 @@
       <action>
         <let><var n="pron_word"/><lit v=""/></let>  <!-- to get info back from macro -->
         <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="1"/></call-macro>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_verb"><with-param pos="2"/></call-macro>
         <choose>
           <when>
             <test><not><equal><var n="pron_word"/><lit v=""/></equal></not></test>
@@ -416,6 +536,52 @@
         </out>
       </action>
     </rule>
+
+    <rule comment="REGLA: some-verb">
+      <pattern>
+        <pattern-item n="some-verb"/>
+      </pattern>
+      <action>
+        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
+        <out>
+          <chunk>
+            <clip pos="1" part="lem"/>
+            <clip pos="1" part="tags"/>
+            <clip pos="1" part="chcontent"/>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+
+    <rule comment="REGLA: SN2">
+      <pattern>
+        <pattern-item n="SN2"/>
+      </pattern>
+      <action>
+      <call-macro n="poss2pronoun"><with-param pos="1"/></call-macro> <!-- turn poss suffix into a pronoun -->
+      <out>
+        <chunk>
+          <clip pos="1" part="whole"/>
+        </chunk>
+      </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: SENT">
+      <pattern>
+        <pattern-item n="SENT"/>
+      </pattern>
+      <action>
+        <out>
+          <chunk>
+            <clip pos="1" part="whole"/>
+          </chunk>
+        </out>
+        <call-macro n="forget_verb"><with-param pos="1"/></call-macro>  <!-- a new sentence starts from blank -->
+      </action>
+    </rule>
+
 
   </section-rules>
 </interchunk>
