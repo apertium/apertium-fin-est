@@ -744,8 +744,10 @@
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <let><clip pos="1" side="tl" part="a_prntype"/><lit v=""/></let>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="prn_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="prn" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="PRN"/></tag>
               <tag><lit-tag v="prn"/></tag>
@@ -822,7 +824,7 @@
                   <equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_ka"/></equal>
                 </test>          <!-- eikä = ega -->
                 <out>
-                  <chunk name="coord" case="caseFirstWord">
+                  <chunk name="coord_eikä" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="CC"/></tag>
                     </tags>
@@ -865,8 +867,10 @@
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="agprc_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="agprc" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.pasv.pret.prc"/></tag>
             </tags>
@@ -889,8 +893,10 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="prsprc_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="prsprc" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.actv.pres.prc"/></tag>
             </tags>
@@ -913,8 +919,10 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="prsprc_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="prsprc" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.pasv.pres.prc"/></tag>
             </tags>
@@ -937,8 +945,10 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="prfprc_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="prfprc" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.actv.pret.prc"/></tag>
             </tags>
@@ -961,8 +971,10 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="remove-Px"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="prfprc_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="prfprc" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.pasv.pret.prc"/></tag>
             </tags>
@@ -1007,8 +1019,10 @@
             <let><clip pos="1" side="tl" part="a_inf"/><lit-tag v="sup"/></let>
           </otherwise>  
         </choose>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="infma_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="infma" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex"/></tag>
               <tag><clip pos="1" side="tl" part="a_voice"/></tag>
@@ -1054,8 +1068,10 @@
               </out>
           </when>
         </choose>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="infa_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="infa" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.inf"/></tag>
             </tags>
@@ -1077,8 +1093,10 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="infa_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="infa" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="SV.vblex.ger"/></tag>
             </tags>
@@ -1275,13 +1293,14 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
 
         <choose>       <!-- fin eikä = est ja ei -->
           <when><test><equal><clip pos="1" side="sl" part="a_eineg"/> 
                               <lit-tag v="eineg"/>
                       </equal></test>
             <out>
-              <chunk name="coord" case="caseFirstWord">
+              <chunk name="coord_ja" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="CC"/></tag>
                 </tags>
@@ -1303,8 +1322,9 @@
             </out>
           </when>
           <otherwise>  
+            <let><var n="c_name"/><concat><lit v="coord_"/><var n="sl_lemma"/></concat></let>
             <out>
-              <chunk name="coord" case="caseFirstWord">
+              <chunk namefrom="c_name" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="CC"/></tag>
                 </tags>
@@ -1325,8 +1345,10 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="remember_sl_lemma"><with-param pos="1"/></call-macro>
+        <let><var n="c_name"/><concat><lit v="sub_"/><var n="sl_lemma"/></concat></let>
         <out>
-          <chunk name="sub" case="caseFirstWord">
+          <chunk namefrom="c_name" case="caseFirstWord">
             <tags>
               <tag><lit-tag v="CS"/></tag>
             </tags>

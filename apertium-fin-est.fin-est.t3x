@@ -313,9 +313,9 @@
 
   <section-rules>
 
-    <rule comment="REGLA: fallback SV QST"> <!-- kirjutad kas -->
+    <rule comment="REGLA: fallback SV QST"> <!-- kirjutad kas, ei kas -->
       <pattern>
-        <pattern-item n="SV"/>
+        <pattern-item n="some-verb"/>
         <pattern-item n="QST"/>
       </pattern>
       <action>
@@ -341,37 +341,9 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: fallback SVNEG QST"> <!-- ei kas  -->
+    <rule comment="REGLA: verb QST SN2 -- QST SN2 verb"> <!-- kirjutad kas sina; kirjutad kas raamatut -->
       <pattern>
-        <pattern-item n="SVNEG"/>
-        <pattern-item n="QST"/>
-      </pattern>
-      <action>
-        <call-macro n="remember_verb"><with-param pos="1"/></call-macro>
-        <out>
-          <chunk>
-            <get-case-from pos="1">
-              <clip pos="2" part="lem"/></get-case-from>
-            <clip pos="2" part="tags"/>
-            <clip pos="2" part="chcontent"/>
-          </chunk>
-          <b pos="1"/>
-        </out>
-        <call-macro n="insert_pers_pron"><with-param pos="1"/><with-param pos="2"/></call-macro>
-        <out>
-          <chunk>
-            <get-case-from pos="2">
-              <clip pos="1" part="lem"/></get-case-from>
-            <clip pos="1" part="tags"/>
-            <clip pos="1" part="chcontent"/>
-          </chunk>
-        </out>
-      </action>
-    </rule>
-
-    <rule comment="REGLA: SV QST SN2 -- QST SN2 SV"> <!-- kirjutad kas sina; kirjutad kas raamatut -->
-      <pattern>
-        <pattern-item n="SV"/>
+        <pattern-item n="some-verb"/>
         <pattern-item n="QST"/>
         <pattern-item n="SN2"/>
       </pattern>
