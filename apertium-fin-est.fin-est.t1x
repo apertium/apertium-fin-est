@@ -5,6 +5,10 @@
     <def-cat n="any">
       <cat-item tags="*"/>
     </def-cat>
+    <def-cat n="cmp">   <!-- compound word non-final component-->
+      <cat-item tags="*.cmp"/>
+      <cat-item tags="*.cmp.guio"/>
+    </def-cat>
     <def-cat n="adj">
       <cat-item tags="adj.*"/>
       <cat-item lemma="sama" tags="prn.*"/>
@@ -372,7 +376,13 @@
     <def-var n="pron_word"/>  <!-- kanssani etc: for inserted pronoun -->
     <def-var n="sl_lemma"/>  <!-- for pidama - meeldima etc -->
     <def-var n="c_name"/>   <!-- for pidama - meeldima etc -->
-    <def-var n="xxx"/>  <!-- to remember smth -->
+    <def-var n="xxx" c="to remember smth"/>
+    <def-var n="cmp-non-final" c="non-final component in a compund word"/>
+    <def-var n="cmp-non-final2" c="the 2nd non-final component"/> 
+    <def-var n="sn-adj" c="adj in a noun phrase "/>
+    <def-var n="sn-adj2" c="the 2nd adj in noun phrase"/>       
+    <def-var n="sn-final"/>
+    <def-var n="sn-non-final"/>
   </section-def-vars>
 
   <section-def-macros>
@@ -397,6 +407,80 @@
             <equal><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v=""/></equal>
           </and></test>
           <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="sg"/></let>
+        </when>
+      </choose>
+    </def-macro>
+
+    <def-macro n="make-sn-final" npar="1" c="make in-chunk string for nominal chunk final component">  
+      <let><var n="sn-final"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <clip pos="1" side="tl" part="a_pos"/>
+          <lit-tag v="2"/>
+          <lit-tag v="3"/>
+         <clip pos="1" side="tl" part="a_foc"/>
+       </concat>
+     </let> 
+    </def-macro>
+
+    <def-macro n="make-sn-adj" npar="1" c="make in-chunk string for nominal chunk adj component">  
+      <let><var n="sn-adj"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <clip pos="1" side="tl" part="a_pos"/>
+          <clip pos="1" side="tl" part="a_comp"/>
+          <lit-tag v="2"/>
+          <lit-tag v="3"/>
+          <clip pos="1" side="tl" part="a_foc"/>
+       </concat>
+     </let> 
+    </def-macro>
+
+    <def-macro n="make-cmp-non-final" npar="2" c="make in-chunk string for compound word non-final component">  
+      <call-macro n="cmp1-case"><with-param pos="1"/><with-param pos="2"/></call-macro>
+      <let><var n="cmp-non-final"/>
+        <concat>
+          <clip pos="1" side="tl" part="lem"/>
+          <clip pos="1" side="tl" part="a_pos"/>
+          <clip pos="1" side="tl" part="a_comp"/>
+          <clip pos="1" side="tl" part="a_sgpl"/>
+          <clip pos="1" side="tl" part="a_case"/>
+          <clip pos="1" side="tl" part="a_foc"/>
+       </concat>
+     </let> 
+    </def-macro>
+
+    <def-macro n="cmp1-case" npar="2" c="non-final compound case">
+      <choose>
+        <when>
+          <test><and>
+            <equal><clip pos="1" side="sl" part="a_case"/><lit-tag v="nom"/></equal> <!-- fin default is nom -->
+            <equal><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></equal>
+          </and></test>
+          <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>       <!-- est default is gen -->
+          <choose>
+            <when>
+              <test>
+                <ends-with><clip pos="1" side="tl" part="lemh"/><lit v="us"/></ends-with>    <!-- ...us --> 
+              </test>
+              <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>       <!-- est should be nom -->
+            </when>
+            <when>
+              <test><and>
+                <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="adj"/></equal>    <!-- suur --> 
+                <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="n"/></equal>      <!-- saadik --> 
+              </and></test>
+              <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>       <!-- est should be nom -->
+            </when>
+            <when>
+              <test><and>
+                <equal><clip pos="1" side="tl" part="lemh"/><lit v="noor"/></equal>       <!-- noor --> 
+                <equal><clip pos="1" side="tl" part="a_pos"/><lit-tag v="n"/></equal>      <!-- mees --> 
+              </and></test>
+              <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="nom"/></let>       <!-- est should be nom -->
+            </when>
+            <!-- many more special cases needed here ... --> 
+          </choose>
         </when>
       </choose>
     </def-macro>
@@ -497,6 +581,8 @@
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <let><var n="chunk_poss"/><clip pos="1" side="sl" part="a_poss"/></let>
+
+        <call-macro n="make-sn-final"><with-param pos="1"/></call-macro>
         <out>
           <chunk name="n" case="caseFirstWord">
             <tags>
@@ -506,11 +592,7 @@
               <tag><var n="chunk_poss"/></tag>
             </tags>
             <lu>
-       	      <clip pos="1" side="tl" part="lem"/>
-       	      <clip pos="1" side="tl" part="a_pos"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
-       	      <clip pos="1" side="tl" part="a_foc"/>
+              <var n="sn-final"/>
             </lu>
           </chunk>
         </out>
@@ -523,7 +605,108 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: AdjNSgPl">
+    <rule comment="REGLA: CMP NOM">
+      <pattern>
+        <pattern-item n="cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <!-- glue back together -->
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="2"/></call-macro>
+        <call-macro n="make-cmp-non-final"><with-param pos="1"/><with-param pos="2"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="2"/></call-macro>
+
+        <let><var n="chunk_number"/><clip pos="2" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="2" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><clip pos="2" side="sl" part="a_poss"/></let>
+
+        <out>
+          <chunk name="cmp_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+            </tags>
+            <lu>
+              <var n="cmp-non-final"/>
+            </lu>
+            <lu>
+              <var n="sn-final"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
+          </when>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: CMP CMP NOM">
+      <pattern>
+        <pattern-item n="cmp"/>
+        <pattern-item n="cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <!-- glue back together -->
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="2"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="3"/></call-macro>
+        <call-macro n="make-cmp-non-final"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <let><var n="cmp-non-final2"/><var n="cmp-non-final"/></let>     <!-- save it -->
+        <call-macro n="make-cmp-non-final"><with-param pos="1"/><with-param pos="2"/></call-macro> 
+        <call-macro n="make-sn-final"><with-param pos="2"/></call-macro>
+
+        <let><var n="chunk_number"/><clip pos="3" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="3" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
+
+        <out>
+          <chunk name="cmp_cmp_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+            </tags>
+            <lu>
+              <var n="cmp-non-final"/>
+            </lu>
+            <lu>
+              <var n="cmp-non-final2"/>
+            </lu>
+            <lu>
+              <var n="sn-final"/>
+            </lu>
+          </chunk>
+        </out>
+        <choose>
+          <when>
+            <test><equal><clip pos="1" side="sl" part="a_foc"/><lit-tag v="foc_han"/></equal></test>
+            <call-macro n="replace_foc_han"><with-param pos="1"/></call-macro>
+          </when>
+        </choose>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: Adj Nom">
       <pattern>
         <pattern-item n="adj"/>
         <pattern-item n="nom"/>
@@ -551,7 +734,6 @@
                 <equal><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
             </test>
             <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
-            <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
           </when>
         </choose>
 
@@ -565,6 +747,8 @@
             <let><var n="px_poss"/><lit v=""/></let>
           </when>
         </choose>
+        <call-macro n="make-sn-adj"><with-param pos="1"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="2"/></call-macro>
 
         <let><var n="chunk_number"/><clip pos="2" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="2" side="tl" part="a_case"/></let>
@@ -579,19 +763,178 @@
               <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_pos"/>
-              <clip pos="1" side="tl" part="a_comp"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
+              <var n="sn-adj"/>
             </lu>
           <b pos="1"/>
             <lu>
-       	      <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_pos"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
-       	      <clip pos="1" side="tl" part="a_foc"/>
+              <var n="sn-final"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: Adj Cmp Nom">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><not><and>
+                <equal><clip pos="1" side="sl" part="a_sgpl"/><clip pos="3" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_case"/><clip pos="3" side="sl" part="a_case"/></equal>
+            </and></not></test>
+            <reject-current-rule shifting="no"/> <!-- not the same chunk; treat adj and nom separately -->
+          </when>
+        </choose>
+        <!-- the same chunk -->
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="2"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="3"/></call-macro>
+        <call-macro n="make-sn-adj"><with-param pos="1"/></call-macro>
+        <call-macro n="make-cmp-non-final"><with-param pos="2"/><with-param pos="3"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="3"/></call-macro>
+
+        <choose>  <!-- fin lyhyt tukka (sg) = est lühikesed juuksed (pl) -->
+          <when>
+            <test>
+                <equal><clip pos="3" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+          </when>
+        </choose>
+
+        <let><var n="px_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
+        <choose>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="oma"/></equal>
+                <contains-substring><clip pos="3" side="sl" part="a_poss"/><lit v="px3"/></contains-substring>
+            </and></test>
+            <let><var n="px_poss"/><lit v=""/></let>
+          </when>
+        </choose>
+
+        <let><var n="chunk_number"/><clip pos="3" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="3" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><var n="px_poss"/></let>
+        <out>
+          <chunk name="a_cmp_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+              <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
+            </tags>
+            <lu>
+              <var n="sn-adj"/>
+            </lu>
+          <b pos="1"/>
+            <lu>
+              <var n="cmp-non-final"/>
+            </lu>
+            <lu>
+              <var n="sn-final"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: Adj Cmp Cmp Nom">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="cmp"/>
+        <pattern-item n="cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><not><and>
+                <equal><clip pos="1" side="sl" part="a_sgpl"/><clip pos="4" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_case"/><clip pos="4" side="sl" part="a_case"/></equal>
+            </and></not></test>
+            <reject-current-rule shifting="no"/> <!-- not the same chunk; treat adj and nom separately -->
+          </when>
+        </choose>
+        <!-- the same chunk -->
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="4"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="4"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="1"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="2"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="3"/></call-macro>
+        <call-macro n="default_sg"><with-param pos="4"/></call-macro>
+        <call-macro n="make-sn-adj"><with-param pos="1"/></call-macro>
+        <call-macro n="make-cmp-non-final"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <let><var n="cmp-non-final2"/><var n="cmp-non-final"/></let>     <!-- save it -->
+        <call-macro n="make-cmp-non-final"><with-param pos="2"/><with-param pos="3"/></call-macro> 
+        <call-macro n="make-sn-final"><with-param pos="4"/></call-macro>
+
+        <choose>  <!-- fin lyhyt tukka (sg) = est lühikesed juuksed (pl) -->
+          <when>
+            <test>
+                <equal><clip pos="4" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+          </when>
+        </choose>
+
+        <let><var n="px_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
+        <choose>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="oma"/></equal>
+                <contains-substring><clip pos="4" side="sl" part="a_poss"/><lit v="px3"/></contains-substring>
+            </and></test>
+            <let><var n="px_poss"/><lit v=""/></let>
+          </when>
+        </choose>
+
+        <let><var n="chunk_number"/><clip pos="4" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="4" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><var n="px_poss"/></let>
+        <out>
+          <chunk name="a_cmp_cmp_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+              <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
+            </tags>
+            <lu>
+              <var n="sn-adj"/>
+            </lu>
+          <b pos="1"/>
+            <lu>
+              <var n="cmp-non-final"/>
+            </lu>
+            <lu>
+              <var n="cmp-non-final2"/>
+            </lu>
+            <lu>
+              <var n="sn-final"/>
             </lu>
           </chunk>
         </out>
@@ -599,7 +942,7 @@
     </rule>
 
 
-    <rule comment="REGLA: AdjAdjNSgPl">
+    <rule comment="REGLA: Adj Adj Nom">
       <pattern>
         <pattern-item n="adj"/>
         <pattern-item n="adj"/>
@@ -647,6 +990,10 @@
             <let><var n="px_poss"/><lit v=""/></let>
           </when>
         </choose>
+        <call-macro n="make-sn-adj"><with-param pos="2"/></call-macro>
+        <let><var n="sn-adj2"/><var n="sn-adj"/></let>
+        <call-macro n="make-sn-adj"><with-param pos="1"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="3"/></call-macro>
 
         <let><var n="chunk_number"/><clip pos="3" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="3" side="tl" part="a_case"/></let>
@@ -661,28 +1008,103 @@
               <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
             </tags>
             <lu>
-              <clip pos="1" side="tl" part="lem"/>
-              <clip pos="1" side="tl" part="a_pos"/>
-              <clip pos="1" side="tl" part="a_comp"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
+              <var n="sn-adj"/>
             </lu>
           <b pos="1"/>
             <lu>
-              <clip pos="2" side="tl" part="lem"/>
-              <clip pos="2" side="tl" part="a_pos"/>
-              <clip pos="2" side="tl" part="a_comp"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
+              <var n="sn-adj2"/>
             </lu>
           <b pos="1"/>
             <lu>
-       	      <clip pos="3" side="tl" part="lem"/>
-              <clip pos="3" side="tl" part="a_pos"/>
-              <!--lit-tag v="n"/-->
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
-       	      <clip pos="1" side="tl" part="a_foc"/>
+              <var n="sn-final"/>
+            </lu>
+          </chunk>
+        </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: Adj Adj Cmp Nom">
+      <pattern>
+        <pattern-item n="adj"/>
+        <pattern-item n="adj"/>
+        <pattern-item n="cmp"/>
+        <pattern-item n="nom"/>
+      </pattern>
+      <action>
+        <choose>
+          <when>
+            <test><not><and>
+                <equal><clip pos="1" side="sl" part="a_sgpl"/><clip pos="2" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="2" side="sl" part="a_sgpl"/><clip pos="4" side="sl" part="a_sgpl"/></equal>
+                <equal><clip pos="1" side="sl" part="a_case"/><clip pos="2" side="sl" part="a_case"/></equal>
+                <equal><clip pos="2" side="sl" part="a_case"/><clip pos="4" side="sl" part="a_case"/></equal>
+            </and></not></test>
+            <reject-current-rule shifting="no"/> <!-- not the same chunk; treat adj and nom separately -->
+          </when>
+        </choose>
+        <!-- the same chunk -->
+        <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="2"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="3"/></call-macro>
+        <call-macro n="default-conversion1"><with-param pos="4"/></call-macro>
+        <call-macro n="firstWord"><with-param pos="1"/></call-macro>
+        <call-macro n="replace-foc1"><with-param pos="1"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="2"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="3"/></call-macro> <!-- ever happens ?-->
+        <call-macro n="replace-foc1"><with-param pos="4"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="1"/></call-macro>
+        <call-macro n="f_adj1"><with-param pos="2"/></call-macro>
+        <choose>  <!-- fin lyhyt kaunis tukka (sg) = est lühikesed kaunid juuksed (pl) -->
+          <when>
+            <test>
+                <equal><clip pos="4" side="tl" part="a_sgpl"/><lit-tag v="pl"/></equal>
+            </test>
+            <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+            <let><clip pos="2" side="tl" part="a_sgpl"/><lit-tag v="pl"/></let>
+          </when>
+        </choose>
+
+        <let><var n="px_poss"/><clip pos="3" side="sl" part="a_poss"/></let>
+        <choose>
+          <when>
+            <test><and>
+                <equal><clip pos="1" side="sl" part="lem"/><lit v="oma"/></equal>
+                <contains-substring><clip pos="3" side="sl" part="a_poss"/><lit v="px3"/></contains-substring>
+            </and></test>
+            <let><var n="px_poss"/><lit v=""/></let>
+          </when>
+        </choose>
+        <call-macro n="make-sn-adj"><with-param pos="2"/></call-macro>
+        <let><var n="sn-adj2"/><var n="sn-adj"/></let>
+        <call-macro n="make-sn-adj"><with-param pos="1"/></call-macro>
+        <call-macro n="make-cmp-non-final"><with-param pos="3"/><with-param pos="4"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="4"/></call-macro>
+
+        <let><var n="chunk_number"/><clip pos="4" side="tl" part="a_sgpl"/></let>
+        <let><var n="chunk_case"/><clip pos="4" side="tl" part="a_case"/></let>
+        <let><var n="chunk_poss"/><var n="px_poss"/></let>
+        <out>
+          <chunk name="a_a_cmp_n" case="caseFirstWord">
+            <tags>
+              <tag><lit-tag v="SN"/></tag>
+              <tag><var n="chunk_number"/></tag>
+              <tag><var n="chunk_case"/></tag>
+              <tag><var n="chunk_poss"/></tag>
+              <!--tag><clip pos="2" side="sl" part="a_poss"/></tag--> <!-- ainoastaan, suorastaan, -->
+            </tags>
+            <lu>
+              <var n="sn-adj"/>
+            </lu>
+          <b pos="1"/>
+            <lu>
+              <var n="sn-adj2"/>
+            </lu>
+          <b pos="1"/>
+            <lu>
+              <var n="cmp-non-final"/>
+            </lu>
+            <lu>
+              <var n="sn-final"/>
             </lu>
           </chunk>
         </out>
@@ -698,6 +1120,7 @@
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <call-macro n="replace-foc1"><with-param pos="1"/></call-macro>
         <call-macro n="default_sg"><with-param pos="1"/></call-macro>
+        <call-macro n="make-sn-final"><with-param pos="1"/></call-macro>
         <let><var n="chunk_number"/><clip pos="1" side="tl" part="a_sgpl"/></let>
         <let><var n="chunk_case"/><clip pos="1" side="tl" part="a_case"/></let>
         <out>
@@ -708,11 +1131,7 @@
               <tag><var n="chunk_case"/></tag>
             </tags>
             <lu>
-       	      <clip pos="1" side="tl" part="lem"/>
-       	      <clip pos="1" side="tl" part="a_pos"/>
-              <lit-tag v="2"/>
-              <lit-tag v="3"/>
-       	      <clip pos="1" side="tl" part="a_foc"/>
+              <var n="sn-final"/>
             </lu>
           </chunk>
         </out>

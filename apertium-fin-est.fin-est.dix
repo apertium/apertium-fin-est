@@ -173,7 +173,6 @@
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="prn"/></r></p></e>
     <e><p><l>oma<s n="adj"/></l><r>oma<s n="adj"/></r></p></e>
     <e><p><l>kohta<s n="adv"/></l><r>pea<s n="adv"/></r></p></e>
-    <e><p><l>lähellä<s n="adv"/></l><r>ringi<s n="adv"/></r></p></e>
     <e><p><l>siellä<s n="adv"/></l><r>seal<s n="adv"/></r></p></e>
     <e><p><l>takana<s n="adv"/></l><r>taga<s n="adv"/></r></p></e>
     <e><p><l>taakse<s n="adv"/></l><r>taha<s n="adv"/></r></p></e>
@@ -17256,6 +17255,7 @@
     <e><p><l>varmasti<s n="adv"/></l><r>kindlalt<s n="adv"/></r></p></e>
     <e><p><l>kauan<s n="adv"/></l><r>kaua<s n="adv"/></r></p></e>
     <e><p><l>paitsi<s n="adv"/></l><r>välja<b/>arvatud<s n="adv"/></r></p></e>
+    <e><p><l>paitsi<s n="pr"/></l><r>välja<b/>arvatud<s n="adv"/></r></p></e>
     <e><p><l>ensin<s n="adv"/></l><r>kõigepealt<s n="adv"/></r></p></e>
     <e><p><l>kiinni<s n="adv"/></l><r>kinni<s n="adv"/></r></p></e>
     <e><p><l>kokonaan<s n="adv"/></l><r>koguni<s n="adv"/></r></p></e>
