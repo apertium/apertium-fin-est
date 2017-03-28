@@ -260,6 +260,7 @@ apertium_fin_est_DATA=$(TARGETS_COMMON) \
 	$(BASENAME).$(PREFIX1).t3x \
 	$(BASENAME).$(PREFIX1).t4x \
 	$(BASENAME).$(PREFIX1).t5x \
+	$(BASENAME).$(PREFIX1).t6x \
 	$(BASENAME).$(PREFIX2).t1x \
 	$(BASENAME).$(PREFIX2).t2x \
 	$(BASENAME).$(PREFIX2).t3x \
