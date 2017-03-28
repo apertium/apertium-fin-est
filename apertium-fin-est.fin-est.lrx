@@ -1,3 +1,5 @@
+<!-- the file apertium-fin-est.fin-est.lrx -->
+
 <rules>
   <rule>
     <match lemma="ei"/>
@@ -22,4 +24,63 @@
     <match lemma="aika"><select lemma="päris"/></match>
     <match tags="adj"/>
   </rule>
+
+<!-- tulla -->
+  <rule weight = "1.0">
+    <match lemma="tulla"><select lemma="tulema"/></match>
+  </rule>
+
+  <rule weight = "0.5">
+    <match lemma="tulla"><select lemma="saama"/></match>
+  </rule>
+  
+  <rule weight = "0.6"> <!-- hänestä tulee kokki -->
+    <or>
+      <match tags="*.*.ela"/>
+      <match tags="prn.*.*.*.ela"/>
+    </or>
+    <match lemma="tulla"><select lemma="saama"/></match>
+  </rule>
+
+  <rule weight = "0.6">
+    <or>
+      <match tags="*.*.ela"/>
+      <match tags="prn.*.*.*.ela"/>
+    </or>
+    <match/> <!-- voi -->
+    <match lemma="tulla"><select lemma="saama"/></match>
+  </rule>
+
+  <rule weight = "0.6">
+    <or>
+      <match tags="*.*.ela"/>
+      <match tags="prn.*.*.*.ela"/>
+    </or>
+    <match/> <!-- voi -->
+    <match/> <!-- ehkä -->
+    <match lemma="tulla"><select lemma="saama"/></match>
+  </rule>
+
+  <rule weight = "0.5">
+    <match lemma="tulla"><select lemma="sattuma"/></match>
+  </rule>
+
+<!-- pitää -->
+  <rule weight = "1.0">
+    <match lemma="pitää"><select lemma="pidama"/></match>
+  </rule>
+
+  <rule weight = "0.5">
+    <match lemma="pitää"><select lemma="meeldima"/></match>
+  </rule>
+  <rule weight = "0.5">
+    <match lemma="pitää"><select lemma="hoidma"/></match>
+  </rule>
+  <rule weight = "0.5">
+    <match lemma="pitää"><select lemma="armastama"/></match>
+  </rule>
+  <rule weight = "0.5">
+    <match lemma="pitää"><select lemma="tulema"/></match>
+  </rule>
+
 </rules>
