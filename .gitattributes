@@ -70,4 +70,6 @@ texts/opik.fin.txt -text
 texts/opik_vead_kaebilt.xlsx -text
 texts/story.est.txt -text
 texts/story.fin.txt -text
+texts/vaalit.est.txt -text
+texts/vaalit.fin.txt -text
 /wiki-tests.sh -text
