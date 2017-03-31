@@ -1204,11 +1204,13 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <call-macro n="firstWord"><with-param pos="1"/></call-macro>
         <let><clip pos="1" side="tl" part="a_voice"/><lit-tag v="actv"/></let>
+        <let><var n="c_name"/><concat><lit v="neg_"/><lit v="ei"/></concat></let>
         <choose>                   
           <when>                  <!-- fin älä (ei_imp) form = est ära form -->
             <test>
               <equal><clip pos="1" side="sl" part="a_mood"/><lit-tag v="imp"/></equal>
             </test>
+            <let><var n="c_name"/><concat><lit v="neg_"/><lit v="älä"/></concat></let>
             <let><clip pos="1" side="tl" part="lemh"/><lit v="ära"/></let>      
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pres.imp"/></let>
             <let><clip pos="1" side="tl" part="a_conneg"/><lit v=""/></let>
@@ -1225,7 +1227,7 @@
               </when>  
             </choose>
             <out>
-              <chunk name="neg" case="caseFirstWord">
+              <chunk namefrom="c_name" case="caseFirstWord">
                 <tags>
                   <tag><lit-tag v="SVNEG"/></tag>
                 </tags>
@@ -1257,7 +1259,7 @@
               <otherwise>    <!-- fin ei form = est ei -->
 
                 <out>
-                  <chunk name="neg" case="caseFirstWord">
+                  <chunk namefrom="c_name" case="caseFirstWord">
                     <tags>
                       <tag><lit-tag v="SVNEG"/></tag>
                       <tag><clip pos="1" side="tl" part="a_person"/></tag>
@@ -1608,19 +1610,45 @@
             <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="pret.indic"/></let>
           </when>
         </choose>
-        <choose>  <!-- conneg forms do not have sgpl -->
+        <!-- choose>  < ! - - conneg forms do not have sgpl ... - - >
           <when> 
-            <test><equal><clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/></equal></test>
+            <test>
+              <and>
+                <equal><clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/></equal>
+                <not>
+                  <and>   < ! - - ... unless imp p2 sg (and perhaps more?) - - >
+                    <equal><clip pos="1" side="tl" part="a_screeve"/> <lit-tag v="pres.imp"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_person"/> <lit-tag v="p2"/></equal>
+                    <equal><clip pos="1" side="tl" part="a_sgpl"/> <lit-tag v="sg"/></equal>
+                  </and>   
+                </not>
+              </and>
+            </test>
             <let><clip pos="1" side="tl" part="a_sgpl"/><lit v=""/></let>
           </when>
-        </choose>
+        </choose -->
 <!-- beginning of conneg-neg stuff -->
-        <choose> <!-- fin conneg translates to est neg in indic mood only; otherwise just delete conneg -->
+        <choose> 
           <when>
             <test>
-                <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
+              <equal> <clip pos="1" side="sl" part="a_conneg"/> <lit-tag v="conneg"/> </equal> 
             </test>
-            <choose>
+            <choose>        <!-- usually conneg forms do not have sgpl ... -->
+                <when> 
+                  <test>
+                    <not>
+                      <and>   <!-- ... unless imp p2 sg (and perhaps more?) -->
+                        <equal><clip pos="1" side="tl" part="a_temps"/> <lit-tag v="pres"/></equal>
+                        <equal><clip pos="1" side="tl" part="a_mood"/> <lit-tag v="imp"/></equal>
+                        <equal><clip pos="1" side="tl" part="a_person"/> <lit-tag v="p2"/></equal>
+                        <equal><clip pos="1" side="tl" part="a_sgpl"/> <lit-tag v="sg"/></equal>
+                      </and>   
+                    </not>
+                  </test>
+                  <let><clip pos="1" side="tl" part="a_sgpl"/><lit-tag v=""/></let>
+                </when> 
+            </choose> 
+            <choose>  <!-- fin conneg translates to est neg in indic mood only; otherwise just delete conneg -->
                 <when> 
                   <test>
                     <equal> <clip pos="1" side="tl" part="a_mood"/> <lit-tag v="indic"/> </equal>

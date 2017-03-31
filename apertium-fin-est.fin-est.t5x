@@ -30,8 +30,8 @@
       <cat-item lemma="v_täytyä" tags="SV.*"/>
     </def-cat>
     <def-cat n="SVNEG">
-      <cat-item tags="SVNEG"/>
-      <cat-item tags="SVNEG.*"/>
+      <cat-item lemma="neg_ei" tags="SVNEG"/>
+      <cat-item lemma="neg_ei" tags="SVNEG.*"/>
     </def-cat>
     <def-cat n="inf">  <!-- da-infinitiiv -->
       <cat-item tags="SV.vblex.inf"/>

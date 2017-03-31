@@ -2,8 +2,20 @@
 
 <rules>
   <rule>
+    <match lemma="aivan" tags="adv"><select lemma="täitsa"/></match>
+    <or>
+    <match tags="adj.*"/>
+    <match tags="vblex.*.prfprc.*.*"/>
+    </or>
+  </rule>
+  <rule>
     <match lemma="ei"/>
     <match lemma="voida"><select lemma="tohtima"/></match>
+    <match tags="vblex.*"/>
+  </rule>
+  <rule>
+    <match lemma="ei"/>
+    <match lemma="saada"><select lemma="tohtima"/></match>
     <match tags="vblex.*"/>
   </rule>
   <rule>
@@ -15,14 +27,6 @@
     <match lemma="olla"/>
     <match lemma="kotoisa"><select lemma="pärit"/></match>
     <match tags="n.sg.ela"/>
-  </rule>
-  <rule>
-    <match lemma="aika"><select lemma="päris"/></match>
-    <match tags="adv"/>
-  </rule>
-  <rule>
-    <match lemma="aika"><select lemma="päris"/></match>
-    <match tags="adj"/>
   </rule>
 
 <!-- tulla -->

@@ -8,6 +8,10 @@
     <def-cat n="any">
       <cat-item tags="*"/>
     </def-cat>
+    <def-cat n="adj-par">
+      <cat-item tags="ADJ.sg.par"/>
+      <cat-item tags="ADJ.*.sg.par"/>
+    </def-cat>
     <def-cat n="n-gen">
       <cat-item tags="SN.*.gen"/>
       <cat-item tags="SN.*.gen.*"/>
@@ -42,6 +46,9 @@
       <cat-item tags="SVNEG"/> <!-- ??? -->
       <cat-item tags="SVNEG.*"/> <!-- ??? -->
       <cat-item tags="SV.*"/>
+    </def-cat>
+    <def-cat n="on">
+      <cat-item lemma="v_olla" tags="SV.vblex.actv.*.indic.p3.sg"/>
     </def-cat>
     <def-cat n="SVNEG">
       <cat-item tags="SVNEG"/>
@@ -136,6 +143,48 @@
       </action>
     </rule>
 
+    <rule comment="REGLA: on adj-par">
+      <pattern>
+        <pattern-item n="on"/>
+        <pattern-item n="adj-par"/>
+      </pattern>
+      <action>
+          <let><clip pos="2" part="a_cas"/><lit-tag v="nom"/></let> 
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+          </out>
+      </action>
+    </rule>
+
+    <rule comment="REGLA: on adv adj-par">
+      <pattern>
+        <pattern-item n="on"/>
+        <pattern-item n="ADV"/>
+        <pattern-item n="adj-par"/>
+      </pattern>
+      <action>
+          <let><clip pos="3" part="a_cas"/><lit-tag v="nom"/></let> 
+          <out>
+            <chunk>
+              <clip pos="1" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="2" part="whole"/>
+            </chunk>
+            <b />
+            <chunk>
+              <clip pos="3" part="whole"/>
+            </chunk>
+          </out>
+      </action>
+    </rule>
 
   </section-rules>
 </interchunk>

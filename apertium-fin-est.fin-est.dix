@@ -3219,6 +3219,7 @@
        <e><p><l>itsepalvelupesula<s n="n"/></l><r>selvepesula<s n="n"/></r></p></e>
        <e><p><l>itsepäisyys<s n="n"/></l><r>kangekaelsus<s n="n"/></r></p></e>
        <e><p><l>itse<s n="n"/></l><r>ise<s n="n"/></r></p></e>
+       <e><p><l>itsehallinto<s n="n"/></l><r>omavalitsus<s n="n"/></r></p></e>
        <e><p><l>itsesuggestio<s n="n"/></l><r>enesesisendus<s n="n"/></r></p></e>
        <e><p><l>itsesäätely<s n="n"/></l><r>iseregulatsioon<s n="n"/></r></p></e>
 <e r="RL"><p><l>itsevaltias<s n="n"/></l><r>autokraat<s n="n"/></r></p></e>
@@ -7506,6 +7507,7 @@
 <e r="RL"><p><l>peruste<s n="n"/></l><r>lähtekoht<s n="n"/></r></p></e>
        <e><p><l>peruste<s n="n"/></l><r>põhjus<s n="n"/></r></p></e>
        <e><p><l>perustuslaillisuus<s n="n"/></l><r>konstitutsionalism<s n="n"/></r></p></e>
+       <e><p><l>perustuslaki<s n="n"/></l><r>põhiseadus<s n="n"/></r></p></e>
        <e><p><l>peruukki<s n="n"/></l><r>parukas<s n="n"/></r></p></e>
        <e><p><l>perverssi<s n="n"/></l><r>väärastunud<s n="n"/></r></p></e>
        <e><p><l>peräaukko<s n="n"/></l><r>pärak<s n="n"/></r></p></e>
@@ -10075,6 +10077,7 @@
        <e><p><l>tiamiini<s n="n"/></l><r>tiamiin<s n="n"/></r></p></e>
        <e><p><l>tiedemies<s n="n"/></l><r>teadlane<s n="n"/></r></p></e>
        <e><p><l>tiede<s n="n"/></l><r>teadus<s n="n"/></r></p></e>
+       <e><p><l>tiedote<s n="n"/></l><r>teadanne<s n="n"/></r></p></e>
        <e><p><l>tienoo<s n="n"/></l><r>ümbrus<s n="n"/></r></p></e>
        <e><p><l>tienviitta<s n="n"/></l><r>teeviit<s n="n"/></r></p></e>
        <e><p><l>tie<s n="n"/></l><r>tee<s n="n"/></r></p></e>
@@ -16767,7 +16770,6 @@
        <e><p><l>julistaa<s n="vblex"/></l><r>teatama<s n="vblex"/></r></p></e>
        <e><p><l>julkaista<s n="vblex"/></l><r>avaldama<s n="vblex"/></r></p></e>
        <e><p><l>juoda<s n="vblex"/></l><r>jooma<s n="vblex"/></r></p></e>
-        <!--   <e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>-->
        <e><p><l>juopotella<s n="vblex"/></l><r>pummeldama<s n="vblex"/></r></p></e>
        <e><p><l>juosta<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>
        <e><p><l>juottaa<s n="vblex"/></l><r>jootma<s n="vblex"/></r></p></e>
@@ -17618,6 +17620,7 @@
        <e><p><l>vääntää<s n="vblex"/></l><r>väänama<s n="vblex"/></r></p></e>
        <e><p><l>vääristellä<s n="vblex"/></l><r>moonutama<s n="vblex"/></r></p></e>
        <e><p><l>ärsyttää<s n="vblex"/></l><r>ärritama<s n="vblex"/></r></p></e>
+       <e><p><l>äänestää<s n="vblex"/></l><r>hääletama<s n="vblex"/></r></p></e>
        <e><p><l>yhdistää<s n="vblex"/></l><r>ühendama<s n="vblex"/></r></p></e>
        <e><p><l>yhdistyä<s n="vblex"/></l><r>ühinema<s n="vblex"/></r></p></e>
        <e><p><l>yhtyä<s n="vblex"/></l><r>liituma<s n="vblex"/></r></p></e>

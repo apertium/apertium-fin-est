@@ -22,12 +22,18 @@
       <cat-item tags="SN.*"/>
       <cat-item tags="PRN.*"/>
     </def-cat>
+    <def-cat n="ADV_OR_SN2">
+      <cat-item tags="ADV"/>
+      <cat-item tags="SN.*"/>
+      <cat-item tags="PRN.*"/>
+    </def-cat>
     <def-cat n="SV">
       <cat-item tags="SV"/>
       <cat-item tags="SV.*"/>
     </def-cat>
     <def-cat n="SVNEG">
-      <cat-item tags="SVNEG.*"/>
+      <cat-item lemma="neg_ei" tags="SVNEG"/>
+      <cat-item lemma="neg_ei" tags="SVNEG.*"/>
     </def-cat>
     <def-cat n="some-verb">
       <cat-item tags="SV"/>
@@ -36,11 +42,11 @@
       <cat-item tags="SVNEG.*"/>
     </def-cat>
     <def-cat n="SVNEG-p3">
-      <cat-item tags="SVNEG.p3.*"/>
+      <cat-item lemma="neg_ei" tags="SVNEG.p3.*"/>
     </def-cat>
     <def-cat n="SVNEG-p12">
-      <cat-item tags="SVNEG.p1.*"/>
-      <cat-item tags="SVNEG.p2.*"/>
+      <cat-item lemma="neg_ei" tags="SVNEG.p1.*"/>
+      <cat-item lemma="neg_ei" tags="SVNEG.p2.*"/>
     </def-cat>
     <def-cat n="SENT">
       <cat-item tags="SENT"/>
@@ -424,10 +430,10 @@
       </action>
     </rule>
 
-    <rule comment="REGLA: reorder SVNEG ADV SV   ">   <!-- ei kunagi kirjuta -->
+    <rule comment="REGLA: reorder SVNEG ADV_OR_SN2 SV   ">   <!-- ei kunagi kirjuta -->
       <pattern>
         <pattern-item n="SVNEG"/>
-        <pattern-item n="ADV"/>
+        <pattern-item n="ADV_OR_SN2"/>
         <pattern-item n="SV"/>
       </pattern>
       <action>
