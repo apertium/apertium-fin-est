@@ -267,6 +267,11 @@
     <e><p><l>Linnunrata<s n="n"/></l><r>Linnutee<s n="n"/></r></p></e>
     <e><p><l>WC<s n="n"/></l><r>tualettruum<s n="n"/></r></p></e>
     <e><p><l>aakkonen<s n="n"/></l><r>täht<s n="n"/></r></p></e>
+    <e><p><l>tiedote<s n="n"/>></l>l><r>teadanne<s n="n"/>></r>r></p>p></e>e>
+    <e><p><l>perustuslaki<s n="n"/>></l>l><r>põhiseadus<s n="n"/>></r>r></p>p></e>e>
+    <e><p><l>itsehallinto<s n="n"/>></l>l><r>omavalitsus<s n="n"/>></r>r></p>p></e>e>
+    <e><p><l>maistraatti<s n="n"/>></l>l><r>magistraadi<s n="n"/>></r>r></p>p></e>e>
+    
     <e><p><l>aakkoset<s n="n"/></l><r>tähestik<s n="n"/></r></p></e>
     <e><p><l>aakkosruno<s n="n"/></l><r>abc-luuletus<s n="n"/></r></p></e>
     <e><p><l>aakkostaminen<s n="n"/></l><r>tähestikjärjestus<s n="n"/></r></p></e>
@@ -15588,7 +15593,10 @@
     <e><p><l>haluta<s n="vblex"/></l><r>tahtma<s n="vblex"/></r></p></e>
     <e><p><l>huomata<s n="vblex"/></l><r>märkama<s n="vblex"/></r></p></e>
     <e><p><l>istua<s n="vblex"/></l><r>istuma<s n="vblex"/></r></p></e>
-        <!--<e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>-->
+    <e><p><l>äänestää<s n="vblex"/>></l>l><r>hääletama<s n="vblex"/>></r>r></p>p></e>e>
+    
+    
+    <!--<e><p><l>juoksia<s n="vblex"/></l><r>jooksma<s n="vblex"/></r></p></e>-->
 
 
   
