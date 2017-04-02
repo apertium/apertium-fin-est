@@ -72,6 +72,9 @@
     <sdef n="arg1_all"  c=""/>
 
     <sdef n="foc"  c=""/>
+    <sdef n="foc_gi"  c=""/>
+
+    <sdef n="sc_par"  c=""/>
     <sdef n="sem_plc"  c=""/>
 
     <sdef n="acr"  c=""/>

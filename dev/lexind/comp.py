@@ -679,8 +679,12 @@ def compare(infilenames):
               # compounds from one source&biltrans to 2-3 target words
               ll = len(targets) 
               if ll == 2 and targets[0]+1 == targets[1] and targets[1]+1 < len(phrases[TARGAN]) and phrases[TARGAN][targets[0]].totransl == phrases[TARGAN][targets[1]].totransl and phrases[TARGAN][targets[1]+1].totransl == phrases[TARGAN][targets[1]].totransl+1:
-                  llemmas = get_lemmamor(phrases[TARGAN][targets[0]].main)+'+'+get_lemma(phrases[TARGAN][targets[1]].main)
-                  lpos = get_pos(phrases[TARGAN][targets[1]].main)
+                  if phrases[TARGAN][targets[0]].main.pos == "vblex":
+                    llemmas = get_lemmamor(phrases[TARGAN][targets[1]].main)+'+'+get_lemma(phrases[TARGAN][targets[0]].main)
+                    lpos = get_pos(phrases[TARGAN][targets[0]].main)
+                  else:
+                    llemmas = get_lemmamor(phrases[TARGAN][targets[0]].main)+'+'+get_lemma(phrases[TARGAN][targets[1]].main)
+                    lpos = get_pos(phrases[TARGAN][targets[1]].main)
                   if (bpos == lpos or bpos in "partadvadj" and lpos in "partadvadj") and '"der"' not in llemmas:
                     lex_file.write(get_bidixstr(b, lembtr, bpos, llemmas, lpos))
 
@@ -695,8 +699,12 @@ def compare(infilenames):
                   llemmas = get_lemmamor(phrases[TARGAN][targets[ll-1]].main)
                   lpos = get_pos(phrases[TARGAN][targets[ll-1]].main)
                   if targets[ll-1]+1 < len(phrases[TARGAN]) and tail_cmwe(TARGAN, targets[ll-1]+1) == 'c':
-                    llemmas = get_lemmamor(phrases[TARGAN][targets[ll-1]].main) + '+' + get_lemmamor(phrases[TARGAN][targets[ll-1]+1].main)                      
-                    lpos = get_pos(phrases[TARGAN][targets[ll-1]+1].main)
+                    if phrases[TARGAN][targets[ll-1]].main.pos == "vblex":
+                      llemmas = get_lemmamor(phrases[TARGAN][targets[ll-1]+1].main) + '+' + get_lemmamor(phrases[TARGAN][targets[ll-1]].main)                      
+                      lpos = get_pos(phrases[TARGAN][targets[ll-1]].main)
+                    else:
+                      llemmas = get_lemmamor(phrases[TARGAN][targets[ll-1]].main) + '+' + get_lemmamor(phrases[TARGAN][targets[ll-1]+1].main)                      
+                      lpos = get_pos(phrases[TARGAN][targets[ll-1]+1].main)
                   for i in range(ll-1): 
                     llemmas = phrases[TARGAN][targets[ll-i-2]].main.wold + '<b/>' + llemmas
                   if (bpos == lpos or bpos in "partadvadj" and lpos in "partadvadj") and '"der"' not in llemmas:
@@ -706,8 +714,12 @@ def compare(infilenames):
                   lpos = get_pos(phrases[TARGAN][targets[1]].main)
                   # 3 words: <e><p><l>lanttulaatikko<s n="n"/></l><r>kaalikas<s n="n"/><s n="sg"/><s n="gen"/>+vorm<s n="n"/><s n="sg"/><s n="gen"/>+roog²<s n="n"/></r></p></e>
                   if len(targets) > 2 and targets[1]+1 == targets[2] and tail_cmwe(TARGAN, targets[2]): # add more
-                    llemmas = llemmas + '+' + get_lemmamor(phrases[TARGAN][targets[1]].main) + '+' + get_lemma(phrases[TARGAN][targets[2]].main) 
-                    lpos = get_pos(phrases[TARGAN][targets[2]].main)
+                    if phrases[TARGAN][targets[1]].main.pos == "vblex":
+                      llemmas = llemmas + '+' + get_lemmamor(phrases[TARGAN][targets[2]].main) + '+' + get_lemma(phrases[TARGAN][targets[1]].main)                    
+                      lpos = get_pos(phrases[TARGAN][targets[1]].main)
+                    else:
+                      llemmas = llemmas + '+' + get_lemmamor(phrases[TARGAN][targets[1]].main) + '+' + get_lemma(phrases[TARGAN][targets[2]].main)                    
+                      lpos = get_pos(phrases[TARGAN][targets[2]].main)
                   else: # 2 words
                     llemmas = llemmas + '+' + get_lemma(phrases[TARGAN][targets[1]].main) 
                   if (bpos == lpos or bpos in "partadvadj" and lpos in "partadvadj") and '"der"' not in llemmas:
@@ -993,6 +1005,7 @@ def compare(infilenames):
             j += 1
 
           j = cor 
+          px = []
           while ("notfound" in phrases[TRANAN][itr].cat or "syn&wrongAn" in phrases[TRANAN][itr].cat) and j < len(phrases[TARGAN]): # find correspondence in target 
             if "punct" not in phrases[TARGAN][j].cat: # include ignored: meelest - n part post adv (or adp)
                 
@@ -1015,6 +1028,9 @@ def compare(infilenames):
 
               if ok == 0 and phrases[TARGAN][j].totransl < 0 or phrases[TARGAN][j].totransl >= 0 and "syn&wrongAn" in phrases[TRANAN][phrases[TARGAN][j].totransl].cat:
                 if phrases[TARGAN][j].main.wold == phrases[TRANAN][itr].main.wold: # compare surface forms (Aru - aru, without morph as the compound aru saama)
+                  relate(j, itr, "wordok2 ")
+                  ok = 1
+                elif j > 0 and len(phrases[TRANAN][itr].main.wold) > 3 and phrases[TARGAN][j].main.wold[0] != phrases[TARGAN][j].main.word[0] and (cmp(phrases[TARGAN][j].main.wold[: len(phrases[TRANAN][itr].main.wold)-3], phrases[TRANAN][itr].main.wold[:-3]) == 0 or cmp(phrases[TRANAN][itr].main.wold[: len(phrases[TARGAN][j].main.wold)-3], phrases[TARGAN][j].main.wold[:-3]) == 0): # np
                   relate(j, itr, "wordok2 ")
                   ok = 1
                 elif phrases[TARGAN][j].main.pos in ignorepos and phrases[SOURAN][phrases[BILTRS][phrases[TRANAN][itr].tobiltrs].tosource].main.pos in ignorepos and phrases[TRANAN][itr].main.wold.find(phrases[TARGAN][j].main.wold[0:-1]) == 0: # (aikana-ajal)
@@ -1044,7 +1060,19 @@ def compare(infilenames):
                     break
               #if ok == 1:
               #  break
+              if ok == 0 and j > 0 and "px" in phrases[BILTRS][phrases[TRANAN][itr].tobiltrs].main.morph and phrases[TARGAN][j].totransl < 0 and ("prn><pers" in phrases[TARGAN][j-1].main.morph or phrases[TARGAN][j-1].main.lemma == "oma"):
+                  px.append(j)
+              # if already added to lrlems
+              if ok == 0 and phrases[BILTRS][phrases[TRANAN][itr].tobiltrs].main.lemla in lrlems:
+                  wtr = lrules[lrlems.index(phrases[BILTRS][phrases[TRANAN][itr].tobiltrs].main.lemla)]
+                  for tr in wtr.translations:
+                      if cmp(phrases[TARGAN][j].main.lemla, tr.lemla) == 0:
+                          relate(j, itr, "syn&wrongL ")
+                          ok = 1
             j += 1
+          if ok == 0 and len(px) == 1:
+              relate(px[0], itr, "syn&wrongX ")
+              ok = 1
         itr += 1  
 
       # continuation
@@ -1052,6 +1080,7 @@ def compare(infilenames):
 
       gaps = 0
       gapl = []
+      conj = []
       trgapl = []
       verb = -1
       comp = -1
@@ -1112,19 +1141,61 @@ def compare(infilenames):
               elif phrases[TARGAN][i].totransl < 0 and "notfound" in phrases[TARGAN][i].cat:
                  gaps += 1
                  gapl.append(i)
+          if i > 0 and "cnjcoo" in phrases[TARGAN][i].main.morph:
+              conj.append(len(gapl))
         i += 1
-       
+      trgapl = []
+      trconj = []
+      trcon = []
+      i = 1
+      while i < len(phrases[TRANAN]): # conj in translation
+          if phrases[TRANAN][i].totarget < 0 and "notfound" in phrases[TRANAN][i].cat:
+              trgapl.append(i)
+          if "cnjcoo" in phrases[TRANAN][i].main.morph:
+              trconj.append(len(trgapl))
+              trcon.append(i)
+          i += 1
+      if len(conj) != len(trconj):
+          trconj = []
+          trcon = []
+          conj = []        
+      lc = len(conj)
 
       r = 0
-      maxr = 3       
-      while gaps > 0 and r < maxr: # gaps match
-           trgapl = []
-           i = 0
-           while i < len(phrases[TRANAN]): # gaps in translation
-             if phrases[TRANAN][i].totarget < 0 and "notfound" in phrases[TRANAN][i].cat:
-               trgapl.append(i)
-             i += 1
+      conto = len(phrases[TRANAN])
+      maxr = lc + 1        
+      while len(gapl) > 0 and len(trgapl) > 0 and r < maxr: # gaps match
+        for ii in range(2):
+           confrom = 0
+           if r < maxr-1 and lc > 0:
+               rgapl = gapl
+               rtrgapl = trgapl
+               if r == 0 and len(rgapl) > conj[0] and len(rtrgapl) > trconj[0]:
+                 if conj[0] == 0 or trconj[0] == 0:
+                   r += 1
+                   continue
+                 gapl = rgapl[:conj[0]]
+                 trgapl = rtrgapl[:trconj[0]]
+                 conto = trcon[0]
+               elif r == lc and len(rgapl) > conj[-1] and len(rtrgapl) > trconj[-1]:
+                 gapl = rgapl[conj[-1]:]
+                 trgapl = rtrgapl[trconj[-1]:]
+                 confrom = trcon[-1]
+                 conto = len(phrases[TRANAN])
+               elif r > 0 and r < lc and len(rgapl) > conj[r] and len(rtrgapl) > trconj[r]:
+                 if conj[r] == conj[r-1] or trconj[r] == trconj[r-1]:
+                   r += 1
+                   continue
+                 gapl = rgapl[conj[r-1]:conj[r]]
+                 trgapl = rtrgapl[trconj[r-1]:trconj[r]]
+                 confrom = trcon[r-1]
+                 conto = trcon[r]
+               else:
+                 r += 1
+                 continue
            trgapln = []
+           gaps = len(gapl)
+           #cmp_file.write(str(gapl)+" " +str(trgapl)+"\n")
            for trgap in trgapl: trgapln.append(trgap)
            for trgap in trgapln: 
              candy = []
@@ -1148,6 +1219,8 @@ def compare(infilenames):
                    ms = sc 
                    scandy = ca
                  if sc == ms:
+                   #scandy = -1 
+                   #break
                    l = len(phrases[TARGAN][ca].main.lemla)
                    if l >= 5: l = l-2 
                    if phrases[TARGAN][ca].main.pos == phrases[TRANAN][trgap].main.pos and phrases[TARGAN][scandy].main.pos != phrases[TRANAN][trgap].main.pos:
@@ -1162,9 +1235,9 @@ def compare(infilenames):
                gapl, trgapl = relate(scandy, trgap, "syn&wrongN", gapl, trgapl)
                gaps = len(gapl)
 
-           trgapl = []
-           i = 0
-           while i < len(phrases[TRANAN]): # gaps in translation
+           #trgapl = []
+           i = confrom # 0
+           while i < conto: # len(phrases[TRANAN]): # gaps in translation
              if phrases[TRANAN][i].totarget < 0 and "notfound" in phrases[TRANAN][i].cat:
        
                if comp > 0 and phrases[TARGAN][comp].totransl < 0 and "punct" not in phrases[TARGAN][comp].cat and (phrases[BILTRS][phrases[TRANAN][i].tobiltrs].compound == True or phrases[TRANAN][i].tobiltrs+1 < len(phrases[BILTRS]) and phrases[BILTRS][phrases[TRANAN][i].tobiltrs+1].compound == True):
@@ -1192,8 +1265,8 @@ def compare(infilenames):
                  if verb in gapl:
                    gapl.remove(verb)
                    gaps -= 1
-               else:
-                 trgapl.append(i)
+               #else:
+               #  trgapl.append(i)
              i += 1
            if gaps < 1: break
            r += 1
@@ -1269,8 +1342,8 @@ def compare(infilenames):
                    gapl.remove(gapl[i])
              i += 1
 
-           itr = 0
-           while itr < len(phrases[TRANAN]): # word in phrase IIb
+           itr = confrom # 0
+           while itr < conto: # len(phrases[TRANAN]): # word in phrase IIb
              # more general form - 2 adjacent words
              if itr > 0 and "notfound" in phrases[TRANAN][itr].cat and phrases[TRANAN][itr].totarget > 0 and "notfound" in phrases[TRANAN][itr-1].cat and phrases[TARGAN][phrases[TRANAN][itr].totarget - 1].totransl == -1:
                   ind = phrases[TRANAN][itr].totarget - 1
@@ -1301,6 +1374,9 @@ def compare(infilenames):
              itr += 1  
            gapl, trgapl = continuation(gapl, trgapl)
            gaps = len(gapl)
+           if r < maxr-1 and lc > 0:
+               gapl = rgapl
+               trgapl = rtrgapl
       # end of gaps match
 
       itr = 0
@@ -1450,7 +1526,7 @@ def compare(infilenames):
             other =  other + ' ' +  word.cat
         itr = itr + 1      
     
-      #cmp_file.write("\n" + L1 + ":  " + print_phrase(phrases[SOURCE]) + L2 + ":  " + print_phrase(phrases[TARGET]) + "MT:   " + print_phrase(phrases[TRANSL]) + "BIL:\t" + print_phrase(phrases[BILTRS]) + L1 + " A:\t" + print_phrase(phrases[SOURAN]) + L2 + " A:\t" + print_phrase(phrases[TARGAN])+ "MT A:\t" + print_phrase(phrases[TRANAN]) + "\n\n")
+      cmp_file.write("\n" + L1 + ":  " + print_phrase(phrases[SOURCE]) + L2 + ":  " + print_phrase(phrases[TARGET]) + "MT:   " + print_phrase(phrases[TRANSL]) + "BIL:\t" + print_phrase(phrases[BILTRS]) + L1 + " A:\t" + print_phrase(phrases[SOURAN]) + L2 + " A:\t" + print_phrase(phrases[TARGAN])+ "MT A:\t" + print_phrase(phrases[TRANAN]) + "\n\n")
 
       itr = 0
       while itr < len(phrases[BILTRS]):
