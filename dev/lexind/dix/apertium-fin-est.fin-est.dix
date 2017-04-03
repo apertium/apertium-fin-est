@@ -74,7 +74,10 @@
     <sdef n="foc"  c=""/>
     <sdef n="foc_gi"  c=""/>
 
+    <sdef n="sc_gen"  c=""/>
     <sdef n="sc_par"  c=""/>
+
+    <sdef n="dim_ke"  c=""/>
     <sdef n="sem_plc"  c=""/>
 
     <sdef n="acr"  c=""/>

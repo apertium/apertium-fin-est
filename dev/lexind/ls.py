@@ -22,7 +22,7 @@ class Wordform:
     self.word = w 	 # empty in biltrans and postchnk
     self.wold = w.lower().replace('Ä', 'ä').replace('Ö', 'ö').replace('Ü', 'ü').replace('Õ', 'õ')
     self.lemma = l
-    self.lemla = l.lower().replace('Ä', 'ä').replace('Ö', 'ö').replace('Ü', 'ü').replace('Õ', 'õ') #.replace("¹", "")
+    self.lemla = l.lower().replace('Ä', 'ä').replace('Ö', 'ö').replace('Ü', 'ü').replace('Õ', 'õ') #.replace("¹", "").replace("²", "").replace("³", "")
     self.morph = m
     self.pos = "?"
     morstr = m
@@ -443,6 +443,8 @@ class Wordtritem:
         i += 1
 
   def to_txt(self):
+    if self.lemma == "":
+      return ""
     txtstr = self.lemma + ' ' + self.pos + ' ' + self.morph + ' ' + str(self.count) + ' '
     for v in vset:
       wl = []
@@ -547,6 +549,8 @@ class Wordtrans:
 
 
   def to_txt(self):
+    if self.lemma == "":
+      return ""
     txtstr = self.lemma + ' ' + str(self.wordcount) + ' ' + self.pos + ' ' + self.morph + ' ' + str(self.default) + ' ' + str(self.alternate) + ' ' + str(self.onlymorph) + '\t'
     for tr in self.translations:
       txtstr = txtstr + tr.to_txt() + '\t'

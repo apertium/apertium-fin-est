@@ -1,0 +1,1016 @@
+Salla 2 np <np><sg><gen> -1 0 0	Sallan ? ? 0 ;;;;;;	Salla ? ? 1 olla:1;<vblex><actv><indic><pret><p1><pl>:1;ja:1;<cnjcoo><clb>:1;;;	Sall n <n><sg><nom> 1 ;;kanssa:1;<post>:1;;;	
+
+ja 22 cnjcoo <cnjcoo><clb> -1 0 0	ja cnjcoo <cnjcoo><clb> 22 salla:1,peppi:1,vihreä:1,jonna:1,silmä:1,juttu:1,istumapaikka:1,valkoinen:1,puhdas:1,mukainen:1,kahtia:1,rasva:1,panna:1,mauste:1,kyljys:1,perunatärkkelys:1,talous:1,vodka:1,osoite:1,vibrahälytys:1,järkkyä:1;<np><sg><gen>:1,<n><sg><gen>:3,<np><pl><nom>:1,<n><pl><ins>:1,<n><pl><par>:1,<n><pl><nom>:2,<n><sg><nom>:2,<adj><sg><ess>:1,<adj><sg><tra>:1,<adv>:1,<vblex><pasv><prfprc><sg><all>:1,<n><pl><gen>:1,<n><sg><nom><pref>:1,<n><sg><par>:1,<n>:1,<vblex><actv><indic><pres><p3><sg>:1;jonna:1,mimmi:1,keltainen:1,minttu:1,arvata:1,kuvailla:1,nautiskella:1,se:2,siisti:1,kun:1,sitten:1,kuullottaa:1,sekoitella:1,haluta:1,kasvis:1,vilja:1,sosiaali-:1,peruna:1,me:1,aikainen:1,työ:1;<np><sg><gen>:1,<np><pl><nom>:2,<adj><sg><gen>:2,<vblex><actv><infma><sg><ill>:1,<vblex><actv><indic><pret><p1><sg>:1,<vblex><actv><indic><pret><p3><pl>:1,<prn><dem><sg><ine>:1,<adj><sg><ess>:1,<cnjsub><clb>:1,<prn><dem><sg><ill>:1,<adv>:1,<vblex><actv><imp><p2><sg>:2,<vblex><actv><infe><sg><ine><px2sg>:1,<n><pl><gen>:1,<n>:1,<n><pl><nom>:1,<prn><pers><p1><pl><nom>:1,<adj><comp><sg><par>:1,<n><sg><nom>:1;;;	ning cnjcoo <cnjcoo><clb> 0 ;;;;;;	
+
+Jonna 2 np <np><sg><gen> -1 0 0	Jonnan ? ? 0 ;;;;;;	Jonn n <n><sg><nom> 1 ja:1;<cnjcoo><clb>:1;kanssa:1;<post>:1;;;	Jonna ? ? 1 ;;ja:1;<cnjcoo><clb>:1;;;	
+
+ensimmäinen 1 num <num><pl><par> -1 0 0	esimene num <num><ord><pl><par> 1 kanssa:1;<post>:1;paikka:1;<n><sg><all>:1;;;	
+
+paikka 1 n <n><sg><all> -1 0 0	paik n <n><sg><all> 0 ;;;;;;	koht n <n><sg><all> 0 ;;;;;;	kohale adv <adv> 1 ensimmäinen:1;<num><pl><par>:1;saapua:1;<vblex><actv><prfprc><pl><par>:1;;;	
+
+saapua 1 vblex <vblex><actv><prfprc><pl><par> -1 0 0	saabuma vblex <vblex><actv><prfprc><pl><par> 0 ;;;;;;	kohale adv <adv> 1 paikka:1;<n><sg><all>:1;;;;;	
+
+mutta 6 cnjcoo <cnjcoo> -1 0 0	aga cnjcoo <cnjcoo> 6 ;;hiljalleen:1,minä:1,saada:1,nyt:1,sitten:1,se:1;<adv>:2,<prn><pers><p1><sg><nom>:1,<vblex><actv><indic><pres><conneg><foc_han>:1,<part>:1,<prn><dem><sg><gen>:1;;;	
+
+hiljalleen 1 adv <adv> -1 0 0	hiljalleen ? ? 0 ;;;;;;	tasahilju<b/>hiljuma vblex <vblex> 0 ;;;;;;	tasa adv <adv> 1 mutta:1;<cnjcoo>:1;tila:1;<n><sg><nom>:1;;;	
+
+tila 1 n <n><sg><nom> -1 0 0	koht n <n><sg><nom> 0 ;;;;;;	paik n <n><sg><nom> 0 ;;;;;;	ruum n <n> 1 hiljalleen:1;<adv>:1;täyttyä:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+täyttyä 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	täituma vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	täitu adj <adj><der><der_us><n><sg><nom> 1 tila:1;<n><sg><nom>:1;tuttu:1;<adj><pl><ela>:1;;;	
+
+tuttu 1 adj <adj><pl><ela> -1 0 0	tuttav adj <adj><pl><ela> 1 täyttyä:1;<vblex><actv><indic><pret><p3><sg>:1;kasvot:1;<n><pl><ela>:1;;;	
+
+kasvot 1 n <n><pl><ela> -1 0 0	ilme n <n><pl><ela> 0 ;;;;;;	nägu n <n><pl><ela> 1 tuttu:1;<adj><pl><ela>:1;;;;;	pale n <n><pl><ela> 0 ;;;;;;	
+
+Yleensä 1 adv <adv> -1 0 0	Tavaliselt adv <adv> 0 ;;;;;;	enamasti adv <adv> 1 ;;peppi:1;;;;	
+
+Peppi 1 ?  -1 0 0	Peppi ? ? 1 yleensä:1;<adv>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+Mimmi 1 np <np><pl><nom> -1 0 0	Mimmi ? ? 0 ;;;;;;	Mimm n <n><sg><gen> 1 ja:1;<cnjcoo><clb>:1;syleillä:1;<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+syleillä 1 vblex <vblex><actv><indic><pres><p3><pl> -1 0 0	kallistama vblex <vblex><actv><indic><pres><p3><pl> 0 ;;;;;;	embama vblex <vblex> 1 mimmi:1;<np><pl><nom>:1;ihminen:1;<n><pl><par>:1;;;	
+
+ihminen 4 n <n><pl><par> -1 0 0	inimene n <n><pl><par> 4 syleillä:1,millainen:1,ko:1;<vblex><actv><indic><pres><p3><pl>:1,<prn><itg><sg><nom>:1,<qst>:1;tulla:1,mahdoton:1,kokea:1;<vblex><actv><indic><pres><p3><sg>:1,<adj><sg><par>:1,<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+kunto 2 n <n><sg><gen> -1 0 0	seisund n <n><sg><gen> 0 ;;;;;;	muljuma n <vblex><der><der_mine><n><sg><par> 1 tarvita:1;<vblex><actv><indic><pret><p1><sg>:1;rutistus:1;<n><sg><gen>:1;;;	võte n <n><sg><gen> 1 se:1;<prn><dem><sg><gen>:1;kamera:1;<n><sg><nom>:1;;;	
+
+Sellainen 1 adj <adj><sg><gen> -1 0 0	Selline prn <prn><sg><gen> 0 ;;;;;;	See prn <prn><sg><par> 1 ;;myös:1;<adv>:1;;;	
+
+saada 9 vblex <vblex><actv><indic><pret><p1><sg> -1 0 0	saama vblex <vblex><actv><indic><pret><p1><sg> 6 myös:1,lopulta:1,varten:1,mietintö:1,ei:1;<adv>:2,<post>:1,<n><sg><nom>:1,<vblex><neg><actv><p3><sg>:1;hali:1,lähteä:1,lisä:1,myönteinen:1,hoito:1;<n><sg><nom>:1,<vblex><actv><infe><sg><ine><px1pl>:1,<n><sg><par>:1,<adj><sg><gen>:1,<n><sg><ill>:1;;;	tohtima vblex <vblex><actv><indic><pret><p1><sg> 1 ei:1;<vblex><neg><actv><p3><sg>:1;tehdä:1;<vblex><actv><infa><sg><lat>:1;;;	võima vblex <vblex><actv><pres><indic><p3><sg> 1 mutta:1;<cnjcoo><clb>:1;se:1;<prn><dem><sg><par>:1;;;	saade n <n><sg><gen> 1 niin:1;<adv>:1;luottaa:1;<vblex><pasv><prsprc><sg><gen>:1;;;	
+
+vaikka 4 cnjsub <cnjsub> -1 0 0	kuigi cnjsub <cnjsub> 0 ;;;;;;	ehkki cnjsub <cnjsub> 1 ;;kuvaaja:1;<n><sg><ess>:1;;;	asi n <n><pl><par> 1 löytää:1;<vblex><actv><indic><pres><p3><sg>:1;mikä:1;<prn><sg><par>:1;;;	miks adv <adv> 1 tai:1;<cnjcoo><clb>:1;broileri:1;<n><sg><gen>:1;;;	kas adv <adv> 1 kuolla:1;<vblex><actv><infa><sg><lat>:1;huomenna:1;<adv>:1;;;	
+
+kuvaaja 1 n <n><sg><ess> -1 0 0	kuvaajana ? ? 0 ;;;;;;	fotograaf n <n> 1 vaikka:1;<cnjsub>:1;toimia:1;<vblex><actv><prfprc><sg><ade>:1;;;	
+
+toimia 2 vblex <vblex><actv><prfprc><sg><ade> -1 0 0	toimima vblex <vblex><actv><prfprc><sg><ade> 0 ;;;;;;	töötama vblex <vblex><actv><prfprc><sg><ade> 0 ;;;;;;	tegutsema vblex <vblex><actv><prfprc><sg><ade> 1 tuottaja:1;<n><pl><nom>:1;merkittävä:1;<adj><sg><abl>:1;;;	olema vblex <vblex> 1 kuvaaja:1;<n><sg><ess>:1;minttu:1;<np><sg><ade>:1;;;	
+
+Minttu 3 np <np><sg><ade> -1 0 0	Mintulla ? ? 0 ;;;;;;	Minttul ? ? 1 toimia:1;<vblex><actv><prfprc><sg><ade>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	Minttu ? ? 2 ja:1;<cnjcoo><clb>:1;juoruilla:1,muuten:1;<vblex><actv><indic><pret><p3><pl>:1,<adv>:1;;;	
+
+hieman 3 adv <adv> -1 0 0	hieman ? ? 0 ;;;;;;	veidi adv <adv> 2 olla:2;<vblex><actv><indic><pret><p3><sg>:1,<vblex><actv><infa><sg><lat>:1;tekninen:1,helppo:1;<adj><pl><par>:1,<adj><comp><sg><nom>:1;;;	natuke adv <adv> 1 haluta:1;<vblex><actv><infe><sg><ine><px2sg>:1;paprika:1;<n><sg><nom>:1;;;	
+
+tekninen 1 adj <adj><pl><par> -1 0 0	tehniline adj <adj><pl><par> 1 hieman:1;<adv>:1;ongelma:1;<n><pl><par>:1;;;	
+
+ongelma 1 n <n><pl><par> -1 0 0	probleem n <n><pl><par> 1 tekninen:1;<adj><pl><par>:1;kamera:1;<n><sg><gen><px1sg>:1;;;	
+
+kamera 1 n <n><sg><gen><px1sg> -1 0 0	kaamera n <n><sg><gen><px1sg> 1 ongelma:1;<n><pl><par>:1;kanssa:1;<post>:1;;;	fotoaparaat n <n><sg><gen><px1sg> 0 ;;;;;;	filmikaamera n <n><sg><gen><px1sg> 0 ;;;;;;	
+
+Lopulta 1 adv <adv> -1 0 0	Lõppkukkuvõttes adv <adv> 0 ;;;;;;	lõpuks adv <adv> 1 ;;saada:1;<vblex><pasv><indic><pret><pe4>:1;;;	
+
+hali 1 n <n><sg><nom> -1 0 0	halikuva ? ? 0 ;;;;;;	kalli<n><sg><gen>+pilt n <n> 1 saada:1;<vblex><pasv><indic><pret><pe4>:1;ottaa:1;<vblex><pasv><prfprc><sg><par>:1;;;	
+
+ottaa 4 vblex <vblex><pasv><prfprc><sg><par> -1 0 0	võtma vblex <vblex><pasv><prfprc><sg><par> 3 hän:1;<prn><pers><p3><sg><nom>:1;minä:1,kassi:1,jokin:1;<prn><pers><p1><sg><acc>:1,<n><sg><ela><px3sg>:1,<prn><ind><sg><nom>:1;;;	tehtud adj <adj> 1 hali:1;<n><sg><nom>:1;;;;;	
+
+Se 26 prn <prn><dem><sg><nom> -1 0 0	See prn <prn><sg><nom> 21 joka:1,sitten:1,ja:2,siivota:1,kuullottaa:1,näköinen:1,että:1,no:1,kaikki:1,ko:2,mutta:1;<prn><rel><sg><abe>:1,<adv>:1,<cnjcoo><clb>:2,<vblex><actv><indic><pret><p1><sg>:1,<vblex><actv><imp><p2><sg>:1,<adj><sg><par><foc_han>:1,<cnjsub>:1,<ij>:1,<prn><qnt><sg><nom>:1,<qst>:2,<cnjcoo>:1;sisäinen:1,näyttää:1,vähän:1,olla:4,kunto:1,saattaa:1,voi:1,ensin:1,mahdollistaa:1,mies:3,tulla:1,odottaa:1,toistaa:1,tietää:1,todella:1,voida:1;<adj><sg><nom>:1,<vblex><actv><indic><pres><p3><sg>:7,<adv>:3,<n><sg><ade>:1,<n><sg><nom>:4,<vblex><der_minen><sg><nom>:1,<vblex><pasv><prsprc><sg><nom>:1,<vblex><actv><indic><pres><p1><sg>:1,<vblex><actv><indic><pret><p3><sg>:2;;;	ikka adv <adv> 1 saada:1;<vblex><actv><indic><pres><conneg><foc_han>:1;ihailla:1;<vblex><actv><infa><sg><lat>:1;;;	need prn <prn><pl><nom> 2 olla:1;<vblex><actv><cond><p3><sg>:1;kaikki:1,pitää:1;<prn><qnt><pl><ela>:1,<vblex><actv><infa><sg><lat><foc_han>:1;;;	kuna cnjsub <cnjsub> 1 ;;vartalo:1;<n><sg><nom><px1sg>:1;;;	ära adv <adv> 1 miten:1;<adv><clb>:1;oppia:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+sisäinen 1 adj <adj><sg><nom> -1 0 0	seesmine adj <adj><sg><nom> 0 ;;;;;;	sisemine adj <adj> 1 se:1;<prn><dem><sg><nom>:1;lapsi:1;<n><sg><nom><px1sg>:1;;;	
+
+lapsi 1 n <n><sg><nom><px1sg> -1 0 0	laps¹ n <n><sg><nom><px1sg> 1 sisäinen:1;<adj><sg><nom>:1;ei:1;<vblex><neg><actv><p3><sg>:1;;;	
+
+kadota 1 vblex <vblex><actv><infma><sg><ill> -1 0 0	kaduma vblex <vblex><actv><infma><sg><ill> 1 suostua:1;<vblex><actv><indic><pres><conneg>:1;;;;;	
+
+asunto 2 n <n><sg><ill> -1 0 0	korter n <n><sg><ill> 2 oma:1;<adj><sg><ill>:1;tuo:1,voi:1;<prn><sg><gen>:1,<n><sg><gen><px2sg>:1;;;	
+
+tuo 3 prn <prn><sg><gen> -1 0 0	too prn <prn><sg><gen> 0 ;;;;;;	selline prn <prn><sg><par> 1 asunto:1;<n><sg><ill>:1;värinen:1;<adj><pl><nom>:1;;;	See prn <prn><sg><nom> 2 ;;väri:1,tehdä:1;<n><sg><gen>:1,<vblex><actv><cond><p3><sg>:1;;;	
+
+värinen 2 adj <adj><pl><nom> -1 0 0	väriset ? ? 0 ;;;;;;	värv n <n><sg><par> 2 tuo:1,keltainen:1;<prn><sg><gen>:1,<adj><sg><gen>:1;tyyny:1,kesämekko:1;<n><pl><nom>:1,<n><sg><nom>:1;;;	
+
+tyyny 2 n <n><pl><nom> -1 0 0	padi n <n><pl><nom> 2 värinen:1,mikä:1;<adj><pl><nom>:1,<prn><sg><nom>:1;ei:1,olla:1;<vblex><neg><actv><p3><pl>:1,<vblex><actv><cond><p3><sg>:1;;;	
+
+mitenkään 1 adv <adv> -1 0 0	mitenkään ? ? 0 ;;;;;;	küll adv <adv> 1 ei:1;<vblex><neg><actv><p3><pl>:1;hurja:1;<adj><sg><gen>:1;;;	
+
+hurja 1 adj <adj><sg><gen> -1 0 0	äge adj <adj><sg><gen> 0 ;;;;;;	pöörane adj <adj><sg><gen> 0 ;;;;;;	üle adv <adv> 1 mitenkään:1;<adv>:1;hyvin:1;<adv>:1;;;	
+
+hyvin 2 adv <adv> -1 0 0	hästi adv <adv> 2 hurja:1,passata:1;<adj><sg><gen>:1,<vblex><actv><imp><p2><sg>:1;käydä:1,vaikkapa:1;<vblex><actv><cond><conneg>:1,<cnjsub>:1;;;	
+
+käydä 3 vblex <vblex><actv><cond><conneg> -1 0 0	käima vblex <vblex><actv><cond><conneg> 1 tarvin:1;;kauppa:1;<n><sg><ine>:1;;;	sobima vblex <vblex> 1 hyvin:1;<adv>:1;;;;;	minema vblex <vblex><actv><pret><indic><p3><sg> 1 nyt:1;<part>:1;nähdä:1;<vblex><actv><indic><pret><p1><sg>:1;;;	
+
+ihailla 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	imetlema vblex <vblex><actv><infa><sg><lat> 1 se:1;<prn><dem><sg><par>:1;;;;;	
+
+Tosi 3 adj <adj><sg><nom> -1 0 0	Tõsi adj <adj><sg><nom> 1 ;;aneeminen:1;<adj><sg><gen>:1;;;	dekoratiivne adj <adj><prefix> 1 ;;asia:1;<n><sg><ine>:1;;;	Kohus¹ n <n><sg><nom> 1 tuomioistuin:1;<n><sg><nom>:1;viimeksi:1;<adv>:1;;;	
+
+päiväpeitto 1 n <n><pl><nom><px1sg> -1 0 0	päiväpeittonikin ? ? 0 ;;;;;;	päev n <n> 1 asia:1;<n><sg><ine>:1;huutaa:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+huutaa 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	hüüdma vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	karjuma vblex <vblex> 1 päiväpeitto:1;<n><pl><nom><px1sg>:1;värikäs:1;<adj><pl><par>:1;;;	
+
+värikäs 2 adj <adj><pl><par> -1 0 0	kirev adj <adj><pl><par> 0 ;;;;;;	värvikas adj <adj><pl><par> 0 ;;;;;;	värviline adj <adj> 2 huutaa:1,olla:1;<vblex><actv><infa><sg><lat>:1,<vblex><actv><indic><pres><p3><sg>:1;koristetyyny:1,kukka:1;<n><pl><par>:2;;;	
+
+joten 1 adv <adv> -1 0 0	mistõttu adv <adv> 0 ;;;;;;	nii adv <adv> 1 ;;ehkäpä:1;<part>:1;;;	
+
+ehkäpä 1 part <part> -1 0 0	ehkäpä ? ? 0 ;;;;;;	nii adv <adv> 1 joten:1;<adv>:1;pitää:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+pitää 6 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	pidama vblex <vblex><actv><indic><pres><p3><sg> 5 ehkäpä:1,todella:1,se:1,olla:1,hän:1;<part>:1,<adv>:1,<prn><dem><sg><ade>:1,<vblex><actv><indic><pres><p3><sg>:1,<prn><pers><p3><sg><gen>:1;sittenkin:1,vedota:1,nämä:1,kiinnittää:1,huolehtia:1;<part>:1,<vblex><actv><infa><sg><lat>:2,<prn><dem><pl><par>:1,<vblex><pasv><prfprc><pl><ess>:1;;;	meeldima vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	armastama vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	võima vblex <vblex><actv><pres><cond> 1 helppo:1;<adj><comp><sg><nom>:1;puhdas:1;<adj><sg><ess>:1;;;	
+
+sittenkin 2 part <part> -1 0 0	sittenkin ? ? 0 ;;;;;;	ehk adv <adv> 1 pitää:1;<vblex><actv><indic><pres><p3><sg>:1;miettiä:1;<vblex><actv><infa><sg><lat>:1;;;	siis adv <adv><foc_gi> 1 olla:1;<vblex><actv><indic><pret><p3><sg>:1;virhe:1;<n><pref>:1;;;	
+
+miettiä 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	mõtlema vblex <vblex><actv><infa><sg><lat> 1 sittenkin:1;<part>:1;;;;;	
+
+mikä 3 prn <prn><sg><nom> -1 0 0	mis prn <prn><sg><nom> 1 vaikka:1;<cnjsub><clb>:1;;;;;	milline prn <prn> 1 ;;tyyny:1;<n><pl><nom>:1;;;	kõikne adj <adj><prefix> 1 vaikka:1;<cnjsub><clb>:1;;;;;	
+
+kaikki 7 prn <prn><qnt><pl><ela> -1 0 0	kõik prn <prn><pl><ela> 5 löytyä:1,kuvailla:1,vallata:1,poikkeus:1,ko:1;<vblex><actv><indic><pret><p3><sg>:1,<vblex><actv><indic><pret><p1><sg>:1,<vblex><actv><indic><pret><p3><pl>:1,<n><sg><abe>:1,<qst>:1;kiva:1,kiinnostaa:1,mahdollinen:1,parlamentti:1,se:1;<adj><sg><par>:1,<vblex><actv><prsprc><sg><par>:1,<adj><pl><nom>:1,<n><sg><gen>:1,<prn><dem><sg><nom>:1;;;	ilus adj <adj><comp><pl><nom> 1 se:1;<prn><dem><sg><nom>:1;kiva:1;<adj><pl><ins>:1;;;	täis n <n><sg><gen><der><der_lik><adj><sg><par> 1 ansaita:1;<vblex><actv><indic><pres><p3><sg>:1;tuki:1;<n><sg><gen>:1;;;	
+
+kiva 4 adj <adj><pl><ins> -1 0 0	tore adj <adj><pl><ins> 1 kaikki:1;<prn><qnt><sg><par>:1;;;;;	kõige adv <adv> 1 kaikki:1;<prn><qnt><pl><ela>:1;;;;;	lahe adj <adj><pl><par> 2 etsiä:1,olla:1;<vblex><actv><infe><sg><ins>:1,<vblex><actv><imp><p2><sg>:1;juttu:1;<n><pl><par>:1;;;	
+
+mallisto 3 n <n><sg><ela> -1 0 0	Mallistosta ? ? 0 ;;;;;;	kollektsioon n <n> 3 aamiainen:1,uusi:1;<n><sg><gen>:1,<adj><sg><ela>:1;löytyä:1,tutustua:1,olla:1;<vblex><actv><indic><pret><p3><sg>:1,<vblex><der_minen><sg><gen>:1,<vblex><actv><prsprc><sg><gen>:1;;;	
+
+löytyä 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	leiduma vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	leidma vblex <vblex> 1 mallisto:1;<n><sg><ela>:1;kaikki:1;<prn><qnt><sg><par>:1;;;	
+
+Eräs 1 prn <prn><ind><sg><nom> -1 0 0	Miski prn <prn><ind><sg><nom> 0 ;;;;;;	üks<prn><sg><nom>+mina prn <prn> 0 ;;;;;;	mina prn <prn><pers><emph><p1><sg><gen> 1 ;;suosikki:1;<n><sg><nom>:1;;;	
+
+suosikki 1 n <n><sg><nom> -1 0 0	suosikkijutuistani ? ? 0 ;;;;;;	lemmik n <n> 1 eräs:1;<prn><ind><sg><nom>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+tämä 11 prn <prn><dem><sg><nom> -1 0 0	see prn <prn><sg><nom> 9 olla:1,hartaasti:1,käsitellä:1,oikeuttaa:1;<vblex><actv><indic><pret><p3><sg>:1,<adv>:1,<vblex><actv><indic><pres><p1><pl>:1,<vblex><actv><indic><pres><p3><sg>:1;vihreä:1,paita:1,kerta:1,asia:1,ratkaisu:1,olla:2,päätös:1,luulla:1;<n><sg><gen>:2,<n><sg><par>:3,<n><sg><ela>:1,<vblex><actv><indic><pres><p3><sg>:2,<vblex><pasv><indic><pret><pe4>:1;;;	Nõnda adv <adv> 1 ;;antaa:1;<vblex><pasv><indic><pres><pe4>:1;;;	siin adv <adv> 1 tulla:1;<vblex><actv><indic><pres><p1><sg>:1;nyt:1;<part>:1;;;	
+
+vihreä 1 n <n><sg><gen> -1 0 0	roheline n <n><sg><gen> 1 tämä:1;<prn><dem><sg><nom>:1;ja:1;<cnjcoo><clb>:1;;;	verisulis n <n><sg><gen> 0 ;;;;;;	elukogemusteta n <n><sg><gen> 0 ;;;;;;	
+
+keltainen 1 adj <adj><sg><gen> -1 0 0	kollane adj <adj><sg><gen> 1 ja:1;<cnjcoo><clb>:1;värinen:1;<adj><sg><nom>:1;;;	
+
+kesämekko 1 n <n><sg><nom> -1 0 0	kesämekko ? ? 0 ;;;;;;	suvi<n><sg><gen>+kleit n <n> 1 värinen:1;<adj><sg><nom>:1;;;;;	
+
+väri 1 n <n><sg><gen> -1 0 0	värv n <n><sg><gen> 1 tuo:1;<prn><dem><sg><gen>:1;ei:1;<vblex><neg><actv><p3><sg>:1;;;	
+
+todella 2 adv <adv> -1 0 0	todellakaan ? ? 0 ;;;;;;	küll adv <adv> 1 ei:1;<vblex><neg><actv><p3><sg>:1;pitää:1;<vblex><actv><cond><conneg>:1;;;	päriselt adv <adv> 1 se:1;<prn><dem><sg><nom>:1;lipponen:1;<np><sg><nom>:1;;;	
+
+vedota 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	viitama vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	apeleerima vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	kuidagi<b/>imponeerima vblex <vblex> 0 ;;;;;;	imponeerima vblex <vblex><actv><sup><ill> 1 pitää:1;<vblex><actv><cond><conneg>:1;minä:1;<prn><pers><p1><sg><ill>:1;;;	
+
+nyt 4 part <part> -1 0 0	nüüd adv <adv> 4 mutta:1,tarkistaa:1,tämä:1;<cnjcoo>:1,<vblex><actv><imp><p2><pl>:1,<prn><dem><sg><ine>:1;käydä:1,kun:1,ihme:1,siivota:1;<vblex><actv><indic><pret><p3><sg>:1,<cnjsub><clb>:1,<n><sg><ine>:1,<vblex><actv><infma><sg><ill>:1;;;	praegu adv <adv> 0 ;;;;;;	
+
+nähdä 3 vblex <vblex><actv><indic><pret><p1><sg> -1 0 0	nägema vblex <vblex><actv><indic><pret><p1><sg> 1 tulla:1;<vblex><actv><indic><pres><conneg>:1;;;;;	nii adv <adv> 1 käydä:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	tõdema vblex <vblex><actv><pret><indic><p3><sg> 1 ;;eurooppa:1;<np><sg><gen>:1;;;	
+
+tehdä 4 vblex <vblex><actv><cond><p3><sg> -1 0 0	tegema vblex <vblex><actv><cond><p3><sg> 3 jaksaa:1,olla:1,saada:1;<vblex><actv><indic><pret><p1><sg>:1,<vblex><actv><indic><pres><p3><sg>:1,<vblex><actv><indic><pres><conneg>:1;ne:1,ikä:1,ilman:1;<prn><dem><pl><par>:1,<n><pl><nom>:1,<pr>:1;;;	pilama vblex <vblex><actv><cond><p3><sg> 0 ;;;;;;	tahtma vblex <vblex> 1 tuo:1;<prn><dem><sg><par>:1;mieli:1;<n><sg><nom>:1;;;	
+
+mieli 3 n <n><sg><nom> -1 0 0	meel n <n><sg><nom> 0 ;;;;;;	selg n <n><sg><par> 1 tehdä:1;<vblex><actv><cond><p3><sg>:1;sovittaa:1;<vblex><actv><infa><sg><lat>:1;;;	maitse n <n><sg><gen> 1 oma:1;<adj><sg><gen>:1;mukainen:1;<adj><sg><tra>:1;;;	Mõistus n <n><sg><nom> 1 ;;järkkyä:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+sovittaa 2 vblex <vblex><actv><infa><sg><lat> -1 0 0	sobitama vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	proovima vblex <vblex> 2 mieli:1,moni:1;<n><sg><nom>:1,<prn><sg><par>:1;arvoinen:1;<adj><sg><par>:1;;;	
+
+vartalo 1 n <n><sg><nom><px1sg> -1 0 0	torso n <n><sg><nom><px1sg> 0 ;;;;;;	keha n <n> 1 se:1;<prn><dem><sg><ade>:1;tarvita:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+tarvita 2 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	vajama vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	olema vblex <vblex> 2 vartalo:1,oikeasti:1;<n><sg><nom><px1sg>:1,<adv>:1;aivan:1,jokin:1;<adv>:1,<prn><ind><sg><par>:1;;;	
+
+aivan 1 adv <adv> -1 0 0	just adv <adv> 0 ;;;;;;	täiesti adv <adv> 0 ;;;;;;	vaja adv <adv> 1 tarvita:1;<vblex><actv><indic><pres><p3><sg>:1;tietty:1;<adj><sg><gen>:1;;;	
+
+tietty 2 adj <adj><sg><gen> -1 0 0	teatud adj <adj><attr><sg><gen> 0 ;;;;;;	kindel adj <adj> 1 aivan:1;<adv>:1;mallinen:1;<adj><sg><gen>:1;;;	teadma adj <vblex><der><der_tav><adj><sg><nom> 1 aiheutua:1;<vblex><actv><prfprc><sg><nom>:1;ylituotanto:1;<n><sg><par>:1;;;	
+
+mallinen 1 adj <adj><sg><gen> -1 0 0	mallisen ? ? 0 ;;;;;;	tüüp n <n><sg><par> 1 tietty:1;<adj><sg><gen>:1;mekko:1;<n><sg><gen>:1;;;	
+
+mekko 1 n <n><sg><gen> -1 0 0	mekon ? ? 0 ;;;;;;	tüüp n <n> 1 mallinen:1;<adj><sg><gen>:1;;;;;	
+
+joka 5 prn <prn><rel><sg><abe> -1 0 0	kes prn <prn><sg><abe> 2 ;;joutua:1,lausunto:1;<vblex><actv><indic><pret><p3><sg>:1,<n><sg><gen>:1;;;	see prn <prn> 1 ;;se:1;<prn><dem><sg><nom>:1;;;	mis prn <prn><pl><par> 2 ;;twitter:1,hyväksyä:1;<np><sem_org><sg><gen>:1,<vblex><pasv><indic><pret><pe4>:1;;;	
+
+näyttää 2 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	näitama vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	välja<b/>nägema vblex <vblex> 0 ;;;;;;	nägema vblex <vblex><actv><pres><cond> 1 se:1;<prn><dem><sg><nom>:1;hyvä:1;<adj><sg><abl>:1;;;	Näima vblex <vblex><actv><pres><indic><p3><sg> 1 eurooppa:1;<np><sg><nom>:1;selviytyä:1;<vblex><actv><prfprc><sg><gen>:1;;;	
+
+hyvä 4 adj <adj><sg><abl> -1 0 0	hea adj <adj><sg><abl> 3 näyttää:1,olla:2;<vblex><actv><indic><pres><p3><sg>:3;ihan:1,asia:1;<part>:1,<n><sg><nom>:1;;;	hästi adv <adv> 1 maistua:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	
+
+Lintu 1 n <n><sg><nom> -1 0 0	Lind n <n><sg><nom> 0 ;;;;;;	Lintu np <np> 1 ;;;;;;	
+
+juoruilla 1 vblex <vblex><actv><indic><pret><p3><pl> -1 0 0	juoruilivat ? ? 0 ;;;;;;	showroomi ? ? 1 minttu:1;<np><pl><nom>:1;keskellä:1;<adv>:1;;;	
+
+keskellä 1 adv <adv> -1 0 0	keskel adv <adv> 0 ;;;;;;	showroomi ? ? 1 juoruilla:1;<vblex><actv><indic><pret><p3><pl>:1;showroom:1;<n><sg><par>:1;;;	
+
+showroom 1 n <n><sg><par> -1 0 0	showroomia ? ? 0 ;;;;;;	kese n <n> 1 keskellä:1;<adv>:1;täysin:1;<adv>:1;;;	
+
+täysin 1 adv <adv> -1 0 0	üleni adv <adv> 0 ;;;;;;	täiesti adv <adv> 1 showroom:1;<n><sg><par>:1;häpeillä:1;<vblex><actv><infma><sg><abe>:1;;;	täielikult adv <adv> 0 ;;;;;;	
+
+häpeillä 1 vblex <vblex><actv><infma><sg><abe> -1 0 0	häpeilemättä ? ? 0 ;;;;;;	häbitult<b/>klatšima vblex <vblex> 0 ;;;;;;	klatšima vblex <vblex><actv><pret><indic><p2><sg> 1 täysin:1;<adv>:1;;;;;	
+
+Hassu 1 adj <adj><sg><par> -1 0 0	Napakas adj <adj><sg><par> 0 ;;;;;;	Naljakas adj <adj><sg><nom> 1 ;;;;;;	
+
+miten 1 adv <adv><clb> -1 0 0	kuidas adv <adv><clb> 1 ;;se:1;<prn><dem><sg><par>:1;;;	
+
+oppia 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	õppima vblex <vblex><actv><indic><pres><p3><sg> 1 se:1;<prn><dem><sg><par>:1;katsoa:1;<vblex><actv><infma><sg><ill>:1;;;	
+
+katsoa 1 vblex <vblex><actv><infma><sg><ill> -1 0 0	vaatama vblex <vblex><actv><infma><sg><ill> 1 oppia:1;<vblex><actv><indic><pres><p3><sg>:1;vaate:1;<n><pl><par>:1;;;	
+
+vaate 1 n <n><pl><par> -1 0 0	riie n <n><pl><par> 1 katsoa:1;<vblex><actv><infma><sg><ill>:1;muu:1;<prn><pl><gen>:1;;;	
+
+muu 2 prn <prn><pl><gen> -1 0 0	muu prn <prn><pl><gen> 1 jokin:1;<prn><ind><sg><ela>:1;;;;;	teine prn <prn><pl><gen> 1 vaate:1;<n><pl><par>:1;bloggaaja:1;<n><pl><gen>:1;;;	
+
+bloggaaja 2 n <n><pl><gen> -1 0 0	blogija n <n><pl><gen> 0 ;;;;;;	blogijate n <n> 1 muu:1;<prn><pl><gen>:1;silmä:1;<n><pl><ins>:1;;;	blogijad ? ? 1 väsyä:1;<vblex><actv><prfprc><pl><nom>:1;vallata:1;<vblex><actv><indic><pret><p3><pl>:1;;;	
+
+silmä 3 n <n><pl><ins> -1 0 0	silm¹ n <n><pl><ins> 3 bloggaaja:1,iskeä:2;<n><pl><gen>:1,<vblex><actv><indic><pres><p3><sg>:1,<vblex><pasv><prfprc><sg><par>:1;ja:1,mihinkin:1,sama:1;<cnjcoo><clb>:1,<adv>:1,<prn><sg><ill>:1;;;	
+
+arvata 1 vblex <vblex><actv><infma><sg><ill> -1 0 0	arvama vblex <vblex><actv><infma><sg><ill> 1 ja:1;<cnjcoo><clb>:1;;;;;	
+
+kuka 3 prn <prn><sg><nom> -1 0 0	kes prn <prn><sg><nom> 3 kuva:1;<n><pl><par><px3sg>:1;iskeä:1,ne:1,tahansa:1;<vblex><actv><indic><pres><p3><sg>:1,<prn><dem><pl><ill>:1,<part>:1;;;	
+
+iskeä 2 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	lööma vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	virutama vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	mis prn <prn><sg><nom> 1 kuka:1;<prn><sg><nom>:1;silmä:1;<n><pl><nom><px3sg>:1;;;	silm¹ n <n><sg><gen> 1 tulla:1;<vblex><actv><indic><pret><p3><sg>:1;silmä:1;<n><pl><nom>:1;;;	
+
+mihinkin 1 adv <adv> -1 0 0	mihinkin ? ? 0 ;;;;;;	hakkama vblex <vblex><actv><pres><indic><p3><sg> 1 silmä:1;<n><pl><nom><px3sg>:1;;;;;	
+
+ympäriinsä 1 adv <adv> -1 0 0	ympäriinsä ? ? 0 ;;;;;;	ring n <n><sg><gen> 1 vaellella:1;<vblex><actv><indic><pret><p1><sg>:1;etsiä:1;<vblex><actv><infe><sg><ins>:1;;;	
+
+etsiä 1 vblex <vblex><actv><infe><sg><ins> -1 0 0	otsima vblex <vblex><actv><infe><sg><ins> 1 ympäriinsä:1;<adv>:1;kiva:1;<adj><pl><par>:1;;;	
+
+juttu 1 n <n><pl><par> -1 0 0	jutt n <n><pl><par> 0 ;;;;;;	lugu n <n><pl><par> 0 ;;;;;;	asi n <n> 1 kiva:1;<adj><pl><par>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+kuvailla 1 vblex <vblex><actv><indic><pret><p1><sg> -1 0 0	kuvailin ? ? 0 ;;;;;;	pildistama vblex <vblex> 1 ja:1;<cnjcoo><clb>:1;kaikki:1;<prn><qnt><sg><par>:1;;;	
+
+kiinnostaa 1 vblex <vblex><actv><prsprc><sg><par> -1 0 0	huvitama vblex <vblex><actv><prsprc><sg><par> 0 ;;;;;;	tiirutama vblex <vblex> 1 kaikki:1;<prn><qnt><sg><par>:1;;;;;	
+
+tulla 8 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	saama vblex <vblex><actv><indic><pret><p3><sg> 2 porvoo:1,selkä:1;<np><sg><ela>:1,<n><sg><ela>:1;helsinki:1,monikansallinen:1;<np><sg><gen>:1,<adj><sg><nom>:1;;;	tulema vblex <vblex><actv><indic><pret><p3><sg> 1 minä:1;<prn><pers><p1><sg><nom>:1;tämä:1;<prn><dem><sg><ine>:1;;;	sattuma vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	jääma vblex <vblex> 1 kanssa:1;<post>:1;iskeä:1;<vblex><pasv><prfprc><sg><par>:1;;;	jõutama vblex <vblex><actv><pres><cond> 1 vuoksi:1;<n><sg><nom>:1;toinen:1;<num><pl><ill>:1;;;	muutuma vblex <vblex><actv><pres><indic><p3><sg> 1 ihminen:1;<n><sg><ela>:1;;;;;	küll adv <adv> 1 kuuskymppinen:1;<n><pl><par><px3pl>:1;nähdä:1;<vblex><actv><infma><sg><ill>:1;;;	muutma vblex <vblex><actv><pres><indic><p3><sg> 1 se:1;<prn><dem><sg><ela>:1;vainoharhainen:1;<adj><sg><tra>:1;;;	
+
+sama 3 prn <prn><sg><ill> -1 0 0	sama prn <prn><sg><ill> 3 silmä:1,osa:1,olla:1;<n><pl><nom>:1,<n><pl><ins>:1,<vblex><actv><indic><pres><p3><pl>:1;turbo:1,markkinat:1,taso:1;<n><sg><nom>:1,<n><pl><ade>:1,<n><sg><ade>:1;;;	sama prn <prn><nom><sg><ill> 0 ;;;;;;	
+
+turbo 1 n <n><sg><nom> -1 0 0	turboneuleeseen ? ? 0 ;;;;;;	kampsun n <n> 1 sama:1;<prn><sg><ill>:1;;;;;	
+
+Väsyä 1 vblex <vblex><actv><prfprc><pl><nom> -1 0 0	Väsima vblex <vblex><actv><prfprc><pl><nom> 1 ;;bloggaaja:1;<n><pl><nom>:1;;;	
+
+vallata 1 vblex <vblex><actv><indic><pret><p3><pl> -1 0 0	valtasivat ? ? 0 ;;;;;;	hõivama vblex <vblex> 1 bloggaaja:1;<n><pl><nom>:1;kaikki:1;<prn><qnt><pl><nom>:1;;;	
+
+mahdollinen 1 adj <adj><pl><nom> -1 0 0	võimalik adj <adj><pl><nom> 1 kaikki:1;<prn><qnt><pl><nom>:1;istumapaikka:1;<n><pl><nom>:1;;;	
+
+nautiskella 1 vblex <vblex><actv><indic><pret><p3><pl> -1 0 0	nautiskelivat ? ? 0 ;;;;;;	nautima vblex <vblex> 1 ja:1;<cnjcoo><clb>:1;aamiainen:1;<n><sg><gen>:1;;;	
+
+aamiainen 1 n <n><sg><gen> -1 0 0	aamiaisen ? ? 0 ;;;;;;	kollektsioon n <n> 1 nautiskella:1;<vblex><actv><indic><pret><p3><pl>:1;mallisto:1;<n><sg><ill>:1;;;	
+
+tutustua 1 vblex <vblex><der_minen><sg><gen> -1 0 0	tutvuma vblex <vblex><der_minen><sg><gen> 1 mallisto:1;<n><sg><ill>:1;loma:1;<n><sg><ine>:1;;;	
+
+Ehtiä 1 vblex <vblex><actv><indic><pres><p1><sg> -1 0 0	Jõudma vblex <vblex><actv><indic><pres><p1><sg> 1 ;;silti:1;<part>:1;;;	
+
+silti 1 part <part> -1 0 0	silti ? ? 0 ;;;;;;	sellegipoolest ? ? 1 ehtiä:1;<vblex><actv><indic><pres><p1><sg>:1;rekisteröidä:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+rekisteröidä 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	munsterdama vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	registreerima vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	talletama vblex <vblex> 1 silti:1;<part>:1;muisti:1;<n><sg><ill><px1sg>:1;;;	
+
+muisti 1 n <n><sg><ill><px1sg> -1 0 0	mälu n <n><sg><ill><px1sg> 1 rekisteröidä:1;<vblex><actv><infa><sg><lat>:1;moni:1;<prn><sg><par>:1;;;	
+
+moni 1 prn <prn><sg><par> -1 0 0	palju prn <prn><sg><par> 0 ;;;;;;	mitu prn <prn> 1 muisti:1;<n><sg><ill><px1sg>:1;sovittaa:1;<vblex><der_minen><sg><gen>:1;;;	
+
+arvoinen 1 adj <adj><sg><par> -1 0 0	vääriline adj <adj><sg><par> 0 ;;;;;;	väärt adj <adj> 1 sovittaa:1;<vblex><der_minen><sg><gen>:1;asia:1;<n><sg><par>:1;;;	
+
+asia 5 n <n><sg><par> -1 0 0	asi n <n><sg><par> 3 arvoinen:1,että:1,oma:1;<adj><sg><par>:1,<cnjsub>:1,<adj><pl><ela>:1;ratketa:1;<vblex><actv><cond><conneg>:1;;;	hea adj <adj><sg><nom> 1 hyvä:1;<adj><sg><nom>:1;;;;;	küsimus n <n><sg><par> 1 tämä:1;<prn><dem><sg><par>:1;tänään:1;<adv>:1;;;	
+
+ko 8 qst <qst> -1 0 0	kas adv <adv> 7 olla:5,kertoa:1,muistaa:1;<vblex><actv><indic><pres><p3><sg>:4,<vblex><actv><indic><pret><p1><sg>:1,<vblex><actv><indic><pret><p3><sg>:1,<vblex><actv><indic><pres><p2><sg>:1;joku:1,jo:1,kaikki:1,se:2,ihminen:1;<prn><ind><sg><nom>:1,<adv>:1,<prn><qnt><sg><nom>:1,<prn><dem><sg><nom>:2,<n><pl><all>:1;;;	Eks adv <adv> 1 ei:1;<vblex><neg><actv><p3><pl>:1;olla:1;<vblex><actv><imp><p2><sg>:1;;;	
+
+olla 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	olekin ? ? 0 ;;;;;;	ju adv <adv> 1 ko:1;<qst>:1;kiva:1;<adj><pl><nom>:1;;;	
+
+Yksi 1 num <num><sg><ill> -1 0 0	Üks num <num><card><sg><ill> 0 ;;;;;;	Mõni prn <prn><sg><par> 1 ;;aika:1;<n><sg><ill>:1;;;	
+
+aika 5 n <n><sg><ill> -1 0 0	aeg n <n><sg><ill> 3 yksi:1,koko:1,ja:1;<num><sg><ill>:1,<n><sg><nom>:1,<cnjcoo><clb>:1;jaksaa:1,valpas:1;<vblex><actv><indic><pret><p1><sg>:1,<adj><sg><ess>:1;;;	kell n <n><sg><ill> 0 ;;;;;;	päris n <n><sg><ill> 1 ryypätä:1;<vblex><pasv><indic><pret><pe4>:1;lailla:1;<adv>:1;;;	tõsi n <n><sg><nom> 1 väittää:1;<vblex><actv><indic><pret><p3><sg>:1;hartaasti:1;<adv>:1;;;	
+
+jaksaa 1 vblex <vblex><actv><indic><pret><p1><sg> -1 0 0	jaksoinkin ? ? 0 ;;;;;;	jaksama vblex <vblex> 1 aika:1;<n><sg><ill>:1;tehdä:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+ne 3 prn <prn><dem><pl><par> -1 0 0	need prn <prn><pl><par> 3 tehdä:1,kun:1,kuka:1;<vblex><actv><infa><sg><lat>:1,<cnjsub>:1,<prn><itg><sg><nom>:1;hiroshima:1,pystyä:1;<np><sg><ine>:1,<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+sitten 6 adv <adv> -1 0 0	siis adv <adv> 2 mutta:1,odottaa:1;<cnjcoo>:1,<vblex><der_minen><sg><nom>:1;se:1,tarpeellinen:1;<prn><dem><sg><nom>:1,<adj><sg><par>:1;;;	tagasi adv <adv> 1 vuosi:1;<n><pl><par>:1;eurooppalainen:1;<adj><pl><par>:1;;;	äkitselt adv <adv> 0 ;;;;;;	seejärel adv <adv> 3 ja:1,lisä:1;<cnjcoo><clb>:1,<n><sg><nom>:1;poikittain:1,kiina:1,ryypätä:1;<adv>:1,<n><sg><gen>:1,<vblex><pasv><indic><pret><pe4>:1;;;	
+
+vähän 1 adv <adv> -1 0 0	natuke adv <adv> 0 ;;;;;;	pisut adv <adv> 1 se:1;<prn><dem><sg><nom>:1;unohtua:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+unohtua 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	ununema vblex <vblex><actv><indic><pret><p3><sg> 1 vähän:1;<adv>:1;;;;;	
+
+lähteä 2 vblex <vblex><actv><infe><sg><ine><px1pl> -1 0 0	lahkuma vblex <vblex><actv><infe><sg><ine><px1pl> 2 saada:1,me:1;<vblex><actv><indic><pret><p1><pl>:1,<prn><pers><p1><pl><nom>:1;vielä:1;<part>:1;;;	ära&&minema vblex <vblex><actv><infe><sg><ine><px1pl> 0 ;;;;;;	
+
+vielä 2 part <part> -1 0 0	veel adv <adv> 2 lähteä:1,odottaa:1;<vblex><actv><infe><sg><ine><px1pl>:1,<vblex><actv><indic><pres><p1><sg>:1;mukaan:1,viikko:1;<adv><px1pl>:1,<n><pl><par>:1;;;	ikka adv <adv> 0 ;;;;;;	
+
+mukaan 2 adv <adv><px1pl> -1 0 0	kaasa adv <adv><px1pl> 2 vielä:1,minä:1;<part>:1,<prn><pers><p1><sg><acc>:1;;;;;	
+
+eväs 1 n <n><pl><gen> -1 0 0	eväiden ? ? 0 ;;;;;;	lisa n <n> 1 ;;lisä:1;<n><sg><tra>:1;;;	
+
+lisä 4 n <n><sg><tra> -1 0 0	lisa n <n><sg><tra> 2 eväs:1;<n><pl><gen>:1;mauste:1;<n><pl><nom>:1;;;	sest cnjsub <cnjsub> 1 saada:1;<vblex><actv><infa><sg><lat>:1;materiaali:1;<n><sg><par>:1;;;	Lisama vblex <vblex><actv><pres><imp><p2><sg> 1 ;;sitten:1;<adv>:1;;;	
+
+kiitos 1 n <n><sg><nom> -1 0 0	tänu n <n><sg><nom> 0 ;;;;;;	aitäh ij <ij> 1 ;;;;;;	
+
+alennuskuponki 1 n <n><sg><gen> -1 0 0	alennuskupongin ? ? 0 ;;;;;;	allahindlus<n><sg><nom>+kupong n <n> 1 ;;sekä:1;<cnjcoo><clb>:1;;;	
+
+sekä 1 cnjcoo <cnjcoo><clb> -1 0 0	ja cnjcoo <cnjcoo><clb> 0 ;;;;;;	ning cnjcoo <cnjcoo><clb> 1 alennuskuponki:1;<n><sg><gen>:1;uusi:1;<adj><sg><ela>:1;;;	kui&&ka cnjcoo <cnjcoo><clb> 0 ;;;;;;	
+
+uusi 1 adj <adj><sg><ela> -1 0 0	uus adj <adj><sg><ela> 1 sekä:1;<cnjcoo><clb>:1;mallisto:1;<n><sg><ela>:1;;;	
+
+paita 3 n <n><sg><gen> -1 0 0	särk n <n><sg><gen> 2 tämä:1;<prn><dem><sg><par>:1;olla:1,hame:1;<vblex><actv><indic><pres><p3><sg>:1,<n><sg><tra>:1;;;	särg n <n><pl><par> 1 olla:1;<vblex><actv><prsprc><sg><gen>:1;;;;;	
+
+valkoinen 1 n <n><sg><nom> -1 0 0	valge n <n><sg><nom> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+kukka 1 n <n><pl><par> -1 0 0	lill n <n><pl><par> 1 värikäs:1;<adj><pl><par>:1;;;;;	
+
+Malli 1 n <n><sg><nom> -1 0 0	Mudel n <n><sg><nom> 1 ;;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+ihana 1 adj <adj><sg><gen> -1 0 0	armas adj <adj><sg><gen> 0 ;;;;;;	kaunis adj <adj><sg><gen> 0 ;;;;;;	lai adj <adj> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;löysä:1;<adj><sg><nom>:1;;;	
+
+löysä 1 adj <adj><sg><nom> -1 0 0	löysä ? ? 0 ;;;;;;	lehvima adj <vblex><der><der_v><adj><pl><gen> 1 ihana:1;<adj><sg><gen>:1;liehua:1;<vblex><actv><prsprc>:1;;;	
+
+liehua 1 vblex <vblex><actv><prsprc> -1 0 0	liehuvine ? ? 0 ;;;;;;	varrukas n <n><pl><com> 1 löysä:1;<adj><sg><nom>:1;hiha:1;<n><com><px3pl>:1;;;	
+
+hiha 1 n <n><com><px3pl> -1 0 0	hihoineen ? ? 0 ;;;;;;	varrukas n <n> 1 liehua:1;<vblex><actv><prsprc>:1;;;;;	
+
+Ehkä 2 part <part> -1 0 0	Ehk adv <adv> 0 ;;;;;;	võib-olla adv <adv> 2 ;;sodastream:1,odottaa:1;<np><sem_org><sg><gen>:1,<vblex><actv><indic><pres><p1><sg>:1;;;	
+
+SodaStream 1 np <np><sem_org><sg><gen> -1 0 0	SodaStreamin ? ? 0 ;;;;;;	SodaStreami ? ? 1 ehkä:1;<part>:1;hankkia:1;<vblex><der_minen><sg><nom>:1;;;	
+
+hankkia 1 vblex <vblex><der_minen><sg><nom> -1 0 0	hankima vblex <vblex><der_minen><sg><nom> 0 ;;;;;;	muretsema n <vblex><der><der_mine><n><sg><nom> 1 sodastream:1;<np><sem_org><sg><gen>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+virhe 1 n <n><pref> -1 0 0	viga n <n><pref> 1 sittenkin:1;<part>:1;;;;;	
+
+nämä 2 prn <prn><dem><pl><par> -1 0 0	need prn <prn><pl><par> 1 ;;ehdotus:1;<n><pl><ade>:1;;;	ju adv <adv> 1 pitää:1;<vblex><actv><infa><sg><lat><foc_han>:1;varten:1;<post>:1;;;	
+
+varten 2 post <post> -1 0 0	jaoks adv <adv> 2 nämä:1,ryhmä:1;<prn><dem><pl><par>:1,<n><sg><par>:1;saada:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+materiaali 1 n <n><sg><par> -1 0 0	materjal n <n><sg><par> 1 lisä:1;<n><sg><par>:1;;;;;	
+
+muuten 1 adv <adv> -1 0 0	muidu adv <adv> 0 ;;;;;;	üsna adv <adv> 1 minttu:1;<np><pl><nom>:1;väittää:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+väittää 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	väitma vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	tõsi n <n><sg><nom> 1 muuten:1;<adv>:1;aika:1;<n><sg><nom>:1;;;	
+
+hartaasti 1 adv <adv> -1 0 0	vagalt adv <adv> 0 ;;;;;;	muu<n><sg><gen>+seas adv <adv> 0 ;;;;;;	seas adv <adv> 1 aika:1;<n><sg><nom>:1;tämä:1;<prn><dem><sg><par>:1;;;	
+
+hame 1 n <n><sg><tra> -1 0 0	hameeksi ? ? 0 ;;;;;;	seelik n <n> 1 paita:1;<n><sg><par>:1;;;;;	
+
+kun 6 cnjsub <cnjsub><clb> -1 0 0	kui cnjsub <cnjsub><clb> 6 nyt:1,ja:1;<part>:1,<cnjcoo><clb>:1;siivota:1,oikeasti:1,raha:1,hän:1,ne:1,juuso:1;<vblex><actv><indic><pret><p1><sg>:1,<adv>:1,<n><sg><par>:1,<prn><pers><p3><sg><all>:1,<prn><dem><pl><par>:1,<np><sg><gen>:1;;;	
+
+siivota 2 vblex <vblex><actv><indic><pret><p1><sg> -1 0 0	rookima vblex <vblex><actv><indic><pret><p1><sg> 0 ;;;;;;	koristama vblex <vblex><actv><indic><pret><p1><sg> 2 kun:1,nyt:1;<cnjsub><clb>:1,<part>:1;se:1;<prn><dem><sg><gen>:1;;;	
+
+helppo 1 adj <adj><comp><sg><nom> -1 0 0	kerge adj <adj><comp><sg><nom> 1 hieman:1;<adv>:1;pitää:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+puhdas 1 adj <adj><sg><ess> -1 0 0	puhas adj <adj><sg><ess> 1 pitää:1;<vblex><actv><infa><sg><lat>:1;ja:1;<cnjcoo><clb>:1;;;	määrimata adj <adj><sg><ess> 0 ;;;;;;	
+
+saattaa 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	saatma vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	võima vblex <vblex><actv><indic><pres><p3><sg> 1 se:1;<prn><dem><sg><nom>:1;johtua:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+johtua 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	tulenema vblex <vblex><actv><infa><sg><lat> 1 saattaa:1;<vblex><actv><indic><pres><p3><sg>:1;liian:1;<adv>:1;;;	
+
+liian 1 adv <adv> -1 0 0	ülemäära adv <adv> 0 ;;;;;;	liiga adv <adv> 1 johtua:1;<vblex><actv><infa><sg><lat>:1;usea:1;<prn><pl><ela>:1;;;	
+
+usea 1 prn <prn><pl><ela> -1 0 0	mitu prn <prn><pl><ela> 0 ;;;;;;	sagedane adj <adj> 1 liian:1;<adv>:1;peräkkäinen:1;<adj><pl><ela>:1;;;	
+
+peräkkäinen 1 adj <adj><pl><ela> -1 0 0	peräkkäisistä ? ? 0 ;;;;;;	järjestikune adj <adj> 1 usea:1;<prn><pl><ela>:1;retweet:1;<n><pl><ela>:1;;;	
+
+retweet 1 n <n><pl><ela> -1 0 0	retweeteistä ? ? 0 ;;;;;;	retweetidest n <n> 1 peräkkäinen:1;<adj><pl><ela>:1;tai:1;<cnjcoo><clb>:1;;;	
+
+tai 4 cnjcoo <cnjcoo><clb> -1 0 0	või cnjcoo <cnjcoo><clb> 4 retweet:1,paprika:1,pulla:1,kuukausi:1;<n><pl><ela>:1,<n><sg><nom>:1,<n><pl><gen>:1,<n><pl><par>:1;jokin:1,tuore:1,vaikka:1,jo:1;<prn><ind><sg><ela>:1,<adj><sg><par>:1,<cnjsub>:1,<adv><foc_pa>:1;;;	
+
+jokin 3 prn <prn><ind><sg><ela> -1 0 0	jostakin ? ? 0 ;;;;;;	miski prn <prn> 2 tai:1,tarvita:1;<cnjcoo><clb>:1,<vblex><actv><indic><pres><p3><sg>:1;muu:1;<prn><sg><ela>:1;;;	mingi prn <prn><sg><nom> 1 ottaa:1;<vblex><actv><imp><p2><sg>:1;omena:1;<n><sg><nom>:1;;;	
+
+Twitter 1 np <np><sem_org><sg><gen> -1 0 0	Twitterin ? ? 0 ;;;;;;	Twitteri ? ? 1 joka:1;<prn><rel><sg><gen>:1;algoritmi:1;<n><pl><nom>:1;;;	
+
+algoritmi 1 n <n><pl><nom> -1 0 0	algoritm n <n><pl><nom> 1 twitter:1;<np><sem_org><sg><gen>:1;luokitella:1;<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+luokitella 1 vblex <vblex><actv><indic><pres><p3><pl> -1 0 0	liigitama vblex <vblex><actv><indic><pres><p3><pl> 0 ;;;;;;	klassifitseerima vblex <vblex> 1 algoritmi:1;<n><pl><nom>:1;spammiksi:1;;;;	
+
+spammiksi 1 ?  -1 0 0	spammiksi ? ? 0 ;;;;;;	spämm n <n> 1 luokitella:1;<vblex><actv><indic><pres><p3><pl>:1;;;;;	
+
+Miksi 1 adv <adv> -1 0 0	Miks adv <adv> 1 ;;aina:1;<adv>:1;;;	
+
+aina 1 adv <adv> -1 0 0	alati adv <adv> 1 miksi:1;<adv>:1;silloin:1;<adv>:1;;;	
+
+silloin 1 adv <adv> -1 0 0	siis adv <adv> 1 aina:1;<adv>:1;;;;;	
+
+oikeasti 1 adv <adv> -1 0 0	oikeasti ? ? 0 ;;;;;;	päriselt adv <adv> 1 kun:1;<cnjsub>:1;tarvita:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+löytää 2 vblex <vblex><actv><indic><pres><conneg> -1 0 0	leidma vblex <vblex><actv><indic><pres><conneg> 2 ei:1;<vblex><neg><actv><p3><sg>:1;mikään:1,vaikka:1;<prn><qnt><sg><par>:1,<cnjsub><clb>:1;;;	
+
+mikään 2 prn <prn><qnt><sg><par> -1 0 0	miski prn <prn><sg><par> 2 löytää:1,kukaan:1;<vblex><actv><indic><pres><conneg>:1,<prn><sg><all>:1;;;;;	
+
+raha 1 n <n><sg><par> -1 0 0	raha n <n><sg><par> 1 kun:1;<cnjsub><clb>:1;ei:1;<vblex><neg><actv><p3><sg>:1;;;	
+
+oikea 1 n <n><pl><par> -1 0 0	parem n <n><pl><par> 0 ;;;;;;	vajadus n <n><sg><par> 1 ei:1;<vblex><neg><actv><p3><sg><foc_ka>:1;tarve:1;<n><pl><par>:1;;;	
+
+Paistettu 3 adj <adj><sg><nom> -1 0 0	Praetud adj <adj><attr><sg><nom> 0 ;;;;;;	Praetu adj <adj><pl><nom> 3 ;;kiina:3;<n><sg><gen>:3;;;	
+
+kiina 9 n <n><sg><gen> -1 0 0	hiina n <n><sg><gen> 8 paistettu:3,koska:1,leikata:1,sitten:1,paistaa:1,paistetu:1;<adj><sg><nom>:3,<cnjsub><clb>:1,<vblex><actv><imp><p2><sg>:1,<adv>:1,<vblex><pasv><prfprc><sg><par>:1;kaali:8;<n><sg><nom>:6,<n><sg><gen>:1,<n><sg><par>:1;;;	Hii n <n><sg><ess> 1 ;;kaali:1;<n><sg><nom>:1;;;	
+
+kaali 9 n <n><sg><nom> -1 0 0	kapsas n <n><sg><nom> 8 kiina:8;<n><sg><gen>:7,<n><sg><nom>:1;olla:2,paistaa:1,ensin:1,kypsyä:1,valkosipulinen:1,huveta:1,passata:1;<vblex><actv><indic><pres><p3><sg>:4,<vblex><der_minen><sg><ine>:1,<adv>:1,<adj><pl><gen>:1,<vblex><actv><imp><p2><sg>:1;;;	kapsama vblex <vblex><actv><pret><indic><p3><sg> 1 kiina:1;<n><sg><gen>:1;kuuma:1;<adj><sg><all>:1;;;	
+
+helposti 1 adv <adv> -1 0 0	vabalt adv <adv> 0 ;;;;;;	kergesti adv <adv> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;muunnella:1;<vblex><pasv><prsprc><pl><ine>:1;;;	
+
+muunnella 1 vblex <vblex><pasv><prsprc><pl><ine> -1 0 0	muunneltavissa ? ? 0 ;;;;;;	saama vblex <vblex> 1 helposti:1;<adv>:1;oma:1;<adj><sg><gen>:1;;;	
+
+mukainen 1 adj <adj><sg><tra> -1 0 0	vastav adj <adj><sg><tra> 0 ;;;;;;	kujundama vblex <vblex><inf> 1 mieli:1;<n><sg><gen>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+Lisätä 1 vblex <vblex><pasv><prsprc><pl><gen> -1 0 0	Lisama vblex <vblex><pasv><prsprc><pl><gen> 1 ;;aines:1;<n><pl><gen>:1;;;	Lisandama vblex <vblex><pasv><prsprc><pl><gen> 0 ;;;;;;	
+
+aines 1 n <n><pl><gen> -1 0 0	ainestenkin ? ? 0 ;;;;;;	toit<n><sg><gen>+aine n <n> 1 lisätä:1;<vblex><pasv><prsprc><pl><gen>:1;kannattaa:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+kannattaa 3 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	kandma vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	tasuma vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	pidama vblex <vblex> 1 aines:1;<n><pl><gen>:1;olla:1;<vblex><actv><infa><sg><lat>:1;;;	toetama vblex <vblex><actv><pret><indic><p3><sg> 2 sosiaali-:1,parlamentti:1;<n>:1,<n><sg><nom>:1;komissio:1,lausunto:1;<n><sg><gen>:1,<n><sg><nom>:1;;;	
+
+nopsaan 1 adv <adv> -1 0 0	nopsaan ? ? 0 ;;;;;;	kiiresti adv <adv> 1 olla:1;<vblex><actv><infa><sg><lat>:1;kypsyä:1;<vblex><actv><prsprc><pl><par>:1;;;	
+
+kypsyä 2 vblex <vblex><actv><prsprc><pl><par> -1 0 0	kypsyviä ? ? 0 ;;;;;;	küpsema adj <vblex><der><der_v><adj><pl><nom> 1 nopsaan:1;<adv>:1;;;;;	valmima vblex <vblex><actv><pres><indic><p3><sg> 1 kaali:1;<n><sg><nom>:1;ihan:1;<part>:1;;;	
+
+koska 2 cnjsub <cnjsub><clb> -1 0 0	kuna cnjsub <cnjsub><clb> 2 ;;kiina:1,perunatärkkelys:1;<n><sg><nom>:1,<n><sg><gen>:1;;;	sest cnjsub <cnjsub><clb> 0 ;;;;;;	millal adv <adv><clb> 0 ;;;;;;	
+
+paistaa 1 vblex <vblex><der_minen><sg><ine> -1 0 0	paistma vblex <vblex><der_minen><sg><ine> 0 ;;;;;;	praadima vblex <vblex><der_minen><sg><ine> 1 kaali:1;<n><sg><gen>:1;mennä:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+mennä 2 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	minema vblex <vblex><actv><indic><pres><p3><sg> 2 paistaa:1;<vblex><der_minen><sg><ine>:1;vain:1,kauan:1;<part>:1,<adv>:1;;;	
+
+vain 1 part <part> -1 0 0	vaid adv <adv> 1 mennä:1;<vblex><actv><indic><pres><p3><sg>:1;muutama:1;<prn><sg><nom>:1;;;	
+
+muutama 4 prn <prn><sg><nom> -1 0 0	mõni prn <prn><sg><nom> 3 vain:1,ihan:1;<part>:2;minuutti:2,vuosi:1;<n><sg><nom>:1,<n><sg><ine>:1,<n><pl><par>:1;;;	paar num <num><card><sg><nom> 1 sekoitella:1;<vblex><actv><imp><p2><sg>:1;kerran:1;<adv>:1;;;	
+
+minuutti 2 n <n><sg><nom> -1 0 0	minut n <n><sg><nom> 2 muutama:2;<prn><sg><nom>:1,<prn><sg><ine>:1;;;;;	
+
+Leikata 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	Lõikama vblex <vblex><actv><imp><p2><sg> 1 ;;kiina:1;<n><sg><gen>:1;;;	
+
+ensin 3 adv <adv> -1 0 0	kõigepealt adv <adv> 3 kaali:1,se:1,ihme:1;<n><sg><nom>:1,<prn><dem><sg><ine>:1,<n><sg><ine>:1;pituus:1,sipuli:1;<n><sg><nom>:1,<n><pl><nom>:1;;;	
+
+pituus 1 n <n><sg><nom> -1 0 0	pikkus n <n><sg><nom> 0 ;;;;;;	kaks num <num><card><sg><tra> 1 ensin:1;<adv>:1;suunta:1;<n><sg><ine>:1;;;	
+
+suunta 1 n <n><sg><ine> -1 0 0	suund n <n><sg><ine> 0 ;;;;;;	siht n <n><sg><ine> 0 ;;;;;;	pikkima vblex <vblex><pasv><pret><indic> 1 pituus:1;<n><sg><nom>:1;kahtia:1;<adv>:1;;;	
+
+kahtia 1 adv <adv> -1 0 0	kahtia ? ? 0 ;;;;;;	pikkima vblex <vblex><pasv><pret><indic> 1 suunta:1;<n><sg><ine>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+poikittain 1 adv <adv> -1 0 0	risti adv <adv> 0 ;;;;;;	põigiti adv <adv> 1 sitten:1;<adv>:1;reilu:1;<adj><sg><gen>:1;;;	
+
+Kuumentaa 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	Kaltsineerima vblex <vblex><actv><imp><p2><sg> 0 ;;;;;;	praad n <n><sg><gen> 1 ;;paistinpannu:1;<n><sg><ade>:1;;;	
+
+paistinpannu 1 n <n><sg><ade> -1 0 0	pann n <n><sg><ade> 1 kuumentaa:1;<vblex><actv><imp><p2><sg>:1;rasva:1;<n><sg><nom>:1;;;	praepann n <n><sg><ade> 0 ;;;;;;	
+
+rasva 1 n <n><sg><nom> -1 0 0	rasv n <n><sg><nom> 1 paistinpannu:1;<n><sg><ade>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+kuullottaa 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	kuullota ? ? 0 ;;;;;;	pruunistama vblex <vblex> 1 ja:1;<cnjcoo><clb>:1;se:1;<prn><dem><sg><ine>:1;;;	
+
+sipuli 1 n <n><pl><nom> -1 0 0	sibul n <n><pl><nom> 1 ensin:1;<adv>:1;;;;;	
+
+kuuma 1 adj <adj><sg><all> -1 0 0	kuum adj <adj><sg><all> 1 kaali:1;<n><sg><nom>:1;panna:1;<vblex><pasv><prfprc><sg><all>:1;;;	
+
+panna 1 vblex <vblex><pasv><prfprc><sg><all> -1 0 0	panema vblex <vblex><pasv><prfprc><sg><all> 0 ;;;;;;	pann n <n><sg><all> 1 kuuma:1;<adj><sg><all>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+sekoitella 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	sekoittele ? ? 0 ;;;;;;	segama vblex <vblex> 1 ja:1;<cnjcoo><clb>:1;muutama:1;<prn><sg><gen>:1;;;	
+
+kerran 1 adv <adv> -1 0 0	kord adv <adv> 1 muutama:1;<prn><sg><gen>:1;;;;;	
+
+ihan 2 part <part> -1 0 0	väga adv <adv> 0 ;;;;;;	vaid adv <adv> 1 kypsyä:1;<vblex><actv><indic><pres><p3><sg>:1;muutama:1;<prn><sg><ine>:1;;;	täiesti adv <adv> 1 hyvä:1;<adj><sg><par>:1;tällainen:1;<adj><sg><ess>:1;;;	
+
+Varoa 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	Hoiduma vblex <vblex><actv><imp><p2><sg> 0 ;;;;;;	Ettevaatlik&&olema vblex <vblex><actv><imp><p2><sg> 0 ;;;;;;	jälgima vblex <vblex> 1 ;;;;;;	
+
+ylikypsentää 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	ylikypsennä ? ? 0 ;;;;;;	küpsetama vblex <vblex> 1 ei:1;<vblex><neg><actv><p2><sg>:1;mössö:1;<n><sg><tra>:1;;;	
+
+mössö 1 n <n><sg><tra> -1 0 0	mössöksi ? ? 0 ;;;;;;	see prn <prn><sg><par> 1 ylikypsentää:1;<vblex><actv><imp><p2><sg>:1;;;;;	
+
+mauste 1 n <n><pl><nom> -1 0 0	maitseaine n <n><pl><nom> 0 ;;;;;;	maitse n <n><sg><gen> 1 lisä:1;<n><sg><nom>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+haluta 2 vblex <vblex><actv><infe><sg><ine><px2sg> -1 0 0	tahtma vblex <vblex><actv><infe><sg><ine><px2sg> 1 ei:1;<vblex><neg><actv><p1><sg>:1;;;;;	paprika n <n><sg><gen> 1 ja:1;<cnjcoo><clb>:1;hieman:1;<adv>:1;;;	
+
+paprika 1 n <n><sg><nom> -1 0 0	paprikasuikaleita ? ? 0 ;;;;;;	soov n <n> 1 hieman:1;<adv>:1;tai:1;<cnjcoo><clb>:1;;;	
+
+tuore 1 adj <adj><sg><par> -1 0 0	toores adj <adj><sg><par> 0 ;;;;;;	värske adj <adj><sg><par> 1 tai:1;<cnjcoo><clb>:1;chili:1;<n><sg><par>:1;;;	
+
+chili 1 n <n><sg><par> -1 0 0	tšilli n <n><sg><par> 1 tuore:1;<adj><sg><par>:1;;;;;	
+
+tällainen 1 adj <adj><sg><ess> -1 0 0	selline prn <prn><sg><ess> 1 ihan:1;<part>:1;perus-:1;<n>:1;;;	niisugune adj <adj><sg><ess> 0 ;;;;;;	
+
+perus- 1 n <n> -1 0 0	perusversionakin ? ? 0 ;;;;;;	variant n <n> 1 tällainen:1;<adj><sg><ess>:1;;;;;	
+
+aneeminen 1 adj <adj><sg><gen> -1 0 0	aneemiline adj <adj><sg><gen> 1 tosi:1;<adj><sup><sg><nom>:1;näköinen:1;<adj><sg><par><foc_han>:1;;;	kehvverene adj <adj><sg><gen> 0 ;;;;;;	
+
+kerta 1 n <n><sg><par> -1 0 0	kord n <n><sg><par> 1 tämä:1;<prn><dem><sg><ade>:1;syödä:1;<vblex><actv><indic><pret><p1><pl>:1;;;	
+
+valkosipulinen 1 adj <adj><pl><gen> -1 0 0	küüslaugu- adj <adj><pl><gen> 0 ;;;;;;	praetu adj <adj> 1 kaali:1;<n><sg><par>:1;kyljys:1;<n><pl><gen>:1;;;	
+
+kyljys 1 n <n><pl><gen> -1 0 0	kyljysten ? ? 0 ;;;;;;	küüs n <n><sg><nom> 1 valkosipulinen:1;<adj><pl><gen>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+kasvis 1 n <n><pl><gen> -1 0 0	kasvisten ? ? 0 ;;;;;;	köögivili n <n> 1 ja:1;<cnjcoo><clb>:1;kera:1;<post>:1;;;	
+
+huveta 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	hupenee ? ? 0 ;;;;;;	kahanema vblex <vblex> 1 kaali:1;<n><sg><nom>:1;paljon:1;<adv>:1;;;	
+
+paljon 1 adv <adv> -1 0 0	palju adv <adv> 1 huveta:1;<vblex><actv><indic><pres><p3><sg>:1;kypsyminen:1;<n><sg><gen>:1;;;	
+
+kypsyminen 1 n <n><sg><gen> -1 0 0	kypsymisen ? ? 0 ;;;;;;	valmima n <vblex><der><der_mine><n><sg><gen> 1 paljon:1;<adv>:1;aika:1;<n><sg><ess>:1;;;	
+
+Paistetu 1 ?  -1 0 0	Paistetu ? ? 0 ;;;;;;	Praetu adj <adj><pl><nom> 1 ;;kiina:1;<n><sg><gen>:1;;;	
+
+passata 1 vblex <vblex><actv><imp><p2><sg> -1 0 0	passaa ? ? 0 ;;;;;;	sobima vblex <vblex> 1 kaali:1;<n><sg><nom>:1;hyvin:1;<adv>:1;;;	
+
+vaikkapa 1 cnjsub <cnjsub> -1 0 0	vaikkapa ? ? 0 ;;;;;;	näiteks adv <adv> 1 hyvin:1;<adv>:1;kala:1;<n><sg><gen>:1;;;	
+
+kala 1 n <n><sg><gen> -1 0 0	kala n <n><sg><gen> 1 vaikkapa:1;<cnjsub>:1;;;;;	
+
+liha 1 n <n><sg><nom> -1 0 0	liha n <n><sg><nom> 1 ;;pulla:1;<n><pl><gen>:1;;;	
+
+pulla 1 n <n><pl><gen> -1 0 0	saiake n <n><pl><gen> 0 ;;;;;;	pall n <n> 1 liha:1;<n><sg><nom>:1;tai:1;<cnjcoo><clb>:1;;;	
+
+broileri 1 n <n><sg><gen> -1 0 0	broilerinkin ? ? 0 ;;;;;;	broiler n <n> 1 vaikka:1;<cnjsub>:1;lisäke:1;<n><sg><tra>:1;;;	
+
+lisäke 1 n <n><sg><tra> -1 0 0	lisäkkeeksi ? ? 0 ;;;;;;	lisand n <n> 1 broileri:1;<n><sg><gen>:1;;;;;	
+
+arvoisa 1 adj <adj><sg><nom> -1 0 0	Arvoisa ? ? 0 ;;;;;;	Austama vblex <vblex><der><der_tu><n><pl><nom> 1 ;;puhe:1;<n><sg><nom>:1;;;	
+
+puhe 1 n <n><sg><nom> -1 0 0	kõne n <n><sg><nom> 0 ;;;;;;	president n <n> 1 arvoisa:1;<adj><sg><nom>:1;mies:1;<n><sg><nom>:1;;;	
+
+mies 6 n <n><sg><nom> -1 0 0	mees n <n><sg><nom> 4 se:3;<prn><dem><sg><nom>:3;ei:2,kuolla:1,poliitikko:1;<vblex><neg><actv><p3><sg>:2,<vblex><actv><indic><pres><p3><sg>:1,<n><sg><gen>:1;;;	Austama vblex <vblex><der><der_tu><n><pl><nom> 1 puhe:1;<n><sg><nom>:1;;;;;	turvamees n <n><sg><gen> 1 turva:1;<n><sg><nom>:1;;;;;	
+
+komissio 4 n <n><sg><gen> -1 0 0	komisjon n <n><sg><gen> 4 kannattaa:1,lausunto:1;<vblex><actv><indic><pret><p3><sg>:1,<n><sg><nom>:1;ehdotus:3,alkuperäinen:1;<n><sg><nom>:1,<adj><pl><nom>:1,<n><sg><par>:2;;;	
+
+ehdotus 6 n <n><sg><nom> -1 0 0	ettepanek n <n><sg><nom> 0 ;;;;;;	ette adv <adv> 6 komissio:3,alkuperäinen:1,nämä:1;<n><sg><gen>:3,<adj><pl><nom>:1,<prn><dem><pl><ade>:1;pienentää:1,häiritä:1,olla:1,kiintiöidä:1;<vblex><actv><infa><sg><lat>:1,<vblex><actv><indic><pret><p3><pl>:1,<vblex><actv><cond><p3><sg>:1,<vblex><actv><infe><sg><ins>:1;;;	
+
+pienentää 2 vblex <vblex><actv><infa><sg><lat> -1 0 0	vähendama vblex <vblex><actv><infa><sg><lat> 2 ehdotus:1,kiintiöidä:1;<n><sg><nom>:1,<vblex><actv><infe><sg><ins>:1;perunatärkkelys:1,ansaita:1;<n><sg><gen>:1,<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+perunatärkkelys 7 n <n><sg><gen> -1 0 0	perunatärkkelyksen ? ? 0 ;;;;;;	kartul<n><sg><gen>+tärklis n <n> 6 pienentää:1,koska:1,että:2,häiritä:1;<vblex><actv><infa><sg><lat>:1,<cnjsub>:3,<vblex><actv><indic><pret><p3><pl>:1;tuotanto:1,markkinat:1,tuottaja:2,tuki:1,ja:1;<n><sg><nom>:2,<n><pl><nom>:2,<cnjcoo><clb>:1,<n><pl><all>:1;;;	taga adv <adv><prefix> 1 seuraus:1;<n><pl><nom>:1;tuottaja:1;<n><pl><gen>:1;;;	
+
+tuotanto 1 n <n><sg><nom> -1 0 0	tuotantokiintiöitä ? ? 0 ;;;;;;	tootma n <vblex><der><der_mine><n><prefix> 1 perunatärkkelys:1;<n><sg><gen>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+olennainen 1 adj <adj><sg><nom> -1 0 0	oluline adj <adj><sg><nom> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;osa:1;<n><sg><nom>:1;;;	
+
+osa 2 n <n><sg><nom> -1 0 0	osa n <n><sg><nom> 2 olennainen:1,merkittävä:1;<adj><sg><nom>:1,<adj><sg><abl>:1;agenda:1,sama:1;<n><sg><nom>:1,<prn><pl><ade>:1;;;	
+
+agenda 1 n <n><sg><nom> -1 0 0	Agenda ? ? 1 osa:1;<n><sg><nom>:1;;;;;	
+
+ohjelma 1 n <n><sg><par> -1 0 0	plaan n <n><sg><par> 0 ;;;;;;	tarkvara n <n><sg><par> 0 ;;;;;;	programm n <n><sg><par> 1 ;;;;;;	
+
+Berliini 1 np <np><sg><ine> -1 0 0	Berliin np <np><sg><ine> 0 ;;;;;;	Berliinis ? ? 1 hyväksyä:1;<vblex><pasv><indic><pret><pe4>:1;;;;;	
+
+Siksi 1 adv <adv> -1 0 0	Järelikult adv <adv> 0 ;;;;;;	seetõttu adv <adv> 1 ;;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+käsitellä 4 vblex <vblex><actv><indic><pres><p1><pl> -1 0 0	käsitsema vblex <vblex><actv><indic><pres><p1><pl> 0 ;;;;;;	käsitlema vblex <vblex><actv><indic><pres><p1><pl> 2 me:1,viimeksi:1;<prn><pers><p1><pl><nom>:1,<adv>:1;tämä:1,brittiläinen:1;<prn><dem><sg><par>:1,<adj><sg><gen>:1;;;	käes adv <adv> 2 että:2;<cnjsub>:2;olla:2;<vblex><actv><prsprc><sg><nom>:1,<vblex><actv><prsprc><sg><ine>:1;;;	
+
+tänään 1 adv <adv> -1 0 0	täna adv <adv> 1 asia:1;<n><sg><par>:1;kiireellinen:1;<adj><sg><ess>:1;;;	
+
+kiireellinen 1 adj <adj><sg><ess> -1 0 0	kiire adj <adj><sg><ess> 1 tänään:1;<adv>:1;;;;;	edasilükkamatu adj <adj><sg><ess> 0 ;;;;;;	
+
+markkinat 5 n <n><sg><nom> -1 0 0	turg n <n><sg><nom> 5 perunatärkkelys:1,vilja:1,sama:1,eurooppa:1,nykyinen:1;<n><sg><gen>:1,<adj><sg><gen>:1,<prn><pl><ade>:1,<np><sg><gen>:1,<adj><sg><nom>:1;järjestely:2,kuin:1,tilanne:1;<n><pl><nom>:1,<n><pl><ill>:1,<cnjcoo><clb>:1,<n><sg><nom>:1;;;	laat n <n><sg><nom> 0 ;;;;;;	
+
+järjestely 2 n <n><pl><nom> -1 0 0	korraldamine n <n><pl><nom> 0 ;;;;;;	korraldus n <n> 2 markkinat:2;<n><sg><nom>:2;liittyä:1;<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+liittyä 2 vblex <vblex><actv><indic><pres><p3><pl> -1 0 0	liituma vblex <vblex><actv><indic><pres><p3><pl> 0 ;;;;;;	siduma vblex <vblex> 1 järjestely:1;<n><pl><nom>:1;kiinteästi:1;<adv>:1;;;	tulema vblex <vblex><actv><pres><indic><p3><sg> 1 maatalous:1;<n><sg><ill>:1;toimenpide:1;<n><sg><gen>:1;;;	
+
+kiinteästi 1 adv <adv> -1 0 0	kiinteästi ? ? 0 ;;;;;;	tihedalt adv <adv> 1 liittyä:1;<vblex><actv><indic><pres><p3><pl>:1;vilja:1;<adj><sg><gen>:1;;;	
+
+vilja 4 adj <adj><sg><gen> -1 0 0	vili adj <adj><sg><gen> 4 kiinteästi:1,kuin:2,ja:1;<adv>:1,<cnjcoo><clb>:3;markkinat:1,valmistaa:1,antaa:1,välinen:1;<n><sg><nom>:1,<vblex><pasv><prsprc><sg><gen>:1,<vblex><pasv><prsprc><pl><nom>:1,<n><sg><par>:1;;;	
+
+oikeuttaa 2 vblex <vblex><pasv><prfprc><sg><par> -1 0 0	õigustama vblex <vblex><pasv><prfprc><sg><par> 2 olla:1,tilanne:1;<vblex><actv><indic><pres><p3><sg>:1,<n><sg><nom>:1;tämä:1;<prn><dem><sg><gen>:1;;;	
+
+tuottaja 4 n <n><pl><nom> -1 0 0	tuottajat ? ? 0 ;;;;;;	tootja n <n> 4 perunatärkkelys:3,tärkkelys:1;<n><sg><gen>:4;toimia:1,tulo:1,antaa:1;<vblex><actv><indic><pres><p3><pl>:1,<n><pl><all>:1,<vblex><pasv><indic><pres><pe4>:1;;;	
+
+merkittävä 1 adj <adj><sg><abl> -1 0 0	tähtis adj <adj><sg><abl> 0 ;;;;;;	vahva adj <adj><sg><abl> 0 ;;;;;;	tulemusrikas adj <adj><sg><abl> 0 ;;;;;;	märkimisväärne adj <adj><sg><abl> 0 ;;;;;;	tähelepanuväärne adj <adj><sg><abl> 0 ;;;;;;	väärne adj <adj><sg><ine> 1 toimia:1;<vblex><actv><indic><pres><p3><pl>:1;osa:1;<n><pl><ins>:1;;;	
+
+kuin 4 cnjcoo <cnjcoo><clb> -1 0 0	kui cnjsub <cnjsub><clb> 4 markkinat:1,taso:1,ennen:1,erilainen:1;<n><pl><ade>:1,<n><sg><ade>:1,<adv>:1,<adj><sg><nom>:1;vilja:2,ymmärtää:1,poliitikko:1;<n><sg><ela>:1,<n><sg><all>:1,<vblex><actv><indic><pret><p1><sg>:1,<n><sg><nom>:1;;;	kui adv <adv><clb> 0 ;;;;;;	
+
+valmistaa 1 vblex <vblex><pasv><prsprc><sg><gen> -1 0 0	valmistama vblex <vblex><pasv><prsprc><sg><gen> 0 ;;;;;;	tegema adj <vblex><der><der_tav><adj><sg><gen> 1 vilja:1;<n><sg><ela>:1;tärkkelys:1;<n><sg><gen>:1;;;	
+
+tärkkelys 1 n <n><sg><gen> -1 0 0	tärkkelyksen ? ? 0 ;;;;;;	tärklis n <n> 1 valmistaa:1;<vblex><pasv><prsprc><sg><gen>:1;tuottaja:1;<n><pl><nom>:1;;;	
+
+erittäin 1 adv <adv> -1 0 0	väga adv <adv> 1 onkka:1;<np><pl><ins>:1;tärkeä:1;<adj><sg><par>:1;;;	tähelepanuväärselt adv <adv> 0 ;;;;;;	
+
+tärkeä 1 adj <adj><sg><par> -1 0 0	pöördeline adj <adj><sg><par> 0 ;;;;;;	ülioluline adj <adj><sg><par> 0 ;;;;;;	oluline adj <adj> 1 erittäin:1;<adv>:1;;;;;	
+
+tuki 3 n <n><pl><nom> -1 0 0	tugi n <n><pl><nom> 0 ;;;;;;	toetus n <n> 3 perunatärkkelys:1,antaa:1,kaikki:1;<n><sg><gen>:1,<vblex><pasv><prsprc><pl><nom>:1,<prn><qnt><sg><gen>:1;olla:1;<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+taso 1 n <n><sg><ade> -1 0 0	tase n <n><sg><ade> 1 sama:1;<prn><sg><ade>:1;kuin:1;<cnjcoo><clb>:1;;;	tasapind n <n><sg><ade> 0 ;;;;;;	
+
+antaa 4 vblex <vblex><pasv><prsprc><pl><nom> -1 0 0	andma vblex <vblex><pasv><prsprc><pl><nom> 2 vilja:1,tämä:1;<n><sg><all>:1,<prn><dem><sg><ade>:1;tuki:1,nuori:1;<n><pl><nom>:1,<adj><pl><all>:1;;;	pakkuma vblex <vblex><inf> 1 tuottaja:1;<n><pl><all>:1;kohtuullinen:1;<adj><sg><nom>:1;;;	esitama vblex <vblex><actv><pret><indic><p3><sg> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;;;	
+
+alkuperäinen 1 adj <adj><pl><nom> -1 0 0	algupärane adj <adj><pl><nom> 0 ;;;;;;	algne adj <adj> 1 komissio:1;<n><sg><gen>:1;ehdotus:1;<n><pl><nom>:1;;;	
+
+häiritä 1 vblex <vblex><actv><indic><pret><p3><pl> -1 0 0	häirima vblex <vblex><actv><indic><pret><p3><pl> 1 ehdotus:1;<n><pl><nom>:1;perunatärkkelys:1;<n><sg><gen>:1;;;	
+
+välinen 1 n <n><sg><par> -1 0 0	vaheline n <n><sg><par> 1 vilja:1;<adj><sg><gen>:1;tasapaino:1;<n><sg><par>:1;;;	
+
+vakavasti 1 adv <adv> -1 0 0	raskelt adv <adv> 0 ;;;;;;	tõsiselt adv <adv> 0 ;;;;;;	tõsine adv <adj><der><der_lt><adv> 1 tasapaino:1;<n><sg><par>:1;;;;;	
+
+tuhoisa 1 adj <adj><pl><nom> -1 0 0	lõhkuv adj <adj><pl><nom> 0 ;;;;;;	hävitav adj <adj><pl><nom> 0 ;;;;;;	purustav adj <adj><pl><nom> 0 ;;;;;;	destruktiivne adj <adj><pl><nom> 0 ;;;;;;	katastroofiline adj <adj><pl><nom> 0 ;;;;;;	hävima adj <vblex><der><der_tav><adj><pl><nom> 1 olla:1;<vblex><actv><prfprc><sg><nom>:1;seuraus:1;<n><pl><nom>:1;;;	
+
+seuraus 1 n <n><pl><nom> -1 0 0	järeldus n <n><pl><nom> 0 ;;;;;;	tagajärg n <n><pl><nom> 0 ;;;;;;	kartul<n><sg><gen>+tärklis n <n> 1 tuhoisa:1;<adj><pl><nom>:1;perunatärkkelys:1;<n><sg><gen>:1;;;	
+
+tulo 1 n <n><pl><all> -1 0 0	tulek n <n><pl><all> 0 ;;;;;;	tulu n <n> 1 tuottaja:1;<n><pl><gen>:1;;;;;	
+
+ratkaisu 1 n <n><sg><ela> -1 0 0	otsus n <n><sg><ela> 0 ;;;;;;	lahendus n <n><sg><ela> 1 tämä:1;<prn><dem><sg><ela>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+ala 1 n <n><sg><all> -1 0 0	eriala n <n><sg><all> 0 ;;;;;;	valdkond n <n> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;hyöty:1;<n><sg><par>:1;;;	
+
+hyöty 1 n <n><sg><par> -1 0 0	kasu n <n><sg><par> 1 ala:1;<n><sg><all>:1;;;;;	
+
+vuosi 3 n <n><pl><par> -1 0 0	aasta n <n><pl><par> 3 muutama:1,kuolla:1,jo:1;<prn><pl><par>:1,<vblex><actv><indic><pres><p3><sg>:1,<adv><foc_pa>:1;sitten:1,sisään:1;<adv>:2;;;	
+
+eurooppalainen 1 adj <adj><pl><par> -1 0 0	eurooppalaisia ? ? 0 ;;;;;;	Euroopa n <n><np><sem_plc><sg><gen> 1 sitten:1;<adv>:1;kiintiö:1;<n><pl><par>:1;;;	
+
+laajentaa 1 vblex <vblex><pasv><indic><pret><pe4> -1 0 0	laiendama vblex <vblex><pasv><indic><pret><pe4> 1 kiintiö:1;<n><pl><par>:1;poliittinen:1;<adj><pl><ela>:1;;;	
+
+poliittinen 2 adj <adj><pl><ela> -1 0 0	poliitiline adj <adj><pl><ela> 1 laajentaa:1;<vblex><pasv><indic><pret><pe4>:1;syy:1;<n><pl><ela>:1;;;	umbne adj <adj><prefix> 1 parlamentti:1;<n><sg><gen>:1;ryhmä:1;<n><pl><nom>:1;;;	
+
+syy 1 n <n><pl><ela> -1 0 0	põhjus n <n><pl><ela> 1 poliittinen:1;<adj><pl><ela>:1;;;;;	
+
+aiheutua 1 vblex <vblex><actv><prfprc><sg><nom> -1 0 0	tekkima vblex <vblex><actv><prfprc><sg><nom> 0 ;;;;;;	tingima vblex <vblex> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;tietty:1;<adj><sg><par>:1;;;	
+
+Eurooppa 3 np <np><sg><gen> -1 0 0	Euroopa np <np><sg><gen> 3 ylituotanto:1,nähdä:1;<n><sg><par>:1,<vblex><actv><indic><pret><p1><sg>:1;markkinat:1,yhteisö:1,näyttää:1;<n><pl><ade>:1,<n><pl><gen>:1,<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+lyhyesti 1 adv <adv> -1 0 0	Lyhyesti ? ? 0 ;;;;;;	lühidalt adv <adv> 1 ;;;;;;	
+
+kiintiöidä 1 vblex <vblex><actv><infe><sg><ins> -1 0 0	kiintiöiden ? ? 0 ;;;;;;	kvoot n <n><pl><par> 1 ehdotus:1;<n><sg><nom>:1;pienentää:1;<vblex><der_minen><sg><ela>:1;;;	
+
+ansaita 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	väärima vblex <vblex><actv><indic><pres><p3><sg> 1 pienentää:1;<vblex><der_minen><sg><ela>:1;kaikki:1;<prn><qnt><sg><gen>:1;;;	teenima vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	
+
+mahdollistaa 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	mahdollistaa ? ? 0 ;;;;;;	võimaldama vblex <vblex> 1 se:1;<prn><dem><sg><nom>:1;se:1;<prn><dem><sg><gen>:1;;;	
+
+kohtuullinen 1 adj <adj><sg><nom> -1 0 0	korralik adj <adj><sg><nom> 0 ;;;;;;	õiglane adj <adj> 1 antaa:1;<vblex><pasv><indic><pres><pe4>:1;korvaus:1;<n><sg><nom>:1;;;	
+
+korvaus 1 n <n><sg><nom> -1 0 0	hüvitis n <n><sg><nom> 1 kohtuullinen:1;<adj><sg><nom>:1;hinta:1;<n><pl><gen>:1;;;	
+
+hinta 1 n <n><pl><gen> -1 0 0	hind n <n><pl><gen> 1 korvaus:1;<n><sg><nom>:1;lasku:1;<n><sg><ela>:1;;;	
+
+lasku 1 n <n><sg><ela> -1 0 0	arve n <n><sg><ela> 0 ;;;;;;	laskmine n <n><sg><ela> 0 ;;;;;;	arvestus n <n><sg><ela> 0 ;;;;;;	langus n <n> 1 hinta:1;<n><pl><gen>:1;;;;;	
+
+nykyinen 1 adj <adj><sg><nom> -1 0 0	praegune adj <adj><sg><nom> 1 myös:1;<adv>:1;markkinat:1;<n><sg><nom>:1;;;	
+
+tilanne 2 n <n><sg><nom> -1 0 0	seisukord n <n><sg><nom> 0 ;;;;;;	olukord n <n> 2 markkinat:1,luoda:1;<n><sg><nom>:1,<vblex><actv><prsprc><sg><gen>:1;oikeuttaa:1,olla:1;<vblex><actv><indic><pres><p3><sg>:2;;;	
+
+päätös 1 n <n><sg><gen> -1 0 0	lõpp n <n><sg><gen> 0 ;;;;;;	otsus n <n> 1 tämä:1;<prn><dem><sg><gen>:1;;;;;	
+
+mainita 1 vblex <vblex><agprc><sg><gen><px2pl> -1 0 0	mainima vblex <vblex><agprc><sg><gen><px2pl> 0 ;;;;;;	mainitud adj <adj> 1 että:1;<cnjsub>:1;epäluottamuslause:1;<n><sg><gen>:1;;;	
+
+epäluottamuslause 1 n <n><sg><gen> -1 0 0	epäluottamuslauseen ? ? 0 ;;;;;;	fraktsioon n <n> 1 mainita:1;<vblex><agprc><sg><gen><px2pl>:1;takana:1;<adv>:1;;;	
+
+takana 1 adv <adv> -1 0 0	taga adv <adv> 1 epäluottamuslause:1;<n><sg><gen>:1;olla:1;<vblex><actv><indic><pres><p3><pl>:1;;;	
+
+poikkeus 1 n <n><sg><abe> -1 0 0	erand n <n><sg><abe> 0 ;;;;;;	kõrvalekalle n <n><sg><abe> 0 ;;;;;;	eranditult adv <adv> 1 olla:1;<vblex><actv><indic><pres><p3><pl>:1;kaikki:1;<prn><qnt><pl><nom>:1;;;	
+
+parlamentti 2 n <n><sg><gen> -1 0 0	parlament n <n><sg><gen> 2 kaikki:1,myös:1;<prn><qnt><pl><nom>:1,<adv>:1;poliittinen:1,kannattaa:1;<adj><pl><nom>:1,<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+ryhmä 1 n <n><pl><nom> -1 0 0	rühm n <n><pl><nom> 0 ;;;;;;	trupp n <n><pl><nom> 0 ;;;;;;	ühe n <n><sg><gen> 1 poliittinen:1;<adj><pl><nom>:1;;;;;	
+
+eli 1 cnjcoo <cnjcoo> -1 0 0	ehk cnjcoo <cnjcoo> 1 ;;yksi:1;<num><sg><ill><px3pl>:1;;;	
+
+jäsen 1 n <n><sg><par> -1 0 0	jäse n <n><sg><par> 0 ;;;;;;	liige n <n><sg><par> 1 ;;;;;;	
+
+Eilinen 1 adj <adj><sg><gen> -1 0 0	Eilne adj <adj><sg><gen> 1 ;;istunto:1;<n><sg><gen>:1;;;	
+
+istunto 1 n <n><sg><gen> -1 0 0	istunnon ? ? 0 ;;;;;;	istung n <n> 1 eilinen:1;<adj><sg><gen>:1;pöytä:1;<n><sg><nom>:1;;;	
+
+pöytä 1 n <n><sg><nom> -1 0 0	laud n <n><sg><nom> 0 ;;;;;;	protokoll n <n> 1 istunto:1;<n><sg><gen>:1;kirja:1;<n><sg><nom>:1;;;	
+
+kirja 2 n <n><sg><nom> -1 0 0	raamat n <n><sg><nom> 1 sinä:1;<prn><pers><p2><sg><gen>:1;;;;;	laiali adv <adv> 1 pöytä:1;<n><sg><nom>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+jakaa 1 vblex <vblex><pasv><prfprc><sg><nom> -1 0 0	jagama vblex <vblex><pasv><prfprc><sg><nom> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;;;	
+
+Sallia 1 vblex <vblex><actv><imp><p2><pl> -1 0 0	Lubama vblex <vblex><actv><imp><p2><pl> 1 ;;minä:1;<prn><pers><p1><sg><gen>:1;;;	
+
+kuitenkin 1 part <part> -1 0 0	ometi adv <adv> 0 ;;;;;;	siis adv <adv> 1 minä:1;<prn><pers><p1><sg><gen>:1;myös:1;<adv>:1;;;	
+
+sanoa 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	ütlema vblex <vblex><actv><infa><sg><lat> 1 myös:1;<adv>:1;;;;;	
+
+mietintö 2 n <n><sg><nom> -1 0 0	arvamus n <n><sg><nom> 0 ;;;;;;	aruanne n <n> 1 olla:1;<vblex><actv><prsprc><sg><nom>:1;saada:1;<vblex><actv><indic><pres><p3><sg>:1;;;	raport n <n><sg><ine> 1 olla:1;<vblex><actv><prsprc><sg><ine>:1;olla:1;<vblex><actv><prsprc><sg><gen>:1;;;	
+
+myönteinen 1 adj <adj><sg><gen> -1 0 0	jaatav adj <adj><sg><gen> 0 ;;;;;;	positiivne adj <adj> 1 saada:1;<vblex><actv><indic><pres><p3><sg>:1;arvio:1;<n><sg><gen>:1;;;	
+
+arvio 1 n <n><sg><gen> -1 0 0	hindamine n <n><sg><gen> 0 ;;;;;;	hinnang n <n> 1 myönteinen:1;<adj><sg><gen>:1;;;;;	
+
+Lopullinen 1 adj <adj><sg><ine> -1 0 0	Lõplik adj <adj><sg><ine> 1 ;;lausunto:1;<n><sg><ine><px3sg>:1;;;	
+
+lausunto 3 n <n><sg><ine><px3sg> -1 0 0	arvamus n <n><sg><ine><px3sg> 3 lopullinen:1,kannattaa:1,joka:1;<adj><sg><ine>:1,<vblex><actv><indic><pret><p3><sg>:1,<prn><rel><sg><nom>:1;talous:1,komissio:1,olla:1;<n><sg><nom><pref>:1,<n><sg><gen>:1,<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+talous 1 n <n><sg><nom><pref> -1 0 0	majandus n <n><sg><nom><pref> 1 lausunto:1;<n><sg><ine><px3sg>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+sosiaali- 1 n <n> -1 0 0	sosiaalikomitea ? ? 0 ;;;;;;	sotsiaalne adj <adj><prefix> 1 ja:1;<cnjcoo><clb>:1;kannattaa:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+väärinkäsitys 1 n <n><sg><gen> -1 0 0	väärinkäsityksen ? ? 0 ;;;;;;	aru<n><sg><gen>+saamatus n <n> 1 olla:1;<vblex><actv><prsprc><sg><gen>:1;vuoksi:1;<n><sg><nom>:1;;;	
+
+vuoksi 1 n <n><sg><nom> -1 0 0	tõus n <n><sg><nom> 0 ;;;;;;	teist n <n><sg><nom> 1 väärinkäsitys:1;<n><sg><gen>:1;tulla:1;<vblex><pasv><cond><pe4>:1;;;	
+
+toinen 2 num <num><pl><ill> -1 0 0	teine num <num><ord><pl><ill> 1 ;;maa:1;<n><sg><all>:1;;;	otsus n <n><sg><all> 1 tulla:1;<vblex><pasv><cond><pe4>:1;ajatus:1;<n><pl><ill>:1;;;	
+
+ajatus 1 n <n><pl><ill> -1 0 0	mõte n <n><pl><ill> 0 ;;;;;;	olev adj <adj><sg><gen> 1 toinen:1;<num><pl><ill>:1;;;;;	
+
+toimenpide 1 n <n><sg><gen> -1 0 0	abinõu n <n><sg><gen> 0 ;;;;;;	põld<n><sg><gen>+majandus n <n> 1 liittyä:1;<vblex><actv><prsprc><sg><gen>:1;yhteys:1;<n><sg><ine>:1;;;	
+
+yhteys 1 n <n><sg><ine> -1 0 0	seos n <n><sg><ine> 0 ;;;;;;	seotus n <n><sg><ine> 0 ;;;;;;	ühendus n <n><sg><ine> 0 ;;;;;;	Seoses pr <pr><sc_com> 1 toimenpide:1;<n><sg><gen>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+terveys 1 n <n><sg><gen> -1 0 0	tervis n <n><sg><gen> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;suojelu:1;<n><sg><nom>:1;;;	
+
+suojelu 1 n <n><sg><nom> -1 0 0	kaitse n <n><sg><nom> 1 terveys:1;<n><sg><gen>:1;asettaa:1;<vblex><pasv><prsprc><sg><nom>:1;;;	
+
+asettaa 1 vblex <vblex><pasv><prsprc><sg><nom> -1 0 0	asetama vblex <vblex><pasv><prsprc><sg><nom> 0 ;;;;;;	pidama vblex <vblex> 1 suojelu:1;<n><sg><nom>:1;etu:1;<n><pref>:1;;;	
+
+etu 1 n <n><pref> -1 0 0	eelis n <n><pref> 0 ;;;;;;	prioriteet n <n> 1 asettaa:1;<vblex><pasv><prsprc><sg><nom>:1;sija:1;<n><sg><all>:1;;;	
+
+sija 1 n <n><sg><all> -1 0 0	koht n <n><sg><all> 0 ;;;;;;	ase n <n><sg><all> 0 ;;;;;;	meede n <n><pl><com> 1 etu:1;<n><pref>:1;;;;;	
+
+yhteisö 1 n <n><pl><gen> -1 0 0	kollektiiv n <n><pl><gen> 0 ;;;;;;	Kohus¹ n <n><sg><nom> 1 eurooppa:1;<np><sg><gen>:1;tuomioistuin:1;<n><sg><nom>:1;;;	
+
+tuomioistuin 1 n <n><sg><nom> -1 0 0	kohtuistung n <n><sg><nom> 0 ;;;;;;	liit n <n> 1 yhteisö:1;<n><pl><gen>:1;tosi:1;<adj><sg><gen><px2sg>:1;;;	
+
+viimeksi 1 adv <adv> -1 0 0	viimaks adv <adv> 0 ;;;;;;	viimati adv <adv> 1 tosi:1;<adj><sg><gen><px2sg>:1;käsitellä:1;<vblex><actv><infe><sg><ine><px3sg>:1;;;	
+
+brittiläinen 1 adj <adj><sg><gen> -1 0 0	brittiläisen ? ? 0 ;;;;;;	Briti n <n><sg><gen><attr> 1 käsitellä:1;<vblex><actv><infe><sg><ine><px3sg>:1;naudanliha:1;<n><sg><gen>:1;;;	
+
+naudanliha 1 n <n><sg><gen> -1 0 0	veiseliha n <n><sg><gen> 0 ;;;;;;	siga<n><sg><gen>+liha n <n> 1 brittiläinen:1;<adj><sg><gen>:1;vientikielto:1;<n><sg><par>:1;;;	
+
+vientikielto 1 n <n><sg><par> -1 0 0	vientikieltoa ? ? 0 ;;;;;;	eksport n <n><sg><gen> 1 naudanliha:1;<n><sg><gen>:1;;;;;	
+
+levy 1 n <n><sg><nom> -1 0 0	leht n <n><sg><nom> 0 ;;;;;;	plaat n <n><sg><nom> 0 ;;;;;;	CD-+plaat n <n> 0 ;;;;;;	CD ? ? 1 sinä:1;<prn><pers><p2><sg><gen>:1;;;;;	
+
+televisio 1 n <n><sg><nom> -1 0 0	televisioon n <n><sg><nom> 0 ;;;;;;	televiisor n <n> 1 sinä:1;<prn><pers><p2><sg><gen>:1;;;;;	
+
+kauan 1 adv <adv> -1 0 0	kaua adv <adv> 1 mennä:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	
+
+ennen 1 adv <adv> -1 0 0	enne adv <adv> 1 ;;kuin:1;<cnjcoo><clb>:1;;;	
+
+Millainen 1 prn <prn><itg><sg><nom> -1 0 0	Milline prn <prn><itg><sg><nom> 1 ;;ihminen:1;<n><sg><ela>:1;;;	
+
+jatkuvasti 1 adv <adv> -1 0 0	jätkuvalt adv <adv> 0 ;;;;;;	aina adv <adv> 0 ;;;;;;	pidevalt adv <adv> 1 hän:1;<prn><pers><p3><sg><all>:1;hokea:1;<vblex><pasv><indic><pres><pe4>:1;;;	
+
+hokea 1 vblex <vblex><pasv><indic><pres><pe4> -1 0 0	hoetaan ? ? 0 ;;;;;;	korrutama vblex <vblex> 1 jatkuvasti:1;<adv>:1;;;;;	
+
+isä 7 n <n><sg><gen> -1 0 0	isa n <n><sg><gen> 6 hän:1,että:3,jos:2;<prn><pers><p3><sg><gen>:1,<cnjsub>:3,<cnjsub><clb>:2;kuolla:4,ei:2;<vblex><actv><indic><pres><p3><sg>:4,<vblex><neg><actv><p3><sg>:2;;;	isane n <n><sg><par> 1 keskustella:1;<vblex><actv><infa><sg><lat>:1;ilma:1;<n><sg><gen>:1;;;	
+
+kuolla 8 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	surema vblex <vblex><actv><indic><pres><p3><sg> 8 isä:4,voida:1,hän:2,mies:1;<n><sg><gen>:1,<vblex><actv><indic><pret><p3><sg>:1,<n><sg><nom>:3,<prn><pers><p3><sg><nom>:2,<n><sg><nom><px2sg>:1;kohta:2,vaikka:1,nopeasti:1,vuosi:1;<n><sg><nom>:1,<cnjsub><clb>:1,<adv>:2,<n><sg><gen>:1;;;	
+
+kohta 2 n <n><sg><nom> -1 0 0	koht n <n><sg><nom> 0 ;;;;;;	paik n <n><sg><nom> 0 ;;;;;;	varsti adv <adv> 2 kuolla:2;<vblex><actv><indic><pres><p3><sg>:2;;;;;	
+
+voida 3 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	saama vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	tohtima vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	võima vblex <vblex> 3 hän:1,minä:1,se:1;<prn><pers><p3><sg><nom>:1,<prn><pers><p1><sg><nom>:1,<prn><dem><sg><nom>:1;kuolla:1,kertoa:1,maksaa:1;<vblex><actv><infa><sg><lat>:3;;;	
+
+huomenna 1 adv <adv> -1 0 0	homme adv <adv> 1 vaikka:1;<cnjsub><clb>:1;;;;;	
+
+Tietää 3 vblex <vblex><actv><indic><pres><p2><sg><foc_han> -1 0 0	Teadma vblex <vblex><actv><indic><pres><p2><sg><foc_han> 3 ei:1,se:1;<vblex><neg><actv><p1><sg>:1,<prn><dem><sg><gen>:1;sä:1;<prn><pers><p2><sg><nom>:1;;;	Oskama vblex <vblex><actv><indic><pres><p2><sg><foc_han> 0 ;;;;;;	
+
+kyllä 1 adv <adv> -1 0 0	jah adv <adv> 0 ;;;;;;	kaua adv <adv> 1 ei:1;<vblex><neg><actv><p3><sg>:1;enää:1;<adv>:1;;;	
+
+enää 1 adv <adv> -1 0 0	enam adv <adv> 1 kyllä:1;<adv>:1;kauaa:1;<adv>:1;;;	
+
+kauaa 1 adv <adv> -1 0 0	kauaa ? ? 0 ;;;;;;	küll adv <adv> 1 enää:1;<adv>:1;elää:1;<vblex><actv><indic><pres><conneg>:1;;;	
+
+elää 1 vblex <vblex><actv><indic><pres><conneg> -1 0 0	elama vblex <vblex><actv><indic><pres><conneg> 1 kauaa:1;<adv>:1;;;;;	
+
+joku 1 prn <prn><ind><sg><nom> -1 0 0	keegi prn <prn><ind><sg><nom> 1 ko:1;<qst>:1;jo:1;<adv>:1;;;	miski prn <prn><ind><sg><nom> 0 ;;;;;;	
+
+jo 3 adv <adv> -1 0 0	juba adv <adv> 2 joku:1,ko:1;<prn><ind><sg><nom>:1,<qst>:1;muistaa:1;<vblex><actv><prfprc><sg><nom>:1;;;	koguni adv <adv> 1 tai:1;<cnjcoo><clb>:1;vuosi:1;<n><pl><par>:1;;;	
+
+muistaa 3 vblex <vblex><actv><prfprc><sg><nom> -1 0 0	mäletama vblex <vblex><actv><prfprc><sg><nom> 1 ;;ko:1;<qst>:1;;;	meel n <n><sg><ine> 2 jo:1;<adv>:1;kertoa:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+kertoa 4 vblex <vblex><actv><infa><sg><lat> -1 0 0	ütlema vblex <vblex><actv><infa><sg><lat> 1 muistaa:1;<vblex><actv><prfprc><sg><nom>:1;;;;;	jutustama vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	mina prn <prn><pers><p1><sg><nom> 2 voida:1;<vblex><actv><indic><pres><p1><sg>:1;ko:1;<qst>:1;;;	rääkima vblex <vblex><actv><pres><indic><conneg> 1 ei:1;<vblex><neg><actv><p3><sg>:1;kukaan:1;<prn><sg><all>:1;;;	
+
+jos 3 cnjsub <cnjsub><clb> -1 0 0	kui cnjsub <cnjsub><clb> 3 että:2;<cnjsub><clb>:2;isä:2,ei:1;<n><sg><par>:1,<n><sg><nom>:1,<vblex><neg><actv><p3><sg>:1;;;	
+
+hoito 1 n <n><sg><ill> -1 0 0	ravi n <n><sg><ill> 1 saada:1;<vblex><pasv><indic><pres><pe4><conneg>:1;;;;;	hooldamine n <n><sg><ill> 0 ;;;;;;	
+
+unohtaa 1 vblex <vblex><actv><indic><pres><conneg> -1 0 0	unustama vblex <vblex><actv><indic><pres><conneg> 1 ei:1;<vblex><neg><actv><p2><sg><foc_han>:1;sekunti:1;<n><sg><tra>:1;;;	
+
+sekunti 1 n <n><sg><tra> -1 0 0	sekunniksikaan ? ? 0 ;;;;;;	sekund n <n> 1 unohtaa:1;<vblex><actv><indic><pres><conneg>:1;;;;;	
+
+muuttua 1 vblex <vblex><actv><indic><pres><conneg> -1 0 0	muutuma vblex <vblex><actv><indic><pres><conneg> 1 ei:1;<vblex><neg><actv><p3><sg>:1;;;;;	
+
+nopeasti 2 adv <adv> -1 0 0	nobedalt adv <adv> 0 ;;;;;;	allegro adv <adv> 0 ;;;;;;	ruttu adv <adv> 0 ;;;;;;	väledalt adv <adv> 0 ;;;;;;	presto adv <adv> 0 ;;;;;;	kiiresti adv <adv> 2 kuolla:1,varsi:1;<vblex><actv><indic><pres><p3><sg>:1,<n><pl><ins>:1;;;;;	
+
+sisään 1 adv <adv> -1 0 0	sisse adv <adv> 0 ;;;;;;	küll adv <adv> 1 vuosi:1;<n><sg><gen>:1;;;;;	
+
+no 1 ij <ij> -1 0 0	No ? ? 1 ;;se:1;<prn><dem><sg><nom>:1;;;	
+
+ainakaan 1 adv <adv> -1 0 0	ainakaan ? ? 0 ;;;;;;	igatahes adv <adv> 1 ei:1;<vblex><neg><actv><p3><sg>:1;kuuskymppinen:1;<n><pl><par><px3pl>:1;;;	
+
+kuuskymppinen 1 n <n><pl><par><px3pl> -1 0 0	kuuskymppisiään ? ? 0 ;;;;;;	kuuekümnendaid n <n> 1 ainakaan:1;<adv>:1;tulla:1;<vblex><actv><indic><pres><conneg>:1;;;	
+
+vainoharhainen 1 adj <adj><sg><tra> -1 0 0	vainoharhaiseksi ? ? 0 ;;;;;;	paranoiliseks ? ? 1 tulla:1;<vblex><actv><indic><pres><p3><sg>:1;;;;;	
+
+Kuolema 1 n <n><sg><par><@<PN> -1 0 0	Surm n <n><sg><par><@<PN> 1 ;;osata:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+osata 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	oskama vblex <vblex><actv><indic><pres><p3><sg> 1 kuolema:1;<n><sg><par><@<PN>:1;odottaa:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+odottaa 6 vblex <vblex><actv><infa><sg><lat> -1 0 0	ootama vblex <vblex><actv><infa><sg><lat> 6 osata:1,se:1,ehkä:1,minä:1,hän:1;<vblex><actv><indic><pres><p3><sg>:1,<prn><dem><sg><nom>:1,<part>:1,<prn><pers><p1><sg><nom>:1,<prn><pers><p3><sg><nom>:1;sitten:1,vielä:1,hän:1;<adv>:1,<part>:1,<prn><pers><p3><sg><par>:1;;;	
+
+koko 2 n <n><sg><nom> -1 0 0	kogu n <n><sg><nom> 2 olla:1,kiinnittää:1;<vblex><actv><indic><pres><p1><sg>:1,<vblex><pasv><prfprc><pl><ess>:1;aika:1,lento:1;<n><sg><gen>:2;;;	suurus n <n><sg><nom> 0 ;;;;;;	
+
+valpas 1 adj <adj><sg><ess> -1 0 0	valvas adj <adj><sg><ess> 1 aika:1;<n><sg><gen>:1;;;;;	tähelepanelik adj <adj><sg><ess> 0 ;;;;;;	
+
+tarpeellinen 1 adj <adj><sg><par> -1 0 0	tarvilik adj <adj><sg><par> 0 ;;;;;;	vajalik adj <adj><sg><par> 0 ;;;;;;	kasulik adj <adj><sg><par> 0 ;;;;;;	vaja n <n><sg><nom><der><der_lik><adj><sg><nom> 1 sitten:1;<adv>:1;;;;;	
+
+toistaa 1 vblex <vblex><pasv><prsprc><sg><nom> -1 0 0	kordama vblex <vblex><pasv><prsprc><sg><nom> 1 se:1;<prn><dem><sg><nom>:1;päivittäin:1;<adv>:1;;;	
+
+päivittäin 1 adv <adv> -1 0 0	päivittäin ? ? 0 ;;;;;;	vaja adv <adv> 1 toistaa:1;<vblex><pasv><prsprc><sg><nom>:1;;;;;	
+
+kuukausittain 1 adv <adv> -1 0 0	kuukausittain ? ? 0 ;;;;;;	iga prn <prn><sg><nom> 1 ;;;;;;	
+
+mahdoton 1 adj <adj><sg><par> -1 0 0	võimatu adj <adj><sg><par> 1 ihminen:1;<n><pl><all>:1;keskustella:1;<vblex><actv><infa><sg><lat>:1;;;	mõeldamatu adj <adj><sg><par> 0 ;;;;;;	
+
+keskustella 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	vestlema vblex <vblex><actv><infa><sg><lat> 1 mahdoton:1;<adj><sg><par>:1;isä:1;<n><sg><ela><px1sg>:1;;;	
+
+ilma 1 n <n><sg><gen> -1 0 0	õhk n <n><sg><gen> 0 ;;;;;;	surm<n><sg><gen>+päev n <n> 1 isä:1;<n><sg><ela><px1sg>:1;kuolinpäivä:1;<n><sg><gen>:1;;;	
+
+kuolinpäivä 1 n <n><sg><gen> -1 0 0	kuolinpäivän ? ? 0 ;;;;;;	ennustama n <vblex><der><der_mine><n><pl><abe> 1 ilma:1;<n><sg><gen>:1;arvailu:1;<n><pl><par>:1;;;	
+
+viikko 1 n <n><pl><par> -1 0 0	nädal n <n><pl><par> 1 vielä:1;<part>:1;;;;;	
+
+kuukausi 1 n <n><pl><par> -1 0 0	kuu n <n><pl><par> 0 ;;;;;;	kuid cnjcoo <cnjcoo> 1 ;;tai:1;<cnjcoo><clb>:1;;;	
+
+molempi 1 n <n><pl><nom> -1 0 0	mõlema prn <prn><pl><nom> 1 olla:1;<vblex><actv><indic><pret><p1><pl>:1;hereillä:1;<adv>:1;;;	
+
+hereillä 1 adv <adv> -1 0 0	hereillä ? ? 0 ;;;;;;	ärkvel adj <adj> 1 molempi:1;<n><pl><nom>:1;keskellä:1;<pr>:1;;;	
+
+yö 1 n <n><sg><par> -1 0 0	öö n <n><sg><par> 1 keskellä:1;<pr>:1;;;;;	
+
+luulla 1 vblex <vblex><pasv><indic><pret><pe4> -1 0 0	arvama vblex <vblex><pasv><indic><pret><pe4> 0 ;;;;;;	pidama vblex <vblex> 1 tämä:1;<prn><dem><sg><par>:1;kreikkalainen:1;<adj><sg><tra>:1;;;	
+
+kreikkalainen 1 adj <adj><sg><tra> -1 0 0	kreikkalaiseksi ? ? 0 ;;;;;;	kreeka n <n><sg><gen><attr> 1 luulla:1;<vblex><pasv><indic><pret><pe4>:1;tyttö:1;<n><sg><gen>:1;;;	
+
+tyttö 1 n <n><sg><gen> -1 0 0	tüdruk n <n><sg><gen> 1 kreikkalainen:1;<adj><sg><tra>:1;nimi:1;<n><sg><tra>:1;;;	
+
+nimi 1 n <n><sg><tra> -1 0 0	nimi n <n><sg><tra> 1 tyttö:1;<n><sg><gen>:1;;;;;	
+
+kaksi 1 num <num><sg><nom> -1 0 0	kaks num <num><card><sg><nom> 1 hän:1;<prn><pers><p3><sg><par>:1;tunti:1;<n><sg><par>:1;;;	
+
+tunti 1 n <n><sg><par> -1 0 0	tund n <n><sg><par> 1 kaksi:1;<num><sg><nom>:1;;;;;	
+
+Porvoo 1 np <np><sg><ela> -1 0 0	Porvoosta ? ? 0 ;;;;;;	Porvoost np <np> 1 ;;tulla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+Helsinki 1 np <np><sg><gen> -1 0 0	Helsinki np <np><sg><gen> 0 ;;;;;;	Helsingi np <np><sg><gen> 1 tulla:1;<vblex><actv><indic><pres><p3><sg>:1;lähiö:1;<n><sg><nom>:1;;;	
+
+lähiö 1 n <n><sg><nom> -1 0 0	lähiö ? ? 0 ;;;;;;	äär n <n> 1 helsinki:1;<np><sg><gen>:1;;;;;	
+
+Tutkimus 1 n <n><sg><nom> -1 0 0	Uurimus n <n><sg><nom> 0 ;;;;;;	keskus n <n><sg><gen> 1 ;;keskus:1;<n><sg><gen>:1;;;	
+
+keskus 1 n <n><sg><gen> -1 0 0	keskus n <n><sg><gen> 0 ;;;;;;	koristama n <vblex><der><der_ja><n><sg><nom> 1 tutkimus:1;<n><sg><nom>:1;siivooja:1;<n><sg><all>:1;;;	
+
+siivooja 1 n <n><sg><all> -1 0 0	passija n <n><sg><all> 0 ;;;;;;	nõu n <n> 1 keskus:1;<n><sg><gen>:1;ei:1;<vblex><neg><actv><p3><sg>:1;;;	
+
+kuulua 1 vblex <vblex><actv><indic><pres><conneg> -1 0 0	kostma vblex <vblex><actv><indic><pres><conneg> 0 ;;;;;;	kuuluma vblex <vblex><actv><indic><pres><conneg> 0 ;;;;;;	pidama vblex <vblex> 1 ei:1;<vblex><neg><actv><p3><sg>:1;tiskata:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+tiskata 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	tiskata ? ? 0 ;;;;;;	pesema vblex <vblex> 1 kuulua:1;<vblex><actv><indic><pres><conneg>:1;astia:1;<n><pl><par>:1;;;	
+
+astia 1 n <n><pl><par> -1 0 0	anum n <n><pl><par> 0 ;;;;;;	pesema vblex <vblex><actv><sup><ill> 1 tiskata:1;<vblex><actv><infa><sg><lat>:1;;;;;	
+
+tarvin 1 ?  -1 0 0	tarvin ? ? 0 ;;;;;;	vaja adv <adv> 1 mä:1;<prn><pers><p1><sg><nom>:1;käydä:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+kauppa 1 n <n><sg><ine> -1 0 0	pood n <n><sg><ine> 1 käydä:1;<vblex><actv><infa><sg><lat>:1;;;;;	
+
+Monenlainen 1 adj <adj><sg><par> -1 0 0	Mitmesugune adj <adj><sg><par> 0 ;;;;;;	Erinema adj <vblex><der><der_v><adj><pl><par> 1 ;;etätyö:1;<n><sg><par>:1;;;	
+
+etätyö 1 n <n><sg><par> -1 0 0	etätyötä ? ? 0 ;;;;;;	kauge<adj><prefix>+töö n <n> 0 ;;;;;;	töö n <n><pl><par> 1 monenlainen:1;<adj><sg><par>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+Klinga 1 np <np><pl><nom> -1 0 0	Klinga ? ? 1 ;;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+ainoa 1 adj <adj><sg><nom> -1 0 0	ainus adj <adj><sg><nom> 1 olla:1;<vblex><actv><indic><pret><p3><sg>:1;suomalainen:1;<adj><pl><ela>:1;;;	ainuke adj <adj><sg><nom> 0 ;;;;;;	
+
+suomalainen 1 adj <adj><pl><ela> -1 0 0	soomlane n <n><pl><ela> 1 ainoa:1;<adj><sg><nom>:1;;;;;	soome adj <adj><pl><ela> 0 ;;;;;;	
+
+joutua 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	sattuma vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	sundima vblex <vblex> 1 joka:1;<prn><rel><sg><nom>:1;karsia:1;<vblex><actv><infma><sg><ill>:1;;;	
+
+karsia 1 vblex <vblex><actv><infma><sg><ill> -1 0 0	karsimaan ? ? 0 ;;;;;;	kärpeid<b/>tegema vblex <vblex> 0 ;;;;;;	tegema vblex <vblex><actv><sup><ill> 1 joutua:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	
+
+Nagasaki 1 np <np><sg><gen> -1 0 0	Nagasakin ? ? 0 ;;;;;;	sakk n <n><sg><gen> 1 ;;tuhoalue:1;<n><sg><ade>:1;;;	
+
+tuhoalue 1 n <n><sg><ade> -1 0 0	tuhoalueella ? ? 0 ;;;;;;	katastroof<n><sg><gen>+piirkond n <n> 1 nagasaki:1;<np><sg><gen>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+noin 1 adv <adv> -1 0 0	nii adv <adv> 0 ;;;;;;	umbes adv <adv> 1 olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	
+
+asukas 1 n <n><pl><ela> -1 0 0	asukas n <n><pl><ela> 0 ;;;;;;	asunik n <n><pl><ela> 0 ;;;;;;	elanik n <n><pl><ela> 1 ;;;;;;	
+
+Hiroshima 1 np <np><sg><ine> -1 0 0	Hiroshimassa ? ? 0 ;;;;;;	Hiroshimas ? ? 1 ne:1;<prn><dem><pl><par>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+ryypätä 1 vblex <vblex><pasv><indic><pret><pe4> -1 0 0	ryypättiin ? ? 0 ;;;;;;	joodima vblex <vblex> 1 sitten:1;<adv>:1;aika:1;<n><sg><nom>:1;;;	
+
+lailla 1 adv <adv> -1 0 0	otsekui adv <adv> 0 ;;;;;;	palju adv <adv> 1 aika:1;<n><sg><nom>:1;vodka:1;<n><sg><par>:1;;;	
+
+vodka 1 n <n><sg><par> -1 0 0	vodka n <n><sg><par> 0 ;;;;;;	viin n <n> 1 lailla:1;<adv>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+peruna 1 n <n><pl><nom> -1 0 0	kartul n <n><pl><nom> 1 ja:1;<cnjcoo><clb>:1;jäädä:1;<vblex><actv><indic><pret><p3><pl>:1;;;	
+
+jäädä 1 vblex <vblex><actv><indic><pret><p3><pl> -1 0 0	jääma vblex <vblex><actv><indic><pret><p3><pl> 1 peruna:1;<n><pl><nom>:1;hakea:1;<vblex><actv><infma><sg><abe>:1;;;	
+
+hakea 1 vblex <vblex><actv><infma><sg><abe> -1 0 0	tooma vblex <vblex><actv><infma><sg><abe> 1 jäädä:1;<vblex><actv><indic><pret><p3><pl>:1;;;;;	viima vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	otsima vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	kutsuma vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	taotlema vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	järel&&käima vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	üles&&otsima vblex <vblex><actv><infma><sg><abe> 0 ;;;;;;	
+
+nuori 1 adj <adj><pl><all> -1 0 0	noor adj <adj><pl><all> 1 antaa:1;<vblex><pasv><indic><pres><pe4>:1;tilaisuus:1;<n><sg><nom>:1;;;	
+
+tilaisuus 1 n <n><sg><nom> -1 0 0	võimalus n <n><sg><nom> 1 nuori:1;<adj><pl><all>:1;kehittää:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+kehittää 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	arendama vblex <vblex><actv><infa><sg><lat> 1 tilaisuus:1;<n><sg><nom>:1;taipumus:1;<n><pl><par><px3sg>:1;;;	üles&&harutama vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	
+
+taipumus 1 n <n><pl><par><px3sg> -1 0 0	soodumus n <n><pl><par><px3sg> 1 kehittää:1;<vblex><actv><infa><sg><lat>:1;;;;;	
+
+Tarkistaa 1 vblex <vblex><actv><imp><p2><pl> -1 0 0	Kontrollima vblex <vblex><actv><imp><p2><pl> 1 ;;nyt:1;<part>:1;;;	
+
+ihme 1 n <n><sg><ine> -1 0 0	ime n <n><sg><ine> 0 ;;;;;;	ometi adv <adv> 1 nyt:1;<part>:1;ensin:1;<adv>:1;;;	
+
+Lipponen 1 np <np><sg><nom> -1 0 0	Lipponen ? ? 1 todella:1;<adv>:1;;;;;	
+
+ihmetellä 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	imetlema vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	imestama vblex <vblex> 1 ;;saari:1;<n><sg><nom>:1;;;	
+
+Saari 1 n <n><sg><nom> -1 0 0	Saar n <n><sg><nom> 0 ;;;;;;	Saarikangas ? ? 1 ihmetellä:1;<vblex><actv><indic><pret><p3><sg>:1;kangas:1;<n><sg><nom>:1;;;	
+
+kangas 1 n <n><sg><nom> -1 0 0	kangas n <n><sg><nom> 0 ;;;;;;	Saarikangas np <np> 1 saari:1;<n><sg><nom>:1;;;;;	
+
+päättää 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	lõpetama vblex <vblex><actv><indic><pret><p3><sg> 0 ;;;;;;	otsustama vblex <vblex> 1 hän:1;<prn><pers><p3><sg><nom>:1;ett:1;<part>:1;;;	
+
+kukaan 1 prn <prn><sg><all> -1 0 0	keegi prn <prn><sg><all> 1 kertoa:1;<vblex><actv><indic><pres><conneg>:1;mikään:1;<prn><qnt><sg><par>:1;;;	
+
+suhdannetaantuma 1 n <n><sg><ela><px3pl> -1 0 0	suhdannetaantumastaan ? ? 0 ;;;;;;	majandus<n><sg><nom>+langus n <n> 1 selviytyä:1;<vblex><actv><prfprc><sg><gen>:1;varsi:1;<n><pl><ins>:1;;;	
+
+niin 1 adv <adv> -1 0 0	nii adv <adv> 0 ;;;;;;	nõnda adv <adv> 0 ;;;;;;	siis adv <adv> 1 ;;saada:1;<vblex><actv><indic><pres><p2><pl>:1;;;	
+
+luottaa 1 vblex <vblex><pasv><prsprc><sg><gen> -1 0 0	lootma vblex <vblex><pasv><prsprc><sg><gen> 0 ;;;;;;	usaldama vblex <vblex><pasv><prsprc><sg><gen> 0 ;;;;;;	usaldus n <n><sg><nom> 1 saada:1;<vblex><actv><indic><pres><p2><pl>:1;turva:1;<n><sg><nom>:1;;;	
+
+turva 1 n <n><sg><nom> -1 0 0	kaitse n <n><sg><nom> 0 ;;;;;;	ohutus n <n><sg><nom> 0 ;;;;;;	usaldus n <n> 1 luottaa:1;<vblex><pasv><prsprc><sg><gen>:1;mies:1;<n><sg><gen>:1;;;	
+
+poliitikko 2 n <n><sg><gen> -1 0 0	poliitik n <n><sg><gen> 2 mies:1,kuin:1;<n><sg><nom>:1,<cnjcoo><clb>:1;elämä:1,nainen:1;<n><sg><gen>:2;;;	
+
+elämä 1 n <n><sg><gen> -1 0 0	elu n <n><sg><gen> 0 ;;;;;;	elukas n <n> 1 poliitikko:1;<n><sg><gen>:1;kaari:1;<n><sg><nom>:1;;;	
+
+kaari 1 n <n><sg><nom> -1 0 0	kaar n <n><sg><nom> 0 ;;;;;;	teist n <n><sg><nom> 1 elämä:1;<n><sg><gen>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+turvallisuus 1 n <n><sg><nom> -1 0 0	turvalisus n <n><sg><nom> 1 myös:1;<adv>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+näkyvästi 1 adv <adv> -1 0 0	nähtavalt adv <adv> 0 ;;;;;;	nähtaval adv <adv> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;esillä:1;<adv>:1;;;	
+
+esillä 1 adv <adv> -1 0 0	esil adv <adv> 0 ;;;;;;	kohal adv <adv> 1 näkyvästi:1;<adv>:1;;;;;	
+
+kassi 1 n <n><sg><ela><px3sg> -1 0 0	kandekott n <n><sg><ela><px3sg> 0 ;;;;;;	kott n <n> 1 ottaa:1;<vblex><actv><indic><pret><p3><sg>:1;kissa:1;<n><sg><gen>:1;;;	
+
+kissa 1 n <n><sg><gen> -1 0 0	kissanmakkaroita ? ? 0 ;;;;;;	kass n <n> 1 kassi:1;<n><sg><ela><px3sg>:1;;;;;	
+
+maa 1 n <n><sg><all> -1 0 0	maa n <n><sg><all> 1 toinen:1;<num><sg><gen>:1;tuli:1;<n><sg><par>:1;;;	riik n <n><sg><all> 0 ;;;;;;	
+
+tuli 1 n <n><sg><par> -1 0 0	tulta ? ? 0 ;;;;;;	inimene n <n> 1 maa:1;<n><sg><all>:1;ei:1;<vblex><neg><actv><p3><sg>:1;;;	
+
+lupa 1 n <n><sg><par> -1 0 0	luba n <n><sg><par> 1 ilman:1;<pr>:1;;;;;	
+
+kokea 1 vblex <vblex><actv><indic><pres><p3><pl> -1 0 0	kogema vblex <vblex><actv><indic><pres><p3><pl> 0 ;;;;;;	tundma vblex <vblex> 1 ihminen:1;<n><pl><nom>:1;yhteiskunta:1;<n><sg><gen>:1;;;	
+
+yhteiskunta 1 n <n><sg><gen> -1 0 0	ühiskond n <n><sg><gen> 1 kokea:1;<vblex><actv><indic><pres><p3><pl>:1;levoton:1;<adj><sg><tra>:1;;;	
+
+levoton 1 adj <adj><sg><tra> -1 0 0	rahutu adj <adj><sg><tra> 1 yhteiskunta:1;<n><sg><gen>:1;;;;;	ärev adj <adj><sg><tra> 0 ;;;;;;	närviline adj <adj><sg><tra> 0 ;;;;;;	
+
+leivos 1 n <n><sg><nom> -1 0 0	Leivos ? ? 0 ;;;;;;	küpsetis n <n> 1 ;;maistua:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+maistua 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	maistui ? ? 0 ;;;;;;	hästi<b/>maitsema vblex <vblex> 0 ;;;;;;	maitsema vblex <vblex><actv><pret><indic><p3><sg> 1 leivos:1;<n><sg><nom>:1;hyvä:1;<adj><sg><abl>:1;;;	
+
+Turvavyö 1 n <n><pl><nom> -1 0 0	Turvavöö n <n><pl><nom> 1 ;;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	Ohutusrihm n <n><pl><nom> 0 ;;;;;;	
+
+lento 1 n <n><sg><gen> -1 0 0	lennon ? ? 0 ;;;;;;	lend n <n> 1 koko:1;<n><sg><nom>:1;aika:1;<n><sg><gen>:1;;;	
+
+Riki 1 np <np><pl><nom> -1 0 0	Riki ? ? 1 ;;kysyä:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+kysyä 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	küsima vblex <vblex><actv><indic><pret><p3><sg> 1 riki:1;<np><pl><nom>:1;osoite:1;<n><sg><gen>:1;;;	
+
+osoite 1 n <n><sg><gen> -1 0 0	aadress n <n><sg><gen> 1 kysyä:1;<vblex><actv><indic><pret><p3><sg>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+ratketa 1 vblex <vblex><actv><cond><conneg> -1 0 0	ratkeaisi ? ? 0 ;;;;;;	lahenema vblex <vblex> 1 asia:1;<n><sg><nom>:1;;;;;	
+
+pystyä 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	võima vblex <vblex><actv><indic><pres><p3><sg> 0 ;;;;;;	veel adv <adv> 1 ne:1;<prn><dem><pl><ill>:1;vaikuttaa:1;<vblex><actv><infma><sg><ill>:1;;;	
+
+vaikuttaa 1 vblex <vblex><actv><infma><sg><ill> -1 0 0	mõjuma vblex <vblex><actv><infma><sg><ill> 0 ;;;;;;	mõjutama vblex <vblex><actv><infma><sg><ill> 1 pystyä:1;<vblex><actv><indic><pres><p3><sg>:1;;;;;	
+
+ministeri 1 n <n><sg><nom> -1 0 0	minister n <n><sg><nom> 1 ei:1;<vblex><neg><actv><p3><sg>:1;;;;;	
+
+jaella 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	jakelee ? ? 0 ;;;;;;	jagama vblex <vblex> 1 hän:1;<prn><pers><p3><sg><nom>:1;mielellään:1;<adv>:1;;;	
+
+mielellään 1 adv <adv> -1 0 0	meeleldi adv <adv> 0 ;;;;;;	rõõmsalt adv <adv> 0 ;;;;;;	meelsasti adv <adv> 1 jaella:1;<vblex><actv><indic><pres><p3><sg>:1;kuva:1;<n><pl><par><px3sg>:1;;;	
+
+kuva 1 n <n><pl><par><px3sg> -1 0 0	pilt n <n><pl><par><px3sg> 1 mielellään:1;<adv>:1;kuka:1;<prn><rel><sg><all><clb>:1;;;	
+
+tahansa 1 part <part> -1 0 0	tahansa ? ? 0 ;;;;;;	tahes adv <adv> 1 kuka:1;<prn><rel><sg><all><clb>:1;;;;;	
+
+omena 1 n <n><sg><nom> -1 0 0	omena ? ? 0 ;;;;;;	õun n <n> 1 jokin:1;<prn><ind><sg><nom>:1;;;;;	
+
+Asiakirja 1 n <n><pl><gen> -1 0 0	Dokument n <n><pl><gen> 1 ;;mukaan:1;<post>:1;;;	
+
+kontti 1 n <n><sg><nom> -1 0 0	säär n <n><sg><nom> 0 ;;;;;;	konteiner n <n> 1 mukaan:1;<post>:1;olla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+lastata 1 vblex <vblex><pasv><indic><pret><conneg> -1 0 0	lastattu ? ? 0 ;;;;;;	lastima vblex <vblex> 1 olla:1;<vblex><actv><indic><pret><p3><sg>:1;belgia:1;<np><sg><ine>:1;;;	
+
+Belgia 1 np <np><sg><ine> -1 0 0	Belgia np <np><sg><ine> 0 ;;;;;;	Belgias ? ? 1 lastata:1;<vblex><pasv><indic><pret><conneg>:1;;;;;	
+
+Tällöin 1 adv <adv> -1 0 0	Siis adv <adv> 0 ;;;;;;	Too prn <prn><sg><ade> 1 ;;myös:1;<adv>:1;;;	
+
+Koivu 1 n <n><sg><nom> -1 0 0	Kask n <n><sg><nom> 0 ;;;;;;	Koivuselkäst ? ? 1 myös:1;<adv>:1;selkä:1;<n><sg><ela>:1;;;	
+
+selkä 1 n <n><sg><ela> -1 0 0	selg n <n><sg><ela> 0 ;;;;;;	aeg n <n><sg><ade> 1 koivu:1;<n><sg><nom>:1;tulla:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+monikansallinen 1 adj <adj><sg><nom> -1 0 0	rahvusvaheline adj <adj><sg><nom> 0 ;;;;;;	paljurahvuseline adj <adj><sg><nom> 0 ;;;;;;	mitmerahvuseline ? ? 1 tulla:1;<vblex><actv><indic><pret><p3><sg>:1;kylä:1;<n><sg><nom>:1;;;	
+
+kylä 1 n <n><sg><nom> -1 0 0	küla n <n><sg><nom> 1 monikansallinen:1;<adj><sg><nom>:1;;;;;	
+
+puhelin 1 n <n><sg><ine> -1 0 0	telefon n <n><sg><ine> 1 uusi:1;<adj><sg><par>:1;olla:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+vibrahälytys 1 n <n> -1 0 0	vibrahälytys ? ? 0 ;;;;;;	vibra<n><sg><gen>+alarm n <n> 1 olla:1;<vblex><actv><indic><pres><p3><sg>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+aikainen 1 adj <adj><comp><sg><par> -1 0 0	täiskasvanud adj <adj><attr><comp><sg><par> 0 ;;;;;;	varane adj <adj> 1 ja:1;<cnjcoo><clb>:1;vetävämmännäköinen:1;<adj><pl><nom>:1;;;	
+
+Juuso 1 np <np><sg><gen> -1 0 0	Juuson ? ? 0 ;;;;;;	Juuso ? ? 1 kun:1;<cnjsub>:1;tarha:1;<n><sg><ela>:1;;;	
+
+tarha 1 n <n><sg><ela> -1 0 0	tarhasta ? ? 0 ;;;;;;	aed n <n> 1 juuso:1;<np><sg><gen>:1;karata:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+karata 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	karkasi ? ? 0 ;;;;;;	põgenema vblex <vblex> 1 tarha:1;<n><sg><ela>:1;järvi:1;<n><sg><all>:1;;;	
+
+järvi 1 n <n><sg><all> -1 0 0	järv n <n><sg><all> 1 karata:1;<vblex><actv><indic><pret><p3><sg>:1;;;;;	
+
+ankka 1 n <n><sg><par> -1 0 0	ankkaa ? ? 0 ;;;;;;	part n <n> 1 ;;;;;;	
+
+Ympärillä 1 adv <adv> -1 0 0	Ümber adv <adv> 1 ;;seisoa:1;<vblex><actv><prsprc><sg><nom>:1;;;	
+
+väki 1 n <n><sg><nom> -1 0 0	rahvas n <n><sg><nom> 0 ;;;;;;	inimene n <n> 1 seisoa:1;<vblex><actv><prsprc><sg><nom>:1;tuijottaa:1;<vblex><actv><indic><pret><p3><sg>:1;;;	
+
+tuijottaa 1 vblex <vblex><actv><indic><pret><p3><sg> -1 0 0	jõllitama vblex <vblex><actv><indic><pret><p3><sg> 1 väki:1;<n><sg><nom>:1;näkyä:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+lumottu 1 adj <adj><sg><ess> -1 0 0	lummuses adj <adj><sg><ess> 0 ;;;;;;	lummatud adj <adj><attr><sg><ess> 0 ;;;;;;	seisev adj <adj> 1 kuin:1;<cnjcoo><clb>:1;;;;;	
+
+tapa 1 n <n><sg><nom> -1 0 0	tava n <n><sg><nom> 0 ;;;;;;	viis n <n> 1 halvin:1;;lähettää:1;<vblex><actv><infa><sg><lat>:1;;;	
+
+lähettää 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	saatma vblex <vblex><actv><infa><sg><lat> 1 tapa:1;<n><sg><nom>:1;ykkönen:1;<n><der_s>:1;;;	
+
+ykkönen 1 n <n><der_s> -1 0 0	üks n <n><der_s> 0 ;;;;;;	kiir n <n> 1 lähettää:1;<vblex><actv><infa><sg><lat>:1;luokka:1;<n><sg><gen>:1;;;	
+
+luokka 1 n <n><sg><gen> -1 0 0	klass n <n><sg><gen> 0 ;;;;;;	kiir n <n> 1 ykkönen:1;<n><der_s>:1;kirje:1;<n><sg><nom>:1;;;	
+
+kirje 1 n <n><sg><nom> -1 0 0	kiri n <n><sg><nom> 1 luokka:1;<n><sg><gen>:1;;;;;	
+
+huolehtia 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	hoolitsema vblex <vblex><actv><infa><sg><lat> 0 ;;;;;;	tegelema vblex <vblex> 1 pitää:1;<vblex><actv><cond><p3><sg>:1;oma:1;<adj><pl><ela>:1;;;	
+
+maksaa 1 vblex <vblex><actv><infa><sg><lat> -1 0 0	maksma vblex <vblex><actv><infa><sg><lat> 1 voida:1;<vblex><actv><indic><pret><p3><sg>:1;tuhat:1;<n><pl><par>:1;;;	
+
+tuhat 1 n <n><pl><par> -1 0 0	tuhat n <n><pl><par> 1 maksaa:1;<vblex><actv><infa><sg><lat>:1;euro:1;<n><pl><par>:1;;;	
+
+euro 1 n <n><pl><par> -1 0 0	euro n <n><pl><par> 1 tuhat:1;<n><pl><par>:1;;;;;	
+
+järkkyä 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	järkkyy ? ? 0 ;;;;;;	häirima vblex <vblex> 1 mieli:1;<n><pref>:1;ja:1;<cnjcoo><clb>:1;;;	
+
+työ 1 n <n><sg><nom> -1 0 0	töö n <n><sg><nom> 1 ja:1;<cnjcoo><clb>:1;kyky:1;<n><sg><nom>:1;;;	
+
+kyky 1 n <n><sg><nom> -1 0 0	võime n <n><sg><nom> 1 työ:1;<n><sg><nom>:1;heiketä:1;<vblex><actv><indic><pres><p3><sg>:1;;;	
+
+heiketä 1 vblex <vblex><actv><indic><pres><p3><sg> -1 0 0	heikkenee ? ? 0 ;;;;;;	nõrgenema vblex <vblex> 1 kyky:1;<n><sg><nom>:1;;;;;	
+
+Luoda 1 vblex <vblex><actv><prsprc><sg><gen> -1 0 0	Looma vblex <vblex><actv><prsprc><sg><gen> 0 ;;;;;;	Loominguline adj <adj><sg><nom> 1 ;;tilanne:1;<n><sg><gen>:1;;;	
+
+hauska 1 adj <adj><sg><nom> -1 0 0	meeldiv adj <adj><sg><nom> 0 ;;;;;;	lõbus adj <adj> 1 olla:1;<vblex><pasv><prsprc><sg><nom>:1;;;;;	
+
