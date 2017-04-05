@@ -1,6 +1,28 @@
 <!-- the file apertium-fin-est.fin-est.lrx -->
 
 <rules>
+  <rule weight = "0.9">
+    <match lemma="se"/>
+    <match lemma=","/>
+    <match lemma="joka"><select lemma="kes"/></match>
+  </rule>
+  <rule weight = "0.8"> <!-- need correcting in transfer -->
+    <match lemma=","/>
+    <match lemma="joka"><select lemma="mis"/></match>
+  </rule>
+  <rule weight = "0.7"> <!-- need correcting in transfer -->
+    <match lemma="joka"><select lemma="iga"/></match>
+  </rule>
+  <rule weight = "1.0">
+    <match lemma="joka" tags="prn.sg.ill"><select lemma="kuhu"/></match>
+  </rule>
+  <rule weight = "1.0">
+    <match lemma="joka" tags="prn.sg.ine"><select lemma="kus"/></match>
+  </rule>
+  <rule weight = "1.0">
+    <match lemma="joka" tags="prn.sg.ela"><select lemma="kust"/></match>
+  </rule>
+
   <rule>
     <match lemma="aivan" tags="adv"><select lemma="täitsa"/></match>
     <or>
