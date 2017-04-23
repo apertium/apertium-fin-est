@@ -193,7 +193,10 @@ class Wordunit:
       else:
         return prefix + self.main.prints() + '#' + str(self.tobiltrs) + self.cat + postfix
     elif self.main.lemma == "":  # txt
-      return self.main.word 
+      if len(postfix) < 2  or "notfound" in self.cat or "punct" in self.cat:
+        return self.main.word
+      else:
+        return self.main.word + "$" + postfix[1:]
     else:                 # mrf analysed
       return prefix + self.main.word + self.printr() + postfix
 
@@ -488,21 +491,31 @@ class Wordtrans:
             self.translations.append(Wordtritem(r))
         i += 1
 
-  def add_context(self, word, targettr, prevlemma, prevmorph, nextlemma, nextmorph, near):
+  def add_context(self, word, targettr, ttr, prevlemma, prevmorph, nextlemma, nextmorph, near):
       # word - biltrans Wordunit, targettr - phrases[TARGAN] transl Wordunit
+      if targettr == None:
+        return
       transrule = None   
       self.wordcount += 1
+      targetlemla = targettr.main.lemla
+      if ttr != None:
+          targetlemla = targetlemla + targettr.main.morph + "+" + ttr.main.lemla
       for tr in self.translations:
-          if tr.lemla == targettr.main.lemla:
+          if tr.lemla == targetlemla:
               transrule = tr
               break
           for rd in word.readings:
-              if (tr.lemla == rd.lemla or tr.lemla == rd.lemma) and tr.lemla.find(targettr.main.lemla+'<') == 0:
+              if (tr.lemla == rd.lemla or tr.lemla == rd.lemma) and tr.lemla.find(targetlemla+'<') == 0:
                   transrule = tr
                   break
           if transrule != None: break
       if transrule == None: # new translation
-          self.translations.append(Wordtritem(targettr.main))
+          if ttr != None:  
+            self.translations.append(Wordtritem(ttr.main))
+          else:  
+            self.translations.append(Wordtritem(targettr.main))
+          self.translations[-1].lemma = targetlemla
+          self.translations[-1].lemla = targetlemla
           transrule = self.translations[-1]
       transrule.count += 1
       
@@ -631,7 +644,7 @@ def compare(infilenames):
         lemma23 = lemma2+sp+lemma3
       found = 0
       for rd in btwu.readings:
-        if lemma23 == rd.wold or lemma23 == rd.lemla:
+        if cmp(lemma23, rd.wold) == 0 or cmp(lemma23, rd.lemla) == 0:
           found = 1
           break
       if found == 0:
@@ -1539,6 +1552,9 @@ def compare(infilenames):
           # and (len(word.readings) > 1 or word.main.lemla in lrlems): # then don't count before
           # so add all and output with mult trans
           targettr = phrases[TARGAN][phrases[TRANAN][word.totransl].totarget]
+          ttr = None
+          if phrases[TRANAN][word.totransl].totarget +1 < len(phrases[TARGAN]) and phrases[TARGAN][phrases[TRANAN][word.totransl].totarget].totransl == phrases[TARGAN][phrases[TRANAN][word.totransl].totarget+1].totransl:
+            ttr = phrases[TARGAN][phrases[TRANAN][word.totransl].totarget+1]
           near = []
           if len(lemmas) == 0:
             near = plemmas
@@ -1556,10 +1572,10 @@ def compare(infilenames):
             nextmorph = phrases[BILTRS][itr+1].main.morph
          
           if word.main.lemla in lrlems: # existing from file or from txt
-            lrules[lrlems.index(word.main.lemla)].add_context(word, targettr, prevlemma, prevmorph, nextlemma, nextmorph, near)
+            lrules[lrlems.index(word.main.lemla)].add_context(word, targettr, ttr, prevlemma, prevmorph, nextlemma, nextmorph, near)
           else: # new
             wtr = Wordtrans(word)
-            wtr.add_context(word, targettr, prevlemma, prevmorph, nextlemma, nextmorph, near)
+            wtr.add_context(word, targettr, ttr, prevlemma, prevmorph, nextlemma, nextmorph, near)
             lrules.append(wtr)
             lrlems.append(word.main.lemla)
         itr += 1 
@@ -1572,7 +1588,7 @@ def compare(infilenames):
         break
 
   except IndexError:
-    sys.stderr.write("Could not read phrase nr %i: \n%s" % (sentno, print_phrases(phrases)))
+    sys.stderr.write("Could not read phrase nr %i, %i: \n%s" % (sentno, len(phrases), print_phrases(phrases)))
     sys.exit(1)
 
   all_words = cor_words + sel_words + selr_words + inc_words + nf_words + ignore_words
