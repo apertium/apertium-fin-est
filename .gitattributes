@@ -169,7 +169,9 @@ dev/punctuation.lexc -text
 /modes.xml -text
 /mult.py -text
 /pending-tests.sh -text
+texts/opik.est.26.06.2017 -text
 texts/opik.est.txt -text
+texts/opik.fin.est.26.06.2017 -text
 texts/opik.fin.txt -text
 texts/opik_vead_kaebilt.xlsx -text
 texts/story.est.txt -text
