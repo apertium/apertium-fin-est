@@ -289,19 +289,19 @@ clean-local:
 test-install:
 	DESTDIR=tmp-$@ make install
 	find tmp-$@ -type f -name '*.mode' | xargs sed -i.tmp "s% '\($(prefix)\)% 'tmp-$@/\1%g"
-	echo "Ja" | apertium -d tmp-$@/$(prefix)/share/apertium est-fin | tee tmp-$@/mt
+	echo "Ja" | apertium -f line -d tmp-$@/$(prefix)/share/apertium est-fin | tee tmp-$@/mt
 	@echo "Ja" > tmp-$@/ref
 	@diff tmp-$@/ref tmp-$@/mt
-	echo "Ja" | apertium -d tmp-$@/$(prefix)/share/apertium fin-est | tee tmp-$@/mt
+	echo "Ja" | apertium -f line -d tmp-$@/$(prefix)/share/apertium fin-est | tee tmp-$@/mt
 	@echo "Ja" > tmp-$@/ref
 	@diff tmp-$@/ref tmp-$@/mt
 	@rm -rf tmp-$@
 
 test: all test-install
-	echo "Ja" | apertium -d . est-fin | tee .test-mt
+	echo "Ja" | apertium -f line -d . est-fin | tee .test-mt
 	@echo "Ja" > .test-ref
 	@diff .test-ref .test-mt
-	echo "Ja" | apertium -d . fin-est | tee .test-mt
+	echo "Ja" | apertium -f line -d . fin-est | tee .test-mt
 	@echo "Ja" > .test-ref
 	@diff .test-ref .test-mt
 	@rm .test-ref .test-mt
