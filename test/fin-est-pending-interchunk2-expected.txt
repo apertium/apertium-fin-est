@@ -1,0 +1,8 @@
+[05FCY2wYvYjG#0] ^Prn_minä<PRN><prn><sg><nom><pers><p1>{^mina<prn><pers><p1><3><4>$}$ ^v_olla<SV><vblex><actv><pres><indic><p1><sg>{^olema<2><3><4><5><6><7>$}$ ^n<SN><sg><ine>{^maja<n><2><3>$}$^sent<SENT>{^.<sent>$}$
+[/05FCY2wYvYjG]
+[DL-Tp29wppBT#0] ^Prn_sinä<PRN><prn><sg><nom><pers><p2>{^sina<prn><pers><p2><3><4>$}$ ^v_olla<SV><vblex><actv><pres><indic><p2><sg>{^olema<2><3><4><5><6><7>$}$ ^n<SN><sg><ine>{^maja<n><2><3>$}$^sent<SENT>{^.<sent>$}$
+[/DL-Tp29wppBT]
+[PeKmjjTqqy_d#0] ^Prn_se<PRN><prn><sg><nom>{^see<prn><3><4>$}$ ^v_olla<SV><vblex><actv><pres><indic><p3><sg>{^olema<2><3><4><5><6><7>$}$ ^n<SN><sg><ine>{^maja<n><2><3>$}$^sent<SENT>{^.<sent>$}$
+[/PeKmjjTqqy_d]
+[VaTZiOYRQfID#0] ^N<SN><sg><nom>{^laud<n><2><3>$}$ ^v_olla<SV><vblex><actv><pres><indic><p3><sg>{^olema<2><3><4><5><6><7>$}$ ^n<SN><sg><ine>{^maja<n><2><3>$}$^sent<SENT>{^.<sent>$}$
+[/VaTZiOYRQfID]

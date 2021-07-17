@@ -1,0 +1,8 @@
+[05FCY2wYvYjG#0] ^Minä/Mi<np><pl><ess>/Mi<np><sg><ess>/mikä<prn><itg><sg><ess>/mikä<prn><rel><pl><ess>/mikä<prn><rel><sg><ess>/mikä<prn><sg><ess>/minä<prn><pers><p1><sg><nom>$ ^olen/olla<vblex><actv><indic><pres><p1><sg>$ ^talossa/talo<n><sg><ine>$^./.<sent>$
+[/05FCY2wYvYjG]
+[DL-Tp29wppBT#0] ^Sinä/se<prn><dem><sg><ess>/se<prn><sg><ess>/sinä<prn><pers><p2><sg><nom>$ ^olet/olla<vblex><actv><indic><pres><p2><sg>$ ^talossa/talo<n><sg><ine>$^./.<sent>$
+[/DL-Tp29wppBT]
+[PeKmjjTqqy_d#0] ^Se/se<prn><dem><sg><nom>/se<prn><sg><nom>$ ^on/olla<vblex><actv><indic><pres><p3><sg>$ ^talossa/talo<n><sg><ine>$^./.<sent>$
+[/PeKmjjTqqy_d]
+[VaTZiOYRQfID#0] ^Pöytä/pöytä<n><sg><nom>$ ^on/olla<vblex><actv><indic><pres><p3><sg>$ ^talossa/talo<n><sg><ine>$^./.<sent>$
+[/VaTZiOYRQfID]

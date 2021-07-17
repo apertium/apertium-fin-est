@@ -1,0 +1,8 @@
+[1UKlIyFJISD6#0] ^Sina<prn><pers><p2><sg><nom>/Sinä<prn><pers><p2><sg><nom>/Sä<prn><pers><p2><sg><nom>$ ^olema<vblex><actv><pres><indic><p2><sg>/olla<vblex><actv><pres><indic><p2><sg>$ ^maja<n><sg><ine>/talo<n><sg><ine>$^./@.$
+[/1UKlIyFJISD6]
+[3wZ1y-M8ykN-#0] ^Laud<n><sg><nom>/Pöytä<n><sg><nom>$ ^olema<vblex><actv><pres><indic><p3><sg>/olla<vblex><actv><pres><indic><p3><sg>$ ^maja<n><sg><ine>/talo<n><sg><ine>$^./@.$
+[/3wZ1y-M8ykN-]
+[ZNRL9wMV5jHQ#0] ^See<prn><sg><nom>/Se<prn><sg><nom>/Se<prn><dem><sg><nom>/Tämä<prn><dem><sg><nom>$ ^olema<vblex><actv><pres><indic><p3><sg>/olla<vblex><actv><pres><indic><p3><sg>$ ^maja<n><sg><ine>/talo<n><sg><ine>$^./@.$
+[/ZNRL9wMV5jHQ]
+[zhSHg7iB9nyN#0] ^Mina<prn><pers><p1><sg><nom>/Minä<prn><pers><p1><sg><nom>$ ^olema<vblex><actv><pres><indic><p1><sg>/olla<vblex><actv><pres><indic><p1><sg>$ ^maja<n><sg><ine>/talo<n><sg><ine>$^./@.$
+[/zhSHg7iB9nyN]

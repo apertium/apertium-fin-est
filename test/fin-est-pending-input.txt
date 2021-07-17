@@ -1,0 +1,4 @@
+Minä olen talossa.
+Sinä olet talossa.
+Se on talossa.
+Pöytä on talossa.

@@ -14,3 +14,4 @@
 /install-sh
 /missing
 /modes
+/test/*-output.txt

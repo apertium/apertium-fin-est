@@ -1,0 +1,8 @@
+[1UKlIyFJISD6#0] ^Sinä<prn><pers><p2><sg><nom>$ ^olla<vblex><actv><indic><pres><p2><sg>$ ^talo<n><sg><ine>$^@.$
+[/1UKlIyFJISD6]
+[3wZ1y-M8ykN-#0] ^Pöytä<n><sg><nom>$ ^olla<vblex><actv><indic><pres><p3><sg>$ ^talo<n><sg><ine>$^@.$
+[/3wZ1y-M8ykN-]
+[ZNRL9wMV5jHQ#0] ^Se<prn><sg><nom>$ ^olla<vblex><actv><indic><pres><p3><sg>$ ^talo<n><sg><ine>$^@.$
+[/ZNRL9wMV5jHQ]
+[zhSHg7iB9nyN#0] ^Minä<prn><pers><p1><sg><nom>$ ^olla<vblex><actv><indic><pres><p1><sg>$ ^talo<n><sg><ine>$^@.$
+[/zhSHg7iB9nyN]

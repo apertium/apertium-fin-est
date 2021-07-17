@@ -1,0 +1,18 @@
+{
+    "est-fin-pending": {
+        "input": "est-fin-pending-input.txt",
+        "mode": "est-fin"
+    },
+    "fin-est-pending": {
+        "input": "fin-est-pending-input.txt",
+        "mode": "fin-est"
+    },
+    "fin-est": {
+        "input": "fin-est-input.txt",
+        "mode": "fin-est"
+    },
+    "est-fin": {
+        "input": "est-fin-input.txt",
+        "mode": "est-fin"
+    }
+}

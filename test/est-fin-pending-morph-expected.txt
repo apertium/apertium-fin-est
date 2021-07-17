@@ -1,0 +1,8 @@
+[1UKlIyFJISD6#0] ^Sa/sina<prn><pers><p2><sg><nom>$ ^oled/olema<vblex><actv><pres><indic><p2><sg>$ ^majas/maja<n><sg><ine>$^./.<sent>$
+[/1UKlIyFJISD6]
+[3wZ1y-M8ykN-#0] ^Laud/laud<n><sg><nom>/laug<n><pl><nom>$ ^on/olema<vblex><actv><pres><indic><p3><pl>/olema<vblex><actv><pres><indic><p3><sg>$ ^majas/maja<n><sg><ine>$^./.<sent>$
+[/3wZ1y-M8ykN-]
+[ZNRL9wMV5jHQ#0] ^See/see<prn><sg><nom>$ ^on/olema<vblex><actv><pres><indic><p3><pl>/olema<vblex><actv><pres><indic><p3><sg>$ ^majas/maja<n><sg><ine>$^./.<sent>$
+[/ZNRL9wMV5jHQ]
+[zhSHg7iB9nyN#0] ^Ma/mina<prn><pers><p1><sg><nom>$ ^olen/olema<vblex><actv><pres><indic><p1><sg>$ ^majas/maja<n><sg><ine>$^./.<sent>$
+[/zhSHg7iB9nyN]

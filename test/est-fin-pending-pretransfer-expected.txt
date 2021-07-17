@@ -1,0 +1,8 @@
+[1UKlIyFJISD6#0] ^Sina<prn><pers><p2><sg><nom>$ ^olema<vblex><actv><pres><indic><p2><sg>$ ^maja<n><sg><ine>$^.$
+[/1UKlIyFJISD6]
+[3wZ1y-M8ykN-#0] ^Laud<n><sg><nom>$ ^olema<vblex><actv><pres><indic><p3><sg>$ ^maja<n><sg><ine>$^.$
+[/3wZ1y-M8ykN-]
+[ZNRL9wMV5jHQ#0] ^See<prn><sg><nom>$ ^olema<vblex><actv><pres><indic><p3><sg>$ ^maja<n><sg><ine>$^.$
+[/ZNRL9wMV5jHQ]
+[zhSHg7iB9nyN#0] ^Mina<prn><pers><p1><sg><nom>$ ^olema<vblex><actv><pres><indic><p1><sg>$ ^maja<n><sg><ine>$^.$
+[/zhSHg7iB9nyN]

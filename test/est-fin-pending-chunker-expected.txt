@@ -1,0 +1,8 @@
+[1UKlIyFJISD6#0] ^n<SN>{^Sinä<prn><pers><p2><sg><nom>$}$ ^fin<SV><FIN>{^olla<vblex><actv><indic><pres><p2><sg>$}$ ^n<SN>{^talo<n><sg><ine>$}$^default<default>{^@.$}$
+[/1UKlIyFJISD6]
+[3wZ1y-M8ykN-#0] ^n<SN>{^Pöytä<n><sg><nom>$}$ ^fin<SV><FIN>{^olla<vblex><actv><indic><pres><p3><sg>$}$ ^n<SN>{^talo<n><sg><ine>$}$^default<default>{^@.$}$
+[/3wZ1y-M8ykN-]
+[ZNRL9wMV5jHQ#0] ^n<SN>{^Se<prn><sg><nom>$}$ ^fin<SV><FIN>{^olla<vblex><actv><indic><pres><p3><sg>$}$ ^n<SN>{^talo<n><sg><ine>$}$^default<default>{^@.$}$
+[/ZNRL9wMV5jHQ]
+[zhSHg7iB9nyN#0] ^n<SN>{^Minä<prn><pers><p1><sg><nom>$}$ ^fin<SV><FIN>{^olla<vblex><actv><indic><pres><p1><sg>$}$ ^n<SN>{^talo<n><sg><ine>$}$^default<default>{^@.$}$
+[/zhSHg7iB9nyN]
