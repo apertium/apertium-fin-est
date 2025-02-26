@@ -186,6 +186,14 @@
       <attr-item tags="sg"/>
       <attr-item tags="pl"/>
     </def-attr>
+    <def-attr n="a_poss">
+      <attr-item tags="px1sg"/>
+      <attr-item tags="px2sg"/>
+      <attr-item tags="px3sg"/>
+      <attr-item tags="px1pl"/>
+      <attr-item tags="px2pl"/>
+      <attr-item tags="px3pl"/>
+    </def-attr>
     <def-attr n="a_nom">
       <attr-item tags="n"/>
     </def-attr>
@@ -326,26 +334,26 @@
     <def-macro n="sg3" npar="1">
         <choose>
           <when><test><!--<and><or>
-                      <equal><clip pos="1" side="tl" part="a_screeve"/> 
+                      <equal><clip pos="1" side="tl" part="a_screeve"/>
                               <lit-tag v="cond"/>
                       </equal>
-                      <equal><clip pos="1" side="tl" part="a_screeve"/> 
+                      <equal><clip pos="1" side="tl" part="a_screeve"/>
                               <lit-tag v="quot"/>
                       </equal>
                       </or>--> <or>
-                      <equal><clip pos="1" side="sl" part="a_nbr"/> 
+                      <equal><clip pos="1" side="sl" part="a_nbr"/>
                               <lit-tag v="sg"/>
                       </equal>
-                      <equal><clip pos="1" side="sl" part="a_nbr"/> 
+                      <equal><clip pos="1" side="sl" part="a_nbr"/>
                               <lit-tag v="pl"/>
                       </equal></or>
                       <!--</and>-->
                 </test>
           </when>
-          <otherwise>  
+          <otherwise>
                 <let><clip pos="1" side="tl" part="a_p123"/><lit-tag v="p3"/></let>
                 <let><clip pos="1" side="tl" part="a_nbr"/><lit-tag v="sg"/></let>
-          </otherwise>  
+          </otherwise>
         </choose>
      </def-macro>
 
@@ -376,33 +384,33 @@
 	<!-- action's for verb (pret-conneg) starts here -->
         <!--<let><clip pos="3" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
         <choose>
-          <when><test><equal><clip pos="3" side="sl" part="a_neg"/> 
+          <when><test><equal><clip pos="3" side="sl" part="a_neg"/>
           <lit-tag v="aff"/>
         </equal></test>
         <let><clip pos="3" side="tl" part="a_neg"/><lit v=""/></let>
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="3" side="sl" part="a_pers"/> 
+          <when><test><equal><clip pos="3" side="sl" part="a_pers"/>
           <lit-tag v="pasv"/>
         </equal></test>
         <let><var n="addp"/><lit-tag v="pe4"/></let>
-          </when>  
+          </when>
         </choose>
         <choose>
-          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/>
           <lit-tag v="pres.cond"/>
         </equal>
-        <equal><clip pos="3" side="sl" part="a_screeve"/> 
+        <equal><clip pos="3" side="sl" part="a_screeve"/>
         <lit-tag v="pret.cond"/>
       </equal></or></test>
       <let><clip pos="3" side="tl" part="a_screeve"/><lit-tag v="cond"/></let>
           </when>
         </choose>
         <choose>
-          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <when><test><or><equal><clip pos="3" side="sl" part="a_screeve"/>
           <lit-tag v="pres.quot"/>
-          </equal><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          </equal><equal><clip pos="3" side="sl" part="a_screeve"/>
           <lit-tag v="pret.quot"/>
         </equal></or>
       </test>
@@ -410,7 +418,7 @@
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="3" side="sl" part="a_screeve"/> 
+          <when><test><equal><clip pos="3" side="sl" part="a_screeve"/>
           <lit-tag v="pres.imp"/>
         </equal>
       </test>
@@ -419,26 +427,26 @@
         </choose>
         <choose>
           <when><test><and><or>
-            <equal><clip pos="3" side="tl" part="a_screeve"/> 
+            <equal><clip pos="3" side="tl" part="a_screeve"/>
             <lit-tag v="cond"/>
             </equal>
-            <equal><clip pos="3" side="tl" part="a_screeve"/> 
+            <equal><clip pos="3" side="tl" part="a_screeve"/>
             <lit-tag v="quot"/>
             </equal>
             </or><not>
-            <equal><clip pos="3" side="sl" part="a_nbr"/> 
+            <equal><clip pos="3" side="sl" part="a_nbr"/>
             <lit-tag v="sg"/>
           </equal></not>
-          <not><equal><clip pos="3" side="sl" part="a_nbr"/> 
+          <not><equal><clip pos="3" side="sl" part="a_nbr"/>
           <lit-tag v="pl"/>
           </equal></not>
         </and>
       </test>
       <let><var n="addp"/><lit-tag v="p3.sg"/></let>
           </when>
-          <otherwise>  
+          <otherwise>
             <let><var n="addp"/><lit v=""/></let>
-          </otherwise>  
+          </otherwise>
         </choose>
         <!--<call-macro n="sg3">
             <with-param pos="3"/>
@@ -505,14 +513,14 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_case"/>
                               <lit-tag v="adi"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_case"/>
                               <lit-tag v="com"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
@@ -552,7 +560,7 @@
                   </chunk>
                 </out>
           </otherwise>
-        </choose> 
+        </choose>
         <let><var n="sn-post"/><lit v=""/></let>
       </action>
     </rule>
@@ -564,14 +572,14 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_case"/>
                               <lit-tag v="adi"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="ill"/></let>
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_case"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_case"/>
                               <lit-tag v="com"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_case"/><lit-tag v="gen"/></let>
@@ -611,7 +619,7 @@
                   </chunk>
                 </out>
           </otherwise>
-        </choose> 
+        </choose>
         <let><var n="sn-post"/><lit v=""/></let>
       </action>
     </rule>
@@ -645,7 +653,7 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
 <!--
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_adjec"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_adjec"/>
                               <lit-tag v="adj"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_adjec"/><lit-tag v="adj.pos"/></let>
@@ -692,7 +700,7 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pres.imp"/>
                       </equal>
                       </test>
@@ -711,7 +719,7 @@
         </out>
       </action>
     </rule>
-   
+
 
 
     <rule comment="REGLA: fin-verb">
@@ -722,33 +730,33 @@
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <!--<let><clip pos="1" side="tl" part="a_tens"/><lit-tag v="past"/></let>-->
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_neg"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_neg"/>
                               <lit-tag v="aff"/>
                       </equal></test>
                 <let><clip pos="1" side="tl" part="a_neg"/><lit v=""/></let>
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_pers"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_pers"/>
                               <lit-tag v="pasv"/>
                       </equal></test>
         	    <let><var n="addp"/><lit-tag v="pe4"/></let>
-          </when>  
+          </when>
         </choose>
         <choose>
-          <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/> 
+          <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pres.cond"/>
                       </equal>
-                      <equal><clip pos="1" side="sl" part="a_screeve"/> 
+                      <equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pret.cond"/>
                       </equal></or></test>
                 <let><clip pos="1" side="tl" part="a_screeve"/><lit-tag v="cond"/></let>
           </when>
         </choose>
         <choose>
-          <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/> 
+          <when><test><or><equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pres.quot"/>
-                      </equal><equal><clip pos="1" side="sl" part="a_screeve"/> 
+                      </equal><equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pret.quot"/>
                       </equal></or>
                       </test>
@@ -756,7 +764,7 @@
           </when>
         </choose>
         <choose>
-          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/> 
+          <when><test><equal><clip pos="1" side="sl" part="a_screeve"/>
                               <lit-tag v="pres.imp"/>
                       </equal>
                       </test>
@@ -765,26 +773,26 @@
         </choose>
         <choose>
           <when><test><and><or>
-                      <equal><clip pos="1" side="tl" part="a_screeve"/> 
+                      <equal><clip pos="1" side="tl" part="a_screeve"/>
                               <lit-tag v="cond"/>
                       </equal>
-                      <equal><clip pos="1" side="tl" part="a_screeve"/> 
+                      <equal><clip pos="1" side="tl" part="a_screeve"/>
                               <lit-tag v="quot"/>
                       </equal>
                       </or><not>
-                      <equal><clip pos="1" side="sl" part="a_nbr"/> 
+                      <equal><clip pos="1" side="sl" part="a_nbr"/>
                               <lit-tag v="sg"/>
                       </equal></not>
-                      <not><equal><clip pos="1" side="sl" part="a_nbr"/> 
+                      <not><equal><clip pos="1" side="sl" part="a_nbr"/>
                               <lit-tag v="pl"/>
                       </equal></not>
                       </and>
                 </test>
         	<let><var n="addp"/><lit-tag v="p3.sg"/></let>
           </when>
-          <otherwise>  
+          <otherwise>
         	<let><var n="addp"/><lit v=""/></let>
-          </otherwise>  
+          </otherwise>
         </choose>
         <!--<call-macro n="sg3">
           <with-param pos="1"/>
@@ -828,7 +836,7 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_verb"/>
-              <lit-tag v="actv.infa.sg.lat"/> 
+              <lit-tag v="actv.infa.sg.lat"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
@@ -850,7 +858,7 @@
             <lu>
               <clip pos="1" side="tl" part="lemh"/>
               <clip pos="1" side="tl" part="a_verb"/>
-              <lit-tag v="actv.infma.sg.ill"/> 
+              <lit-tag v="actv.infma.sg.ill"/>
               <clip pos="1" side="tl" part="lemq"/>
             </lu>
           </chunk>
@@ -1075,7 +1083,7 @@
                       </test>
                       <let><var n="sent-qst"/><concat><lit v="+ko"/><lit-tag v="qst"/></concat></let>
           </when>
-          <otherwise>  
+          <otherwise>
             <out>
               <chunk name="adv" case="caseFirstWord">
                 <tags>
@@ -1086,8 +1094,8 @@
                 </lu>
               </chunk>
             </out>
-          </otherwise>  
-        </choose>  
+          </otherwise>
+        </choose>
       </action>
     </rule>
 
@@ -1161,11 +1169,11 @@
       <action>
         <call-macro n="default-conversion1"><with-param pos="1"/></call-macro>
         <out>
-          <chunk name="any" case="caseFirstWord"> 
+          <chunk name="any" case="caseFirstWord">
             <tags> <tag> <lit-tag v="any"/> </tag> </tags>
             <lu>
               <clip pos="1" side="tl" part="whole"/>
-            </lu> 
+            </lu>
           </chunk>
         </out>
       </action>
